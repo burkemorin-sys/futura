@@ -885,12 +885,20 @@
     const scale = Math.min((W - padX * 2) / spanX, (H - padY * 2) / spanY);
     const ox = (W - spanX * scale) / 2 - minX * scale;
     const oy = (H - spanY * scale) / 2 - minY * scale + 8;
+    // Spectral warmth: K→amber-orange, F→honey gold, A→cream gold, B→hot white-gold (still warm, not cool blue).
+    const TONES = {
+      Segin:   { halo: "#e8c878", core: "#fff1c4", mid: "#f0d48a", rim: "#c9953a" }, // B3 — hot white-gold
+      Ruchbah: { halo: "#e8c070", core: "#fff4d0", mid: "#efd090", rim: "#c9943a" }, // A5 — cream gold
+      Navi:    { halo: "#edd48a", core: "#fff8e0", mid: "#f3dc9a", rim: "#d4af37" }, // B0.5 — brightest white-gold
+      Schedar: { halo: "#e0a04a", core: "#ffe0a8", mid: "#e8b45a", rim: "#b8732a" }, // K0 — orange-gold
+      Caph:    { halo: "#e8c060", core: "#fff0c0", mid: "#efcc78", rim: "#c99832" }, // F2 — honey gold
+    };
     const pts = CAS.map((s) => ({
       ...s,
       px: ox + s.x * scale,
       py: oy + s.y * scale,
-      // Lower magnitude number = brighter. Map m≈2.15→1, m≈3.4→0.55.
       bright: Math.max(0.55, Math.min(1, (3.55 - s.m) / 1.45)),
+      tone: TONES[s.n] || TONES.Caph,
     }));
 
     let seed = 20261006;
@@ -898,41 +906,63 @@
     const bgCount = Math.round((W * H) / 2800);
     let bg = "";
     for (let i = 0; i < bgCount; i++) {
-      const x = rnd() * W, y = rnd() * H, r = 0.35 + rnd() * 0.85, o = 0.08 + rnd() * 0.32;
+      const x = rnd() * W, y = rnd() * H, r = 0.35 + rnd() * 0.85, o = 0.07 + rnd() * 0.26;
       const tw = rnd() > 0.82;
+      // Warm cream field stars (not cool white)
       bg += `<circle class="cas-bg${tw && !reduce ? " tw" : ""}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" opacity="${o.toFixed(2)}"${
         tw && !reduce ? ` style="--o:${o.toFixed(2)};--d:${(5 + rnd() * 7).toFixed(1)}s;--delay:${(rnd() * 8).toFixed(1)}s"` : ""
       }/>`;
     }
     const line = pts.map((p) => `${p.px.toFixed(1)},${p.py.toFixed(1)}`).join(" ");
+    const grads = pts.map((p, i) => {
+      const t = p.tone;
+      return `<radialGradient id="casCore${i}" cx="35%" cy="30%" r="65%">
+          <stop offset="0" stop-color="#fffaf0"/><stop offset=".35" stop-color="${t.core}"/><stop offset=".75" stop-color="${t.mid}"/><stop offset="1" stop-color="${t.rim}"/>
+        </radialGradient>
+        <radialGradient id="casHalo${i}" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="${t.halo}" stop-opacity=".55"/><stop offset=".35" stop-color="${t.mid}" stop-opacity=".22"/><stop offset=".7" stop-color="${t.rim}" stop-opacity=".06"/><stop offset="1" stop-color="${t.rim}" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="casBloom${i}" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="${t.halo}" stop-opacity=".28"/><stop offset=".5" stop-color="${t.mid}" stop-opacity=".08"/><stop offset="1" stop-color="${t.rim}" stop-opacity="0"/>
+        </radialGradient>`;
+    }).join("");
     const stars = pts.map((p, i) => {
-      const r = 3.2 + p.bright * 5.2;
-      return `<g class="cas-main" data-i="${i}" style="--bright:${p.bright.toFixed(3)}">
-        <circle class="cas-halo" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${(r * 5.2).toFixed(1)}"/>
-        <circle class="cas-core" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${r.toFixed(2)}"/>
-        <circle class="cas-spark" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${(r * 0.38).toFixed(2)}"/>
-        <text class="cas-name" x="${p.px.toFixed(1)}" y="${(p.py + (p.py > H * 0.55 ? 28 : -22)).toFixed(1)}" text-anchor="middle">${esc(p.n)}</text>
+      const r = 3.4 + p.bright * 5.4;
+      // Label offset: keep names off the connecting lines; alternate above/below.
+      const below = p.py > H * 0.48;
+      const ly = below ? p.py + r * 2.8 + 14 : p.py - r * 2.8 - 8;
+      return `<g class="cas-main" data-i="${i}" data-star="${esc(p.n)}" style="--bright:${p.bright.toFixed(3)};--halo:${p.tone.halo}">
+        <circle class="cas-bloom" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${(r * 8.5).toFixed(1)}" fill="url(#casBloom${i})"/>
+        <circle class="cas-halo" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${(r * 4.6).toFixed(1)}" fill="url(#casHalo${i})"/>
+        <circle class="cas-core" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${r.toFixed(2)}" fill="url(#casCore${i})"/>
+        <circle class="cas-spark" cx="${(p.px - r * 0.18).toFixed(1)}" cy="${(p.py - r * 0.22).toFixed(1)}" r="${(r * 0.32).toFixed(2)}"/>
+        <text class="cas-name" x="${p.px.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle">${esc(p.n)}</text>
       </g>`;
     }).join("");
 
-    stage.innerHTML = `<svg class="cas-sky${reduce ? " is-reduced" : ""}" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cassiopeia as a glowing W of five stars">
+    stage.innerHTML = `<svg class="cas-sky${reduce ? " is-reduced" : ""}" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cassiopeia as a glowing W of five stars: Segin, Ruchbah, Navi, Schedar, Caph">
       <defs>
         <radialGradient id="casHeroGlow" cx="50%" cy="45%" r="55%">
-          <stop offset="0" stop-color="#d4af37" stop-opacity=".14"/>
-          <stop offset=".55" stop-color="#d4af37" stop-opacity=".03"/>
+          <stop offset="0" stop-color="#d4af37" stop-opacity=".12"/>
+          <stop offset=".55" stop-color="#c9953a" stop-opacity=".03"/>
           <stop offset="1" stop-color="#000" stop-opacity="0"/>
         </radialGradient>
         <linearGradient id="casHeroLine" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#f7e7a9"/><stop offset=".45" stop-color="#d4af37"/><stop offset="1" stop-color="#a8842a"/>
+          <stop offset="0" stop-color="#f3dc8c"/><stop offset=".45" stop-color="#d4af37"/><stop offset="1" stop-color="#a8842a"/>
         </linearGradient>
-        <filter id="casSoft" x="-80%" y="-80%" width="260%" height="260%">
-          <feGaussianBlur stdDeviation="2.2" result="b"/>
+        <filter id="casSoft" x="-120%" y="-120%" width="340%" height="340%">
+          <feGaussianBlur stdDeviation="1.8" result="b"/>
           <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
+        <filter id="casGlow" x="-150%" y="-150%" width="400%" height="400%">
+          <feGaussianBlur stdDeviation="3.4" result="g"/>
+          <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        ${grads}
       </defs>
       <rect width="${W}" height="${H}" fill="url(#casHeroGlow)"/>
       <g class="cas-field">${bg}</g>
-      <polyline class="cas-line" points="${line}" fill="none" stroke="url(#casHeroLine)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" opacity=".72"/>
+      <polyline class="cas-line" points="${line}" fill="none" stroke="url(#casHeroLine)" stroke-width="1.55" stroke-linejoin="round" stroke-linecap="round" opacity=".68"/>
       ${stars}
     </svg>`;
 

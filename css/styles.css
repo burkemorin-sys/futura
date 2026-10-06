@@ -509,7 +509,7 @@ body::before { /* solid strip behind the translucent status bar so content never
     position: relative; inset: auto; height: 260px; flex: none;
   }
   .cas-sky { transform: none; width: 100%; height: 100%; }
-  .cas-name { display: none; }
+  .cas-name { font-size: 9px; letter-spacing: .18em; opacity: .5; }
   .cas-hero-copy {
     position: relative; padding: 8px 20px 22px;
     background: linear-gradient(180deg, rgba(6,6,8,.35), rgba(6,6,8,.95));
@@ -517,39 +517,55 @@ body::before { /* solid strip behind the translucent status bar so content never
 }
 .cas-field { transform: translate(calc(var(--parx) * 0.45), calc(var(--pary) * 0.45)); will-change: transform; }
 .cas-line, .cas-main { transform: translate(var(--parx), var(--pary)); will-change: transform; }
-.cas-bg { fill: #f5ecd0; }
-.cas-line { filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.35)); }
-.cas-halo {
-  fill: #f3dc8c; opacity: calc(0.10 + var(--bright, 0.8) * 0.16);
+.cas-bg { fill: #f0e0b8; } /* warm cream field stars */
+.cas-line { filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.28)); }
+.cas-bloom {
+  opacity: calc(0.55 + var(--bright, 0.8) * 0.35);
   transform-origin: center; transform-box: fill-box;
+  pointer-events: none;
+}
+.cas-halo {
+  opacity: calc(0.65 + var(--bright, 0.8) * 0.3);
+  transform-origin: center; transform-box: fill-box;
+  filter: url(#casGlow);
 }
 .cas-core {
-  fill: #f3dc8c;
-  opacity: calc(0.78 + var(--bright, 0.8) * 0.22);
+  opacity: calc(0.88 + var(--bright, 0.8) * 0.12);
   filter: url(#casSoft);
 }
-.cas-spark { fill: #fffaf0; opacity: calc(0.55 + var(--bright, 0.8) * 0.4); }
-.cas-name {
-  font: 500 11px var(--font); letter-spacing: .18em; text-transform: uppercase;
-  fill: #b8a36a; opacity: .78; pointer-events: none;
+.cas-spark {
+  fill: #fffaf0; opacity: calc(0.45 + var(--bright, 0.8) * 0.4);
+  pointer-events: none;
 }
-.cas-main.is-rest .cas-halo { opacity: calc(0.12 + var(--bright, 0.8) * 0.18); }
+.cas-name {
+  font: 500 11px var(--font); letter-spacing: .22em; text-transform: uppercase;
+  fill: #e8d5a0; opacity: .48; pointer-events: none;
+  /* Soft watermark: faint cream-gold, doesn't compete with the W */
+}
+.cas-main.is-rest .cas-bloom { opacity: calc(0.5 + var(--bright, 0.8) * 0.3); }
+.cas-main.is-rest .cas-halo { opacity: calc(0.6 + var(--bright, 0.8) * 0.28); }
+.cas-main.is-pulsing .cas-bloom { animation: casBloom var(--pulse-ms, 1800ms) ease-in-out 1; }
 .cas-main.is-pulsing .cas-halo { animation: casHalo var(--pulse-ms, 1800ms) ease-in-out 1; }
 .cas-main.is-pulsing .cas-core { animation: casCore var(--pulse-ms, 1800ms) ease-in-out 1; }
 .cas-main.is-pulsing .cas-spark { animation: casSpark var(--pulse-ms, 1800ms) ease-in-out 1; }
+@keyframes casBloom {
+  0%, 100% { opacity: calc(0.5 + var(--bright, 0.8) * 0.3); transform: scale(1); }
+  45% { opacity: calc(0.75 + var(--bright, 0.8) * 0.25); transform: scale(1.12); }
+}
 @keyframes casHalo {
-  0%, 100% { opacity: calc(0.12 + var(--bright, 0.8) * 0.18); transform: scale(1); }
-  45% { opacity: calc(0.28 + var(--bright, 0.8) * 0.42); transform: scale(1.18); }
+  0%, 100% { opacity: calc(0.6 + var(--bright, 0.8) * 0.28); transform: scale(1); }
+  45% { opacity: 1; transform: scale(1.14); }
 }
 @keyframes casCore {
-  0%, 100% { opacity: calc(0.72 + var(--bright, 0.8) * 0.28); }
+  0%, 100% { opacity: calc(0.88 + var(--bright, 0.8) * 0.12); }
   45% { opacity: 1; }
 }
 @keyframes casSpark {
-  0%, 100% { opacity: calc(0.5 + var(--bright, 0.8) * 0.35); transform: scale(1); }
-  45% { opacity: 1; transform: scale(1.35); }
+  0%, 100% { opacity: calc(0.45 + var(--bright, 0.8) * 0.35); transform: scale(1); }
+  45% { opacity: .95; transform: scale(1.3); }
 }
-.cas-sky.is-reduced .cas-halo { opacity: calc(0.16 + var(--bright, 0.8) * 0.22); }
+.cas-sky.is-reduced .cas-bloom { opacity: calc(0.55 + var(--bright, 0.8) * 0.3); }
+.cas-sky.is-reduced .cas-halo { opacity: calc(0.7 + var(--bright, 0.8) * 0.25); }
 .cas-hero-copy {
   position: relative; z-index: 2; padding: 48px 20px 28px; max-width: 560px;
   background: linear-gradient(180deg, rgba(6,6,8,.15), rgba(6,6,8,.72) 55%, rgba(6,6,8,.92));
@@ -576,9 +592,10 @@ body::before { /* solid strip behind the translucent status bar so content never
   .cas-hero { margin: -36px -44px 28px; min-height: 460px; border-radius: 0; }
   .cas-hero-copy { padding: 72px 48px 40px; background: linear-gradient(90deg, rgba(6,6,8,.88) 0%, rgba(6,6,8,.55) 55%, transparent 85%); }
   .cas-hero-copy .page-title { font-size: 52px; }
-  .cas-name { font-size: 12px; letter-spacing: .2em; }
+  .cas-name { font-size: 11.5px; letter-spacing: .24em; opacity: .52; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .cas-main.is-pulsing .cas-bloom,
   .cas-main.is-pulsing .cas-halo,
   .cas-main.is-pulsing .cas-core,
   .cas-main.is-pulsing .cas-spark { animation: none !important; }
