@@ -6,7 +6,7 @@ A static web app (plain HTML, CSS and JS, with no build step and no backend). It
 index.html            app shell (top bar + bottom tabs on mobile, sidebar on desktop)
 css/styles.css        theme
 js/app.js             router, sections, rendering (add a tab = add an entry to SECTIONS)
-js/music.js           original generative background music (Web Audio, no audio files)
+extras/music.js       background music (DISABLED, not loaded; see "Background music")
 fonts/                self-hosted Inter + Cormorant Garamond (OFL)
 data/ipos.json        IPO Tracker data (rewritten every Sunday; see "Weekly IPO refresh")
 data/growth-picks.json            Growth Picks data (preferred)
@@ -35,7 +35,15 @@ Data is fetched with `cache: no-cache`, so a refreshed JSON file shows up on the
 - Install it from Safari with Share → Add to Home Screen, or from Chrome/Edge with the install icon in the address bar.
 
 ## Background music
-`js/music.js` plays an original, generative instrumental for nylon-string guitar, celesta and an airy pad. It is synthesised in the browser with the Web Audio API, so the app ships no audio files and doesn't use any recorded or copyrighted material.
+> **Disabled for now (Oct 6, 2026).** The engine is kept at `extras/music.js`, but nothing loads it, so no toggles appear and no audio plays. The service worker doesn't cache it.
+> **To re-enable:**
+> 1. `git mv extras/music.js js/music.js`.
+> 2. In `index.html`, add `<script src="js/music.js"></script>` just before `<script src="js/app.js"></script>`.
+> 3. Add `"js/music.js"` to `SHELL_FILES` in `sw.js` and bump `VERSION`.
+>
+> The toggle hooks in `js/app.js` (`musicButton`) and the `.music-toggle` styles in `css/styles.css` are still in place, so the buttons reappear automatically.
+
+When enabled, `js/music.js` plays an original, generative instrumental for nylon-string guitar, celesta and an airy pad. It is synthesised in the browser with the Web Audio API, so the app ships no audio files and doesn't use any recorded or copyrighted material.
 - **Guitar:** each note is a Karplus-Strong string (a soft, doubly lowpassed noise excitation plus a pick-position comb, run through a tuned, fractionally delayed, damped loop). A 10–20 ms attack ramp softens each pluck. Notes are cached and replayed through guitar-body EQ (resonances near 105 and 230 Hz, a 9 dB shelf cut above 3.2 kHz).
 - **Celesta:** additive sine partials (the fundamental, a quiet 2nd and 4th, and a faint, short inharmonic 2.76× partial) play sparse high chord tones in D5–E6, mostly into the reverb.
 - **Pad:** detuned sine and triangle pairs with slow 3 s swells, a 0.09 Hz tremolo and a slowly drifting lowpass.

@@ -119,6 +119,7 @@
   const main = document.getElementById("main");
   const navList = document.getElementById("nav-list");
 
+  // Music is disabled: extras/music.js is not loaded, so this renders nothing. See README "Background music".
   const musicButton = (cls) => (window.FuturaMusic ? window.FuturaMusic.button(cls) : "");
 
   function buildNav() {
@@ -126,7 +127,7 @@
       b.innerHTML = brandHTML(b.classList.contains("brand-side"));
     });
     // Music toggles: top bar (mobile) and sidebar (desktop). The Home hero adds its own.
-    if (!document.querySelector(".mt-bar")) {
+    if (window.FuturaMusic && !document.querySelector(".mt-bar")) {
       document.querySelector(".appbar").insertAdjacentHTML("beforeend", musicButton("mt-bar"));
       document.getElementById("nav").insertAdjacentHTML("afterbegin", musicButton("mt-side"));
     }
