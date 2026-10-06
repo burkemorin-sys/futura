@@ -33,6 +33,10 @@ Data is fetched with `cache: no-cache`, so a refreshed JSON file shows up on the
 - **To roll out a shell change** (new files, or anything you want picked up immediately), bump `VERSION` in `sw.js`. Old caches are deleted when the new worker activates.
 - Install it from Safari with Share → Add to Home Screen, or from Chrome/Edge with the install icon in the address bar.
 
+## Home
+
+`#/home` is the default route, so a bare URL and the installed PWA (`start_url: "./"`) both open here. It reuses the Cassiopeia hero animation and shows a FUTURA wordmark, the motto "looking higher", and one tile per section. Tile teasers are read from the data files only: the count of `ipos.json` → `sections.thisWeek`, the number of `growth-picks.json` → `picks`, the `snapshot.price` / `change` / `asOf` values from `spacex.json` and `tesla.json`, and the number of stars in `cassiopeia.json`. If a file fails to load, its tile falls back to a static description. On mobile the tab bar shows Home, IPOs, Growth, SpaceX, Tesla and More. Cassiopeia appears under More (`overflow: true` in `SECTIONS`).
+
 ## data/ipos.json schema
 
 ```jsonc

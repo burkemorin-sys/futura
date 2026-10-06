@@ -21,6 +21,7 @@
     users: '<circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9.5" r="2.4"/><path d="M16 14.2c2.4-.3 4.1 1.3 4.5 4.3"/>',
     news: '<rect x="3.5" y="5" width="13" height="14" rx="1.5"/><path d="M16.5 9h3a1 1 0 0 1 1 1v7.5a1.5 1.5 0 0 1-3 0V9"/><path d="M6.5 9h7M6.5 12.5h7M6.5 16h4"/>',
     chat: '<path d="M4 5.5h16v10H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/>',
+    home: '<path d="M4 11.5L12 5l8 6.5"/><path d="M6.5 10v9h11v-9"/><path d="M10.5 19v-5h3v5"/>',
     cas: '<polyline points="3.5,8 7.5,14 12,10 16.5,16 20.5,8" fill="none"/><circle cx="3.5" cy="8" r="1.35"/><circle cx="7.5" cy="14" r="1.5"/><circle cx="12" cy="10" r="1.7"/><circle cx="16.5" cy="16" r="1.55"/><circle cx="20.5" cy="8" r="1.45"/>',
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
@@ -106,12 +107,13 @@
 
   /* ---------------- Sections registry ---------------- */
   const SECTIONS = [
+    { id: "home", label: "Home", short: "Home", icon: "home", render: renderHome },
     { id: "ipos", label: "IPO Tracker", short: "IPOs", icon: "rocket", render: renderIpoTracker },
     { id: "growth", label: "Growth Picks", short: "Growth", icon: "growth", render: renderGrowth },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex") },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla") },
-    { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia },
-    { id: "more", label: "More coming soon", short: "More", icon: "grid", render: renderPlaceholder },
+    { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia, overflow: true }, // in More on mobile
+    { id: "more", label: "More", short: "More", icon: "grid", render: renderMore },
   ];
 
   const main = document.getElementById("main");
@@ -122,7 +124,7 @@
       b.innerHTML = brandHTML(b.classList.contains("brand-side"));
     });
     navList.innerHTML = SECTIONS.map(
-      (s) => `<li><a class="nav-link" href="#/${s.id}" data-id="${s.id}">${svg(s.icon)}<span></span></a></li>`
+      (s) => `<li${s.overflow ? ' class="nav-overflow"' : ""}><a class="nav-link" href="#/${s.id}" data-id="${s.id}">${svg(s.icon)}<span></span></a></li>`
     ).join("");
     const mq = window.matchMedia("(min-width: 900px)");
     const apply = () =>
@@ -140,8 +142,11 @@
     navList.querySelectorAll(".nav-link").forEach((a) => {
       if (a.dataset.id === section.id) a.setAttribute("aria-current", "page");
       else a.removeAttribute("aria-current");
+      // Overflow sections light up "More" on the mobile tab bar.
+      a.classList.toggle("is-parent", !!section.overflow && a.dataset.id === "more");
     });
-    document.title = `${section.label} · Futura`;
+    document.body.dataset.route = section.id;
+    document.title = section.id === "home" ? "Futura · looking higher" : `${section.label} · Futura`;
     window.scrollTo(0, 0);
     if (casState.anim) { casState.anim.destroy(); casState.anim = null; }
     main.dataset.token = section.id;
@@ -168,14 +173,6 @@
     return m ? new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : iso;
   };
 
-  /* ---------------- Placeholder ---------------- */
-  function renderPlaceholder(el) {
-    el.innerHTML = `<div class="placeholder">
-      ${cassiopeia({ cls: "logo", variant: "motif", twinkle: true })}
-      <h1>More coming soon</h1>
-      <p>New sections will appear here as they're added.</p>
-    </div>`;
-  }
 
   /* ================= IPO Tracker ================= */
   const GROUPS = ["thisWeek", "nextWeek", "newFilings", "pulledDeals", "pastTwoWeeks", "lastWeekDebuts"];
@@ -1025,6 +1022,110 @@
     };
   }
 
+
+  /* ================= Home ================= */
+  const HOME_TILES = [
+    { id: "ipos", title: "IPO Tracker", icon: "rocket", fallback: "This week's IPOs, filings and recent debuts" },
+    { id: "growth", title: "Growth Picks", icon: "growth", fallback: "High-growth watchlist with valuation and risks" },
+    { id: "spacex", title: "SpaceX", icon: "orbit", fallback: "Fundamentals, investors, news and sentiment" },
+    { id: "tesla", title: "Tesla", icon: "bolt", fallback: "Fundamentals, investors, news and sentiment" },
+    { id: "cassiopeia", title: "Cassiopeia", icon: "cas", fallback: "The five stars behind the Futura W" },
+    { id: "more", title: "More", icon: "grid", fallback: "More sections on the way" },
+  ];
+
+  // Teasers come only from the real data files; on failure the tile keeps its static line.
+  const teaserLoaders = {
+    async ipos() {
+      if (!ipoState.data) ipoState.data = await getJSON("data/ipos.json");
+      const d = ipoState.data, n = allIpos((d.sections || {}).thisWeek).length;
+      return { line: `${n} ${n === 1 ? "IPO" : "IPOs"} on the calendar this week`, meta: d.weekLabel || `Updated ${fmtShortDate(d.lastUpdated)}` };
+    },
+    async growth() {
+      if (!growthState.data) {
+        let res = await fetch("data/growth-picks.json", { cache: "no-cache" });
+        growthState.isExample = !res.ok;
+        if (!res.ok) res = await fetch("data/growth-picks.example.json", { cache: "no-cache" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        growthState.data = await res.json();
+        if (growthState.data.example) growthState.isExample = true;
+      }
+      const d = growthState.data, n = (d.picks || []).length;
+      const sectors = new Set((d.picks || []).map(sectorGroup)).size;
+      return { line: `${n} picks across ${sectors} sectors${growthState.isExample ? " (example data)" : ""}`, meta: `Updated ${fmtShortDate(d.lastUpdated)}` };
+    },
+    async spacex() { return companyTeaser("spacex"); },
+    async tesla() { return companyTeaser("tesla"); },
+    async cassiopeia() {
+      if (!casState.data) casState.data = await getJSON("data/cassiopeia.json");
+      const s = (casState.data.stars || {}).items || [];
+      return { line: `${s.length} stars, myths, and nebulae of the W`, meta: "Caph · Schedar · Navi · Ruchbah · Segin" };
+    },
+  };
+  async function companyTeaser(key) {
+    if (!companyCache[key]) companyCache[key] = await getJSON(`data/${key}.json`);
+    const d = companyCache[key], s = d.snapshot || {};
+    return { line: `${d.ticker} ${money(s.price)}`, change: s.change, meta: s.asOf ? `${s.asOf} · snapshot` : "" };
+  }
+
+  function renderHome(el) {
+    const tiles = HOME_TILES.map((t) => `
+      <a class="home-tile panel" href="#/${t.id}" data-tile="${t.id}">
+        <span class="home-tile-icon">${svg(t.icon)}</span>
+        <span class="home-tile-body">
+          <span class="home-tile-title">${esc(t.title)}</span>
+          <span class="home-tile-line">${esc(t.fallback)}</span>
+          <span class="home-tile-meta"></span>
+        </span>
+        <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </a>`).join("");
+
+    el.innerHTML = `
+      <section class="home-hero" aria-label="Futura">
+        <div class="home-stage" id="home-stage"></div>
+        <div class="home-brand">
+          <h1 class="home-wordmark">Futura</h1>
+          <p class="home-motto"><span class="motto">looking higher</span></p>
+        </div>
+      </section>
+      <section class="home-tiles" aria-label="Sections">${tiles}</section>
+      ${footer("Futura is a personal investing dashboard for information only, not investment advice. Teasers are snapshots from the app's data files; open a section for sources and dates.")}`;
+
+    casState.anim = mountCasHero(el.querySelector("#home-stage"));
+
+    const token = el.dataset.token;
+    Object.entries(teaserLoaders).forEach(async ([id, load]) => {
+      try {
+        const t = await load();
+        if (el.dataset.token !== token) return;
+        const tile = el.querySelector(`[data-tile="${id}"]`);
+        if (!tile) return;
+        const line = tile.querySelector(".home-tile-line");
+        line.innerHTML = esc(t.line) + (t.change ? ` <span class="${tone(t.change)}">${esc(t.change)}</span>` : "");
+        tile.querySelector(".home-tile-meta").textContent = t.meta || "";
+      } catch (e) { /* keep static teaser */ }
+    });
+  }
+
+  /* "More" now doubles as the overflow menu for sections hidden from the mobile tab bar. */
+  function renderMore(el) {
+    const overflow = SECTIONS.filter((s) => s.overflow);
+    el.innerHTML = `
+      ${hero("More", "More sections", `<span>${svg("grid")}Everything that doesn't fit in the tab bar</span>`)}
+      <section class="home-tiles more-tiles" aria-label="More sections">
+        ${overflow.map((s) => {
+          const t = HOME_TILES.find((x) => x.id === s.id) || { fallback: "" };
+          return `<a class="home-tile panel" href="#/${s.id}">
+            <span class="home-tile-icon">${svg(s.icon)}</span>
+            <span class="home-tile-body"><span class="home-tile-title">${esc(s.label)}</span><span class="home-tile-line">${esc(t.fallback)}</span></span>
+            <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>`;
+        }).join("")}
+        <div class="home-tile panel is-soon">
+          <span class="home-tile-icon">${svg("grid")}</span>
+          <span class="home-tile-body"><span class="home-tile-title">Coming soon</span><span class="home-tile-line">New sections will appear here as they're added.</span></span>
+        </div>
+      </section>`;
+  }
 
   buildSky();
   buildNav();

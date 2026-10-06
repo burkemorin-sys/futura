@@ -610,3 +610,83 @@ body::before { /* solid strip behind the translucent status bar so content never
 @media (max-width: 899px) {
   .cas-sky .cas-name { font-size: 9px; letter-spacing: .18em; opacity: .5; }
 }
+
+/* ---------- Home ---------- */
+.home-hero {
+  position: relative; margin: -18px -16px 4px; overflow: hidden;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+  background:
+    radial-gradient(700px 360px at 50% 36%, rgba(212, 175, 55, 0.10), transparent 62%),
+    linear-gradient(180deg, #050507 0%, #08080c 72%, var(--bg) 100%);
+}
+.home-stage { position: relative; height: 270px; }
+.home-brand { position: relative; text-align: center; padding: 0 20px 30px; margin-top: -14px; }
+.home-wordmark {
+  margin: 0; font-family: var(--display); font-weight: 600; font-size: 52px; line-height: 1;
+  letter-spacing: .32em; padding-left: .32em; text-transform: uppercase;
+  background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.18));
+}
+.home-motto { margin: 16px 0 0; }
+.home-motto .motto { font-size: 12.5px; letter-spacing: .42em; padding-left: .42em; opacity: .88; }
+.home-motto::before, .home-motto::after {
+  content: ""; display: inline-block; width: 34px; height: 1px; vertical-align: middle; margin: 0 12px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, .55));
+}
+.home-motto::after { background: linear-gradient(90deg, rgba(212, 175, 55, .55), transparent); }
+
+.home-tiles { display: grid; gap: 10px; margin-top: 18px; }
+@media (min-width: 700px) { .home-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+@media (min-width: 1100px) { .home-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.home-tile {
+  display: flex; align-items: center; gap: 14px; padding: 15px 14px 15px 15px; min-width: 0;
+  text-decoration: none; color: var(--text); overflow: hidden;
+  transition: border-color .2s, transform .2s, background .2s;
+}
+.home-tile::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(243, 220, 140, .35), transparent); opacity: .6;
+}
+.home-tile:hover, .home-tile:focus-visible { border-color: var(--border-gold); background: rgba(24, 22, 18, .9); }
+.home-tile:active { transform: scale(.985); }
+.home-tile-icon {
+  flex: none; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+  background: radial-gradient(circle at 30% 25%, rgba(243, 220, 140, .16), rgba(212, 175, 55, .05) 70%);
+  border: 1px solid rgba(212, 175, 55, .32); color: var(--gold-light);
+  box-shadow: inset 0 0 12px rgba(212, 175, 55, .08);
+}
+.home-tile-icon svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.home-tile[data-tile="cassiopeia"] .home-tile-icon svg circle, .more-tiles .home-tile[href="#/cassiopeia"] .home-tile-icon svg circle { fill: currentColor; stroke: none; }
+.home-tile-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.home-tile-title { font-family: var(--display); font-size: 21px; font-weight: 600; line-height: 1.15; letter-spacing: .01em; }
+.home-tile-line { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.home-tile-meta { font-size: 11px; color: var(--faint); letter-spacing: .02em; }
+.home-tile-meta:empty { display: none; }
+.home-tile-arrow { flex: none; width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 2; opacity: .7; transition: transform .2s; }
+.home-tile:hover .home-tile-arrow { transform: translateX(3px); opacity: 1; }
+.home-tile.is-soon { opacity: .6; }
+
+@media (min-width: 900px) {
+  .home-hero { margin: -36px -44px 8px; }
+  .home-stage { height: 480px; }
+  .home-brand { margin-top: -18px; padding-bottom: 40px; }
+  .home-stage .cas-name { font-size: 10px; }
+  .home-wordmark { font-size: 84px; }
+  .home-motto .motto { font-size: 14px; }
+  .home-motto::before, .home-motto::after { width: 56px; }
+  .home-tiles { margin-top: 26px; }
+  .home-tile { padding: 18px 18px 18px 18px; }
+}
+
+/* Mobile tab bar: overflow sections live under More */
+@media (max-width: 899px) {
+  .nav-list li.nav-overflow { display: none; }
+  .nav-link.is-parent { color: var(--gold-light); }
+  .nav-link.is-parent::before {
+    content: ""; position: absolute; top: -1px; left: 22%; right: 22%; height: 2px; border-radius: 2px; background: var(--gold-grad);
+    box-shadow: 0 0 12px rgba(212, 175, 55, .6);
+  }
+  /* Home hero already shows the wordmark */
+  body[data-route="home"] .appbar { display: none; }
+  body[data-route="home"] .home-hero { margin-top: calc(-18px - var(--sat)); padding-top: var(--sat); }
+}
