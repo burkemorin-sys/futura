@@ -3,7 +3,7 @@
   "lastUpdated": "2026-10-06",
   "weekLabel": "Week of Oct 5–9, 2026",
   "headline": "Quiet start to Q4",
-  "summary": "Q4 is starting quiet: just two small biotech IPOs and two SPACs this week. The bigger news is Oura shelving its deal and Anthropic's IPO filing reportedly landing as soon as Oct 23 (reported, unconfirmed).",
+  "summary": "Q4 is starting quiet: just two small biotech IPOs and two SPACs this week, and only small deals are penciled in for the next two weeks, with Nscale's reported mid-October timing still unconfirmed. The bigger news is Oura shelving its deal and Anthropic's IPO filing reportedly landing as soon as Oct 23 (reported, unconfirmed).",
   "highlights": [
     {
       "text": "Anthropic's IPO filing could land as soon as Oct 23",
@@ -98,36 +98,159 @@
         }
       ]
     },
-    "nextWeek": {
-      "label": "Next week",
-      "dateRange": "Oct 12–16",
-      "ipos": [
+    "nextTwoWeeks": {
+      "label": "Next 2 weeks",
+      "dateRange": "Oct 12–23",
+      "weeks": [
         {
-          "id": "bitari",
-          "company": "Bitari",
-          "ticker": "BIAI",
-          "exchange": "n/a",
-          "tradeDate": "Week of Oct 12",
-          "priceRange": "$7/share",
-          "dealSize": "~$30M",
-          "description": "Hosts Bitcoin mining machines in Texas.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "sourceUrl": "https://www.iposcoop.com/ipo/bitari/"
+          "label": "Week of Oct 12–16",
+          "ipos": [
+            {
+              "id": "bitari",
+              "company": "Bitari",
+              "ticker": "BIAI",
+              "exchange": "Nasdaq",
+              "tradeDate": "Week of Oct 12 (IPOScoop: Wed, Oct 14)",
+              "priceRange": "$7 (fixed)",
+              "dealSize": "~$30M (4.3M shares)",
+              "description": "Texas-based hosting and maintenance services for Bitcoin mining machines.",
+              "isSpac": false,
+              "unconfirmed": true,
+              "sourceUrl": [
+                "https://www.iposcoop.com/ipo/bitari/",
+                "https://www.iposcoop.com/ipo-calendar/"
+              ],
+              "unconfirmedNote": "Week from IPOScoop only; not yet on the Nasdaq or Renaissance calendars"
+            },
+            {
+              "id": "nscale",
+              "company": "Nscale",
+              "ticker": "NSCL",
+              "exchange": "NYSE",
+              "tradeDate": "~Oct 15 (reported)",
+              "priceRange": "n/a",
+              "dealSize": "Up to ~$3B (reported)",
+              "description": "London-based AI data center and GPU cloud company; filed an S-1 on Sep 18 for an NYSE listing.",
+              "isSpac": false,
+              "unconfirmed": true,
+              "unconfirmedNote": "Oct 15 date comes from trade press only. As of Oct 4 the S-1 had no price range or share count and no amendment; Renaissance lists it only as eligible to launch. The ~$3B size is from Bloomberg, citing unnamed sources",
+              "sourceUrl": [
+                "https://www.nscale.com/press-releases/nscale-files-initial-public-offering",
+                "https://slicast.com/article/g8con3",
+                "https://segmara.com/blog/when-will-nscale-ipo"
+              ],
+              "detail": {
+                "facts": [
+                  {
+                    "label": "1H26 revenue",
+                    "value": "$140.6M (vs $10.4M in 1H25)"
+                  },
+                  {
+                    "label": "1H26 net loss",
+                    "value": "$1.02B (vs $369M)"
+                  },
+                  {
+                    "label": "Largest customer",
+                    "value": "52% of 1H26 revenue"
+                  },
+                  {
+                    "label": "Ticker / exchange",
+                    "value": "NSCL / NYSE (applied)"
+                  }
+                ],
+                "bullets": [
+                  "Renaissance Capital (Oct 2) named Nscale among companies eligible to launch, not as scheduled.",
+                  "Named ex-Meta executive Justin Osofsky COO on Oct 2."
+                ],
+                "sourceUrl": "https://segmara.com/blog/when-will-nscale-ipo"
+              }
+            }
+          ]
         },
         {
-          "id": "nscale",
-          "company": "Nscale",
-          "ticker": "NSCL",
-          "exchange": "NYSE",
-          "tradeDate": "~Oct 15",
-          "priceRange": "n/a",
-          "dealSize": "~$3B",
-          "description": "AI data center company; has filed for an NYSE listing.",
-          "isSpac": false,
-          "unconfirmed": true,
-          "unconfirmedNote": "Date and size from a single trade site, unconfirmed",
-          "sourceUrl": "https://www.nscale.com/press-releases/nscale-files-initial-public-offering"
+          "label": "Week of Oct 19–23",
+          "ipos": [
+            {
+              "id": "web3labs",
+              "company": "Web3Labs Global",
+              "ticker": "MDAT",
+              "exchange": "Nasdaq Capital Market",
+              "tradeDate": "Week of Oct 19 (IPOScoop)",
+              "priceRange": "$4–$5",
+              "dealSize": "~$28M (6.25M shares)",
+              "description": "Hong Kong-based consulting, acceleration and business services for Web3/blockchain startups.",
+              "isSpac": false,
+              "unconfirmed": true,
+              "unconfirmedNote": "Week from IPOScoop only; not yet on the Nasdaq or Renaissance calendars",
+              "sourceUrl": [
+                "https://www.iposcoop.com/ipo-calendar/",
+                "https://www.renaissancecapital.com/Profile/MDAT/Web3Labs-Global/IPO",
+                "https://www.sec.gov/Archives/edgar/data/2091521/000121390026078199/ea0297945-fwp_web3labs.htm"
+              ],
+              "detail": {
+                "intro": "Runs 3–6 month accelerator programs with public blockchains (TON, Neo, Plume and others) plus regulatory and business consulting. Fiscal year ends June 30; figures from the company's investor presentation (FWP).",
+                "table": {
+                  "caption": "Financials (US$M)",
+                  "columns": [
+                    "",
+                    "FY24",
+                    "FY25",
+                    "1H FY25",
+                    "1H FY26"
+                  ],
+                  "rows": [
+                    [
+                      "Revenue",
+                      "0.23",
+                      "2.2",
+                      "~0.97",
+                      "0.9"
+                    ],
+                    [
+                      "Gross margin",
+                      "59.2%",
+                      "61.4%",
+                      "40.7%",
+                      "72.5%"
+                    ],
+                    [
+                      "Net income",
+                      "0.09",
+                      "0.9",
+                      "n/a",
+                      "0.1"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "~$25M raise at the $4 low end, before over-allotment.",
+                  "Planned use of proceeds: 30% business expansion, 30% working capital, 40% general corporate.",
+                  "Class B shares carry 20 votes each.",
+                  "Founded 2017; 17 employees at IPO (Renaissance)."
+                ],
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2091521/000121390026078199/ea0297945-fwp_web3labs.htm"
+              }
+            },
+            {
+              "id": "anthropic-filing",
+              "company": "Anthropic",
+              "ticker": "n/a",
+              "exchange": "n/a",
+              "tradeDate": "Public S-1 filing as soon as Oct 23; not a trade date",
+              "priceRange": "n/a",
+              "dealSize": "n/a",
+              "description": "Claude AI developer; confidentially submitted a draft S-1 on Jun 1. A public filing would start the countdown to a roadshow.",
+              "isSpac": false,
+              "status": "Filing expected",
+              "unconfirmed": true,
+              "unconfirmedNote": "Oct 23 is Renaissance Capital's expectation, not an Anthropic announcement. Marketing reportedly as early as the week of Nov 9 (unconfirmed); no price, size or exchange disclosed",
+              "sourceUrl": [
+                "https://www.renaissancecapital.com/IPO-Center/News/122058/9-numbers-to-look-for-in-anthropic%E2%80%99s-ipo-filing",
+                "https://www.anthropic.com/news/confidential-draft-s1-sec",
+                "https://www.renaissancecapital.com/IPO-Center/News/122034/us-ipo-week-ahead-quiet-start-for-the-4q-ipo-market-as-anthropic-looms"
+              ]
+            }
+          ]
         }
       ]
     },

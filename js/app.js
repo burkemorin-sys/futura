@@ -175,10 +175,10 @@
 
 
   /* ================= IPO Tracker ================= */
-  const GROUPS = ["thisWeek", "nextWeek", "newFilings", "pulledDeals", "pastTwoWeeks", "lastWeekDebuts"];
+  const GROUPS = ["thisWeek", "nextTwoWeeks", "nextWeek", "newFilings", "pulledDeals", "pastTwoWeeks", "lastWeekDebuts"];
   const PAST = "pastTwoWeeks";
   const DEFAULT_LABELS = {
-    thisWeek: "This week", nextWeek: "Next week", newFilings: "New filings",
+    thisWeek: "This week", nextTwoWeeks: "Next 2 weeks", nextWeek: "Next week", newFilings: "New filings",
     pulledDeals: "Pulled / postponed", pastTwoWeeks: "Past 2 weeks", lastWeekDebuts: "Last week's debuts",
   };
   const ipoState = {

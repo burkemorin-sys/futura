@@ -7,7 +7,7 @@ index.html            app shell (top bar + bottom tabs on mobile, sidebar on des
 css/styles.css        theme
 js/app.js             router, sections, rendering (add a tab = add an entry to SECTIONS)
 fonts/                self-hosted Inter + Cormorant Garamond (OFL)
-data/ipos.json        IPO Tracker data (rewritten weekly)
+data/ipos.json        IPO Tracker data (rewritten every Sunday; see "Weekly IPO refresh")
 data/growth-picks.json            Growth Picks data (preferred)
 data/growth-picks.example.json    EXAMPLE DATA fallback, used only if growth-picks.json is missing
 data/spacex.json      SpaceX tab: snapshot, IPO facts, fundamentals, investors, news
@@ -49,7 +49,9 @@ Data is fetched with `cache: no-cache`, so a refreshed JSON file shows up on the
   "highlights": [ { "text": "...", "unconfirmed": true, "note": "Reported, not confirmed" } ], // optional
   "sections": {
     "thisWeek":       { "label": "This week", "dateRange": "Oct 5–9", "ipos": [IPO, ...] },
-    "nextWeek":       { "label": "Next week", "dateRange": "Oct 12–16", "ipos": [...] },
+    "nextTwoWeeks":   { "label": "Next 2 weeks", "dateRange": "Oct 12–23",
+                        "weeks": [ { "label": "Week of Oct 12–16", "ipos": [...] },
+                                   { "label": "Week of Oct 19–23", "ipos": [...] } ] },
     "newFilings":     { "label": "New filings", "ipos": [...] },
     "pulledDeals":    { "label": "Pulled / postponed", "ipos": [...] },
     "pastTwoWeeks":   { "label": "Past 2 weeks", "dateRange": "Sep 21 – Oct 2",
@@ -60,7 +62,8 @@ Data is fetched with `cache: no-cache`, so a refreshed JSON file shows up on the
 ```
 
 Any group can use either a flat `"ipos": [...]` list or `"weeks": [{label, ipos}]` sub-groups (rendered with week headers).
-`pastTwoWeeks` replaced the old `lastWeekDebuts` group; the app still renders `lastWeekDebuts` if a file includes it.
+`nextTwoWeeks` replaced the old flat `nextWeek` group, and `pastTwoWeeks` replaced `lastWeekDebuts`. The app still renders `nextWeek` and `lastWeekDebuts` if a file includes them.
+Reported dates that aren't on an official calendar (single-source dates, expected filings such as Anthropic's) go in with `unconfirmed: true` and an `unconfirmedNote`. An expected filing that isn't a trade date gets a `status` such as "Filing expected".
 The **Past 2 weeks** toggle (default on) shows or hides the `pastTwoWeeks` group and its jump chip. Both toggles are stored in localStorage
 (`showPastTwoWeeks`, `hideSpacs`), so they persist across visits.
 
@@ -80,6 +83,16 @@ IPO object (use the string `"n/a"` for anything unknown):
 | returns | object? | debut performance tiles: `firstDay` ("+14%"), `firstDayNote`, `latest` (return since IPO, "+9.3%"), `latestPrice`, `latestDate` (YYYY-MM-DD), `latestNote`. Values starting with + are shown green, values starting with - red, and 0% neutral |
 | sourceUrl | string \| string[] \| null | opens in a new tab; arrays render as "Source 1 · 2 · 3"; null shows "Source: n/a" |
 | detail | object? | adds a Details expander: `intro` (string), `facts` ([{label, value}]), `table` ({caption, columns[], rows[][]}, where values in parentheses are shown in red), `bullets` (string[]), `sourceUrl`, `sourceLabel` |
+
+### Weekly IPO refresh (Sundays)
+Each Sunday `data/ipos.json` is rewritten to cover:
+1. **This week**: the coming Monday–Friday (`thisWeek`, flat `ipos`).
+2. **Next 2 weeks**: the two weeks after that, grouped by week (`nextTwoWeeks.weeks`, two entries).
+3. **New filings**: new S-1/F-1 filings since the last refresh (`newFilings`).
+4. **Pulled / postponed**: deals withdrawn or postponed (`pulledDeals`).
+5. **Past 2 weeks**: debuts from the previous two weeks, grouped by week, with first-day and since-IPO returns (`pastTwoWeeks.weeks`).
+
+Sources: the Renaissance Capital calendar and news, the IPOScoop calendar, the Nasdaq and NYSE IPO calendars, company releases and SEC filings, and news reports. Only include sourced facts, use `"n/a"` when a field is missing, and flag anything unconfirmed. Also update `lastUpdated`, `weekLabel`, `summary` and `highlights`, and roll each week's group forward.
 
 ## data/growth-picks.json schema
 
