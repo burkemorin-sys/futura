@@ -10,12 +10,27 @@ fonts/                self-hosted Inter + Cormorant Garamond (OFL)
 data/ipos.json        IPO Tracker data (rewritten weekly)
 data/growth-picks.json            Growth Picks data (preferred)
 data/growth-picks.example.json    EXAMPLE DATA fallback, used only if growth-picks.json is missing
-screenshots/          verification screenshots
+data/spacex.json      SpaceX tab: snapshot, IPO facts, fundamentals, investors, news
+data/tesla.json       Tesla tab: same schema as spacex.json
+data/sentiment.json   social-sentiment snapshot, written by scripts/refresh_sentiment.py
+scripts/refresh_sentiment.py         refreshes data/sentiment.json (Python 3 stdlib only, no keys)
+scripts/refresh-data.workflow.yml    optional GitHub Actions schedule (see "Automated refresh")
+manifest.webmanifest  PWA manifest (start_url/scope "./" so it works under /futura/)
+sw.js                 service worker: offline app shell + network-first data/*.json
+icons/                app icons (192, 512, maskable 512, apple-touch 180, favicon, svg)
+screenshots/          verification screenshots (not deployed)
 ```
 
 Run locally: `python3 -m http.server 8080` in this folder, then open http://localhost:8080.
 To host it, copy the folder to any static host. The app fetches JSON, so opening the file directly with `file://` won't work.
 Data is fetched with `cache: no-cache`, so a refreshed JSON file shows up on the next reload.
+
+### Installable app (PWA)
+- `manifest.webmanifest`: name and short_name "Futura", `display: standalone`, black background and theme color, `start_url` and `scope` set to `./`.
+- iOS: `apple-mobile-web-app-capable`, `black-translucent` status bar, `apple-mobile-web-app-title`, plus `icons/apple-touch-icon.png`. Safe-area insets (notch, home bar, landscape) are applied in `css/styles.css` and need `viewport-fit=cover`.
+- `sw.js`: the app shell is precached and served stale-while-revalidate, so code changes appear on the next visit. `data/*.json` is fetched network-first and falls back to the cached copy when offline. Cross-origin requests (TradingView) are left alone.
+- **To roll out a shell change** (new files, or anything you want picked up immediately), bump `VERSION` in `sw.js`. Old caches are deleted when the new worker activates.
+- Install it from Safari with Share → Add to Home Screen, or from Chrome/Edge with the install icon in the address bar.
 
 ## data/ipos.json schema
 
@@ -82,3 +97,63 @@ IPO object (use the string `"n/a"` for anything unknown):
 }
 ```
 The page offers sorting by revenue growth, upside to target, PEG, forward P/E, market cap, or A–Z, and filtering by sector.
+
+## data/spacex.json and data/tesla.json schema
+
+Both files share one schema. Every displayed number has a source link nearby, and anything missing is shown as `"n/a"`.
+
+```jsonc
+{
+  "lastUpdated": "YYYY-MM-DD",
+  "company": "SpaceX", "ticker": "SPCX", "exchange": "NASDAQ",
+  "tvSymbol": "NASDAQ:SPCX",          // TradingView symbol for the live widgets
+  "status": "public" | "private",
+  "tagline": "one line",
+  "statusNote": "optional banner text (e.g. IPO / private-company status)",
+  "ipo": {                             // optional; SpaceX only
+    "date", "price", "proceeds", "valuationAtIpo", "firstDayClose", "leads", "lockup",
+    "sources": [{ "label", "url" }]
+  },
+  "snapshot": { "price": 171.92, "change": "+0.49%", "asOf": "Oct 6, 2026 close", "marketCap", "range52w", "sourceUrl" },
+  "fundamentals": {
+    "asOf": "text", "kpiSource": "url",
+    "kpis": [{ "label", "value", "note"? }],          // value starting with − or - is shown red, + green
+    "tables": [{ "caption", "columns": [], "rows": [[]], "sourceUrl", "sourceLabel" }],   // "(123)" cells are shown red
+    "notes": ["text"], "notesSourceUrl": "url",
+    "analyst": { "rating", "count", "priceTarget", "upside", "sourceUrl", "calls": [{ "text", "url"|null }] },
+    "catalysts": [{ "date": "YYYY-MM-DD" | "YYYY-MM" | "TBD", "event", "status": "confirmed|scheduled|expected|estimate|reported|unconfirmed|unscheduled", "url" }],
+    "bull": [{ "text", "url" }], "bear": [{ "text", "url" }]
+  },
+  "investors": {
+    "insiders": [{ "name", "shares", "pct", "pctNote"?, "asOf", "sourceUrl", "sourceLabel", "extraSources"?: [{label,url}], "bullets": [] }],
+    "institutions": { "asOf": "YYYY-MM-DD", "note", "sourceUrl",
+      "rows": [{ "name", "shares", "pct", "value", "change", "note"?, "url"?, "estimate"?: true }] },   // estimate => "est." badge
+    "notes": ["text"], "sources": [{ "label", "url" }]
+  },
+  "news": [{ "date": "YYYY-MM-DD", "outlet", "title", "summary", "url" }]   // ~10 latest
+}
+```
+
+## data/sentiment.json (social sentiment)
+
+Written by `python3 scripts/refresh_sentiment.py`, which takes no keys and uses only the standard library. The browser can't query these sources directly because none of them send CORS headers, so the site reads this snapshot instead.
+
+| Source | What it measures |
+| --- | --- |
+| StockTwits public stream | Bullish vs. bearish tags on the last ~120 messages per symbol (untagged messages are ignored for the ratio) |
+| ApeWisdom | 24h mention count, rank, and upvotes across Reddit investing subs and 4chan /biz/, compared with the previous 24h |
+| Tradestie | Daily r/wallstreetbets sentiment score (−1 to +1), available only when the ticker is in WSB's top 50 |
+
+Not used: the Reddit API (needs OAuth; returns 403 without it), the X/Twitter API (paid), and Google Trends (no official API). The page links out to those sites instead.
+
+```jsonc
+{ "lastUpdated": "ISO-8601 UTC", "method": "text", "unavailable": [{ "source", "reason" }],
+  "symbols": { "TSLA": { "stocktwits": {...}, "apewisdom": {...}, "wsbTradestie": {...} }, "SPCX": {...} } }
+```
+Any source that fails gets `"status": "unavailable"` with an error message. Values are never made up.
+
+## Live data
+The SpaceX and Tesla tabs embed free TradingView widgets (symbol quote, advanced chart, headline timeline). They load client-side, need no API key, and may be delayed per exchange rules. When the widgets are offline or blocked, the page falls back to the JSON snapshot.
+
+## Automated refresh (optional)
+`scripts/refresh-data.workflow.yml` is a ready-made GitHub Actions workflow that runs `refresh_sentiment.py` every few hours and commits `data/sentiment.json`. It isn't installed yet because pushing files under `.github/workflows/` requires a token with the `workflow` scope. To enable it, run `mkdir -p .github/workflows && git mv scripts/refresh-data.workflow.yml .github/workflows/refresh-data.yml`, then push with a token that has `workflow` scope (`gh auth refresh -s workflow`), or add the file in the GitHub web UI. Fundamentals and news in `spacex.json` and `tesla.json` are curated by hand and are not scraped.

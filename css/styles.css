@@ -330,3 +330,138 @@ button { font: inherit; color: inherit; }
 .returns .sub { display: block; font-size: 11.5px; color: var(--faint); margin-top: 1px; line-height: 1.35; }
 .srcs { display: inline-flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
 @media (min-width: 900px) { .toggle + .toggle { margin-left: 0; } }
+
+/* ---------- Company pages (SpaceX / Tesla) ---------- */
+.co-status .meta { margin-top: 14px; }
+.co-quote { display: flex; gap: 14px; align-items: flex-start; }
+.co-quote > div:first-child { flex: 1; min-width: 0; }
+.co-tagline { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+.co-status .pick-price .p { font-size: 26px; }
+.chg { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.up { color: var(--up); } .down { color: var(--down); }
+.co-note { margin: 14px 0 0 !important; padding: 10px 12px; border-radius: 10px; background: var(--gold-soft); border: 1px solid var(--border-gold); color: var(--text) !important; font-size: 13.5px; }
+.ipo-facts { margin-top: 12px; }
+.ipo-facts dd { max-width: 62%; }
+.tag.live-tag { color: var(--up); border-color: rgba(99, 214, 156, .35); background: var(--up-soft); }
+.live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--up); box-shadow: 0 0 0 0 rgba(99, 214, 156, .6); animation: livepulse 2s infinite; }
+@keyframes livepulse { 0% { box-shadow: 0 0 0 0 rgba(99, 214, 156, .55); } 70% { box-shadow: 0 0 0 7px rgba(99, 214, 156, 0); } 100% { box-shadow: 0 0 0 0 rgba(99, 214, 156, 0); } }
+@media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+.tbl-src { margin-top: 8px; font-size: 12.5px; }
+.tbl-src .src { font-size: 12.5px; }
+.srcs.tbl-src { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.fineprint { margin: 10px 2px 0; font-size: 12px; color: var(--faint); line-height: 1.5; }
+.fineprint.top { margin-top: 4px; }
+.fineprint .src { font-size: 12px; }
+.panel.pad { padding: 14px 16px; min-width: 0; }
+.mini { margin: 0 0 10px; font-size: 10.5px; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); font-weight: 700; }
+.co-grid { display: grid; gap: 12px; margin-top: 12px; }
+@media (min-width: 900px) { .co-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } .co-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.co-grid .table-wrap { border: 0; background: transparent; }
+.co-grid .fin caption { padding-left: 0; padding-top: 0; }
+.co-grid .fin th:first-child { padding-left: 0; }
+.co-grid .fin th:last-child, .co-grid .fin td:last-child { padding-right: 0; }
+
+.tv-panel { padding: 6px; margin-bottom: 12px; overflow: hidden; min-height: 90px; }
+.tv-feed { min-height: 432px; }
+.tv-fallback { color: var(--faint); font-size: 13px; padding: 16px; text-align: center; }
+.tv iframe { display: block; border-radius: 10px; }
+.tv .tradingview-widget-copyright { font-size: 11px; padding: 4px 8px; }
+.tv .tradingview-widget-copyright a { color: var(--faint); }
+
+.kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 10px 0 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+.kpis > div { padding: 11px 13px; min-width: 0; border-top: 1px solid var(--border); }
+.kpis > div:nth-child(-n+2) { border-top: 0; }
+.kpis > div:nth-child(odd) { border-right: 1px solid var(--border); }
+.kpis dt { font-size: 10.5px; text-transform: uppercase; letter-spacing: .11em; color: var(--faint); font-weight: 600; }
+.kpis dd { margin: 3px 0 0; font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.kpis .sub { display: block; font-size: 11.5px; color: var(--faint); margin-top: 1px; }
+@media (min-width: 700px) {
+  .kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .kpis > div { border-right: 1px solid var(--border); }
+  .kpis > div:nth-child(-n+4) { border-top: 0; }
+  .kpis > div:nth-child(4n) { border-right: 0; }
+}
+.notes-list { margin-top: 14px; color: var(--muted); font-size: 13.5px; }
+.bullets.bull li::before { background: var(--up); }
+.bullets .src.inline { vertical-align: -2px; }
+.bullets a { color: var(--gold-light); text-decoration-color: rgba(243, 220, 140, .35); text-underline-offset: 3px; }
+.panel .bullets { font-size: 13.5px; color: var(--muted); }
+.consensus { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: baseline; margin-bottom: 10px; font-size: 13.5px; color: var(--muted); }
+.consensus .rating { font-family: var(--display); font-size: 28px; font-weight: 600; color: var(--gold-light); line-height: 1; }
+.consensus strong { color: var(--text); }
+.catalysts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.catalysts li { display: grid; grid-template-columns: 92px 1fr; gap: 10px; padding: 8px 0; font-size: 13.5px; border-top: 1px solid var(--border); }
+.catalysts li:first-child { border-top: 0; padding-top: 0; }
+.catalysts .when { color: var(--gold-light); font-weight: 600; font-variant-numeric: tabular-nums; font-size: 12.5px; }
+.catalysts .what { color: var(--muted); }
+.catalysts a { color: var(--text); text-decoration-color: rgba(243, 220, 140, .35); text-underline-offset: 3px; }
+.catalysts .tag { margin-left: 4px; font-size: 9.5px; padding: 0 6px; line-height: 16px; }
+
+.insider { margin-bottom: 12px; border-color: var(--border-gold); }
+.insider-head { display: flex; gap: 12px; align-items: baseline; justify-content: space-between; flex-wrap: wrap; }
+.insider-head h3 { margin: 0; font-size: 16px; font-weight: 600; }
+.big { font-family: var(--display); font-size: 30px; font-weight: 600; color: var(--gold-light); line-height: 1.1; }
+.big small { font-family: var(--font); font-size: 12px; color: var(--faint); font-weight: 500; }
+.big.up { color: var(--up); } .big.down { color: var(--down); }
+.insider .bullets { margin-top: 10px; }
+.holders th[scope="row"] { white-space: normal; min-width: 170px; }
+.holders th[scope="row"] a { color: var(--text); text-decoration-color: rgba(243, 220, 140, .35); text-underline-offset: 3px; }
+.holders td.wrap { white-space: normal; min-width: 120px; text-align: left; font-size: 12px; }
+.holders thead th:last-child { text-align: left; }
+.holders .row-note { display: block; font-size: 11px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+.holders .tag { font-size: 9px; padding: 0 5px; line-height: 15px; }
+.panel .table-wrap.holders-wrap { border: 0; }
+
+.news { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+@media (min-width: 900px) { .news { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.news li { padding: 13px 15px; min-width: 0; }
+.news-meta { display: flex; gap: 10px; font-size: 11.5px; color: var(--faint); letter-spacing: .02em; }
+.news-meta .outlet { color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: 10.5px; }
+.news h3 { margin: 5px 0 4px; font-size: 15px; line-height: 1.35; font-weight: 600; }
+.news h3 a { color: var(--text); text-decoration: none; }
+.news h3 a:hover { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
+.news p { margin: 0; font-size: 13.5px; color: var(--muted); }
+
+.senti .bar { display: flex; height: 8px; border-radius: 99px; overflow: hidden; margin-top: 10px; background: #2c2a31; }
+.senti .b-up { background: var(--up); } .senti .b-down { background: var(--down); }
+.method-note { margin-top: 12px; }
+.method-note p { margin: 0 0 10px; color: var(--muted); font-size: 13.5px; }
+.method-note .bullets { font-size: 12.5px; }
+.method-note strong { color: var(--text); font-weight: 600; }
+.tv, .tv iframe { color-scheme: light; } /* keep TradingView iframes transparent inside our dark color-scheme */
+.tv-chart { min-height: 452px; }
+.co-grid .table-wrap { border-radius: 0; }
+.big { font-variant-numeric: lining-nums; }
+.pct-note { margin: 2px 0 0; font-size: 12px; color: var(--muted); }
+.holders thead th:first-child { text-align: left; }
+@media (max-width: 699px) {
+  .holders thead { display: none; }
+  .holders, .holders tbody { display: block; }
+  .holders tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 10px; padding: 10px 0; }
+  .holders tbody tr + tr { border-top: 1px solid var(--border); }
+  .holders tbody tr + tr td, .holders tbody tr + tr th { border-top: 0 !important; }
+  .holders th[scope="row"], .holders td.wrap { grid-column: 1 / -1; min-width: 0; padding: 0 !important; }
+  .holders td { text-align: left; padding: 0 !important; white-space: normal; }
+  .holders td::before { content: attr(data-label); display: block; font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+  .holders td.wrap::before { display: inline; margin-right: 6px; }
+  .holders td.wrap { font-size: 12px; color: var(--muted); }
+  .holders td.wrap.up { color: var(--up); } .holders td.wrap.down { color: var(--down); }
+}
+
+/* ---------- PWA / safe areas (iPhone notch, home bar, landscape) ---------- */
+:root { --sat: env(safe-area-inset-top, 0px); --sal: env(safe-area-inset-left, 0px); --sar: env(safe-area-inset-right, 0px); }
+body::before { /* solid strip behind the translucent status bar so content never shows through it */
+  content: ""; position: fixed; top: 0; left: 0; right: 0; height: var(--sat); background: rgba(6, 6, 8, .96); z-index: 40; pointer-events: none;
+}
+.appbar { padding-left: calc(18px + var(--sal)); padding-right: calc(18px + var(--sar)); }
+.main { padding-left: calc(16px + var(--sal)); padding-right: calc(16px + var(--sar)); }
+.toolbar { top: var(--sat); margin-left: calc(-16px - var(--sal)); margin-right: calc(-16px - var(--sar)); padding-left: calc(16px + var(--sal)); padding-right: calc(16px + var(--sar)); }
+.nav-list { padding-left: var(--sal); padding-right: var(--sar); }
+.group { scroll-margin-top: calc(64px + var(--sat)); }
+@media (min-width: 900px) {
+  .nav { padding-top: calc(26px + var(--sat)); padding-left: calc(14px + var(--sal)); width: calc(248px + var(--sal)); }
+  .nav-list { padding-left: 0; padding-right: 0; }
+  .main { margin-left: calc(248px + var(--sal)); padding: calc(36px + var(--sat)) calc(44px + var(--sar)) calc(56px + env(safe-area-inset-bottom, 0px)) 44px; }
+  .toolbar { margin: 0 calc(-44px - var(--sar)) 6px -44px; padding: 12px calc(44px + var(--sar)) 12px 44px; }
+}
+@media (display-mode: standalone) { body { overscroll-behavior-y: none; } }

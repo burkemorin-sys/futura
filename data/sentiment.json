@@ -1,0 +1,78 @@
+{
+  "lastUpdated": "2026-10-06T21:30:39Z",
+  "method": "Snapshot computed server-side (none of these sources allow browser CORS requests). StockTwits: the most recent ~120 public messages per symbol, counting messages the author tagged Bullish or Bearish; untagged messages are ignored for the ratio. ApeWisdom: 24-hour mention counts across Reddit investing subreddits (incl. r/wallstreetbets) and 4chan /biz/. Tradestie: WallStreetBets daily sentiment score, only for its top-50 tickers. Small samples are noisy; treat as a mood gauge, not a signal.",
+  "unavailable": [
+    {
+      "source": "Reddit JSON API (r/teslainvestorsclub, r/SpaceX, r/wallstreetbets)",
+      "reason": "reddit.com returns HTTP 403 to unauthenticated server requests and sends no CORS headers; OAuth app credentials would be required."
+    },
+    {
+      "source": "X / Twitter",
+      "reason": "API access is paid; not used."
+    },
+    {
+      "source": "Google Trends",
+      "reason": "No official public API; unofficial endpoints are rate-limited/blocked."
+    }
+  ],
+  "symbols": {
+    "TSLA": {
+      "stocktwits": {
+        "status": "ok",
+        "messagesSampled": 120,
+        "bullish": 21,
+        "bearish": 19,
+        "untagged": 80,
+        "bullishPctOfTagged": 52.5,
+        "windowStart": "2026-10-06T18:19:49Z",
+        "windowEnd": "2026-10-06T21:26:28Z",
+        "watchlistCount": 1068224,
+        "url": "https://stocktwits.com/symbol/TSLA"
+      },
+      "apewisdom": {
+        "status": "ok",
+        "rank": 12,
+        "mentions24h": 41,
+        "mentionsPrev24h": 40,
+        "upvotes24h": 61,
+        "rankPrev24h": 13,
+        "url": "https://apewisdom.io/stocks/TSLA/"
+      },
+      "wsbTradestie": {
+        "status": "ok",
+        "sentiment": "Bullish",
+        "score": 0.02,
+        "comments": 3
+      }
+    },
+    "SPCX": {
+      "stocktwits": {
+        "status": "ok",
+        "messagesSampled": 120,
+        "bullish": 39,
+        "bearish": 16,
+        "untagged": 65,
+        "bullishPctOfTagged": 70.9,
+        "windowStart": "2026-10-06T19:12:38Z",
+        "windowEnd": "2026-10-06T21:22:09Z",
+        "watchlistCount": 106908,
+        "url": "https://stocktwits.com/symbol/SPCX"
+      },
+      "apewisdom": {
+        "status": "ok",
+        "rank": 6,
+        "mentions24h": 111,
+        "mentionsPrev24h": 142,
+        "upvotes24h": 408,
+        "rankPrev24h": 3,
+        "url": "https://apewisdom.io/stocks/SPCX/"
+      },
+      "wsbTradestie": {
+        "status": "ok",
+        "sentiment": "Bearish",
+        "score": -0.057,
+        "comments": 14
+      }
+    }
+  }
+}

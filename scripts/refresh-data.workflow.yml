@@ -1,0 +1,26 @@
+# Optional: move to .github/workflows/refresh-data.yml (requires a token with the `workflow` scope to push).
+name: Refresh sentiment snapshot
+on:
+  schedule:
+    - cron: "17 */4 * * *"   # every 4 hours
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh data/sentiment.json
+        run: python3 scripts/refresh_sentiment.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/sentiment.json; then echo "No change"; exit 0; fi
+          git config user.name "futura-bot"
+          git config user.email "futura-bot@users.noreply.github.com"
+          git add data/sentiment.json
+          git commit -m "Refresh sentiment snapshot"
+          git push
