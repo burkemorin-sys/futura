@@ -62,6 +62,21 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Brand ---------- */
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+.brand-text { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+.motto {
+  font-family: var(--font); font-weight: 500; font-size: 10px; letter-spacing: .28em; text-transform: lowercase;
+  color: var(--gold); opacity: .82; line-height: 1;
+}
+.brand-side .motto { letter-spacing: .32em; opacity: .75; padding-left: .04em; }
+.motto-line { margin: 14px 0 0; }
+.motto-line .motto {
+  display: inline-block; font-size: 12px; letter-spacing: .34em; opacity: .9;
+  padding-bottom: 6px; border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+}
+.why-motto { margin: 0 0 14px; }
+.why-motto .motto { font-size: 13px; letter-spacing: .36em; }
+.foot-motto { display: block; margin: 0 0 8px; font-size: 10.5px; letter-spacing: .3em; opacity: .7; border: 0; padding: 0; }
+.cas-foot .motto { border: 0; }
 .brand .logo { width: 44px; height: auto; flex: none; overflow: visible; }
 .wordmark {
   font-family: var(--display); font-weight: 600; font-size: 26px; letter-spacing: .30em; line-height: 1;
@@ -93,6 +108,7 @@ button { font: inherit; color: inherit; }
   height: 100%; text-decoration: none; color: var(--faint); font-size: 11px; font-weight: 600; letter-spacing: .02em;
 }
 .nav-link svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.nav-link[data-id="cassiopeia"] svg circle { fill: currentColor; stroke: none; }
 .nav-link[aria-current="page"] { color: var(--gold-light); }
 .nav-link[aria-current="page"]::before {
   content: ""; position: absolute; top: -1px; left: 30%; right: 30%; height: 2px; border-radius: 2px; background: var(--gold-grad);
@@ -465,3 +481,111 @@ body::before { /* solid strip behind the translucent status bar so content never
   .toolbar { margin: 0 calc(-44px - var(--sar)) 6px -44px; padding: 12px calc(44px + var(--sar)) 12px 44px; }
 }
 @media (display-mode: standalone) { body { overscroll-behavior-y: none; } }
+
+/* ---------- Nav: six tabs on mobile ---------- */
+@media (max-width: 899px) {
+  .nav-list li { min-width: 0; }
+  .nav-link { font-size: 10px; gap: 3px; letter-spacing: 0; padding: 0 2px; }
+  .nav-link svg { width: 20px; height: 20px; }
+  .nav-link[aria-current="page"]::before { left: 22%; right: 22%; }
+}
+
+/* ---------- Cassiopeia tab ---------- */
+.cas-hero {
+  position: relative; margin: -18px -16px 18px; min-height: 420px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.16);
+  overflow: hidden; background:
+    radial-gradient(900px 420px at 55% 38%, rgba(212, 175, 55, 0.10), transparent 60%),
+    linear-gradient(180deg, #050507 0%, #08080c 70%, var(--bg) 100%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.cas-stage { position: absolute; inset: 0; }
+.cas-sky { width: 100%; height: 100%; display: block; --parx: 0px; --pary: 0px; }
+@media (max-width: 899px) {
+  .cas-hero {
+    min-height: 0; display: flex; flex-direction: column; justify-content: flex-start;
+  }
+  .cas-stage {
+    position: relative; inset: auto; height: 260px; flex: none;
+  }
+  .cas-sky { transform: none; width: 100%; height: 100%; }
+  .cas-name { display: none; }
+  .cas-hero-copy {
+    position: relative; padding: 8px 20px 22px;
+    background: linear-gradient(180deg, rgba(6,6,8,.35), rgba(6,6,8,.95));
+  }
+}
+.cas-field { transform: translate(calc(var(--parx) * 0.45), calc(var(--pary) * 0.45)); will-change: transform; }
+.cas-line, .cas-main { transform: translate(var(--parx), var(--pary)); will-change: transform; }
+.cas-bg { fill: #f5ecd0; }
+.cas-line { filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.35)); }
+.cas-halo {
+  fill: #f3dc8c; opacity: calc(0.10 + var(--bright, 0.8) * 0.16);
+  transform-origin: center; transform-box: fill-box;
+}
+.cas-core {
+  fill: #f3dc8c;
+  opacity: calc(0.78 + var(--bright, 0.8) * 0.22);
+  filter: url(#casSoft);
+}
+.cas-spark { fill: #fffaf0; opacity: calc(0.55 + var(--bright, 0.8) * 0.4); }
+.cas-name {
+  font: 500 11px var(--font); letter-spacing: .18em; text-transform: uppercase;
+  fill: #b8a36a; opacity: .78; pointer-events: none;
+}
+.cas-main.is-rest .cas-halo { opacity: calc(0.12 + var(--bright, 0.8) * 0.18); }
+.cas-main.is-pulsing .cas-halo { animation: casHalo var(--pulse-ms, 1800ms) ease-in-out 1; }
+.cas-main.is-pulsing .cas-core { animation: casCore var(--pulse-ms, 1800ms) ease-in-out 1; }
+.cas-main.is-pulsing .cas-spark { animation: casSpark var(--pulse-ms, 1800ms) ease-in-out 1; }
+@keyframes casHalo {
+  0%, 100% { opacity: calc(0.12 + var(--bright, 0.8) * 0.18); transform: scale(1); }
+  45% { opacity: calc(0.28 + var(--bright, 0.8) * 0.42); transform: scale(1.18); }
+}
+@keyframes casCore {
+  0%, 100% { opacity: calc(0.72 + var(--bright, 0.8) * 0.28); }
+  45% { opacity: 1; }
+}
+@keyframes casSpark {
+  0%, 100% { opacity: calc(0.5 + var(--bright, 0.8) * 0.35); transform: scale(1); }
+  45% { opacity: 1; transform: scale(1.35); }
+}
+.cas-sky.is-reduced .cas-halo { opacity: calc(0.16 + var(--bright, 0.8) * 0.22); }
+.cas-hero-copy {
+  position: relative; z-index: 2; padding: 48px 20px 28px; max-width: 560px;
+  background: linear-gradient(180deg, rgba(6,6,8,.15), rgba(6,6,8,.72) 55%, rgba(6,6,8,.92));
+}
+.cas-tagline { margin: 10px 0 0; color: var(--muted); font-size: 15px; max-width: 34em; line-height: 1.55; }
+.cas-intro { margin-bottom: 8px; }
+.cas-intro p, .cas-prose p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.cas-prose { padding: 18px 18px 16px; }
+.why-panel { border-color: var(--border-gold); }
+.why-panel p { color: var(--text); }
+.cas-stars { display: grid; gap: 12px; margin-top: 12px; }
+@media (min-width: 700px) { .cas-stars { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .cas-stars { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.cas-star-card p { margin: 10px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.cas-star-head { display: flex; gap: 12px; align-items: flex-start; }
+.cas-star-head h3 { margin: 0; font-size: 17px; font-weight: 600; }
+.cas-star-head .bayer { color: var(--gold); font-weight: 500; font-family: var(--mono); font-size: 13px; letter-spacing: .04em; }
+.cas-dot {
+  flex: none; width: 14px; height: 14px; margin-top: 4px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fffaf0, #f3dc8c 40%, #c79f3a 75%, transparent 76%);
+  box-shadow: 0 0 0 3px rgba(243, 220, 140, calc(0.08 + var(--g, .8) * 0.18)), 0 0 14px rgba(212, 175, 55, calc(0.25 + var(--g, .8) * 0.45));
+}
+@media (min-width: 900px) {
+  .cas-hero { margin: -36px -44px 28px; min-height: 460px; border-radius: 0; }
+  .cas-hero-copy { padding: 72px 48px 40px; background: linear-gradient(90deg, rgba(6,6,8,.88) 0%, rgba(6,6,8,.55) 55%, transparent 85%); }
+  .cas-hero-copy .page-title { font-size: 52px; }
+  .cas-name { font-size: 12px; letter-spacing: .2em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cas-main.is-pulsing .cas-halo,
+  .cas-main.is-pulsing .cas-core,
+  .cas-main.is-pulsing .cas-spark { animation: none !important; }
+  .cas-field, .cas-line, .cas-main { transform: none !important; }
+}
+
+.brand-side .brand-text { align-items: flex-start; }
+@media (min-width: 900px) {
+  .motto-line .motto { font-size: 13px; letter-spacing: .38em; }
+}

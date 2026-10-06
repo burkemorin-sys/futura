@@ -21,6 +21,7 @@
     users: '<circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9.5" r="2.4"/><path d="M16 14.2c2.4-.3 4.1 1.3 4.5 4.3"/>',
     news: '<rect x="3.5" y="5" width="13" height="14" rx="1.5"/><path d="M16.5 9h3a1 1 0 0 1 1 1v7.5a1.5 1.5 0 0 1-3 0V9"/><path d="M6.5 9h7M6.5 12.5h7M6.5 16h4"/>',
     chat: '<path d="M4 5.5h16v10H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/>',
+    cas: '<polyline points="3.5,8 7.5,14 12,10 16.5,16 20.5,8" fill="none"/><circle cx="3.5" cy="8" r="1.35"/><circle cx="7.5" cy="14" r="1.5"/><circle cx="12" cy="10" r="1.7"/><circle cx="16.5" cy="16" r="1.55"/><circle cx="20.5" cy="8" r="1.45"/>',
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
 
@@ -69,7 +70,8 @@
       ${labels ? `<style>.cas-label{font:500 7px var(--font);letter-spacing:.18em;text-transform:uppercase;fill:#b8a36a;opacity:.75}</style>` : ""}
     </svg>`;
   }
-  const brandHTML = () => `${cassiopeia({ cls: "logo", variant: "logo", title: "Cassiopeia" })}<span class="wordmark">Futura</span>`;
+  const brandHTML = (withMotto = false) =>
+    `${cassiopeia({ cls: "logo", variant: "logo", title: "Cassiopeia" })}<span class="brand-text"><span class="wordmark">Futura</span>${withMotto ? `<span class="motto" aria-label="Motto">looking higher</span>` : ""}</span>`;
 
   /* ---------------- Starfield ---------------- */
   function buildSky() {
@@ -108,6 +110,7 @@
     { id: "growth", label: "Growth Picks", short: "Growth", icon: "growth", render: renderGrowth },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex") },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla") },
+    { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia },
     { id: "more", label: "More coming soon", short: "More", icon: "grid", render: renderPlaceholder },
   ];
 
@@ -115,7 +118,9 @@
   const navList = document.getElementById("nav-list");
 
   function buildNav() {
-    document.querySelectorAll("[data-brand]").forEach((b) => (b.innerHTML = brandHTML()));
+    document.querySelectorAll("[data-brand]").forEach((b) => {
+      b.innerHTML = brandHTML(b.classList.contains("brand-side"));
+    });
     navList.innerHTML = SECTIONS.map(
       (s) => `<li><a class="nav-link" href="#/${s.id}" data-id="${s.id}">${svg(s.icon)}<span></span></a></li>`
     ).join("");
@@ -138,6 +143,7 @@
     });
     document.title = `${section.label} · Futura`;
     window.scrollTo(0, 0);
+    if (casState.anim) { casState.anim.destroy(); casState.anim = null; }
     main.dataset.token = section.id;
     section.render(main);
   }
@@ -756,6 +762,239 @@
       boxes.forEach((b) => io.observe(b));
     } else boxes.forEach(load);
   }
+
+  /* ================= Cassiopeia ================= */
+  const casState = { data: null, anim: null };
+
+  async function renderCassiopeia(el) {
+    const token = (el.dataset.token = `cassiopeia-${Date.now()}`);
+    if (!casState.data) {
+      el.innerHTML = `<div class="loading">Loading Cassiopeia…</div>`;
+      try { casState.data = await getJSON("data/cassiopeia.json"); }
+      catch (err) {
+        if (el.dataset.token === token) el.innerHTML = `<div class="error">Couldn't load data/cassiopeia.json (${esc(err.message)}).</div>`;
+        return;
+      }
+    }
+    if (el.dataset.token !== token) return;
+    if (casState.anim) { casState.anim.destroy(); casState.anim = null; }
+    drawCassiopeia(el, casState.data);
+  }
+
+  function drawCassiopeia(el, d) {
+    const starCards = (d.stars.items || []).map((st) => `
+      <article class="panel pad cas-star-card" data-star="${esc(st.id)}">
+        <div class="cas-star-head">
+          <span class="cas-dot" style="--g:${Number(st.glow) || 0.8}" aria-hidden="true"></span>
+          <div>
+            <h3>${esc(st.name)} <span class="bayer">${esc(st.bayer)}</span></h3>
+            <div class="tags">
+              <span class="tag sector">${esc(st.spectral)}</span>
+              <span class="tag">mag ${esc(st.magnitude)}</span>
+              <span class="tag">${esc(st.distance)}</span>
+            </div>
+          </div>
+        </div>
+        <p>${esc(st.fact)}</p>
+        <div class="srcs tbl-src">${(st.sources || []).map((x) => srcLink(x.url, x.label)).join("")}</div>
+      </article>`).join("");
+
+    const deep = (d.deepSky.items || []).map((o) => `
+      <article class="panel pad">
+        <h3 class="mini">${esc(o.name)}</h3>
+        <div class="tags" style="margin:0 0 8px">
+          <span class="tag sector">${esc(o.designation)}</span>
+          ${o.distance ? `<span class="tag">${esc(o.distance)}</span>` : ""}
+          ${o.size ? `<span class="tag">${esc(o.size)}</span>` : ""}
+        </div>
+        <p class="block" style="margin:0"><span style="color:var(--muted);font-size:14px">${esc(o.blurb)}</span></p>
+        <div class="srcs tbl-src">${(o.sources || []).map((x) => srcLink(x.url, x.label)).join("")}</div>
+      </article>`).join("");
+
+    const obsFacts = (d.observing.facts || []).map((f) =>
+      `<div><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("");
+
+    el.innerHTML = `
+      <section class="cas-hero" aria-label="Cassiopeia constellation animation">
+        <div class="cas-stage" id="cas-stage"></div>
+        <div class="cas-hero-copy">
+          <p class="eyebrow">The northern queen</p>
+          <h1 class="page-title">${esc(d.title)}</h1>
+          <p class="cas-tagline">${esc(d.tagline)}</p>
+          <p class="motto-line"><span class="motto">${esc(d.motto || "looking higher")}</span></p>
+          <div class="page-meta"><span>${svg("clock")}Updated ${esc(fmtDate(d.lastUpdated))}</span></div>
+        </div>
+      </section>
+
+      <section class="panel method cas-intro">
+        <p>${esc(d.intro)}</p>
+      </section>
+
+      <section class="group" id="g-myth" aria-labelledby="h-myth">
+        ${sectionHead("myth", d.mythology.title)}
+        <div class="panel pad cas-prose"><p>${esc(d.mythology.prose)}</p>
+          <div class="srcs tbl-src">${(d.mythology.sources || []).map((x) => srcLink(x.url, x.label)).join("")}</div>
+        </div>
+      </section>
+
+      <section class="group" id="g-observe" aria-labelledby="h-observe">
+        ${sectionHead("observe", d.observing.title)}
+        <div class="panel pad cas-prose"><p>${esc(d.observing.prose)}</p>
+          <dl class="facts" style="margin-top:14px">${obsFacts}</dl>
+          <div class="srcs tbl-src">${(d.observing.sources || []).map((x) => srcLink(x.url, x.label)).join("")}</div>
+        </div>
+      </section>
+
+      <section class="group" id="g-stars" aria-labelledby="h-stars">
+        ${sectionHead("stars", d.stars.title)}
+        <p class="fineprint top">${esc(d.stars.intro)}</p>
+        <div class="cas-stars">${starCards}</div>
+      </section>
+
+      <section class="group" id="g-deep" aria-labelledby="h-deep">
+        ${sectionHead("deep", d.deepSky.title)}
+        <p class="fineprint top">${esc(d.deepSky.intro)}</p>
+        <div class="co-grid">${deep}</div>
+      </section>
+
+      <section class="group" id="g-why" aria-labelledby="h-why">
+        ${sectionHead("why", d.whyFutura.title)}
+        <div class="panel pad cas-prose why-panel">
+          <p class="motto-line why-motto"><span class="motto">${esc(d.motto || "looking higher")}</span></p>
+          <p>${esc(d.whyFutura.prose)}</p>
+          <div class="srcs tbl-src">${(d.whyFutura.sources || []).map((x) => srcLink(x.url, x.label)).join("")}</div>
+        </div>
+      </section>
+
+      ${`<footer class="disclaimer cas-foot">${cassiopeia({ cls: "logo", variant: "logo" })}<span><span class="motto foot-motto">${esc(d.motto || "looking higher")}</span>${esc(d.disclaimer || "For inspiration and learning — not investment advice.")}</span></footer>`}`;
+
+    casState.anim = mountCasHero(el.querySelector("#cas-stage"));
+  }
+
+  /* Lifelike Cassiopeia hero: SVG W + independent magnitude-weighted glows + soft starfield drift.
+   * Coordinates match the shared CAS projection used in the logo (Segin→Caph). */
+  function mountCasHero(stage) {
+    if (!stage) return { destroy() {} };
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const W = 720, H = 420;
+    // Project CAS into a generous padded frame for the hero (north-up W).
+    const padX = 90, padY = 70;
+    const xs = CAS.map((s) => s.x), ys = CAS.map((s) => s.y);
+    const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+    const spanX = maxX - minX || 1, spanY = maxY - minY || 1;
+    const scale = Math.min((W - padX * 2) / spanX, (H - padY * 2) / spanY);
+    const ox = (W - spanX * scale) / 2 - minX * scale;
+    const oy = (H - spanY * scale) / 2 - minY * scale + 8;
+    const pts = CAS.map((s) => ({
+      ...s,
+      px: ox + s.x * scale,
+      py: oy + s.y * scale,
+      // Lower magnitude number = brighter. Map m≈2.15→1, m≈3.4→0.55.
+      bright: Math.max(0.55, Math.min(1, (3.55 - s.m) / 1.45)),
+    }));
+
+    let seed = 20261006;
+    const rnd = () => ((seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296);
+    const bgCount = Math.round((W * H) / 2800);
+    let bg = "";
+    for (let i = 0; i < bgCount; i++) {
+      const x = rnd() * W, y = rnd() * H, r = 0.35 + rnd() * 0.85, o = 0.08 + rnd() * 0.32;
+      const tw = rnd() > 0.82;
+      bg += `<circle class="cas-bg${tw && !reduce ? " tw" : ""}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" opacity="${o.toFixed(2)}"${
+        tw && !reduce ? ` style="--o:${o.toFixed(2)};--d:${(5 + rnd() * 7).toFixed(1)}s;--delay:${(rnd() * 8).toFixed(1)}s"` : ""
+      }/>`;
+    }
+    const line = pts.map((p) => `${p.px.toFixed(1)},${p.py.toFixed(1)}`).join(" ");
+    const stars = pts.map((p, i) => {
+      const r = 3.2 + p.bright * 5.2;
+      return `<g class="cas-main" data-i="${i}" style="--bright:${p.bright.toFixed(3)}">
+        <circle class="cas-halo" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${(r * 5.2).toFixed(1)}"/>
+        <circle class="cas-core" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${r.toFixed(2)}"/>
+        <circle class="cas-spark" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="${(r * 0.38).toFixed(2)}"/>
+        <text class="cas-name" x="${p.px.toFixed(1)}" y="${(p.py + (p.py > H * 0.55 ? 28 : -22)).toFixed(1)}" text-anchor="middle">${esc(p.n)}</text>
+      </g>`;
+    }).join("");
+
+    stage.innerHTML = `<svg class="cas-sky${reduce ? " is-reduced" : ""}" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cassiopeia as a glowing W of five stars">
+      <defs>
+        <radialGradient id="casHeroGlow" cx="50%" cy="45%" r="55%">
+          <stop offset="0" stop-color="#d4af37" stop-opacity=".14"/>
+          <stop offset=".55" stop-color="#d4af37" stop-opacity=".03"/>
+          <stop offset="1" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="casHeroLine" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f7e7a9"/><stop offset=".45" stop-color="#d4af37"/><stop offset="1" stop-color="#a8842a"/>
+        </linearGradient>
+        <filter id="casSoft" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="2.2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <rect width="${W}" height="${H}" fill="url(#casHeroGlow)"/>
+      <g class="cas-field">${bg}</g>
+      <polyline class="cas-line" points="${line}" fill="none" stroke="url(#casHeroLine)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" opacity=".72"/>
+      ${stars}
+    </svg>`;
+
+    const svgEl = stage.querySelector(".cas-sky");
+    const mains = [...stage.querySelectorAll(".cas-main")];
+    const timers = [];
+    let raf = 0, destroyed = false;
+    let px = 0, py = 0, tx = 0, ty = 0;
+
+    const pulse = (g) => {
+      if (destroyed || reduce) return;
+      const bright = parseFloat(g.style.getPropertyValue("--bright")) || 0.8;
+      g.classList.remove("is-pulsing");
+      // Force reflow so repeated pulses re-trigger the CSS animation.
+      void g.offsetWidth;
+      g.style.setProperty("--pulse-peak", (0.55 + bright * 0.55).toFixed(2));
+      g.style.setProperty("--pulse-ms", `${Math.round(1400 + bright * 900)}ms`);
+      g.classList.add("is-pulsing");
+      const wait = 2200 + Math.random() * 5200 + (1 - bright) * 1800;
+      const t = setTimeout(() => pulse(g), wait);
+      timers.push(t);
+    };
+
+    if (reduce) {
+      mains.forEach((g) => g.classList.add("is-rest"));
+    } else {
+      mains.forEach((g, i) => {
+        g.classList.add("is-rest");
+        const t = setTimeout(() => pulse(g), 400 + i * 380 + Math.random() * 900);
+        timers.push(t);
+      });
+    }
+
+    const onMove = (e) => {
+      if (reduce || destroyed) return;
+      const r = stage.getBoundingClientRect();
+      const x = (("clientX" in e ? e.clientX : (e.touches && e.touches[0].clientX)) - r.left) / r.width - 0.5;
+      const y = (("clientY" in e ? e.clientY : (e.touches && e.touches[0].clientY)) - r.top) / r.height - 0.5;
+      tx = (x || 0) * 14; ty = (y || 0) * 8;
+    };
+    const tick = () => {
+      if (destroyed) return;
+      px += (tx - px) * 0.06; py += (ty - py) * 0.06;
+      svgEl.style.setProperty("--parx", px.toFixed(2) + "px");
+      svgEl.style.setProperty("--pary", py.toFixed(2) + "px");
+      raf = requestAnimationFrame(tick);
+    };
+    if (!reduce) {
+      stage.addEventListener("pointermove", onMove, { passive: true });
+      raf = requestAnimationFrame(tick);
+    }
+
+    return {
+      destroy() {
+        destroyed = true;
+        timers.forEach(clearTimeout);
+        cancelAnimationFrame(raf);
+        stage.removeEventListener("pointermove", onMove);
+      },
+    };
+  }
+
 
   buildSky();
   buildNav();

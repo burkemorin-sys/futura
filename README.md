@@ -13,6 +13,7 @@ data/growth-picks.example.json    EXAMPLE DATA fallback, used only if growth-pic
 data/spacex.json      SpaceX tab: snapshot, IPO facts, fundamentals, investors, news
 data/tesla.json       Tesla tab: same schema as spacex.json
 data/sentiment.json   social-sentiment snapshot, written by scripts/refresh_sentiment.py
+data/cassiopeia.json  Cassiopeia tab: mythology, observing, stars, deep-sky, motif note
 scripts/refresh_sentiment.py         refreshes data/sentiment.json (Python 3 stdlib only, no keys)
 scripts/refresh-data.workflow.yml    optional GitHub Actions schedule (see "Automated refresh")
 manifest.webmanifest  PWA manifest (start_url/scope "./" so it works under /futura/)
