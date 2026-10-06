@@ -32,10 +32,17 @@ Data is fetched with `cache: no-cache`, so a refreshed JSON file shows up on the
     "nextWeek":       { "label": "Next week", "dateRange": "Oct 12–16", "ipos": [...] },
     "newFilings":     { "label": "New filings", "ipos": [...] },
     "pulledDeals":    { "label": "Pulled / postponed", "ipos": [...] },
-    "lastWeekDebuts": { "label": "Last week's debuts", "ipos": [...] }
+    "pastTwoWeeks":   { "label": "Past 2 weeks", "dateRange": "Sep 21 – Oct 2",
+                        "weeks": [ { "label": "Week of Sep 28 – Oct 2", "ipos": [...] },
+                                   { "label": "Week of Sep 21 – 25", "ipos": [...] } ] }
   }
 }
 ```
+
+Any group can use either a flat `"ipos": [...]` list or `"weeks": [{label, ipos}]` sub-groups (rendered with week headers).
+`pastTwoWeeks` replaced the old `lastWeekDebuts` group; the app still renders `lastWeekDebuts` if a file includes it.
+The **Past 2 weeks** toggle (default on) shows or hides the `pastTwoWeeks` group and its jump chip. Both toggles are stored in localStorage
+(`showPastTwoWeeks`, `hideSpacs`), so they persist across visits.
 
 IPO object (use the string `"n/a"` for anything unknown):
 
@@ -50,7 +57,8 @@ IPO object (use the string `"n/a"` for anything unknown):
 | unconfirmedNote | string? | what exactly is unconfirmed |
 | status | string? | e.g. "Postponed" (red tag) |
 | performance | {text, direction: "up"\|"down"}? | debut performance strip |
-| sourceUrl | string \| null | opens in a new tab; null shows "Source: n/a" |
+| returns | object? | debut performance tiles: `firstDay` ("+14%"), `firstDayNote`, `latest` (return since IPO, "+9.3%"), `latestPrice`, `latestDate` (YYYY-MM-DD), `latestNote`. Values starting with + are shown green, values starting with - red, and 0% neutral |
+| sourceUrl | string \| string[] \| null | opens in a new tab; arrays render as "Source 1 · 2 · 3"; null shows "Source: n/a" |
 | detail | object? | adds a Details expander: `intro` (string), `facts` ([{label, value}]), `table` ({caption, columns[], rows[][]}, where values in parentheses are shown in red), `bullets` (string[]), `sourceUrl`, `sourceLabel` |
 
 ## data/growth-picks.json schema

@@ -223,111 +223,256 @@
         }
       ]
     },
-    "lastWeekDebuts": {
-      "label": "Last week's debuts",
-      "ipos": [
+    "pastTwoWeeks": {
+      "label": "Past 2 weeks",
+      "dateRange": "Sep 21 – Oct 2",
+      "weeks": [
         {
-          "id": "accelevation",
-          "company": "Accelevation",
-          "ticker": "ACCV",
-          "exchange": "n/a",
-          "tradeDate": "Last week",
-          "priceRange": "$20–$24 (priced $18)",
-          "dealSize": "n/a",
-          "description": "Ohio company that builds and installs the steel, power and cabling infrastructure inside data center server rooms.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "performance": {
-            "text": "Priced $18, below range; down 2% for the week. Closed Oct 5 at $16.46.",
-            "direction": "down"
-          },
-          "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122042/us-ipo-weekly-recap-oura-postpones-2.1-billion-ipo-and-accelevation-trades",
-          "detail": {
-            "intro": "Designs, manufactures and installs steel structures, power panels, cabling and cooling-ready enclosures inside data center server rooms. ~84% of revenue comes from fixed-price custom projects.",
-            "table": {
-              "caption": "Financials ($M)",
-              "columns": [
-                "",
-                "FY24",
-                "FY25",
-                "1H25",
-                "1H26"
+          "label": "Week of Sep 28 – Oct 2",
+          "ipos": [
+            {
+              "id": "accelevation",
+              "company": "Accelevation",
+              "ticker": "ACCV",
+              "exchange": "Nasdaq Global Select",
+              "tradeDate": "Wed, Sep 30",
+              "priceRange": "$20–$24 → priced $18 (below)",
+              "dealSize": "$540M",
+              "description": "Ohio company that builds and installs the power and steel infrastructure inside data center server rooms.",
+              "isSpac": false,
+              "unconfirmed": false,
+              "sourceUrl": [
+                "https://www.renaissancecapital.com/IPO-Center/News/122042/us-ipo-weekly-recap-oura-postpones-2.1-billion-ipo-and-accelevation-trades",
+                "https://www.globenewswire.com/news-release/2026/09/29/3371460/0/en/accelevation-announces-pricing-of-initial-public-offering.html",
+                "https://stockanalysis.com/stocks/accv/"
               ],
-              "rows": [
-                [
-                  "Revenue",
-                  "181.4",
-                  "447.8",
-                  "158.6",
-                  "437.5"
+              "detail": {
+                "intro": "Designs, manufactures and installs steel structures, power panels, cabling and cooling-ready enclosures inside data center server rooms. ~84% of revenue comes from fixed-price custom projects.",
+                "table": {
+                  "caption": "Financials ($M)",
+                  "columns": [
+                    "",
+                    "FY24",
+                    "FY25",
+                    "1H25",
+                    "1H26"
+                  ],
+                  "rows": [
+                    [
+                      "Revenue",
+                      "181.4",
+                      "447.8",
+                      "158.6",
+                      "437.5"
+                    ],
+                    [
+                      "Gross margin",
+                      "32.5%",
+                      "32.3%",
+                      "30.4%",
+                      "26.6%"
+                    ],
+                    [
+                      "Net income",
+                      "9.4",
+                      "21.7",
+                      "(8.7)",
+                      "19.3"
+                    ],
+                    [
+                      "Adj. EBITDA",
+                      "29.6",
+                      "90.9",
+                      "26.8",
+                      "68.4"
+                    ],
+                    [
+                      "Free cash flow",
+                      "6.5",
+                      "(16.4)",
+                      "(10.7)",
+                      "(15.8)"
+                    ],
+                    [
+                      "Backlog",
+                      "63.2",
+                      "419.3",
+                      "347.2",
+                      "1,111.3"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "~$480M debt post-IPO vs ~$19M cash.",
+                  "Two customers were ~61% of 2025 revenue.",
+                  "Olympus Partners controls ~85% of the vote.",
+                  "Material weaknesses in financial controls disclosed.",
+                  "Lock-up ends ~late March 2027.",
+                  "CEO bought 200,000 shares at the IPO.",
+                  "Competitors: Vertiv, Schneider Electric, Eaton.",
+                  "Analyst coverage expected to start late Oct / early Nov."
                 ],
-                [
-                  "Gross margin",
-                  "32.5%",
-                  "32.3%",
-                  "30.4%",
-                  "26.6%"
-                ],
-                [
-                  "Net income",
-                  "9.4",
-                  "21.7",
-                  "(8.7)",
-                  "19.3"
-                ],
-                [
-                  "Adj. EBITDA",
-                  "29.6",
-                  "90.9",
-                  "26.8",
-                  "68.4"
-                ],
-                [
-                  "Free cash flow",
-                  "6.5",
-                  "(16.4)",
-                  "(10.7)",
-                  "(15.8)"
-                ],
-                [
-                  "Backlog",
-                  "63.2",
-                  "419.3",
-                  "347.2",
-                  "1,111.3"
-                ]
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2141406/000162828026064097/accelevationllc-424b4.htm",
+                "sourceLabel": "Final prospectus (424B4)"
+              },
+              "returns": {
+                "firstDay": "+0%",
+                "firstDayNote": "Opened $17.55; ~flat first day",
+                "latest": "-8.9%",
+                "latestPrice": "$16.40",
+                "latestDate": "2026-10-06"
+              }
+            },
+            {
+              "id": "roze-ai",
+              "company": "Roze AI",
+              "ticker": "RZAI",
+              "exchange": "Nasdaq Capital Market",
+              "tradeDate": "Tue, Sep 29 (direct listing)",
+              "priceRange": "n/a (direct listing, no IPO price)",
+              "dealSize": "n/a (no shares sold by company)",
+              "description": "South Korean maker of AI-powered fire detection and disaster-prevention sensors and software.",
+              "isSpac": false,
+              "unconfirmed": true,
+              "unconfirmedNote": "First-day figures conflict: Renaissance shows +174%, while reported Sep 29 closes differ ($17.17 in a company filing vs $27.63 in a news report). No IPO price, so no since-IPO return.",
+              "returns": {
+                "firstDay": "+174%",
+                "firstDayNote": "Per Renaissance; unconfirmed",
+                "latest": "n/a",
+                "latestPrice": "$11.79",
+                "latestDate": "2026-10-06",
+                "latestNote": "+149% for the week through Oct 2 (Renaissance)"
+              },
+              "sourceUrl": [
+                "https://www.renaissancecapital.com/IPO-Center/News/122042/us-ipo-weekly-recap-oura-postpones-2.1-billion-ipo-and-accelevation-trades",
+                "https://www.publicnow.com/view/72E7CC808429FFC998CBECADD2F7EED6175FE536",
+                "https://stockanalysis.com/stocks/rzai/"
               ]
             },
-            "bullets": [
-              "~$480M debt post-IPO vs ~$19M cash.",
-              "Two customers were ~61% of 2025 revenue.",
-              "Olympus Partners controls ~85% of the vote.",
-              "Material weaknesses in financial controls disclosed.",
-              "Lock-up ends ~late March 2027.",
-              "CEO bought 200,000 shares at the IPO.",
-              "Competitors: Vertiv, Schneider Electric, Eaton.",
-              "Analyst coverage expected to start late Oct / early Nov."
-            ],
-            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2141406/000162828026064097/accelevationllc-424b4.htm",
-            "sourceLabel": "Final prospectus (424B4)"
-          }
+            {
+              "id": "southport-ii",
+              "company": "Southport Acquisition II",
+              "ticker": "PORT.U",
+              "exchange": "NYSE",
+              "tradeDate": "Thu, Oct 1",
+              "priceRange": "$10.00 units",
+              "dealSize": "$200M ($210M with partial over-allotment)",
+              "description": "Blank-check company led by TVC Capital's Jeb Spencer; Renaissance says it is targeting AI.",
+              "isSpac": true,
+              "unconfirmed": false,
+              "returns": {
+                "firstDay": "+0%",
+                "latest": "+0%",
+                "latestPrice": "n/a",
+                "latestDate": "2026-10-02",
+                "latestNote": "per Renaissance"
+              },
+              "sourceUrl": [
+                "https://www.globenewswire.com/news-release/2026/10/01/3372488/0/en/Southport-Acquisition-Corp-II-Announces-Pricing-of-200-000-000-Initial-Public-Offering.html",
+                "https://www.renaissancecapital.com/IPO-Center/News/122042/us-ipo-weekly-recap-oura-postpones-2.1-billion-ipo-and-accelevation-trades"
+              ]
+            }
+          ]
         },
         {
-          "id": "roze-ai",
-          "company": "Roze AI",
-          "ticker": "n/a",
-          "exchange": "Nasdaq",
-          "tradeDate": "Last week (direct listing)",
-          "priceRange": "n/a",
-          "dealSize": "n/a",
-          "description": "Korean AI fire-safety company; listed via direct listing.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "performance": {
-            "text": "Jumped 174% on day one.",
-            "direction": "up"
-          },
-          "sourceUrl": null
+          "label": "Week of Sep 21 – 25",
+          "ipos": [
+            {
+              "id": "adarx",
+              "company": "ADARx Pharmaceuticals",
+              "ticker": "ADRX",
+              "exchange": "Nasdaq Global Select",
+              "tradeDate": "Fri, Sep 25",
+              "priceRange": "$15–$17 → priced $17 (top, upsized)",
+              "dealSize": "$446M",
+              "description": "Phase 3 biotech developing siRNA drugs; lead program aims to prevent hereditary angioedema attacks.",
+              "isSpac": false,
+              "unconfirmed": false,
+              "returns": {
+                "firstDay": "+14%",
+                "firstDayNote": "First-day close $19.35",
+                "latest": "+9.3%",
+                "latestPrice": "$18.58",
+                "latestDate": "2026-10-06"
+              },
+              "detail": {
+                "facts": [
+                  {
+                    "label": "Shares sold",
+                    "value": "26.25M (upsized from 21.9M)"
+                  },
+                  {
+                    "label": "AbbVie private placement",
+                    "value": "~$89.3M at $17 (~4.9% stake)"
+                  },
+                  {
+                    "label": "Market cap at IPO",
+                    "value": "~$2.0B"
+                  },
+                  {
+                    "label": "Bookrunners",
+                    "value": "J.P. Morgan, Morgan Stanley, TD Cowen, UBS, LifeSci Capital"
+                  }
+                ],
+                "bullets": [
+                  "Phase 3 topline data expected by end of 2027; potential NDA in 2028 if positive."
+                ]
+              },
+              "sourceUrl": [
+                "https://www.globenewswire.com/news-release/2026/09/24/3368818/0/en/adarx-pharmaceuticals-announces-pricing-of-upsized-446-3-million-initial-public-offering.html",
+                "https://www.renaissancecapital.com/IPO-Center/News/121908/us-ipo-weekly-recap-postponed-deals-put-damper-on-fall-ipo-market",
+                "https://stockanalysis.com/stocks/adrx/"
+              ]
+            },
+            {
+              "id": "live-oak-vi",
+              "company": "Live Oak Acquisition VI",
+              "ticker": "LOVIU",
+              "exchange": "Nasdaq Global Market",
+              "tradeDate": "Wed, Sep 23",
+              "priceRange": "$10.00 units",
+              "dealSize": "$200M ($230M with over-allotment)",
+              "description": "Blank-check company formed by Live Oak Merchant Partners; may pursue a deal in any industry.",
+              "isSpac": true,
+              "unconfirmed": false,
+              "returns": {
+                "firstDay": "+0%",
+                "latest": "+0%",
+                "latestPrice": "n/a",
+                "latestDate": "2026-09-25",
+                "latestNote": "per Renaissance"
+              },
+              "sourceUrl": [
+                "https://www.liveoakacq.com/blog/live-oak-acquisition-corp-vi-announces-the-pricing-of-200000000-initial-public-offering",
+                "https://www.stocktitan.net/sec-filings/LOVIU/8-k-live-oak-acquisition-corp-vi-reports-material-event-9b4933d07f18.html",
+                "https://www.renaissancecapital.com/IPO-Center/News/121908/us-ipo-weekly-recap-postponed-deals-put-damper-on-fall-ipo-market"
+              ]
+            },
+            {
+              "id": "bluerock-ii",
+              "company": "Bluerock Acquisition II",
+              "ticker": "BRRKU",
+              "exchange": "Nasdaq Global Market",
+              "tradeDate": "Fri, Sep 25",
+              "priceRange": "$10.00 units",
+              "dealSize": "$150M ($172.5M with over-allotment)",
+              "description": "Blank-check company backed by Bluerock; Renaissance says it is targeting Web3 businesses.",
+              "isSpac": true,
+              "unconfirmed": false,
+              "returns": {
+                "firstDay": "+0%",
+                "latest": "+0%",
+                "latestPrice": "n/a",
+                "latestDate": "2026-09-25",
+                "latestNote": "per Renaissance"
+              },
+              "sourceUrl": [
+                "https://www.prnewswire.com/news-releases/bluerock-acquisition-corp-ii-announces-pricing-of-150-million-initial-public-offering-302889820.html",
+                "https://www.prnewswire.com/news-releases/bluerock-acquisition-corp-ii-announces-closing-of-172-5-million-initial-public-offering-including-exercise-of-underwriters-over-allotment-option-in-full-302891769.html",
+                "https://www.renaissancecapital.com/IPO-Center/News/121908/us-ipo-weekly-recap-postponed-deals-put-damper-on-fall-ipo-market"
+              ]
+            }
+          ]
         }
       ]
     }

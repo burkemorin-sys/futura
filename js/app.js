@@ -163,12 +163,21 @@
   }
 
   /* ================= IPO Tracker ================= */
-  const GROUPS = ["thisWeek", "nextWeek", "newFilings", "pulledDeals", "lastWeekDebuts"];
+  const GROUPS = ["thisWeek", "nextWeek", "newFilings", "pulledDeals", "pastTwoWeeks", "lastWeekDebuts"];
+  const PAST = "pastTwoWeeks";
   const DEFAULT_LABELS = {
     thisWeek: "This week", nextWeek: "Next week", newFilings: "New filings",
-    pulledDeals: "Pulled / postponed", lastWeekDebuts: "Last week's debuts",
+    pulledDeals: "Pulled / postponed", pastTwoWeeks: "Past 2 weeks", lastWeekDebuts: "Last week's debuts",
   };
-  const ipoState = { data: null, hideSpacs: localStorage.getItem("hideSpacs") === "1", open: new Set() };
+  const ipoState = {
+    data: null,
+    hideSpacs: localStorage.getItem("hideSpacs") === "1",
+    showPast: localStorage.getItem("showPastTwoWeeks") !== "0", // default ON
+    open: new Set(),
+  };
+  // A group holds either a flat "ipos" list or "weeks": [{label, ipos}] sub-groups.
+  const allIpos = (s) => (s ? (s.weeks ? s.weeks.flatMap((w) => w.ipos || []) : s.ipos || []) : []);
+  const groupOn = (g) => g !== PAST || ipoState.showPast;
 
   async function renderIpoTracker(el) {
     if (!ipoState.data) {
@@ -190,21 +199,27 @@
   function drawIpos(el) {
     const d = ipoState.data;
     const sections = d.sections || {};
-    const spacCount = GROUPS.reduce((n, g) => n + ((sections[g] && sections[g].ipos) || []).filter((i) => i.isSpac).length, 0);
+    const spacCount = GROUPS.reduce((n, g) => n + allIpos(sections[g]).filter((i) => i.isSpac).length, 0);
+    const hasPast = !!sections[PAST];
 
     const highlights = (d.highlights || [])
       .map((h) => `<li><span class="dot"></span><span>${esc(h.text)}${
         h.unconfirmed ? ` <span class="tag warn">${svg("warn")}${esc(h.note || "Unconfirmed")}</span>` : ""
       }</span></li>`).join("");
 
-    const chips = GROUPS.filter((g) => sections[g]).map((g) =>
-      `<button class="chip" data-jump="${g}">${esc(sections[g].label || DEFAULT_LABELS[g])} <span class="count">${visible(sections[g].ipos).length}</span></button>`
+    const chips = GROUPS.filter((g) => sections[g] && groupOn(g)).map((g) =>
+      `<button class="chip" data-jump="${g}">${esc(sections[g].label || DEFAULT_LABELS[g])} <span class="count">${visible(allIpos(sections[g])).length}</span></button>`
     ).join("");
 
-    const groups = GROUPS.filter((g) => sections[g]).map((g) => {
+    const cardsOrEmpty = (list) => {
+      const items = visible(list);
+      const hidden = (list || []).length - items.length;
+      return items.length ? `<div class="cards">${items.map(ipoCard).join("")}</div>`
+        : `<div class="empty">${hidden ? `${hidden} SPAC${hidden > 1 ? "s" : ""} hidden` : "Nothing here this week"}</div>`;
+    };
+    const groups = GROUPS.filter((g) => sections[g] && groupOn(g)).map((g) => {
       const s = sections[g];
-      const items = visible(s.ipos);
-      const hidden = (s.ipos || []).length - items.length;
+      const items = visible(allIpos(s));
       return `<section class="group" id="g-${g}" aria-labelledby="h-${g}">
         <div class="group-head">
           <h2 id="h-${g}">${esc(s.label || DEFAULT_LABELS[g])}</h2>
@@ -212,8 +227,9 @@
           <span class="rule"></span>
           <span class="n">${items.length} ${items.length === 1 ? "deal" : "deals"}</span>
         </div>
-        ${items.length ? `<div class="cards">${items.map(ipoCard).join("")}</div>`
-          : `<div class="empty">${hidden ? `${hidden} SPAC${hidden > 1 ? "s" : ""} hidden` : "Nothing here this week"}</div>`}
+        ${s.weeks
+          ? s.weeks.map((w) => `<div class="week"><h3 class="week-head">${esc(w.label)}</h3>${cardsOrEmpty(w.ipos)}</div>`).join("")
+          : cardsOrEmpty(s.ipos)}
       </section>`;
     }).join("");
 
@@ -225,7 +241,9 @@
         ${highlights ? `<ul class="highlights">${highlights}</ul>` : ""}
       </section>
       <div class="toolbar" role="toolbar" aria-label="Jump to group and filters">
-        ${spacCount ? `<button class="chip toggle" id="spac-toggle" aria-pressed="${ipoState.hideSpacs}"><span class="sw" aria-hidden="true"></span>Hide SPACs</button><span class="sep"></span>` : ""}
+        ${hasPast ? `<button class="chip toggle" id="past-toggle" aria-pressed="${ipoState.showPast}"><span class="sw" aria-hidden="true"></span>Past 2 weeks</button>` : ""}
+        ${spacCount ? `<button class="chip toggle" id="spac-toggle" aria-pressed="${ipoState.hideSpacs}"><span class="sw" aria-hidden="true"></span>Hide SPACs</button>` : ""}
+        ${hasPast || spacCount ? `<span class="sep"></span>` : ""}
         ${chips}
       </div>
       ${groups}
@@ -233,14 +251,20 @@
 
     el.querySelectorAll("[data-jump]").forEach((b) =>
       b.addEventListener("click", () => document.getElementById(`g-${b.dataset.jump}`).scrollIntoView({ behavior: "smooth" })));
-    const t = el.querySelector("#spac-toggle");
-    if (t) t.addEventListener("click", () => {
-      ipoState.hideSpacs = !ipoState.hideSpacs;
-      localStorage.setItem("hideSpacs", ipoState.hideSpacs ? "1" : "0");
-      const y = window.scrollY;
-      drawIpos(el);
-      window.scrollTo(0, y);
-    });
+    const bindToggle = (sel, key, storageKey) => {
+      const t = el.querySelector(sel);
+      if (t) t.addEventListener("click", () => {
+        ipoState[key] = !ipoState[key];
+        localStorage.setItem(storageKey, ipoState[key] ? "1" : "0");
+        const y = window.scrollY;
+        drawIpos(el);
+        window.scrollTo(0, y);
+        const again = el.querySelector(sel);
+        if (again) again.focus({ preventScroll: true });
+      });
+    };
+    bindToggle("#spac-toggle", "hideSpacs", "hideSpacs");
+    bindToggle("#past-toggle", "showPast", "showPastTwoWeeks");
     el.querySelectorAll(".more-btn").forEach((b) => b.addEventListener("click", () => {
       const c = b.closest(".card");
       const open = b.getAttribute("aria-expanded") !== "true";
@@ -261,6 +285,21 @@
       : `<span class="src na">${esc(label)}: n/a</span>`;
   };
 
+  const sign = (v) => (/^\s*-/.test(String(v)) ? "down" : /^\s*\+?0(\.0+)?%/.test(String(v)) ? "flat" : /^\s*\+/.test(String(v)) ? "up" : "flat");
+  function returnsStrip(r) {
+    if (!r) return "";
+    const cell = (label, val, sub) => `<div><dt>${label}</dt><dd class="${isNA(val) ? "na" : sign(val)}">${esc(isNA(val) ? "n/a" : val)}</dd>${sub ? `<span class="sub">${esc(sub)}</span>` : ""}</div>`;
+    const latestSub = [isNA(r.latestPrice) ? "" : r.latestPrice, isNA(r.latestDate) ? "" : `as of ${fmtShortDate(r.latestDate)}`].filter(Boolean).join(" · ");
+    return `<dl class="returns">
+      ${cell("First day", r.firstDay, r.firstDayNote)}
+      ${cell("Since IPO", r.latest, [latestSub, r.latestNote].filter(Boolean).join(" — "))}
+    </dl>`;
+  }
+  function sourceLinks(urls) {
+    const list = (Array.isArray(urls) ? urls : [urls]).filter(safeUrl);
+    if (list.length <= 1) return srcLink(list[0] || null);
+    return `<span class="srcs">${list.map((u, n) => srcLink(u, n ? String(n + 1) : "Source 1")).join("")}</span>`;
+  }
   function ipoCard(i) {
     const hasDetail = !!(i.detail && (i.detail.intro || i.detail.table || (i.detail.facts || []).length || (i.detail.bullets || []).length));
     const open = hasDetail && ipoState.open.has(i.id);
@@ -278,9 +317,10 @@
         ${metaItem("Price range", i.priceRange)}${metaItem("Deal size", i.dealSize)}
       </dl>
       ${i.performance && i.performance.text ? `<div class="perf ${i.performance.direction === "up" ? "up" : "down"}">${svg(i.performance.direction === "up" ? "up" : "down")}<span>${esc(i.performance.text)}</span></div>` : ""}
+      ${returnsStrip(i.returns)}
       ${i.unconfirmed && i.unconfirmedNote ? `<div class="unconf-note">${svg("warn")}<span>${esc(i.unconfirmedNote)}</span></div>` : ""}
       <div class="card-foot">
-        ${srcLink(i.sourceUrl)}
+        ${sourceLinks(i.sourceUrl)}
         ${hasDetail ? `<button class="more-btn" aria-expanded="${open}" aria-controls="d-${esc(i.id)}"><span>${open ? "Less" : "Details"}</span>${svg("chev")}</button>` : ""}
       </div>
       ${hasDetail ? ipoDetail(i, open) : ""}
