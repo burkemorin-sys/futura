@@ -1,0 +1,59 @@
+{
+  "example": true,
+  "lastUpdated": "2026-10-06",
+  "method": "EXAMPLE DATA — placeholder for UI testing only. These are fictional companies with made-up numbers. The real list will be loaded from data/growth-picks.json once it exists.",
+  "disclaimer": "EXAMPLE DATA. Fictional companies and figures for layout testing only. Not investment advice.",
+  "picks": [
+    {
+      "company": "Example Robotics Co. (fictional)",
+      "ticker": "EXRB",
+      "sector": "Industrials",
+      "price": 42.1,
+      "priceDate": "2026-10-05",
+      "marketCap": "$8.4B",
+      "forwardPE": 31.5,
+      "peg": 1.2,
+      "revenueGrowth": "38% YoY",
+      "trend": "EXAMPLE: placeholder trend text describing the market tailwind.",
+      "fundamentals": "EXAMPLE: placeholder fundamentals text (margins, cash flow, balance sheet).",
+      "risks": ["EXAMPLE risk one", "EXAMPLE risk two"],
+      "analystRating": "Buy (example)",
+      "priceTarget": 55,
+      "sourceUrl": "https://example.com/"
+    },
+    {
+      "company": "Sample Cloud Inc. (fictional)",
+      "ticker": "SMPL",
+      "sector": "Technology",
+      "price": 118.0,
+      "priceDate": "2026-10-05",
+      "marketCap": "$46B",
+      "forwardPE": 44,
+      "peg": 1.6,
+      "revenueGrowth": "27% YoY",
+      "trend": "EXAMPLE: placeholder trend text.",
+      "fundamentals": "EXAMPLE: placeholder fundamentals text.",
+      "risks": ["EXAMPLE valuation risk"],
+      "analystRating": "Outperform (example)",
+      "priceTarget": 140,
+      "sourceUrl": "https://example.com/"
+    },
+    {
+      "company": "Placeholder Bio Ltd. (fictional)",
+      "ticker": "PHBI",
+      "sector": "Healthcare",
+      "price": 19.75,
+      "priceDate": "2026-10-05",
+      "marketCap": "$2.1B",
+      "forwardPE": "n/a",
+      "peg": "n/a",
+      "revenueGrowth": "61% YoY",
+      "trend": "EXAMPLE: placeholder trend text.",
+      "fundamentals": "EXAMPLE: placeholder fundamentals text.",
+      "risks": ["EXAMPLE clinical risk", "EXAMPLE dilution risk"],
+      "analystRating": "n/a",
+      "priceTarget": "n/a",
+      "sourceUrl": "https://example.com/"
+    }
+  ]
+}
