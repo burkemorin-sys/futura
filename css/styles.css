@@ -690,3 +690,34 @@ body::before { /* solid strip behind the translucent status bar so content never
   body[data-route="home"] .appbar { display: none; }
   body[data-route="home"] .home-hero { margin-top: calc(-18px - var(--sat)); padding-top: var(--sat); }
 }
+
+/* ---------- Music toggle ---------- */
+.music-toggle {
+  -webkit-appearance: none; appearance: none; cursor: pointer; flex: none;
+  width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; padding: 0;
+  background: radial-gradient(circle at 35% 30%, rgba(243, 220, 140, .10), rgba(10, 10, 12, .55) 70%);
+  border: 1px solid rgba(212, 175, 55, .32); color: rgba(232, 213, 160, .55);
+  transition: color .25s, border-color .25s, box-shadow .25s, background .25s;
+  -webkit-tap-highlight-color: transparent;
+}
+.music-toggle svg { width: 19px; height: 19px; overflow: visible; }
+.music-toggle .mt-stem { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.music-toggle .mt-head { fill: currentColor; }
+.music-toggle .mt-slash { stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; opacity: .9; transition: opacity .2s; }
+.music-toggle.is-on { color: var(--gold-light); border-color: rgba(212, 175, 55, .6); box-shadow: 0 0 14px rgba(212, 175, 55, .18), inset 0 0 10px rgba(212, 175, 55, .08); }
+.music-toggle.is-on .mt-slash { opacity: 0; }
+@media (hover: hover) { .music-toggle:hover { border-color: var(--gold); color: var(--gold-light); } }
+.music-toggle:focus-visible { border-color: var(--gold); color: var(--gold-light); outline: none; }
+.music-toggle:focus-visible { box-shadow: 0 0 0 2px rgba(212, 175, 55, .45); }
+.music-toggle:active { transform: scale(.94); }
+.music-toggle.is-playing .mt-head { animation: mtGlow 2.8s ease-in-out infinite; }
+@keyframes mtGlow { 50% { opacity: .65; } }
+
+.mt-side { display: none; }
+.mt-hero { position: absolute; z-index: 3; top: calc(12px + var(--sat)); right: calc(14px + var(--sar)); width: 40px; height: 40px; }
+@media (min-width: 900px) {
+  .mt-side { display: grid; position: absolute; top: 28px; right: 16px; width: 34px; height: 34px; }
+  .mt-side svg { width: 17px; height: 17px; }
+  .mt-hero { top: 20px; right: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .music-toggle.is-playing .mt-head { animation: none; } }

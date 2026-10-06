@@ -119,10 +119,17 @@
   const main = document.getElementById("main");
   const navList = document.getElementById("nav-list");
 
+  const musicButton = (cls) => (window.FuturaMusic ? window.FuturaMusic.button(cls) : "");
+
   function buildNav() {
     document.querySelectorAll("[data-brand]").forEach((b) => {
       b.innerHTML = brandHTML(b.classList.contains("brand-side"));
     });
+    // Music toggles: top bar (mobile) and sidebar (desktop). The Home hero adds its own.
+    if (!document.querySelector(".mt-bar")) {
+      document.querySelector(".appbar").insertAdjacentHTML("beforeend", musicButton("mt-bar"));
+      document.getElementById("nav").insertAdjacentHTML("afterbegin", musicButton("mt-side"));
+    }
     navList.innerHTML = SECTIONS.map(
       (s) => `<li${s.overflow ? ' class="nav-overflow"' : ""}><a class="nav-link" href="#/${s.id}" data-id="${s.id}">${svg(s.icon)}<span></span></a></li>`
     ).join("");
@@ -1082,6 +1089,7 @@
     el.innerHTML = `
       <section class="home-hero" aria-label="Futura">
         <div class="home-stage" id="home-stage"></div>
+        ${musicButton("mt-hero")}
         <div class="home-brand">
           <h1 class="home-wordmark">Futura</h1>
           <p class="home-motto"><span class="motto">looking higher</span></p>

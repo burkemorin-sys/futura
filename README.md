@@ -6,6 +6,7 @@ A static web app (plain HTML, CSS and JS, with no build step and no backend). It
 index.html            app shell (top bar + bottom tabs on mobile, sidebar on desktop)
 css/styles.css        theme
 js/app.js             router, sections, rendering (add a tab = add an entry to SECTIONS)
+js/music.js           original generative background music (Web Audio, no audio files)
 fonts/                self-hosted Inter + Cormorant Garamond (OFL)
 data/ipos.json        IPO Tracker data (rewritten every Sunday; see "Weekly IPO refresh")
 data/growth-picks.json            Growth Picks data (preferred)
@@ -32,6 +33,13 @@ Data is fetched with `cache: no-cache`, so a refreshed JSON file shows up on the
 - `sw.js`: the app shell is precached and served stale-while-revalidate, so code changes appear on the next visit. `data/*.json` is fetched network-first and falls back to the cached copy when offline. Cross-origin requests (TradingView) are left alone.
 - **To roll out a shell change** (new files, or anything you want picked up immediately), bump `VERSION` in `sw.js`. Old caches are deleted when the new worker activates.
 - Install it from Safari with Share → Add to Home Screen, or from Chrome/Edge with the install icon in the address bar.
+
+## Background music
+`js/music.js` plays an original, generative instrumental for nylon-string guitar and a soft pad. It is synthesised in the browser with the Web Audio API, so the app ships no audio files and doesn't use any recorded or copyrighted material.
+- **Sound:** each plucked note is a Karplus-Strong string (a soft, lowpassed noise excitation plus a pick-position comb, run through a tuned, fractionally delayed, damped loop). Notes are cached and replayed through guitar-body EQ (resonances near 105 and 230 Hz, a high shelf cut above 4.2 kHz) and a generated stereo convolution reverb (3.4 s, darkening tail). A quiet two-oscillator pad joins in some phrases. A gentle limiter sits on the master bus.
+- **Music:** D minor, 66 BPM, 3/4, fingerpicked eighth-note arpeggios. The 16-bar cycle is Dm(add9), B♭maj7, Gm9, A7sus4–A7 | Dm/C, B♭maj7♯11, Gm6, Asus2–A7♭9 | Fmaj7, C/E, Dm9, B♭maj7, Gm7, Em7♭5, A7, Dm(add9). On each pass the picking pattern, grace notes, a sparse stepwise melody, the pad and small timing and velocity details are re-chosen, so it plays indefinitely without an audible loop point.
+- **UX:** the preference is stored in `localStorage.music` (`"on"` by default, or `"off"`). Browsers block autoplay with sound, so playback starts on the first click, tap or key press, with a 3.5 s fade-in. The gold note buttons (top bar on mobile, sidebar on desktop, and the Home hero) toggle it. Music fades out and the AudioContext is suspended when the page is hidden, then resumes when it's visible again. On iOS, `navigator.audioSession.type = "ambient"` is set where supported, so the ringer/silent switch is respected and other audio isn't interrupted.
+- **Levels:** checked from a 100 s offline render (`FuturaMusic.render(seconds, seed)` returns an AudioBuffer): peak about −8 dBFS, RMS about −28 dBFS, no clipping, tuning within ±5 cents.
 
 ## Home
 
