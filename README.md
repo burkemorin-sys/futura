@@ -6,7 +6,8 @@ A static web app (plain HTML, CSS and JS, with no build step and no backend). It
 index.html            app shell (top bar + bottom tabs on mobile, sidebar on desktop)
 css/styles.css        theme
 js/app.js             router, sections, rendering (add a tab = add an entry to SECTIONS)
-extras/music.js       background music (DISABLED, not loaded; see "Background music")
+extras/music.js       background music, guitar version (DISABLED, not loaded; see "Background music")
+extras/music-piano.js background music, felt-piano version (DISABLED, not loaded)
 fonts/                self-hosted Inter + Cormorant Garamond (OFL)
 data/ipos.json        IPO Tracker data (rewritten every Sunday; see "Weekly IPO refresh")
 data/growth-picks.json            Growth Picks data (preferred)
@@ -40,6 +41,8 @@ Data is fetched with `cache: no-cache`, so a refreshed JSON file shows up on the
 > 1. `git mv extras/music.js js/music.js`.
 > 2. In `index.html`, add `<script src="js/music.js"></script>` just before `<script src="js/app.js"></script>`.
 > 3. Add `"js/music.js"` to `SHELL_FILES` in `sw.js` and bump `VERSION`.
+>
+> **Piano alternative:** `extras/music-piano.js` exposes the same `window.FuturaMusic` API. To use it instead, follow the same steps with that file. It features a soft felt piano (additive synthesis with inharmonic partials, unison detune, per-partial decay and pedal), plus an airy formant "aah" choir, celesta and a 7 s shimmer reverb, in D minor at 68 BPM. At full fade-in it measures about −34 dBFS RMS and −17 dBFS peak.
 >
 > The toggle hooks in `js/app.js` (`musicButton`) and the `.music-toggle` styles in `css/styles.css` are still in place, so the buttons reappear automatically.
 
