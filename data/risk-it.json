@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "lastUpdated": "2026-10-07",
   "priceDate": "2026-10-06",
-  "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 (full marks at 150%+); acceleration (TTM growth above the prior fiscal year's) +5; momentum up to 25, measured as true relative strength — the stock's 1-year price change versus the S&P 500 (SPY), scaled as clamp((RS+50)/150×25), using 6- or 3-month relative strength for IPOs under a year old; upside to the consensus price target up to 20 (full marks at 100%+); and consensus Strong Buy 10 / Buy 7 / Hold 2. There is no valuation cap and losses are allowed. The top 12 are the picks and the next 18 form the ranked bench.",
-  "dataNotes": "Prices (Oct 6, 2026 close), market cap, net income, gross margin, beta, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence). TTM revenue growth, its period and prior fiscal-year growth come from the StockAnalysis revenue page. Momentum uses StockAnalysis 52-week price changes; SPY's was +16.4% (6-month +18.8%). Gross-margin trend compares latest-quarter gross-profit growth with revenue growth, and price-target revisions count raises and cuts in the latest analyst actions on the StockAnalysis forecast page over the last 90 days. Both are shown for context and are not scored. Consensus EPS/revenue estimate revisions were not available from free sources. 55 stocks were fully scored after a preliminary pass across about 400 eligible names. 'n/a' means not available.",
+  "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 (full marks at 150%+); acceleration (TTM growth above the prior fiscal year's) +5; momentum up to 25, measured as true relative strength — the stock's 1-year price change versus the S&P 500 (SPY), scaled as clamp((RS+50)/150×25), using 6- or 3-month relative strength for IPOs under a year old; upside to the consensus price target up to 20 (full marks at 100%+); and consensus Strong Buy 10 / Buy 7 / Hold 2. There is no valuation cap and losses are allowed. The top 12 are the picks and the next 18 form the ranked bench. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue).",
+  "dataNotes": "Prices (Oct 6, 2026 close), market cap, net income, gross margin, beta, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence). TTM revenue growth, its period and prior fiscal-year growth come from the StockAnalysis revenue page. Momentum uses StockAnalysis 52-week price changes; SPY's was +16.4% (6-month +18.8%). Gross-margin trend compares latest-quarter gross-profit growth with revenue growth, and price-target revisions count raises and cuts in the latest analyst actions on the StockAnalysis forecast page over the last 90 days. Both are shown for context and are not scored. Consensus EPS/revenue estimate revisions were not available from free sources. 55 stocks were fully scored after a preliminary pass across about 400 eligible names. 'n/a' means not available. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue).",
   "disclaimer": "Higher-risk, speculative ideas for research only. Many of these companies lose money, dilute shareholders and swing violently. Not financial advice.",
   "picks": [
     {
@@ -39,43 +39,6 @@
         "https://stockanalysis.com/stocks/alm/statistics/",
         "https://stockanalysis.com/stocks/alm/revenue/",
         "https://stockanalysis.com/stocks/alm/forecast/"
-      ]
-    },
-    {
-      "company": "Hut 8",
-      "ticker": "HUT",
-      "sector": "Financials – Capital Markets",
-      "price": 92.22,
-      "priceDate": "2026-10-06",
-      "marketCap": "$11.37B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+129.50% YoY (TTM ending Jun 2026; revenue $317.95M)",
-      "score": 89,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +129.5% YoY (TTM) → 35/40",
-        "Acceleration: TTM 129.5% vs FY2025 44.8% → 5/5",
-        "Momentum: 1-yr price +130.0% vs S&P 500 (SPY) +16.4% = relative strength +97.5% → 25/25",
-        "Upside to target +70.3% → 14/20",
-        "Consensus Strong Buy (22) → 10/10",
-        "Gross-margin trend (not scored): latest-quarter gross profit +146.1% vs revenue +81.4% YoY → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +81% YoY; consensus sees revenue +24% this fiscal year and +93% next.",
-      "fundamentals": "TTM revenue $317.95M, net income -$599.24M, gross margin 62.33%; market cap $11.37B, net debt $7.44B.",
-      "risks": [
-        "Bitcoin-mining/AI-hosting economics swing with the bitcoin price, power costs and hosting contracts",
-        "Unprofitable: TTM net income -$599.24M",
-        "Volatility: beta 5.92",
-        "Crowded short: 16.2% of float sold short"
-      ],
-      "analystRating": "Strong Buy (22 analysts)",
-      "priceTarget": 157.09,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/hut/statistics/",
-        "https://stockanalysis.com/stocks/hut/revenue/",
-        "https://stockanalysis.com/stocks/hut/forecast/"
       ]
     },
     {
@@ -446,9 +409,7 @@
         "https://stockanalysis.com/stocks/urgn/revenue/",
         "https://stockanalysis.com/stocks/urgn/forecast/"
       ]
-    }
-  ],
-  "bench": [
+    },
     {
       "company": "Red Cat Holdings",
       "ticker": "RCAT",
@@ -484,9 +445,10 @@
         "https://stockanalysis.com/stocks/rcat/statistics/",
         "https://stockanalysis.com/stocks/rcat/revenue/",
         "https://stockanalysis.com/stocks/rcat/forecast/"
-      ],
-      "rank": 1
-    },
+      ]
+    }
+  ],
+  "bench": [
     {
       "company": "BridgeBio Pharma",
       "ticker": "BBIO",
@@ -521,7 +483,7 @@
         "https://stockanalysis.com/stocks/bbio/revenue/",
         "https://stockanalysis.com/stocks/bbio/forecast/"
       ],
-      "rank": 2
+      "rank": 1
     },
     {
       "company": "Insmed",
@@ -558,45 +520,7 @@
         "https://stockanalysis.com/stocks/insm/revenue/",
         "https://stockanalysis.com/stocks/insm/forecast/"
       ],
-      "rank": 3
-    },
-    {
-      "company": "HIVE Digital Technologies",
-      "ticker": "HIVE",
-      "sector": "Financials – Capital Markets",
-      "price": 2.9,
-      "priceDate": "2026-10-06",
-      "marketCap": "$798.52M",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+157.52% YoY (TTM ending Jun 2026; revenue $331.30M)",
-      "score": 71,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +157.5% YoY (TTM) → 40/40",
-        "Acceleration: TTM 157.5% vs FY2026 158.3% → 0/5",
-        "Momentum: 1-yr price -34.8% vs S&P 500 (SPY) +16.4% = relative strength -44.0% → 1/25",
-        "Upside to target +141.4% → 20/20",
-        "Consensus Strong Buy (9) → 10/10",
-        "Gross-margin trend (not scored): latest-quarter gross profit +52.9% vs revenue +73.5% YoY → margin contracting",
-        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +73% YoY; consensus sees revenue +24% this fiscal year and +40% next.",
-      "fundamentals": "TTM revenue $331.30M, net income -$326.37M, gross margin 35.09%; market cap $798.52M, net debt $155.41M.",
-      "risks": [
-        "Bitcoin-mining/AI-hosting economics swing with the bitcoin price, power costs and hosting contracts",
-        "Unprofitable: TTM net income -$326.37M",
-        "Dilution: share count +66.0% YoY",
-        "Volatility: beta 3.67"
-      ],
-      "analystRating": "Strong Buy (9 analysts)",
-      "priceTarget": 7.0,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/hive/statistics/",
-        "https://stockanalysis.com/stocks/hive/revenue/",
-        "https://stockanalysis.com/stocks/hive/forecast/"
-      ],
-      "rank": 4
+      "rank": 2
     },
     {
       "company": "Sharplink",
@@ -634,7 +558,7 @@
         "https://stockanalysis.com/stocks/sbet/revenue/",
         "https://stockanalysis.com/stocks/sbet/forecast/"
       ],
-      "rank": 5
+      "rank": 3
     },
     {
       "company": "Nebius Group",
@@ -672,7 +596,7 @@
         "https://stockanalysis.com/stocks/nbis/revenue/",
         "https://stockanalysis.com/stocks/nbis/forecast/"
       ],
-      "rank": 6
+      "rank": 4
     },
     {
       "company": "QXO, Inc.",
@@ -710,7 +634,7 @@
         "https://stockanalysis.com/stocks/qxo/revenue/",
         "https://stockanalysis.com/stocks/qxo/forecast/"
       ],
-      "rank": 7
+      "rank": 5
     },
     {
       "company": "Firefly Aerospace",
@@ -747,7 +671,7 @@
         "https://stockanalysis.com/stocks/fly/revenue/",
         "https://stockanalysis.com/stocks/fly/forecast/"
       ],
-      "rank": 8
+      "rank": 6
     },
     {
       "company": "Amprius Technologies",
@@ -785,7 +709,7 @@
         "https://stockanalysis.com/stocks/ampx/revenue/",
         "https://stockanalysis.com/stocks/ampx/forecast/"
       ],
-      "rank": 9
+      "rank": 7
     },
     {
       "company": "Credo Technology Group Holding",
@@ -821,45 +745,7 @@
         "https://stockanalysis.com/stocks/crdo/revenue/",
         "https://stockanalysis.com/stocks/crdo/forecast/"
       ],
-      "rank": 10
-    },
-    {
-      "company": "Bitdeer Technologies Group",
-      "ticker": "BTDR",
-      "sector": "Technology – Software - Application",
-      "price": 10.91,
-      "priceDate": "2026-10-06",
-      "marketCap": "$2.97B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+127.68% YoY (TTM ending Jun 2026; revenue $812.26M)",
-      "score": 69,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +127.7% YoY (TTM) → 34/40",
-        "Acceleration: TTM 127.7% vs FY2025 77.3% → 5/5",
-        "Momentum: 1-yr price -43.8% vs S&P 500 (SPY) +16.4% = relative strength -51.7% → 0/25",
-        "Upside to target +101.6% → 20/20",
-        "Consensus Strong Buy (14) → 10/10",
-        "Gross-margin trend (not scored): n/a",
-        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 0 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +47% YoY; consensus sees revenue +50% this fiscal year and +67% next.",
-      "fundamentals": "TTM revenue $812.26M, net income -$228.59M, gross margin 0.67%; market cap $2.97B, net debt $1.49B.",
-      "risks": [
-        "Bitcoin price, network hashrate and power costs drive mining economics; in-house ASIC development is execution-heavy",
-        "Unprofitable: TTM net income -$228.59M",
-        "Dilution: share count +32.0% YoY",
-        "Volatility: beta 2.56"
-      ],
-      "analystRating": "Strong Buy (14 analysts)",
-      "priceTarget": 22.0,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/btdr/statistics/",
-        "https://stockanalysis.com/stocks/btdr/revenue/",
-        "https://stockanalysis.com/stocks/btdr/forecast/"
-      ],
-      "rank": 11
+      "rank": 8
     },
     {
       "company": "Zevra Therapeutics",
@@ -896,7 +782,7 @@
         "https://stockanalysis.com/stocks/zvra/revenue/",
         "https://stockanalysis.com/stocks/zvra/forecast/"
       ],
-      "rank": 12
+      "rank": 9
     },
     {
       "company": "Eos Energy Enterprises",
@@ -934,7 +820,7 @@
         "https://stockanalysis.com/stocks/eose/revenue/",
         "https://stockanalysis.com/stocks/eose/forecast/"
       ],
-      "rank": 13
+      "rank": 10
     },
     {
       "company": "Energy Vault Holdings",
@@ -972,7 +858,7 @@
         "https://stockanalysis.com/stocks/nrgv/revenue/",
         "https://stockanalysis.com/stocks/nrgv/forecast/"
       ],
-      "rank": 14
+      "rank": 11
     },
     {
       "company": "IonQ",
@@ -1010,7 +896,7 @@
         "https://stockanalysis.com/stocks/ionq/revenue/",
         "https://stockanalysis.com/stocks/ionq/forecast/"
       ],
-      "rank": 15
+      "rank": 12
     },
     {
       "company": "Legence",
@@ -1047,7 +933,7 @@
         "https://stockanalysis.com/stocks/lgn/revenue/",
         "https://stockanalysis.com/stocks/lgn/forecast/"
       ],
-      "rank": 16
+      "rank": 13
     },
     {
       "company": "Madrigal Pharmaceuticals",
@@ -1084,7 +970,7 @@
         "https://stockanalysis.com/stocks/mdgl/revenue/",
         "https://stockanalysis.com/stocks/mdgl/forecast/"
       ],
-      "rank": 17
+      "rank": 14
     },
     {
       "company": "Aura Minerals",
@@ -1121,7 +1007,7 @@
         "https://stockanalysis.com/stocks/augo/revenue/",
         "https://stockanalysis.com/stocks/augo/forecast/"
       ],
-      "rank": 18
+      "rank": 15
     }
   ]
 }
