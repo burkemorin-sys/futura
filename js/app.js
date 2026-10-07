@@ -1232,67 +1232,41 @@
   }
 
   /* ================= Home ================= */
+  // Fallback one-liners for the More overflow cards (Home no longer shows section tiles).
   const HOME_TILES = [
     { id: "search", title: "Search", icon: "search", fallback: "Look up any US ticker — live quote plus deep dive when on file" },
-    { id: "ipos", title: "IPO Tracker", icon: "rocket", fallback: "This week's IPOs, filings and recent debuts" },
-    { id: "growth", title: "Growth Picks", icon: "growth", fallback: "High-growth watchlist with valuation and risks" },
-    { id: "spacex", title: "SpaceX", icon: "orbit", fallback: "Fundamentals, investors, news and sentiment" },
-    { id: "tesla", title: "Tesla", icon: "bolt", fallback: "Fundamentals, investors, news and sentiment" },
     { id: "cassiopeia", title: "Cassiopeia", icon: "cas", fallback: "The five stars behind the Futura W" },
-    { id: "more", title: "More", icon: "grid", fallback: "More sections on the way" },
   ];
 
-  // Teasers come only from the real data files; on failure the tile keeps its static line.
-  const teaserLoaders = {
-    async search() {
-      const idx = await loadCompanyIndex();
-      const n = Object.keys(idx.tickers || {}).length;
-      return { line: `${n} deep dives on file · live quote for any ticker`, meta: "AAPL · NVDA · MU · SPCX · TSLA" };
-    },
-    async ipos() {
-      if (!ipoState.data) ipoState.data = await getJSON("data/ipos.json");
-      const d = ipoState.data, n = allIpos((d.sections || {}).thisWeek).length;
-      return { line: `${n} ${n === 1 ? "IPO" : "IPOs"} on the calendar this week`, meta: d.weekLabel || `Updated ${fmtShortDate(d.lastUpdated)}` };
-    },
-    async growth() {
-      if (!growthState.data) {
-        let res = await fetch("data/growth-picks.json", { cache: "no-cache" });
-        growthState.isExample = !res.ok;
-        if (!res.ok) res = await fetch("data/growth-picks.example.json", { cache: "no-cache" });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        growthState.data = await res.json();
-        if (growthState.data.example) growthState.isExample = true;
-      }
-      const d = growthState.data, n = (d.picks || []).length;
-      const sectors = new Set((d.picks || []).map(sectorGroup)).size;
-      return { line: `${n} picks across ${sectors} sectors${growthState.isExample ? " (example data)" : ""}`, meta: `Updated ${fmtShortDate(d.lastUpdated)}` };
-    },
-    async spacex() { return companyTeaser("spacex"); },
-    async tesla() { return companyTeaser("tesla"); },
-    async cassiopeia() {
-      if (!casState.data) casState.data = await getJSON("data/cassiopeia.json");
-      const s = (casState.data.stars || {}).items || [];
-      return { line: `${s.length} stars, myths, and nebulae of the W`, meta: "Caph · Schedar · Navi · Ruchbah · Segin" };
-    },
-  };
-  async function companyTeaser(key) {
-    if (!companyCache[key]) companyCache[key] = await getJSON(`data/${key}.json`);
-    const d = companyCache[key], s = d.snapshot || {};
-    return { line: `${d.ticker} ${money(s.price)}`, change: s.change, meta: s.asOf ? `${s.asOf} · snapshot` : "" };
+  function etfCard(e) {
+    const chg = e.change || "";
+    return `<a class="etf-card panel" href="#/search?t=${esc(e.ticker)}" data-etf="${esc(e.ticker)}">
+      <div class="etf-top">
+        <div>
+          <div class="tags"><span class="tag ticker">${esc(e.ticker)}</span><span class="tag sector">${esc(e.exchange || "ETF")}</span></div>
+          <h3 class="etf-name">${esc(e.name)}</h3>
+        </div>
+        <div class="pick-price">
+          <div class="p">${esc(money(e.price))}</div>
+          <div class="chg ${tone(chg)}">${esc(chg)}</div>
+        </div>
+      </div>
+      <p class="etf-tagline">${esc(e.tagline || "")}</p>
+      <dl class="meta etf-meta">
+        ${metaItem("Expense ratio", e.expenseRatio)}
+        ${metaItem("AUM", e.aum)}
+        ${metaItem("YTD", e.ytd)}
+        ${metaItem("1Y return", e.return1y)}
+      </dl>
+      <div class="etf-foot">
+        <span class="fineprint">${esc(e.ytdNote || e.return1yNote || "")}</span>
+        <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </div>
+    </a>`;
   }
 
-  function renderHome(el) {
-    const tiles = HOME_TILES.map((t) => `
-      <a class="home-tile panel" href="#/${t.id}" data-tile="${t.id}">
-        <span class="home-tile-icon">${svg(t.icon)}</span>
-        <span class="home-tile-body">
-          <span class="home-tile-title">${esc(t.title)}</span>
-          <span class="home-tile-line">${esc(t.fallback)}</span>
-          <span class="home-tile-meta"></span>
-        </span>
-        <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-      </a>`).join("");
-
+  async function renderHome(el) {
+    const token = el.dataset.token;
     el.innerHTML = `
       <section class="home-hero" aria-label="Futura">
         <div class="home-stage" id="home-stage"></div>
@@ -1302,23 +1276,42 @@
           <p class="home-motto"><span class="motto">looking higher</span></p>
         </div>
       </section>
-      <section class="home-tiles" aria-label="Sections">${tiles}</section>
-      ${footer("Futura is a personal investing dashboard for information only, not investment advice. Teasers are snapshots from the app's data files; open a section for sources and dates.")}`;
+      <section class="home-search" aria-label="Search">
+        <div class="loading">Loading search…</div>
+      </section>
+      <section class="home-etfs" aria-label="Index ETFs">
+        <div class="group-head"><h2>Index ETFs</h2><span class="range">VOO · QQQ</span><span class="rule"></span></div>
+        <div class="etf-grid"><div class="loading">Loading ETF snapshots…</div></div>
+      </section>
+      ${footer("Futura is a personal investing dashboard for information only, not investment advice. ETF figures are snapshots from the linked sources; tap a card to open Search for that ticker.")}`;
 
     casState.anim = mountCasHero(el.querySelector("#home-stage"));
 
-    const token = el.dataset.token;
-    Object.entries(teaserLoaders).forEach(async ([id, load]) => {
-      try {
-        const t = await load();
-        if (el.dataset.token !== token) return;
-        const tile = el.querySelector(`[data-tile="${id}"]`);
-        if (!tile) return;
-        const line = tile.querySelector(".home-tile-line");
-        line.innerHTML = esc(t.line) + (t.change ? ` <span class="${tone(t.change)}">${esc(t.change)}</span>` : "");
-        tile.querySelector(".home-tile-meta").textContent = t.meta || "";
-      } catch (e) { /* keep static teaser */ }
-    });
+    // Search form (same UI as the Search tab), with deep-dive chips + recent.
+    try { await loadCompanyIndex(); } catch (e) { /* chips optional */ }
+    if (el.dataset.token !== token) return;
+    const searchHost = el.querySelector(".home-search");
+    searchHost.innerHTML = searchFormHTML("");
+    bindSearchForm(el);
+
+    // VOO / QQQ cards
+    const grid = el.querySelector(".etf-grid");
+    try {
+      const d = await getJSON("data/etfs.json");
+      if (el.dataset.token !== token) return;
+      const list = d.etfs || [];
+      grid.innerHTML = list.length
+        ? list.map(etfCard).join("")
+        : `<div class="empty">No ETF snapshots on file.</div>`;
+      const headRange = el.querySelector(".home-etfs .range");
+      if (headRange && d.asOf) headRange.textContent = d.asOf;
+      // Prefer goSearch so recent searches update when tapping a card.
+      grid.querySelectorAll("[data-etf]").forEach((a) => {
+        a.addEventListener("click", (ev) => { ev.preventDefault(); goSearch(a.dataset.etf); });
+      });
+    } catch (err) {
+      if (el.dataset.token === token) grid.innerHTML = `<div class="error">Couldn't load ETF data (${esc(err.message)}).</div>`;
+    }
   }
 
   /* "More" now doubles as the overflow menu for sections hidden from the mobile tab bar. */

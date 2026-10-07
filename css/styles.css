@@ -755,3 +755,32 @@ body::before { /* solid strip behind the translucent status bar so content never
   .search-input { font-size: 22px; padding: 14px 16px; }
   .search-go { padding: 0 20px; }
 }
+
+
+/* ---------- Home search + ETF cards ---------- */
+.home-search { margin-top: 8px; }
+.home-search .search-form { margin-bottom: 8px; }
+.home-etfs { margin-top: 22px; }
+.etf-grid { display: grid; gap: 12px; }
+@media (min-width: 700px) { .etf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
+.etf-card {
+  display: flex; flex-direction: column; gap: 10px; padding: 16px; text-decoration: none; color: var(--text);
+  transition: border-color .2s, transform .2s, background .2s; overflow: hidden;
+}
+.etf-card::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(243, 220, 140, .35), transparent); opacity: .6;
+}
+.etf-card:hover, .etf-card:focus-visible { border-color: var(--border-gold); background: rgba(24, 22, 18, .9); outline: none; }
+.etf-card:active { transform: scale(.985); }
+.etf-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.etf-name { margin: 8px 0 0; font-family: var(--display); font-size: 22px; font-weight: 600; line-height: 1.15; }
+.etf-tagline { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+.etf-meta { margin: 0; }
+.etf-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 2px; }
+.etf-foot .fineprint { margin: 0; }
+@media (min-width: 900px) {
+  .home-search { margin-top: 14px; }
+  .etf-name { font-size: 24px; }
+  .etf-card { padding: 18px; }
+}

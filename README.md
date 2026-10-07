@@ -67,7 +67,7 @@ Seeded deep dives: AAPL, NVDA, MU, SPCX, TSLA. For any other ticker the Live wid
 
 ## Home
 
-`#/home` is the default route, so a bare URL and the installed PWA (`start_url: "./"`) both open here. It reuses the Cassiopeia hero animation and shows a FUTURA wordmark, the motto "looking higher", and one tile per section. Tile teasers are read from the data files only: the count of `ipos.json` → `sections.thisWeek`, the number of `growth-picks.json` → `picks`, the `snapshot.price` / `change` / `asOf` values from `spacex.json` and `tesla.json`, and the number of stars in `cassiopeia.json`. If a file fails to load, its tile falls back to a static description. On mobile the tab bar shows Home, IPOs, Growth, SpaceX, Tesla and More. Cassiopeia appears under More (`overflow: true` in `SECTIONS`).
+`#/home` is the default route, so a bare URL and the installed PWA (`start_url: "./"`) both open here. It shows the Cassiopeia hero, the FUTURA wordmark and the motto "looking higher", then the Search form (same as `#/search`) and two Index ETF cards (VOO and QQQ) from `data/etfs.json`. Section tiles were removed from Home; the bottom tab bar / desktop sidebar still reach every section. On mobile the tab bar shows Home, IPOs, Growth, SpaceX, Tesla and More. Search and Cassiopeia live under More (`overflow: true`).
 
 ## data/ipos.json schema
 
