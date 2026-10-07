@@ -1093,11 +1093,6 @@
   }
 
   function searchFormHTML(value = "", opts = {}) {
-    const idx = searchState.index || { tickers: {} };
-    const chips = Object.keys(idx.tickers || {}).map((t) => {
-      const meta = idx.tickers[t];
-      return `<button type="button" class="chip search-chip" data-t="${esc(t)}" aria-label="${esc(t)} — ${esc(meta.company || t)}">${esc(t)}<span class="chip-sub">${esc(meta.company || "")}</span></button>`;
-    }).join("");
     const recent = (searchState.recent || []).filter((t) => t !== value).slice(0, 6)
       .map((t) => `<button type="button" class="chip ghost" data-t="${esc(t)}">${esc(t)}</button>`).join("");
     return `
@@ -1110,7 +1105,6 @@
         </div>
         <p id="ticker-hint" class="fineprint top">Letters, digits, dots and dashes. Live TradingView loads for any major US-listed symbol; a full deep dive appears when we have a local data file.</p>
         ${opts.error ? `<p class="search-error" role="alert">${esc(opts.error)}</p>` : ""}
-        ${chips ? `<div class="search-chips"><span class="chips-label">Deep dives on file</span>${chips}</div>` : ""}
         ${recent ? `<div class="search-chips"><span class="chips-label">Recent</span>${recent}</div>` : ""}
       </form>`;
   }
