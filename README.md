@@ -214,3 +214,12 @@ The SpaceX and Tesla tabs embed free TradingView widgets (symbol quote, advanced
 
 ## Automated refresh (optional)
 `scripts/refresh-data.workflow.yml` is a ready-made GitHub Actions workflow that runs `refresh_sentiment.py` every few hours and commits `data/sentiment.json`. It isn't installed yet because pushing files under `.github/workflows/` requires a token with the `workflow` scope. To enable it, run `mkdir -p .github/workflows && git mv scripts/refresh-data.workflow.yml .github/workflows/refresh-data.yml`, then push with a token that has `workflow` scope (`gh auth refresh -s workflow`), or add the file in the GitHub web UI. Fundamentals and news in `spacex.json` and `tesla.json` are curated by hand and are not scraped.
+
+## Risk It (`data/risk-it.json`)
+
+A separate, **speculative** tab with the same card format as Growth: × dismiss with its own ranked bench, Restore, Follow chips, and sort/filter. Growth stays the conservative GARP screen, and no ticker may appear in both files.
+
+- Schema: the same fields as growth-picks.json, plus `disclaimer`, and on each entry `score` (0–100), `drivers` (string list), `riskLevel` ("High" | "Very High") and `risks`.
+- `picks` holds 12 entries. `bench` holds 15–20, ranked with `rank` 1..N. A ticker must not appear in both picks and bench, or in growth-picks.json.
+- Score: revenue growth TTM YoY, up to 40 (full marks at ≥150%) · acceleration (TTM > prior FY growth), +5 · 1-yr market-cap change as the momentum proxy, up to 25 (clamp((chg+50)/150×25)) · upside to the consensus target, up to 20 (full marks at ≥100%) · consensus Strong Buy 10 / Buy 7 / Hold 2.
+- localStorage: `riskItDismissed`, `riskItSort`.

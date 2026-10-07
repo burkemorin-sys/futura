@@ -7,6 +7,7 @@
   const ICONS = {
     rocket: '<path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M9 12l3 3"/><path d="M12 15l-3-3c1.5-4.5 5-9 11-9 0 6-4.5 9.5-9 11z"/><circle cx="15.5" cy="8.5" r="1.5"/>',
     growth: '<path d="M4 19h16"/><path d="M6 15l4-4 3 3 6-7"/><path d="M15 7h4v4"/>',
+    flame: '<path d="M12 3c.5 3.2 4.5 5.4 4.5 10a4.5 4.5 0 0 1-9 0c0-2.3 1.2-3.6 2.2-4.8.3 1.6 1 2.5 2 2.8-.4-2.6-.3-5.4.3-8z"/>',
     grid: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><path d="M16.5 13.5v6M13.5 16.5h6"/>',
     ext: '<path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',
     chev: '<path d="M6 9l6 6 6-6"/>',
@@ -206,8 +207,9 @@
     { id: "home", label: "Home", short: "Home", icon: "home", render: renderHome },
     { id: "ipos", label: "IPO Tracker", short: "IPOs", icon: "rocket", render: renderIpoTracker },
     { id: "growth", label: "Growth Picks", short: "Growth", icon: "growth", render: renderGrowth },
+    { id: "riskit", label: "Risk It", short: "Risk It", icon: "flame", render: renderRiskIt },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex") },
-    { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla") },
+    { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla"), overflow: true },
     { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch, overflow: true },
     { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia, overflow: true },
     { id: "more", label: "More", short: "More", icon: "grid", render: renderMore },
@@ -265,6 +267,7 @@
     window.scrollTo(0, 0);
     if (casState.anim) { casState.anim.destroy(); casState.anim = null; }
     main.dataset.token = section.id + (params.t ? ":" + params.t : "");
+    document.body.dataset.route = section.id;
     section.render(main, params);
   }
 
@@ -478,9 +481,15 @@
   }
 
   /* ================= Growth Picks ================= */
-  const growthState = { data: null, isExample: false, sector: "All", sort: localStorage.getItem("growthSort") || "default" };
+  const GROWTH_MODES = {
+    growth: { id: "growth", file: "data/growth-picks.json", example: "data/growth-picks.example.json", dismissKey: "growthDismissed", sortKey: "growthSort", title: "Growth Picks", sub: "Conservative growth at a reasonable price", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("growthSort") || "default" } },
+    riskit: { id: "riskit", file: "data/risk-it.json", example: null, dismissKey: "riskItDismissed", sortKey: "riskItSort", title: "Risk It", sub: "Speculative high-growth · higher risk", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("riskItSort") || "default" } },
+  };
+  let gMode = GROWTH_MODES.growth;
+  const growthState = new Proxy({}, { get: (_, k) => gMode.state[k], set: (_, k, v) => { gMode.state[k] = v; return true; } });
   const SORTS = {
     default: { label: "Default order" },
+    score: { label: "Risk It score", key: (p) => num(p.score), dir: -1, only: "riskit" },
     growth: { label: "Revenue growth", key: (p) => pctNum(p.revenueGrowth), dir: -1 },
     upside: { label: "Upside to target", key: (p) => upside(p), dir: -1 },
     peg: { label: "PEG (low → high)", key: (p) => num(p.peg), dir: 1 },
@@ -519,14 +528,16 @@
   const fmtMult = (v) => (typeof v === "number" ? `${+v.toFixed(2)}x` : isNA(v) ? "n/a" : String(v));
   const fmtPct = (v) => (typeof v === "number" ? `${pctNum(v).toFixed(0)}%` : isNA(v) ? "n/a" : String(v));
 
-  async function renderGrowth(el) {
+  function renderRiskIt(el) { gMode = GROWTH_MODES.riskit; return loadGrowth(el); }
+  async function renderGrowth(el) { gMode = GROWTH_MODES.growth; return loadGrowth(el); }
+  async function loadGrowth(el) {
     if (!growthState.data) {
       el.innerHTML = `<div class="loading">Loading growth picks…</div>`;
       try {
-        let res = await fetch("data/growth-picks.json", { cache: "no-cache" });
+        let res = await fetch(gMode.file, { cache: "no-cache" });
         growthState.isExample = false;
-        if (!res.ok) {
-          res = await fetch("data/growth-picks.example.json", { cache: "no-cache" });
+        if (!res.ok && gMode.example) {
+          res = await fetch(gMode.example, { cache: "no-cache" });
           growthState.isExample = true;
         }
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -566,12 +577,13 @@
 
     const chip = (name, n) => `<button class="chip" data-sector="${esc(name)}" aria-pressed="${growthState.sector === name}">${esc(name)} <span class="count">${n}</span></button>`;
     const chips = chip("All", picks.length) + sectors.map((sec) => chip(sec, picks.filter((p) => sectorGroup(p) === sec).length)).join("");
-    const sortSel = `<select class="select" id="growth-sort" aria-label="Sort picks">${Object.entries(SORTS)
+    const sortSel = `<select class="select" id="growth-sort" aria-label="Sort picks">${Object.entries(SORTS).filter(([, v]) => !v.only || v.only === gMode.id)
       .map(([k, v]) => `<option value="${k}"${k === growthState.sort ? " selected" : ""}>${esc(v.label)}</option>`).join("")}</select>`;
 
     el.innerHTML = `
-      ${hero("Growth Picks", "High-growth watchlist", `<span>${svg("clock")}Last updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("list")}${picks.length} ${picks.length === 1 ? "pick" : "picks"}</span>`)}
+      ${hero(gMode.title, gMode.sub, `<span>${svg("clock")}Last updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("list")}${picks.length} ${picks.length === 1 ? "pick" : "picks"}</span>`)}
       ${growthState.isExample ? `<div class="example-banner" role="note">${svg("warn")}<span><strong>EXAMPLE DATA</strong> — fictional placeholder for testing. Real picks will load automatically from data/growth-picks.json.</span></div>` : ""}
+      ${isNA(d.disclaimer) ? "" : `<div class="example-banner riskit-note" role="note">${svg("warn")}<span><strong>SPECULATIVE</strong> — ${esc(d.disclaimer)}</span></div>`}
       ${isNA(d.method) ? "" : `<section class="panel method"><h2>Method</h2><p>${esc(d.method)}</p>${isNA(d.dataNotes) ? "" : `<p class="notes">${esc(d.dataNotes)}</p>`}</section>`}
       <div class="toolbar" role="toolbar" aria-label="Sort and filter by sector">
         ${sortSel}<span class="sep"></span>${chips}
@@ -595,15 +607,14 @@
     if (rs) rs.addEventListener("click", () => { growthSetDismissed([]); drawGrowth(el); });
     el.querySelector("#growth-sort").addEventListener("change", (e) => {
       growthState.sort = e.target.value;
-      localStorage.setItem("growthSort", growthState.sort);
+      localStorage.setItem(gMode.sortKey, growthState.sort);
       drawGrowth(el);
     });
     bindFollowToggles(el);
   }
 
-  const GROWTH_DISMISSED_KEY = "growthDismissed";
-  function growthDismissed() { try { const a = JSON.parse(localStorage.getItem(GROWTH_DISMISSED_KEY) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
-  function growthSetDismissed(a) { try { localStorage.setItem(GROWTH_DISMISSED_KEY, JSON.stringify([...new Set(a)])); } catch (e) { /* ignore */ } }
+  function growthDismissed() { try { const a = JSON.parse(localStorage.getItem(gMode.dismissKey) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+  function growthSetDismissed(a) { try { localStorage.setItem(gMode.dismissKey, JSON.stringify([...new Set(a)])); } catch (e) { /* ignore */ } }
 
   // Top-level sector for filtering: "Technology – Semiconductors" -> "Technology"
   const sectorGroup = (p) => (isNA(p.sector) ? "Other" : String(p.sector).split(/\s+[–—-]\s+/)[0].trim());
@@ -627,11 +638,13 @@
           <div class="tags">
             ${tick ? `<span class="tag ticker">${esc(tick)}</span>` : `<span class="tag ticker na">n/a</span>`}
             ${isNA(p.sector) ? "" : `<span class="tag sector">${esc(p.sector)}</span>`}
+            ${p.riskLevel ? `<span class="tag risk-lvl${/very/i.test(p.riskLevel) ? " very" : ""}">${esc(p.riskLevel)} risk</span>` : ""}
             ${tick ? followToggleHTML(tick, { compact: true }) : ""}
           </div>
         </div>
         <div class="pick-price">
           <div class="p">${esc(money(p.price))}</div>
+          ${typeof p.score === "number" ? `<div class="score-badge" title="Risk It score (0–100)">${p.score}<small>/100</small></div>` : ""}
           ${isNA(p.priceDate) ? "" : `<div class="d">as of ${esc(fmtShortDate(p.priceDate))}</div>`}
         </div>
       </div>
@@ -639,6 +652,7 @@
         ${stat("Market cap", fmtCap(p.marketCap))}${growthStat(p.revenueGrowth)}
         ${stat("Forward P/E", fmtMult(p.forwardPE))}${stat("PEG", typeof p.peg === "number" ? p.peg.toFixed(2) : isNA(p.peg) ? "n/a" : String(p.peg))}
       </dl>
+      ${Array.isArray(p.drivers) && p.drivers.length ? `<div class="block"><h4>Score drivers</h4><ul class="bullets drivers">${p.drivers.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>` : ""}
       ${isNA(p.trend) ? "" : `<div class="block"><h4>Trend</h4><p>${esc(p.trend)}</p></div>`}
       ${isNA(p.fundamentals) ? "" : `<div class="block"><h4>Fundamentals</h4><p>${esc(p.fundamentals)}</p></div>`}
       ${risks.length ? `<div class="block"><h4>Risks</h4><ul class="bullets risk">${risks.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>` : ""}
@@ -1563,6 +1577,7 @@
   /* ================= Home ================= */
   // Fallback one-liners for the More overflow cards (Home no longer shows section tiles).
   const HOME_TILES = [
+    { id: "tesla", title: "Tesla", icon: "bolt", fallback: "Tesla deep dive — catalysts, holders and valuation" },
     { id: "search", title: "Search", icon: "search", fallback: "Look up any US ticker — live quote plus deep dive when on file" },
     { id: "cassiopeia", title: "Cassiopeia", icon: "cas", fallback: "The five stars behind the Futura W" },
   ];

@@ -921,3 +921,13 @@ body::before { /* solid strip behind the translucent status bar so content never
 .pick-card.is-dismissing { opacity: 0; transform: scale(.97); transition: opacity .2s ease, transform .2s ease; }
 .growth-restore { margin: 0 0 12px; font-size: 13px; color: var(--faint); }
 .link-btn { background: none; border: 0; padding: 0; color: var(--gold-light); font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Risk It — ember accent */
+:root { --ember: #e8743b; --ember-soft: rgba(232, 116, 59, .12); --ember-border: rgba(232, 116, 59, .45); }
+body[data-route="riskit"] .hero h1 { background: linear-gradient(90deg, #f3c969, #e8743b); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tag.risk-lvl { color: #f2b06b; border-color: var(--ember-border); background: var(--ember-soft); }
+.tag.risk-lvl.very { color: #ff8a6a; border-color: rgba(255, 110, 80, .55); background: rgba(255, 90, 60, .12); }
+.score-badge { margin-top: 6px; display: inline-block; font-family: var(--mono); font-weight: 700; font-size: 15px; color: #1a0d06; background: linear-gradient(135deg, #f3c969, #e8743b); border-radius: 8px; padding: 2px 8px; }
+.score-badge small { font-size: 10px; opacity: .7; margin-left: 1px; }
+.bullets.drivers li::marker { color: var(--ember); }
+.riskit-note { border-color: var(--ember-border) !important; background: var(--ember-soft) !important; }
