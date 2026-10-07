@@ -24,6 +24,12 @@
     home: '<path d="M4 11.5L12 5l8 6.5"/><path d="M6.5 10v9h11v-9"/><path d="M10.5 19v-5h3v5"/>',
     search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/>',
     cas: '<polyline points="3.5,8 7.5,14 12,10 16.5,16 20.5,8" fill="none"/><circle cx="3.5" cy="8" r="1.35"/><circle cx="7.5" cy="14" r="1.5"/><circle cx="12" cy="10" r="1.7"/><circle cx="16.5" cy="16" r="1.55"/><circle cx="20.5" cy="8" r="1.45"/>',
+    star: '<path d="M12 3.2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.6 7.2 18.1l.9-5.4-3.9-3.8 5.4-.8z"/>',
+    starFill: '<path d="M12 3.2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.6 7.2 18.1l.9-5.4-3.9-3.8 5.4-.8z" fill="currentColor" stroke="none"/>',
+    grip: '<circle cx="9" cy="7" r="1.2"/><circle cx="15" cy="7" r="1.2"/><circle cx="9" cy="12" r="1.2"/><circle cx="15" cy="12" r="1.2"/><circle cx="9" cy="17" r="1.2"/><circle cx="15" cy="17" r="1.2"/>',
+    x: '<path d="M7 7l10 10M17 7L7 17"/>',
+    chevUp: '<path d="M6 14l6-6 6 6"/>',
+    chevDown: '<path d="M6 10l6 6 6-6"/>',
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
 
@@ -1047,11 +1053,34 @@
 
   /* ================= Search ================= */
   const SEARCH_RECENT_KEY = "searchRecent";
-  const searchState = { index: null, recent: [] };
-  try { searchState.recent = JSON.parse(localStorage.getItem(SEARCH_RECENT_KEY) || "[]"); } catch (e) { searchState.recent = []; }
+  const FOLLOWING_KEY = "followingTickers";
+  const FOLLOWING_DEFAULT = ["SPCX", "TSLA", "NVDA", "AAPL", "MU"];
+  const searchState = { index: null, recent: [], following: [], editMode: false };
 
   const normalizeTicker = (raw) => String(raw || "").trim().toUpperCase().replace(/[^A-Z0-9./-]/g, "").slice(0, 12);
   const isValidTicker = (t) => /^[A-Z][A-Z0-9./-]{0,9}$/.test(t);
+  // Following add-input: same rules as search (letters/digits/dots/hyphens/slashes).
+  const isValidFollowTicker = (t) => isValidTicker(t);
+
+  try { searchState.recent = JSON.parse(localStorage.getItem(SEARCH_RECENT_KEY) || "[]"); } catch (e) { searchState.recent = []; }
+
+  function loadFollowing() {
+    try {
+      const raw = localStorage.getItem(FOLLOWING_KEY);
+      if (raw == null) throw new Error("missing");
+      const parsed = JSON.parse(raw);
+      if (!Array.isArray(parsed)) throw new Error("bad");
+      return parsed.map(normalizeTicker).filter(isValidTicker).filter((t, i, a) => a.indexOf(t) === i);
+    } catch (e) {
+      const seed = FOLLOWING_DEFAULT.slice();
+      try { localStorage.setItem(FOLLOWING_KEY, JSON.stringify(seed)); } catch (err) { /* ignore */ }
+      return seed;
+    }
+  }
+  function saveFollowing() {
+    try { localStorage.setItem(FOLLOWING_KEY, JSON.stringify(searchState.following)); } catch (e) { /* ignore */ }
+  }
+  searchState.following = loadFollowing();
 
   async function loadCompanyIndex() {
     if (searchState.index) return searchState.index;
@@ -1063,6 +1092,43 @@
   function rememberTicker(t) {
     searchState.recent = [t, ...searchState.recent.filter((x) => x !== t)].slice(0, 8);
     localStorage.setItem(SEARCH_RECENT_KEY, JSON.stringify(searchState.recent));
+  }
+
+  function tickerDisplayName(t) {
+    const entry = (searchState.index && searchState.index.tickers && searchState.index.tickers[t]) || null;
+    return entry && entry.company ? entry.company : "";
+  }
+
+  function isFollowing(t) { return searchState.following.indexOf(t) >= 0; }
+
+  function addFollow(t) {
+    t = normalizeTicker(t);
+    if (!isValidFollowTicker(t) || isFollowing(t)) return false;
+    searchState.following.push(t);
+    saveFollowing();
+    return true;
+  }
+
+  function removeFollow(t) {
+    t = normalizeTicker(t);
+    const next = searchState.following.filter((x) => x !== t);
+    if (next.length === searchState.following.length) return false;
+    searchState.following = next;
+    saveFollowing();
+    return true;
+  }
+
+  function toggleFollow(t) {
+    return isFollowing(t) ? (removeFollow(t), false) : (addFollow(t), true);
+  }
+
+  function moveFollow(from, to) {
+    if (from === to || from < 0 || to < 0 || from >= searchState.following.length || to >= searchState.following.length) return;
+    const next = searchState.following.slice();
+    const [item] = next.splice(from, 1);
+    next.splice(to, 0, item);
+    searchState.following = next;
+    saveFollowing();
   }
 
   async function loadDeepDive(ticker) {
@@ -1092,6 +1158,53 @@
     else location.hash = next;
   }
 
+  function followToggleHTML(ticker) {
+    if (!ticker || !isValidTicker(ticker)) return "";
+    const on = isFollowing(ticker);
+    return `<button type="button" class="follow-toggle chip${on ? " is-following" : ""}" data-follow-toggle="${esc(ticker)}" aria-pressed="${on ? "true" : "false"}">
+      ${on ? svg("starFill") : svg("star")}<span>${on ? "Following" : "Follow"}</span>
+    </button>`;
+  }
+
+  function followingSectionHTML(activeTicker = "") {
+    const rows = searchState.following.map((t, i) => {
+      const name = tickerDisplayName(t);
+      const active = t === activeTicker ? " is-active" : "";
+      return `<li class="follow-row${active}" data-ticker="${esc(t)}" data-index="${i}" draggable="false">
+        <button type="button" class="follow-handle" aria-label="Drag to reorder ${esc(t)}" title="Drag to reorder">${svg("grip")}</button>
+        <button type="button" class="follow-open" data-open="${esc(t)}">
+          <span class="follow-ticker">${esc(t)}</span>
+          ${name ? `<span class="follow-name">${esc(name)}</span>` : `<span class="follow-name faint">Ticker</span>`}
+        </button>
+        <div class="follow-actions">
+          <button type="button" class="follow-move follow-up" data-move="up" data-index="${i}" aria-label="Move ${esc(t)} up" ${i === 0 ? "disabled" : ""}>${svg("chevUp")}</button>
+          <button type="button" class="follow-move follow-down" data-move="down" data-index="${i}" aria-label="Move ${esc(t)} down" ${i === searchState.following.length - 1 ? "disabled" : ""}>${svg("chevDown")}</button>
+          <button type="button" class="follow-remove" data-unfollow="${esc(t)}" aria-label="Unfollow ${esc(t)}">${svg("x")}</button>
+        </div>
+      </li>`;
+    }).join("");
+    const empty = `<li class="follow-empty">No tickers yet — add one below or tap Follow on a quote.</li>`;
+    return `
+      <section class="following panel" aria-label="Following watchlist">
+        <div class="following-head">
+          <div>
+            <h2 class="following-title">Following</h2>
+            <p class="following-sub">Your watchlist · drag to reorder</p>
+          </div>
+          <button type="button" class="chip ghost follow-edit-btn" aria-pressed="${searchState.editMode ? "true" : "false"}">${searchState.editMode ? "Done" : "Edit"}</button>
+        </div>
+        <ul class="follow-list${searchState.editMode ? " is-editing" : ""}" id="follow-list">${rows || empty}</ul>
+        <form class="follow-add" autocomplete="off">
+          <label class="visually-hidden" for="follow-input">Add ticker to Following</label>
+          <input id="follow-input" class="follow-input" type="text" inputmode="text" spellcheck="false"
+            maxlength="12" placeholder="Add ticker" aria-describedby="follow-add-hint" />
+          <button type="submit" class="follow-add-btn">+ Follow</button>
+        </form>
+        <p id="follow-add-hint" class="fineprint top follow-hint">Uppercase letters, digits, dots or hyphens. Order is saved on this device.</p>
+        <p class="follow-add-error search-error" hidden role="alert"></p>
+      </section>`;
+  }
+
   function searchFormHTML(value = "", opts = {}) {
     const recent = (searchState.recent || []).filter((t) => t !== value).slice(0, 6)
       .map((t) => `<button type="button" class="chip ghost" data-t="${esc(t)}">${esc(t)}</button>`).join("");
@@ -1105,32 +1218,215 @@
         </div>
         <p id="ticker-hint" class="fineprint top">Letters, digits, dots and dashes. Live TradingView loads for any major US-listed symbol; a full deep dive appears when we have a local data file.</p>
         ${opts.error ? `<p class="search-error" role="alert">${esc(opts.error)}</p>` : ""}
-        ${recent ? `<div class="search-chips"><span class="chips-label">Recent</span>${recent}</div>` : ""}
-      </form>`;
+        ${opts.followToggle || ""}
+      </form>
+      ${followingSectionHTML(value)}
+      ${recent ? `<div class="search-chips panel search-recent"><span class="chips-label">Recent</span>${recent}</div>` : ""}`;
+  }
+
+  function refreshFollowingUI(root) {
+    const host = root.querySelector(".following");
+    if (!host) return;
+    const active = normalizeTicker((root.querySelector("#ticker-input") || {}).value || "");
+    const wrap = document.createElement("div");
+    wrap.innerHTML = followingSectionHTML(active);
+    host.replaceWith(wrap.firstElementChild);
+    bindFollowing(root);
+    // Keep analysis Follow toggle in sync if present.
+    const tog = root.querySelector("[data-follow-toggle]");
+    if (tog) {
+      const t = tog.dataset.followToggle;
+      const on = isFollowing(t);
+      tog.classList.toggle("is-following", on);
+      tog.setAttribute("aria-pressed", on ? "true" : "false");
+      tog.innerHTML = `${on ? svg("starFill") : svg("star")}<span>${on ? "Following" : "Follow"}</span>`;
+    }
+  }
+
+  function bindFollowing(el) {
+    const section = el.querySelector(".following");
+    if (!section) return;
+
+    const editBtn = section.querySelector(".follow-edit-btn");
+    if (editBtn) {
+      editBtn.addEventListener("click", () => {
+        searchState.editMode = !searchState.editMode;
+        refreshFollowingUI(el);
+      });
+    }
+
+    const addForm = section.querySelector(".follow-add");
+    const addInput = section.querySelector("#follow-input");
+    const addErr = section.querySelector(".follow-add-error");
+    if (addForm && addInput) {
+      addInput.addEventListener("input", (e) => {
+        const start = e.target.selectionStart;
+        e.target.value = normalizeTicker(e.target.value);
+        try { e.target.setSelectionRange(start, start); } catch (err) { /* ignore */ }
+      });
+      addForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const t = normalizeTicker(addInput.value);
+        if (!isValidFollowTicker(t)) {
+          if (addErr) { addErr.hidden = false; addErr.textContent = "Enter a valid ticker (letters, digits, dots or hyphens)."; }
+          return;
+        }
+        if (isFollowing(t)) {
+          if (addErr) { addErr.hidden = false; addErr.textContent = `${t} is already on your Following list.`; }
+          return;
+        }
+        addFollow(t);
+        addInput.value = "";
+        if (addErr) { addErr.hidden = true; addErr.textContent = ""; }
+        refreshFollowingUI(el);
+      });
+    }
+
+    section.querySelectorAll("[data-open]").forEach((b) => {
+      b.addEventListener("click", () => goSearch(b.dataset.open));
+    });
+    section.querySelectorAll("[data-unfollow]").forEach((b) => {
+      b.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        removeFollow(b.dataset.unfollow);
+        refreshFollowingUI(el);
+      });
+    });
+    section.querySelectorAll("[data-move]").forEach((b) => {
+      b.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        const i = +b.dataset.index;
+        const to = b.dataset.move === "up" ? i - 1 : i + 1;
+        moveFollow(i, to);
+        refreshFollowingUI(el);
+      });
+    });
+
+    // Pointer-event drag (works on iPhone; avoid HTML5 DnD).
+    const list = section.querySelector("#follow-list");
+    if (list) bindFollowPointerDrag(list, el);
+  }
+
+  function bindFollowPointerDrag(list, root) {
+    let drag = null;
+
+    const onPointerDown = (e) => {
+      if (e.button != null && e.button !== 0) return;
+      const handle = e.target.closest(".follow-handle");
+      if (!handle || !list.contains(handle)) return;
+      const row = handle.closest(".follow-row");
+      if (!row) return;
+      e.preventDefault();
+      const rows = [...list.querySelectorAll(".follow-row")];
+      const index = rows.indexOf(row);
+      if (index < 0) return;
+      const rect = row.getBoundingClientRect();
+      drag = {
+        pointerId: e.pointerId,
+        row,
+        index,
+        startY: e.clientY,
+        offsetY: e.clientY - rect.top,
+        height: rect.height,
+        moved: false,
+      };
+      row.classList.add("is-dragging");
+      list.classList.add("is-dragging");
+      try { handle.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+      handle.addEventListener("pointermove", onPointerMove);
+      handle.addEventListener("pointerup", onPointerUp);
+      handle.addEventListener("pointercancel", onPointerUp);
+    };
+
+    const onPointerMove = (e) => {
+      if (!drag || e.pointerId !== drag.pointerId) return;
+      const dy = e.clientY - drag.startY;
+      if (Math.abs(dy) > 4) drag.moved = true;
+      drag.row.style.transform = `translateY(${dy}px)`;
+      drag.row.style.zIndex = "5";
+      const rows = [...list.querySelectorAll(".follow-row")].filter((r) => r !== drag.row);
+      const mid = drag.row.getBoundingClientRect().top + drag.height / 2;
+      let target = drag.index;
+      rows.forEach((r) => {
+        const rr = r.getBoundingClientRect();
+        const rm = rr.top + rr.height / 2;
+        const ri = +r.dataset.index;
+        if (mid < rm && ri < target) target = ri;
+        if (mid > rm && ri > target) target = ri;
+      });
+      // Visual reorder hint via CSS order on siblings
+      list.querySelectorAll(".follow-row").forEach((r) => r.classList.remove("drop-above", "drop-below"));
+      if (target !== drag.index) {
+        const targetRow = list.querySelector(`.follow-row[data-index="${target}"]`);
+        if (targetRow) targetRow.classList.add(target < drag.index ? "drop-above" : "drop-below");
+      }
+      drag.targetIndex = target;
+    };
+
+    const onPointerUp = (e) => {
+      if (!drag || e.pointerId !== drag.pointerId) return;
+      const handle = e.currentTarget;
+      handle.removeEventListener("pointermove", onPointerMove);
+      handle.removeEventListener("pointerup", onPointerUp);
+      handle.removeEventListener("pointercancel", onPointerUp);
+      try { handle.releasePointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+      drag.row.classList.remove("is-dragging");
+      list.classList.remove("is-dragging");
+      drag.row.style.transform = "";
+      drag.row.style.zIndex = "";
+      list.querySelectorAll(".follow-row").forEach((r) => r.classList.remove("drop-above", "drop-below"));
+      const from = drag.index;
+      const to = drag.targetIndex != null ? drag.targetIndex : from;
+      drag = null;
+      if (to !== from) {
+        moveFollow(from, to);
+        refreshFollowingUI(root);
+      }
+    };
+
+    list.querySelectorAll(".follow-handle").forEach((h) => {
+      h.addEventListener("pointerdown", onPointerDown);
+      // Prevent scroll while dragging on touch
+      h.style.touchAction = "none";
+    });
   }
 
   function bindSearchForm(el) {
     const form = el.querySelector(".search-form");
-    if (!form) return;
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const raw = form.querySelector("#ticker-input").value;
-      const t = normalizeTicker(raw);
-      if (!isValidTicker(t)) {
-        const err = el.querySelector(".search-error") || document.createElement("p");
-        err.className = "search-error"; err.setAttribute("role", "alert");
-        err.textContent = "Enter a valid US ticker (1–10 characters, starting with a letter).";
-        form.appendChild(err);
-        return;
+    if (form) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const raw = form.querySelector("#ticker-input").value;
+        const t = normalizeTicker(raw);
+        if (!isValidTicker(t)) {
+          const err = el.querySelector(".search-form .search-error") || document.createElement("p");
+          err.className = "search-error"; err.setAttribute("role", "alert");
+          err.textContent = "Enter a valid US ticker (1–10 characters, starting with a letter).";
+          form.appendChild(err);
+          return;
+        }
+        goSearch(t);
+      });
+      const input = form.querySelector("#ticker-input");
+      if (input) {
+        input.addEventListener("input", (e) => {
+          const start = e.target.selectionStart;
+          e.target.value = normalizeTicker(e.target.value);
+          try { e.target.setSelectionRange(start, start); } catch (err) { /* ignore */ }
+        });
       }
-      goSearch(t);
+    }
+    el.querySelectorAll(".search-chips [data-t], .search-recent [data-t]").forEach((b) =>
+      b.addEventListener("click", () => goSearch(b.dataset.t)));
+    el.querySelectorAll("[data-follow-toggle]").forEach((b) => {
+      b.addEventListener("click", () => {
+        toggleFollow(b.dataset.followToggle);
+        refreshFollowingUI(el);
+      });
     });
-    form.querySelector("#ticker-input").addEventListener("input", (e) => {
-      const start = e.target.selectionStart;
-      e.target.value = normalizeTicker(e.target.value);
-      try { e.target.setSelectionRange(start, start); } catch (err) { /* ignore */ }
-    });
-    el.querySelectorAll("[data-t]").forEach((b) => b.addEventListener("click", () => goSearch(b.dataset.t)));
+    bindFollowing(el);
   }
 
   async function renderSearch(el, params = {}) {
@@ -1165,7 +1461,7 @@
 
     // Always show Live widgets for the typed ticker.
     const tvSymbol = (data && data.tvSymbol) || ticker;
-    const companyName = (data && data.company) || ticker;
+    const companyName = (data && data.company) || tickerDisplayName(ticker) || ticker;
     const liveOnly = `
       <section class="group" id="g-live" aria-labelledby="h-live">
         ${sectionHead("live", "Live", `<span class="range">TradingView · ${esc(tvSymbol)}</span>`)}
@@ -1212,7 +1508,7 @@
 
     el.innerHTML = `
       ${hero("Search", companyName, `<span class="tag ticker">${esc(ticker)}</span><span>${svg("pulse")}Live via TradingView</span>${data ? `<span>${svg("growth")}Deep dive on file</span>` : `<span>${svg("warn")}Live only</span>`}`)}
-      ${searchFormHTML(ticker)}
+      ${searchFormHTML(ticker, { followToggle: `<div class="search-follow-row">${followToggleHTML(ticker)}</div>` })}
       ${liveOnly}
       ${deep}
       ${footer("For information only — not investment advice. Live widgets come from TradingView; deep-dive figures are point-in-time snapshots from linked sources and may be stale.")}`;
@@ -1270,9 +1566,6 @@
           <p class="home-motto"><span class="motto">looking higher</span></p>
         </div>
       </section>
-      <section class="home-search" aria-label="Search">
-        <div class="loading">Loading search…</div>
-      </section>
       <section class="home-etfs" aria-label="Index ETFs">
         <div class="group-head"><h2>Index ETFs</h2><span class="range">VOO · QQQ</span><span class="rule"></span></div>
         <div class="etf-grid"><div class="loading">Loading ETF snapshots…</div></div>
@@ -1281,14 +1574,7 @@
 
     casState.anim = mountCasHero(el.querySelector("#home-stage"));
 
-    // Search form (same UI as the Search tab), with deep-dive chips + recent.
-    try { await loadCompanyIndex(); } catch (e) { /* chips optional */ }
-    if (el.dataset.token !== token) return;
-    const searchHost = el.querySelector(".home-search");
-    searchHost.innerHTML = searchFormHTML("");
-    bindSearchForm(el);
-
-    // VOO / QQQ cards
+    // VOO / QQQ cards (Search + Following live only on the Search tab).
     const grid = el.querySelector(".etf-grid");
     try {
       const d = await getJSON("data/etfs.json");
