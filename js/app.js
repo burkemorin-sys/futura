@@ -542,7 +542,13 @@
 
   function drawGrowth(el) {
     const d = growthState.data;
-    const picks = Array.isArray(d.picks) ? d.picks : [];
+    const allPicks = Array.isArray(d.picks) ? d.picks : [];
+    const bench = (Array.isArray(d.bench) ? d.bench.slice() : []).sort((a, b) => (a.rank || 999) - (b.rank || 999));
+    const dismissed = growthDismissed();
+    const keyOf = (p) => normalizeTicker(p.ticker) || String(p.company);
+    const slots = allPicks.length || 12;
+    const picks = allPicks.filter((p) => !dismissed.includes(keyOf(p)));
+    for (const b of bench) { if (picks.length >= slots) break; if (!dismissed.includes(keyOf(b)) && !picks.some((x) => keyOf(x) === keyOf(b))) picks.push(b); }
     const sectors = [...new Set(picks.map(sectorGroup))].sort();
     if (growthState.sector !== "All" && !sectors.includes(growthState.sector)) growthState.sector = "All";
 
@@ -570,6 +576,7 @@
       <div class="toolbar" role="toolbar" aria-label="Sort and filter by sector">
         ${sortSel}<span class="sep"></span>${chips}
       </div>
+      ${dismissed.length ? `<p class="growth-restore"><button type="button" class="link-btn" id="growth-restore">Restore dismissed (${dismissed.length})</button>${picks.length < slots ? ` · bench exhausted, showing ${picks.length}` : ""}</p>` : ""}
       <section class="group" aria-label="Picks">
         ${list.length ? `<div class="cards">${list.map(({ p }) => pickCard(p)).join("")}</div>` : `<div class="empty">No picks in this sector</div>`}
       </section>
@@ -579,6 +586,13 @@
       growthState.sector = b.dataset.sector;
       drawGrowth(el);
     }));
+    el.querySelectorAll("[data-dismiss]").forEach((b) => b.addEventListener("click", () => {
+      const card = b.closest(".card");
+      const done = () => { const y = window.scrollY; growthSetDismissed([...growthDismissed(), b.dataset.dismiss]); drawGrowth(el); window.scrollTo(0, y); };
+      if (card && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) { card.classList.add("is-dismissing"); setTimeout(done, 220); } else done();
+    }));
+    const rs = el.querySelector("#growth-restore");
+    if (rs) rs.addEventListener("click", () => { growthSetDismissed([]); drawGrowth(el); });
     el.querySelector("#growth-sort").addEventListener("change", (e) => {
       growthState.sort = e.target.value;
       localStorage.setItem("growthSort", growthState.sort);
@@ -586,6 +600,10 @@
     });
     bindFollowToggles(el);
   }
+
+  const GROWTH_DISMISSED_KEY = "growthDismissed";
+  function growthDismissed() { try { const a = JSON.parse(localStorage.getItem(GROWTH_DISMISSED_KEY) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+  function growthSetDismissed(a) { try { localStorage.setItem(GROWTH_DISMISSED_KEY, JSON.stringify([...new Set(a)])); } catch (e) { /* ignore */ } }
 
   // Top-level sector for filtering: "Technology – Semiconductors" -> "Technology"
   const sectorGroup = (p) => (isNA(p.sector) ? "Other" : String(p.sector).split(/\s+[–—-]\s+/)[0].trim());
@@ -600,7 +618,9 @@
     const up = upside(p);
     const sources = (Array.isArray(p.sourceUrl) ? p.sourceUrl : [p.sourceUrl]).filter(safeUrl);
     const tick = isNA(p.ticker) ? "" : normalizeTicker(p.ticker);
-    return `<article class="panel card">
+    const dkey = tick || String(p.company);
+    return `<article class="panel card pick-card" data-key="${esc(dkey)}">
+      <button type="button" class="pick-dismiss" data-dismiss="${esc(dkey)}" aria-label="Dismiss ${esc(p.company)} and show the next idea" title="Dismiss">${svg("x")}</button>
       <div class="pick-head">
         <div class="card-title">
           <h3>${esc(p.company)}</h3>

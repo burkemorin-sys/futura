@@ -143,9 +143,16 @@ Sources: the Renaissance Capital calendar and news, the IPOScoop calendar, the N
     "trend": "", "fundamentals": "", "risks": ["..."],
     "analystRating": "", "priceTarget": 237.97,   // numeric price + target gives upside %
     "sourceUrl": "https://..."        // string or array of strings
-  }]
+  }],
+  "bench": [{ "rank": 1, /* same fields as picks */ }]  // optional ranked backups, best-first
 }
 ```
+**Bench / dismiss.** Each Growth Pick card has an × button. Dismissing saves the ticker to
+`localStorage["growthDismissed"]` and the slot is refilled with the lowest-`rank` bench entry not
+dismissed (and not already shown), keeping `picks.length` (12) cards visible. "Restore dismissed (N)"
+clears the list. Bench entries must use the same screen, sources and `n/a` rule as `picks`; keep
+~15–20 of them, re-rank best-first on every refresh, and never duplicate a ticker that is in `picks`.
+
 The page offers sorting by revenue growth, upside to target, PEG, forward P/E, market cap, or A–Z, and filtering by sector.
 
 ## data/spacex.json and data/tesla.json schema

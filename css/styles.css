@@ -907,3 +907,17 @@ body::before { /* solid strip behind the translucent status bar so content never
   .etf-name { font-size: 24px; }
   .etf-card { padding: 18px; }
 }
+
+/* ---------- Growth Picks dismiss ---------- */
+.pick-card { position: relative; }
+.pick-card .pick-head { padding-right: 30px; }
+.pick-dismiss {
+  position: absolute; top: 10px; right: 10px; z-index: 2; width: 30px; height: 30px; display: grid; place-items: center;
+  border-radius: 50%; border: 1px solid var(--border); background: rgba(10,10,12,.6); color: var(--faint); cursor: pointer; padding: 0;
+  -webkit-tap-highlight-color: transparent; transition: color .15s, border-color .15s;
+}
+.pick-dismiss:hover, .pick-dismiss:focus-visible { color: var(--gold-light); border-color: var(--border-gold); }
+.pick-dismiss svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+.pick-card.is-dismissing { opacity: 0; transform: scale(.97); transition: opacity .2s ease, transform .2s ease; }
+.growth-restore { margin: 0 0 12px; font-size: 13px; color: var(--faint); }
+.link-btn { background: none; border: 0; padding: 0; color: var(--gold-light); font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
