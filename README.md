@@ -16,6 +16,7 @@ data/spacex.json      SpaceX tab: snapshot, IPO facts, fundamentals, investors, 
 data/tesla.json       Tesla tab: same schema as spacex.json
 data/sentiment.json   social-sentiment snapshot, written by scripts/refresh_sentiment.py
 data/cassiopeia.json  Cassiopeia tab: mythology, observing, stars, deep-sky, motif note
+data/companies/       Search deep-dive JSONs + index.json (AAPL, NVDA, MU; SPCX/TSLA aliased)
 scripts/refresh_sentiment.py         refreshes data/sentiment.json (Python 3 stdlib only, no keys)
 scripts/refresh-data.workflow.yml    optional GitHub Actions schedule (see "Automated refresh")
 manifest.webmanifest  PWA manifest (start_url/scope "./" so it works under /futura/)
@@ -54,6 +55,15 @@ When enabled, `js/music.js` plays an original, generative instrumental for nylon
 - **Music:** D minor, 58 BPM, 3/4, fingerpicked eighths with rests (about 3–5 guitar notes per bar, pinches rare). The 16-bar cycle is Dm(add9), B♭maj7♯11, Gm9, Asus4–A7 | Dm/C, B♭maj7, Gm6, Asus2–A7♭9 | Fmaj7, B♭maj7♯11, Fmaj7/A, Cadd9/E, Dm9, B♭maj7, Gm9, Asus4–A7. Bars 9–12 bring the major colour, with the celesta appearing more often there. On each pass the picking pattern, dropped notes, a sparse stepwise melody, celesta notes, the pad, and small timing and velocity details are re-chosen, so it plays indefinitely without an audible loop point.
 - **UX:** the preference is stored in `localStorage.music` (`"on"` by default, or `"off"`). Browsers block autoplay with sound, so playback starts on the first click, tap or key press, with a 3.5 s fade-in. The gold note buttons (top bar on mobile, sidebar on desktop, and the Home hero) toggle it. Music fades out and the AudioContext is suspended when the page is hidden, then resumes when it's visible again. On iOS, `navigator.audioSession.type = "ambient"` is set where supported, so the ringer/silent switch is respected and other audio isn't interrupted.
 - **Levels:** checked from a 120 s offline render (`FuturaMusic.render(seconds, seed)` returns an AudioBuffer): peak about −17 dBFS, RMS about −34 dBFS, no clipping, no clicks, string tuning within ±5 cents.
+
+## Search
+
+`#/search` (and `#/search?t=AAPL`) looks up a US ticker. **Live** TradingView quote, chart and news widgets always load for the typed symbol. **Deep analysis** (fundamentals, investors, curated news, sentiment) only appears when a local JSON file exists:
+
+- `data/companies/index.json` — map of ticker → file (includes aliases `SPCX` → `spacex.json`, `TSLA` → `tesla.json`)
+- `data/companies/{TICKER}.json` — same schema as `spacex.json` / `tesla.json`
+
+Seeded deep dives: AAPL, NVDA, MU, SPCX, TSLA. For any other ticker the Live widgets still work and the page shows an honest empty state ("No deep dive on file… Ask Investing App to research this ticker"). Recent searches are stored in `localStorage.searchRecent`. On mobile, Search lives under **More**.
 
 ## Home
 

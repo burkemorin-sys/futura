@@ -22,6 +22,7 @@
     news: '<rect x="3.5" y="5" width="13" height="14" rx="1.5"/><path d="M16.5 9h3a1 1 0 0 1 1 1v7.5a1.5 1.5 0 0 1-3 0V9"/><path d="M6.5 9h7M6.5 12.5h7M6.5 16h4"/>',
     chat: '<path d="M4 5.5h16v10H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/>',
     home: '<path d="M4 11.5L12 5l8 6.5"/><path d="M6.5 10v9h11v-9"/><path d="M10.5 19v-5h3v5"/>',
+    search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/>',
     cas: '<polyline points="3.5,8 7.5,14 12,10 16.5,16 20.5,8" fill="none"/><circle cx="3.5" cy="8" r="1.35"/><circle cx="7.5" cy="14" r="1.5"/><circle cx="12" cy="10" r="1.7"/><circle cx="16.5" cy="16" r="1.55"/><circle cx="20.5" cy="8" r="1.45"/>',
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
@@ -112,7 +113,8 @@
     { id: "growth", label: "Growth Picks", short: "Growth", icon: "growth", render: renderGrowth },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex") },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla") },
-    { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia, overflow: true }, // in More on mobile
+    { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch, overflow: true },
+    { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia, overflow: true },
     { id: "more", label: "More", short: "More", icon: "grid", render: renderMore },
   ];
 
@@ -144,8 +146,18 @@
     apply();
   }
 
+  function parseHash() {
+    const raw = (location.hash || "#/").slice(1); // "/search?t=AAPL"
+    const q = raw.indexOf("?");
+    const path = q < 0 ? raw : raw.slice(0, q);
+    const id = (path.match(/^\/([\w-]+)/) || [])[1] || "";
+    const params = {};
+    if (q >= 0) new URLSearchParams(raw.slice(q + 1)).forEach((v, k) => { params[k] = v; });
+    return { id, params };
+  }
+
   function route() {
-    const id = (location.hash.match(/^#\/([\w-]+)/) || [])[1];
+    const { id, params } = parseHash();
     const section = SECTIONS.find((s) => s.id === id) || SECTIONS[0];
     navList.querySelectorAll(".nav-link").forEach((a) => {
       if (a.dataset.id === section.id) a.setAttribute("aria-current", "page");
@@ -157,8 +169,8 @@
     document.title = section.id === "home" ? "Futura · looking higher" : `${section.label} · Futura`;
     window.scrollTo(0, 0);
     if (casState.anim) { casState.anim.destroy(); casState.anim = null; }
-    main.dataset.token = section.id;
-    section.render(main);
+    main.dataset.token = section.id + (params.t ? ":" + params.t : "");
+    section.render(main, params);
   }
 
   const hero = (eyebrow, title, metaHTML) => `
@@ -671,8 +683,9 @@
       <p class="fineprint">Curated on ${esc(fmtShortDate(d.lastUpdated))}. For a live headline stream see the TradingView feed above.</p>
     </section>`;
 
+    const eyebrow = d.exchange ? `${d.company} · ${d.exchange}` : d.company;
     el.innerHTML = `
-      ${hero(d.company === "SpaceX" ? "SpaceX · Space Exploration Technologies" : "Tesla, Inc.", d.company, `<span>${svg("clock")}Data updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("pulse")}Live quote via TradingView</span>`)}
+      ${hero(eyebrow, d.company, `<span>${svg("clock")}Data updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("pulse")}Live quote via TradingView</span>`)}
       ${statusPanel}
       <div class="toolbar" role="toolbar" aria-label="Jump to section">${chips}</div>
       ${live}${fundamentals}${investors}${news}${sentimentSection(d.ticker, sent)}
@@ -680,7 +693,7 @@
 
     el.querySelectorAll("[data-jump]").forEach((b) =>
       b.addEventListener("click", () => document.getElementById(`g-${b.dataset.jump}`).scrollIntoView({ behavior: "smooth" })));
-    mountTradingView(el, d.tvSymbol);
+    mountTradingView(el, d.tvSymbol || d.ticker);
   }
 
   function sentimentSection(ticker, sent) {
@@ -716,7 +729,7 @@
         <p class="fineprint top">Score ${ws.score > 0 ? "+" : ""}${ws.score} on ${ws.comments} comments today (Tradestie, −1 to +1)${ws.comments < 10 ? " — tiny sample" : ""}</p>
         <div class="tbl-src">${srcLink("https://tradestie.com/apps/reddit/api/", "Tradestie")}</div></div>`);
     }
-    const q = encodeURIComponent(ticker === "SPCX" ? "SpaceX" : "Tesla");
+    const q = encodeURIComponent(ticker);
     return `<section class="group" id="g-sentiment" aria-labelledby="h-sentiment">${head}
       <p class="fineprint top">Snapshot of public social data${sent.lastUpdated ? ` taken ${esc(new Date(sent.lastUpdated).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }))}` : ""}; refreshed by scripts/refresh_sentiment.py.</p>
       <div class="co-grid three">${tiles.join("") || `<div class="empty">No sources returned data in this snapshot.</div>`}</div>
@@ -1031,8 +1044,196 @@
   }
 
 
+
+  /* ================= Search ================= */
+  const SEARCH_RECENT_KEY = "searchRecent";
+  const searchState = { index: null, recent: [] };
+  try { searchState.recent = JSON.parse(localStorage.getItem(SEARCH_RECENT_KEY) || "[]"); } catch (e) { searchState.recent = []; }
+
+  const normalizeTicker = (raw) => String(raw || "").trim().toUpperCase().replace(/[^A-Z0-9./-]/g, "").slice(0, 12);
+  const isValidTicker = (t) => /^[A-Z][A-Z0-9./-]{0,9}$/.test(t);
+
+  async function loadCompanyIndex() {
+    if (searchState.index) return searchState.index;
+    try { searchState.index = await getJSON("data/companies/index.json"); }
+    catch (e) { searchState.index = { tickers: {}, error: e.message }; }
+    return searchState.index;
+  }
+
+  function rememberTicker(t) {
+    searchState.recent = [t, ...searchState.recent.filter((x) => x !== t)].slice(0, 8);
+    localStorage.setItem(SEARCH_RECENT_KEY, JSON.stringify(searchState.recent));
+  }
+
+  async function loadDeepDive(ticker) {
+    const idx = await loadCompanyIndex();
+    const entry = (idx.tickers || {})[ticker];
+    const cacheKey = entry ? `file:${entry.file}` : `companies/${ticker}`;
+    if (companyCache[cacheKey]) return { data: companyCache[cacheKey], fromIndex: !!entry };
+    // Prefer alias map (SPCX→spacex.json, TSLA→tesla.json, AAPL→companies/AAPL.json)
+    // Indexed tickers use their mapped file. Unknown tickers try companies/{T}.json once
+    // (so a newly added file works without an index bump); no noisy lowercase fallback.
+    const url = entry ? `data/${entry.file}` : `data/companies/${ticker}.json`;
+    try {
+      const d = await getJSON(url);
+      companyCache[cacheKey] = d;
+      return { data: d, fromIndex: !!entry };
+    } catch (e) {
+      return { data: null, fromIndex: false };
+    }
+  }
+
+  function goSearch(ticker) {
+    const t = normalizeTicker(ticker);
+    if (!isValidTicker(t)) return;
+    rememberTicker(t);
+    const next = `#/search?t=${encodeURIComponent(t)}`;
+    if (location.hash === next) route();
+    else location.hash = next;
+  }
+
+  function searchFormHTML(value = "", opts = {}) {
+    const idx = searchState.index || { tickers: {} };
+    const chips = Object.keys(idx.tickers || {}).map((t) => {
+      const meta = idx.tickers[t];
+      return `<button type="button" class="chip search-chip" data-t="${esc(t)}" aria-label="${esc(t)} — ${esc(meta.company || t)}">${esc(t)}<span class="chip-sub">${esc(meta.company || "")}</span></button>`;
+    }).join("");
+    const recent = (searchState.recent || []).filter((t) => t !== value).slice(0, 6)
+      .map((t) => `<button type="button" class="chip ghost" data-t="${esc(t)}">${esc(t)}</button>`).join("");
+    return `
+      <form class="search-form panel" role="search" autocomplete="off">
+        <label class="search-label" for="ticker-input">US ticker</label>
+        <div class="search-row">
+          <input id="ticker-input" class="search-input" name="t" type="text" inputmode="text" spellcheck="false"
+            maxlength="12" placeholder="e.g. AAPL" value="${esc(value)}" aria-describedby="ticker-hint" />
+          <button type="submit" class="search-go">${svg("search")}<span>Search</span></button>
+        </div>
+        <p id="ticker-hint" class="fineprint top">Letters, digits, dots and dashes. Live TradingView loads for any major US-listed symbol; a full deep dive appears when we have a local data file.</p>
+        ${opts.error ? `<p class="search-error" role="alert">${esc(opts.error)}</p>` : ""}
+        ${chips ? `<div class="search-chips"><span class="chips-label">Deep dives on file</span>${chips}</div>` : ""}
+        ${recent ? `<div class="search-chips"><span class="chips-label">Recent</span>${recent}</div>` : ""}
+      </form>`;
+  }
+
+  function bindSearchForm(el) {
+    const form = el.querySelector(".search-form");
+    if (!form) return;
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const raw = form.querySelector("#ticker-input").value;
+      const t = normalizeTicker(raw);
+      if (!isValidTicker(t)) {
+        const err = el.querySelector(".search-error") || document.createElement("p");
+        err.className = "search-error"; err.setAttribute("role", "alert");
+        err.textContent = "Enter a valid US ticker (1–10 characters, starting with a letter).";
+        form.appendChild(err);
+        return;
+      }
+      goSearch(t);
+    });
+    form.querySelector("#ticker-input").addEventListener("input", (e) => {
+      const start = e.target.selectionStart;
+      e.target.value = normalizeTicker(e.target.value);
+      try { e.target.setSelectionRange(start, start); } catch (err) { /* ignore */ }
+    });
+    el.querySelectorAll("[data-t]").forEach((b) => b.addEventListener("click", () => goSearch(b.dataset.t)));
+  }
+
+  async function renderSearch(el, params = {}) {
+    const token = (el.dataset.token = `search-${Date.now()}`);
+    el.innerHTML = `<div class="loading">Loading search…</div>`;
+    await loadCompanyIndex();
+    if (!sentimentCache) {
+      try { sentimentCache = await getJSON("data/sentiment.json"); } catch (e) { sentimentCache = { error: e.message }; }
+    }
+    if (el.dataset.token !== token) return;
+
+    const ticker = normalizeTicker(params.t || "");
+    if (!ticker) {
+      el.innerHTML = `
+        ${hero("Search", "Look up a ticker", `<span>${svg("search")}Live TradingView for any US symbol · deep dive when on file</span>`)}
+        ${searchFormHTML("")}
+        ${footer("Type a ticker to open a live quote, chart and news feed. Fundamentals, investors and curated news appear only when Futura has a local deep-dive file for that symbol.")}`;
+      bindSearchForm(el);
+      return;
+    }
+    if (!isValidTicker(ticker)) {
+      el.innerHTML = `
+        ${hero("Search", "Look up a ticker", `<span>${svg("search")}Live TradingView for any US symbol</span>`)}
+        ${searchFormHTML(ticker, { error: "That doesn't look like a valid US ticker." })}
+        ${footer("For information only — not investment advice.")}`;
+      bindSearchForm(el);
+      return;
+    }
+
+    const { data } = await loadDeepDive(ticker);
+    if (el.dataset.token !== token) return;
+
+    // Always show Live widgets for the typed ticker.
+    const tvSymbol = (data && data.tvSymbol) || ticker;
+    const companyName = (data && data.company) || ticker;
+    const liveOnly = `
+      <section class="group" id="g-live" aria-labelledby="h-live">
+        ${sectionHead("live", "Live", `<span class="range">TradingView · ${esc(tvSymbol)}</span>`)}
+        <div class="panel tv-panel"><div class="tv" id="tv-quote" data-kind="symbol-info"></div></div>
+        <div class="panel tv-panel tv-chart"><div class="tv" id="tv-chart" data-kind="advanced-chart"></div></div>
+        <div class="panel tv-panel tv-feed"><div class="tv" id="tv-feed" data-kind="timeline"></div></div>
+        <p class="fineprint">Live quote, chart and headline feed are TradingView widgets for <strong>${esc(ticker)}</strong>. Quotes may be delayed per exchange rules. <a href="https://www.tradingview.com/symbols/${esc(String(tvSymbol).replace(":", "-"))}/" target="_blank" rel="noopener noreferrer">Open on TradingView</a></p>
+      </section>`;
+
+    let deep = "";
+    if (data) {
+      // Reuse the company renderer into a staging element, then lift its sections (skip its own Live + hero).
+      const staging = document.createElement("div");
+      drawCompany(staging, data, sentimentCache);
+      const status = staging.querySelector(".co-status");
+      const fund = staging.querySelector("#g-fundamentals");
+      const inv = staging.querySelector("#g-investors");
+      const news = staging.querySelector("#g-news");
+      const senti = staging.querySelector("#g-sentiment");
+      const deepChips = PARTS.filter((p) => p.id !== "live").map((p) =>
+        `<button class="chip" data-jump="${p.id}">${esc(p.label)}</button>`).join("");
+      deep = `
+        <section class="group" id="g-deep" aria-labelledby="h-deep">
+          ${sectionHead("deep", "Deep analysis", `<span class="range">on file · updated ${esc(fmtShortDate(data.lastUpdated))}</span>`)}
+          <div class="toolbar" role="toolbar" aria-label="Jump to deep-dive section">${deepChips}</div>
+          ${status ? status.outerHTML : ""}
+          ${fund ? fund.outerHTML : ""}
+          ${inv ? inv.outerHTML : ""}
+          ${news ? news.outerHTML : ""}
+          ${senti ? senti.outerHTML : ""}
+        </section>`;
+    } else {
+      deep = `
+        <section class="group" id="g-deep" aria-labelledby="h-deep">
+          ${sectionHead("deep", "Deep analysis")}
+          <div class="panel pad search-empty">
+            <h3 class="mini">No deep dive on file for ${esc(ticker)} yet</h3>
+            <p>Futura is a static app, so fundamentals, major investors and curated news only appear when a local data file exists (for example <code>data/companies/${esc(ticker)}.json</code>). Live TradingView above still works for any major US-listed symbol.</p>
+            <p class="ask-line"><strong>Ask Investing App to research this ticker</strong> — a Sunday refresh can add popular names to the deep-dive library.</p>
+            <p class="fineprint top">Tip: deep-dive URLs look like <code>#/search?t=${esc(ticker)}</code>, so once a file is added this page fills in automatically.</p>
+          </div>
+        </section>`;
+    }
+
+    el.innerHTML = `
+      ${hero("Search", companyName, `<span class="tag ticker">${esc(ticker)}</span><span>${svg("pulse")}Live via TradingView</span>${data ? `<span>${svg("growth")}Deep dive on file</span>` : `<span>${svg("warn")}Live only</span>`}`)}
+      ${searchFormHTML(ticker)}
+      ${liveOnly}
+      ${deep}
+      ${footer("For information only — not investment advice. Live widgets come from TradingView; deep-dive figures are point-in-time snapshots from linked sources and may be stale.")}`;
+
+    bindSearchForm(el);
+    el.querySelectorAll("[data-jump]").forEach((b) =>
+      b.addEventListener("click", () => document.getElementById(`g-${b.dataset.jump}`)?.scrollIntoView({ behavior: "smooth" })));
+    mountTradingView(el, tvSymbol);
+    const input = el.querySelector("#ticker-input");
+    if (input) input.focus();
+  }
+
   /* ================= Home ================= */
   const HOME_TILES = [
+    { id: "search", title: "Search", icon: "search", fallback: "Look up any US ticker — live quote plus deep dive when on file" },
     { id: "ipos", title: "IPO Tracker", icon: "rocket", fallback: "This week's IPOs, filings and recent debuts" },
     { id: "growth", title: "Growth Picks", icon: "growth", fallback: "High-growth watchlist with valuation and risks" },
     { id: "spacex", title: "SpaceX", icon: "orbit", fallback: "Fundamentals, investors, news and sentiment" },
@@ -1043,6 +1244,11 @@
 
   // Teasers come only from the real data files; on failure the tile keeps its static line.
   const teaserLoaders = {
+    async search() {
+      const idx = await loadCompanyIndex();
+      const n = Object.keys(idx.tickers || {}).length;
+      return { line: `${n} deep dives on file · live quote for any ticker`, meta: "AAPL · NVDA · MU · SPCX · TSLA" };
+    },
     async ipos() {
       if (!ipoState.data) ipoState.data = await getJSON("data/ipos.json");
       const d = ipoState.data, n = allIpos((d.sections || {}).thisWeek).length;
