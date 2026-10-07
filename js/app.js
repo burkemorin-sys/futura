@@ -208,9 +208,9 @@
     { id: "ipos", label: "IPO Tracker", short: "IPOs", icon: "rocket", render: renderIpoTracker },
     { id: "growth", label: "Growth Picks", short: "Growth", icon: "growth", render: renderGrowth },
     { id: "riskit", label: "Risk It", short: "Risk It", icon: "flame", render: renderRiskIt },
-    { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex") },
+    { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex"), overflow: true },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla"), overflow: true },
-    { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch, overflow: true },
+    { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch },
     { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia, overflow: true },
     { id: "more", label: "More", short: "More", icon: "grid", render: renderMore },
   ];
@@ -1577,6 +1577,7 @@
   /* ================= Home ================= */
   // Fallback one-liners for the More overflow cards (Home no longer shows section tiles).
   const HOME_TILES = [
+    { id: "spacex", title: "SpaceX", icon: "orbit", fallback: "SpaceX deep dive — catalysts, holders and valuation" },
     { id: "tesla", title: "Tesla", icon: "bolt", fallback: "Tesla deep dive — catalysts, holders and valuation" },
     { id: "search", title: "Search", icon: "search", fallback: "Look up any US ticker — live quote plus deep dive when on file" },
     { id: "cassiopeia", title: "Cassiopeia", icon: "cas", fallback: "The five stars behind the Futura W" },
