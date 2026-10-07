@@ -8,18 +8,20 @@
       "exchange": "NYSE Arca",
       "tvSymbol": "AMEX:VOO",
       "tagline": "Tracks the S&P 500 — the 500 largest U.S. companies.",
-      "price": 716.20,
+      "price": 716.2,
       "change": "+0.54%",
       "expenseRatio": "0.03%",
       "aum": "$1.05T",
-      "ytd": "+14.5%",
-      "ytdNote": "Morningstar price return YTD",
+      "ytd": "+14.20%",
+      "ytdNote": "price return YTD (StockAnalysis, Oct 6 close)",
       "return1y": "+17.74%",
       "return1yNote": "total return incl. dividends",
       "sourceUrl": "https://stockanalysis.com/etf/voo/",
       "sources": [
-        { "label": "StockAnalysis", "url": "https://stockanalysis.com/etf/voo/" },
-        { "label": "Morningstar YTD", "url": "https://www.morningstar.com/etfs/arcx/voo/performance" }
+        {
+          "label": "StockAnalysis",
+          "url": "https://stockanalysis.com/etf/voo/"
+        }
       ]
     },
     {
@@ -32,14 +34,16 @@
       "change": "+0.46%",
       "expenseRatio": "0.18%",
       "aum": "$505.19B",
-      "ytd": "+23.1%",
-      "ytdNote": "price return YTD through early Oct",
+      "ytd": "+23.66%",
+      "ytdNote": "price return YTD (StockAnalysis, Oct 6 close)",
       "return1y": "+26.53%",
       "return1yNote": "total return incl. dividends",
       "sourceUrl": "https://stockanalysis.com/etf/qqq/",
       "sources": [
-        { "label": "StockAnalysis", "url": "https://stockanalysis.com/etf/qqq/" },
-        { "label": "ETF Explorer YTD", "url": "https://etfexplorer.com/etf/QQQ" }
+        {
+          "label": "StockAnalysis",
+          "url": "https://stockanalysis.com/etf/qqq/"
+        }
       ]
     }
   ]

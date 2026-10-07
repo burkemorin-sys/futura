@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-06T21:30:39Z",
+  "lastUpdated": "2026-10-07T12:15:42Z",
   "method": "Snapshot computed server-side (none of these sources allow browser CORS requests). StockTwits: the most recent ~120 public messages per symbol, counting messages the author tagged Bullish or Bearish; untagged messages are ignored for the ratio. ApeWisdom: 24-hour mention counts across Reddit investing subreddits (incl. r/wallstreetbets) and 4chan /biz/. Tradestie: WallStreetBets daily sentiment score, only for its top-50 tickers. Small samples are noisy; treat as a mood gauge, not a signal.",
   "unavailable": [
     {
@@ -20,58 +20,56 @@
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 21,
-        "bearish": 19,
-        "untagged": 80,
-        "bullishPctOfTagged": 52.5,
-        "windowStart": "2026-10-06T18:19:49Z",
-        "windowEnd": "2026-10-06T21:26:28Z",
-        "watchlistCount": 1068224,
+        "bullish": 31,
+        "bearish": 31,
+        "untagged": 58,
+        "bullishPctOfTagged": 50.0,
+        "windowStart": "2026-10-06T20:51:49Z",
+        "windowEnd": "2026-10-07T12:12:46Z",
+        "watchlistCount": 1068296,
         "url": "https://stocktwits.com/symbol/TSLA"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 12,
-        "mentions24h": 41,
-        "mentionsPrev24h": 40,
-        "upvotes24h": 61,
-        "rankPrev24h": 13,
+        "rank": 18,
+        "mentions24h": 31,
+        "mentionsPrev24h": 60,
+        "upvotes24h": 50,
+        "rankPrev24h": 7,
         "url": "https://apewisdom.io/stocks/TSLA/"
       },
       "wsbTradestie": {
-        "status": "ok",
-        "sentiment": "Bullish",
-        "score": 0.02,
-        "comments": 3
+        "status": "not-in-top-50",
+        "note": "Not among today's top-50 WallStreetBets tickers on Tradestie."
       }
     },
     "SPCX": {
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 39,
-        "bearish": 16,
-        "untagged": 65,
-        "bullishPctOfTagged": 70.9,
-        "windowStart": "2026-10-06T19:12:38Z",
-        "windowEnd": "2026-10-06T21:22:09Z",
-        "watchlistCount": 106908,
+        "bullish": 43,
+        "bearish": 23,
+        "untagged": 54,
+        "bullishPctOfTagged": 65.2,
+        "windowStart": "2026-10-07T09:05:10Z",
+        "windowEnd": "2026-10-07T12:15:45Z",
+        "watchlistCount": 107055,
         "url": "https://stocktwits.com/symbol/SPCX"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 6,
-        "mentions24h": 111,
-        "mentionsPrev24h": 142,
-        "upvotes24h": 408,
-        "rankPrev24h": 3,
+        "rank": 7,
+        "mentions24h": 95,
+        "mentionsPrev24h": 199,
+        "upvotes24h": 211,
+        "rankPrev24h": 2,
         "url": "https://apewisdom.io/stocks/SPCX/"
       },
       "wsbTradestie": {
         "status": "ok",
         "sentiment": "Bearish",
-        "score": -0.057,
-        "comments": 14
+        "score": -0.299,
+        "comments": 4
       }
     }
   }
