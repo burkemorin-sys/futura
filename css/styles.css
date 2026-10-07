@@ -774,6 +774,14 @@ body::before { /* solid strip behind the translucent status bar so content never
   background: var(--gold-soft); color: var(--gold-light); border-color: rgba(212, 175, 55, .5);
 }
 .follow-toggle.is-following svg, .follow-toggle[aria-pressed="true"] svg { fill: currentColor; stroke: none; }
+.follow-toggle-compact {
+  padding: 5px 10px; font-size: 12px; gap: 5px;
+}
+.follow-toggle-compact svg { width: 13px; height: 13px; }
+.tags .follow-toggle { margin-left: 2px; }
+.page-meta .follow-toggle { margin-left: 4px; }
+.etf-card .follow-toggle { position: relative; z-index: 2; }
+
 
 .following { padding: 16px 14px 14px; margin-bottom: 14px; border-color: var(--border-gold); }
 .following-head {

@@ -3,7 +3,7 @@
  * - data/*.json: network-first, falling back to the last cached copy when offline.
  * - Cross-origin requests (TradingView widgets etc.) are not touched.
  * Bump VERSION whenever the shell list changes; old caches are deleted on activate. */
-const VERSION = "futura-v15-2026-10-07";
+const VERSION = "futura-v16-2026-10-07";
 const SHELL = `${VERSION}-shell`;
 const DATA = `${VERSION}-data`;
 const SHELL_FILES = [

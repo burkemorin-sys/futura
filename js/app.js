@@ -38,6 +38,95 @@
   const isNA = (v) => v == null || v === "" || (typeof v === "number" && !isFinite(v)) || String(v).trim().toLowerCase() === "n/a";
   const safeUrl = (u) => (typeof u === "string" && /^https?:\/\//i.test(u) ? u : null);
 
+  /* Ticker helpers + Following watchlist (IPO / Growth / company / Search / Home ETFs). */
+  const normalizeTicker = (raw) => String(raw || "").trim().toUpperCase().replace(/[^A-Z0-9./-]/g, "").slice(0, 12);
+  const isValidTicker = (t) => /^[A-Z][A-Z0-9./-]{0,9}$/.test(t);
+  const SEARCH_RECENT_KEY = "searchRecent";
+  const FOLLOWING_KEY = "followingTickers";
+  const FOLLOWING_DEFAULT = ["SPCX", "TSLA", "NVDA", "AAPL", "MU"];
+  const searchState = { index: null, recent: [], following: [], editMode: false };
+  try { searchState.recent = JSON.parse(localStorage.getItem(SEARCH_RECENT_KEY) || "[]"); } catch (e) { searchState.recent = []; }
+  function loadFollowing() {
+    try {
+      const raw = localStorage.getItem(FOLLOWING_KEY);
+      if (raw == null) throw new Error("missing");
+      const parsed = JSON.parse(raw);
+      if (!Array.isArray(parsed)) throw new Error("bad");
+      return parsed.map(normalizeTicker).filter(isValidTicker).filter((t, i, a) => a.indexOf(t) === i);
+    } catch (e) {
+      const seed = FOLLOWING_DEFAULT.slice();
+      try { localStorage.setItem(FOLLOWING_KEY, JSON.stringify(seed)); } catch (err) { /* ignore */ }
+      return seed;
+    }
+  }
+  function saveFollowing() {
+    try { localStorage.setItem(FOLLOWING_KEY, JSON.stringify(searchState.following)); } catch (e) { /* ignore */ }
+  }
+  searchState.following = loadFollowing();
+  function isFollowing(t) { return searchState.following.indexOf(normalizeTicker(t)) >= 0; }
+  function addFollow(t) {
+    t = normalizeTicker(t);
+    if (!isValidTicker(t) || isFollowing(t)) return false;
+    searchState.following.push(t);
+    saveFollowing();
+    return true;
+  }
+  function removeFollow(t) {
+    t = normalizeTicker(t);
+    const next = searchState.following.filter((x) => x !== t);
+    if (next.length === searchState.following.length) return false;
+    searchState.following = next;
+    saveFollowing();
+    return true;
+  }
+  function toggleFollow(t) {
+    t = normalizeTicker(t);
+    if (!isValidTicker(t)) return false;
+    return isFollowing(t) ? (removeFollow(t), false) : (addFollow(t), true);
+  }
+  function moveFollow(from, to) {
+    if (from === to || from < 0 || to < 0 || from >= searchState.following.length || to >= searchState.following.length) return;
+    const next = searchState.following.slice();
+    const [item] = next.splice(from, 1);
+    next.splice(to, 0, item);
+    searchState.following = next;
+    saveFollowing();
+  }
+  function followToggleHTML(ticker, opts = {}) {
+    const t = normalizeTicker(ticker);
+    if (!t || !isValidTicker(t)) return "";
+    const on = isFollowing(t);
+    const compact = !!opts.compact;
+    return `<button type="button" class="follow-toggle chip${on ? " is-following" : ""}${compact ? " follow-toggle-compact" : ""}" data-follow-toggle="${esc(t)}" aria-pressed="${on ? "true" : "false"}" aria-label="${on ? "Unfollow" : "Follow"} ${esc(t)}">${on ? svg("starFill") : svg("star")}<span>${on ? "Following" : "Follow"}</span></button>`;
+  }
+  function paintFollowToggle(btn, on) {
+    if (!btn) return;
+    const t = btn.dataset.followToggle || "";
+    btn.classList.toggle("is-following", !!on);
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.setAttribute("aria-label", `${on ? "Unfollow" : "Follow"} ${t}`);
+    btn.innerHTML = `${on ? svg("starFill") : svg("star")}<span>${on ? "Following" : "Follow"}</span>`;
+  }
+  function bindFollowToggles(root) {
+    if (!root) return;
+    root.querySelectorAll("[data-follow-toggle]").forEach((b) => {
+      if (b.dataset.boundFollow === "1") return;
+      b.dataset.boundFollow = "1";
+      b.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        const t = normalizeTicker(b.dataset.followToggle);
+        if (!isValidTicker(t)) return;
+        const on = toggleFollow(t);
+        document.querySelectorAll(`[data-follow-toggle="${t}"]`).forEach((btn) => paintFollowToggle(btn, on));
+        const main = document.getElementById("main");
+        if (main && main.querySelector(".following")) {
+          try { refreshFollowingUI(main); } catch (e) { /* ignore */ }
+        }
+      });
+    });
+  }
+
   /* ---------------- Cassiopeia ----------------
    * Positions from J2000 RA/Dec of the five main stars, gnomonic projection (north up, east left),
    * rotated ~20deg so it reads as the familiar "W". Brightness (radius) follows visual magnitude. */
@@ -312,6 +401,7 @@
       c.classList.toggle("is-open", open);
       open ? ipoState.open.add(c.dataset.id) : ipoState.open.delete(c.dataset.id);
     }));
+    bindFollowToggles(el);
   }
 
   const metaItem = (label, value) =>
@@ -341,11 +431,13 @@
   function ipoCard(i) {
     const hasDetail = !!(i.detail && (i.detail.intro || i.detail.table || (i.detail.facts || []).length || (i.detail.bullets || []).length));
     const open = hasDetail && ipoState.open.has(i.id);
+    const tick = isNA(i.ticker) ? "" : normalizeTicker(i.ticker);
     const tags = [
-      isNA(i.ticker) ? `<span class="tag ticker na">No ticker yet</span>` : `<span class="tag ticker">${esc(i.ticker)}</span>`,
+      tick ? `<span class="tag ticker">${esc(tick)}</span>` : `<span class="tag ticker na">No ticker yet</span>`,
       i.isSpac ? `<span class="tag spac">SPAC</span>` : "",
       i.status ? `<span class="tag status">${esc(i.status)}</span>` : "",
       i.unconfirmed ? `<span class="tag warn">${svg("warn")}Unconfirmed</span>` : "",
+      tick ? followToggleHTML(tick, { compact: true }) : "",
     ].join("");
     return `<article class="panel card${i.unconfirmed ? " is-unconfirmed" : ""}${open ? " is-open" : ""}" data-id="${esc(i.id)}">
       <div class="card-top"><div class="card-title"><h3>${esc(i.company)}</h3><div class="tags">${tags}</div></div></div>
@@ -492,6 +584,7 @@
       localStorage.setItem("growthSort", growthState.sort);
       drawGrowth(el);
     });
+    bindFollowToggles(el);
   }
 
   // Top-level sector for filtering: "Technology – Semiconductors" -> "Technology"
@@ -506,13 +599,15 @@
     const risks = Array.isArray(p.risks) ? p.risks.filter((r) => !isNA(r)) : isNA(p.risks) ? [] : [p.risks];
     const up = upside(p);
     const sources = (Array.isArray(p.sourceUrl) ? p.sourceUrl : [p.sourceUrl]).filter(safeUrl);
+    const tick = isNA(p.ticker) ? "" : normalizeTicker(p.ticker);
     return `<article class="panel card">
       <div class="pick-head">
         <div class="card-title">
           <h3>${esc(p.company)}</h3>
           <div class="tags">
-            ${isNA(p.ticker) ? `<span class="tag ticker na">n/a</span>` : `<span class="tag ticker">${esc(p.ticker)}</span>`}
+            ${tick ? `<span class="tag ticker">${esc(tick)}</span>` : `<span class="tag ticker na">n/a</span>`}
             ${isNA(p.sector) ? "" : `<span class="tag sector">${esc(p.sector)}</span>`}
+            ${tick ? followToggleHTML(tick, { compact: true }) : ""}
           </div>
         </div>
         <div class="pick-price">
@@ -593,7 +688,7 @@
     const statusPanel = `<section class="panel summary co-status" aria-label="Snapshot">
       <div class="co-quote">
         <div>
-          <div class="tags"><span class="tag ticker">${esc(d.ticker)}</span><span class="tag sector">${esc(d.exchange)}</span>${d.status === "public" ? `<span class="tag live-tag"><span class="live-dot"></span>Public</span>` : `<span class="tag spac">Private</span>`}</div>
+          <div class="tags"><span class="tag ticker">${esc(d.ticker)}</span><span class="tag sector">${esc(d.exchange)}</span>${d.status === "public" ? `<span class="tag live-tag"><span class="live-dot"></span>Public</span>` : `<span class="tag spac">Private</span>`}${followToggleHTML(d.ticker, { compact: true })}</div>
         </div>
         <div class="pick-price">
           <div class="p">${esc(money(snap.price))}</div>
@@ -691,7 +786,7 @@
 
     const eyebrow = d.exchange ? `${d.company} · ${d.exchange}` : d.company;
     el.innerHTML = `
-      ${hero(eyebrow, d.company, `<span>${svg("clock")}Data updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("pulse")}Live quote via TradingView</span>`)}
+      ${hero(eyebrow, d.company, `<span>${svg("clock")}Data updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("pulse")}Live quote via TradingView</span>${followToggleHTML(d.ticker)}`)}
       ${statusPanel}
       <div class="toolbar" role="toolbar" aria-label="Jump to section">${chips}</div>
       ${live}${fundamentals}${investors}${news}${sentimentSection(d.ticker, sent)}
@@ -700,6 +795,7 @@
     el.querySelectorAll("[data-jump]").forEach((b) =>
       b.addEventListener("click", () => document.getElementById(`g-${b.dataset.jump}`).scrollIntoView({ behavior: "smooth" })));
     mountTradingView(el, d.tvSymbol || d.ticker);
+    bindFollowToggles(el);
   }
 
   function sentimentSection(ticker, sent) {
@@ -1052,35 +1148,7 @@
 
 
   /* ================= Search ================= */
-  const SEARCH_RECENT_KEY = "searchRecent";
-  const FOLLOWING_KEY = "followingTickers";
-  const FOLLOWING_DEFAULT = ["SPCX", "TSLA", "NVDA", "AAPL", "MU"];
-  const searchState = { index: null, recent: [], following: [], editMode: false };
-
-  const normalizeTicker = (raw) => String(raw || "").trim().toUpperCase().replace(/[^A-Z0-9./-]/g, "").slice(0, 12);
-  const isValidTicker = (t) => /^[A-Z][A-Z0-9./-]{0,9}$/.test(t);
-  // Following add-input: same rules as search (letters/digits/dots/hyphens/slashes).
   const isValidFollowTicker = (t) => isValidTicker(t);
-
-  try { searchState.recent = JSON.parse(localStorage.getItem(SEARCH_RECENT_KEY) || "[]"); } catch (e) { searchState.recent = []; }
-
-  function loadFollowing() {
-    try {
-      const raw = localStorage.getItem(FOLLOWING_KEY);
-      if (raw == null) throw new Error("missing");
-      const parsed = JSON.parse(raw);
-      if (!Array.isArray(parsed)) throw new Error("bad");
-      return parsed.map(normalizeTicker).filter(isValidTicker).filter((t, i, a) => a.indexOf(t) === i);
-    } catch (e) {
-      const seed = FOLLOWING_DEFAULT.slice();
-      try { localStorage.setItem(FOLLOWING_KEY, JSON.stringify(seed)); } catch (err) { /* ignore */ }
-      return seed;
-    }
-  }
-  function saveFollowing() {
-    try { localStorage.setItem(FOLLOWING_KEY, JSON.stringify(searchState.following)); } catch (e) { /* ignore */ }
-  }
-  searchState.following = loadFollowing();
 
   async function loadCompanyIndex() {
     if (searchState.index) return searchState.index;
@@ -1097,38 +1165,6 @@
   function tickerDisplayName(t) {
     const entry = (searchState.index && searchState.index.tickers && searchState.index.tickers[t]) || null;
     return entry && entry.company ? entry.company : "";
-  }
-
-  function isFollowing(t) { return searchState.following.indexOf(t) >= 0; }
-
-  function addFollow(t) {
-    t = normalizeTicker(t);
-    if (!isValidFollowTicker(t) || isFollowing(t)) return false;
-    searchState.following.push(t);
-    saveFollowing();
-    return true;
-  }
-
-  function removeFollow(t) {
-    t = normalizeTicker(t);
-    const next = searchState.following.filter((x) => x !== t);
-    if (next.length === searchState.following.length) return false;
-    searchState.following = next;
-    saveFollowing();
-    return true;
-  }
-
-  function toggleFollow(t) {
-    return isFollowing(t) ? (removeFollow(t), false) : (addFollow(t), true);
-  }
-
-  function moveFollow(from, to) {
-    if (from === to || from < 0 || to < 0 || from >= searchState.following.length || to >= searchState.following.length) return;
-    const next = searchState.following.slice();
-    const [item] = next.splice(from, 1);
-    next.splice(to, 0, item);
-    searchState.following = next;
-    saveFollowing();
   }
 
   async function loadDeepDive(ticker) {
@@ -1156,14 +1192,6 @@
     const next = `#/search?t=${encodeURIComponent(t)}`;
     if (location.hash === next) route();
     else location.hash = next;
-  }
-
-  function followToggleHTML(ticker) {
-    if (!ticker || !isValidTicker(ticker)) return "";
-    const on = isFollowing(ticker);
-    return `<button type="button" class="follow-toggle chip${on ? " is-following" : ""}" data-follow-toggle="${esc(ticker)}" aria-pressed="${on ? "true" : "false"}">
-      ${on ? svg("starFill") : svg("star")}<span>${on ? "Following" : "Follow"}</span>
-    </button>`;
   }
 
   function followingSectionHTML(activeTicker = "") {
@@ -1232,15 +1260,11 @@
     wrap.innerHTML = followingSectionHTML(active);
     host.replaceWith(wrap.firstElementChild);
     bindFollowing(root);
-    // Keep analysis Follow toggle in sync if present.
-    const tog = root.querySelector("[data-follow-toggle]");
-    if (tog) {
-      const t = tog.dataset.followToggle;
-      const on = isFollowing(t);
-      tog.classList.toggle("is-following", on);
-      tog.setAttribute("aria-pressed", on ? "true" : "false");
-      tog.innerHTML = `${on ? svg("starFill") : svg("star")}<span>${on ? "Following" : "Follow"}</span>`;
-    }
+    root.querySelectorAll("[data-follow-toggle]").forEach((tog) => {
+      paintFollowToggle(tog, isFollowing(tog.dataset.followToggle));
+      delete tog.dataset.boundFollow;
+    });
+    bindFollowToggles(root);
   }
 
   function bindFollowing(el) {
@@ -1420,13 +1444,8 @@
     }
     el.querySelectorAll(".search-chips [data-t], .search-recent [data-t]").forEach((b) =>
       b.addEventListener("click", () => goSearch(b.dataset.t)));
-    el.querySelectorAll("[data-follow-toggle]").forEach((b) => {
-      b.addEventListener("click", () => {
-        toggleFollow(b.dataset.followToggle);
-        refreshFollowingUI(el);
-      });
-    });
     bindFollowing(el);
+    bindFollowToggles(el);
   }
 
   async function renderSearch(el, params = {}) {
@@ -1530,10 +1549,11 @@
 
   function etfCard(e) {
     const chg = e.change || "";
-    return `<a class="etf-card panel" href="#/search?t=${esc(e.ticker)}" data-etf="${esc(e.ticker)}">
+    const tick = normalizeTicker(e.ticker);
+    return `<a class="etf-card panel" href="#/search?t=${esc(tick)}" data-etf="${esc(tick)}">
       <div class="etf-top">
         <div>
-          <div class="tags"><span class="tag ticker">${esc(e.ticker)}</span><span class="tag sector">${esc(e.exchange || "ETF")}</span></div>
+          <div class="tags"><span class="tag ticker">${esc(tick)}</span><span class="tag sector">${esc(e.exchange || "ETF")}</span>${followToggleHTML(tick, { compact: true })}</div>
           <h3 class="etf-name">${esc(e.name)}</h3>
         </div>
         <div class="pick-price">
@@ -1587,8 +1607,13 @@
       if (headRange && d.asOf) headRange.textContent = d.asOf;
       // Prefer goSearch so recent searches update when tapping a card.
       grid.querySelectorAll("[data-etf]").forEach((a) => {
-        a.addEventListener("click", (ev) => { ev.preventDefault(); goSearch(a.dataset.etf); });
+        a.addEventListener("click", (ev) => {
+          if (ev.target.closest("[data-follow-toggle]")) return;
+          ev.preventDefault();
+          goSearch(a.dataset.etf);
+        });
       });
+      bindFollowToggles(el);
     } catch (err) {
       if (el.dataset.token === token) grid.innerHTML = `<div class="error">Couldn't load ETF data (${esc(err.message)}).</div>`;
     }
