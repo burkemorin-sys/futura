@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07",
+  "lastUpdated": "2026-10-08",
   "company": "Micron Technology",
   "ticker": "MU",
   "exchange": "NASDAQ",
@@ -7,15 +7,15 @@
   "status": "public",
   "tagline": "DRAM, NAND and high-bandwidth memory (HBM) for AI data centers, PCs, mobile and embedded.",
   "snapshot": {
-    "price": 1045.56,
-    "change": "−1.73%",
-    "asOf": "Oct 6, 2026 close",
-    "marketCap": "$1.18T",
+    "price": 1088.0,
+    "change": "+4.06%",
+    "asOf": "Oct 7, 2026 close",
+    "marketCap": "$1.23T",
     "range52w": "$179.61 – $1,255.00",
     "sourceUrl": "https://stockanalysis.com/stocks/mu/statistics/"
   },
   "fundamentals": {
-    "asOf": "Fiscal 2026 year ended Sep 3, 2026; prices as of Oct 6, 2026 close",
+    "asOf": "Fiscal 2026 year ended Sep 3, 2026; prices as of Oct 7, 2026 close",
     "kpis": [
       {
         "label": "Revenue (FY26)",
@@ -53,19 +53,19 @@
       },
       {
         "label": "P/E (TTM)",
-        "value": "14.1x"
+        "value": "14.6x"
       },
       {
         "label": "Forward P/E",
-        "value": "5.9x"
+        "value": "6.2x"
       },
       {
         "label": "Price / sales",
-        "value": "8.9x"
+        "value": "9.2x"
       },
       {
         "label": "EV / EBITDA",
-        "value": "10.2x"
+        "value": "10.7x"
       },
       {
         "label": "Q1 FY27 guide",
@@ -129,12 +129,12 @@
     "analyst": {
       "rating": "Strong Buy",
       "count": 49,
-      "priceTarget": "$1,535.57",
-      "upside": "+46.9%",
+      "priceTarget": "$1,555.13",
+      "upside": "+42.9%",
       "sourceUrl": "https://stockanalysis.com/stocks/mu/statistics/",
       "calls": [
         {
-          "text": "Consensus Strong Buy across 49 analysts; average target ~$1,536",
+          "text": "Consensus Strong Buy across 49 analysts; average target ~$1,555",
           "url": "https://stockanalysis.com/stocks/mu/statistics/"
         },
         {
@@ -173,7 +173,7 @@
         "text": "Most of CY2027 HBM supply already contracted at higher prices"
       },
       {
-        "text": "Forward P/E ~6× with Street targeting ~$1,536 (~47% upside)"
+        "text": "Forward P/E ~6× with Street targeting ~$1,555 (~43% upside)"
       },
       {
         "text": "Net cash ~$68B; board declared another $0.15 dividend"
@@ -187,7 +187,7 @@
         "text": "Capex stepping up to ~$25B in H1 FY27 alone — cash conversion may compress"
       },
       {
-        "text": "Stock already +457% over 52 weeks; beta 2.23"
+        "text": "Stock already +470% over 52 weeks; beta 2.23"
       },
       {
         "text": "Customer and HBM concentration risk if AI buildout slows"
@@ -215,17 +215,17 @@
   "news": [
     {
       "date": "2026-10-07",
+      "outlet": "StockAnalysis",
+      "title": "D.A. Davidson lifts Micron target to $3,000 from $2,100; MU closes +4.1% at $1,088",
+      "summary": "D.A. Davidson keeps a Buy; consensus is Strong Buy from 49 analysts with an average target of ~$1,555.",
+      "url": "https://stockanalysis.com/stocks/mu/forecast/"
+    },
+    {
+      "date": "2026-10-07",
       "outlet": "TipRanks",
       "title": "Chip stocks slip premarket; Micron down ~2–3%",
       "summary": "Rising Treasury yields (10-year above 5.3%) and oil prices weighed on chips before the open; Citi has flagged mid-2027 as a possible memory-pricing peak as Samsung and SK Hynix add capacity.",
       "url": "https://www.tipranks.com/news/why-chip-stocks-micron-sandisk-and-amd-are-down-today-october-7-and-what-wall-street-sees-next"
-    },
-    {
-      "date": "2026-10-06",
-      "outlet": "StockAnalysis",
-      "title": "MU closes at $1,045.56 (−1.7%); market cap $1.18T",
-      "summary": "52-week range $180–$1,255; Strong Buy consensus, avg target $1,536.",
-      "url": "https://stockanalysis.com/stocks/mu/statistics/"
     },
     {
       "date": "2026-10-05",
@@ -274,8 +274,8 @@
   "grading": {
     "asOf": "2026-10-08",
     "spy1yPct": 16.16,
-    "pool": "Ranked against 80 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 27, Early Inflection 24, duplicates counted once), plus MU itself",
-    "poolSize": 80,
+    "pool": "Ranked against 83 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, duplicates counted once), plus MU itself",
+    "poolSize": 83,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -452,5 +452,23 @@
       "https://stockanalysis.com/stocks/mu/financials/?p=quarterly",
       "https://www.nasdaq.com/market-activity/stocks/mu/historical"
     ]
-  }
+  },
+  "listContext": [
+    {
+      "list": "Growth",
+      "route": "#/growth",
+      "role": "pick",
+      "rank": 1,
+      "of": 12,
+      "trend": "AI data-center demand for HBM/DRAM: Micron says it has contracted the vast majority of its calendar-2027 HBM supply at significantly higher prices and guided FQ1-27 revenue to $61.5B ± $1.5B.",
+      "risks": [
+        "Memory is cyclical: new supply could reverse pricing and margins",
+        "High volatility (beta 2.23)",
+        "Stock already up 470% over 52 weeks"
+      ],
+      "priceDate": "2026-10-07",
+      "listUpdated": "2026-10-08",
+      "method": "Conservative growth at a reasonable price (GARP), rerun on the full US-listed market (StockAnalysis / S&P Global screener, Oct 7, 2026 close). A stock qualifies if it has: market cap of $10B or more and at least a year of trading history; TTM revenue growth of 15% or more that analysts expect to continue (consensus revenue growth of 8%+ next fiscal year and 8%+ a year over the next 3 years); a positive forward P/E of 35 or less and a PEG of 1.5 or less where available; a Buy or Strong Buy consensus from 5+ analysts with 15%+ upside to the average target; beta of 2.6 or less; share count up no "
+    }
+  ]
 }

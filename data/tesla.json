@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07",
+  "lastUpdated": "2026-10-08",
   "company": "Tesla",
   "ticker": "TSLA",
   "exchange": "NASDAQ",
@@ -7,15 +7,15 @@
   "status": "public",
   "tagline": "EVs, energy storage, autonomy (FSD / Robotaxi / Cybercab) and Optimus robots.",
   "snapshot": {
-    "price": 380.68,
-    "change": "+0.51%",
-    "asOf": "Oct 6, 2026 close",
-    "marketCap": "$1.50T",
+    "price": 377.81,
+    "change": "−0.75%",
+    "asOf": "Oct 7, 2026 close",
+    "marketCap": "$1.49T",
     "range52w": "$297.38 – $498.83",
     "sourceUrl": "https://stockanalysis.com/stocks/tsla/"
   },
   "fundamentals": {
-    "asOf": "TTM through Q2 2026 (S&P Global via StockAnalysis), prices as of Oct 6, 2026",
+    "asOf": "TTM through Q2 2026 (S&P Global via StockAnalysis), prices as of Oct 7, 2026",
     "kpis": [
       {
         "label": "Revenue (TTM)",
@@ -55,19 +55,19 @@
       },
       {
         "label": "P/E (TTM)",
-        "value": "395.0x"
+        "value": "392.1x"
       },
       {
         "label": "Forward P/E",
-        "value": "205.9x"
+        "value": "202.2x"
       },
       {
         "label": "Price / sales",
-        "value": "14.5x"
+        "value": "14.4x"
       },
       {
         "label": "EV / EBITDA",
-        "value": "137.2x"
+        "value": "136.2x"
       }
     ],
     "kpiSource": "https://stockanalysis.com/stocks/tsla/statistics/",
@@ -183,9 +183,9 @@
     "notesSourceUrl": "https://www.cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html",
     "analyst": {
       "rating": "Buy",
-      "count": 43,
-      "priceTarget": "$396.41",
-      "upside": "+4.1%",
+      "count": 44,
+      "priceTarget": "$392.42",
+      "upside": "+3.9%",
       "sourceUrl": "https://stockanalysis.com/stocks/tsla/",
       "calls": [
         {
@@ -392,6 +392,13 @@
   "news": [
     {
       "date": "2026-10-07",
+      "outlet": "24/7 Wall St.",
+      "title": "UBS raises Tesla target to $391 from $385, keeps Buy",
+      "summary": "UBS's Joseph Spak calls the risk/reward 'tactically favorable' and says Tesla is more sentiment- than results-driven; TSLA closed down 0.8% at $377.81.",
+      "url": "https://247wallst.com/investing/2026/10/07/ubs-flags-a-bullish-setup-in-tesla-stock-and-lifts-its-price-target/"
+    },
+    {
+      "date": "2026-10-07",
       "outlet": "Reuters (via U.S. News)",
       "title": "Musk welcomes German backing for FSD as Tesla chases EU approval",
       "summary": "Germany's transport minister backs prompt EU approval and accepts FSD exceeding speed limits by up to 10%; Sweden and France have concerns, and the EU vote has slipped from October to at least December. A Reuters special report detailed Tesla's European lobbying campaign.",
@@ -452,26 +459,12 @@
       "title": "HSBC raises Tesla price target to $157, keeps Reduce",
       "summary": "Deutsche Bank separately kept Buy with a $420 target after the delivery beat.",
       "url": "https://www.investing.com/news/analyst-ratings/hsbc-raises-tesla-stock-price-target-on-delivery-beat-93CH-4931213"
-    },
-    {
-      "date": "2026-10-01",
-      "outlet": "Reuters",
-      "title": "Tesla September registrations rise across Europe",
-      "summary": "France +61.9%, Spain +24.8%, Sweden +38.4%, Portugal +128%, extending the recovery.",
-      "url": "https://www.reuters.com/business/autos-transportation/tesla-september-registrations-rise-across-europe-extending-recovery-2026-10-01/"
-    },
-    {
-      "date": "2026-09-29",
-      "outlet": "TechCrunch",
-      "title": "Tesla secures $30B in new credit lines",
-      "summary": "$20B delayed-draw term loan plus $10B revolvers, undrawn, to scale Cybercab and Optimus.",
-      "url": "https://techcrunch.com/2026/09/29/tesla-secures-30b-in-new-credit-lines-as-it-looks-to-scale-cybercab-optimus/"
     }
   ],
   "grades": {
     "growth": "F",
     "value": "F",
-    "momentum": "C-",
+    "momentum": "D+",
     "profitability": "D"
   },
   "gradeInputs": {
@@ -500,8 +493,8 @@
   "grading": {
     "asOf": "2026-10-08",
     "spy1yPct": 16.16,
-    "pool": "Ranked against 81 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 27, Early Inflection 24, duplicates counted once), plus TSLA itself",
-    "poolSize": 81,
+    "pool": "Ranked against 84 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, duplicates counted once), plus TSLA itself",
+    "poolSize": 84,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -678,5 +671,6 @@
       "https://stockanalysis.com/stocks/tsla/financials/?p=quarterly",
       "https://www.nasdaq.com/market-activity/stocks/tsla/historical"
     ]
-  }
+  },
+  "listContext": []
 }

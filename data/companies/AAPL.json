@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07",
+  "lastUpdated": "2026-10-08",
   "company": "Apple",
   "ticker": "AAPL",
   "exchange": "NASDAQ",
@@ -7,15 +7,15 @@
   "status": "public",
   "tagline": "Consumer electronics and services: iPhone, Mac, iPad, Wearables, and a high-margin Services business.",
   "snapshot": {
-    "price": 333.63,
-    "change": "+0.22%",
-    "asOf": "Oct 6, 2026 close",
-    "marketCap": "$4.87T",
+    "price": 336.67,
+    "change": "+0.91%",
+    "asOf": "Oct 7, 2026 close",
+    "marketCap": "$4.91T",
     "range52w": "$243.42 – $345.34",
     "sourceUrl": "https://stockanalysis.com/stocks/aapl/statistics/"
   },
   "fundamentals": {
-    "asOf": "TTM through Q3 FY2026 (ended Jun 27, 2026); prices as of Oct 6, 2026 close",
+    "asOf": "TTM through Q3 FY2026 (ended Jun 27, 2026); prices as of Oct 7, 2026 close",
     "kpis": [
       {
         "label": "Revenue (TTM)",
@@ -56,19 +56,19 @@
       },
       {
         "label": "P/E (TTM)",
-        "value": "38.3x"
+        "value": "38.6x"
       },
       {
         "label": "Forward P/E",
-        "value": "36.3x"
+        "value": "36.6x"
       },
       {
         "label": "Price / sales",
-        "value": "10.4x"
+        "value": "10.5x"
       },
       {
         "label": "EV / EBITDA",
-        "value": "28.6x"
+        "value": "28.9x"
       }
     ],
     "kpiSource": "https://stockanalysis.com/stocks/aapl/statistics/",
@@ -126,11 +126,11 @@
       "rating": "Buy",
       "count": 44,
       "priceTarget": "$328.09",
-      "upside": "−1.7%",
+      "upside": "−2.5%",
       "sourceUrl": "https://stockanalysis.com/stocks/aapl/statistics/",
       "calls": [
         {
-          "text": "Consensus Buy across 44 analysts; average target $328 is slightly below the Oct 6 close",
+          "text": "Consensus Buy across 44 analysts; average target ~$328",
           "url": "https://stockanalysis.com/stocks/aapl/statistics/"
         },
         {
@@ -269,6 +269,13 @@
   },
   "news": [
     {
+      "date": "2026-10-07",
+      "outlet": "StockAnalysis",
+      "title": "AAPL closes at $336.67 (+0.9%); market cap $4.91T",
+      "summary": "Still above the $328 average analyst target (Buy, 44 analysts); Q4 FY2026 results due Nov 2.",
+      "url": "https://stockanalysis.com/stocks/aapl/statistics/"
+    },
+    {
       "date": "2026-10-06",
       "outlet": "24/7 Wall St.",
       "title": "Apple trades above analyst targets as memory costs crimp margin outlook",
@@ -281,13 +288,6 @@
       "title": "Apple to report Q4 FY2026 earnings on November 2",
       "summary": "Apple set Nov 2 for Q4 results covering iPhone 18 Pro launch week; John Ternus and Kevan Parekh to host the call.",
       "url": "https://www.macrumors.com/2026/10/06/apple-q4-2026-earnings-nov-2/"
-    },
-    {
-      "date": "2026-10-06",
-      "outlet": "StockAnalysis",
-      "title": "AAPL closes at $333.63; market cap $4.87T",
-      "summary": "52-week range $243–$345; trailing P/E ~38×; average Street target $328.",
-      "url": "https://stockanalysis.com/stocks/aapl/statistics/"
     },
     {
       "date": "2026-07-31",
@@ -329,8 +329,8 @@
   "grading": {
     "asOf": "2026-10-08",
     "spy1yPct": 16.16,
-    "pool": "Ranked against 81 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 27, Early Inflection 24, duplicates counted once), plus AAPL itself",
-    "poolSize": 81,
+    "pool": "Ranked against 84 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, duplicates counted once), plus AAPL itself",
+    "poolSize": 84,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -505,5 +505,6 @@
       "https://stockanalysis.com/stocks/aapl/financials/?p=quarterly",
       "https://www.nasdaq.com/market-activity/stocks/aapl/historical"
     ]
-  }
+  },
+  "listContext": []
 }
