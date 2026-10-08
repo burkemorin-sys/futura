@@ -835,11 +835,11 @@
     { k: "profitability", label: "Profitability", short: "Profit" },
   ];
   const gradeTier = (g) => (!g || g === "n/a" ? "na" : g[0].toLowerCase());
-  function gradesHTML(p) {
+  function gradesHTML(p, ariaLabel = "Letter grades within this list") {
     const g = p.grades;
     if (!g || typeof g !== "object") return "";
     const inputs = p.gradeInputs || {};
-    return `<dl class="grades" aria-label="Letter grades within this list">
+    return `<dl class="grades" aria-label="${esc(ariaLabel)}">
       ${GRADE_KEYS.map(({ k, label, short }) => {
         const v = isNA(g[k]) ? "n/a" : String(g[k]);
         const used = inputs[k] ? ` · ${inputs[k]} inputs` : "";
@@ -1072,6 +1072,7 @@
   };
   const PARTS = [
     { id: "live", label: "Live", icon: "pulse" },
+    { id: "grades", label: "Grades", icon: "chart" },
     { id: "fundamentals", label: "Fundamentals", icon: "growth" },
     { id: "investors", label: "Major investors", icon: "users" },
     { id: "news", label: "News", icon: "news" },
@@ -1113,7 +1114,7 @@
 
   function drawCompany(el, d, sent) {
     const f = d.fundamentals || {}, snap = d.snapshot || {}, inv = d.investors || {};
-    const chips = PARTS.map((p) => `<button class="chip" data-jump="${p.id}">${esc(p.label)}</button>`).join("");
+    const chips = PARTS.filter((p) => p.id !== "grades" || hasDeepGrades(d)).map((p) => `<button class="chip" data-jump="${p.id}">${esc(p.label)}</button>`).join("");
 
     /* ---- Status / snapshot ---- */
     const ipo = d.ipo;
@@ -1222,7 +1223,7 @@
       ${liveBadgeHTML()}
       ${statusPanel}
       <div class="toolbar" role="toolbar" aria-label="Jump to section">${chips}</div>
-      ${live}${fundamentals}${investors}${news}${sentimentSection(d.ticker, sent)}
+      ${live}${deepGradesSection(d)}${fundamentals}${investors}${news}${sentimentSection(d.ticker, sent)}
       ${footer("For information only — not investment advice. Fundamentals, holdings and news are point-in-time snapshots from the linked sources and may be stale or incomplete; figures marked est. are approximations. Social sentiment is a noisy sample, not a signal.")}`;
 
     el.querySelectorAll("[data-jump]").forEach((b) =>
@@ -1230,6 +1231,59 @@
     mountTradingView(el, d.tvSymbol || d.ticker);
     bindFollowToggles(el);
     if (el.isConnected) watchLive(el);
+  }
+
+  /* Deep-dive grades (scripts/futura_grades.py → d.grades/gradeMetrics/grading), Early Inflection checklist (d.earlyInflection)
+     and an optional hand-curated run note (d.runContext). */
+  const hasDeepGrades = (d) => !!(d && ((d.grades && typeof d.grades === "object") || (d.earlyInflection && typeof d.earlyInflection.score === "number") || d.runContext));
+  function deepGradesSection(d) {
+    if (!hasDeepGrades(d)) return "";
+    const gm = d.gradeMetrics || {}, gr = d.grading || {}, ei = d.earlyInflection, rc = d.runContext;
+    const pctv = (v, dgt = 0) => (typeof v === "number" ? `${v >= 0 ? "+" : "−"}${Math.abs(v).toFixed(dgt)}%` : "n/a");
+    const plain = (v, dgt = 1) => (typeof v === "number" ? `${v < 0 ? "−" : ""}${Math.abs(v).toFixed(dgt)}%` : "n/a");
+    const mult = (v) => (typeof v === "number" ? `${v.toFixed(1)}x` : "n/a");
+    const stat = (label, val) => `<div><dt>${esc(label)}</dt><dd class="${val === "n/a" ? "na" : ""}">${esc(val)}</dd></div>`;
+    const inputs = d.grades ? `<details class="block ei-drivers dd-inputs"><summary>Grade inputs</summary>
+        <dl class="stats kf">
+          ${stat("Revenue TTM", pctv(gm.revenueGrowthPct))}${stat("EPS 3-yr fcst", pctv(gm.epsGrowth3yPct))}${stat("Forward P/E", mult(gm.forwardPE))}
+          ${stat("PEG", typeof gm.peg === "number" ? gm.peg.toFixed(2) : "n/a")}${stat("EV / sales", mult(gm.evSales))}${stat("1-yr vs SPY", typeof gm.relStrength1yPct === "number" ? `${gm.relStrength1yPct >= 0 ? "+" : "−"}${Math.abs(gm.relStrength1yPct).toFixed(0)} pts` : "n/a")}
+          ${stat("6-month", pctv(gm.chg6mPct))}${stat("3-month", pctv(gm.chg3mPct))}${stat("Gross margin", plain(gm.grossMarginPct))}
+          ${stat("Op. margin", plain(gm.operatingMarginPct))}${stat("Net margin", plain(gm.netMarginPct))}${stat("FCF margin", plain(gm.fcfMarginPct))}
+        </dl></details>` : "";
+    const gradesPanel = d.grades ? `<div class="panel pad dd-grades">
+        <h3 class="mini">Letter grades</h3>
+        ${gradesHTML(d, `Letter grades for ${d.ticker}`)}
+        ${d.gradeNote ? `<p class="co-note">${esc(d.gradeNote)}</p>` : ""}
+        <p class="fineprint top dd-pool">${esc(gr.pool || "Ranked against the Growth, Risk It and Early Inflection picks and backups")}.${gr.asOf ? ` Computed ${esc(fmtShortDate(gr.asOf))}.` : ""} <strong>*</strong> = some inputs missing; n/a = none available.</p>
+        <ul class="bullets dd-legend">
+          <li><strong>Growth</strong>: ${esc((gr.inputs || {}).growth || "revenue growth and forecast EPS growth")}</li>
+          <li><strong>Value</strong>: ${esc((gr.inputs || {}).value || "forward P/E, PEG and EV/sales")}</li>
+          <li><strong>Momentum</strong>: ${esc((gr.inputs || {}).momentum || "1-yr relative strength vs SPY, 6- and 3-month price change")}</li>
+          <li><strong>Profit</strong>: ${esc((gr.inputs || {}).profitability || "gross, operating, net and FCF margins")}</li>
+        </ul>
+        ${inputs}
+        <div class="tbl-src">${(gr.sources || []).slice(0, 3).map((u, i) => srcLink(u, ["StockAnalysis stats", "Quarterly financials", "Nasdaq closes"][i] || "Source")).join("")}</div>
+      </div>` : "";
+    const eiPanel = ei && typeof ei.score === "number" ? `<div class="panel pad dd-ei">
+        <div class="dd-ei-head"><h3 class="mini">Early Inflection</h3><span class="score-badge is-early" title="Early Inflection score (0–100)">${esc(ei.score)}<small>/100</small></span></div>
+        <p class="fineprint top">${ei.inScreen ? "Scored in today's Early Inflection screen." : `Not in the daily screen${ei.outsideScreenReason ? ` (${esc(ei.outsideScreenReason)})` : ""}, so it's scored here with the same rubric and checklist.`}${ei.priceDate ? ` Prices as of ${esc(fmtShortDate(ei.priceDate))}.` : ""}</p>
+        ${Array.isArray(ei.keyFigures) && ei.keyFigures.length ? `<dl class="stats kf">${ei.keyFigures.map((k) => stat(k.label, isNA(k.value) ? "n/a" : String(k.value))).join("")}</dl>` : ""}
+        ${checklistHTML(ei.checklist)}
+        ${Array.isArray(ei.drivers) && ei.drivers.length ? `<details class="block ei-drivers"><summary>Score breakdown</summary><ul class="bullets drivers">${ei.drivers.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></details>` : ""}
+        <div class="tbl-src"><a class="src" href="#/early">Open the Early Inflection tab</a>${(Array.isArray(ei.sourceUrl) ? ei.sourceUrl : []).slice(0, 1).map((u) => srcLink(u, "Inputs")).join("")}</div>
+      </div>` : "";
+    const rcPanel = rc ? `<div class="panel pad dd-run">
+        <h3 class="mini">${esc(rc.title || "Context")}</h3>
+        ${rc.summary ? `<p class="dd-run-sum">${esc(rc.summary)}</p>` : ""}
+        ${Array.isArray(rc.points) && rc.points.length ? `<dl class="stats kf">${rc.points.map((k) => `<div><dt>${esc(k.label)}</dt><dd>${esc(k.value)}${k.note ? `<small>${esc(k.note)}</small>` : ""}</dd></div>`).join("")}</dl>` : ""}
+        ${Array.isArray(rc.signals) && rc.signals.length ? `<div class="block"><h4>What was visible at the time</h4><ul class="bullets">${rc.signals.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+        ${rc.caveat ? `<p class="fineprint top">${esc(rc.caveat)}</p>` : ""}
+        ${(rc.sources || []).length ? `<div class="srcs tbl-src">${rc.sources.map((x) => srcLink(x.url, x.label)).join("")}</div>` : ""}
+      </div>` : "";
+    return `<section class="group" id="g-grades" aria-labelledby="h-grades">
+      ${sectionHead("grades", "Grades", asOf(gr.asOf ? `computed ${fmtShortDate(gr.asOf)}` : ""))}
+      <div class="co-grid">${gradesPanel}${eiPanel}${rcPanel}</div>
+    </section>`;
   }
 
   function sentimentSection(ticker, sent) {
@@ -1933,17 +1987,19 @@
       const staging = document.createElement("div");
       drawCompany(staging, data, sentimentCache);
       const status = staging.querySelector(".co-status");
+      const gradesSec = staging.querySelector("#g-grades");
       const fund = staging.querySelector("#g-fundamentals");
       const inv = staging.querySelector("#g-investors");
       const news = staging.querySelector("#g-news");
       const senti = staging.querySelector("#g-sentiment");
-      const deepChips = PARTS.filter((p) => p.id !== "live").map((p) =>
+      const deepChips = PARTS.filter((p) => p.id !== "live" && (p.id !== "grades" || gradesSec)).map((p) =>
         `<button class="chip" data-jump="${p.id}">${esc(p.label)}</button>`).join("");
       deep = `
         <section class="group" id="g-deep" aria-labelledby="h-deep">
           ${sectionHead("deep", "Deep analysis", `<span class="range">on file · updated ${esc(fmtShortDate(data.lastUpdated))}</span>`)}
           <div class="toolbar" role="toolbar" aria-label="Jump to deep-dive section">${deepChips}</div>
           ${status ? status.outerHTML : ""}
+          ${gradesSec ? gradesSec.outerHTML : ""}
           ${fund ? fund.outerHTML : ""}
           ${inv ? inv.outerHTML : ""}
           ${news ? news.outerHTML : ""}

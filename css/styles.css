@@ -1065,3 +1065,14 @@ body[data-route="early"] .bullets.drivers li::marker { color: var(--dawn); }
 .stats.kf div:nth-child(n+4) { border-top: 1px solid var(--border); }
 .stats.kf dt { font-size: 9.5px; letter-spacing: .06em; }
 .stats.kf dd { font-size: 13px; }
+
+/* Search deep dives: grades, Early Inflection checklist, run context */
+.dd-grades .grades { margin-top: 8px; }
+.dd-pool { margin-top: 10px !important; }
+.dd-legend { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+.dd-legend strong { color: var(--text); font-weight: 600; }
+.dd-inputs { margin-top: 10px; }
+.dd-ei-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.dd-ei-head .score-badge { margin-top: 0; }
+.dd-run-sum { margin: 6px 0 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+.dd-run .stats.kf dd small { margin-top: 2px; }

@@ -267,5 +267,216 @@
       "summary": "Data Center $89.0B (+117%); GAAP EPS $2.46; Vera Rubin racks running at cloud partners.",
       "url": "https://nvidianews.nvidia.com/"
     }
-  ]
+  ],
+  "grades": {
+    "growth": "B",
+    "value": "D+",
+    "momentum": "A-",
+    "profitability": "A"
+  },
+  "gradeInputs": {
+    "growth": "2/2",
+    "value": "3/3",
+    "momentum": "3/3",
+    "profitability": "4/4"
+  },
+  "gradeMetrics": {
+    "forwardPE": 19.634,
+    "peg": 0.393,
+    "revenueGrowthPct": 83.38,
+    "revenueGrowthQuarter": "2026-07-26",
+    "epsGrowth3yPct": 64.78,
+    "evSales": 18.85,
+    "grossMarginPct": 74.674,
+    "operatingMarginPct": 65.214,
+    "netMarginPct": 63.663,
+    "fcfMarginPct": 41.92,
+    "chg3mPct": 20.59,
+    "chg6mPct": 33.34,
+    "chg1yPct": 28.33,
+    "relStrength1yPct": 12.17,
+    "priceAsOf": "2026-10-07"
+  },
+  "grading": {
+    "asOf": "2026-10-08",
+    "spy1yPct": 16.16,
+    "pool": "Ranked against 80 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 27, Early Inflection 24, duplicates counted once), plus NVDA itself",
+    "poolSize": 80,
+    "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
+    "inputs": {
+      "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
+      "value": "Forward P/E, PEG and EV/Sales; lower is better, losses or negative multiples rank worst",
+      "momentum": "1-yr price change minus SPY's (relative strength), 6-month and 3-month price change (Nasdaq daily closes)",
+      "profitability": "Gross, operating, net and free-cash-flow margin (TTM, StockAnalysis)"
+    },
+    "sources": [
+      "https://stockanalysis.com/stocks/nvda/statistics/",
+      "https://stockanalysis.com/stocks/nvda/financials/?p=quarterly",
+      "https://www.nasdaq.com/market-activity/stocks/nvda/historical"
+    ]
+  },
+  "earlyInflection": {
+    "asOf": "2026-10-08",
+    "priceDate": "2026-10-07",
+    "inScreen": false,
+    "outsideScreenReason": "market cap $5.73T is outside the screen's $1B-$30B range",
+    "score": 78,
+    "scoreParts": {
+      "rev": 10.0,
+      "margin": 15.0,
+      "forward": 15.0,
+      "value": 7.6,
+      "notRun": 7.1,
+      "trend": 10,
+      "analysts": 8.6,
+      "theme": 5
+    },
+    "penalty": 0,
+    "checklist": [
+      {
+        "key": "revenue",
+        "label": "Revenue turned up and accelerating",
+        "met": true,
+        "detail": "+106% YoY latest quarter vs +85% prior, +56% a year ago (partly from an acquisition)"
+      },
+      {
+        "key": "theme",
+        "label": "Supplier to an AI-infrastructure bottleneck",
+        "met": true,
+        "detail": "AI-infrastructure supplier industry (Semiconductors)"
+      },
+      {
+        "key": "margin",
+        "label": "Gross margin rising",
+        "met": true,
+        "detail": "+8.5 pts YoY (last 2 quarters)"
+      },
+      {
+        "key": "forward",
+        "label": "Strong forward growth (20%+ next 12 months)",
+        "met": true,
+        "detail": "Implied next-12-month revenue +78%"
+      },
+      {
+        "key": "value",
+        "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
+        "met": true,
+        "detail": "Forward P/E 19.634, EV/forward sales 10.6x"
+      },
+      {
+        "key": "notrun",
+        "label": "Not already run (1-yr ≤ +150%)",
+        "met": true,
+        "detail": "1-yr +28% vs SPY +16%"
+      },
+      {
+        "key": "pullback",
+        "label": "Pulled back 15–50% from the 52-week high",
+        "met": false,
+        "detail": "-1% vs 52-week high"
+      },
+      {
+        "key": "trend",
+        "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
+        "met": true,
+        "detail": "Above 200-day; 3-month vs SPY +12 pts"
+      },
+      {
+        "key": "analysts",
+        "label": "Analysts constructive (Buy+ and 15%+ upside)",
+        "met": true,
+        "detail": "Strong Buy (61), +38% to target"
+      },
+      {
+        "key": "revisions",
+        "label": "Targets / estimates being raised (30-day)",
+        "met": null,
+        "detail": "Revision history is only kept for screen candidates"
+      }
+    ],
+    "drivers": [
+      "Revenue: latest quarter +106% YoY vs +85% the quarter before and +56% a year earlier (halved: goodwill/intangibles up 13% of assets in a year suggests acquisition-driven growth) → 10/20",
+      "Margins: gross +8.5 pts, operating +10.9 pts YoY (last 2 quarters) → 15/15",
+      "Forward: next-12-month revenue +78% (implied), 3-yr EPS growth forecast +65% a year → 15/15",
+      "Valuation: forward P/E 19.634, EV/forward sales 10.6x → 8/15",
+      "Not already run: 1-yr +28%, -1% vs 52-week high → 7/10",
+      "Trend: price above 200-day, above 50-day, 3-month vs SPY +12 pts → 10/10",
+      "Analysts: Strong Buy (61), +38% to target → 9/10",
+      "Bottleneck theme: AI-infrastructure supplier industry (Semiconductors) → 5/5"
+    ],
+    "risks": [
+      "Recent acquisition (goodwill/intangibles up 13% of assets in a year): part of the revenue jump is bought, not organic",
+      "High volatility (beta 2.2)",
+      "Cyclical hardware demand: AI capex pauses or inventory digestion would hit results"
+    ],
+    "keyFigures": [
+      {
+        "label": "Latest Q rev",
+        "value": "+106%"
+      },
+      {
+        "label": "Gross margin Δ",
+        "value": "+8.5 pts"
+      },
+      {
+        "label": "Next-12m rev",
+        "value": "+78%"
+      },
+      {
+        "label": "EV / fwd sales",
+        "value": "10.6x"
+      },
+      {
+        "label": "1-yr move",
+        "value": "+28%"
+      },
+      {
+        "label": "vs 52-wk high",
+        "value": "-1%"
+      }
+    ],
+    "eiMetrics": {
+      "yoy0": 105.85,
+      "yoy1": 85.23,
+      "yoy4": 55.6,
+      "ttmGrowth": 83.38,
+      "troughQAgo": 7,
+      "gm": 74.98,
+      "om": 66.24,
+      "gmChg": 8.48,
+      "omChg": 10.94,
+      "fwdRevGrowth": 77.68,
+      "eps3y": 64.78,
+      "fpe": 19.63,
+      "evSales": 18.85,
+      "evFwdSales": 10.61,
+      "peg": 0.39,
+      "ch1y": 27.99,
+      "pt": 328.72,
+      "rating": "Strong Buy",
+      "analysts": 61,
+      "psForward": 10.65,
+      "netcash": 23609000000.0,
+      "sharesYoY": -1.04,
+      "shortFloat": 1.27,
+      "beta": 2.22,
+      "grossMarginTTM": 74.67,
+      "mcap": 5734188090000.0,
+      "revUSD": 302963390394.67,
+      "currency": "USD",
+      "lastQ": "2026-07-26",
+      "price": 237.47,
+      "priceDate": "2026-10-07",
+      "offHigh": -0.74,
+      "ch1yNasdaq": 28.33,
+      "rs3m": 12.07,
+      "acqJump": 12.51,
+      "upside": 38.43
+    },
+    "sourceUrl": [
+      "https://stockanalysis.com/stocks/nvda/statistics/",
+      "https://stockanalysis.com/stocks/nvda/financials/?p=quarterly",
+      "https://www.nasdaq.com/market-activity/stocks/nvda/historical"
+    ]
+  }
 }

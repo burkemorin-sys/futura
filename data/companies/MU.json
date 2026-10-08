@@ -241,5 +241,216 @@
       "summary": "Q4 revenue $54.23B; HBM largely contracted for CY2027; $0.15 dividend declared.",
       "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx"
     }
-  ]
+  ],
+  "grades": {
+    "growth": "B-",
+    "value": "A-",
+    "momentum": "A+",
+    "profitability": "A+"
+  },
+  "gradeInputs": {
+    "growth": "2/2",
+    "value": "3/3",
+    "momentum": "3/3",
+    "profitability": "4/4"
+  },
+  "gradeMetrics": {
+    "forwardPE": 6.177,
+    "peg": 0.094,
+    "revenueGrowthPct": 256.33,
+    "revenueGrowthQuarter": "2026-09-03",
+    "epsGrowth3yPct": 39.12,
+    "evSales": 8.71,
+    "grossMarginPct": 80.716,
+    "operatingMarginPct": 74.586,
+    "netMarginPct": 63.796,
+    "fcfMarginPct": 44.271,
+    "chg3mPct": 15.94,
+    "chg6mPct": 188.15,
+    "chg1yPct": 485.92,
+    "relStrength1yPct": 469.76,
+    "priceAsOf": "2026-10-07"
+  },
+  "grading": {
+    "asOf": "2026-10-08",
+    "spy1yPct": 16.16,
+    "pool": "Ranked against 80 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 27, Early Inflection 24, duplicates counted once), plus MU itself",
+    "poolSize": 80,
+    "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
+    "inputs": {
+      "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
+      "value": "Forward P/E, PEG and EV/Sales; lower is better, losses or negative multiples rank worst",
+      "momentum": "1-yr price change minus SPY's (relative strength), 6-month and 3-month price change (Nasdaq daily closes)",
+      "profitability": "Gross, operating, net and free-cash-flow margin (TTM, StockAnalysis)"
+    },
+    "sources": [
+      "https://stockanalysis.com/stocks/mu/statistics/",
+      "https://stockanalysis.com/stocks/mu/financials/?p=quarterly",
+      "https://www.nasdaq.com/market-activity/stocks/mu/historical"
+    ]
+  },
+  "earlyInflection": {
+    "asOf": "2026-10-08",
+    "priceDate": "2026-10-07",
+    "inScreen": false,
+    "outsideScreenReason": "market cap $1.23T is outside the screen's $1B-$30B range",
+    "score": 84,
+    "scoreParts": {
+      "rev": 20.0,
+      "margin": 15.0,
+      "forward": 14.9,
+      "value": 13.4,
+      "notRun": 2.1,
+      "trend": 10,
+      "analysts": 9.2,
+      "theme": 5
+    },
+    "penalty": 5,
+    "checklist": [
+      {
+        "key": "revenue",
+        "label": "Revenue turned up and accelerating",
+        "met": true,
+        "detail": "+379% YoY latest quarter vs +346% prior, +46% a year ago"
+      },
+      {
+        "key": "theme",
+        "label": "Supplier to an AI-infrastructure bottleneck",
+        "met": true,
+        "detail": "AI-infrastructure supplier industry (Semiconductors)"
+      },
+      {
+        "key": "margin",
+        "label": "Gross margin rising",
+        "met": true,
+        "detail": "+44.5 pts YoY (last 2 quarters)"
+      },
+      {
+        "key": "forward",
+        "label": "Strong forward growth (20%+ next 12 months)",
+        "met": true,
+        "detail": "Implied next-12-month revenue +107%"
+      },
+      {
+        "key": "value",
+        "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
+        "met": true,
+        "detail": "Forward P/E 6.177, EV/forward sales 4.2x"
+      },
+      {
+        "key": "notrun",
+        "label": "Not already run (1-yr ≤ +150%)",
+        "met": false,
+        "detail": "1-yr +486% vs SPY +16%"
+      },
+      {
+        "key": "pullback",
+        "label": "Pulled back 15–50% from the 52-week high",
+        "met": false,
+        "detail": "-10% vs 52-week high"
+      },
+      {
+        "key": "trend",
+        "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
+        "met": true,
+        "detail": "Above 200-day; 3-month vs SPY +10 pts"
+      },
+      {
+        "key": "analysts",
+        "label": "Analysts constructive (Buy+ and 15%+ upside)",
+        "met": true,
+        "detail": "Strong Buy (49), +43% to target"
+      },
+      {
+        "key": "revisions",
+        "label": "Targets / estimates being raised (30-day)",
+        "met": null,
+        "detail": "Revision history is only kept for screen candidates"
+      }
+    ],
+    "drivers": [
+      "Revenue: latest quarter +379% YoY vs +346% the quarter before and +46% a year earlier → 20/20",
+      "Margins: gross +44.5 pts, operating +52.5 pts YoY (last 2 quarters) → 15/15",
+      "Forward: next-12-month revenue +107% (implied), 3-yr EPS growth forecast +39% a year → 15/15",
+      "Valuation: forward P/E 6.177, EV/forward sales 4.2x → 13/15",
+      "Not already run: 1-yr +486% (heavy penalty −5), -10% vs 52-week high → 2/10 −5",
+      "Trend: price above 200-day, above 50-day, 3-month vs SPY +10 pts → 10/10",
+      "Analysts: Strong Buy (49), +43% to target → 9/10",
+      "Bottleneck theme: AI-infrastructure supplier industry (Semiconductors) → 5/5"
+    ],
+    "risks": [
+      "Already up 486% in a year: much of the turn may be priced in",
+      "High volatility (beta 2.2)",
+      "Cyclical hardware demand: AI capex pauses or inventory digestion would hit results"
+    ],
+    "keyFigures": [
+      {
+        "label": "Latest Q rev",
+        "value": "+379%"
+      },
+      {
+        "label": "Gross margin Δ",
+        "value": "+44.5 pts"
+      },
+      {
+        "label": "Next-12m rev",
+        "value": "+107%"
+      },
+      {
+        "label": "EV / fwd sales",
+        "value": "4.2x"
+      },
+      {
+        "label": "1-yr move",
+        "value": "+486%"
+      },
+      {
+        "label": "vs 52-wk high",
+        "value": "-10%"
+      }
+    ],
+    "eiMetrics": {
+      "yoy0": 379.27,
+      "yoy1": 345.72,
+      "yoy4": 46.0,
+      "ttmGrowth": 256.33,
+      "troughQAgo": 6,
+      "gm": 86.76,
+      "om": 80.68,
+      "gmChg": 44.47,
+      "omChg": 52.55,
+      "fwdRevGrowth": 107.42,
+      "eps3y": 39.12,
+      "fpe": 6.18,
+      "evSales": 8.71,
+      "evFwdSales": 4.2,
+      "peg": 0.09,
+      "ch1y": 469.75,
+      "pt": 1555.13,
+      "rating": "Strong Buy",
+      "analysts": 49,
+      "psForward": 4.45,
+      "netcash": 68274000000.0,
+      "sharesYoY": 1.6,
+      "shortFloat": 2.46,
+      "beta": 2.23,
+      "grossMarginTTM": 80.72,
+      "mcap": 1228779748288.0,
+      "revUSD": 133186619151.09,
+      "currency": "USD",
+      "lastQ": "2026-09-03",
+      "price": 1088.0,
+      "priceDate": "2026-10-07",
+      "offHigh": -10.35,
+      "ch1yNasdaq": 485.92,
+      "rs3m": 10.4,
+      "acqJump": -0.55,
+      "upside": 42.93
+    },
+    "sourceUrl": [
+      "https://stockanalysis.com/stocks/mu/statistics/",
+      "https://stockanalysis.com/stocks/mu/financials/?p=quarterly",
+      "https://www.nasdaq.com/market-activity/stocks/mu/historical"
+    ]
+  }
 }

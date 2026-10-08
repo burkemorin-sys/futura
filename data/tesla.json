@@ -467,5 +467,216 @@
       "summary": "$20B delayed-draw term loan plus $10B revolvers, undrawn, to scale Cybercab and Optimus.",
       "url": "https://techcrunch.com/2026/09/29/tesla-secures-30b-in-new-credit-lines-as-it-looks-to-scale-cybercab-optimus/"
     }
-  ]
+  ],
+  "grades": {
+    "growth": "F",
+    "value": "F",
+    "momentum": "C-",
+    "profitability": "D"
+  },
+  "gradeInputs": {
+    "growth": "2/2",
+    "value": "3/3",
+    "momentum": "3/3",
+    "profitability": "4/4"
+  },
+  "gradeMetrics": {
+    "forwardPE": 202.2,
+    "peg": 9.187,
+    "revenueGrowthPct": 11.75,
+    "revenueGrowthQuarter": "2026-06-30",
+    "epsGrowth3yPct": 24.89,
+    "evSales": 14.14,
+    "grossMarginPct": 18.852,
+    "operatingMarginPct": 4.129,
+    "netMarginPct": 3.671,
+    "fcfMarginPct": 5.561,
+    "chg3mPct": -6.23,
+    "chg6mPct": 8.99,
+    "chg1yPct": -12.76,
+    "relStrength1yPct": -28.92,
+    "priceAsOf": "2026-10-07"
+  },
+  "grading": {
+    "asOf": "2026-10-08",
+    "spy1yPct": 16.16,
+    "pool": "Ranked against 81 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 27, Early Inflection 24, duplicates counted once), plus TSLA itself",
+    "poolSize": 81,
+    "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
+    "inputs": {
+      "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
+      "value": "Forward P/E, PEG and EV/Sales; lower is better, losses or negative multiples rank worst",
+      "momentum": "1-yr price change minus SPY's (relative strength), 6-month and 3-month price change (Nasdaq daily closes)",
+      "profitability": "Gross, operating, net and free-cash-flow margin (TTM, StockAnalysis)"
+    },
+    "sources": [
+      "https://stockanalysis.com/stocks/tsla/statistics/",
+      "https://stockanalysis.com/stocks/tsla/financials/?p=quarterly",
+      "https://www.nasdaq.com/market-activity/stocks/tsla/historical"
+    ]
+  },
+  "earlyInflection": {
+    "asOf": "2026-10-08",
+    "priceDate": "2026-10-07",
+    "inScreen": false,
+    "outsideScreenReason": "market cap $1.49T is outside the screen's $1B-$30B range",
+    "score": 43,
+    "scoreParts": {
+      "rev": 17.6,
+      "margin": 3.9,
+      "forward": 5.5,
+      "value": 0.0,
+      "notRun": 10,
+      "trend": 2,
+      "analysts": 3.5,
+      "theme": 0
+    },
+    "penalty": 0,
+    "checklist": [
+      {
+        "key": "revenue",
+        "label": "Revenue turned up and accelerating",
+        "met": true,
+        "detail": "+26% YoY latest quarter vs +16% prior, -12% a year ago"
+      },
+      {
+        "key": "theme",
+        "label": "Supplier to an AI-infrastructure bottleneck",
+        "met": false,
+        "detail": "Not an AI-infrastructure supplier industry"
+      },
+      {
+        "key": "margin",
+        "label": "Gross margin rising",
+        "met": true,
+        "detail": "+2.2 pts YoY (last 2 quarters)"
+      },
+      {
+        "key": "forward",
+        "label": "Strong forward growth (20%+ next 12 months)",
+        "met": false,
+        "detail": "Implied next-12-month revenue +8%"
+      },
+      {
+        "key": "value",
+        "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
+        "met": false,
+        "detail": "Forward P/E 202.2, EV/forward sales 13.0x"
+      },
+      {
+        "key": "notrun",
+        "label": "Not already run (1-yr ≤ +150%)",
+        "met": true,
+        "detail": "1-yr -13% vs SPY +16%"
+      },
+      {
+        "key": "pullback",
+        "label": "Pulled back 15–50% from the 52-week high",
+        "met": true,
+        "detail": "-23% vs 52-week high"
+      },
+      {
+        "key": "trend",
+        "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
+        "met": false,
+        "detail": "Below 200-day; 3-month vs SPY -8 pts"
+      },
+      {
+        "key": "analysts",
+        "label": "Analysts constructive (Buy+ and 15%+ upside)",
+        "met": false,
+        "detail": "Buy (44), +4% to target"
+      },
+      {
+        "key": "revisions",
+        "label": "Targets / estimates being raised (30-day)",
+        "met": null,
+        "detail": "Revision history is only kept for screen candidates"
+      }
+    ],
+    "drivers": [
+      "Revenue: latest quarter +26% YoY vs +16% the quarter before and -12% a year earlier → 18/20",
+      "Margins: gross +2.2 pts, operating -0.5 pts YoY (last 2 quarters) → 4/15",
+      "Forward: next-12-month revenue +8% (implied), 3-yr EPS growth forecast +25% a year → 6/15",
+      "Valuation: forward P/E 202.2, EV/forward sales 13.0x → 0/15",
+      "Not already run: 1-yr -13%, -23% vs 52-week high → 10/10",
+      "Trend: price below 200-day, above 50-day, 3-month vs SPY -8 pts → 2/10",
+      "Analysts: Buy (44), +4% to target → 3/10",
+      "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
+    ],
+    "risks": [
+      "Thin gross margin (17%) leaves little room for error",
+      "Rich forward P/E (202)",
+      "Still below its 200-day average: the turn isn't confirmed"
+    ],
+    "keyFigures": [
+      {
+        "label": "Latest Q rev",
+        "value": "+26%"
+      },
+      {
+        "label": "Gross margin Δ",
+        "value": "+2.2 pts"
+      },
+      {
+        "label": "Next-12m rev",
+        "value": "+8%"
+      },
+      {
+        "label": "EV / fwd sales",
+        "value": "13.0x"
+      },
+      {
+        "label": "1-yr move",
+        "value": "-13%"
+      },
+      {
+        "label": "vs 52-wk high",
+        "value": "-23%"
+      }
+    ],
+    "eiMetrics": {
+      "yoy0": 25.52,
+      "yoy1": 15.78,
+      "yoy4": -11.78,
+      "ttmGrowth": 11.75,
+      "troughQAgo": 5,
+      "gm": 16.83,
+      "om": 1.41,
+      "gmChg": 2.18,
+      "omChg": -0.52,
+      "fwdRevGrowth": 8.46,
+      "eps3y": 24.89,
+      "fpe": 202.2,
+      "evSales": 14.14,
+      "evFwdSales": 13.04,
+      "peg": 9.19,
+      "ch1y": -16.64,
+      "pt": 392.42,
+      "rating": "Buy",
+      "analysts": 44,
+      "psForward": 13.28,
+      "netcash": 27444000000.0,
+      "sharesYoY": 0.58,
+      "shortFloat": 2.44,
+      "beta": 1.92,
+      "grossMarginTTM": 18.85,
+      "mcap": 1492178500927.0,
+      "revUSD": 103616311431.64,
+      "currency": "USD",
+      "lastQ": "2026-06-30",
+      "price": 377.81,
+      "priceDate": "2026-10-07",
+      "offHigh": -22.88,
+      "ch1yNasdaq": -12.76,
+      "rs3m": -8.39,
+      "acqJump": -0.31,
+      "upside": 3.87
+    },
+    "sourceUrl": [
+      "https://stockanalysis.com/stocks/tsla/statistics/",
+      "https://stockanalysis.com/stocks/tsla/financials/?p=quarterly",
+      "https://www.nasdaq.com/market-activity/stocks/tsla/historical"
+    ]
+  }
 }

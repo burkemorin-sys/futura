@@ -566,6 +566,87 @@ def revisions_for(t, hist, today_vals):
     return met, f"Average target {pct(ptc, 1)} since {d0}", rev
 
 
+_IND_CACHE = {}
+
+
+def evaluate_ticker(t, spy=None, ind=None):
+    """Score ONE ticker on the Early Inflection rubric/checklist, outside the daily screen.
+
+    Used for Search deep dives (scripts/futura_grades.py) so tickers that are not in the screen's
+    universe (e.g. LITE at ~$100B market cap) still get the same checklist and 0-100 score.
+    Returns a dict ready to store as company["earlyInflection"]; raises on missing data.
+    """
+    t = t.upper()
+    if ind is None:
+        if "ind" not in _IND_CACHE:
+            _IND_CACHE["ind"] = sa_industries()
+        ind = _IND_CACHE["ind"]
+    s = sa_stats(t)
+    q = sa_quarterly(t)
+    mcap = fnum(s.get("marketcap"))
+    c = {"ticker": t, "name": t, "stats": s, "q": q, "mcap": mcap, "lastsale": None}
+    slug = ind.get(t)
+    if t in THEME_OVERRIDE:
+        pts, why = THEME_OVERRIDE[t]
+        c["theme"] = (pts, f"AI-infrastructure supplier ({why})" if pts >= 5 else f"Adjacent to AI infrastructure ({why})")
+    elif slug in THEME_CORE:
+        c["theme"] = (5, f"AI-infrastructure supplier industry ({THEME_CORE[slug]})")
+    elif slug in THEME_ADJ:
+        c["theme"] = (3, f"Adjacent to AI infrastructure ({THEME_ADJ[slug]})")
+    else:
+        c["theme"] = (0, "Not an AI-infrastructure supplier industry")
+    c["m"] = fundamentals(c)
+    m = c["m"]
+    h = nasdaq_history(t)
+    if spy is None:
+        spy = nasdaq_history("SPY")
+    spy1y, spy3m = chg_days(spy, 365), chg_days(spy, 91)
+    if h:
+        m["price"], m["priceDate"] = h[-1][1], h[-1][0].isoformat()
+        yr = [x for d, x in h if d >= h[-1][0] - dt.timedelta(days=365)]
+        m["offHigh"] = (h[-1][1] / max(yr) - 1) * 100
+        m["ch1yNasdaq"] = chg_days(h, 365)
+        c3 = chg_days(h, 91)
+        m["rs3m"] = (c3 - spy3m) if c3 is not None and spy3m is not None else None
+    try:
+        aj = sa_acq_jump(t)
+        m["acqJump"] = aj if isinstance(aj, float) else None
+    except Exception:  # noqa: BLE001
+        m["acqJump"] = None
+    c["spy1y"] = spy1y
+    sc, parts, drivers, penalty = score(c)
+    c["revisionMet"], c["revisionDetail"] = None, "Revision history is only kept for screen candidates"
+    why_out = []
+    if mcap is not None and not (MCAP_MIN <= mcap <= MCAP_MAX):
+        why_out.append(f"market cap {fmt_money(mcap)} is outside the screen's $1B-$30B range")
+    if t in MINERS:
+        why_out.append("bitcoin/crypto miner (excluded)")
+    rev_usd = mcap / fnum(s.get("ps")) if mcap and fnum(s.get("ps")) else None
+    if rev_usd is not None and rev_usd < REV_MIN:
+        why_out.append("TTM revenue under $100M")
+    if int(fnum(s.get("analystCount")) or 0) < ANALYSTS_MIN:
+        why_out.append("fewer than 3 analysts")
+    if (m["yoy0"] or 0) <= 0 or (m["fwdRevGrowth"] or 0) < 8:
+        why_out.append("fails the inflection gate (shrinking revenue or <8% forward growth)")
+    return {
+        "asOf": dt.date.today().isoformat(), "priceDate": m.get("priceDate"), "inScreen": False,
+        "outsideScreenReason": "; ".join(why_out) or None,
+        "score": sc, "scoreParts": {k: round(v, 1) for k, v in parts.items()}, "penalty": penalty,
+        "checklist": checklist(c), "drivers": drivers, "risks": risks(c),
+        "keyFigures": [
+            {"label": "Latest Q rev", "value": pct(m["yoy0"])},
+            {"label": "Gross margin Δ", "value": pct(m["gmChg"], 1).replace("%", " pts")},
+            {"label": "Next-12m rev", "value": pct(m["fwdRevGrowth"])},
+            {"label": "EV / fwd sales", "value": ("%.1fx" % m["evFwdSales"]) if m["evFwdSales"] else "n/a"},
+            {"label": "1-yr move", "value": pct(m.get("ch1yNasdaq"))},
+            {"label": "vs 52-wk high", "value": pct(m.get("offHigh"))},
+        ],
+        "eiMetrics": {k: (round(v, 2) if isinstance(v, float) else v) for k, v in m.items() if k not in ("sma50", "sma200")},
+        "sourceUrl": [f"https://stockanalysis.com/stocks/{t.lower()}/statistics/", f"https://stockanalysis.com/stocks/{t.lower()}/financials/?p=quarterly",
+                      f"https://www.nasdaq.com/market-activity/stocks/{t.lower()}/historical"],
+    }
+
+
 def main():
     limit = None
     if "--limit" in sys.argv:

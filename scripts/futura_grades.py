@@ -15,10 +15,18 @@ For every entry in `picks` and `bench` this script:
      composite is ranked again inside the pool and mapped to a letter. A grade is "n/a" when all of
      its inputs are missing. Results go to entry["grades"] plus top-level "grading" metadata.
 
+Search deep dives (data/companies/*.json plus data/spacex.json and data/tesla.json) are graded too, after the lists:
+  each deep-dive ticker gets the same four inputs (TTM revenue growth from StockAnalysis quarterly income statements,
+  forward P/E and PEG from its statistics page) and is percentile-ranked against a REFERENCE POOL = every stock in the
+  Growth, Risk It and Early Inflection picks + benches (deduplicated, using the metrics just stored on those lists),
+  plus the deep-dive ticker itself. It also gets an Early Inflection checklist/score: copied from the screen if the
+  ticker is in it, otherwise computed off-screen with update_early_inflection.evaluate_ticker().
+  Results go to company["grades"], ["gradeInputs"], ["gradeMetrics"], ["grading"] and ["earlyInflection"].
+
 Usage:
-  python3 scripts/futura_grades.py            # fetch fresh inputs, then grade both lists
+  python3 scripts/futura_grades.py            # fetch fresh inputs, then grade the lists and the deep dives
   python3 scripts/futura_grades.py --no-fetch # re-grade from the metrics already stored in the JSON
-  python3 scripts/futura_grades.py --only=early  # just one list (growth, riskit, early; comma-separated)
+  python3 scripts/futura_grades.py --only=early  # just one list (growth, riskit, early, companies; comma-separated)
 """
 import datetime as dt
 import json
@@ -26,6 +34,7 @@ import os
 import re
 import sys
 import time
+import glob
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -258,6 +267,130 @@ def main():
             json.dump(data, f, indent=2, ensure_ascii=False)
             f.write("\n")
         print(f"wrote {path}")
+    if not only or "companies" in only[0].split(","):
+        grade_companies(fetch, spy1y, today)
+
+
+# ---------------- Search deep dives ----------------
+LIST_LABELS = {"growth": "Growth", "riskit": "Risk It", "early": "Early Inflection"}
+
+
+def company_files():
+    files = sorted(p for p in glob.glob(os.path.join(ROOT, "data", "companies", "*.json")) if not p.endswith("index.json"))
+    return files + [os.path.join(ROOT, "data", "spacex.json"), os.path.join(ROOT, "data", "tesla.json")]
+
+
+def reference_pool():
+    """Union of Growth, Risk It and Early Inflection picks + bench (first occurrence of a ticker wins)."""
+    pool, seen, counts, early = [], set(), {}, {}
+    for key, path in FILES.items():
+        try:
+            data = json.load(open(path))
+        except Exception:  # noqa: BLE001
+            continue
+        n = 0
+        for e in (data.get("picks") or []) + (data.get("bench") or []):
+            t = e.get("ticker")
+            if key == "early" and t:
+                early[t] = e
+            if not t or t in seen or not e.get("metrics"):
+                continue
+            seen.add(t)
+            n += 1
+            pool.append({"ticker": t, "metrics": dict(e["metrics"])})
+        counts[LIST_LABELS[key]] = n
+    return pool, counts, early
+
+
+def ttm_growth_from_quarters(t):
+    import update_early_inflection as ei  # same folder
+    q = ei.sa_quarterly(t)
+    rev = [x if isinstance(x, float) else None for x in q["rev"]]
+    if len(rev) >= 8 and None not in rev[:8] and sum(rev[4:8]) > 0:
+        return round((sum(rev[:4]) / sum(rev[4:8]) - 1) * 100, 2), q.get("dates", [None])[0]
+    return None, None
+
+
+def grade_companies(fetch, spy1y, today):
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    pool, counts, early = reference_pool()
+    if not pool:
+        print("skip companies: no reference pool")
+        return
+    if fetch and spy1y is None:
+        spy1y, _ = change_since(nasdaq_history("SPY", "etf"), 12)
+    spy_hist = None
+    for path in company_files():
+        if not os.path.exists(path):
+            continue
+        with open(path) as f:
+            d = json.load(f)
+        t = (d.get("ticker") or "").upper()
+        if not t or d.get("status") not in (None, "public"):
+            continue
+        entry = {"ticker": t}
+        if fetch:
+            m = {}
+            try:
+                s = sa_stats(t)
+                m["forwardPE"] = fnum(s.get("peForward"))
+                m["peg"] = fnum(s.get("pegRatio"))
+            except Exception as e:  # noqa: BLE001
+                m["notes"] = [f"StockAnalysis statistics unavailable ({e})"]
+            try:
+                m["revenueGrowthPct"], m["revenueGrowthQuarter"] = ttm_growth_from_quarters(t)
+            except Exception as e:  # noqa: BLE001
+                m.setdefault("notes", []).append(f"StockAnalysis quarterly financials unavailable ({e})")
+                m["revenueGrowthPct"] = None
+            entry["forwardPE"], entry["peg"], entry["revenueGrowth"] = m.get("forwardPE"), m.get("peg"), m.get("revenueGrowthPct")
+            fm = fetch_metrics(entry, spy1y)
+            for k, v in fm.items():
+                if k == "notes":
+                    m.setdefault("notes", []).extend(v)
+                elif k not in ("revenueGrowthPct", "forwardPE", "peg"):
+                    m[k] = v
+        else:
+            m = dict(d.get("gradeMetrics") or {})
+        entry["metrics"] = m
+        grp = [dict(p, metrics=dict(p["metrics"])) for p in pool if p["ticker"] != t] + [entry]
+        grade_pool(grp)
+        d["grades"], d["gradeInputs"], d["gradeMetrics"] = entry["grades"], entry["gradeInputs"], m
+        poolsize = len(grp) - 1
+        d["grading"] = {
+            "asOf": today if fetch else (d.get("grading") or {}).get("asOf", today),
+            "spy1yPct": spy1y if fetch else (d.get("grading") or {}).get("spy1yPct"),
+            "pool": (f"Ranked against {poolsize} stocks: every Growth, Risk It and Early Inflection pick and backup "
+                     f"({', '.join(f'{k} {v}' for k, v in counts.items())}, duplicates counted once), plus {t} itself"),
+            "poolSize": poolsize,
+            "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
+            "inputs": {
+                "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
+                "value": "Forward P/E, PEG and EV/Sales; lower is better, losses or negative multiples rank worst",
+                "momentum": "1-yr price change minus SPY's (relative strength), 6-month and 3-month price change (Nasdaq daily closes)",
+                "profitability": "Gross, operating, net and free-cash-flow margin (TTM, StockAnalysis)",
+            },
+            "sources": [f"https://stockanalysis.com/stocks/{t.lower()}/statistics/", f"https://stockanalysis.com/stocks/{t.lower()}/financials/?p=quarterly",
+                        f"https://www.nasdaq.com/market-activity/stocks/{t.lower()}/historical"],
+        }
+        # Early Inflection checklist + score
+        if t in early and early[t].get("checklist"):
+            e = early[t]
+            d["earlyInflection"] = {"asOf": today, "priceDate": e.get("priceDate"), "inScreen": True, "score": e.get("score"),
+                                    "scoreParts": e.get("scoreParts"), "checklist": e.get("checklist"), "drivers": e.get("drivers"),
+                                    "keyFigures": e.get("keyFigures"), "risks": e.get("risks"), "sourceUrl": e.get("sourceUrl")}
+        elif fetch:
+            try:
+                import update_early_inflection as ei
+                if spy_hist is None:
+                    spy_hist = ei.nasdaq_history("SPY")
+                d["earlyInflection"] = ei.evaluate_ticker(t, spy=spy_hist)
+            except Exception as e:  # noqa: BLE001
+                d["earlyInflection"] = {"asOf": today, "inScreen": False, "score": None, "error": f"n/a ({e})"}
+        with open(path, "w") as f:
+            json.dump(d, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        ei_s = (d.get("earlyInflection") or {}).get("score")
+        print("companies", t, d["grades"], d["gradeInputs"], "EI", ei_s)
 
 
 if __name__ == "__main__":
