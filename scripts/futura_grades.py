@@ -302,6 +302,30 @@ def reference_pool():
     return pool, counts, early
 
 
+LIST_ROUTES = {"growth": "#/growth", "riskit": "#/riskit", "early": "#/early"}
+
+
+def list_context(t, files=None):
+    """Where ticker t sits on today's Growth / Risk It / Early Inflection lists (rank, score, drivers), copied from the list files."""
+    out = []
+    for key, path in (files or FILES).items():
+        try:
+            data = json.load(open(path))
+        except Exception:  # noqa: BLE001
+            continue
+        for role, arr in (("pick", data.get("picks") or []), ("bench", data.get("bench") or [])):
+            for i, e in enumerate(arr):
+                if (e.get("ticker") or "").upper() != t:
+                    continue
+                out.append({k: v for k, v in {
+                    "list": LIST_LABELS[key], "route": LIST_ROUTES.get(key), "role": role, "rank": i + 1, "of": len(arr),
+                    "score": e.get("score"), "riskLevel": e.get("riskLevel"), "drivers": e.get("drivers"), "trend": e.get("trend") or e.get("thesis"),
+                    "risks": e.get("risks"), "priceDate": e.get("priceDate") or data.get("priceDate"), "listUpdated": data.get("lastUpdated"),
+                    "method": (data.get("method") or "")[:600] if isinstance(data.get("method"), str) else None,
+                }.items() if v not in (None, "", [])})
+    return out
+
+
 def ttm_growth_from_quarters(t):
     import update_early_inflection as ei  # same folder
     q = ei.sa_quarterly(t)
@@ -386,6 +410,7 @@ def grade_companies(fetch, spy1y, today):
                 d["earlyInflection"] = ei.evaluate_ticker(t, spy=spy_hist)
             except Exception as e:  # noqa: BLE001
                 d["earlyInflection"] = {"asOf": today, "inScreen": False, "score": None, "error": f"n/a ({e})"}
+        d["listContext"] = list_context(t)
         with open(path, "w") as f:
             json.dump(d, f, indent=2, ensure_ascii=False)
             f.write("\n")

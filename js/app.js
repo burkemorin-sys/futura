@@ -1235,7 +1235,7 @@
 
   /* Deep-dive grades (scripts/futura_grades.py → d.grades/gradeMetrics/grading), Early Inflection checklist (d.earlyInflection)
      and an optional hand-curated run note (d.runContext). */
-  const hasDeepGrades = (d) => !!(d && ((d.grades && typeof d.grades === "object") || (d.earlyInflection && typeof d.earlyInflection.score === "number") || d.runContext));
+  const hasDeepGrades = (d) => !!(d && ((d.grades && typeof d.grades === "object") || (d.earlyInflection && typeof d.earlyInflection.score === "number") || d.runContext || (Array.isArray(d.listContext) && d.listContext.length)));
   function deepGradesSection(d) {
     if (!hasDeepGrades(d)) return "";
     const gm = d.gradeMetrics || {}, gr = d.grading || {}, ei = d.earlyInflection, rc = d.runContext;
@@ -1276,13 +1276,28 @@
         <h3 class="mini">${esc(rc.title || "Context")}</h3>
         ${rc.summary ? `<p class="dd-run-sum">${esc(rc.summary)}</p>` : ""}
         ${Array.isArray(rc.points) && rc.points.length ? `<dl class="stats kf">${rc.points.map((k) => `<div><dt>${esc(k.label)}</dt><dd>${esc(k.value)}${k.note ? `<small>${esc(k.note)}</small>` : ""}</dd></div>`).join("")}</dl>` : ""}
-        ${Array.isArray(rc.signals) && rc.signals.length ? `<div class="block"><h4>What was visible at the time</h4><ul class="bullets">${rc.signals.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+        ${Array.isArray(rc.signals) && rc.signals.length ? `<div class="block"><h4>${esc(rc.signalsTitle || "What was visible at the time")}</h4><ul class="bullets">${rc.signals.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
         ${rc.caveat ? `<p class="fineprint top">${esc(rc.caveat)}</p>` : ""}
         ${(rc.sources || []).length ? `<div class="srcs tbl-src">${rc.sources.map((x) => srcLink(x.url, x.label)).join("")}</div>` : ""}
       </div>` : "";
+    const routes = { "Growth": "#/growth", "Risk It": "#/riskit", "Early Inflection": "#/early" };
+    const lists = (Array.isArray(d.listContext) ? d.listContext : []).filter((c) => c && c.list);
+    const listPanels = lists.map((c) => {
+      const isRisk = c.list === "Risk It", route = routes[c.list] || "#/";
+      const where = `${c.role === "bench" ? "Backup" : "Pick"} #${esc(c.rank)}${c.of ? ` of ${esc(c.of)}` : ""}`;
+      return `<div class="panel pad dd-list">
+        <div class="dd-ei-head"><h3 class="mini">On ${esc(c.list)}</h3>${typeof c.score === "number" ? `<span class="score-badge${c.list === "Early Inflection" ? " is-early" : ""}" title="${esc(c.list)} score (0–100)">${esc(c.score)}<small>/100</small></span>` : ""}</div>
+        <p class="dd-run-sum">${where}${c.riskLevel ? ` · Risk: <strong>${esc(c.riskLevel)}</strong>` : ""}${c.priceDate ? ` · prices ${esc(fmtShortDate(c.priceDate))}` : ""}</p>
+        ${c.trend ? `<p class="co-note">${esc(c.trend)}</p>` : ""}
+        ${Array.isArray(c.drivers) && c.drivers.length ? `<div class="block"><h4>Score breakdown</h4><ul class="bullets drivers">${c.drivers.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>` : ""}
+        ${Array.isArray(c.risks) && c.risks.length ? `<details class="block ei-drivers"><summary>${isRisk ? "Flagged risks" : "Risks"}</summary><ul class="bullets">${c.risks.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></details>` : ""}
+        <p class="fineprint top">Copied from the ${esc(c.list)} list${c.listUpdated ? ` updated ${esc(fmtShortDate(c.listUpdated))}` : ""}; refreshed with the daily run.</p>
+        <div class="tbl-src"><a class="src" href="${route}">Open the ${esc(c.list)} tab</a></div>
+      </div>`;
+    }).join("");
     return `<section class="group" id="g-grades" aria-labelledby="h-grades">
       ${sectionHead("grades", "Grades", asOf(gr.asOf ? `computed ${fmtShortDate(gr.asOf)}` : ""))}
-      <div class="co-grid">${gradesPanel}${eiPanel}${rcPanel}</div>
+      <div class="co-grid">${gradesPanel}${listPanels}${eiPanel}${rcPanel}</div>
     </section>`;
   }
 

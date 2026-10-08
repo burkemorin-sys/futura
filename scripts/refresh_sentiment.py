@@ -11,8 +11,24 @@ Usage: python3 scripts/refresh_sentiment.py [--pages 4]
 import json, sys, time, urllib.request, urllib.error, datetime, pathlib, argparse
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; FuturaDashboard/1.0; +https://burkemorin-sys.github.io/futura/)"}
-TICKERS = ["TSLA", "SPCX"]
+BASE_TICKERS = ["TSLA", "SPCX"]
 OUT = pathlib.Path(__file__).resolve().parent.parent / "data" / "sentiment.json"
+INDEX = OUT.parent / "companies" / "index.json"
+
+
+def deep_dive_tickers():
+    """TSLA and SPCX plus every Search deep dive listed in data/companies/index.json."""
+    out = list(BASE_TICKERS)
+    try:
+        for t in json.loads(INDEX.read_text()).get("tickers", {}):
+            if t.upper() not in out:
+                out.append(t.upper())
+    except Exception:
+        pass
+    return out
+
+
+TICKERS = deep_dive_tickers()
 
 
 def get_json(url, timeout=20):

@@ -16,7 +16,7 @@ data/spacex.json      SpaceX tab: snapshot, IPO facts, fundamentals, investors, 
 data/tesla.json       Tesla tab: same schema as spacex.json
 data/sentiment.json   social-sentiment snapshot, written by scripts/refresh_sentiment.py
 data/cassiopeia.json  Cassiopeia tab: mythology, observing, stars, deep-sky, motif note
-data/companies/       Search deep-dive JSONs + index.json (AAPL, NVDA, MU, LITE; SPCX/TSLA aliased)
+data/companies/       Search deep-dive JSONs + index.json (AAPL, NVDA, MU, LITE, LUNR; SPCX/TSLA aliased)
 scripts/refresh_sentiment.py         refreshes data/sentiment.json (Python 3 stdlib only, no keys)
 scripts/refresh-data.workflow.yml    optional GitHub Actions schedule (see "Automated refresh")
 manifest.webmanifest  PWA manifest (start_url/scope "./" so it works under /futura/)
@@ -63,14 +63,15 @@ When enabled, `js/music.js` plays an original, generative instrumental for nylon
 - `data/companies/index.json` — map of ticker → file (includes aliases `SPCX` → `spacex.json`, `TSLA` → `tesla.json`)
 - `data/companies/{TICKER}.json` — same schema as `spacex.json` / `tesla.json`
 
-Seeded deep dives: AAPL, NVDA, MU, LITE, SPCX, TSLA.
+Seeded deep dives: AAPL, NVDA, MU, LITE, LUNR, SPCX, TSLA.
 
 **Deep-dive grades.** `python3 scripts/futura_grades.py` (run by the daily refresh after the lists are graded) also grades every
 deep dive (`data/companies/*.json`, `spacex.json`, `tesla.json`) A+ to F on Growth, Value, Momentum and Profit, percentile-ranked
 against a reference pool of every Growth, Risk It and Early Inflection pick and backup (deduplicated) plus the ticker itself.
 It writes `grades`, `gradeInputs`, `gradeMetrics`, `grading` (pool note, inputs, sources) and `earlyInflection` (the Early
 Inflection checklist and 0–100 score: copied from the screen when the ticker is in it, otherwise computed off-screen with
-`update_early_inflection.evaluate_ticker()`). Hand-curated `runContext` (e.g. LITE's 2025 run) and `gradeNote` fields are left
+`update_early_inflection.evaluate_ticker()`) and `listContext` (rank, score, risk level and score breakdown copied from any
+Growth, Risk It or Early Inflection list the ticker is on, shown as an "On Risk It"-style panel). Hand-curated `runContext` (e.g. LITE's 2025 run) and `gradeNote` fields are left
 alone. The Search view shows these in a **Grades** section above Fundamentals. Only grades: `--only=companies`. For any other ticker the Live widgets still work and the page shows an honest empty state ("No deep dive on file… Ask Investing App to research this ticker"). Recent searches are stored in `localStorage.searchRecent`. On mobile, Search lives under **More**.
 
 ## Home
@@ -201,7 +202,7 @@ Both files share one schema. Every displayed number has a source link nearby, an
 
 ## data/sentiment.json (social sentiment)
 
-Written by `python3 scripts/refresh_sentiment.py`, which takes no keys and uses only the standard library. The browser can't query these sources directly because none of them send CORS headers, so the site reads this snapshot instead.
+Written by `python3 scripts/refresh_sentiment.py`, which takes no keys and uses only the standard library. The browser can't query these sources directly because none of them send CORS headers, so the site reads this snapshot instead. It covers TSLA, SPCX and every ticker in `data/companies/index.json`.
 
 | Source | What it measures |
 | --- | --- |
