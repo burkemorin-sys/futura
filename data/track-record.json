@@ -3,7 +3,7 @@
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
  "lastUpdated": "2026-10-07",
- "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh.",
+ "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start.",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
   "SPY": "SPDR S&P 500 ETF"
@@ -63,7 +63,18 @@
    "RCAT": 6.15,
    "LQDA": 26.68,
    "QQQ": 757.73,
-   "SPY": 777.22
+   "SPY": 777.22,
+   "KLIC": 94.95,
+   "SIMO": 285.78,
+   "SITM": 665.16,
+   "SMCI": 44.94,
+   "HLIT": 11.27,
+   "TTMI": 128.2,
+   "NESR": 23.63,
+   "LSCC": 130.99,
+   "TVTX": 53.44,
+   "AEIS": 292.25,
+   "UCTT": 71.42
   }
  },
  "lists": {
@@ -288,7 +299,9 @@
     "of": 12,
     "openBeat": 7,
     "openOf": 12
-   }
+   },
+   "startDate": "2026-10-07",
+   "startPriceDate": "2026-10-06"
   },
   "riskit": {
    "label": "Risk It",
@@ -511,6 +524,229 @@
     "of": 12,
     "openBeat": 2,
     "openOf": 12
+   },
+   "startDate": "2026-10-07",
+   "startPriceDate": "2026-10-06"
+  },
+  "early": {
+   "label": "Early Inflection",
+   "startDate": "2026-10-07",
+   "startPriceDate": "2026-10-07",
+   "holdings": [
+    {
+     "ticker": "KLIC",
+     "company": "Kulicke and Soffa Industries Inc.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 94.95,
+     "lastPrice": 94.95,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "SIMO",
+     "company": "Silicon Motion Technology Corporation",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 285.78,
+     "lastPrice": 285.78,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "SITM",
+     "company": "SiTime Corporation",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 665.16,
+     "lastPrice": 665.16,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "URGN",
+     "company": "UroGen Pharma Ltd.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 40.7,
+     "lastPrice": 40.7,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "SMCI",
+     "company": "Super Micro Computer Inc.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 44.94,
+     "lastPrice": 44.94,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "HLIT",
+     "company": "Harmonic Inc.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 11.27,
+     "lastPrice": 11.27,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "TTMI",
+     "company": "TTM Technologies Inc.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 128.2,
+     "lastPrice": 128.2,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "NESR",
+     "company": "National Energy Services Reunited Corp",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 23.63,
+     "lastPrice": 23.63,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "LSCC",
+     "company": "Lattice Semiconductor Corporation",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 130.99,
+     "lastPrice": 130.99,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "TVTX",
+     "company": "Travere Therapeutics Inc.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 53.44,
+     "lastPrice": 53.44,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "AEIS",
+     "company": "Advanced Energy Industries Inc.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 292.25,
+     "lastPrice": 292.25,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "UCTT",
+     "company": "Ultra Clean Holdings Inc.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 71.42,
+     "lastPrice": 71.42,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    }
+   ],
+   "closed": [],
+   "segments": [
+    {
+     "start": "2026-10-07",
+     "startValue": 100.0,
+     "tickers": [
+      "KLIC",
+      "SIMO",
+      "SITM",
+      "URGN",
+      "SMCI",
+      "HLIT",
+      "TTMI",
+      "NESR",
+      "LSCC",
+      "TVTX",
+      "AEIS",
+      "UCTT"
+     ]
+    }
+   ],
+   "log": [
+    {
+     "date": "2026-10-07",
+     "priceDate": "2026-10-07",
+     "action": "start",
+     "note": "Tracking began with the 12 published Early Inflection picks at the 2026-10-07 close",
+     "tickers": [
+      "KLIC",
+      "SIMO",
+      "SITM",
+      "URGN",
+      "SMCI",
+      "HLIT",
+      "TTMI",
+      "NESR",
+      "LSCC",
+      "TVTX",
+      "AEIS",
+      "UCTT"
+     ]
+    }
+   ],
+   "series": [
+    [
+     "2026-10-07",
+     100.0
+    ]
+   ],
+   "returnPct": 0.0,
+   "vsQQQPct": 0.0,
+   "vsSPYPct": 0.0,
+   "hitRate": {
+    "beat": 0,
+    "of": 0,
+    "openBeat": 0,
+    "openOf": 0
    }
   }
  },

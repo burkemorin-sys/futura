@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Futura letter grades for Growth (data/growth-picks.json) and Risk It (data/risk-it.json).
+"""Futura letter grades for Growth (data/growth-picks.json), Risk It (data/risk-it.json) and Early Inflection (data/early-inflection.json).
 
 For every entry in `picks` and `bench` this script:
   1. pulls real inputs from public pages (no keys, stdlib only):
@@ -18,6 +18,7 @@ For every entry in `picks` and `bench` this script:
 Usage:
   python3 scripts/futura_grades.py            # fetch fresh inputs, then grade both lists
   python3 scripts/futura_grades.py --no-fetch # re-grade from the metrics already stored in the JSON
+  python3 scripts/futura_grades.py --only=early  # just one list (growth, riskit, early; comma-separated)
 """
 import datetime as dt
 import json
@@ -28,7 +29,8 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FILES = {"growth": os.path.join(ROOT, "data", "growth-picks.json"), "riskit": os.path.join(ROOT, "data", "risk-it.json")}
+FILES = {"growth": os.path.join(ROOT, "data", "growth-picks.json"), "riskit": os.path.join(ROOT, "data", "risk-it.json"),
+         "early": os.path.join(ROOT, "data", "early-inflection.json")}
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 LETTERS = [(97, "A+"), (90, "A"), (83, "A-"), (77, "B+"), (70, "B"), (63, "B-"), (57, "C+"), (50, "C"),
            (43, "C-"), (37, "D+"), (30, "D"), (23, "D-"), (0, "F")]
@@ -219,7 +221,13 @@ def main():
     if fetch:
         spy1y, _ = change_since(nasdaq_history("SPY", "etf"), 12)
         print(f"SPY 1-yr price change: {spy1y}%")
+    only = [a.split("=", 1)[1] for a in sys.argv if a.startswith("--only=")]
     for key, path in FILES.items():
+        if only and key not in only[0].split(","):
+            continue
+        if not os.path.exists(path):
+            print(f"skip {key}: {path} missing")
+            continue
         with open(path) as f:
             data = json.load(f)
         pool = [e for e in (data.get("picks") or []) + (data.get("bench") or []) if e.get("ticker")]

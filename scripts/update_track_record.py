@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Maintain data/track-record.json: how the Growth and Risk It picks perform vs QQQ (and SPY).
+"""Maintain data/track-record.json: how the Growth, Risk It and Early Inflection picks perform vs QQQ (and SPY).
+
+A list that is added later (Early Inflection joined on Oct 8, 2026) starts at 100 on the latest stored close
+when it first appears (no backfill); its benchmark comparison and hit rate run from its own start.
 
 Model: each list is an equal-weight portfolio of its current 12 picks. Between pick changes it is
 buy-and-hold (weights drift); whenever the picks change it is rebalanced back to equal weight at
@@ -31,6 +34,7 @@ TRACK = os.path.join(ROOT, "data", "track-record.json")
 LISTS = {
     "growth": {"file": os.path.join(ROOT, "data", "growth-picks.json"), "label": "Growth"},
     "riskit": {"file": os.path.join(ROOT, "data", "risk-it.json"), "label": "Risk It"},
+    "early": {"file": os.path.join(ROOT, "data", "early-inflection.json"), "label": "Early Inflection"},
 }
 BENCH = ["QQQ", "SPY"]
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
@@ -66,13 +70,15 @@ def nasdaq_closes(ticker, since):
 
 
 def load_picks(key):
+    if not os.path.exists(LISTS[key]["file"]):
+        return []
     with open(LISTS[key]["file"]) as f:
         d = json.load(f)
     return [p for p in d.get("picks") or [] if p.get("ticker")]
 
 
 def init():
-    picks = {k: load_picks(k) for k in LISTS}
+    picks = {k: load_picks(k) for k in ("growth", "riskit")}
     base = sorted({p.get("priceDate") for k in picks for p in picks[k] if p.get("priceDate")})
     if len(base) != 1:
         sys.exit(f"expected one shared priceDate across picks, got {base}")
@@ -128,14 +134,20 @@ def recompute(data):
     data["benchSeries"] = {t: [[d, round(prices[d][t] / prices[base][t] * 100, 3)] for d in days] for t in BENCH}
     for k, L in data["lists"].items():
         segs = L["segments"]
+        start = segs[0]["start"]
+        L.setdefault("startDate", data["trackingStart"])
+        L.setdefault("startPriceDate", start)
         series = []
         for d in days:
+            if d < start:
+                continue
             seg = [s for s in segs if s["start"] <= d][-1]
             series.append([d, round(value_on(prices, seg, d), 3)])
         L["series"] = series
         L["returnPct"] = round(series[-1][1] - 100, 2)
         for b in BENCH:
-            L[f"vs{b}Pct"] = round(L["returnPct"] - (data["benchSeries"][b][-1][1] - 100), 2)
+            bret = (prices[latest][b] / prices[start][b] - 1) * 100
+            L[f"vs{b}Pct"] = round(L["returnPct"] - bret, 2)
         rows = []
         for h in L["holdings"]:
             end = prices[latest].get(h["ticker"])
@@ -190,6 +202,30 @@ def main():
             break
         prices[d] = {t: fetched[t][d] for t in need if d in fetched[t]}
     latest = max(prices)
+    # 1b) Lists that are new to the file start at 100 on the latest stored close (no backfill).
+    today_iso = dt.date.today().isoformat()
+    for k in LISTS:
+        if k in data["lists"] or not current.get(k):
+            continue
+        ps = current[k]
+        closes = {p["ticker"]: nasdaq_closes(p["ticker"], latest).get(latest) for p in ps}
+        missing = [t for t, v in closes.items() if v is None]
+        if missing:
+            print(f"{k}: can't start yet, no {latest} close for {missing}")
+            continue
+        for t, v in closes.items():
+            prices[latest][t] = v
+        data["lists"][k] = {
+            "label": LISTS[k]["label"], "startDate": today_iso, "startPriceDate": latest,
+            "holdings": [{"ticker": p["ticker"], "company": p.get("company", ""), "entryDate": today_iso,
+                          "entryPriceDate": latest, "entryPrice": closes[p["ticker"]]} for p in ps],
+            "closed": [],
+            "segments": [{"start": latest, "startValue": 100.0, "tickers": [p["ticker"] for p in ps]}],
+            "log": [{"date": today_iso, "priceDate": latest, "action": "start",
+                     "note": f"Tracking began with the {len(ps)} published {LISTS[k]['label']} picks at the {latest} close",
+                     "tickers": [p["ticker"] for p in ps]}],
+        }
+        print(f"{k}: started tracking {len(ps)} picks at the {latest} close")
     # Make sure every current pick has a close on the latest day (it may enter today).
     for t in need:
         if t not in prices[latest] and latest in fetched.get(t, {}):
@@ -232,6 +268,9 @@ def main():
                          "note": f"Rebalanced to equal weight across {len(tickers)} picks"})
         print(f"{k}: removed {[h['ticker'] for h in removed]}, added {[p['ticker'] for p in added]}")
 
+    if "early" in data["lists"] and "Early Inflection" not in data.get("method", ""):
+        data["method"] += (" Early Inflection was added on Oct 8, 2026: it starts at 100 on the "
+                           f"{data['lists']['early']['startPriceDate']} close (no backfill), and its QQQ/SPY comparison and hit rate run from that start.")
     recompute(data)
     with open(TRACK, "w") as f:
         json.dump(data, f, indent=1)

@@ -3,7 +3,7 @@
  * - data/*.json: network-first, falling back to the last cached copy when offline.
  * - Cross-origin requests (TradingView widgets, CNBC live quotes) are not touched.
  * Bump VERSION whenever the shell list changes; old caches are deleted on activate. */
-const VERSION = "futura-v20-2026-10-08";
+const VERSION = "futura-v21-2026-10-08";
 const SHELL = `${VERSION}-shell`;
 const DATA = `${VERSION}-data`;
 const SHELL_FILES = [
@@ -13,7 +13,7 @@ const SHELL_FILES = [
   "icons/icon-maskable-512.png", "icons/apple-touch-icon.png", "icons/favicon-32.png",
 ];
 const DATA_FILES = [
-  "data/ipos.json", "data/growth-picks.json", "data/risk-it.json", "data/spacex.json", "data/tesla.json", "data/sentiment.json", "data/cassiopeia.json", "data/etfs.json", "data/track-record.json",
+  "data/ipos.json", "data/growth-picks.json", "data/risk-it.json", "data/spacex.json", "data/tesla.json", "data/sentiment.json", "data/cassiopeia.json", "data/etfs.json", "data/track-record.json", "data/early-inflection.json",
   "data/companies/index.json", "data/companies/AAPL.json", "data/companies/NVDA.json", "data/companies/MU.json",
 ];
 

@@ -32,6 +32,9 @@
     chevUp: '<path d="M6 14l6-6 6 6"/>',
     chevDown: '<path d="M6 10l6 6 6-6"/>',
     chart: '<path d="M4 4v16h16"/><path d="M7 15l4-5 3 3 5-7"/><circle cx="19" cy="6" r="1.2"/>',
+    sunrise: '<path d="M3 18.5h18"/><path d="M7 18.5a5 5 0 0 1 10 0"/><path d="M12 5v3.5M5.6 9.6l1.9 1.9M18.4 9.6l-1.9 1.9M3 14.5h2M19 14.5h2"/>',
+    check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+    minus: '<path d="M7 12h10"/>',
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
 
@@ -388,6 +391,7 @@
     { id: "ipos", label: "IPO Tracker", short: "IPOs", icon: "rocket", render: renderIpoTracker },
     { id: "growth", label: "Growth Picks", short: "Growth", icon: "growth", render: renderGrowth },
     { id: "riskit", label: "Risk It", short: "Risk It", icon: "flame", render: renderRiskIt },
+    { id: "early", label: "Early Inflection", short: "Early", icon: "sunrise", render: renderEarly, overflow: true },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex"), overflow: true },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla"), overflow: true },
     { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch },
@@ -666,13 +670,14 @@
   /* ================= Growth Picks ================= */
   const GROWTH_MODES = {
     growth: { id: "growth", file: "data/growth-picks.json", example: "data/growth-picks.example.json", dismissKey: "growthDismissed", sortKey: "growthSort", title: "Growth Picks", sub: "Conservative growth at a reasonable price", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("growthSort") || "default" } },
-    riskit: { id: "riskit", file: "data/risk-it.json", example: null, dismissKey: "riskItDismissed", sortKey: "riskItSort", title: "Risk It", sub: "Speculative high-growth · higher risk", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("riskItSort") || "default" } },
+    riskit: { id: "riskit", file: "data/risk-it.json", example: null, dismissKey: "riskItDismissed", sortKey: "riskItSort", title: "Risk It", sub: "Speculative high-growth · higher risk", scoreLabel: "Risk It score", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("riskItSort") || "default" } },
+    early: { id: "early", file: "data/early-inflection.json", example: null, dismissKey: "earlyDismissed", sortKey: "earlySort", title: "Early Inflection", sub: "Turning up, not yet run · the LITE 2025 pattern", scoreLabel: "Early Inflection score", banner: "EARLY-STAGE", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("earlySort") || "default" } },
   };
   let gMode = GROWTH_MODES.growth;
   const growthState = new Proxy({}, { get: (_, k) => gMode.state[k], set: (_, k, v) => { gMode.state[k] = v; return true; } });
   const SORTS = {
     default: { label: "Default order" },
-    score: { label: "Risk It score", key: (p) => num(p.score), dir: -1, only: "riskit" },
+    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early"] },
     growth: { label: "Revenue growth", key: (p) => pctNum(p.revenueGrowth), dir: -1 },
     upside: { label: "Upside to target", key: (p) => upside(p), dir: -1 },
     peg: { label: "PEG (low → high)", key: (p) => num(p.peg), dir: 1 },
@@ -712,6 +717,7 @@
   const fmtPct = (v) => (typeof v === "number" ? `${pctNum(v).toFixed(0)}%` : isNA(v) ? "n/a" : String(v));
 
   function renderRiskIt(el) { gMode = GROWTH_MODES.riskit; return loadGrowth(el); }
+  function renderEarly(el) { gMode = GROWTH_MODES.early; return loadGrowth(el); }
   async function renderGrowth(el) { gMode = GROWTH_MODES.growth; return loadGrowth(el); }
   async function loadGrowth(el) {
     if (!growthState.data) {
@@ -760,19 +766,25 @@
 
     const chip = (name, n) => `<button class="chip" data-sector="${esc(name)}" aria-pressed="${growthState.sector === name}">${esc(name)} <span class="count">${n}</span></button>`;
     const chips = chip("All", picks.length) + sectors.map((sec) => chip(sec, picks.filter((p) => sectorGroup(p) === sec).length)).join("");
-    const sortSel = `<select class="select" id="growth-sort" aria-label="Sort picks">${Object.entries(SORTS).filter(([, v]) => !v.only || v.only === gMode.id)
-      .map(([k, v]) => `<option value="${k}"${k === growthState.sort ? " selected" : ""}>${esc(v.label)}</option>`).join("")}</select>`;
+    const sortSel = `<select class="select" id="growth-sort" aria-label="Sort picks">${Object.entries(SORTS).filter(([, v]) => !v.only || [].concat(v.only).includes(gMode.id))
+      .map(([k, v]) => `<option value="${k}"${k === growthState.sort ? " selected" : ""}>${esc(k === "score" ? gMode.scoreLabel || v.label : v.label)}</option>`).join("")}</select>`;
 
     el.innerHTML = `
       ${hero(gMode.title, gMode.sub, `<span>${svg("clock")}Last updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("list")}${picks.length} ${picks.length === 1 ? "pick" : "picks"}</span>`)}
       ${growthState.isExample ? `<div class="example-banner" role="note">${svg("warn")}<span><strong>EXAMPLE DATA</strong> — fictional placeholder for testing. Real picks will load automatically from data/growth-picks.json.</span></div>` : ""}
-      ${isNA(d.disclaimer) ? "" : `<div class="example-banner riskit-note" role="note">${svg("warn")}<span><strong>SPECULATIVE</strong> — ${esc(d.disclaimer)}</span></div>`}
-      ${isNA(d.method) ? "" : `<section class="panel method"><h2>Method</h2><p>${esc(d.method)}</p>${isNA(d.dataNotes) ? "" : `<p class="notes">${esc(d.dataNotes)}</p>`}</section>`}
+      ${isNA(d.disclaimer) ? "" : `<div class="example-banner riskit-note${gMode.id === "early" ? " early-banner" : ""}" role="note">${svg("warn")}<span><strong>${esc(gMode.banner || "SPECULATIVE")}</strong> — ${esc(d.disclaimer)}</span></div>`}
+      ${isNA(d.pattern) ? "" : `<section class="panel method ei-pattern"><h2>The LITE 2025 pattern</h2><p>${esc(d.pattern)}</p></section>`}
+      ${isNA(d.method) ? "" : `<section class="panel method"><h2>Method</h2><p>${esc(d.method)}</p>${Array.isArray(d.rubric) && d.rubric.length ? rubricHTML(d.rubric) : ""}${isNA(d.dataNotes) ? "" : `<p class="notes">${esc(d.dataNotes)}</p>`}</section>`}
       <a class="panel track-link" href="#/track?list=${gMode.id}" data-track-link="${gMode.id}">
         <span class="home-tile-icon">${svg("chart")}</span>
-        <span class="tl-body"><span class="tl-title">Track record</span><span class="tl-line">How these picks are doing vs QQQ since Oct 7, 2026</span></span>
+        <span class="tl-body"><span class="tl-title">Track record</span><span class="tl-line">How these picks are doing vs QQQ</span></span>
         <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </a>
+      ${gMode.id === "early" ? "" : `<a class="panel track-link ei-link" href="#/early">
+        <span class="home-tile-icon">${svg("sunrise")}</span>
+        <span class="tl-body"><span class="tl-title">Early Inflection</span><span class="tl-line">LITE-2025-style setups: revenue turning up, stock not yet run</span></span>
+        <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </a>`}
       ${allPicks.some((p) => p.grades) ? gradeLegendHTML(d, allPicks.length + bench.length) : ""}
       ${liveBadgeHTML()}
       <div class="toolbar" role="toolbar" aria-label="Sort and filter by sector">
@@ -850,6 +862,20 @@
     </details>`;
   }
 
+  function rubricHTML(rows) {
+    const total = rows.reduce((n, r) => n + (num(r.points) || 0), 0);
+    return `<details class="ei-rubric"><summary>Scoring rubric (${total} points)</summary><ul class="bullets">${rows.map((r) => `<li><strong>${esc(r.component)} ${esc(r.points)}</strong>: ${esc(r.how)}</li>`).join("")}</ul></details>`;
+  }
+  function checklistHTML(items) {
+    if (!Array.isArray(items) || !items.length) return "";
+    const known = items.filter((i) => i.met === true || i.met === false);
+    const met = known.filter((i) => i.met === true).length;
+    return `<div class="block"><h4>LITE-pattern checklist <span class="ck-count">${met}/${known.length} met</span></h4><ul class="checklist">${items.map((i) => {
+      const st = i.met === true ? "met" : i.met === false ? "miss" : "na";
+      return `<li class="ck-${st}"><span class="ck-ico" aria-label="${st === "met" ? "Met" : st === "miss" ? "Missed" : "Not available yet"}">${svg(st === "met" ? "check" : st === "miss" ? "x" : "minus")}</span><span class="ck-body"><span class="ck-label">${esc(i.label)}</span>${isNA(i.detail) ? "" : `<span class="ck-detail">${esc(i.detail)}</span>`}</span></li>`;
+    }).join("")}</ul></div>`;
+  }
+
   function pickCard(p) {
     const stat = (label, val) => `<div><dt>${label}</dt><dd class="${val === "n/a" ? "na" : ""}">${esc(val)}</dd></div>`;
     const risks = Array.isArray(p.risks) ? p.risks.filter((r) => !isNA(r)) : isNA(p.risks) ? [] : [p.risks];
@@ -866,6 +892,7 @@
             ${tick ? `<span class="tag ticker">${esc(tick)}</span>` : `<span class="tag ticker na">n/a</span>`}
             ${isNA(p.sector) ? "" : `<span class="tag sector">${esc(p.sector)}</span>`}
             ${p.riskLevel ? `<span class="tag risk-lvl${/very/i.test(p.riskLevel) ? " very" : ""}">${esc(p.riskLevel)} risk</span>` : ""}
+            ${(Array.isArray(p.alsoIn) ? p.alsoIn : []).map((l) => `<span class="tag also">Also in ${esc(l)}</span>`).join("")}
             ${tick ? followToggleHTML(tick, { compact: true }) : ""}
           </div>
         </div>
@@ -873,15 +900,20 @@
           <div class="p">${esc(money(p.price))}</div>
           <div class="chg"></div>
           <div class="d">${isNA(p.priceDate) ? "" : `close ${esc(fmtShortDate(p.priceDate).replace(/, \d{4}$/, ""))}`}</div>
-          ${typeof p.score === "number" ? `<div class="score-badge" title="Risk It score (0–100)">${p.score}<small>/100</small></div>` : ""}
+          ${typeof p.score === "number" ? `<div class="score-badge${gMode.id === "early" ? " is-early" : ""}" title="${esc(gMode.scoreLabel || "Score")} (0–100)">${p.score}<small>/100</small></div>` : ""}
         </div>
       </div>
       <dl class="stats">
         ${stat("Market cap", fmtCap(p.marketCap))}${growthStat(p.revenueGrowth)}
         ${stat("Forward P/E", fmtMult(p.forwardPE))}${stat("PEG", typeof p.peg === "number" ? p.peg.toFixed(2) : isNA(p.peg) ? "n/a" : String(p.peg))}
       </dl>
+      ${Array.isArray(p.keyFigures) && p.keyFigures.length ? `<dl class="stats kf">${p.keyFigures.map((k) => stat(esc(k.label), isNA(k.value) ? "n/a" : String(k.value))).join("")}</dl>` : ""}
       ${gradesHTML(p)}
-      ${Array.isArray(p.drivers) && p.drivers.length ? `<div class="block"><h4>Score drivers</h4><ul class="bullets drivers">${p.drivers.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>` : ""}
+      ${p.catalyst && !isNA(p.catalyst.text) ? `<div class="block ei-catalyst"><h4>Catalyst${isNA(p.catalyst.asOf) ? "" : ` <span class="ck-count">${esc(fmtShortDate(p.catalyst.asOf))}</span>`}</h4><p>${esc(p.catalyst.text)}${/^https?:\/\//.test(p.catalyst.source || "") ? ` <a class="src" href="${esc(p.catalyst.source)}" target="_blank" rel="noopener">Source ↗</a>` : ""}</p></div>` : ""}
+      ${checklistHTML(p.checklist)}
+      ${Array.isArray(p.drivers) && p.drivers.length ? (Array.isArray(p.checklist)
+        ? `<details class="block ei-drivers"><summary>Score breakdown</summary><ul class="bullets drivers">${p.drivers.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></details>`
+        : `<div class="block"><h4>Score drivers</h4><ul class="bullets drivers">${p.drivers.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>`) : ""}
       ${isNA(p.trend) ? "" : `<div class="block"><h4>Trend</h4><p>${esc(p.trend)}</p></div>`}
       ${isNA(p.fundamentals) ? "" : `<div class="block"><h4>Fundamentals</h4><p>${esc(p.fundamentals)}</p></div>`}
       ${risks.length ? `<div class="block"><h4>Risks</h4><ul class="bullets risk">${risks.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>` : ""}
@@ -911,8 +943,9 @@
       const L = d.lists && d.lists[a.dataset.trackLink];
       const q = d.benchSeries && d.benchSeries.QQQ;
       if (!L || !q || !a.isConnected) return;
-      const qr = q[q.length - 1][1] - 100;
-      a.querySelector(".tl-line").innerHTML = `Since Oct 7, 2026: <span class="${retTone(L.returnPct)}">${esc(fmtRet(L.returnPct))}</span> vs QQQ <span class="${retTone(qr)}">${esc(fmtRet(qr))}</span> · ${tradingDays(d)} trading day${tradingDays(d) === 1 ? "" : "s"}, too early to judge`;
+      const qr = typeof L.vsQQQPct === "number" ? L.returnPct - L.vsQQQPct : q[q.length - 1][1] - 100;
+      const days = Math.max(0, (L.series || []).length - 1);
+      a.querySelector(".tl-line").innerHTML = `Since ${esc(fmtShortDate(L.startDate || d.trackingStart))}: <span class="${retTone(L.returnPct)}">${esc(fmtRet(L.returnPct))}</span> vs QQQ <span class="${retTone(qr)}">${esc(fmtRet(qr))}</span> · ${days} trading day${days === 1 ? "" : "s"}, too early to judge`;
     } catch (e) { /* link still works without numbers */ }
   }
 
@@ -956,8 +989,8 @@
     const benchRet = (s) => (s && s.length ? s[s.length - 1][1] - 100 : null);
     const summary = Object.entries(d.lists).map(([k, L]) => {
       const hr = L.hitRate || {};
-      return `<button type="button" class="panel tr-sum ${k === "riskit" ? "is-risk" : ""}${trackState.list === k ? " is-active" : ""}" data-list="${esc(k)}" aria-pressed="${trackState.list === k}">
-        <span class="tr-sum-label">${esc(L.label)}</span>
+      return `<button type="button" class="panel tr-sum ${k === "riskit" ? "is-risk" : k === "early" ? "is-early" : ""}${trackState.list === k ? " is-active" : ""}" data-list="${esc(k)}" aria-pressed="${trackState.list === k}">
+        <span class="tr-sum-label">${esc(L.label)}</span>${(L.startPriceDate || L.startDate) && (L.startPriceDate || L.startDate) !== d.baseDate ? `<span class="tr-sum-since">from ${esc(fmtShortDate(L.startPriceDate || L.startDate).replace(/, \d{4}$/, ""))} close</span>` : ""}
         <span class="tr-sum-ret ${retTone(L.returnPct)}">${esc(fmtRet(L.returnPct))}</span>
         <span class="tr-sum-vs">vs QQQ <b class="${retTone(L.vsQQQPct)}">${esc(fmtRet(L.vsQQQPct).replace("%", " pts"))}</b> · vs SPY <b class="${retTone(L.vsSPYPct)}">${esc(fmtRet(L.vsSPYPct).replace("%", " pts"))}</b></span>
         <span class="tr-sum-hit">${hr.of ? `${hr.beat} of ${hr.of} picks beat QQQ (${Math.round((hr.beat / hr.of) * 100)}%)` : "Hit rate after the first close"}</span>
@@ -966,6 +999,7 @@
     const lines = [
       { label: "Growth", cls: "l-growth", points: d.lists.growth ? d.lists.growth.series : [] },
       { label: "Risk It", cls: "l-risk", points: d.lists.riskit ? d.lists.riskit.series : [] },
+      ...(d.lists.early ? [{ label: "Early Inflection", cls: "l-early", points: d.lists.early.series || [] }] : []),
       { label: "QQQ", cls: "l-qqq", points: qqq || [] },
       { label: "SPY", cls: "l-spy", points: spy || [] },
     ];
@@ -980,7 +1014,7 @@
         <td data-label="Entry">${esc(money(h.entryPrice))}<span class="row-note">${esc(fmtShortDate(h.entryPriceDate).replace(/, \d{4}$/, ""))} close</span></td>
         <td data-label="Last close">${esc(money(h.lastPrice))}</td>
         <td data-label="Return" class="${retTone(h.returnPct)}">${esc(fmtRet(h.returnPct))}</td>
-        <td data-label="vs QQQ" class="${h.beatQQQ ? "up" : "down"}">${h.lastPriceDate === h.entryPriceDate ? "–" : h.beatQQQ ? "Beat" : "Lagged"}</td>
+        <td data-label="vs QQQ" class="${h.lastPriceDate === h.entryPriceDate ? "" : h.beatQQQ ? "up" : "down"}">${h.lastPriceDate === h.entryPriceDate ? "–" : h.beatQQQ ? "Beat" : "Lagged"}</td>
         <td data-label="Today"><span class="lq lq-mini" data-lq="${esc(h.ticker)}"><span class="chg"></span></span></td>
       </tr>`).join("");
     const closed = (L.closed || []).map((c) => `<tr>
@@ -998,7 +1032,7 @@
 
     el.innerHTML = `
       ${hero("Track record", "Picks vs QQQ", `<span>${svg("clock")}Tracking since ${esc(fmtShortDate(d.trackingStart))}</span><span>${svg("chart")}Last close ${esc(fmtShortDate(d.latestDate))}</span>`)}
-      <div class="example-banner early-note" role="note">${svg("warn")}<span><strong>EARLY DAYS</strong>: tracking started Oct 7, 2026, from the ${esc(fmtShortDate(d.baseDate))} close. With ${days} trading day${days === 1 ? "" : "s"} of data these numbers are mostly noise. Give it several months before reading anything into them.</span></div>
+      <div class="example-banner early-note" role="note">${svg("warn")}<span><strong>EARLY DAYS</strong>: tracking started Oct 7, 2026, from the ${esc(fmtShortDate(d.baseDate))} close${d.lists.early && d.lists.early.startPriceDate ? ` (Early Inflection joined from the ${esc(fmtShortDate(d.lists.early.startPriceDate))} close, indexed to 100 on its own start)` : ""}. With ${days} trading day${days === 1 ? "" : "s"} of data these numbers are mostly noise. Give it several months before reading anything into them.</span></div>
       <div class="tr-sums" role="group" aria-label="Choose list">${summary}</div>
       <section class="panel pad tr-chart-panel" aria-label="Performance chart">
         <h3 class="mini">Value of $100 since tracking began</h3>
@@ -1949,7 +1983,8 @@
     { id: "spacex", title: "SpaceX", icon: "orbit", fallback: "SpaceX deep dive — catalysts, holders and valuation" },
     { id: "tesla", title: "Tesla", icon: "bolt", fallback: "Tesla deep dive — catalysts, holders and valuation" },
     { id: "search", title: "Search", icon: "search", fallback: "Look up any US ticker — live quote plus deep dive when on file" },
-    { id: "track", title: "Track Record", icon: "chart", fallback: "How the Growth and Risk It picks are doing vs QQQ and SPY" },
+    { id: "early", title: "Early Inflection", icon: "sunrise", fallback: "LITE-2025-style setups: revenue turning up, stock not yet run" },
+    { id: "track", title: "Track Record", icon: "chart", fallback: "How the Growth, Risk It and Early Inflection picks are doing vs QQQ and SPY" },
     { id: "cassiopeia", title: "Cassiopeia", icon: "cas", fallback: "The five stars behind the Futura W" },
   ];
 
