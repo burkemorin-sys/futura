@@ -621,6 +621,14 @@ def evaluate_ticker(t, spy=None, ind=None):
         why_out.append(f"market cap {fmt_money(mcap)} is outside the screen's $1B-$30B range")
     if t in MINERS:
         why_out.append("bitcoin/crypto miner (excluded)")
+    try:  # the screen also drops commodity producers by Nasdaq industry (COMMODITY_INDUSTRIES)
+        if "uni" not in _IND_CACHE:
+            _IND_CACHE["uni"] = {u["ticker"]: u.get("industry") for u in nasdaq_universe()[0]}
+        nq_ind = _IND_CACHE["uni"].get(t)
+        if nq_ind in COMMODITY_INDUSTRIES:
+            why_out.append(f"commodity producer (Nasdaq industry: {nq_ind}), excluded from the screen")
+    except Exception:  # noqa: BLE001
+        pass
     rev_usd = mcap / fnum(s.get("ps")) if mcap and fnum(s.get("ps")) else None
     if rev_usd is not None and rev_usd < REV_MIN:
         why_out.append("TTM revenue under $100M")

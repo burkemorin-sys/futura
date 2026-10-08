@@ -16,7 +16,7 @@ data/spacex.json      SpaceX tab: snapshot, IPO facts, fundamentals, investors, 
 data/tesla.json       Tesla tab: same schema as spacex.json
 data/sentiment.json   social-sentiment snapshot, written by scripts/refresh_sentiment.py
 data/cassiopeia.json  Cassiopeia tab: mythology, observing, stars, deep-sky, motif note
-data/companies/       Search deep-dive JSONs + index.json (AAPL, NVDA, MU, LITE, LUNR, CEG; SPCX/TSLA aliased)
+data/companies/       Search deep-dive JSONs + index.json (AAPL, NVDA, MU, LITE, LUNR, CEG, ALM; SPCX/TSLA aliased)
 scripts/refresh_sentiment.py         refreshes data/sentiment.json (Python 3 stdlib only, no keys)
 scripts/refresh-data.workflow.yml    optional GitHub Actions schedule (see "Automated refresh")
 manifest.webmanifest  PWA manifest (start_url/scope "./" so it works under /futura/)
@@ -63,7 +63,7 @@ When enabled, `js/music.js` plays an original, generative instrumental for nylon
 - `data/companies/index.json` — map of ticker → file (includes aliases `SPCX` → `spacex.json`, `TSLA` → `tesla.json`)
 - `data/companies/{TICKER}.json` — same schema as `spacex.json` / `tesla.json`
 
-Seeded deep dives: AAPL, NVDA, MU, LITE, LUNR, CEG, SPCX, TSLA.
+Seeded deep dives: AAPL, NVDA, MU, LITE, LUNR, CEG, ALM, SPCX, TSLA.
 
 **Deep-dive grades.** `python3 scripts/futura_grades.py` (run by the daily refresh after the lists are graded) also grades every
 deep dive (`data/companies/*.json`, `spacex.json`, `tesla.json`) A+ to F on Growth, Value, Momentum and Profit, percentile-ranked
