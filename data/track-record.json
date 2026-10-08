@@ -1,0 +1,540 @@
+{
+ "schemaVersion": 1,
+ "trackingStart": "2026-10-07",
+ "baseDate": "2026-10-06",
+ "lastUpdated": "2026-10-07",
+ "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh.",
+ "benchmarks": {
+  "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
+  "SPY": "SPDR S&P 500 ETF"
+ },
+ "prices": {
+  "2026-10-06": {
+   "QQQ": 759.66,
+   "SPY": 779.09,
+   "MU": 1045.56,
+   "ORCL": 144.77,
+   "APP": 278.78,
+   "RDDT": 148.95,
+   "NU": 15.66,
+   "UBER": 69.08,
+   "SE": 96.53,
+   "TLN": 373.11,
+   "FSLR": 179.8,
+   "STRL": 563.69,
+   "ARGX": 930.52,
+   "FN": 489.16,
+   "ALM": 13.04,
+   "NUVB": 4.88,
+   "TE": 3.8,
+   "APLD": 25.34,
+   "LQDA": 25.91,
+   "SNDX": 17.37,
+   "VSTM": 7.75,
+   "ONDS": 7.41,
+   "EXK": 8.67,
+   "LUNR": 15.06,
+   "URGN": 41.43,
+   "RCAT": 6.34
+  },
+  "2026-10-07": {
+   "NUVB": 4.86,
+   "ORCL": 143.56,
+   "ONDS": 7.19,
+   "STRL": 534.13,
+   "APLD": 23.81,
+   "SNDX": 17.03,
+   "URGN": 40.7,
+   "APP": 281.29,
+   "MU": 1088.0,
+   "EXK": 8.32,
+   "SE": 94.66,
+   "LUNR": 14.41,
+   "TE": 3.73,
+   "ALM": 12.1,
+   "NU": 15.58,
+   "UBER": 68.45,
+   "RDDT": 152.71,
+   "TLN": 378.32,
+   "FN": 497.99,
+   "VSTM": 8.265,
+   "FSLR": 180.13,
+   "ARGX": 928.44,
+   "RCAT": 6.15,
+   "LQDA": 26.68,
+   "QQQ": 757.73,
+   "SPY": 777.22
+  }
+ },
+ "lists": {
+  "growth": {
+   "label": "Growth",
+   "holdings": [
+    {
+     "ticker": "MU",
+     "company": "Micron Technology",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 1045.56,
+     "lastPrice": 1088.0,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 4.06,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "ORCL",
+     "company": "Oracle",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 144.77,
+     "lastPrice": 143.56,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -0.84,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "APP",
+     "company": "AppLovin",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 278.78,
+     "lastPrice": 281.29,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.9,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "RDDT",
+     "company": "Reddit",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 148.95,
+     "lastPrice": 152.71,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 2.52,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "NU",
+     "company": "Nu Holdings",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 15.66,
+     "lastPrice": 15.58,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -0.51,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "UBER",
+     "company": "Uber Technologies",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 69.08,
+     "lastPrice": 68.45,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -0.91,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "SE",
+     "company": "Sea Limited",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 96.53,
+     "lastPrice": 94.66,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -1.94,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "TLN",
+     "company": "Talen Energy",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 373.11,
+     "lastPrice": 378.32,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 1.4,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "FSLR",
+     "company": "First Solar",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 179.8,
+     "lastPrice": 180.13,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 0.18,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "STRL",
+     "company": "Sterling Infrastructure",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 563.69,
+     "lastPrice": 534.13,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -5.24,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "ARGX",
+     "company": "argenx SE",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 930.52,
+     "lastPrice": 928.44,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -0.22,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "FN",
+     "company": "Fabrinet",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 489.16,
+     "lastPrice": 497.99,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 1.81,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    }
+   ],
+   "closed": [],
+   "segments": [
+    {
+     "start": "2026-10-06",
+     "startValue": 100.0,
+     "tickers": [
+      "MU",
+      "ORCL",
+      "APP",
+      "RDDT",
+      "NU",
+      "UBER",
+      "SE",
+      "TLN",
+      "FSLR",
+      "STRL",
+      "ARGX",
+      "FN"
+     ]
+    }
+   ],
+   "log": [
+    {
+     "date": "2026-10-07",
+     "priceDate": "2026-10-06",
+     "action": "start",
+     "note": "Tracking began with the 12 published Growth picks at the 2026-10-06 close",
+     "tickers": [
+      "MU",
+      "ORCL",
+      "APP",
+      "RDDT",
+      "NU",
+      "UBER",
+      "SE",
+      "TLN",
+      "FSLR",
+      "STRL",
+      "ARGX",
+      "FN"
+     ]
+    }
+   ],
+   "series": [
+    [
+     "2026-10-06",
+     100.0
+    ],
+    [
+     "2026-10-07",
+     100.1
+    ]
+   ],
+   "returnPct": 0.1,
+   "vsQQQPct": 0.35,
+   "vsSPYPct": 0.34,
+   "hitRate": {
+    "beat": 7,
+    "of": 12,
+    "openBeat": 7,
+    "openOf": 12
+   }
+  },
+  "riskit": {
+   "label": "Risk It",
+   "holdings": [
+    {
+     "ticker": "ALM",
+     "company": "Almonty Industries",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 13.04,
+     "lastPrice": 12.1,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -7.21,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "NUVB",
+     "company": "Nuvation Bio",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 4.88,
+     "lastPrice": 4.86,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -0.41,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "TE",
+     "company": "T1 Energy",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 3.8,
+     "lastPrice": 3.73,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -1.84,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "APLD",
+     "company": "Applied Digital",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 25.34,
+     "lastPrice": 23.81,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -6.04,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "LQDA",
+     "company": "Liquidia",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 25.91,
+     "lastPrice": 26.68,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 2.97,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "SNDX",
+     "company": "Syndax Pharmaceuticals",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 17.37,
+     "lastPrice": 17.03,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -1.96,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "VSTM",
+     "company": "Verastem",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 7.75,
+     "lastPrice": 8.265,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": 6.65,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "ONDS",
+     "company": "Ondas",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 7.41,
+     "lastPrice": 7.19,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -2.97,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "EXK",
+     "company": "Endeavour Silver",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 8.67,
+     "lastPrice": 8.32,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -4.04,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "LUNR",
+     "company": "Intuitive Machines",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 15.06,
+     "lastPrice": 14.41,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -4.32,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "URGN",
+     "company": "UroGen Pharma",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 41.43,
+     "lastPrice": 40.7,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -1.76,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "RCAT",
+     "company": "Red Cat Holdings",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 6.34,
+     "lastPrice": 6.15,
+     "lastPriceDate": "2026-10-07",
+     "returnPct": -3.0,
+     "qqqPct": -0.25,
+     "spyPct": -0.24,
+     "beatQQQ": false
+    }
+   ],
+   "closed": [],
+   "segments": [
+    {
+     "start": "2026-10-06",
+     "startValue": 100.0,
+     "tickers": [
+      "ALM",
+      "NUVB",
+      "TE",
+      "APLD",
+      "LQDA",
+      "SNDX",
+      "VSTM",
+      "ONDS",
+      "EXK",
+      "LUNR",
+      "URGN",
+      "RCAT"
+     ]
+    }
+   ],
+   "log": [
+    {
+     "date": "2026-10-07",
+     "priceDate": "2026-10-06",
+     "action": "start",
+     "note": "Tracking began with the 12 published Risk It picks at the 2026-10-06 close",
+     "tickers": [
+      "ALM",
+      "NUVB",
+      "TE",
+      "APLD",
+      "LQDA",
+      "SNDX",
+      "VSTM",
+      "ONDS",
+      "EXK",
+      "LUNR",
+      "URGN",
+      "RCAT"
+     ]
+    }
+   ],
+   "series": [
+    [
+     "2026-10-06",
+     100.0
+    ],
+    [
+     "2026-10-07",
+     98.007
+    ]
+   ],
+   "returnPct": -1.99,
+   "vsQQQPct": -1.74,
+   "vsSPYPct": -1.75,
+   "hitRate": {
+    "beat": 2,
+    "of": 12,
+    "openBeat": 2,
+    "openOf": 12
+   }
+  }
+ },
+ "latestDate": "2026-10-07",
+ "benchSeries": {
+  "QQQ": [
+   [
+    "2026-10-06",
+    100.0
+   ],
+   [
+    "2026-10-07",
+    99.746
+   ]
+  ],
+  "SPY": [
+   [
+    "2026-10-06",
+    100.0
+   ],
+   [
+    "2026-10-07",
+    99.76
+   ]
+  ]
+ }
+}

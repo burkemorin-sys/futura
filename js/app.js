@@ -31,6 +31,7 @@
     x: '<path d="M7 7l10 10M17 7L7 17"/>',
     chevUp: '<path d="M6 14l6-6 6 6"/>',
     chevDown: '<path d="M6 10l6 6 6-6"/>',
+    chart: '<path d="M4 4v16h16"/><path d="M7 15l4-5 3 3 5-7"/><circle cx="19" cy="6" r="1.2"/>',
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
 
@@ -128,6 +129,185 @@
     });
   }
 
+  /* ---------------- Live quotes ----------------
+   * Source: CNBC's public quote service (quote.cnbc.com). It sends `Access-Control-Allow-Origin: *`, needs no key,
+   * and takes many symbols per request ("AAPL|MSFT|..."), so each page makes ONE batched request (chunks of 50),
+   * repeated every 45 s during pre/regular/after-hours sessions (5 min when the market is closed), paused while the
+   * tab is hidden. Unofficial/undocumented: it can change or block without notice. When it fails, every price falls
+   * back to the last daily close from the JSON files (labelled as such). Nothing is ever estimated or invented.
+   * Markup contract: any element with data-lq="TICKER" gets live values painted into its .p (price), .chg (today %)
+   * and .d (status line) children. data-lq-close / data-lq-date hold the daily-close fallback; data-lq-optional
+   * elements stay hidden unless a valid US quote arrives (IPO cards). [data-live-badge] shows feed status. */
+  const LQ_URL = "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol";
+  const US_EXCHANGES = /^(NASDAQ|NYSE|NYSE ARCA|NYSE AMERICAN|NYSE MKT|AMEX|CBOE|BATS|IEX)/i;
+  const NYSE_HOLIDAYS = new Set(["2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25", "2026-06-19", "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25",
+    "2027-01-01", "2027-01-18", "2027-02-15", "2027-03-26", "2027-05-31", "2027-06-18", "2027-07-05", "2027-09-06", "2027-11-25", "2027-12-24"]);
+  const NYSE_EARLY_CLOSE = new Set(["2026-11-27", "2026-12-24", "2027-11-26"]);
+  const live = { quotes: {}, fetchedAt: 0, error: null, timer: null, inflight: null, tickers: [] };
+
+  function nyNow() {
+    const parts = {};
+    new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", weekday: "short", hourCycle: "h23" })
+      .formatToParts(new Date()).forEach((p) => { parts[p.type] = p.value; });
+    return { date: `${parts.year}-${parts.month}-${parts.day}`, mins: +parts.hour * 60 + +parts.minute, wd: parts.weekday };
+  }
+  // US equity session from the New York clock: "pre" 4:00-9:30, "open" 9:30-16:00 (13:00 on early-close days), "post" until 20:00, else "closed".
+  function marketSession() {
+    const n = nyNow();
+    if (n.wd === "Sat" || n.wd === "Sun" || NYSE_HOLIDAYS.has(n.date)) return "closed";
+    const close = NYSE_EARLY_CLOSE.has(n.date) ? 13 * 60 : 16 * 60;
+    if (n.mins >= 4 * 60 && n.mins < 9 * 60 + 30) return "pre";
+    if (n.mins >= 9 * 60 + 30 && n.mins < close) return "open";
+    if (n.mins >= close && n.mins < (close === 16 * 60 ? 20 * 60 : 17 * 60)) return "post";
+    return "closed";
+  }
+  const lqNum = (v) => { const n = parseFloat(String(v ?? "").replace(/[,$%+]/g, "")); return isFinite(n) ? n : null; };
+  function parseQuote(q) {
+    if (!q || q.code !== 0 && q.code !== "0") return null;
+    const last = lqNum(q.last);
+    if (last == null || !US_EXCHANGES.test(String(q.exchange || "")) || (q.currencyCode && q.currencyCode !== "USD")) return null;
+    const ext = q.ExtendedMktQuote && lqNum(q.ExtendedMktQuote.last) != null ? {
+      type: q.ExtendedMktQuote.type, last: lqNum(q.ExtendedMktQuote.last), changePct: lqNum(q.ExtendedMktQuote.change_pct), time: q.ExtendedMktQuote.last_time,
+    } : null;
+    return {
+      symbol: String(q.symbol).toUpperCase(), last, change: lqNum(q.change), changePct: lqNum(q.change_pct), prevClose: lqNum(q.previous_day_closing),
+      time: q.last_time || "", realTime: String(q.realTime) === "true", status: q.curmktstatus || "", ext,
+    };
+  }
+  async function fetchQuotes(tickers) {
+    const out = {};
+    const chunks = [];
+    for (let i = 0; i < tickers.length; i += 50) chunks.push(tickers.slice(i, i + 50));
+    await Promise.all(chunks.map(async (c) => {
+      const url = `${LQ_URL}?symbols=${encodeURIComponent(c.join("|"))}&requestMethod=itv&noform=1&partnerId=2&fund=0&exthrs=1&output=json&events=0`;
+      const ctl = typeof AbortController === "function" ? new AbortController() : null;
+      const to = ctl ? setTimeout(() => ctl.abort(), 12000) : 0;
+      try {
+        const res = await fetch(url, { cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer", signal: ctl ? ctl.signal : undefined });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const j = await res.json();
+        const list = ((j && j.FormattedQuoteResult && j.FormattedQuoteResult.FormattedQuote) || []);
+        (Array.isArray(list) ? list : [list]).forEach((q) => { const p = parseQuote(q); if (p) out[p.symbol] = p; });
+      } finally { clearTimeout(to); }
+    }));
+    return out;
+  }
+  const nyTime = (iso) => {
+    const d = new Date(iso);
+    if (isNaN(d)) return "";
+    return d.toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" }) + " ET";
+  };
+  const nyDay = (iso) => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleDateString("en-US", { timeZone: "America/New_York", month: "short", day: "numeric" }); };
+  const fmtChgPct = (v) => (v == null ? "" : `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toFixed(2)}%`);
+  const toneOf = (v) => (v == null ? "" : v > 0 ? "up" : v < 0 ? "down" : "");
+  const lqPrice = (v) => (v == null ? "n/a" : `$${v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: v < 1 ? 4 : 2 })}`);
+
+  function paintQuote(host) {
+    const t = host.dataset.lq;
+    const q = live.quotes[t];
+    const pEl = host.querySelector(".p"), cEl = host.querySelector(".chg"), dEl = host.querySelector(".d");
+    if (!q) {
+      if (host.hasAttribute("data-lq-optional")) { host.hidden = true; return; }
+      host.classList.remove("is-live");
+      // Fallback: last daily close from the JSON (already rendered); just label it honestly once the feed has answered.
+      if (dEl && (live.error || live.fetchedAt) && host.dataset.lqDate) dEl.textContent = `close ${fmtShortDate(host.dataset.lqDate).replace(/, \d{4}$/, "")} · daily`;
+      return;
+    }
+    host.hidden = false;
+    host.classList.add("is-live");
+    const session = marketSession();
+    const today = nyNow().date;
+    const quoteDay = q.time ? new Date(q.time).toLocaleDateString("en-CA", { timeZone: "America/New_York" }) : "";
+    const tradingToday = session === "open" && quoteDay === today;
+    if (pEl) pEl.textContent = lqPrice(q.last);
+    if (cEl) { cEl.textContent = fmtChgPct(q.changePct); cEl.className = `chg ${toneOf(q.changePct)}`; cEl.title = tradingToday ? "Change today" : `Change on ${nyDay(q.time)}`; }
+    if (dEl) {
+      let txt;
+      if (tradingToday) txt = `${q.realTime ? "live" : "delayed"} · ${nyTime(q.time)}`;
+      else if (q.ext && (session === "pre" || session === "post") && q.ext.time && new Date(q.ext.time).toLocaleDateString("en-CA", { timeZone: "America/New_York" }) === today) {
+        txt = `${session === "pre" ? "pre-mkt" : "after hrs"} ${lqPrice(q.ext.last)} ${fmtChgPct(q.ext.changePct)}`;
+      } else txt = `close ${nyDay(q.time)}${q.realTime ? "" : " · delayed"}`;
+      dEl.textContent = txt;
+      dEl.classList.toggle("delayed", !q.realTime);
+    }
+  }
+  function paintBadges() {
+    const session = marketSession();
+    const n = Object.keys(live.quotes).length;
+    const anyDelayed = live.tickers.some((t) => live.quotes[t] && !live.quotes[t].realTime);
+    document.querySelectorAll("[data-live-badge]").forEach((b) => {
+      let cls = "", txt;
+      if (live.error && !n) { cls = "is-off"; txt = "Live quotes unavailable · showing last daily close"; }
+      else if (!live.fetchedAt) { txt = "Loading live quotes…"; }
+      else if (session === "open") { cls = "is-on"; txt = `Market open · ${anyDelayed ? "some quotes delayed ~15 min" : "live quotes"} · updated ${new Date(live.fetchedAt).toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit", second: "2-digit" })} ET`; }
+      else if (session === "pre") { cls = "is-ext"; txt = "Pre-market · prices are the last close, pre-market moves shown separately"; }
+      else if (session === "post") { cls = "is-ext"; txt = "After hours · prices are today's close, after-hours moves shown separately"; }
+      else { txt = "Market closed · showing the last close"; }
+      if (live.error && n) txt += " · last refresh failed";
+      b.className = `live-badge ${cls}`;
+      b.innerHTML = `<span class="lb-dot" aria-hidden="true"></span><span>${esc(txt)}</span>`;
+      b.title = "Quotes: CNBC public quote feed (unofficial). Nasdaq Last Sale prices are real-time; others may be delayed. Falls back to the daily close if unavailable.";
+    });
+  }
+  function paintLive(root) {
+    (root || document).querySelectorAll("[data-lq]").forEach(paintQuote);
+    paintBadges();
+  }
+  async function refreshLive() {
+    const root = document.getElementById("main");
+    const tickers = [...new Set([...root.querySelectorAll("[data-lq]")].map((e) => e.dataset.lq).filter(isValidTicker))];
+    live.tickers = tickers;
+    if (!tickers.length) return;
+    if (live.inflight) return live.inflight;
+    live.inflight = (async () => {
+      try {
+        const q = await fetchQuotes(tickers);
+        Object.assign(live.quotes, q);
+        live.error = Object.keys(q).length || !tickers.length ? null : "no quotes returned";
+        live.fetchedAt = Date.now();
+      } catch (e) {
+        live.error = e && e.name === "AbortError" ? "timeout" : (e && e.message) || "fetch failed";
+        if (!live.fetchedAt) live.fetchedAt = 0;
+      } finally {
+        live.inflight = null;
+        paintLive(document.getElementById("main"));
+      }
+    })();
+    return live.inflight;
+  }
+  function scheduleLive() {
+    clearTimeout(live.timer);
+    if (document.hidden) return;
+    const s = marketSession();
+    live.timer = setTimeout(async () => { await refreshLive(); scheduleLive(); }, s === "closed" ? 300000 : 45000);
+  }
+  // Call after any render that may contain [data-lq]. Paints cached quotes instantly, fetches if stale or new tickers appeared.
+  function watchLive(root) {
+    const el = root || document.getElementById("main");
+    const tickers = [...new Set([...el.querySelectorAll("[data-lq]")].map((e) => e.dataset.lq))];
+    if (!tickers.length && !el.querySelector("[data-live-badge]")) return;
+    paintLive(el);
+    const missing = tickers.some((t) => !(t in live.quotes));
+    if (missing || Date.now() - live.fetchedAt > 30000) refreshLive();
+    scheduleLive();
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) { clearTimeout(live.timer); return; }
+    if (document.getElementById("main").querySelector("[data-lq]")) { refreshLive(); scheduleLive(); }
+  });
+  const liveBadgeHTML = () => `<p class="live-badge" data-live-badge><span class="lb-dot" aria-hidden="true"></span><span>Loading live quotes…</span></p>`;
+  // Price block used by cards: daily close as the honest fallback, live values painted over it.
+  function lqBlock(ticker, close, closeDate, extraCls = "") {
+    const t = normalizeTicker(ticker);
+    if (!isValidTicker(t)) return "";
+    const c = typeof close === "number" ? close : num(close);
+    return `<div class="pick-price lq ${extraCls}" data-lq="${esc(t)}"${c != null ? ` data-lq-close="${c}"` : ""}${closeDate ? ` data-lq-date="${esc(closeDate)}"` : ""}>
+      <div class="p">${esc(c != null ? money(c) : "—")}</div>
+      <div class="chg"></div>
+      <div class="d">${closeDate ? `close ${esc(fmtShortDate(closeDate).replace(/, \d{4}$/, ""))}` : ""}</div>
+    </div>`;
+  }
+
   /* ---------------- Cassiopeia ----------------
    * Positions from J2000 RA/Dec of the five main stars, gnomonic projection (north up, east left),
    * rotated ~20deg so it reads as the familiar "W". Brightness (radius) follows visual magnitude. */
@@ -211,6 +391,7 @@
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex"), overflow: true },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla"), overflow: true },
     { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch },
+    { id: "track", label: "Track Record", short: "Record", icon: "chart", render: renderTrack, overflow: true },
     { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia, overflow: true },
     { id: "more", label: "More", short: "More", icon: "grid", render: renderMore },
   ];
@@ -266,6 +447,7 @@
     document.title = section.id === "home" ? "Futura · looking higher" : `${section.label} · Futura`;
     window.scrollTo(0, 0);
     if (casState.anim) { casState.anim.destroy(); casState.anim = null; }
+    clearTimeout(live.timer);
     main.dataset.token = section.id + (params.t ? ":" + params.t : "");
     document.body.dataset.route = section.id;
     section.render(main, params);
@@ -395,6 +577,7 @@
     };
     bindToggle("#spac-toggle", "hideSpacs", "hideSpacs");
     bindToggle("#past-toggle", "showPast", "showPastTwoWeeks");
+    watchLive(el);
     el.querySelectorAll(".more-btn").forEach((b) => b.addEventListener("click", () => {
       const c = b.closest(".card");
       const open = b.getAttribute("aria-expanded") !== "true";
@@ -443,7 +626,7 @@
       tick ? followToggleHTML(tick, { compact: true }) : "",
     ].join("");
     return `<article class="panel card${i.unconfirmed ? " is-unconfirmed" : ""}${open ? " is-open" : ""}" data-id="${esc(i.id)}">
-      <div class="card-top"><div class="card-title"><h3>${esc(i.company)}</h3><div class="tags">${tags}</div></div></div>
+      <div class="card-top"><div class="card-title"><h3>${esc(i.company)}</h3><div class="tags">${tags}</div></div>${tick ? `<div class="pick-price lq ipo-lq" data-lq="${esc(tick)}" data-lq-optional hidden><div class="p"></div><div class="chg"></div><div class="d"></div></div>` : ""}</div>
       ${isNA(i.description) ? "" : `<p class="desc">${esc(i.description)}</p>`}
       <dl class="meta">
         ${metaItem("Exchange", i.exchange)}${metaItem("Trade date", i.tradeDate)}
@@ -585,6 +768,13 @@
       ${growthState.isExample ? `<div class="example-banner" role="note">${svg("warn")}<span><strong>EXAMPLE DATA</strong> — fictional placeholder for testing. Real picks will load automatically from data/growth-picks.json.</span></div>` : ""}
       ${isNA(d.disclaimer) ? "" : `<div class="example-banner riskit-note" role="note">${svg("warn")}<span><strong>SPECULATIVE</strong> — ${esc(d.disclaimer)}</span></div>`}
       ${isNA(d.method) ? "" : `<section class="panel method"><h2>Method</h2><p>${esc(d.method)}</p>${isNA(d.dataNotes) ? "" : `<p class="notes">${esc(d.dataNotes)}</p>`}</section>`}
+      <a class="panel track-link" href="#/track?list=${gMode.id}" data-track-link="${gMode.id}">
+        <span class="home-tile-icon">${svg("chart")}</span>
+        <span class="tl-body"><span class="tl-title">Track record</span><span class="tl-line">How these picks are doing vs QQQ since Oct 7, 2026</span></span>
+        <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+      ${allPicks.some((p) => p.grades) ? gradeLegendHTML(d, allPicks.length + bench.length) : ""}
+      ${liveBadgeHTML()}
       <div class="toolbar" role="toolbar" aria-label="Sort and filter by sector">
         ${sortSel}<span class="sep"></span>${chips}
       </div>
@@ -611,6 +801,8 @@
       drawGrowth(el);
     });
     bindFollowToggles(el);
+    fillTrackLink(el);
+    watchLive(el);
   }
 
   function growthDismissed() { try { const a = JSON.parse(localStorage.getItem(gMode.dismissKey) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
@@ -623,6 +815,41 @@
     const m = /^(.*?)\s*(\(.*\))\s*$/.exec(txt);
     return `<div><dt>Revenue growth</dt><dd class="${txt === "n/a" ? "na" : ""}">${esc(m ? m[1] : txt)}${m ? `<small>${esc(m[2])}</small>` : ""}</dd></div>`;
   }
+  /* Letter grades (A+..F) are computed by scripts/futura_grades.py and stored on each entry as p.grades. */
+  const GRADE_KEYS = [
+    { k: "growth", label: "Growth", short: "Growth" },
+    { k: "value", label: "Value", short: "Value" },
+    { k: "momentum", label: "Momentum", short: "Momentum" },
+    { k: "profitability", label: "Profitability", short: "Profit" },
+  ];
+  const gradeTier = (g) => (!g || g === "n/a" ? "na" : g[0].toLowerCase());
+  function gradesHTML(p) {
+    const g = p.grades;
+    if (!g || typeof g !== "object") return "";
+    const inputs = p.gradeInputs || {};
+    return `<dl class="grades" aria-label="Letter grades within this list">
+      ${GRADE_KEYS.map(({ k, label, short }) => {
+        const v = isNA(g[k]) ? "n/a" : String(g[k]);
+        const used = inputs[k] ? ` · ${inputs[k]} inputs` : "";
+        return `<div class="grade g-${gradeTier(v)}" title="${esc(label)}: ${esc(v)}${esc(used)}"><dt>${esc(short)}</dt><dd>${esc(v)}${inputs[k] && /^[1-9]\/[2-9]$/.test(inputs[k]) && inputs[k][0] !== inputs[k][2] ? `<sup aria-label="partial inputs">*</sup>` : ""}</dd></div>`;
+      }).join("")}
+    </dl>`;
+  }
+  function gradeLegendHTML(d, poolSize) {
+    const gi = (d.grading && d.grading.inputs) || {};
+    return `<details class="panel grade-legend">
+      <summary><span class="gl-title">Grades</span><span class="gl-scale"><b class="g-a">A</b><b class="g-b">B</b><b class="g-c">C</b><b class="g-d">D</b><b class="g-f">F</b></span><span class="gl-hint">What do they mean?</span></summary>
+      <p>Each card gets four letter grades (A+ to F), ranked by percentile against all ${poolSize} stocks in this list (picks plus backups), not the whole market. A “C” here can still look good next to the S&amp;P 500.</p>
+      <ul class="bullets">
+        <li><strong>Growth</strong>: ${esc(gi.growth || "revenue growth and forecast EPS growth")}</li>
+        <li><strong>Value</strong>: ${esc(gi.value || "forward P/E, PEG and EV/sales")}</li>
+        <li><strong>Momentum</strong>: ${esc(gi.momentum || "1-yr relative strength vs SPY, 6- and 3-month price change")}</li>
+        <li><strong>Profit</strong>: ${esc(gi.profitability || "gross, operating, net and FCF margins")}</li>
+      </ul>
+      <p class="fineprint top"><strong>n/a</strong> means none of that grade's inputs exist. <strong>*</strong> means some inputs were missing, so the grade uses the rest (many Risk It names have no forward P/E or PEG). Recomputed by the daily refresh${d.grading && d.grading.asOf ? `; last computed ${esc(fmtShortDate(d.grading.asOf))}` : ""}. Sources: StockAnalysis statistics pages and Nasdaq daily closes.</p>
+    </details>`;
+  }
+
   function pickCard(p) {
     const stat = (label, val) => `<div><dt>${label}</dt><dd class="${val === "n/a" ? "na" : ""}">${esc(val)}</dd></div>`;
     const risks = Array.isArray(p.risks) ? p.risks.filter((r) => !isNA(r)) : isNA(p.risks) ? [] : [p.risks];
@@ -642,16 +869,18 @@
             ${tick ? followToggleHTML(tick, { compact: true }) : ""}
           </div>
         </div>
-        <div class="pick-price">
+        <div class="pick-price lq"${tick ? ` data-lq="${esc(tick)}"` : ""}${isNA(p.priceDate) ? "" : ` data-lq-date="${esc(p.priceDate)}"`}>
           <div class="p">${esc(money(p.price))}</div>
+          <div class="chg"></div>
+          <div class="d">${isNA(p.priceDate) ? "" : `close ${esc(fmtShortDate(p.priceDate).replace(/, \d{4}$/, ""))}`}</div>
           ${typeof p.score === "number" ? `<div class="score-badge" title="Risk It score (0–100)">${p.score}<small>/100</small></div>` : ""}
-          ${isNA(p.priceDate) ? "" : `<div class="d">as of ${esc(fmtShortDate(p.priceDate))}</div>`}
         </div>
       </div>
       <dl class="stats">
         ${stat("Market cap", fmtCap(p.marketCap))}${growthStat(p.revenueGrowth)}
         ${stat("Forward P/E", fmtMult(p.forwardPE))}${stat("PEG", typeof p.peg === "number" ? p.peg.toFixed(2) : isNA(p.peg) ? "n/a" : String(p.peg))}
       </dl>
+      ${gradesHTML(p)}
       ${Array.isArray(p.drivers) && p.drivers.length ? `<div class="block"><h4>Score drivers</h4><ul class="bullets drivers">${p.drivers.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>` : ""}
       ${isNA(p.trend) ? "" : `<div class="block"><h4>Trend</h4><p>${esc(p.trend)}</p></div>`}
       ${isNA(p.fundamentals) ? "" : `<div class="block"><h4>Fundamentals</h4><p>${esc(p.fundamentals)}</p></div>`}
@@ -662,6 +891,141 @@
       </div>
       <div class="card-foot">${sources.length ? sources.map((u, i) => srcLink(u, sources.length > 1 ? `Source ${i + 1}` : "Source")).join("") : srcLink(null)}</div>
     </article>`;
+  }
+
+  /* ================= Track record ================= */
+  const trackState = { data: null, list: "growth" };
+  async function loadTrack() {
+    if (!trackState.data) trackState.data = await getJSON("data/track-record.json");
+    return trackState.data;
+  }
+  const fmtRet = (v, digits = 2) => (typeof v === "number" && isFinite(v) ? `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toFixed(digits)}%` : "n/a");
+  const retTone = (v) => (typeof v !== "number" ? "" : v > 0 ? "up" : v < 0 ? "down" : "");
+  const tradingDays = (d) => Math.max(0, Object.keys(d.prices || {}).length - 1);
+
+  async function fillTrackLink(el) {
+    const a = el.querySelector("[data-track-link]");
+    if (!a) return;
+    try {
+      const d = await loadTrack();
+      const L = d.lists && d.lists[a.dataset.trackLink];
+      const q = d.benchSeries && d.benchSeries.QQQ;
+      if (!L || !q || !a.isConnected) return;
+      const qr = q[q.length - 1][1] - 100;
+      a.querySelector(".tl-line").innerHTML = `Since Oct 7, 2026: <span class="${retTone(L.returnPct)}">${esc(fmtRet(L.returnPct))}</span> vs QQQ <span class="${retTone(qr)}">${esc(fmtRet(qr))}</span> · ${tradingDays(d)} trading day${tradingDays(d) === 1 ? "" : "s"}, too early to judge`;
+    } catch (e) { /* link still works without numbers */ }
+  }
+
+  // Small dependency-free SVG line chart: one value series per line, indexed to 100.
+  function trackChartSVG(lines, dates) {
+    const W = 360, H = 200, padL = 44, padR = 8, padT = 10, padB = 24;
+    const all = lines.flatMap((l) => l.points.map((p) => p[1]));
+    let lo = Math.min(100, ...all), hi = Math.max(100, ...all);
+    const span = Math.max(hi - lo, 2);
+    lo -= span * 0.12; hi += span * 0.12;
+    const n = dates.length;
+    const x = (i) => padL + (n <= 1 ? 0 : (i / (n - 1)) * (W - padL - padR));
+    const y = (v) => padT + (1 - (v - lo) / (hi - lo)) * (H - padT - padB);
+    const step = (hi - lo) / 4;
+    const ticks = [0, 1, 2, 3, 4].map((k) => lo + step * k);
+    const grid = ticks.map((t) => `<line x1="${padL}" x2="${W - padR}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}" class="tc-grid"/><text x="${padL - 6}" y="${(y(t) + 4).toFixed(1)}" class="tc-ax" text-anchor="end">${(t - 100 >= 0 ? "+" : "−") + Math.abs(t - 100).toFixed(1)}%</text>`).join("");
+    const base = `<line x1="${padL}" x2="${W - padR}" y1="${y(100).toFixed(1)}" y2="${y(100).toFixed(1)}" class="tc-base"/>`;
+    const idx = Object.fromEntries(dates.map((d, i) => [d, i]));
+    const paths = lines.map((l) => {
+      const pts = l.points.filter((p) => p[0] in idx).map((p) => `${x(idx[p[0]]).toFixed(1)},${y(p[1]).toFixed(1)}`);
+      const last = l.points[l.points.length - 1];
+      return `<polyline points="${pts.join(" ")}" class="tc-line ${l.cls}" fill="none"/>${last ? `<circle cx="${x(idx[last[0]]).toFixed(1)}" cy="${y(last[1]).toFixed(1)}" r="3.2" class="tc-dot ${l.cls}"/>` : ""}`;
+    }).join("");
+    const xl = dates.length ? [0, n - 1].filter((v, i, a) => a.indexOf(v) === i).map((i) => `<text x="${x(i).toFixed(1)}" y="${H - 8}" class="tc-ax" text-anchor="${i === 0 ? "start" : "end"}">${esc(fmtShortDate(dates[i]).replace(/, \d{4}$/, ""))}${i === 0 ? " (start)" : ""}</text>`).join("") : "";
+    return `<svg class="track-chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Value of $100 since tracking began: ${esc(lines.map((l) => `${l.label} ${l.points.length ? (l.points[l.points.length - 1][1] - 100).toFixed(2) : "n/a"}%`).join(", "))}">${grid}${base}${paths}${xl}</svg>`;
+  }
+
+  async function renderTrack(el, params = {}) {
+    const token = (el.dataset.token = `track-${Date.now()}`);
+    el.innerHTML = `<div class="loading">Loading track record…</div>`;
+    let d;
+    try { d = await loadTrack(); } catch (err) {
+      if (el.dataset.token === token) el.innerHTML = `<div class="error">Couldn't load data/track-record.json (${esc(err.message)}).</div>`;
+      return;
+    }
+    if (el.dataset.token !== token) return;
+    if (params.list && d.lists[params.list]) trackState.list = params.list;
+    const dates = Object.keys(d.prices || {}).sort();
+    const days = tradingDays(d);
+    const qqq = d.benchSeries.QQQ, spy = d.benchSeries.SPY;
+    const benchRet = (s) => (s && s.length ? s[s.length - 1][1] - 100 : null);
+    const summary = Object.entries(d.lists).map(([k, L]) => {
+      const hr = L.hitRate || {};
+      return `<button type="button" class="panel tr-sum ${k === "riskit" ? "is-risk" : ""}${trackState.list === k ? " is-active" : ""}" data-list="${esc(k)}" aria-pressed="${trackState.list === k}">
+        <span class="tr-sum-label">${esc(L.label)}</span>
+        <span class="tr-sum-ret ${retTone(L.returnPct)}">${esc(fmtRet(L.returnPct))}</span>
+        <span class="tr-sum-vs">vs QQQ <b class="${retTone(L.vsQQQPct)}">${esc(fmtRet(L.vsQQQPct).replace("%", " pts"))}</b> · vs SPY <b class="${retTone(L.vsSPYPct)}">${esc(fmtRet(L.vsSPYPct).replace("%", " pts"))}</b></span>
+        <span class="tr-sum-hit">${hr.of ? `${hr.beat} of ${hr.of} picks beat QQQ (${Math.round((hr.beat / hr.of) * 100)}%)` : "Hit rate after the first close"}</span>
+      </button>`;
+    }).join("");
+    const lines = [
+      { label: "Growth", cls: "l-growth", points: d.lists.growth ? d.lists.growth.series : [] },
+      { label: "Risk It", cls: "l-risk", points: d.lists.riskit ? d.lists.riskit.series : [] },
+      { label: "QQQ", cls: "l-qqq", points: qqq || [] },
+      { label: "SPY", cls: "l-spy", points: spy || [] },
+    ];
+    const legend = lines.map((l) => {
+      const last = l.points.length ? l.points[l.points.length - 1][1] - 100 : null;
+      return `<span class="tc-key ${l.cls}"><i></i>${esc(l.label)} <b class="${retTone(last)}">${esc(fmtRet(last))}</b></span>`;
+    }).join("");
+
+    const L = d.lists[trackState.list];
+    const rows = (L.holdings || []).slice().sort((a, b) => (b.returnPct ?? -1e9) - (a.returnPct ?? -1e9)).map((h) => `<tr>
+        <th scope="row"><a href="#/search?t=${esc(h.ticker)}" class="tr-tick">${esc(h.ticker)}</a><span class="row-note">${esc(h.company || "")}</span></th>
+        <td data-label="Entry">${esc(money(h.entryPrice))}<span class="row-note">${esc(fmtShortDate(h.entryPriceDate).replace(/, \d{4}$/, ""))} close</span></td>
+        <td data-label="Last close">${esc(money(h.lastPrice))}</td>
+        <td data-label="Return" class="${retTone(h.returnPct)}">${esc(fmtRet(h.returnPct))}</td>
+        <td data-label="vs QQQ" class="${h.beatQQQ ? "up" : "down"}">${h.lastPriceDate === h.entryPriceDate ? "–" : h.beatQQQ ? "Beat" : "Lagged"}</td>
+        <td data-label="Today"><span class="lq lq-mini" data-lq="${esc(h.ticker)}"><span class="chg"></span></span></td>
+      </tr>`).join("");
+    const closed = (L.closed || []).map((c) => `<tr>
+        <th scope="row">${esc(c.ticker)}<span class="row-note">${esc(c.company || "")}</span></th>
+        <td data-label="Entry">${esc(money(c.entryPrice))}<span class="row-note">${esc(fmtShortDate(c.entryPriceDate))}</span></td>
+        <td data-label="Exit">${esc(money(c.exitPrice))}<span class="row-note">${esc(fmtShortDate(c.exitPriceDate))}</span></td>
+        <td data-label="Return" class="${retTone(c.returnPct)}">${esc(fmtRet(c.returnPct))}</td>
+        <td data-label="QQQ same period" class="${retTone(c.qqqPct)}">${esc(fmtRet(c.qqqPct))}</td>
+      </tr>`).join("");
+    const log = (L.log || []).slice().reverse().map((g) => `<li><span class="when">${esc(fmtShortDate(g.date))}</span><span class="what">${
+      g.action === "start" ? `Tracking started with ${esc((g.tickers || []).join(", "))} at the ${esc(fmtShortDate(g.priceDate))} close`
+      : g.action === "add" ? `<b class="up">Added</b> ${esc(g.ticker)} at ${esc(money(g.price))} (${esc(fmtShortDate(g.priceDate))} close)`
+      : g.action === "remove" ? `<b class="down">Removed</b> ${esc(g.ticker)} at ${esc(money(g.price))} (${esc(fmtShortDate(g.priceDate))} close)`
+      : esc(g.note || g.action)}</span></li>`).join("");
+
+    el.innerHTML = `
+      ${hero("Track record", "Picks vs QQQ", `<span>${svg("clock")}Tracking since ${esc(fmtShortDate(d.trackingStart))}</span><span>${svg("chart")}Last close ${esc(fmtShortDate(d.latestDate))}</span>`)}
+      <div class="example-banner early-note" role="note">${svg("warn")}<span><strong>EARLY DAYS</strong>: tracking started Oct 7, 2026, from the ${esc(fmtShortDate(d.baseDate))} close. With ${days} trading day${days === 1 ? "" : "s"} of data these numbers are mostly noise. Give it several months before reading anything into them.</span></div>
+      <div class="tr-sums" role="group" aria-label="Choose list">${summary}</div>
+      <section class="panel pad tr-chart-panel" aria-label="Performance chart">
+        <h3 class="mini">Value of $100 since tracking began</h3>
+        <div class="tc-legend">${legend}</div>
+        ${trackChartSVG(lines, dates)}
+        <p class="fineprint top">Daily closes only. The chart gets a new point each morning after the refresh.</p>
+      </section>
+      <section class="group" aria-labelledby="h-trpicks">
+        ${sectionHead("trpicks", `${L.label} picks`, `<span class="range">${(L.holdings || []).length} held</span>`)}
+        <div class="panel pad"><div class="table-wrap"><table class="fin tr-table">
+          <thead><tr><th scope="col">Pick</th><th scope="col">Entry</th><th scope="col">Last close</th><th scope="col">Return</th><th scope="col">vs QQQ</th><th scope="col">Today</th></tr></thead>
+          <tbody>${rows}</tbody></table></div>
+          <p class="fineprint">Return is the price change from the entry close to the last close (${esc(fmtShortDate(d.latestDate))}). “Beat” means it did better than QQQ over the same days. “Today” is the live intraday move.</p>
+        </div>
+        ${closed ? `<div class="panel pad" style="margin-top:12px"><h3 class="mini">Removed picks</h3><div class="table-wrap"><table class="fin tr-table"><thead><tr><th scope="col">Pick</th><th scope="col">Entry</th><th scope="col">Exit</th><th scope="col">Return</th><th scope="col">QQQ same period</th></tr></thead><tbody>${closed}</tbody></table></div></div>` : ""}
+        <div class="panel pad" style="margin-top:12px"><h3 class="mini">Change log</h3><ul class="catalysts tr-log">${log}</ul></div>
+      </section>
+      <section class="panel method" style="margin-top:18px"><h2>Method</h2><p>${esc(d.method || "")}</p></section>
+      ${footer("Past performance, especially over a few days, says little about the future. Hypothetical portfolio for information only, not investment advice.")}`;
+
+    el.querySelectorAll("[data-list]").forEach((b) => b.addEventListener("click", () => {
+      trackState.list = b.dataset.list;
+      const y = window.scrollY;
+      history.replaceState(null, "", `#/track?list=${trackState.list}`);
+      renderTrack(el, { list: trackState.list }).then(() => window.scrollTo(0, y));
+    }));
+    watchLive(el);
   }
 
   /* ================= Company pages (SpaceX, Tesla) ================= */
@@ -724,7 +1088,7 @@
         <div>
           <div class="tags"><span class="tag ticker">${esc(d.ticker)}</span><span class="tag sector">${esc(d.exchange)}</span>${d.status === "public" ? `<span class="tag live-tag"><span class="live-dot"></span>Public</span>` : `<span class="tag spac">Private</span>`}${followToggleHTML(d.ticker, { compact: true })}</div>
         </div>
-        <div class="pick-price">
+        <div class="pick-price lq" data-lq="${esc(normalizeTicker(d.ticker))}"${etfCloseDate(snap.asOf) ? ` data-lq-date="${etfCloseDate(snap.asOf)}"` : ""}>
           <div class="p">${esc(money(snap.price))}</div>
           <div class="chg ${tone(snap.change)}">${esc(snap.change || "")}</div>
           <div class="d">${esc(snap.asOf || "")} · snapshot</div>
@@ -821,6 +1185,7 @@
     const eyebrow = d.exchange ? `${d.company} · ${d.exchange}` : d.company;
     el.innerHTML = `
       ${hero(eyebrow, d.company, `<span>${svg("clock")}Data updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("pulse")}Live quote via TradingView</span>${followToggleHTML(d.ticker)}`)}
+      ${liveBadgeHTML()}
       ${statusPanel}
       <div class="toolbar" role="toolbar" aria-label="Jump to section">${chips}</div>
       ${live}${fundamentals}${investors}${news}${sentimentSection(d.ticker, sent)}
@@ -830,6 +1195,7 @@
       b.addEventListener("click", () => document.getElementById(`g-${b.dataset.jump}`).scrollIntoView({ behavior: "smooth" })));
     mountTradingView(el, d.tvSymbol || d.ticker);
     bindFollowToggles(el);
+    if (el.isConnected) watchLive(el);
   }
 
   function sentimentSection(ticker, sent) {
@@ -1238,6 +1604,7 @@
           <span class="follow-ticker">${esc(t)}</span>
           ${name ? `<span class="follow-name">${esc(name)}</span>` : `<span class="follow-name faint">Ticker</span>`}
         </button>
+        <button type="button" class="follow-quote lq" data-lq="${esc(t)}" data-open="${esc(t)}" tabindex="-1" aria-hidden="true"><span class="p">—</span><span class="chg"></span><span class="d"></span></button>
         <div class="follow-actions">
           <button type="button" class="follow-move follow-up" data-move="up" data-index="${i}" aria-label="Move ${esc(t)} up" ${i === 0 ? "disabled" : ""}>${svg("chevUp")}</button>
           <button type="button" class="follow-move follow-down" data-move="down" data-index="${i}" aria-label="Move ${esc(t)} down" ${i === searchState.following.length - 1 ? "disabled" : ""}>${svg("chevDown")}</button>
@@ -1252,6 +1619,7 @@
           <div>
             <h2 class="following-title">Following</h2>
             <p class="following-sub">Your watchlist · drag to reorder</p>
+            <p class="live-badge" data-live-badge><span class="lb-dot" aria-hidden="true"></span><span>Loading live quotes…</span></p>
           </div>
           <button type="button" class="chip ghost follow-edit-btn" aria-pressed="${searchState.editMode ? "true" : "false"}">${searchState.editMode ? "Done" : "Edit"}</button>
         </div>
@@ -1365,6 +1733,7 @@
     // Pointer-event drag (works on iPhone; avoid HTML5 DnD).
     const list = section.querySelector("#follow-list");
     if (list) bindFollowPointerDrag(list, el);
+    watchLive(el);
   }
 
   function bindFollowPointerDrag(list, root) {
@@ -1580,9 +1949,15 @@
     { id: "spacex", title: "SpaceX", icon: "orbit", fallback: "SpaceX deep dive — catalysts, holders and valuation" },
     { id: "tesla", title: "Tesla", icon: "bolt", fallback: "Tesla deep dive — catalysts, holders and valuation" },
     { id: "search", title: "Search", icon: "search", fallback: "Look up any US ticker — live quote plus deep dive when on file" },
+    { id: "track", title: "Track Record", icon: "chart", fallback: "How the Growth and Risk It picks are doing vs QQQ and SPY" },
     { id: "cassiopeia", title: "Cassiopeia", icon: "cas", fallback: "The five stars behind the Futura W" },
   ];
 
+  // "Oct 6, 2026 close" -> "2026-10-06" (used as the daily-close fallback label).
+  function etfCloseDate(asOf) {
+    const d = new Date(String(asOf || "").replace(/\s*close\s*$/i, ""));
+    return isNaN(d) ? "" : `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  }
   function etfCard(e) {
     const chg = e.change || "";
     const tick = normalizeTicker(e.ticker);
@@ -1592,9 +1967,10 @@
           <div class="tags"><span class="tag ticker">${esc(tick)}</span><span class="tag sector">${esc(e.exchange || "ETF")}</span>${followToggleHTML(tick, { compact: true })}</div>
           <h3 class="etf-name">${esc(e.name)}</h3>
         </div>
-        <div class="pick-price">
+        <div class="pick-price lq" data-lq="${esc(tick)}"${e.priceDate ? ` data-lq-date="${esc(e.priceDate)}"` : ""}>
           <div class="p">${esc(money(e.price))}</div>
           <div class="chg ${tone(chg)}">${esc(chg)}</div>
+          <div class="d">${esc(e.priceDate ? `close ${fmtShortDate(e.priceDate).replace(/, \d{4}$/, "")}` : (e.asOf || ""))}</div>
         </div>
       </div>
       <p class="etf-tagline">${esc(e.tagline || "")}</p>
@@ -1624,6 +2000,7 @@
       </section>
       <section class="home-etfs" aria-label="Index ETFs">
         <div class="group-head"><h2>Index ETFs</h2><span class="range">VOO · QQQ</span><span class="rule"></span></div>
+        ${liveBadgeHTML()}
         <div class="etf-grid"><div class="loading">Loading ETF snapshots…</div></div>
       </section>
       ${footer("Futura is a personal investing dashboard for information only, not investment advice. ETF figures are snapshots from the linked sources; tap a card to open Search for that ticker.")}`;
@@ -1637,7 +2014,7 @@
       if (el.dataset.token !== token) return;
       const list = d.etfs || [];
       grid.innerHTML = list.length
-        ? list.map(etfCard).join("")
+        ? list.map((x) => etfCard({ ...x, priceDate: x.priceDate || etfCloseDate(d.asOf) })).join("")
         : `<div class="empty">No ETF snapshots on file.</div>`;
       const headRange = el.querySelector(".home-etfs .range");
       if (headRange && d.asOf) headRange.textContent = d.asOf;
@@ -1650,6 +2027,7 @@
         });
       });
       bindFollowToggles(el);
+      watchLive(el);
     } catch (err) {
       if (el.dataset.token === token) grid.innerHTML = `<div class="error">Couldn't load ETF data (${esc(err.message)}).</div>`;
     }
