@@ -102,7 +102,15 @@
     if (!t || !isValidTicker(t)) return "";
     const on = isFollowing(t);
     const compact = !!opts.compact;
-    return `<button type="button" class="follow-toggle chip${on ? " is-following" : ""}${compact ? " follow-toggle-compact" : ""}" data-follow-toggle="${esc(t)}" aria-pressed="${on ? "true" : "false"}" aria-label="${on ? "Unfollow" : "Follow"} ${esc(t)}">${on ? svg("starFill") : svg("star")}<span>${on ? "Following" : "Follow"}</span></button>`;
+    return `<button type="button" class="follow-toggle chip${on ? " is-following" : ""}${compact ? " follow-toggle-compact" : ""}" data-follow-toggle="${esc(t)}" aria-pressed="${on ? "true" : "false"}" aria-label="${on ? "Unfollow" : "Follow"} ${esc(t)}">${on ? svg("starFill") : svg("star")}<span>${on ? "Following" : "Follow"}</span></button>${saLinkHTML(t, opts)}`;
+  }
+  const SA_ETFS = new Set(["VOO","QQQ","SPY","IVV","VTI","DIA","IWM","ARKK","XLK","SMH","SOXX","VGT","SCHD","TQQQ","SQQQ"]);
+  function saLinkHTML(ticker, opts = {}) {
+    const t = normalizeTicker(ticker);
+    if (!t || !isValidTicker(t)) return "";
+    const kind = (opts.etf || SA_ETFS.has(t)) ? "etf" : "stocks";
+    const url = `https://stockanalysis.com/${kind}/${encodeURIComponent(t.toLowerCase().replace(/\./g, "-"))}/`;
+    return `<a class="sa-link chip${opts.compact ? " sa-link-compact" : ""}" href="${url}" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="Open ${esc(t)} in Stock Analysis" title="Open in Stock Analysis"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2"/></svg><span>Stock Analysis</span></a>`;
   }
   function paintFollowToggle(btn, on) {
     if (!btn) return;
@@ -1709,6 +1717,7 @@
         </button>
         <button type="button" class="follow-quote lq" data-lq="${esc(t)}" data-open="${esc(t)}" tabindex="-1" aria-hidden="true"><span class="p">—</span><span class="chg"></span><span class="d"></span></button>
         <div class="follow-actions">
+          ${saLinkHTML(t, { compact: true, icon: true })}
           <button type="button" class="follow-move follow-up" data-move="up" data-index="${i}" aria-label="Move ${esc(t)} up" ${i === 0 ? "disabled" : ""}>${svg("chevUp")}</button>
           <button type="button" class="follow-move follow-down" data-move="down" data-index="${i}" aria-label="Move ${esc(t)} down" ${i === searchState.following.length - 1 ? "disabled" : ""}>${svg("chevDown")}</button>
           <button type="button" class="follow-remove" data-unfollow="${esc(t)}" aria-label="Unfollow ${esc(t)}">${svg("x")}</button>
