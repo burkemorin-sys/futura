@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-08",
+  "lastUpdated": "2026-10-09",
   "company": "NVIDIA",
   "ticker": "NVDA",
   "exchange": "NASDAQ",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "Data-center AI infrastructure: GPUs, networking, CUDA software and systems.",
   "snapshot": {
-    "price": 237.47,
-    "change": "−0.74%",
-    "asOf": "Oct 7, 2026 close",
-    "marketCap": "$5.73T",
+    "price": 230.48,
+    "change": "−2.94%",
+    "asOf": "Oct 8, 2026 close",
+    "marketCap": "$5.54T",
     "range52w": "$164.27 – $243.37",
     "sourceUrl": "https://stockanalysis.com/stocks/nvda/statistics/"
   },
@@ -133,11 +133,11 @@
       "rating": "Strong Buy",
       "count": 61,
       "priceTarget": "$328.72",
-      "upside": "+38.4%",
+      "upside": "+42.6%",
       "sourceUrl": "https://stockanalysis.com/stocks/nvda/statistics/",
       "calls": [
         {
-          "text": "Consensus Strong Buy across 61 analysts; average target ~$329",
+          "text": "Consensus Strong Buy across 61 analysts; average target $328.72 (+42.6% vs the Oct 8 close)",
           "url": "https://stockanalysis.com/stocks/nvda/statistics/"
         },
         {
@@ -269,10 +269,10 @@
     }
   ],
   "grades": {
-    "growth": "B",
-    "value": "C-",
-    "momentum": "A-",
-    "profitability": "A"
+    "growth": "B-",
+    "value": "D+",
+    "momentum": "B+",
+    "profitability": "A+"
   },
   "gradeInputs": {
     "growth": "2/2",
@@ -281,27 +281,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 19.634,
-    "peg": 0.393,
+    "forwardPE": 19.056,
+    "peg": 0.381,
     "revenueGrowthPct": 83.38,
     "revenueGrowthQuarter": "2026-07-26",
     "epsGrowth3yPct": 64.78,
-    "evSales": 18.85,
+    "evSales": 18.2,
     "grossMarginPct": 74.674,
     "operatingMarginPct": 65.214,
     "netMarginPct": 63.663,
     "fcfMarginPct": 41.92,
-    "chg3mPct": 20.59,
-    "chg6mPct": 33.34,
-    "chg1yPct": 28.33,
-    "relStrength1yPct": 12.17,
-    "priceAsOf": "2026-10-07"
+    "chg3mPct": 12.91,
+    "chg6mPct": 26.58,
+    "chg1yPct": 21.88,
+    "relStrength1yPct": 6.9,
+    "priceAsOf": "2026-10-08"
   },
   "grading": {
-    "asOf": "2026-10-08",
-    "spy1yPct": 16.16,
-    "pool": "Ranked against 83 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, duplicates counted once), plus NVDA itself",
-    "poolSize": 83,
+    "asOf": "2026-10-09",
+    "spy1yPct": 14.98,
+    "pool": "Ranked against 81 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 22, duplicates counted once), plus NVDA itself",
+    "poolSize": 81,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -316,19 +316,19 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-08",
-    "priceDate": "2026-10-07",
+    "asOf": "2026-10-09",
+    "priceDate": "2026-10-08",
     "inScreen": false,
-    "outsideScreenReason": "market cap $5.66T is outside the screen's $1B-$30B range",
-    "score": 78,
+    "outsideScreenReason": "market cap $5.54T is outside the screen's $1B-$30B range",
+    "score": 80,
     "scoreParts": {
       "rev": 10.0,
       "margin": 15.0,
       "forward": 15.0,
-      "value": 7.6,
-      "notRun": 7.1,
+      "value": 7.8,
+      "notRun": 7.7,
       "trend": 10,
-      "analysts": 8.6,
+      "analysts": 9.1,
       "theme": 5
     },
     "penalty": 0,
@@ -361,31 +361,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": true,
-        "detail": "Forward P/E 19.634, EV/forward sales 10.6x"
+        "detail": "Forward P/E 19.056, EV/forward sales 10.2x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr +28% vs SPY +16%"
+        "detail": "1-yr +22% vs SPY +15%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": false,
-        "detail": "-1% vs 52-week high"
+        "detail": "-4% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
         "met": true,
-        "detail": "Above 200-day; 3-month vs SPY +12 pts"
+        "detail": "Above 200-day; 3-month vs SPY +11 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": true,
-        "detail": "Strong Buy (61), +38% to target"
+        "detail": "Strong Buy (61), +43% to target"
       },
       {
         "key": "revisions",
@@ -398,10 +398,10 @@
       "Revenue: latest quarter +106% YoY vs +85% the quarter before and +56% a year earlier (halved: goodwill/intangibles up 13% of assets in a year suggests acquisition-driven growth) → 10/20",
       "Margins: gross +8.5 pts, operating +10.9 pts YoY (last 2 quarters) → 15/15",
       "Forward: next-12-month revenue +78% (implied), 3-yr EPS growth forecast +65% a year → 15/15",
-      "Valuation: forward P/E 19.634, EV/forward sales 10.6x → 8/15",
-      "Not already run: 1-yr +28%, -1% vs 52-week high → 7/10",
-      "Trend: price above 200-day, above 50-day, 3-month vs SPY +12 pts → 10/10",
-      "Analysts: Strong Buy (61), +38% to target → 9/10",
+      "Valuation: forward P/E 19.056, EV/forward sales 10.2x → 8/15",
+      "Not already run: 1-yr +22%, -4% vs 52-week high → 8/10",
+      "Trend: price above 200-day, above 50-day, 3-month vs SPY +11 pts → 10/10",
+      "Analysts: Strong Buy (61), +43% to target → 9/10",
       "Bottleneck theme: AI-infrastructure supplier industry (Semiconductors) → 5/5"
     ],
     "risks": [
@@ -424,15 +424,15 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "10.6x"
+        "value": "10.2x"
       },
       {
         "label": "1-yr move",
-        "value": "+28%"
+        "value": "+22%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-1%"
+        "value": "-4%"
       }
     ],
     "eiMetrics": {
@@ -447,31 +447,31 @@
       "omChg": 10.94,
       "fwdRevGrowth": 77.68,
       "eps3y": 64.78,
-      "fpe": 19.63,
-      "evSales": 18.85,
-      "evFwdSales": 10.61,
-      "peg": 0.39,
-      "ch1y": 26.67,
+      "fpe": 19.06,
+      "evSales": 18.2,
+      "evFwdSales": 10.24,
+      "peg": 0.38,
+      "ch1y": 21.24,
       "pt": 328.72,
       "rating": "Strong Buy",
       "analysts": 61,
-      "psForward": 10.65,
+      "psForward": 10.29,
       "netcash": 23609000000.0,
       "sharesYoY": -1.04,
       "shortFloat": 1.27,
       "beta": 2.22,
       "grossMarginTTM": 74.67,
-      "mcap": 5660298270000.0,
-      "revUSD": 299059453162.15,
+      "mcap": 5536424160000.0,
+      "revUSD": 302867842450.77,
       "currency": "USD",
       "lastQ": "2026-07-26",
-      "price": 237.47,
-      "priceDate": "2026-10-07",
-      "offHigh": -0.74,
-      "ch1yNasdaq": 28.33,
-      "rs3m": 12.07,
+      "price": 230.48,
+      "priceDate": "2026-10-08",
+      "offHigh": -3.66,
+      "ch1yNasdaq": 21.88,
+      "rs3m": 10.7,
       "acqJump": 12.51,
-      "upside": 38.43
+      "upside": 42.62
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/nvda/statistics/",
@@ -483,16 +483,16 @@
     {
       "list": "Growth",
       "route": "#/growth",
-      "role": "bench",
-      "rank": 1,
-      "of": 18,
-      "trend": "Consensus target implies about 38% upside; analysts forecast revenue +91% this fiscal year and +68% next (S&P Global consensus).",
+      "role": "pick",
+      "rank": 12,
+      "of": 12,
+      "trend": "Consensus target implies about 43% upside; analysts forecast revenue +91% this fiscal year and +68% next (S&P Global consensus).",
       "risks": [
         "High volatility (beta 2.22; 52-week change +27.51%)"
       ],
-      "priceDate": "2026-10-07",
-      "listUpdated": "2026-10-08",
-      "method": "Conservative growth at a reasonable price (GARP), rerun on the full US-listed market (StockAnalysis / S&P Global screener, Oct 7, 2026 close). A stock qualifies if it has: market cap of $10B or more and at least a year of trading history; TTM revenue growth of 15% or more that analysts expect to continue (consensus revenue growth of 8%+ next fiscal year and 8%+ a year over the next 3 years); a positive forward P/E of 35 or less and a PEG of 1.5 or less where available; a Buy or Strong Buy consensus from 5+ analysts with 15%+ upside to the average target; beta of 2.6 or less; share count up no "
+      "priceDate": "2026-10-09",
+      "listUpdated": "2026-10-09",
+      "method": "Conservative growth at a reasonable price (GARP), rerun on the full US-listed market (StockAnalysis / S&P Global screener, Oct 9, 2026 close). A stock qualifies if it has: market cap of $10B or more and at least a year of trading history; TTM revenue growth of 15% or more that analysts expect to continue (consensus revenue growth of 8%+ next fiscal year and 8%+ a year over the next 3 years); a positive forward P/E of 35 or less and a PEG of 1.5 or less where available; a Buy or Strong Buy consensus from 5+ analysts with 15%+ upside to the average target; beta of 2.6 or less; share count up no "
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-08",
+  "lastUpdated": "2026-10-09",
   "company": "Tesla",
   "ticker": "TSLA",
   "exchange": "NASDAQ",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "EVs, energy storage, autonomy (FSD / Robotaxi / Cybercab) and Optimus robots.",
   "snapshot": {
-    "price": 377.81,
-    "change": "−0.75%",
-    "asOf": "Oct 7, 2026 close",
-    "marketCap": "$1.49T",
+    "price": 375.0,
+    "change": "−0.74%",
+    "asOf": "Oct 8, 2026 close",
+    "marketCap": "$1.51T",
     "range52w": "$297.38 – $498.83",
     "sourceUrl": "https://stockanalysis.com/stocks/tsla/"
   },
@@ -184,8 +184,8 @@
     "analyst": {
       "rating": "Buy",
       "count": 44,
-      "priceTarget": "$392.42",
-      "upside": "+3.9%",
+      "priceTarget": "$396.57",
+      "upside": "+5.8%",
       "sourceUrl": "https://stockanalysis.com/stocks/tsla/",
       "calls": [
         {
@@ -391,6 +391,13 @@
   },
   "news": [
     {
+      "date": "2026-10-08",
+      "outlet": "Electrek (citing Reuters)",
+      "title": "Tesla leaned on Dutch regulator to ease its FSD review, emails show",
+      "summary": "Eight EU countries now allow FSD (Supervised); the bloc-wide vote has slipped to December at the earliest, with Germany, Italy and Spain still undecided. TSLA closed −0.7% at $375.00.",
+      "url": "https://electrek.co/2026/10/08/tesla-fsd-europe-rdw-pressure-reuters/"
+    },
+    {
       "date": "2026-10-07",
       "outlet": "24/7 Wall St.",
       "title": "UBS raises Tesla target to $391 from $385, keeps Buy",
@@ -464,7 +471,7 @@
   "grades": {
     "growth": "F",
     "value": "F",
-    "momentum": "D+",
+    "momentum": "C",
     "profitability": "D"
   },
   "gradeInputs": {
@@ -474,27 +481,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 202.2,
-    "peg": 9.187,
+    "forwardPE": 191.024,
+    "peg": 8.679,
     "revenueGrowthPct": 11.75,
     "revenueGrowthQuarter": "2026-06-30",
-    "epsGrowth3yPct": 24.89,
-    "evSales": 14.14,
+    "epsGrowth3yPct": 25.26,
+    "evSales": 14.31,
     "grossMarginPct": 18.852,
     "operatingMarginPct": 4.129,
     "netMarginPct": 3.671,
     "fcfMarginPct": 5.561,
-    "chg3mPct": -6.23,
-    "chg6mPct": 8.99,
-    "chg1yPct": -12.76,
-    "relStrength1yPct": -28.92,
-    "priceAsOf": "2026-10-07"
+    "chg3mPct": -4.84,
+    "chg6mPct": 9.25,
+    "chg1yPct": -14.52,
+    "relStrength1yPct": -29.5,
+    "priceAsOf": "2026-10-08"
   },
   "grading": {
-    "asOf": "2026-10-08",
-    "spy1yPct": 16.16,
-    "pool": "Ranked against 84 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, duplicates counted once), plus TSLA itself",
-    "poolSize": 84,
+    "asOf": "2026-10-09",
+    "spy1yPct": 14.98,
+    "pool": "Ranked against 82 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 22, duplicates counted once), plus TSLA itself",
+    "poolSize": 82,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -509,19 +516,19 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-08",
-    "priceDate": "2026-10-07",
+    "asOf": "2026-10-09",
+    "priceDate": "2026-10-08",
     "inScreen": false,
-    "outsideScreenReason": "market cap $1.49T is outside the screen's $1B-$30B range",
+    "outsideScreenReason": "market cap $1.51T is outside the screen's $1B-$30B range",
     "score": 43,
     "scoreParts": {
       "rev": 17.6,
       "margin": 3.9,
-      "forward": 5.5,
+      "forward": 5.8,
       "value": 0.0,
       "notRun": 10,
       "trend": 2,
-      "analysts": 3.5,
+      "analysts": 3.7,
       "theme": 0
     },
     "penalty": 0,
@@ -548,19 +555,19 @@
         "key": "forward",
         "label": "Strong forward growth (20%+ next 12 months)",
         "met": false,
-        "detail": "Implied next-12-month revenue +8%"
+        "detail": "Implied next-12-month revenue +9%"
       },
       {
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": false,
-        "detail": "Forward P/E 202.2, EV/forward sales 13.0x"
+        "detail": "Forward P/E 191.024, EV/forward sales 13.1x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr -13% vs SPY +16%"
+        "detail": "1-yr -15% vs SPY +15%"
       },
       {
         "key": "pullback",
@@ -572,13 +579,13 @@
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
         "met": false,
-        "detail": "Below 200-day; 3-month vs SPY -8 pts"
+        "detail": "Below 200-day; 3-month vs SPY -11 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": false,
-        "detail": "Buy (44), +4% to target"
+        "detail": "Buy (44), +6% to target"
       },
       {
         "key": "revisions",
@@ -590,16 +597,16 @@
     "drivers": [
       "Revenue: latest quarter +26% YoY vs +16% the quarter before and -12% a year earlier → 18/20",
       "Margins: gross +2.2 pts, operating -0.5 pts YoY (last 2 quarters) → 4/15",
-      "Forward: next-12-month revenue +8% (implied), 3-yr EPS growth forecast +25% a year → 6/15",
-      "Valuation: forward P/E 202.2, EV/forward sales 13.0x → 0/15",
-      "Not already run: 1-yr -13%, -23% vs 52-week high → 10/10",
-      "Trend: price below 200-day, above 50-day, 3-month vs SPY -8 pts → 2/10",
-      "Analysts: Buy (44), +4% to target → 3/10",
+      "Forward: next-12-month revenue +9% (implied), 3-yr EPS growth forecast +25% a year → 6/15",
+      "Valuation: forward P/E 191.024, EV/forward sales 13.1x → 0/15",
+      "Not already run: 1-yr -15%, -23% vs 52-week high → 10/10",
+      "Trend: price below 200-day, above 50-day, 3-month vs SPY -11 pts → 2/10",
+      "Analysts: Buy (44), +6% to target → 4/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
       "Thin gross margin (17%) leaves little room for error",
-      "Rich forward P/E (202)",
+      "Rich forward P/E (191)",
       "Still below its 200-day average: the turn isn't confirmed"
     ],
     "keyFigures": [
@@ -613,15 +620,15 @@
       },
       {
         "label": "Next-12m rev",
-        "value": "+8%"
+        "value": "+9%"
       },
       {
         "label": "EV / fwd sales",
-        "value": "13.0x"
+        "value": "13.1x"
       },
       {
         "label": "1-yr move",
-        "value": "-13%"
+        "value": "-15%"
       },
       {
         "label": "vs 52-wk high",
@@ -638,33 +645,33 @@
       "om": 1.41,
       "gmChg": 2.18,
       "omChg": -0.52,
-      "fwdRevGrowth": 8.46,
-      "eps3y": 24.89,
-      "fpe": 202.2,
-      "evSales": 14.14,
-      "evFwdSales": 13.04,
-      "peg": 9.19,
-      "ch1y": -16.64,
-      "pt": 392.42,
+      "fwdRevGrowth": 9.36,
+      "eps3y": 25.26,
+      "fpe": 191.02,
+      "evSales": 14.31,
+      "evFwdSales": 13.09,
+      "peg": 8.68,
+      "ch1y": -12.76,
+      "pt": 396.57,
       "rating": "Buy",
       "analysts": 44,
-      "psForward": 13.28,
+      "psForward": 13.33,
       "netcash": 27444000000.0,
       "sharesYoY": 0.58,
       "shortFloat": 2.44,
       "beta": 1.92,
       "grossMarginTTM": 18.85,
-      "mcap": 1492178500927.0,
-      "revUSD": 103616311431.64,
+      "mcap": 1511491787684.0,
+      "revUSD": 103697296081.5,
       "currency": "USD",
       "lastQ": "2026-06-30",
-      "price": 377.81,
-      "priceDate": "2026-10-07",
-      "offHigh": -22.88,
-      "ch1yNasdaq": -12.76,
-      "rs3m": -8.39,
+      "price": 375.0,
+      "priceDate": "2026-10-08",
+      "offHigh": -23.45,
+      "ch1yNasdaq": -14.52,
+      "rs3m": -10.72,
       "acqJump": -0.31,
-      "upside": 3.87
+      "upside": 5.75
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/tsla/statistics/",

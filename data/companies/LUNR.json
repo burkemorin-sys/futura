@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-08",
+  "lastUpdated": "2026-10-09",
   "company": "Intuitive Machines",
   "ticker": "LUNR",
   "exchange": "NASDAQ",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "Lunar landers (NASA CLPS), lunar data relay (NASA Near Space Network) and, since buying Lanteris (formerly Maxar Space Systems), satellites for commercial, civil and national-security customers.",
   "snapshot": {
-    "price": 14.41,
-    "change": "−4.32%",
-    "asOf": "Oct 7, 2026 close",
-    "marketCap": "$3.30B",
+    "price": 13.7,
+    "change": "−4.93%",
+    "asOf": "Oct 8, 2026 close",
+    "marketCap": "$3.0B",
     "range52w": "$8.05 – $45.70 (closes)",
     "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/lunr/historical"
   },
@@ -126,11 +126,11 @@
       "rating": "Strong Buy",
       "count": 9,
       "priceTarget": "$29.50",
-      "upside": "+104.7%",
+      "upside": "+115.3%",
       "sourceUrl": "https://stockanalysis.com/stocks/lunr/forecast/",
       "calls": [
         {
-          "text": "Consensus Strong Buy across 9 analysts (8 Strong Buy, 1 Sell); average target $29.50, range $13–$43",
+          "text": "Consensus Strong Buy across 9 analysts; average target $29.50 (+115.3% vs the Oct 8 close)",
           "url": "https://stockanalysis.com/stocks/lunr/forecast/"
         },
         {
@@ -439,9 +439,9 @@
     }
   ],
   "grades": {
-    "growth": "B-",
-    "value": "D+",
-    "momentum": "D-",
+    "growth": "C+",
+    "value": "C",
+    "momentum": "F",
     "profitability": "F"
   },
   "gradeInputs": {
@@ -456,22 +456,22 @@
     "revenueGrowthPct": 116.89,
     "revenueGrowthQuarter": "2026-06-30",
     "epsGrowth3yPct": null,
-    "evSales": 6.96,
+    "evSales": 6.39,
     "grossMarginPct": 16.349,
     "operatingMarginPct": -21.277,
     "netMarginPct": -26.636,
     "fcfMarginPct": -38.31,
-    "chg3mPct": -19.27,
-    "chg6mPct": -36.6,
-    "chg1yPct": 22.22,
-    "relStrength1yPct": 6.06,
-    "priceAsOf": "2026-10-07"
+    "chg3mPct": -19.51,
+    "chg6mPct": -41.43,
+    "chg1yPct": 9.78,
+    "relStrength1yPct": -5.2,
+    "priceAsOf": "2026-10-08"
   },
   "grading": {
-    "asOf": "2026-10-08",
-    "spy1yPct": 16.16,
-    "pool": "Ranked against 83 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, duplicates counted once), plus LUNR itself",
-    "poolSize": 83,
+    "asOf": "2026-10-09",
+    "spy1yPct": 14.98,
+    "pool": "Ranked against 81 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 22, duplicates counted once), plus LUNR itself",
+    "poolSize": 81,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -486,8 +486,8 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-08",
-    "priceDate": "2026-10-07",
+    "asOf": "2026-10-09",
+    "priceDate": "2026-10-08",
     "inScreen": false,
     "outsideScreenReason": null,
     "score": 58,
@@ -495,7 +495,7 @@
       "rev": 10.0,
       "margin": 15.0,
       "forward": 10.0,
-      "value": 5.2,
+      "value": 5.4,
       "notRun": 8,
       "trend": 0,
       "analysts": 10.0,
@@ -531,31 +531,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": true,
-        "detail": "Forward P/E n/a, EV/forward sales 3.1x"
+        "detail": "Forward P/E n/a, EV/forward sales 2.9x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr +22% vs SPY +16%"
+        "detail": "1-yr +10% vs SPY +15%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": false,
-        "detail": "-68% vs 52-week high"
+        "detail": "-70% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
         "met": false,
-        "detail": "Below 200-day; 3-month vs SPY -20 pts"
+        "detail": "Below 200-day; 3-month vs SPY -22 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": true,
-        "detail": "Strong Buy (9), +105% to target"
+        "detail": "Strong Buy (9), +115% to target"
       },
       {
         "key": "revisions",
@@ -568,14 +568,14 @@
       "Revenue: latest quarter +310% YoY vs +199% the quarter before and +21% a year earlier (halved: share count +45% YoY and goodwill/intangibles up 142% of assets in a year suggests acquisition-driven growth) → 10/20",
       "Margins: gross +23.2 pts, operating +22.3 pts YoY (last 2 quarters) → 15/15",
       "Forward: next-12-month revenue +123% (implied), 3-yr EPS growth forecast n/a a year → 10/15",
-      "Valuation: forward P/E n/a, EV/forward sales 3.1x → 5/15",
-      "Not already run: 1-yr +22%, -68% vs 52-week high → 8/10",
-      "Trend: price below 200-day, below 50-day, 3-month vs SPY -20 pts → 0/10",
-      "Analysts: Strong Buy (9), +105% to target → 10/10",
+      "Valuation: forward P/E n/a, EV/forward sales 2.9x → 5/15",
+      "Not already run: 1-yr +10%, -70% vs 52-week high → 8/10",
+      "Trend: price below 200-day, below 50-day, 3-month vs SPY -22 pts → 0/10",
+      "Analysts: Strong Buy (9), +115% to target → 10/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
-      "Down 68% from its 52-week high: falling-knife risk",
+      "Down 70% from its 52-week high: falling-knife risk",
       "Thin gross margin (17%) leaves little room for error",
       "Recent acquisition (goodwill/intangibles up 142% of assets in a year): part of the revenue jump is bought, not organic",
       "Share count +45% YoY (dilution or a stock-funded deal can flatter growth)",
@@ -597,15 +597,15 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "3.1x"
+        "value": "2.9x"
       },
       {
         "label": "1-yr move",
-        "value": "+22%"
+        "value": "+10%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-68%"
+        "value": "-70%"
       }
     ],
     "eiMetrics": {
@@ -618,33 +618,33 @@
       "om": -18.1,
       "gmChg": 23.19,
       "omChg": 22.32,
-      "fwdRevGrowth": 122.95,
+      "fwdRevGrowth": 122.98,
       "eps3y": null,
       "fpe": null,
-      "evSales": 6.96,
-      "evFwdSales": 3.12,
+      "evSales": 6.39,
+      "evFwdSales": 2.87,
       "peg": null,
-      "ch1y": 20.36,
+      "ch1y": 5.73,
       "pt": 29.5,
       "rating": "Strong Buy",
       "analysts": 9,
-      "psForward": 3.02,
+      "psForward": 2.76,
       "netcash": -114093000.0,
       "sharesYoY": 44.58,
       "shortFloat": 27.6,
       "beta": 1.86,
       "grossMarginTTM": 16.35,
-      "mcap": 3196924610.0,
-      "revUSD": 474955372.16,
+      "mcap": 3019508457.0,
+      "revUSD": 490100382.57,
       "currency": "USD",
       "lastQ": "2026-06-30",
-      "price": 14.41,
-      "priceDate": "2026-10-07",
-      "offHigh": -68.47,
-      "ch1yNasdaq": 22.22,
-      "rs3m": -19.6,
+      "price": 13.7,
+      "priceDate": "2026-10-08",
+      "offHigh": -70.02,
+      "ch1yNasdaq": 9.78,
+      "rs3m": -21.89,
       "acqJump": 142.18,
-      "upside": 104.72
+      "upside": 115.33
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/lunr/statistics/",
@@ -656,16 +656,16 @@
     {
       "list": "Risk It",
       "route": "#/riskit",
-      "role": "pick",
-      "rank": 10,
-      "of": 12,
-      "score": 76,
+      "role": "bench",
+      "rank": 2,
+      "of": 18,
+      "score": 74,
       "riskLevel": "Very High",
       "drivers": [
         "Revenue growth +116.9% YoY (TTM) → 31/40",
         "Acceleration: TTM 116.9% vs FY2025 -7.9% → 5/5",
-        "Momentum: 1-yr price +22.2% vs S&P 500 (SPY) +16.2% = relative strength +6.1% → 9/25",
-        "Upside to target +104.7% → 20/20",
+        "Momentum: 1-yr price +9.8% vs S&P 500 (SPY) +15.0% = relative strength -5.2% → 7/25",
+        "Upside to target +123.7% → 20/20",
         "Consensus Strong Buy (9) → 10/10",
         "Gross-margin trend (not scored): latest quarter 17.4% vs -23.5% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 1 raised, 4 cut, 0 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
@@ -676,8 +676,8 @@
         "Unprofitable: TTM net income -$131.20M",
         "Dilution: share count +44.6% YoY"
       ],
-      "priceDate": "2026-10-07",
-      "listUpdated": "2026-10-08",
+      "priceDate": "2026-10-09",
+      "listUpdated": "2026-10-09",
       "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 "
     }
   ],
