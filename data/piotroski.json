@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-09",
+  "lastUpdated": "2026-10-10",
   "priceDate": "2026-10-09",
   "title": "Piotroski",
   "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1915 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (383 stocks, P/B ≤ 1.49) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
@@ -51,14 +51,14 @@
       "how": "Revenue ÷ start-of-year total assets above last year's"
     }
   ],
-  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 1, 8: 16, 7: 66, 6: 84, 5: 119, 4: 58, 3: 24, 2: 9, 1: 4. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
+  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 1, 8: 16, 7: 66, 6: 84, 5: 118, 4: 58, 3: 24, 2: 9, 1: 4. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
   "universe": {
     "listed": 7004,
     "screened": 2025,
     "positiveBook": 1915,
     "quintile": 383,
-    "pbCutoff": 1.486,
-    "scored": 382,
+    "pbCutoff": 1.488,
+    "scored": 380,
     "picks8plus": 17,
     "distribution": {
       "0": 0,
@@ -66,7 +66,7 @@
       "2": 9,
       "3": 24,
       "4": 58,
-      "5": 119,
+      "5": 118,
       "6": 84,
       "7": 66,
       "8": 16,
@@ -96,12 +96,14 @@
       "price": 67.48,
       "priceDate": "2026-10-09",
       "marketCap": "$32.2B",
-      "forwardPE": 12.88,
+      "forwardPE": 13.66,
       "peg": "n/a",
       "revenueGrowth": "+3.7% YoY (FY)",
       "score": 9,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -185,9 +187,21 @@
         "https://stockanalysis.com/stocks/ntr/financials/",
         "https://stockanalysis.com/stocks/ntr/statistics/"
       ],
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "B",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 3.7,
-        "forwardPE": 12.88,
+        "forwardPE": 13.66,
         "peg": null,
         "epsGrowth3yPct": -0.15,
         "evSales": 1.61,
@@ -200,18 +214,6 @@
         "chg1yPct": 10.42,
         "relStrength1yPct": -5.58,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "F",
-        "momentum": "B",
-        "profitability": "C+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -220,13 +222,15 @@
       "sector": "Utilities – Electric Utilities: Central",
       "price": 11.03,
       "priceDate": "2026-10-09",
-      "marketCap": "$14.0B",
+      "marketCap": "$13.9B",
       "forwardPE": 3.23,
       "peg": "n/a",
       "revenueGrowth": "+4.3% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -311,6 +315,18 @@
         "https://stockanalysis.com/stocks/kep/financials/",
         "https://stockanalysis.com/stocks/kep/statistics/"
       ],
+      "grades": {
+        "growth": "D+",
+        "value": "B+",
+        "momentum": "D",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 4.3,
         "forwardPE": 3.23,
@@ -326,18 +342,6 @@
         "chg1yPct": -12.67,
         "relStrength1yPct": -28.67,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "D+",
-        "value": "B+",
-        "momentum": "D",
-        "profitability": "D-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -352,7 +356,9 @@
       "revenueGrowth": "-8.7% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -436,6 +442,18 @@
         "https://stockanalysis.com/stocks/ppli/financials/",
         "https://stockanalysis.com/stocks/ppli/statistics/"
       ],
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "C+",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": -8.7,
         "forwardPE": 102.1,
@@ -451,18 +469,6 @@
         "chg1yPct": 22.39,
         "relStrength1yPct": 6.39,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "F",
-        "momentum": "C+",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -477,7 +483,9 @@
       "revenueGrowth": "-3.0% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -563,6 +571,18 @@
         "https://stockanalysis.com/stocks/lpl/financials/",
         "https://stockanalysis.com/stocks/lpl/statistics/"
       ],
+      "grades": {
+        "growth": "C+",
+        "value": "B",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": -3.0,
         "forwardPE": 9.71,
@@ -578,18 +598,6 @@
         "chg1yPct": -47.26,
         "relStrength1yPct": -63.26,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C+",
-        "value": "B",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -604,7 +612,9 @@
       "revenueGrowth": "+71.6% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -688,6 +698,18 @@
         "https://stockanalysis.com/stocks/amtm/financials/",
         "https://stockanalysis.com/stocks/amtm/statistics/"
       ],
+      "grades": {
+        "growth": "A-",
+        "value": "A+",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 71.6,
         "forwardPE": 7.62,
@@ -703,18 +725,6 @@
         "chg1yPct": -19.29,
         "relStrength1yPct": -35.29,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "A-",
-        "value": "A+",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -729,7 +739,9 @@
       "revenueGrowth": "+149.4% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -813,22 +825,6 @@
         "https://stockanalysis.com/stocks/cdlr/financials/",
         "https://stockanalysis.com/stocks/cdlr/statistics/"
       ],
-      "metrics": {
-        "revenueGrowthPct": 149.4,
-        "forwardPE": 4.65,
-        "peg": null,
-        "epsGrowth3yPct": 5.49,
-        "evSales": 4.51,
-        "grossMarginPct": 47.027,
-        "operatingMarginPct": 37.17,
-        "netMarginPct": 27.47,
-        "fcfMarginPct": -39.49,
-        "chg3mPct": -2.72,
-        "chg6mPct": -16.09,
-        "chg1yPct": 2.06,
-        "relStrength1yPct": -13.94,
-        "priceAsOf": "2026-10-09"
-      },
       "grades": {
         "growth": "B",
         "value": "C",
@@ -840,6 +836,22 @@
         "value": "2/3",
         "momentum": "3/3",
         "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 149.4,
+        "forwardPE": 4.65,
+        "peg": null,
+        "epsGrowth3yPct": 5.49,
+        "evSales": 4.51,
+        "grossMarginPct": 47.027,
+        "operatingMarginPct": 37.17,
+        "netMarginPct": 27.47,
+        "fcfMarginPct": -39.5,
+        "chg3mPct": -2.72,
+        "chg6mPct": -16.09,
+        "chg1yPct": 2.06,
+        "relStrength1yPct": -13.94,
+        "priceAsOf": "2026-10-09"
       }
     },
     {
@@ -849,12 +861,14 @@
       "price": 43.8,
       "priceDate": "2026-10-09",
       "marketCap": "$9.1B",
-      "forwardPE": 7.28,
+      "forwardPE": 7.29,
       "peg": "n/a",
       "revenueGrowth": "+3.5% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -862,7 +876,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.05"
+          "value": "1.04"
         },
         {
           "label": "ROA",
@@ -938,9 +952,21 @@
         "https://stockanalysis.com/stocks/aptv/financials/",
         "https://stockanalysis.com/stocks/aptv/statistics/"
       ],
+      "grades": {
+        "growth": "F",
+        "value": "A",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 3.5,
-        "forwardPE": 7.28,
+        "forwardPE": 7.29,
         "peg": null,
         "epsGrowth3yPct": -1.68,
         "evSales": 0.68,
@@ -953,18 +979,6 @@
         "chg1yPct": -38.88,
         "relStrength1yPct": -54.88,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "A",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -979,7 +993,9 @@
       "revenueGrowth": "+7.7% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -1063,6 +1079,18 @@
         "https://stockanalysis.com/stocks/pags/financials/",
         "https://stockanalysis.com/stocks/pags/statistics/"
       ],
+      "grades": {
+        "growth": "B+",
+        "value": "A-",
+        "momentum": "A",
+        "profitability": "A+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 7.7,
         "forwardPE": 6.08,
@@ -1078,18 +1106,6 @@
         "chg1yPct": 21.57,
         "relStrength1yPct": 5.57,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B+",
-        "value": "A-",
-        "momentum": "A",
-        "profitability": "A+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1104,7 +1120,9 @@
       "revenueGrowth": "+173.3% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -1188,6 +1206,18 @@
         "https://stockanalysis.com/stocks/exe/financials/",
         "https://stockanalysis.com/stocks/exe/statistics/"
       ],
+      "grades": {
+        "growth": "A+",
+        "value": "D-",
+        "momentum": "D+",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 173.3,
         "forwardPE": 10.59,
@@ -1203,18 +1233,6 @@
         "chg1yPct": -16.76,
         "relStrength1yPct": -32.76,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "A+",
-        "value": "D-",
-        "momentum": "D+",
-        "profitability": "A"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1229,7 +1247,9 @@
       "revenueGrowth": "+1.3% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -1313,6 +1333,18 @@
         "https://stockanalysis.com/stocks/octv/financials/",
         "https://stockanalysis.com/stocks/octv/statistics/"
       ],
+      "grades": {
+        "growth": "D-",
+        "value": "F",
+        "momentum": "A+",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "1/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 1.3,
         "forwardPE": 14.79,
@@ -1328,18 +1360,6 @@
         "chg1yPct": null,
         "relStrength1yPct": null,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "D-",
-        "value": "F",
-        "momentum": "A+",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "1/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1354,7 +1374,9 @@
       "revenueGrowth": "+5.7% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -1438,6 +1460,18 @@
         "https://stockanalysis.com/stocks/suz/financials/",
         "https://stockanalysis.com/stocks/suz/statistics/"
       ],
+      "grades": {
+        "growth": "F",
+        "value": "C",
+        "momentum": "C",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 5.7,
         "forwardPE": 5.75,
@@ -1453,18 +1487,6 @@
         "chg1yPct": -4.03,
         "relStrength1yPct": -20.03,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "C",
-        "momentum": "C",
-        "profitability": "B"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1565,6 +1587,18 @@
         "https://stockanalysis.com/stocks/aap/financials/",
         "https://stockanalysis.com/stocks/aap/statistics/"
       ],
+      "grades": {
+        "growth": "C",
+        "value": "C+",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": -5.4,
         "forwardPE": 12.59,
@@ -1580,18 +1614,6 @@
         "chg1yPct": -15.94,
         "relStrength1yPct": -31.94,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C",
-        "value": "C+",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     }
   ],
@@ -1693,6 +1715,18 @@
         "https://stockanalysis.com/stocks/nvst/statistics/"
       ],
       "rank": 1,
+      "grades": {
+        "growth": "A",
+        "value": "F",
+        "momentum": "C-",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 8.3,
         "forwardPE": 14.63,
@@ -1708,18 +1742,6 @@
         "chg1yPct": 13.92,
         "relStrength1yPct": -2.08,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "A",
-        "value": "F",
-        "momentum": "C-",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1819,6 +1841,18 @@
         "https://stockanalysis.com/stocks/aer/statistics/"
       ],
       "rank": 2,
+      "grades": {
+        "growth": "C+",
+        "value": "D",
+        "momentum": "B+",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 6.5,
         "forwardPE": 8.39,
@@ -1834,18 +1868,6 @@
         "chg1yPct": 19.12,
         "relStrength1yPct": 3.12,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C+",
-        "value": "D",
-        "momentum": "B+",
-        "profitability": "A-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1945,6 +1967,18 @@
         "https://stockanalysis.com/stocks/ful/statistics/"
       ],
       "rank": 3,
+      "grades": {
+        "growth": "C-",
+        "value": "B-",
+        "momentum": "D-",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": -2.7,
         "forwardPE": 9.59,
@@ -1960,18 +1994,6 @@
         "chg1yPct": -14.83,
         "relStrength1yPct": -30.83,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C-",
-        "value": "B-",
-        "momentum": "D-",
-        "profitability": "D"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2071,6 +2093,18 @@
         "https://stockanalysis.com/stocks/centa/statistics/"
       ],
       "rank": 4,
+      "grades": {
+        "growth": "D",
+        "value": "C-",
+        "momentum": "A-",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": -2.2,
         "forwardPE": 12.19,
@@ -2086,18 +2120,6 @@
         "chg1yPct": 27.88,
         "relStrength1yPct": 11.88,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "D",
-        "value": "C-",
-        "momentum": "A-",
-        "profitability": "D+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2197,6 +2219,18 @@
         "https://stockanalysis.com/stocks/uhs/statistics/"
       ],
       "rank": 5,
+      "grades": {
+        "growth": "B-",
+        "value": "D+",
+        "momentum": "B-",
+        "profitability": "C-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 9.7,
         "forwardPE": 7.7,
@@ -2212,23 +2246,11 @@
         "chg1yPct": -12.03,
         "relStrength1yPct": -28.03,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B-",
-        "value": "D+",
-        "momentum": "B-",
-        "profitability": "C-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     }
   ],
   "grading": {
-    "asOf": "2026-10-09",
+    "asOf": "2026-10-10",
     "spy1yPct": 16.0,
     "pool": "17 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

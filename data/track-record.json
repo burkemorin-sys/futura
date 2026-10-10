@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
- "lastUpdated": "2026-10-09",
+ "lastUpdated": "2026-10-10",
  "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill).",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
@@ -191,7 +191,8 @@
    "INDV": 35.83,
    "ASR": 231.75,
    "VSNT": 30.64,
-   "GEN": 23.25
+   "GEN": 23.25,
+   "SBET": 8.59
   }
  },
  "lists": {
@@ -513,19 +514,6 @@
      "beatQQQ": true
     },
     {
-     "ticker": "TE",
-     "company": "T1 Energy",
-     "entryDate": "2026-10-07",
-     "entryPriceDate": "2026-10-06",
-     "entryPrice": 3.8,
-     "lastPrice": 3.39,
-     "lastPriceDate": "2026-10-09",
-     "returnPct": -10.79,
-     "qqqPct": -1.1,
-     "spyPct": -0.07,
-     "beatQQQ": false
-    },
-    {
      "ticker": "APLD",
      "company": "Applied Digital",
      "entryDate": "2026-10-07",
@@ -641,6 +629,19 @@
      "qqqPct": 0.49,
      "spyPct": 0.6,
      "beatQQQ": false
+    },
+    {
+     "ticker": "SBET",
+     "company": "Sharplink Inc.",
+     "entryDate": "2026-10-10",
+     "entryPriceDate": "2026-10-09",
+     "entryPrice": 8.59,
+     "lastPrice": 8.59,
+     "lastPriceDate": "2026-10-09",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
     }
    ],
    "closed": [
@@ -685,6 +686,20 @@
      "exitDate": "2026-10-09",
      "exitPriceDate": "2026-10-08",
      "exitPrice": 13.7
+    },
+    {
+     "ticker": "TE",
+     "company": "T1 Energy",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-06",
+     "entryPrice": 3.8,
+     "returnPct": -10.79,
+     "qqqPct": -1.1,
+     "spyPct": -0.07,
+     "beatQQQ": false,
+     "exitDate": "2026-10-10",
+     "exitPriceDate": "2026-10-09",
+     "exitPrice": 3.39
     }
    ],
    "segments": [
@@ -740,6 +755,24 @@
       "ANAB",
       "BBIO",
       "RCAT"
+     ]
+    },
+    {
+     "start": "2026-10-09",
+     "startValue": 96.313937,
+     "tickers": [
+      "ALM",
+      "NUVB",
+      "APLD",
+      "SNDX",
+      "VSTM",
+      "ONDS",
+      "EXK",
+      "URGN",
+      "ANAB",
+      "BBIO",
+      "RCAT",
+      "SBET"
      ]
     }
    ],
@@ -823,6 +856,28 @@
      "priceDate": "2026-10-08",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-10",
+     "priceDate": "2026-10-09",
+     "action": "remove",
+     "ticker": "TE",
+     "company": "T1 Energy",
+     "price": 3.39
+    },
+    {
+     "date": "2026-10-10",
+     "priceDate": "2026-10-09",
+     "action": "add",
+     "ticker": "SBET",
+     "company": "Sharplink Inc.",
+     "price": 8.59
+    },
+    {
+     "date": "2026-10-10",
+     "priceDate": "2026-10-09",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -850,7 +905,7 @@
     "beat": 5,
     "of": 15,
     "openBeat": 4,
-    "openOf": 12
+    "openOf": 11
    },
    "startDate": "2026-10-07",
    "startPriceDate": "2026-10-06"

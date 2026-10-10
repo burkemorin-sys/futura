@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-09",
+  "lastUpdated": "2026-10-10",
   "priceDate": "2026-10-09",
   "title": "Experiment Screener",
   "method": "Your eight rules, applied strictly to every US-listed stock over $2B on Nasdaq's screener (bitcoin/crypto miners excluded). A stock is a pick only if it passes all eight. Passers are ranked by a simple 0–100 score; stocks that miss exactly one rule are listed below as near misses with the rule they missed. Nothing is loosened: if few stocks pass, few are shown.",
@@ -46,11 +46,11 @@
     "RSI(14): Wilder's 14-day RSI on Nasdaq daily closes, inclusive 50–65.",
     "Market cap: StockAnalysis, over $2B."
   ],
-  "dataNotes": "Prices and moving averages/RSI from Nasdaq daily closes (2026-10-09). Fundamentals from StockAnalysis statistics pages, quarterly income statements and balance sheets. This run: 2025 stocks over $2B screened, 996 checked against all eight rules (the rest already failed two or more of ROIC, OCF/debt or positive FCF), 20 passed everything, 82 missed exactly one. 'n/a' means the data wasn't available, which counts as a miss.",
+  "dataNotes": "Prices and moving averages/RSI from Nasdaq daily closes (2026-10-09). Fundamentals from StockAnalysis statistics pages, quarterly income statements and balance sheets. This run: 2025 stocks over $2B screened, 997 checked against all eight rules (the rest already failed two or more of ROIC, OCF/debt or positive FCF), 20 passed everything, 82 missed exactly one. 'n/a' means the data wasn't available, which counts as a miss.",
   "universe": {
     "listed": 7004,
     "screened": 2025,
-    "fullyChecked": 996,
+    "fullyChecked": 997,
     "passed": 20,
     "nearMisses": 82,
     "noStatistics": 24
@@ -215,6 +215,18 @@
         "sma200": 246.36,
         "rsi": 51.371
       },
+      "grades": {
+        "growth": "A+",
+        "value": "F",
+        "momentum": "C+",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 98.5,
         "forwardPE": 60.98,
@@ -230,18 +242,6 @@
         "chg1yPct": 51.8,
         "relStrength1yPct": 35.8,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "A+",
-        "value": "F",
-        "momentum": "C+",
-        "profitability": "B-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -379,6 +379,18 @@
         "sma200": 19.736,
         "rsi": 59.388
       },
+      "grades": {
+        "growth": "C-",
+        "value": "A-",
+        "momentum": "C+",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 23.8,
         "forwardPE": 15.88,
@@ -394,18 +406,6 @@
         "chg1yPct": 55.88,
         "relStrength1yPct": 39.88,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C-",
-        "value": "A-",
-        "momentum": "C+",
-        "profitability": "D+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -523,7 +523,7 @@
         "https://stockanalysis.com/stocks/mu/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 1162145552379.0,
+        "mcap": 1164234485148.0,
         "roic": 93.417,
         "ocf": 89675000000.0,
         "debt": 5179000000.0,
@@ -545,22 +545,6 @@
         "sma200": 701.681,
         "rsi": 50.203
       },
-      "metrics": {
-        "revenueGrowthPct": 256.3,
-        "forwardPE": 5.84,
-        "peg": 0.09,
-        "epsGrowth3yPct": 39.12,
-        "evSales": 8.21,
-        "grossMarginPct": 80.716,
-        "operatingMarginPct": 74.586,
-        "netMarginPct": 63.796,
-        "fcfMarginPct": 44.271,
-        "chg3mPct": 3.77,
-        "chg6mPct": 144.12,
-        "chg1yPct": 435.02,
-        "relStrength1yPct": 419.02,
-        "priceAsOf": "2026-10-09"
-      },
       "grades": {
         "growth": "A",
         "value": "B+",
@@ -572,6 +556,22 @@
         "value": "3/3",
         "momentum": "3/3",
         "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 256.3,
+        "forwardPE": 5.84,
+        "peg": 0.09,
+        "epsGrowth3yPct": 39.12,
+        "evSales": 8.23,
+        "grossMarginPct": 80.716,
+        "operatingMarginPct": 74.586,
+        "netMarginPct": 63.796,
+        "fcfMarginPct": 44.271,
+        "chg3mPct": 3.77,
+        "chg6mPct": 144.12,
+        "chg1yPct": 435.02,
+        "relStrength1yPct": 419.02,
+        "priceAsOf": "2026-10-09"
       }
     },
     {
@@ -709,6 +709,18 @@
         "sma200": 34.673,
         "rsi": 50.892
       },
+      "grades": {
+        "growth": "C",
+        "value": "A",
+        "momentum": "C+",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 24.3,
         "forwardPE": 10.06,
@@ -724,18 +736,6 @@
         "chg1yPct": 50.41,
         "relStrength1yPct": 34.41,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C",
-        "value": "A",
-        "momentum": "C+",
-        "profitability": "B"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -874,6 +874,18 @@
         "sma200": 112.551,
         "rsi": 52.627
       },
+      "grades": {
+        "growth": "B",
+        "value": "F",
+        "momentum": "B",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 34.8,
         "forwardPE": 70.05,
@@ -889,18 +901,6 @@
         "chg1yPct": 114.39,
         "relStrength1yPct": 98.39,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B",
-        "value": "F",
-        "momentum": "B",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1038,6 +1038,18 @@
         "sma200": 35.56,
         "rsi": 55.561
       },
+      "grades": {
+        "growth": "B",
+        "value": "D+",
+        "momentum": "D+",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 31.4,
         "forwardPE": 29.32,
@@ -1053,18 +1065,6 @@
         "chg1yPct": 16.06,
         "relStrength1yPct": 0.06,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B",
-        "value": "D+",
-        "momentum": "D+",
-        "profitability": "D"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1202,6 +1202,18 @@
         "sma200": 73.675,
         "rsi": 61.191
       },
+      "grades": {
+        "growth": "A",
+        "value": "C+",
+        "momentum": "B-",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 89.4,
         "forwardPE": 13.06,
@@ -1217,18 +1229,6 @@
         "chg1yPct": 147.92,
         "relStrength1yPct": 131.92,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "A",
-        "value": "C+",
-        "momentum": "B-",
-        "profitability": "C+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1337,7 +1337,7 @@
       "risks": [
         "RSI 64, near the top of the 50–65 band"
       ],
-      "analystRating": "Buy (15 analysts)",
+      "analystRating": "Buy (16 analysts)",
       "priceTarget": 16.81,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/avpt/statistics/",
@@ -1366,6 +1366,18 @@
         "sma200": 11.727,
         "rsi": 64.344
       },
+      "grades": {
+        "growth": "C",
+        "value": "D-",
+        "momentum": "C+",
+        "profitability": "C-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 25.0,
         "forwardPE": 33.85,
@@ -1381,18 +1393,6 @@
         "chg1yPct": -3.62,
         "relStrength1yPct": -19.62,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C",
-        "value": "D-",
-        "momentum": "C+",
-        "profitability": "C-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1531,6 +1531,18 @@
         "sma200": 13.533,
         "rsi": 64.09
       },
+      "grades": {
+        "growth": "B-",
+        "value": "B+",
+        "momentum": "F",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 57.0,
         "forwardPE": 14.83,
@@ -1546,18 +1558,6 @@
         "chg1yPct": 2.28,
         "relStrength1yPct": -13.72,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B-",
-        "value": "B+",
-        "momentum": "F",
-        "profitability": "D+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1695,6 +1695,18 @@
         "sma200": 79.419,
         "rsi": 53.841
       },
+      "grades": {
+        "growth": "B+",
+        "value": "C+",
+        "momentum": "A-",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 41.2,
         "forwardPE": 11.12,
@@ -1710,18 +1722,6 @@
         "chg1yPct": 69.59,
         "relStrength1yPct": 53.59,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B+",
-        "value": "C+",
-        "momentum": "A-",
-        "profitability": "A-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1859,6 +1859,18 @@
         "sma200": 279.157,
         "rsi": 51.17
       },
+      "grades": {
+        "growth": "B-",
+        "value": "F",
+        "momentum": "C-",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 26.0,
         "forwardPE": 33.65,
@@ -1874,18 +1886,6 @@
         "chg1yPct": 126.13,
         "relStrength1yPct": 110.13,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B-",
-        "value": "F",
-        "momentum": "C-",
-        "profitability": "C+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2023,6 +2023,18 @@
         "sma200": 29.639,
         "rsi": 51.971
       },
+      "grades": {
+        "growth": "C",
+        "value": "B-",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 23.0,
         "forwardPE": 20.45,
@@ -2038,18 +2050,6 @@
         "chg1yPct": -15.06,
         "relStrength1yPct": -31.06,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C",
-        "value": "B-",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     }
   ],
@@ -2190,6 +2190,18 @@
         "rsi": 52.436
       },
       "rank": 1,
+      "grades": {
+        "growth": "B",
+        "value": "D",
+        "momentum": "C-",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 30.6,
         "forwardPE": 20.27,
@@ -2205,18 +2217,6 @@
         "chg1yPct": 51.16,
         "relStrength1yPct": 35.16,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B",
-        "value": "D",
-        "momentum": "C-",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2355,6 +2355,18 @@
         "rsi": 55.254
       },
       "rank": 2,
+      "grades": {
+        "growth": "B-",
+        "value": "F",
+        "momentum": "F",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 28.7,
         "forwardPE": 43.17,
@@ -2370,18 +2382,6 @@
         "chg1yPct": 41.57,
         "relStrength1yPct": 25.57,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B-",
-        "value": "F",
-        "momentum": "F",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2520,6 +2520,18 @@
         "rsi": 60.091
       },
       "rank": 3,
+      "grades": {
+        "growth": "B+",
+        "value": "D-",
+        "momentum": "C",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 54.2,
         "forwardPE": 29.27,
@@ -2535,18 +2547,6 @@
         "chg1yPct": 38.2,
         "relStrength1yPct": 22.2,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B+",
-        "value": "D-",
-        "momentum": "C",
-        "profitability": "D"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2685,6 +2685,18 @@
         "rsi": 60.469
       },
       "rank": 4,
+      "grades": {
+        "growth": "C+",
+        "value": "D",
+        "momentum": "B+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 18.0,
         "forwardPE": 40.48,
@@ -2700,18 +2712,6 @@
         "chg1yPct": 264.1,
         "relStrength1yPct": 248.1,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C+",
-        "value": "D",
-        "momentum": "B+",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2850,6 +2850,18 @@
         "rsi": 52.895
       },
       "rank": 5,
+      "grades": {
+        "growth": "C+",
+        "value": "B",
+        "momentum": "F",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 60.0,
         "forwardPE": 11.71,
@@ -2865,18 +2877,6 @@
         "chg1yPct": 9.2,
         "relStrength1yPct": -6.8,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C+",
-        "value": "B",
-        "momentum": "F",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -3015,6 +3015,18 @@
         "rsi": 58.793
       },
       "rank": 6,
+      "grades": {
+        "growth": "D-",
+        "value": "B+",
+        "momentum": "D-",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 17.2,
         "forwardPE": 8.99,
@@ -3030,18 +3042,6 @@
         "chg1yPct": 32.38,
         "relStrength1yPct": 16.38,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "D-",
-        "value": "B+",
-        "momentum": "D-",
-        "profitability": "B-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -3180,6 +3180,18 @@
         "rsi": 55.049
       },
       "rank": 7,
+      "grades": {
+        "growth": "C+",
+        "value": "B",
+        "momentum": "A-",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 51.5,
         "forwardPE": 13.59,
@@ -3195,18 +3207,6 @@
         "chg1yPct": 66.8,
         "relStrength1yPct": 50.8,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C+",
-        "value": "B",
-        "momentum": "A-",
-        "profitability": "B"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -3345,6 +3345,18 @@
         "rsi": 55.706
       },
       "rank": 8,
+      "grades": {
+        "growth": "C-",
+        "value": "D-",
+        "momentum": "D+",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 16.7,
         "forwardPE": 29.32,
@@ -3360,18 +3372,6 @@
         "chg1yPct": 58.55,
         "relStrength1yPct": 42.55,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "C-",
-        "value": "D-",
-        "momentum": "D+",
-        "profitability": "B-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     }
   ],
@@ -3654,7 +3654,7 @@
       "risks": [
         "No data-driven red flags; check the latest earnings report"
       ],
-      "analystRating": "Strong Buy (61 analysts)",
+      "analystRating": "Strong Buy (62 analysts)",
       "priceTarget": 328.72,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/nvda/statistics/",
@@ -4553,7 +4553,7 @@
       "priceDate": "2026-10-09",
       "marketCap": "$17.1B",
       "forwardPE": 33.39,
-      "peg": 2.57,
+      "peg": 2.61,
       "revenueGrowth": "+24.7% YoY (TTM)",
       "score": 66,
       "scoreParts": {
@@ -4685,7 +4685,7 @@
       "metrics": {
         "revenueGrowthPct": 24.7,
         "forwardPE": 33.39,
-        "peg": 2.57,
+        "peg": 2.61,
         "epsGrowth3yPct": 12.32,
         "evSales": 6.01,
         "grossMarginPct": 72.35,
@@ -5218,7 +5218,7 @@
       "price": 149.92,
       "priceDate": "2026-10-09",
       "marketCap": "$7.0B",
-      "forwardPE": 57.61,
+      "forwardPE": 57.12,
       "peg": "n/a",
       "revenueGrowth": "+29.4% YoY (TTM)",
       "score": 62,
@@ -5318,7 +5318,7 @@
       ],
       "risks": [
         "EPS is up on the prior quarter but down 27% vs the same quarter a year ago (possible seasonality)",
-        "Rich forward P/E (58)",
+        "Rich forward P/E (57)",
         "Short interest 16% of float"
       ],
       "analystRating": "Hold (24 analysts)",
@@ -5352,7 +5352,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 29.4,
-        "forwardPE": 57.61,
+        "forwardPE": 57.12,
         "peg": null,
         "epsGrowth3yPct": -9.51,
         "evSales": 5.05,
@@ -5852,7 +5852,7 @@
         "revenueGrowthPct": 32.8,
         "forwardPE": 27.57,
         "peg": 1.92,
-        "epsGrowth3yPct": 12.43,
+        "epsGrowth3yPct": 12.22,
         "evSales": 11.27,
         "grossMarginPct": 64.502,
         "operatingMarginPct": 56.899,
@@ -5865,7 +5865,7 @@
         "priceAsOf": "2026-10-09"
       },
       "grades": {
-        "growth": "C-",
+        "growth": "D+",
         "value": "F",
         "momentum": "B-",
         "profitability": "B+"
@@ -7381,7 +7381,7 @@
       "price": 5.25,
       "priceDate": "2026-10-09",
       "marketCap": "$6.9B",
-      "forwardPE": 6.15,
+      "forwardPE": 6.19,
       "peg": "n/a",
       "revenueGrowth": "+74.2% YoY (TTM)",
       "score": 63,
@@ -7513,7 +7513,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 74.2,
-        "forwardPE": 6.15,
+        "forwardPE": 6.19,
         "peg": null,
         "epsGrowth3yPct": 37.79,
         "evSales": 1.88,
@@ -7548,7 +7548,7 @@
       "priceDate": "2026-10-09",
       "marketCap": "$12.3B",
       "forwardPE": 48.97,
-      "peg": 1.61,
+      "peg": 1.63,
       "revenueGrowth": "+25.0% YoY (TTM)",
       "score": 54,
       "scoreParts": {
@@ -7680,7 +7680,7 @@
       "metrics": {
         "revenueGrowthPct": 25.0,
         "forwardPE": 48.97,
-        "peg": 1.61,
+        "peg": 1.63,
         "epsGrowth3yPct": 40.48,
         "evSales": 24.94,
         "grossMarginPct": 56.628,
@@ -7860,7 +7860,7 @@
         "priceAsOf": "2026-10-09"
       },
       "grades": {
-        "growth": "D+",
+        "growth": "C-",
         "value": "B+",
         "momentum": "C",
         "profitability": "C-"
@@ -7879,7 +7879,7 @@
       "price": 347.86,
       "priceDate": "2026-10-09",
       "marketCap": "$4.28T",
-      "forwardPE": 24.58,
+      "forwardPE": 24.81,
       "peg": "n/a",
       "revenueGrowth": "+20.1% YoY (TTM)",
       "score": 49,
@@ -7987,7 +7987,7 @@
         "https://stockanalysis.com/stocks/goog/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 4277519095422.0,
+        "mcap": 4279799200000.0,
         "roic": 24.926,
         "ocf": 185675000000.0,
         "debt": 120791000000.0,
@@ -8011,10 +8011,10 @@
       },
       "metrics": {
         "revenueGrowthPct": 20.1,
-        "forwardPE": 24.58,
+        "forwardPE": 24.81,
         "peg": null,
         "epsGrowth3yPct": 18.37,
-        "evSales": 9.28,
+        "evSales": 9.37,
         "grossMarginPct": 60.897,
         "operatingMarginPct": 33.11,
         "netMarginPct": 54.771,
@@ -8877,8 +8877,8 @@
       "price": 15.73,
       "priceDate": "2026-10-09",
       "marketCap": "$7.0B",
-      "forwardPE": 10.62,
-      "peg": 1.13,
+      "forwardPE": 11.0,
+      "peg": 1.17,
       "revenueGrowth": "+12.2% YoY (TTM)",
       "score": 66,
       "scoreParts": {
@@ -8903,13 +8903,13 @@
           "key": "ocfDebt",
           "label": "Operating cash flow > 30% of total debt",
           "met": true,
-          "detail": "Operating cash flow $692M vs total debt $32M: 2174% vs > 30%"
+          "detail": "Operating cash flow $692M vs total debt $32M: 2176% vs > 30%"
         },
         {
           "key": "fcfAssets",
           "label": "Free cash flow / total assets > 10%",
           "met": true,
-          "detail": "FCF $662M (TTM) / total assets $4.0B = 16.7% vs > 10%"
+          "detail": "FCF $663M (TTM) / total assets $4.0B = 16.8% vs > 10%"
         },
         {
           "key": "epsQoQ",
@@ -8949,11 +8949,11 @@
         },
         {
           "label": "OCF / debt",
-          "value": "2174%"
+          "value": "2176%"
         },
         {
           "label": "FCF / assets",
-          "value": "16.7%"
+          "value": "16.8%"
         },
         {
           "label": "EPS QoQ",
@@ -8970,8 +8970,8 @@
       ],
       "drivers": [
         "ROIC > 15%: 1105.4% → 20/20",
-        "Operating cash flow > 30% of total debt: 2174% → 20/20",
-        "Free cash flow / total assets > 10%: 16.7% → 9/20",
+        "Operating cash flow > 30% of total debt: 2176% → 20/20",
+        "Free cash flow / total assets > 10%: 16.8% → 9/20",
         "QoQ EPS growth > 20%: +72% → 17/20",
         "Annual revenue growth > 15%: 12.2% → 0/20"
       ],
@@ -8987,14 +8987,14 @@
       "screenMetrics": {
         "mcap": 7029080273.0,
         "roic": 1105.359,
-        "ocf": 691675949.0,
+        "ocf": 692130680.0,
         "debt": 31811624.0,
-        "fcf": 662301295.0,
-        "ocfDebt": 2174.287,
+        "fcf": 662736713.0,
+        "ocfDebt": 2175.716,
         "currency": "CNY",
         "lastQ": "2026-06-30",
         "assets": 3956503062.901,
-        "fcfAssets": 16.74,
+        "fcfAssets": 16.751,
         "eps0": 4.201,
         "eps1": 2.44,
         "eps4": 1.577,
@@ -9009,8 +9009,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 12.2,
-        "forwardPE": 10.62,
-        "peg": 1.13,
+        "forwardPE": 11.0,
+        "peg": 1.17,
         "epsGrowth3yPct": 10.62,
         "evSales": 3.1,
         "grossMarginPct": 85.905,
@@ -9376,7 +9376,7 @@
       "priceDate": "2026-10-09",
       "marketCap": "$28.5B",
       "forwardPE": 15.96,
-      "peg": 2.29,
+      "peg": 2.37,
       "revenueGrowth": "+5.0% YoY (TTM)",
       "score": 55,
       "scoreParts": {
@@ -9508,7 +9508,7 @@
       "metrics": {
         "revenueGrowthPct": 5.0,
         "forwardPE": 15.96,
-        "peg": 2.29,
+        "peg": 2.37,
         "epsGrowth3yPct": 4.34,
         "evSales": 4.27,
         "grossMarginPct": 77.663,
@@ -10039,8 +10039,8 @@
       "price": 549.16,
       "priceDate": "2026-10-09",
       "marketCap": "$23.6B",
-      "forwardPE": 20.12,
-      "peg": 3.05,
+      "forwardPE": 20.74,
+      "peg": 3.15,
       "revenueGrowth": "+2.5% YoY (TTM)",
       "score": 39,
       "scoreParts": {
@@ -10171,8 +10171,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 2.5,
-        "forwardPE": 20.12,
-        "peg": 3.05,
+        "forwardPE": 20.74,
+        "peg": 3.15,
         "epsGrowth3yPct": 10.8,
         "evSales": 6.26,
         "grossMarginPct": 86.14,
@@ -10647,10 +10647,10 @@
       "screenMetrics": {
         "mcap": 141451497089.0,
         "roic": 15.631,
-        "ocf": 13051480019.0,
+        "ocf": 13050655463.0,
         "debt": 11508184521.0,
-        "fcf": 10047486969.0,
-        "ocfDebt": 113.41,
+        "fcf": 10046852197.0,
+        "ocfDebt": 113.403,
         "currency": "JPY",
         "lastQ": "2026-06-30",
         "assets": 98725280620.641,
@@ -10703,7 +10703,7 @@
       "price": 72.23,
       "priceDate": "2026-10-09",
       "marketCap": "$84.5B",
-      "forwardPE": 9.95,
+      "forwardPE": 11.34,
       "peg": "n/a",
       "revenueGrowth": "+13.7% YoY (TTM)",
       "score": 35,
@@ -10814,14 +10814,14 @@
       "screenMetrics": {
         "mcap": 84466008665.0,
         "roic": 16.268,
-        "ocf": 11079081185.0,
+        "ocf": 11073644362.0,
         "debt": 10337300186.0,
-        "fcf": 7243205331.0,
-        "ocfDebt": 107.176,
+        "fcf": 7239650882.0,
+        "ocfDebt": 107.123,
         "currency": "CAD",
         "lastQ": "2026-06-30",
         "assets": 66719245097.805,
-        "fcfAssets": 10.856,
+        "fcfAssets": 10.851,
         "eps0": 3.165,
         "eps1": 1.766,
         "eps4": 0.926,
@@ -10836,7 +10836,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 13.7,
-        "forwardPE": 9.95,
+        "forwardPE": 11.34,
         "peg": null,
         "epsGrowth3yPct": 23.65,
         "evSales": 2.28,
@@ -11304,7 +11304,7 @@
         "Short interest 15% of float"
       ],
       "analystRating": "Hold (15 analysts)",
-      "priceTarget": 186.46,
+      "priceTarget": 189.08,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/it/statistics/",
         "https://stockanalysis.com/stocks/it/financials/?p=quarterly"
@@ -15330,7 +15330,7 @@
         "revenueGrowthPct": 15.2,
         "forwardPE": 6.63,
         "peg": 0.21,
-        "epsGrowth3yPct": 41.8,
+        "epsGrowth3yPct": 41.66,
         "evSales": 1.0,
         "grossMarginPct": 12.819,
         "operatingMarginPct": 7.837,
@@ -15362,7 +15362,7 @@
       "price": 121.3,
       "priceDate": "2026-10-09",
       "marketCap": "$21.6B",
-      "forwardPE": 5.98,
+      "forwardPE": 5.74,
       "peg": "n/a",
       "revenueGrowth": "+16.3% YoY (TTM)",
       "score": 20,
@@ -15464,7 +15464,7 @@
         "RSI 74, near the top of the 50–65 band"
       ],
       "analystRating": "Hold (16 analysts)",
-      "priceTarget": 110.6,
+      "priceTarget": 113.0,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/dino/statistics/",
         "https://stockanalysis.com/stocks/dino/financials/?p=quarterly"
@@ -15494,7 +15494,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 16.3,
-        "forwardPE": 5.98,
+        "forwardPE": 5.74,
         "peg": null,
         "epsGrowth3yPct": 20.1,
         "evSales": 0.73,
@@ -17024,7 +17024,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-09",
+    "asOf": "2026-10-10",
     "spy1yPct": 16.0,
     "pool": "102 stocks (this list's picks + bench + near misses)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

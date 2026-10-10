@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-09",
+  "lastUpdated": "2026-10-10",
   "company": "Micron Technology",
   "ticker": "MU",
   "exchange": "NASDAQ",
@@ -7,9 +7,9 @@
   "status": "public",
   "tagline": "DRAM, NAND and high-bandwidth memory (HBM) for AI data centers, PCs, mobile and embedded.",
   "snapshot": {
-    "price": 1035.84,
-    "change": "−4.79%",
-    "asOf": "Oct 8, 2026 close",
+    "price": 1029.0,
+    "change": "−0.66%",
+    "asOf": "Oct 9, 2026 close",
     "marketCap": "$1.16T",
     "range52w": "$179.61 – $1,255.00",
     "sourceUrl": "https://stockanalysis.com/stocks/mu/statistics/"
@@ -130,11 +130,11 @@
       "rating": "Strong Buy",
       "count": 49,
       "priceTarget": "$1,555.13",
-      "upside": "+50.1%",
+      "upside": "+51.1%",
       "sourceUrl": "https://stockanalysis.com/stocks/mu/statistics/",
       "calls": [
         {
-          "text": "Consensus Strong Buy across 49 analysts; average target $1,555.13 (+50.1% vs the Oct 8 close)",
+          "text": "Consensus Strong Buy across 49 analysts; average target $1,555.13 (+51.1% vs the Oct 9 close)",
           "url": "https://stockanalysis.com/stocks/mu/statistics/"
         },
         {
@@ -214,6 +214,20 @@
   },
   "news": [
     {
+      "date": "2026-10-09",
+      "outlet": "CNBC",
+      "title": "Deep in-the-money Micron puts suggest a synthetic short",
+      "summary": "About $270M of Micron premium was tied to likely put buying, led by June 2028 puts at $2,250–$2,500 strikes; taken at face value a net ~$14.5M bearish spread with delta near −1. MU closed −0.66% at $1,029.",
+      "url": "https://www.cnbc.com/2026/10/09/two-massive-trades-just-happened-in-micron-and-nvidia-what-they-could-mean-for-chips.html"
+    },
+    {
+      "date": "2026-10-09",
+      "outlet": "Quartz (citing Bloomberg)",
+      "title": "Micron and Nvidia bounce early after OpenAI's $70B revenue target",
+      "summary": "OpenAI's projection of $70B+ annualized revenue by year-end eased AI-spending worries after Thursday's selloff; MU opened at $1,054 but faded to close lower.",
+      "url": "https://qz.com/nvidia-micron-stocks-openai-70-billion-revenue-2026-100926"
+    },
+    {
       "date": "2026-10-07",
       "outlet": "StockAnalysis",
       "title": "D.A. Davidson lifts Micron target to $3,000 from $2,100; MU closes +4.1% at $1,088",
@@ -243,7 +257,7 @@
     }
   ],
   "grades": {
-    "growth": "B-",
+    "growth": "B+",
     "value": "A-",
     "momentum": "A+",
     "profitability": "A+"
@@ -255,8 +269,8 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 5.88,
-    "peg": 0.09,
+    "forwardPE": 5.842,
+    "peg": 0.089,
     "revenueGrowthPct": 256.33,
     "revenueGrowthQuarter": "2026-09-03",
     "epsGrowth3yPct": 39.12,
@@ -265,17 +279,17 @@
     "operatingMarginPct": 74.586,
     "netMarginPct": 63.796,
     "fcfMarginPct": 44.271,
-    "chg3mPct": 9.17,
-    "chg6mPct": 154.68,
-    "chg1yPct": 427.04,
-    "relStrength1yPct": 412.06,
-    "priceAsOf": "2026-10-08"
+    "chg3mPct": 3.77,
+    "chg6mPct": 144.12,
+    "chg1yPct": 435.02,
+    "relStrength1yPct": 419.02,
+    "priceAsOf": "2026-10-09"
   },
   "grading": {
-    "asOf": "2026-10-09",
-    "spy1yPct": 14.98,
-    "pool": "Ranked against 81 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 22, duplicates counted once), plus MU itself",
-    "poolSize": 81,
+    "asOf": "2026-10-10",
+    "spy1yPct": 16.0,
+    "pool": "Ranked against 145 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 18, Piotroski 17, Magic Formula 28, duplicates counted once), plus MU itself",
+    "poolSize": 145,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -290,8 +304,8 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-09",
-    "priceDate": "2026-10-08",
+    "asOf": "2026-10-10",
+    "priceDate": "2026-10-09",
     "inScreen": false,
     "outsideScreenReason": "market cap $1.16T is outside the screen's $1B-$30B range",
     "score": 86,
@@ -300,7 +314,7 @@
       "margin": 15.0,
       "forward": 14.9,
       "value": 13.5,
-      "notRun": 2.9,
+      "notRun": 3,
       "trend": 10,
       "analysts": 10.0,
       "theme": 5
@@ -335,18 +349,18 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": true,
-        "detail": "Forward P/E 5.88, EV/forward sales 4.0x"
+        "detail": "Forward P/E 5.842, EV/forward sales 4.0x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": false,
-        "detail": "1-yr +427% vs SPY +15%"
+        "detail": "1-yr +435% vs SPY +16%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
-        "met": false,
+        "met": true,
         "detail": "-15% vs 52-week high"
       },
       {
@@ -359,7 +373,7 @@
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": true,
-        "detail": "Strong Buy (49), +50% to target"
+        "detail": "Strong Buy (49), +51% to target"
       },
       {
         "key": "revisions",
@@ -372,14 +386,14 @@
       "Revenue: latest quarter +379% YoY vs +346% the quarter before and +46% a year earlier → 20/20",
       "Margins: gross +44.5 pts, operating +52.5 pts YoY (last 2 quarters) → 15/15",
       "Forward: next-12-month revenue +107% (implied), 3-yr EPS growth forecast +39% a year → 15/15",
-      "Valuation: forward P/E 5.88, EV/forward sales 4.0x → 14/15",
-      "Not already run: 1-yr +427% (heavy penalty −5), -15% vs 52-week high → 3/10 −5",
+      "Valuation: forward P/E 5.842, EV/forward sales 4.0x → 14/15",
+      "Not already run: 1-yr +435% (heavy penalty −5), -15% vs 52-week high → 3/10 −5",
       "Trend: price above 200-day, above 50-day, 3-month vs SPY +2 pts → 10/10",
-      "Analysts: Strong Buy (49), +50% to target → 10/10",
+      "Analysts: Strong Buy (49), +51% to target → 10/10",
       "Bottleneck theme: AI-infrastructure supplier industry (Semiconductors) → 5/5"
     ],
     "risks": [
-      "Already up 427% in a year: much of the turn may be priced in",
+      "Already up 435% in a year: much of the turn may be priced in",
       "High volatility (beta 2.2)",
       "Cyclical hardware demand: AI capex pauses or inventory digestion would hit results"
     ],
@@ -402,7 +416,7 @@
       },
       {
         "label": "1-yr move",
-        "value": "+427%"
+        "value": "+435%"
       },
       {
         "label": "vs 52-wk high",
@@ -419,9 +433,9 @@
       "om": 80.68,
       "gmChg": 44.47,
       "omChg": 52.55,
-      "fwdRevGrowth": 107.4,
+      "fwdRevGrowth": 107.43,
       "eps3y": 39.12,
-      "fpe": 5.88,
+      "fpe": 5.84,
       "evSales": 8.23,
       "evFwdSales": 3.97,
       "peg": 0.09,
@@ -429,23 +443,23 @@
       "pt": 1555.13,
       "rating": "Strong Buy",
       "analysts": 49,
-      "psForward": 4.22,
+      "psForward": 4.21,
       "netcash": 68274000000.0,
       "sharesYoY": 1.6,
       "shortFloat": 2.46,
       "beta": 2.23,
       "grossMarginTTM": 80.72,
-      "mcap": 1162145552379.0,
-      "revUSD": 132907771315.07,
+      "mcap": 1164234485148.0,
+      "revUSD": 133192367595.01,
       "currency": "USD",
       "lastQ": "2026-09-03",
-      "price": 1035.84,
-      "priceDate": "2026-10-08",
-      "offHigh": -14.64,
-      "ch1yNasdaq": 427.04,
-      "rs3m": 1.5,
+      "price": 1029.0,
+      "priceDate": "2026-10-09",
+      "offHigh": -15.21,
+      "ch1yNasdaq": 435.02,
+      "rs3m": 1.95,
       "acqJump": -0.55,
-      "upside": 50.13
+      "upside": 51.13
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/mu/statistics/",
@@ -467,8 +481,29 @@
         "Stock already up 424% over 52 weeks"
       ],
       "priceDate": "2026-10-09",
-      "listUpdated": "2026-10-09",
+      "listUpdated": "2026-10-10",
       "method": "Conservative growth at a reasonable price (GARP), rerun on the full US-listed market (StockAnalysis / S&P Global screener, Oct 9, 2026 close). A stock qualifies if it has: market cap of $10B or more and at least a year of trading history; TTM revenue growth of 15% or more that analysts expect to continue (consensus revenue growth of 8%+ next fiscal year and 8%+ a year over the next 3 years); a positive forward P/E of 35 or less and a PEG of 1.5 or less where available; a Buy or Strong Buy consensus from 5+ analysts with 15%+ upside to the average target; beta of 2.6 or less; share count up no "
+    },
+    {
+      "list": "Experiment Screener",
+      "route": "#/experiment",
+      "role": "pick",
+      "rank": 3,
+      "of": 12,
+      "score": 84,
+      "drivers": [
+        "ROIC > 15%: 93.4% → 20/20",
+        "Operating cash flow > 30% of total debt: 1732% → 20/20",
+        "Free cash flow / total assets > 10%: 30.1% → 20/20",
+        "QoQ EPS growth > 20%: +33% → 4/20",
+        "Annual revenue growth > 15%: 256.3% → 20/20"
+      ],
+      "risks": [
+        "No data-driven red flags; check the latest earnings report"
+      ],
+      "priceDate": "2026-10-09",
+      "listUpdated": "2026-10-10",
+      "method": "Your eight rules, applied strictly to every US-listed stock over $2B on Nasdaq's screener (bitcoin/crypto miners excluded). A stock is a pick only if it passes all eight. Passers are ranked by a simple 0–100 score; stocks that miss exactly one rule are listed below as near misses with the rule they missed. Nothing is loosened: if few stocks pass, few are shown."
     }
   ]
 }

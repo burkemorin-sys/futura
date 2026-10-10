@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-09",
+  "lastUpdated": "2026-10-10",
   "company": "Materion",
   "ticker": "MTRN",
   "exchange": "NYSE",
@@ -7,9 +7,9 @@
   "status": "public",
   "tagline": "Advanced-materials maker (Mayfield Heights, Ohio): beryllium alloys and beryllium mined at its own Utah operation, precious-metal sputtering targets and clad materials for chips, and precision optical filters, sold into semiconductor, aerospace & defense, space, energy and data-center markets.",
   "snapshot": {
-    "price": 277.11,
-    "change": "−4.68%",
-    "asOf": "Oct 8, 2026 close",
+    "price": 280.45,
+    "change": "+1.21%",
+    "asOf": "Oct 9, 2026 close",
     "marketCap": "$5.8B",
     "range52w": "$111.50 – $319.18 (closes)",
     "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/mtrn/historical"
@@ -167,11 +167,11 @@
       "rating": "Buy",
       "count": 5,
       "priceTarget": "$303.75",
-      "upside": "+9.6%",
+      "upside": "+8.3%",
       "sourceUrl": "https://stockanalysis.com/stocks/mtrn/forecast/",
       "calls": [
         {
-          "text": "Consensus Buy across 5 analysts; average target $303.75 (+9.6% vs the Oct 8 close)",
+          "text": "Consensus Buy across 5 analysts; average target $303.75 (+8.3% vs the Oct 9 close)",
           "url": "https://stockanalysis.com/stocks/mtrn/statistics/"
         },
         {
@@ -401,10 +401,10 @@
   ],
   "gradeNote": "Growth (F): against a pool of high-growth picks, TTM revenue +21.6% is modest, and part of the +42% latest quarter is precious-metal pass-through (value-added sales +15%). Value (F): forward P/E 35, PEG 2.0, EV/EBITDA 31. Momentum (A+): +118% in a year and above its 200-day, despite the ~13% pullback from the Oct 5 high. Profitability (D): reported margins are thin (4.3% net, 1.5% FCF) because net sales include pass-through metal; on value-added sales, Q2 adj. EBITDA was a record 23.3%.",
   "grades": {
-    "growth": "F",
+    "growth": "D-",
     "value": "F",
     "momentum": "A+",
-    "profitability": "D"
+    "profitability": "F"
   },
   "gradeInputs": {
     "growth": "2/2",
@@ -414,7 +414,7 @@
   },
   "gradeMetrics": {
     "forwardPE": 35.425,
-    "peg": 2.0,
+    "peg": 2.024,
     "revenueGrowthPct": 21.6,
     "revenueGrowthQuarter": "2026-07-03",
     "epsGrowth3yPct": 24.31,
@@ -423,17 +423,17 @@
     "operatingMarginPct": 6.33,
     "netMarginPct": 4.295,
     "fcfMarginPct": 1.546,
-    "chg3mPct": 11.6,
-    "chg6mPct": 70.96,
-    "chg1yPct": 118.44,
-    "relStrength1yPct": 103.46,
-    "priceAsOf": "2026-10-08"
+    "chg3mPct": 9.24,
+    "chg6mPct": 72.09,
+    "chg1yPct": 123.75,
+    "relStrength1yPct": 107.75,
+    "priceAsOf": "2026-10-09"
   },
   "grading": {
-    "asOf": "2026-10-09",
-    "spy1yPct": 14.98,
-    "pool": "Ranked against 82 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 22, duplicates counted once), plus MTRN itself",
-    "poolSize": 82,
+    "asOf": "2026-10-10",
+    "spy1yPct": 16.0,
+    "pool": "Ranked against 146 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 18, Piotroski 17, Magic Formula 28, duplicates counted once), plus MTRN itself",
+    "poolSize": 146,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -448,8 +448,8 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-09",
-    "priceDate": "2026-10-08",
+    "asOf": "2026-10-10",
+    "priceDate": "2026-10-09",
     "inScreen": false,
     "outsideScreenReason": null,
     "score": 60,
@@ -458,9 +458,9 @@
       "margin": 0.0,
       "forward": 8.8,
       "value": 8.5,
-      "notRun": 8.9,
+      "notRun": 8.5,
       "trend": 10,
-      "analysts": 4.2,
+      "analysts": 4.0,
       "theme": 0
     },
     "penalty": 0,
@@ -499,25 +499,25 @@
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr +118% vs SPY +15%"
+        "detail": "1-yr +124% vs SPY +16%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": false,
-        "detail": "-13% vs 52-week high"
+        "detail": "-12% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
         "met": true,
-        "detail": "Above 200-day; 3-month vs SPY +5 pts"
+        "detail": "Above 200-day; 3-month vs SPY +6 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": false,
-        "detail": "Buy (5), +10% to target"
+        "detail": "Buy (5), +8% to target"
       },
       {
         "key": "revisions",
@@ -531,9 +531,9 @@
       "Margins: gross -2.7 pts, operating -0.7 pts YoY (last 2 quarters) → 0/15",
       "Forward: next-12-month revenue +20% (implied), 3-yr EPS growth forecast +24% a year → 9/15",
       "Valuation: forward P/E 35.425, EV/forward sales 2.5x → 8/15",
-      "Not already run: 1-yr +118%, -13% vs 52-week high → 9/10",
-      "Trend: price above 200-day, above 50-day, 3-month vs SPY +5 pts → 10/10",
-      "Analysts: Buy (5), +10% to target → 4/10",
+      "Not already run: 1-yr +124%, -12% vs 52-week high → 8/10",
+      "Trend: price above 200-day, above 50-day, 3-month vs SPY +6 pts → 10/10",
+      "Analysts: Buy (5), +8% to target → 4/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
@@ -559,11 +559,11 @@
       },
       {
         "label": "1-yr move",
-        "value": "+118%"
+        "value": "+124%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-13%"
+        "value": "-12%"
       }
     ],
     "eiMetrics": {
@@ -581,8 +581,8 @@
       "fpe": 35.42,
       "evSales": 3.02,
       "evFwdSales": 2.51,
-      "peg": 2.0,
-      "ch1y": 121.51,
+      "peg": 2.02,
+      "ch1y": 121.07,
       "pt": 303.75,
       "rating": "Buy",
       "analysts": 5,
@@ -596,13 +596,13 @@
       "revUSD": 2097959847.76,
       "currency": "USD",
       "lastQ": "2026-07-03",
-      "price": 277.11,
-      "priceDate": "2026-10-08",
-      "offHigh": -13.18,
-      "ch1yNasdaq": 118.44,
-      "rs3m": 4.98,
+      "price": 280.45,
+      "priceDate": "2026-10-09",
+      "offHigh": -12.13,
+      "ch1yNasdaq": 123.75,
+      "rs3m": 5.72,
       "acqJump": 0.39,
-      "upside": 9.61
+      "upside": 8.31
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/mtrn/statistics/",
