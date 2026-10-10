@@ -32,6 +32,9 @@
     chevUp: '<path d="M6 14l6-6 6 6"/>',
     chevDown: '<path d="M6 10l6 6 6-6"/>',
     chart: '<path d="M4 4v16h16"/><path d="M7 15l4-5 3 3 5-7"/><circle cx="19" cy="6" r="1.2"/>',
+    shield9: '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
+    wand: '<path d="M4 20L15 9"/><path d="M15 4v2M15 12v2M19 8h2M9 8h2M18 5l1.5-1.5M18 11l1.5 1.5"/>',
+    flask: '<path d="M9 3h6M10 3v6.5L4.6 18.2A1.8 1.8 0 0 0 6.1 21h11.8a1.8 1.8 0 0 0 1.5-2.8L14 9.5V3"/><path d="M7.2 15h9.6"/>',
     sunrise: '<path d="M3 18.5h18"/><path d="M7 18.5a5 5 0 0 1 10 0"/><path d="M12 5v3.5M5.6 9.6l1.9 1.9M18.4 9.6l-1.9 1.9M3 14.5h2M19 14.5h2"/>',
     check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
     minus: '<path d="M7 12h10"/>',
@@ -400,6 +403,9 @@
     { id: "growth", label: "Growth Picks", short: "Growth", icon: "growth", render: renderGrowth },
     { id: "riskit", label: "Risk It", short: "Risk It", icon: "flame", render: renderRiskIt },
     { id: "early", label: "Early Inflection", short: "Early", icon: "sunrise", render: renderEarly, overflow: true },
+    { id: "experiment", label: "Experiment Screener", short: "Exp", icon: "flask", render: renderExperiment, overflow: true },
+    { id: "piotroski", label: "Piotroski", short: "F-Score", icon: "shield9", render: renderPiotroski, overflow: true },
+    { id: "magic", label: "Magic Formula", short: "Magic", icon: "wand", render: renderMagic, overflow: true },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex"), overflow: true },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla"), overflow: true },
     { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch },
@@ -680,12 +686,15 @@
     growth: { id: "growth", file: "data/growth-picks.json", example: "data/growth-picks.example.json", dismissKey: "growthDismissed", sortKey: "growthSort", title: "Growth Picks", sub: "Conservative growth at a reasonable price", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("growthSort") || "default" } },
     riskit: { id: "riskit", file: "data/risk-it.json", example: null, dismissKey: "riskItDismissed", sortKey: "riskItSort", title: "Risk It", sub: "Speculative high-growth · higher risk", scoreLabel: "Risk It score", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("riskItSort") || "default" } },
     early: { id: "early", file: "data/early-inflection.json", example: null, dismissKey: "earlyDismissed", sortKey: "earlySort", title: "Early Inflection", sub: "Turning up, not yet run · the LITE 2025 pattern", scoreLabel: "Early Inflection score", banner: "EARLY-STAGE", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("earlySort") || "default" } },
+    experiment: { id: "experiment", file: "data/experiment-screener.json", example: null, dismissKey: "expDismissed", sortKey: "expSort", title: "Experiment Screener", sub: "Your 8 rules: ROIC, cash flow, EPS & revenue growth, Stage 2, RSI 50–65", scoreLabel: "Experiment score", banner: "EXPERIMENT", checklistTitle: "Your 8 rules", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("expSort") || "default" } },
+    piotroski: { id: "piotroski", file: "data/piotroski.json", example: null, dismissKey: "pioDismissed", sortKey: "pioSort", title: "Piotroski", sub: "F-Score 8–9 among the cheapest fifth by price-to-book", scoreLabel: "F-Score", banner: "VALUE", checklistTitle: "F-Score tests", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("pioSort") || "default" } },
+    magic: { id: "magic", file: "data/magic-formula.json", example: null, dismissKey: "magicDismissed", sortKey: "magicSort", title: "Magic Formula", sub: "Greenblatt: high earnings yield + high return on capital", banner: "VALUE", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("magicSort") || "default" } },
   };
   let gMode = GROWTH_MODES.growth;
   const growthState = new Proxy({}, { get: (_, k) => gMode.state[k], set: (_, k, v) => { gMode.state[k] = v; return true; } });
   const SORTS = {
     default: { label: "Default order" },
-    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early"] },
+    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early", "experiment", "piotroski"] },
     growth: { label: "Revenue growth", key: (p) => pctNum(p.revenueGrowth), dir: -1 },
     upside: { label: "Upside to target", key: (p) => upside(p), dir: -1 },
     peg: { label: "PEG (low → high)", key: (p) => num(p.peg), dir: 1 },
@@ -726,6 +735,9 @@
 
   function renderRiskIt(el) { gMode = GROWTH_MODES.riskit; return loadGrowth(el); }
   function renderEarly(el) { gMode = GROWTH_MODES.early; return loadGrowth(el); }
+  function renderPiotroski(el) { gMode = GROWTH_MODES.piotroski; return loadGrowth(el); }
+  function renderMagic(el) { gMode = GROWTH_MODES.magic; return loadGrowth(el); }
+  function renderExperiment(el) { gMode = GROWTH_MODES.experiment; return loadGrowth(el); }
   async function renderGrowth(el) { gMode = GROWTH_MODES.growth; return loadGrowth(el); }
   async function loadGrowth(el) {
     if (!growthState.data) {
@@ -788,7 +800,7 @@
         <span class="tl-body"><span class="tl-title">Track record</span><span class="tl-line">How these picks are doing vs QQQ</span></span>
         <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </a>
-      ${gMode.id === "early" ? "" : `<a class="panel track-link ei-link" href="#/early">
+      ${!["growth", "riskit"].includes(gMode.id) ? "" : `<a class="panel track-link ei-link" href="#/early">
         <span class="home-tile-icon">${svg("sunrise")}</span>
         <span class="tl-body"><span class="tl-title">Early Inflection</span><span class="tl-line">LITE-2025-style setups: revenue turning up, stock not yet run</span></span>
         <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
@@ -800,8 +812,9 @@
       </div>
       ${dismissed.length ? `<p class="growth-restore"><button type="button" class="link-btn" id="growth-restore">Restore dismissed (${dismissed.length})</button>${picks.length < slots ? ` · bench exhausted, showing ${picks.length}` : ""}</p>` : ""}
       <section class="group" aria-label="Picks">
-        ${list.length ? `<div class="cards">${list.map(({ p }) => pickCard(p)).join("")}</div>` : `<div class="empty">No picks in this sector</div>`}
+        ${list.length ? `<div class="cards">${list.map(({ p }) => pickCard(p)).join("")}</div>` : `<div class="empty">${gMode.id === "experiment" && !allPicks.length ? "No stock passes all eight rules today. Near misses are below." : "No picks in this sector"}</div>`}
       </section>
+      ${Array.isArray(d.nearMisses) && d.nearMisses.length ? nearMissHTML(d) : ""}
       ${footer(isNA(d.disclaimer) ? "For information only — not investment advice." : `${d.disclaimer}${/not investment advice/i.test(d.disclaimer) ? "" : " Not investment advice."}`)}`;
 
     el.querySelectorAll("[data-sector]").forEach((b) => b.addEventListener("click", () => {
@@ -872,16 +885,36 @@
 
   function rubricHTML(rows) {
     const total = rows.reduce((n, r) => n + (num(r.points) || 0), 0);
-    return `<details class="ei-rubric"><summary>Scoring rubric (${total} points)</summary><ul class="bullets">${rows.map((r) => `<li><strong>${esc(r.component)} ${esc(r.points)}</strong>: ${esc(r.how)}</li>`).join("")}</ul></details>`;
+    return `<details class="ei-rubric"><summary>${total ? `Scoring rubric (${total} points)` : "How it ranks"}</summary><ul class="bullets">${rows.map((r) => `<li><strong>${esc(r.component)}${typeof r.points === "number" && r.points ? ` ${esc(r.points)}` : ""}</strong>: ${esc(r.how)}</li>`).join("")}</ul></details>`;
   }
   function checklistHTML(items) {
     if (!Array.isArray(items) || !items.length) return "";
     const known = items.filter((i) => i.met === true || i.met === false);
     const met = known.filter((i) => i.met === true).length;
-    return `<div class="block"><h4>LITE-pattern checklist <span class="ck-count">${met}/${known.length} met</span></h4><ul class="checklist">${items.map((i) => {
+    return `<div class="block"><h4>${esc(gMode.checklistTitle || "LITE-pattern checklist")} <span class="ck-count">${met}/${known.length} met</span></h4><ul class="checklist">${items.map((i) => {
       const st = i.met === true ? "met" : i.met === false ? "miss" : "na";
       return `<li class="ck-${st}"><span class="ck-ico" aria-label="${st === "met" ? "Met" : st === "miss" ? "Missed" : "Not available yet"}">${svg(st === "met" ? "check" : st === "miss" ? "x" : "minus")}</span><span class="ck-body"><span class="ck-label">${esc(i.label)}</span>${isNA(i.detail) ? "" : `<span class="ck-detail">${esc(i.detail)}</span>`}</span></li>`;
     }).join("")}</ul></div>`;
+  }
+
+  function nearMissHTML(d) {
+    const by = d.nearMissesByRule || {};
+    return `<section class="group nm-group" aria-labelledby="h-nearmiss">
+      ${sectionHead("nearmiss", "Near misses", `<span class="range">${d.nearMisses.length} miss exactly one rule</span>`)}
+      <p class="fineprint nm-intro">These pass seven of the eight rules. They are not picks. ${Object.entries(by).map(([k, n]) => `${esc(k)}: ${n}`).join(" · ")}</p>
+      <div class="nm-list">${d.nearMisses.map((p) => {
+        const t = normalizeTicker(p.ticker);
+        return `<details class="panel nm-item">
+          <summary><span class="nm-name"><b>${esc(t)}</b> ${esc(p.company)}</span><span class="nm-miss">${svg("x")}${esc((p.failed || [])[0] || "")}</span>
+            <span class="nm-px lq" data-lq="${esc(t)}"${isNA(p.priceDate) ? "" : ` data-lq-date="${esc(p.priceDate)}"`}><span class="p">${esc(money(p.price))}</span> <span class="chg"></span></span></summary>
+          <div class="nm-body">
+            <div class="tags">${followToggleHTML(t, { compact: true })}${(Array.isArray(p.alsoIn) ? p.alsoIn : []).map((l) => `<span class="tag also">Also in ${esc(l)}</span>`).join("")}</div>
+            ${Array.isArray(p.keyFigures) ? `<dl class="stats kf">${p.keyFigures.map((k) => `<div><dt>${esc(k.label)}</dt><dd>${esc(isNA(k.value) ? "n/a" : String(k.value))}</dd></div>`).join("")}<div><dt>Revenue growth</dt><dd>${esc(fmtPct(p.revenueGrowth))}</dd></div><div><dt>Market cap</dt><dd>${esc(fmtCap(p.marketCap))}</dd></div></dl>` : ""}
+            ${checklistHTML(p.checklist)}
+          </div>
+        </details>`;
+      }).join("")}</div>
+    </section>`;
   }
 
   function pickCard(p) {
@@ -908,7 +941,8 @@
           <div class="p">${esc(money(p.price))}</div>
           <div class="chg"></div>
           <div class="d">${isNA(p.priceDate) ? "" : `close ${esc(fmtShortDate(p.priceDate).replace(/, \d{4}$/, ""))}`}</div>
-          ${typeof p.score === "number" ? `<div class="score-badge${gMode.id === "early" ? " is-early" : ""}" title="${esc(gMode.scoreLabel || "Score")} (0–100)">${p.score}<small>/100</small></div>` : ""}
+          ${typeof p.magicRank === "number" ? `<div class="score-badge" title="Magic Formula rank">#${p.magicRank}</div>` : ""}
+          ${typeof p.score === "number" ? `<div class="score-badge${gMode.id === "early" ? " is-early" : ""}" title="${esc(gMode.scoreLabel || "Score")} (0–${p.scoreMax || 100})">${p.score}<small>/${p.scoreMax || 100}</small></div>` : ""}
         </div>
       </div>
       <dl class="stats">
@@ -997,7 +1031,7 @@
     const benchRet = (s) => (s && s.length ? s[s.length - 1][1] - 100 : null);
     const summary = Object.entries(d.lists).map(([k, L]) => {
       const hr = L.hitRate || {};
-      return `<button type="button" class="panel tr-sum ${k === "riskit" ? "is-risk" : k === "early" ? "is-early" : ""}${trackState.list === k ? " is-active" : ""}" data-list="${esc(k)}" aria-pressed="${trackState.list === k}">
+      return `<button type="button" class="panel tr-sum ${k === "riskit" ? "is-risk" : k === "early" ? "is-early" : k === "experiment" ? "is-exp" : k === "piotroski" ? "is-pio" : k === "magic" ? "is-magic" : ""}${trackState.list === k ? " is-active" : ""}" data-list="${esc(k)}" aria-pressed="${trackState.list === k}">
         <span class="tr-sum-label">${esc(L.label)}</span>${(L.startPriceDate || L.startDate) && (L.startPriceDate || L.startDate) !== d.baseDate ? `<span class="tr-sum-since">from ${esc(fmtShortDate(L.startPriceDate || L.startDate).replace(/, \d{4}$/, ""))} close</span>` : ""}
         <span class="tr-sum-ret ${retTone(L.returnPct)}">${esc(fmtRet(L.returnPct))}</span>
         <span class="tr-sum-vs">vs QQQ <b class="${retTone(L.vsQQQPct)}">${esc(fmtRet(L.vsQQQPct).replace("%", " pts"))}</b> · vs SPY <b class="${retTone(L.vsSPYPct)}">${esc(fmtRet(L.vsSPYPct).replace("%", " pts"))}</b></span>
@@ -1008,6 +1042,9 @@
       { label: "Growth", cls: "l-growth", points: d.lists.growth ? d.lists.growth.series : [] },
       { label: "Risk It", cls: "l-risk", points: d.lists.riskit ? d.lists.riskit.series : [] },
       ...(d.lists.early ? [{ label: "Early Inflection", cls: "l-early", points: d.lists.early.series || [] }] : []),
+      ...(d.lists.piotroski ? [{ label: "Piotroski", cls: "l-pio", points: d.lists.piotroski.series || [] }] : []),
+      ...(d.lists.magic ? [{ label: "Magic Formula", cls: "l-magic", points: d.lists.magic.series || [] }] : []),
+      ...(d.lists.experiment ? [{ label: "Experiment", cls: "l-exp", points: d.lists.experiment.series || [] }] : []),
       { label: "QQQ", cls: "l-qqq", points: qqq || [] },
       { label: "SPY", cls: "l-spy", points: spy || [] },
     ];
@@ -1040,7 +1077,7 @@
 
     el.innerHTML = `
       ${hero("Track record", "Picks vs QQQ", `<span>${svg("clock")}Tracking since ${esc(fmtShortDate(d.trackingStart))}</span><span>${svg("chart")}Last close ${esc(fmtShortDate(d.latestDate))}</span>`)}
-      <div class="example-banner early-note" role="note">${svg("warn")}<span><strong>EARLY DAYS</strong>: tracking started Oct 7, 2026, from the ${esc(fmtShortDate(d.baseDate))} close${d.lists.early && d.lists.early.startPriceDate ? ` (Early Inflection joined from the ${esc(fmtShortDate(d.lists.early.startPriceDate))} close, indexed to 100 on its own start)` : ""}. With ${days} trading day${days === 1 ? "" : "s"} of data these numbers are mostly noise. Give it several months before reading anything into them.</span></div>
+      <div class="example-banner early-note" role="note">${svg("warn")}<span><strong>EARLY DAYS</strong>: tracking started Oct 7, 2026, from the ${esc(fmtShortDate(d.baseDate))} close${d.lists.early && d.lists.early.startPriceDate ? ` (Early Inflection joined from the ${esc(fmtShortDate(d.lists.early.startPriceDate))} close, indexed to 100 on its own start)` : ""}${d.lists.experiment && d.lists.experiment.startPriceDate ? ` Experiment Screener joined from the ${esc(fmtShortDate(d.lists.experiment.startPriceDate))} close.` : ""}. With ${days} trading day${days === 1 ? "" : "s"} of data these numbers are mostly noise. Give it several months before reading anything into them.</span></div>
       <div class="tr-sums" role="group" aria-label="Choose list">${summary}</div>
       <section class="panel pad tr-chart-panel" aria-label="Performance chart">
         <h3 class="mini">Value of $100 since tracking began</h3>
@@ -1288,7 +1325,7 @@
         ${rc.caveat ? `<p class="fineprint top">${esc(rc.caveat)}</p>` : ""}
         ${(rc.sources || []).length ? `<div class="srcs tbl-src">${rc.sources.map((x) => srcLink(x.url, x.label)).join("")}</div>` : ""}
       </div>` : "";
-    const routes = { "Growth": "#/growth", "Risk It": "#/riskit", "Early Inflection": "#/early" };
+    const routes = { "Growth": "#/growth", "Risk It": "#/riskit", "Early Inflection": "#/early", "Experiment Screener": "#/experiment", "Piotroski": "#/piotroski", "Magic Formula": "#/magic" };
     const lists = (Array.isArray(d.listContext) ? d.listContext : []).filter((c) => c && c.list);
     const listPanels = lists.map((c) => {
       const isRisk = c.list === "Risk It", route = routes[c.list] || "#/";
@@ -2064,7 +2101,10 @@
     { id: "tesla", title: "Tesla", icon: "bolt", fallback: "Tesla deep dive — catalysts, holders and valuation" },
     { id: "search", title: "Search", icon: "search", fallback: "Look up any US ticker — live quote plus deep dive when on file" },
     { id: "early", title: "Early Inflection", icon: "sunrise", fallback: "LITE-2025-style setups: revenue turning up, stock not yet run" },
-    { id: "track", title: "Track Record", icon: "chart", fallback: "How the Growth, Risk It and Early Inflection picks are doing vs QQQ and SPY" },
+    { id: "experiment", title: "Experiment Screener", icon: "flask", fallback: "Your 8-rule screen: high ROIC, cash-rich, EPS + revenue growth, Stage 2 uptrend, RSI 50–65" },
+    { id: "piotroski", title: "Piotroski", icon: "shield9", fallback: "Cheap stocks (lowest price-to-book fifth) with an F-Score of 8 or 9" },
+    { id: "magic", title: "Magic Formula", icon: "wand", fallback: "Greenblatt's ranking: high earnings yield plus high return on capital" },
+    { id: "track", title: "Track Record", icon: "chart", fallback: "How the Growth, Risk It, Early Inflection and Experiment picks are doing vs QQQ and SPY" },
     { id: "cassiopeia", title: "Cassiopeia", icon: "cas", fallback: "The five stars behind the Futura W" },
   ];
 

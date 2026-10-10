@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Maintain data/track-record.json: how the Growth, Risk It and Early Inflection picks perform vs QQQ (and SPY).
+"""Maintain data/track-record.json: how the Growth, Risk It, Early Inflection and Experiment Screener picks perform vs QQQ (and SPY).
 
 A list that is added later (Early Inflection joined on Oct 8, 2026) starts at 100 on the latest stored close
 when it first appears (no backfill); its benchmark comparison and hit rate run from its own start.
@@ -35,6 +35,9 @@ LISTS = {
     "growth": {"file": os.path.join(ROOT, "data", "growth-picks.json"), "label": "Growth"},
     "riskit": {"file": os.path.join(ROOT, "data", "risk-it.json"), "label": "Risk It"},
     "early": {"file": os.path.join(ROOT, "data", "early-inflection.json"), "label": "Early Inflection"},
+    "experiment": {"file": os.path.join(ROOT, "data", "experiment-screener.json"), "label": "Experiment Screener"},
+    "piotroski": {"file": os.path.join(ROOT, "data", "piotroski.json"), "label": "Piotroski"},
+    "magic": {"file": os.path.join(ROOT, "data", "magic-formula.json"), "label": "Magic Formula"},
 }
 BENCH = ["QQQ", "SPY"]
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
@@ -121,6 +124,8 @@ def init():
 
 def value_on(prices, seg, day):
     p0, p1 = prices[seg["start"]], prices[day]
+    if not seg["tickers"]:  # a strict screen can have no passers: hold cash at the last value
+        return seg["startValue"]
     rels = [p1[t] / p0[t] for t in seg["tickers"]]
     return seg["startValue"] * sum(rels) / len(rels)
 
@@ -271,6 +276,12 @@ def main():
     if "early" in data["lists"] and "Early Inflection" not in data.get("method", ""):
         data["method"] += (" Early Inflection was added on Oct 8, 2026: it starts at 100 on the "
                            f"{data['lists']['early']['startPriceDate']} close (no backfill), and its QQQ/SPY comparison and hit rate run from that start.")
+    if "experiment" in data["lists"] and "Experiment Screener" not in data.get("method", ""):
+        data["method"] += (" Experiment Screener was added on Oct 10, 2026: it starts at 100 on the "
+                           f"{data['lists']['experiment']['startPriceDate']} close (no backfill) and holds however many stocks pass all eight rules (up to 12).")
+    for k, nm in (("piotroski", "Piotroski"), ("magic", "Magic Formula")):
+        if k in data["lists"] and f"{nm} was added" not in data.get("method", ""):
+            data["method"] += f" {nm} was added on Oct 10, 2026, starting at 100 on the {data['lists'][k]['startPriceDate']} close (no backfill)."
     recompute(data)
     with open(TRACK, "w") as f:
         json.dump(data, f, indent=1)

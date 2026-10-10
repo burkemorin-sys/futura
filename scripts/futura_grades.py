@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Futura letter grades for Growth (data/growth-picks.json), Risk It (data/risk-it.json) and Early Inflection (data/early-inflection.json).
+"""Futura letter grades for Growth (data/growth-picks.json), Risk It (data/risk-it.json), Early Inflection (data/early-inflection.json) and Experiment Screener (data/experiment-screener.json).
 
 For every entry in `picks` and `bench` this script:
   1. pulls real inputs from public pages (no keys, stdlib only):
@@ -26,7 +26,7 @@ Search deep dives (data/companies/*.json plus data/spacex.json and data/tesla.js
 Usage:
   python3 scripts/futura_grades.py            # fetch fresh inputs, then grade the lists and the deep dives
   python3 scripts/futura_grades.py --no-fetch # re-grade from the metrics already stored in the JSON
-  python3 scripts/futura_grades.py --only=early  # just one list (growth, riskit, early, companies; comma-separated)
+  python3 scripts/futura_grades.py --only=early  # just one list (growth, riskit, early, experiment, companies; comma-separated)
 """
 import datetime as dt
 import json
@@ -39,7 +39,9 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILES = {"growth": os.path.join(ROOT, "data", "growth-picks.json"), "riskit": os.path.join(ROOT, "data", "risk-it.json"),
-         "early": os.path.join(ROOT, "data", "early-inflection.json")}
+         "early": os.path.join(ROOT, "data", "early-inflection.json"),
+         "experiment": os.path.join(ROOT, "data", "experiment-screener.json"),
+         "piotroski": os.path.join(ROOT, "data", "piotroski.json"), "magic": os.path.join(ROOT, "data", "magic-formula.json")}
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 LETTERS = [(97, "A+"), (90, "A"), (83, "A-"), (77, "B+"), (70, "B"), (63, "B-"), (57, "C+"), (50, "C"),
            (43, "C-"), (37, "D+"), (30, "D"), (23, "D-"), (0, "F")]
@@ -240,6 +242,8 @@ def main():
         with open(path) as f:
             data = json.load(f)
         pool = [e for e in (data.get("picks") or []) + (data.get("bench") or []) if e.get("ticker")]
+        if key == "experiment":  # strict screen: few passers, so grade them against the near misses too
+            pool += [e for e in (data.get("nearMisses") or []) if e.get("ticker")]
         for e in pool:
             if fetch:
                 e["metrics"] = fetch_metrics(e, spy1y)
@@ -253,7 +257,7 @@ def main():
         data["grading"] = {
             "asOf": today if fetch else (data.get("grading") or {}).get("asOf", today),
             "spy1yPct": spy1y if fetch else (data.get("grading") or {}).get("spy1yPct"),
-            "pool": f"{len(pool)} stocks (this list's picks + bench)",
+            "pool": f"{len(pool)} stocks (this list's picks + bench{' + near misses' if key == 'experiment' else ''})",
             "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
             "inputs": {
                 "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -272,7 +276,7 @@ def main():
 
 
 # ---------------- Search deep dives ----------------
-LIST_LABELS = {"growth": "Growth", "riskit": "Risk It", "early": "Early Inflection"}
+LIST_LABELS = {"growth": "Growth", "riskit": "Risk It", "early": "Early Inflection", "experiment": "Experiment Screener", "piotroski": "Piotroski", "magic": "Magic Formula"}
 
 
 def company_files():
@@ -302,7 +306,7 @@ def reference_pool():
     return pool, counts, early
 
 
-LIST_ROUTES = {"growth": "#/growth", "riskit": "#/riskit", "early": "#/early"}
+LIST_ROUTES = {"growth": "#/growth", "riskit": "#/riskit", "early": "#/early", "experiment": "#/experiment", "piotroski": "#/piotroski", "magic": "#/magic"}
 
 
 def list_context(t, files=None):
