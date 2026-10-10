@@ -58,6 +58,10 @@ THREADS = 4
 MINERS = {"MARA", "RIOT", "CLSK", "HUT", "CIFR", "IREN", "WULF", "BTDR", "HIVE", "BITF", "CORZ", "BTBT", "CAN",
           "SDIG", "GREE", "ARBK", "SLNH", "DGHI", "LMFA", "BTCM", "SAI", "MIGI", "ABTC", "GRYP", "BTOG", "DMGI",
           "CANG", "SOS", "FUFU", "AIRE", "BMNR", "GPUS", "USBC", "NCPL"}
+# Crypto-treasury companies (main strategy is holding/staking BTC/ETH/SOL etc.). Excluded from Growth and Risk It
+# (user-approved Oct 10, 2026) alongside the miners; listed here so every screen can share one set.
+CRYPTO_TREASURY = {"SBET", "BMNR", "MSTR", "BTCS", "ETHZ", "FGNX", "UPXI", "DFDV", "HSDT", "STSS", "CEP", "XXI",
+                   "NAKA", "ASST", "SMLR", "TRON", "ETHM", "BNC"}
 # Known pending-merger targets whose price is tied to a deal (update as deals close or break).
 PENDING_DEALS = {
     "VECO": "Pending all-stock merger with Axcelis (awaiting China SAMR review)",

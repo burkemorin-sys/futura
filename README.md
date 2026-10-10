@@ -227,6 +227,7 @@ The SpaceX and Tesla tabs embed free TradingView widgets (symbol quote, advanced
 ## Risk It (`data/risk-it.json`)
 
 A separate, **speculative** tab with the same card format as Growth: × dismiss with its own ranked bench, Restore, Follow chips, and sort/filter. Growth stays the conservative GARP screen, and no ticker may appear in both files.
+- **Exclusions (Growth and Risk It):** bitcoin/crypto miners (`MINERS`) and crypto-treasury companies whose main strategy is holding/staking crypto (`CRYPTO_TREASURY`, e.g. SBET, BMNR, MSTR; user-approved Oct 10, 2026). Both sets live in `scripts/update_early_inflection.py`; never put either in picks or bench.
 
 - Schema: the same fields as growth-picks.json, plus `disclaimer`, and on each entry `score` (0–100), `drivers` (string list), `riskLevel` ("High" | "Very High") and `risks`.
 - `picks` holds 12 entries. `bench` holds 15–20, ranked with `rank` 1..N. A ticker must not appear in both picks and bench, or in growth-picks.json.

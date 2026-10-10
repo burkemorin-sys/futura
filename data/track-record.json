@@ -192,7 +192,8 @@
    "ASR": 231.75,
    "VSNT": 30.64,
    "GEN": 23.25,
-   "SBET": 8.59
+   "SBET": 8.59,
+   "INSM": 100.6
   }
  },
  "lists": {
@@ -631,12 +632,12 @@
      "beatQQQ": false
     },
     {
-     "ticker": "SBET",
-     "company": "Sharplink Inc.",
+     "ticker": "INSM",
+     "company": "Insmed",
      "entryDate": "2026-10-10",
      "entryPriceDate": "2026-10-09",
-     "entryPrice": 8.59,
-     "lastPrice": 8.59,
+     "entryPrice": 100.6,
+     "lastPrice": 100.6,
      "lastPriceDate": "2026-10-09",
      "returnPct": 0.0,
      "qqqPct": 0.0,
@@ -700,6 +701,20 @@
      "exitDate": "2026-10-10",
      "exitPriceDate": "2026-10-09",
      "exitPrice": 3.39
+    },
+    {
+     "ticker": "SBET",
+     "company": "Sharplink Inc.",
+     "entryDate": "2026-10-10",
+     "entryPriceDate": "2026-10-09",
+     "entryPrice": 8.59,
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false,
+     "exitDate": "2026-10-10",
+     "exitPriceDate": "2026-10-09",
+     "exitPrice": 8.59
     }
    ],
    "segments": [
@@ -772,7 +787,7 @@
       "ANAB",
       "BBIO",
       "RCAT",
-      "SBET"
+      "INSM"
      ]
     }
    ],
@@ -872,6 +887,28 @@
      "ticker": "SBET",
      "company": "Sharplink Inc.",
      "price": 8.59
+    },
+    {
+     "date": "2026-10-10",
+     "priceDate": "2026-10-09",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-10",
+     "priceDate": "2026-10-09",
+     "action": "remove",
+     "ticker": "SBET",
+     "company": "Sharplink Inc.",
+     "price": 8.59
+    },
+    {
+     "date": "2026-10-10",
+     "priceDate": "2026-10-09",
+     "action": "add",
+     "ticker": "INSM",
+     "company": "Insmed",
+     "price": 100.6
     },
     {
      "date": "2026-10-10",
