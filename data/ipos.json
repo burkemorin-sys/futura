@@ -1,116 +1,198 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-06",
-  "weekLabel": "Week of Oct 5–9, 2026",
-  "headline": "Quiet start to Q4",
-  "summary": "Q4 is starting quiet: just two small biotech IPOs and two SPACs this week, and only small deals are penciled in for the next two weeks, with Nscale's reported mid-October timing still unconfirmed. The bigger news is Oura shelving its deal and Anthropic's IPO filing reportedly landing as soon as Oct 23 (reported, unconfirmed).",
+  "lastUpdated": "2026-10-11",
+  "weekLabel": "Week of Oct 12–16, 2026",
+  "headline": "Two bigger biotechs test a soft market",
+  "summary": "Two biotech IPOs are on deck this week: AI drug designer Iambic Therapeutics (~$150M, expected Thu) and RNAi developer City Therapeutics (~$175M, Fri per IPOScoop). Last week's biotechs disappointed: TRex Bio priced at the low end and finished flat, and Retension ended down 12%. Renaissance's IPO Index fell 0.5% vs the S&P 500's +1.2% and is trading below its 50-day average. Nscale's reported mid-October date hasn't materialized (still no terms on file), and Wall Street is holding money back for Anthropic, whose public S-1 Renaissance expects as soon as Oct 23 (unconfirmed). Filings picked up: seven sizable companies filed, led by DayOne Data Centers (~$3B est.) and Nigerian fintech OPay (~$500M est.).",
   "highlights": [
     {
-      "text": "Anthropic's IPO filing could land as soon as Oct 23",
+      "text": "Iambic (IAM) and City Therapeutics (CTY) aim to raise ~$325M combined this week",
+      "unconfirmed": false
+    },
+    {
+      "text": "Anthropic's public S-1 could land as soon as Oct 23; investor day reportedly Oct 14",
       "unconfirmed": true,
       "note": "Reported, not confirmed"
     },
     {
-      "text": "Oura postponed its ~$2.1B IPO a day before trading",
+      "text": "Nscale still has no price range on file and isn't on this week's calendars",
+      "unconfirmed": true,
+      "note": "Timing never confirmed"
+    },
+    {
+      "text": "OPay (~$500M est.) and vVardis (~$200M est.) filed publicly for NYSE IPOs",
+      "unconfirmed": false
+    },
+    {
+      "text": "Oura remains postponed with no new date; Amaero revived at ~62% smaller",
       "unconfirmed": false
     }
   ],
   "sections": {
     "thisWeek": {
       "label": "This week",
-      "dateRange": "Oct 5–9",
+      "dateRange": "Oct 12–16",
       "ipos": [
         {
-          "id": "trex-bio",
-          "company": "TRex Bio",
-          "ticker": "TRXB",
+          "id": "iambic",
+          "company": "Iambic Therapeutics",
+          "ticker": "IAM",
           "exchange": "Nasdaq Global Select",
-          "tradeDate": "Fri, Oct 9",
-          "priceRange": "$14–$16",
-          "dealSize": "~$125M",
-          "description": "Phase 1 biotech boosting regulatory T cells to treat autoimmune and inflammatory disease.",
+          "tradeDate": "Thu, Oct 15 (expected)",
+          "priceRange": "$15–$17",
+          "dealSize": "~$150M (9.375M shares)",
+          "description": "San Diego Phase 1 biotech that uses its own AI models plus robotic labs to design small-molecule cancer drugs.",
           "isSpac": false,
           "unconfirmed": false,
-          "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122053/autoimmune-and-inflammatory-diseases-biotech-trex-bio-sets-terms-for-125",
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122117/small-molecule-biotech-iambic-therapeutics-sets-terms-for-150-million-ipo",
+            "https://www.iposcoop.com/ipo-calendar/",
+            "https://www.nasdaq.com/market-activity/ipos",
+            "https://www.sec.gov/Archives/edgar/data/1997038/000119312526417416/iam-20261008.htm"
+          ],
           "detail": {
+            "intro": "Lead drug IAM1363 is a selective, brain-penetrant HER2 inhibitor in a Phase 1/1b trial across HER2-altered solid tumors; a registrational trial is possible as early as 2027 (Renaissance).",
             "facts": [
               {
-                "label": "Shares offered",
-                "value": "8.3M"
+                "label": "Market cap (fully diluted, midpoint)",
+                "value": "~$809M"
               },
               {
-                "label": "With overallotment",
-                "value": "~$133.3M"
+                "label": "Indications of interest",
+                "value": "~$60M (40% of the deal)"
               },
               {
-                "label": "Valuation (fully diluted, midpoint)",
-                "value": "~$453M"
+                "label": "Revenue (12 mo. to Jun 30, 2026)",
+                "value": "$18M (collaborations)"
+              },
+              {
+                "label": "Expected date",
+                "value": "Oct 15 on IPOScoop (trade) and Nasdaq's calendar (expected pricing)"
               },
               {
                 "label": "Banks",
-                "value": "J.P. Morgan, Evercore ISI, Cantor, Stifel, Wedbush"
+                "value": "J.P. Morgan, Jefferies, BofA Securities, Citi"
               }
             ],
             "bullets": [
-              "Eli Lilly plans to buy ~$13M of the deal."
-            ]
+              "Partners include AbbVie, Takeda and Bayer.",
+              "Two preclinical programs (KIF18A, CDK2/4) are slated for IND filings in 4Q26."
+            ],
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122117/small-molecule-biotech-iambic-therapeutics-sets-terms-for-150-million-ipo",
+            "sourceLabel": "Renaissance Capital"
           }
         },
         {
-          "id": "retension",
-          "company": "Retension Pharmaceuticals",
-          "ticker": "RTSN",
-          "exchange": "Nasdaq Capital Market",
-          "tradeDate": "Fri, Oct 9",
-          "priceRange": "$11–$13",
-          "dealSize": "~$40M",
-          "description": "Single-drug company: a daily pill for hard-to-treat high blood pressure.",
+          "id": "city-therapeutics",
+          "company": "City Therapeutics",
+          "ticker": "CTY",
+          "exchange": "Nasdaq Global Market",
+          "tradeDate": "Fri, Oct 16 (IPOScoop)",
+          "priceRange": "$17–$19",
+          "dealSize": "~$175M (9.72M shares)",
+          "description": "Cambridge, MA Phase 1 biotech developing RNA-interference (siRNA) drugs, led by a Factor XI blood-clot program.",
           "isSpac": false,
-          "unconfirmed": false,
-          "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122048/hypertension-drug-developer-retension-pharmaceuticals-sets-terms-for-40"
-        },
-        {
-          "id": "pine-tree",
-          "company": "Pine Tree Acquisition",
-          "ticker": "PAXGU",
-          "exchange": "n/a",
-          "tradeDate": "Started trading Tue, Oct 6",
-          "priceRange": "n/a",
-          "dealSize": "$100M",
-          "description": "Blank-check company (SPAC).",
-          "isSpac": true,
-          "unconfirmed": false,
-          "sourceUrl": "https://www.finanznachrichten.de/nachrichten-2026-10/69767064-pine-tree-acquisition-corp-announces-pricing-of-dollar-100-000-000-initial-public-offering-200.htm"
-        },
-        {
-          "id": "afternext",
-          "company": "AfterNext Acquisition I",
-          "ticker": "AFNXU",
-          "exchange": "n/a",
-          "tradeDate": "Wed, Oct 7",
-          "priceRange": "n/a",
-          "dealSize": "$100M",
-          "description": "Singapore-based blank-check company (SPAC).",
-          "isSpac": true,
           "unconfirmed": true,
-          "unconfirmedNote": "Target sector unconfirmed",
-          "sourceUrl": "https://www.iposcoop.com/ipo-calendar/"
+          "unconfirmedNote": "The Fri, Oct 16 trade date is from IPOScoop only. Renaissance says it is expected to price the week of Oct 12; it isn't yet on Nasdaq's calendar",
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122138/rna-interference-biotech-city-therapeutics-sets-terms-for-175-million-ipo",
+            "https://www.iposcoop.com/the-ipo-buzz-city-therapeutics-cty-proposed-sets-terms-for-175-million-ipo/",
+            "https://www.iposcoop.com/ipo-calendar/",
+            "https://www.sec.gov/Archives/edgar/data/2143850/000110465926114815/tm2619715-8_s1a.htm"
+          ],
+          "detail": {
+            "intro": "Lead drug CITY-FXI, a GalNAc-conjugated siRNA targeting Factor XI, is in a Phase 1 trial in healthy volunteers, with more data expected in late 2026; a Phase 2 in knee-replacement patients is planned for mid-2027. Other programs target Stargardt disease (CITY-RBP4) and anemia of chronic disease (CITY-TFR2).",
+            "facts": [
+              {
+                "label": "Market cap at midpoint",
+                "value": "~$1.0B fully diluted (Renaissance); ~$906M (IPOScoop)"
+              },
+              {
+                "label": "Over-allotment",
+                "value": "Up to 1,458,333 more shares"
+              },
+              {
+                "label": "12 mo. to Jun 30, 2026",
+                "value": "$14.3M collaboration revenue; $87.7M net loss"
+              },
+              {
+                "label": "Partners",
+                "value": "Bausch + Lomb, Biogen"
+              },
+              {
+                "label": "Banks",
+                "value": "Goldman Sachs, Jefferies, Stifel, Oppenheimer"
+              }
+            ],
+            "bullets": [
+              "Founded July 2023."
+            ],
+            "sourceUrl": "https://www.iposcoop.com/the-ipo-buzz-city-therapeutics-cty-proposed-sets-terms-for-175-million-ipo/",
+            "sourceLabel": "IPOScoop"
+          }
+        },
+        {
+          "id": "nscale",
+          "company": "Nscale",
+          "ticker": "NSCL",
+          "exchange": "NYSE",
+          "tradeDate": "Not scheduled (earlier report: ~Oct 15)",
+          "priceRange": "n/a",
+          "dealSize": "Up to ~$3B (reported)",
+          "description": "London-based AI data center and GPU cloud company; filed an S-1 on Sep 18 for an NYSE listing.",
+          "isSpac": false,
+          "unconfirmed": true,
+          "unconfirmedNote": "The ~Oct 15 date came from trade press only. As of Oct 11, EDGAR shows no S-1/A since the Sep 18 S-1, so there is still no price range or share count, and Nscale is not on the Renaissance, IPOScoop or Nasdaq calendars for this week. The ~$3B size and ~$35B valuation target are from reports citing unnamed sources",
+          "sourceUrl": [
+            "https://www.nscale.com/press-releases/nscale-files-initial-public-offering",
+            "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002110365&type=&dateb=&owner=include&count=40",
+            "https://www.renaissancecapital.com/IPO-Center/Calendar",
+            "https://segmara.com/blog/when-will-nscale-ipo",
+            "https://theindextoday.com/ai-data-center-builder-nscale-files-for-us-ipo-seeking-up-to-35-billion-valuation/"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "1H26 revenue",
+                "value": "$140.6M (vs $10.4M in 1H25)"
+              },
+              {
+                "label": "1H26 net loss",
+                "value": "$1.02B (vs $369M)"
+              },
+              {
+                "label": "Largest customer",
+                "value": "52% of 1H26 revenue"
+              },
+              {
+                "label": "Ticker / exchange",
+                "value": "NSCL / NYSE (applied)"
+              }
+            ],
+            "bullets": [
+              "No price range or share count is on file; a launch would start with an S-1/A setting terms.",
+              "Reports put the valuation target at up to ~$35B (unconfirmed), vs ~$14.6B after its Series C.",
+              "Named ex-Meta executive Justin Osofsky COO on Oct 2."
+            ],
+            "sourceUrl": "https://segmara.com/blog/when-will-nscale-ipo"
+          },
+          "status": "No terms yet"
         }
       ]
     },
     "nextTwoWeeks": {
       "label": "Next 2 weeks",
-      "dateRange": "Oct 12–23",
+      "dateRange": "Oct 19–30",
       "weeks": [
         {
-          "label": "Week of Oct 12–16",
+          "label": "Week of Oct 19–23",
           "ipos": [
             {
               "id": "bitari",
               "company": "Bitari",
               "ticker": "BIAI",
               "exchange": "Nasdaq",
-              "tradeDate": "Week of Oct 12 (IPOScoop: Wed, Oct 14)",
+              "tradeDate": "Week of Oct 19 (IPOScoop)",
               "priceRange": "$7 (fixed)",
               "dealSize": "~$30M (4.3M shares)",
               "description": "Texas-based hosting and maintenance services for Bitcoin mining machines.",
@@ -118,58 +200,11 @@
               "unconfirmed": true,
               "sourceUrl": [
                 "https://www.iposcoop.com/ipo/bitari/",
-                "https://www.iposcoop.com/ipo-calendar/"
+                "https://www.iposcoop.com/ipo-calendar/",
+                "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002091680&type=&dateb=&owner=include&count=40"
               ],
-              "unconfirmedNote": "Week from IPOScoop only; not yet on the Nasdaq or Renaissance calendars"
+              "unconfirmedNote": "Week from IPOScoop only (moved from Wed, Oct 14 last week); not on the Nasdaq or Renaissance calendars. Last S-1/A filed Sep 29"
             },
-            {
-              "id": "nscale",
-              "company": "Nscale",
-              "ticker": "NSCL",
-              "exchange": "NYSE",
-              "tradeDate": "~Oct 15 (reported)",
-              "priceRange": "n/a",
-              "dealSize": "Up to ~$3B (reported)",
-              "description": "London-based AI data center and GPU cloud company; filed an S-1 on Sep 18 for an NYSE listing.",
-              "isSpac": false,
-              "unconfirmed": true,
-              "unconfirmedNote": "Oct 15 date comes from trade press only. As of Oct 4 the S-1 had no price range or share count and no amendment; Renaissance lists it only as eligible to launch. The ~$3B size is from Bloomberg, citing unnamed sources",
-              "sourceUrl": [
-                "https://www.nscale.com/press-releases/nscale-files-initial-public-offering",
-                "https://slicast.com/article/g8con3",
-                "https://segmara.com/blog/when-will-nscale-ipo"
-              ],
-              "detail": {
-                "facts": [
-                  {
-                    "label": "1H26 revenue",
-                    "value": "$140.6M (vs $10.4M in 1H25)"
-                  },
-                  {
-                    "label": "1H26 net loss",
-                    "value": "$1.02B (vs $369M)"
-                  },
-                  {
-                    "label": "Largest customer",
-                    "value": "52% of 1H26 revenue"
-                  },
-                  {
-                    "label": "Ticker / exchange",
-                    "value": "NSCL / NYSE (applied)"
-                  }
-                ],
-                "bullets": [
-                  "Renaissance Capital (Oct 2) named Nscale among companies eligible to launch, not as scheduled.",
-                  "Named ex-Meta executive Justin Osofsky COO on Oct 2."
-                ],
-                "sourceUrl": "https://segmara.com/blog/when-will-nscale-ipo"
-              }
-            }
-          ]
-        },
-        {
-          "label": "Week of Oct 19–23",
-          "ipos": [
             {
               "id": "web3labs",
               "company": "Web3Labs Global",
@@ -181,7 +216,7 @@
               "description": "Hong Kong-based consulting, acceleration and business services for Web3/blockchain startups.",
               "isSpac": false,
               "unconfirmed": true,
-              "unconfirmedNote": "Week from IPOScoop only; not yet on the Nasdaq or Renaissance calendars",
+              "unconfirmedNote": "Week from IPOScoop only; not on the Nasdaq or Renaissance calendars",
               "sourceUrl": [
                 "https://www.iposcoop.com/ipo-calendar/",
                 "https://www.renaissancecapital.com/Profile/MDAT/Web3Labs-Global/IPO",
@@ -236,19 +271,106 @@
               "company": "Anthropic",
               "ticker": "n/a",
               "exchange": "n/a",
-              "tradeDate": "Public S-1 filing as soon as Oct 23; not a trade date",
+              "tradeDate": "Public S-1 filing as soon as Oct 23 (Renaissance est.); not a trade date",
               "priceRange": "n/a",
               "dealSize": "n/a",
-              "description": "Claude AI developer; confidentially submitted a draft S-1 on Jun 1. A public filing would start the countdown to a roadshow.",
+              "description": "Claude AI developer; confidentially submitted a draft S-1 on Jun 1. A public filing must come at least 15 days before a roadshow.",
               "isSpac": false,
               "status": "Filing expected",
               "unconfirmed": true,
-              "unconfirmedNote": "Oct 23 is Renaissance Capital's expectation, not an Anthropic announcement. Marketing reportedly as early as the week of Nov 9 (unconfirmed); no price, size or exchange disclosed",
+              "unconfirmedNote": "Oct 23 is Renaissance Capital's expectation, not an Anthropic announcement; no public S-1 on EDGAR as of Oct 9–11. Bloomberg (Oct 1, unnamed sources) reported a pre-IPO investor day on Oct 14, marketing as soon as the week of Nov 9 and trading before Thanksgiving. Reuters reported a >$2T valuation target and 2025 revenue of ~$4.6B from a draft prospectus it saw. No price, size or exchange disclosed",
               "sourceUrl": [
-                "https://www.renaissancecapital.com/IPO-Center/News/122058/9-numbers-to-look-for-in-anthropic%E2%80%99s-ipo-filing",
                 "https://www.anthropic.com/news/confidential-draft-s1-sec",
-                "https://www.renaissancecapital.com/IPO-Center/News/122034/us-ipo-week-ahead-quiet-start-for-the-4q-ipo-market-as-anthropic-looms"
+                "https://www.renaissancecapital.com/IPO-Center/News/122058/9-numbers-to-look-for-in-anthropic%E2%80%99s-ipo-filing",
+                "https://www.bloomberg.com/news/articles/2026-10-01/anthropic-is-said-to-plan-pre-ipo-investor-day-as-listing-nears",
+                "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+                "https://segmara.com/blog/when-will-anthropic-ipo"
               ]
+            }
+          ]
+        },
+        {
+          "label": "Week of Oct 26–30",
+          "ipos": [
+            {
+              "id": "bw-industrial",
+              "company": "BW Industrial Holdings",
+              "ticker": "BWGC",
+              "exchange": "NYSE American",
+              "tradeDate": "Week of Oct 26 (IPOScoop)",
+              "priceRange": "$6–$7",
+              "dealSize": "~$17M (2.63M shares)",
+              "description": "Houston facility-construction (EPC) contractor for energy, electronics and semiconductor plants; adding modular water-treatment systems.",
+              "isSpac": false,
+              "unconfirmed": true,
+              "unconfirmedNote": "Week from IPOScoop only; not on the Nasdaq or Renaissance calendars. Terms are from a Mar 17 S-1/A (range cut from $7–$9); an earlier expected date in May passed without a deal",
+              "sourceUrl": [
+                "https://www.iposcoop.com/ipo/bw-industrial-holdings-2/",
+                "https://www.iposcoop.com/ipo-calendar/",
+                "https://www.sec.gov/Archives/edgar/data/2080841/000121390026028518/ea0252378-07.htm"
+              ],
+              "detail": {
+                "facts": [
+                  {
+                    "label": "Revenue (12 mo. to Sep 30, 2025)",
+                    "value": "$55.6M"
+                  },
+                  {
+                    "label": "Net income (same period)",
+                    "value": "$7.6M"
+                  },
+                  {
+                    "label": "Employees",
+                    "value": "18"
+                  },
+                  {
+                    "label": "Underwriter",
+                    "value": "Eddid Securities USA"
+                  }
+                ],
+                "sourceUrl": "https://www.iposcoop.com/ipo/bw-industrial-holdings-2/",
+                "sourceLabel": "IPOScoop"
+              }
+            },
+            {
+              "id": "primagrove",
+              "company": "Primagrove",
+              "ticker": "YHTE",
+              "exchange": "Nasdaq Capital Market",
+              "tradeDate": "Week of Oct 26 (IPOScoop)",
+              "priceRange": "$4–$6",
+              "dealSize": "~$31M (6.25M shares)",
+              "description": "Hong Kong custom-software and smart-office (lockers, booths) solutions firm with 4–5 employees.",
+              "isSpac": false,
+              "unconfirmed": true,
+              "unconfirmedNote": "Week from IPOScoop only; not on the Nasdaq or Renaissance calendars. IPOScoop lists the ticker as YNTE, but the F-1 and Renaissance say YHTE",
+              "sourceUrl": [
+                "https://www.iposcoop.com/ipo/primergy/",
+                "https://www.renaissancecapital.com/Profile/YHTE/Primagrove/IPO",
+                "https://www.sec.gov/Archives/edgar/data/2138135/000121390026104919/ea0295228-06.htm"
+              ],
+              "detail": {
+                "facts": [
+                  {
+                    "label": "Revenue (FY2025)",
+                    "value": "$1.83M"
+                  },
+                  {
+                    "label": "Net income (FY2025)",
+                    "value": "$1.07M"
+                  },
+                  {
+                    "label": "F-1 filed",
+                    "value": "Sep 30, 2026"
+                  },
+                  {
+                    "label": "Underwriter",
+                    "value": "Eddid Securities"
+                  }
+                ],
+                "sourceUrl": "https://www.iposcoop.com/ipo/primergy/",
+                "sourceLabel": "IPOScoop"
+              }
             }
           ]
         }
@@ -258,30 +380,296 @@
       "label": "New filings",
       "ipos": [
         {
-          "id": "dayone",
-          "company": "DayOne Data Centers",
-          "ticker": "n/a",
+          "id": "opay",
+          "company": "OPay",
+          "ticker": "OPAY",
+          "exchange": "NYSE",
+          "tradeDate": "n/a",
+          "priceRange": "n/a",
+          "dealSize": "~$500M (Renaissance est.)",
+          "description": "Nigeria's leading digital bank/fintech app, also in Indonesia, Egypt and Pakistan; Singapore-based.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122155/emerging-markets-fintech-opay-files-for-an-estimated-500-million-us-ipo",
+            "https://www.sec.gov/Archives/edgar/data/2103076/000119312526418812/d56487df1.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "F-1, Fri Oct 9"
+              },
+              {
+                "label": "Revenue (12 mo. to Jun 30, 2026)",
+                "value": "$806M"
+              },
+              {
+                "label": "Banks",
+                "value": "Citi, Deutsche Bank, Standard Bank, CICC"
+              }
+            ]
+          }
+        },
+        {
+          "id": "vvardis",
+          "company": "vVardis Holding",
+          "ticker": "VVVV",
+          "exchange": "NYSE",
+          "tradeDate": "n/a",
+          "priceRange": "n/a",
+          "dealSize": "~$200M (Renaissance est.)",
+          "description": "Swiss maker of Curodont, a 5-minute, drill-free treatment for early cavities sold in the US via Henry Schein.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122157/cavity-treatment-provider-vvardis-files-for-an-estimated-200-million-us-ipo",
+            "https://www.sec.gov/Archives/edgar/data/1907709/000114036126039234/ny20076472x6_f1.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "F-1, Fri Oct 9"
+              },
+              {
+                "label": "Revenue (12 mo. to Jun 30, 2026)",
+                "value": "$50M"
+              },
+              {
+                "label": "Banks",
+                "value": "Goldman Sachs, J.P. Morgan, William Blair, UBS, Deutsche Bank, Apollo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "aspen-neuro",
+          "company": "Aspen Neuroscience",
+          "ticker": "ASPE",
+          "exchange": "Nasdaq Global Select",
+          "tradeDate": "n/a",
+          "priceRange": "n/a",
+          "dealSize": "$100M (placeholder)",
+          "description": "Phase 1/2a biotech developing patient-derived stem cell therapies for Parkinson's disease.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+            "https://www.sec.gov/Archives/edgar/data/2124080/000119312526419104/na-20261009.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "S-1, Fri Oct 9"
+              },
+              {
+                "label": "Lead underwriter",
+                "value": "Leerink Partners"
+              }
+            ]
+          }
+        },
+        {
+          "id": "bambusa",
+          "company": "Bambusa Therapeutics",
+          "ticker": "BBTX",
+          "exchange": "Nasdaq Global Select",
+          "tradeDate": "n/a",
+          "priceRange": "n/a",
+          "dealSize": "$100M (placeholder)",
+          "description": "Phase 2 biotech developing long-acting bispecific antibodies for inflammatory diseases.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+            "https://www.sec.gov/Archives/edgar/data/2044950/000162828026065557/bambusa-sx1.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "S-1, Fri Oct 9"
+              },
+              {
+                "label": "Lead underwriter",
+                "value": "BofA"
+              }
+            ]
+          }
+        },
+        {
+          "id": "centinel",
+          "company": "Centinel Spine",
+          "ticker": "CNTL",
+          "exchange": "NYSE",
+          "tradeDate": "n/a",
+          "priceRange": "n/a",
+          "dealSize": "$100M (placeholder)",
+          "description": "Makes total disc replacement implants for the cervical and lumbar spine.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+            "https://www.sec.gov/Archives/edgar/data/2132065/000110465926114375/tm2613312-6_s1.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "S-1, Wed Oct 7"
+              },
+              {
+                "label": "Lead underwriter",
+                "value": "Morgan Stanley"
+              }
+            ]
+          }
+        },
+        {
+          "id": "simwon",
+          "company": "Simwon America",
+          "ticker": "SWA",
           "exchange": "Nasdaq",
           "tradeDate": "n/a",
           "priceRange": "n/a",
-          "dealSize": "~$3B (est.)",
-          "description": "Singapore data center developer; the biggest filing of the week.",
+          "dealSize": "$50M (placeholder)",
+          "description": "EV structural-components maker being spun out of Korea's MS Autotech.",
           "isSpac": false,
           "unconfirmed": false,
-          "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122062/global-data-center-developer-dayone-data-centers-files-for-an-estimated"
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+            "https://www.sec.gov/Archives/edgar/data/1698506/000121390026108356/ea0270032-18.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "S-1, Fri Oct 9"
+              },
+              {
+                "label": "Lead underwriter",
+                "value": "WallachBeth"
+              }
+            ]
+          }
         },
         {
-          "id": "lycia",
-          "company": "Lycia Therapeutics",
-          "ticker": "n/a",
-          "exchange": "n/a",
+          "id": "patriot-mobile",
+          "company": "Patriot Mobile",
+          "ticker": "PTRT",
+          "exchange": "Nasdaq",
           "tradeDate": "n/a",
           "priceRange": "n/a",
-          "dealSize": "Up to $100M",
-          "description": "Developing drugs for food allergy and Graves' disease.",
+          "dealSize": "$10M (placeholder)",
+          "description": "Wireless carrier focused on Christian-conservative customers and organizations.",
           "isSpac": false,
           "unconfirmed": false,
-          "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122064/lycia-therapeutics-files-for-a-100-million-ipo-targeting-food-allergies"
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+            "https://www.sec.gov/Archives/edgar/data/2148546/000110465926115093/tm2621701-5_s1.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "S-1, Fri Oct 9"
+              },
+              {
+                "label": "Lead underwriter",
+                "value": "Northland"
+              }
+            ]
+          }
+        },
+        {
+          "id": "firefly-robotics",
+          "company": "FireFly Robotics",
+          "ticker": "FFLY",
+          "exchange": "Nasdaq Global Market",
+          "tradeDate": "n/a",
+          "priceRange": "n/a",
+          "dealSize": "n/a (direct listing; no new shares)",
+          "description": "Salt Lake City maker of autonomous turf and golf-course robots; existing holders could sell up to 27.1M shares.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122092/turf-robotics-maker-firefly-robotics-files-for-a-direct-listing",
+            "https://www.sec.gov/Archives/edgar/data/1660851/000149315226046104/forms-1.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "S-1, Wed Oct 7 (direct listing)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "tang-capital",
+          "company": "Tang Capital Acquisition",
+          "ticker": "TCAA",
+          "exchange": "Nasdaq Capital Market",
+          "tradeDate": "n/a",
+          "priceRange": "n/a",
+          "dealSize": "$75M",
+          "description": "Blank-check company formed by Tang Capital to target clinical-stage biotechs.",
+          "isSpac": true,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+            "https://www.sec.gov/Archives/edgar/data/2151808/000119312526415765/ck0002151808-20261006.htm"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "S-1, Tue Oct 6"
+              },
+              {
+                "label": "Lead underwriter",
+                "value": "LifeSci Capital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "dayone",
+          "company": "DayOne Data Centers",
+          "ticker": "DODC",
+          "exchange": "Nasdaq",
+          "tradeDate": "n/a",
+          "priceRange": "n/a",
+          "dealSize": "~$3B (Renaissance est.)",
+          "description": "Singapore data center developer in Southeast Asia and Europe (ex-GDS subsidiary); filed Oct 5, shown last week, now with ticker and banks.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122062/global-data-center-developer-dayone-data-centers-files-for-an-estimated",
+            "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002118192&type=&dateb=&owner=include&count=40"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Filed",
+                "value": "F-1, Mon Oct 5"
+              },
+              {
+                "label": "Revenue (12 mo. to Jun 30, 2026)",
+                "value": "$845M"
+              },
+              {
+                "label": "Capacity",
+                "value": "4.6GW in service, under construction or secured land; ~2.3GW contracted"
+              },
+              {
+                "label": "Banks",
+                "value": "Morgan Stanley, J.P. Morgan, BofA, Citi, BNP Paribas"
+              }
+            ]
+          }
         }
       ]
     },
@@ -293,63 +681,248 @@
           "company": "Oura",
           "ticker": "n/a",
           "exchange": "n/a",
-          "tradeDate": "Postponed",
+          "tradeDate": "Postponed Sep 29; no new date",
           "priceRange": "n/a",
-          "dealSize": "~$2.1B",
-          "description": "Smart-ring maker postponed its IPO a day before trading, citing market uncertainty.",
+          "dealSize": "~$2.1B at midpoint (up to $2.2B)",
+          "description": "Smart-ring maker postponed its Nasdaq IPO hours before pricing, citing market uncertainty; as of Oct 6 it declined to give a new timeline.",
           "isSpac": false,
           "unconfirmed": false,
           "status": "Postponed",
-          "sourceUrl": "https://www.cnbc.com/2026/09/29/smart-ring-maker-oura-postpones-ipo-due-to-market-uncertainty.html"
+          "sourceUrl": [
+            "https://www.cnbc.com/2026/09/29/smart-ring-maker-oura-postpones-ipo-due-to-market-uncertainty.html",
+            "https://fortune.com/2026/10/06/why-did-oura-pull-its-ipo/"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Proposed terms",
+                "value": "50M shares at $40–$44"
+              },
+              {
+                "label": "Valuation at top of range",
+                "value": "~$15.6B fully diluted"
+              },
+              {
+                "label": "New vs. selling-holder shares",
+                "value": "13.5M new (27%) / 36.5M secondary (73%)"
+              }
+            ],
+            "bullets": [
+              "Fortune's source said the book was ~5x oversubscribed; Bloomberg reported some buyers balked at the valuation.",
+              "CEO Tom Hale: Oura has the \"luxury of choosing our moment.\""
+            ],
+            "sourceUrl": "https://fortune.com/2026/10/06/why-did-oura-pull-its-ipo/",
+            "sourceLabel": "Fortune"
+          }
+        },
+        {
+          "id": "siyata-ptt",
+          "company": "Siyata PTT",
+          "ticker": "PTT",
+          "exchange": "Nasdaq",
+          "tradeDate": "Withdrawn Oct 7",
+          "priceRange": "$7 reference price",
+          "dealSize": "n/a (direct listing; up to 6.1M holder shares)",
+          "description": "Montreal push-to-talk device maker for first responders withdrew its planned Nasdaq direct listing (~$85M value at reference).",
+          "isSpac": false,
+          "unconfirmed": false,
+          "status": "Withdrawn",
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122094/canadian-push-to-talk-device-maker-siyata-ptt-withdraws-plans-for-a-direct",
+            "https://www.sec.gov/Archives/edgar/data/2110025/000121390026107508/0001213900-26-107508.txt"
+          ]
+        },
+        {
+          "id": "afternext",
+          "company": "AfterNext Acquisition I",
+          "ticker": "AFNXU",
+          "exchange": "n/a",
+          "tradeDate": "Was expected Wed, Oct 7",
+          "priceRange": "n/a",
+          "dealSize": "$100M",
+          "description": "Singapore-based blank-check company (SPAC) targeting Asia-Pacific fintech; units were set at $10.",
+          "isSpac": true,
+          "unconfirmed": true,
+          "unconfirmedNote": "IPOScoop still shows an Oct 7 trade date, but no pricing release or final prospectus is on EDGAR (last S-1/A Sep 9), it isn't in Renaissance's or Nasdaq's priced lists, and Nasdaq has no AFNXU trading history. Status unclear",
+          "sourceUrl": [
+            "https://www.iposcoop.com/ipo/afternext-acquisition-i/",
+            "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002087035&type=&dateb=&owner=include&count=40",
+            "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer"
+          ],
+          "status": "Not priced yet"
+        },
+        {
+          "id": "amaero",
+          "company": "Amaero",
+          "ticker": "AMRO",
+          "exchange": "Nasdaq",
+          "tradeDate": "Timing not set",
+          "priceRange": "n/a",
+          "dealSize": "Now ~$20M (was up to ~$53M)",
+          "description": "ASX-listed titanium/refractory metal powder maker for defense 3D printing postponed in September, then revived its Nasdaq plan on Oct 8 at ~62% less.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "status": "Revived (smaller)",
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122127/metal-powder-producer-amaero-revives-nasdaq-listing-plans-slashing-deal",
+            "https://www.nasdaq.com/press-release/amaero-inc-postpones-us-initial-public-offering-2026-09-24"
+          ]
         },
         {
           "id": "holtec",
           "company": "Holtec Nuclear",
           "ticker": "n/a",
           "exchange": "n/a",
-          "tradeDate": "n/a",
+          "tradeDate": "S-1 withdrawn Sep 25",
           "priceRange": "n/a",
-          "dealSize": "n/a",
-          "description": "Pulled or delayed its deal in late September.",
+          "dealSize": "~$825M",
+          "description": "Nuclear plant equipment maker postponed, then withdrew its registration, citing adverse market conditions.",
           "isSpac": false,
           "unconfirmed": false,
-          "status": "Pulled / delayed",
-          "sourceUrl": null
-        },
-        {
-          "id": "amaero",
-          "company": "Amaero",
-          "ticker": "n/a",
-          "exchange": "n/a",
-          "tradeDate": "n/a",
-          "priceRange": "n/a",
-          "dealSize": "n/a",
-          "description": "Pulled or delayed its deal in late September.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "status": "Pulled / delayed",
-          "sourceUrl": null
+          "status": "Withdrawn",
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/121893/nuclear-plant-equipment-provider-holtec-nuclear-withdraws-825-million-ipo",
+            "https://www.reuters.com/legal/government/nuclear-firm-holtec-withdraws-us-ipo-filing-after-suspending-offering-2026-09-25/"
+          ]
         },
         {
           "id": "bamboo",
           "company": "Bamboo Insurance",
-          "ticker": "n/a",
-          "exchange": "n/a",
-          "tradeDate": "n/a",
+          "ticker": "BMB",
+          "exchange": "NYSE",
+          "tradeDate": "Postponed ~Sep 23",
           "priceRange": "n/a",
           "dealSize": "n/a",
-          "description": "Pulled or delayed its deal in late September.",
+          "description": "CVC-controlled Utah home insurer postponed, citing market conditions (per people familiar); could be revived later.",
           "isSpac": false,
-          "unconfirmed": false,
-          "status": "Pulled / delayed",
-          "sourceUrl": null
+          "unconfirmed": true,
+          "status": "Postponed",
+          "sourceUrl": [
+            "https://www.insurancejournal.com/news/national/2026/09/23/886476.htm",
+            "https://www.iposcoop.com/ipo/bamboo-insurance-services/"
+          ],
+          "unconfirmedNote": "Postponement reported by Bloomberg citing people familiar with the matter"
         }
       ]
     },
     "pastTwoWeeks": {
       "label": "Past 2 weeks",
-      "dateRange": "Sep 21 – Oct 2",
+      "dateRange": "Sep 28 – Oct 9",
       "weeks": [
+        {
+          "label": "Week of Oct 5–9",
+          "ipos": [
+            {
+              "id": "trex-bio",
+              "company": "TRex Bio",
+              "ticker": "TRXB",
+              "exchange": "Nasdaq Global Select",
+              "tradeDate": "Fri, Oct 9",
+              "priceRange": "$14–$16 → priced $14 (low end)",
+              "dealSize": "$116.7M (8.33M shares)",
+              "description": "Phase 1 biotech boosting regulatory T cells to treat autoimmune and inflammatory disease.",
+              "isSpac": false,
+              "unconfirmed": false,
+              "sourceUrl": [
+                "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+                "https://www.pharmexec.com/view/roundup-trexbio-retension-pharmaceuticals-announce-ipo-pricing",
+                "https://www.nasdaq.com/market-activity/stocks/trxb/historical"
+              ],
+              "detail": {
+                "facts": [
+                  {
+                    "label": "Market cap at IPO",
+                    "value": "~$422M"
+                  },
+                  {
+                    "label": "Over-allotment",
+                    "value": "Up to 1.25M shares"
+                  },
+                  {
+                    "label": "Banks",
+                    "value": "J.P. Morgan, Evercore ISI, Cantor, Stifel, Wedbush"
+                  }
+                ],
+                "bullets": [
+                  "Lead drug TRB-061 (TNFR2 agonist) is in a Phase 1b for atopic dermatitis; topline data expected mid-2027."
+                ],
+                "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer"
+              },
+              "returns": {
+                "firstDay": "+0%",
+                "firstDayNote": "Opened $13.50; closed $14.00",
+                "latest": "+0%",
+                "latestPrice": "$14.00",
+                "latestDate": "2026-10-09",
+                "latestNote": "First biotech IPO to price below the midpoint since Feb 2025 (Renaissance)"
+              }
+            },
+            {
+              "id": "retension",
+              "company": "Retension Pharmaceuticals",
+              "ticker": "RTSN",
+              "exchange": "Nasdaq Capital Market",
+              "tradeDate": "Fri, Oct 9",
+              "priceRange": "$11–$13 → priced $12 (midpoint, upsized)",
+              "dealSize": "$45M (3.75M shares)",
+              "description": "Single-drug company: a daily pill for hard-to-treat high blood pressure.",
+              "isSpac": false,
+              "unconfirmed": false,
+              "sourceUrl": [
+                "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+                "https://www.pharmexec.com/view/roundup-trexbio-retension-pharmaceuticals-announce-ipo-pricing",
+                "https://www.nasdaq.com/market-activity/stocks/rtsn/historical"
+              ],
+              "returns": {
+                "firstDay": "-12%",
+                "firstDayNote": "Opened $10.00; closed $10.53",
+                "latest": "-12.3%",
+                "latestPrice": "$10.53",
+                "latestDate": "2026-10-09"
+              },
+              "detail": {
+                "facts": [
+                  {
+                    "label": "Market cap at IPO",
+                    "value": "~$114M"
+                  },
+                  {
+                    "label": "Lead drug",
+                    "value": "RTN-001, once-daily oral PDE-5 inhibitor (Phase 2b)"
+                  }
+                ],
+                "bullets": [
+                  "Initial Phase 2b data expected 1H27."
+                ],
+                "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer"
+              }
+            },
+            {
+              "id": "pine-tree",
+              "company": "Pine Tree Acquisition",
+              "ticker": "PAXGU",
+              "exchange": "Nasdaq Global",
+              "tradeDate": "Tue, Oct 6",
+              "priceRange": "$10.00 units",
+              "dealSize": "$100M",
+              "description": "Blank-check company (SPAC) led by a climate-tech financial advisory executive.",
+              "isSpac": true,
+              "unconfirmed": false,
+              "sourceUrl": [
+                "https://www.finanznachrichten.de/nachrichten-2026-10/69767064-pine-tree-acquisition-corp-announces-pricing-of-dollar-100-000-000-initial-public-offering-200.htm",
+                "https://www.renaissancecapital.com/IPO-Center/News/122172/us-ipo-weekly-recap-biotech-ipos-keep-flowing-as-data-center-developer",
+                "https://www.nasdaq.com/market-activity/stocks/paxgu/historical"
+              ],
+              "returns": {
+                "firstDay": "+0%",
+                "firstDayNote": "Closed $10.00",
+                "latest": "-0.1%",
+                "latestPrice": "$9.99",
+                "latestDate": "2026-10-09"
+              }
+            }
+          ]
+        },
         {
           "label": "Week of Sep 28 – Oct 2",
           "ipos": [
@@ -367,7 +940,7 @@
               "sourceUrl": [
                 "https://www.renaissancecapital.com/IPO-Center/News/122042/us-ipo-weekly-recap-oura-postpones-2.1-billion-ipo-and-accelevation-trades",
                 "https://www.globenewswire.com/news-release/2026/09/29/3371460/0/en/accelevation-announces-pricing-of-initial-public-offering.html",
-                "https://stockanalysis.com/stocks/accv/"
+                "https://www.nasdaq.com/market-activity/stocks/accv/historical"
               ],
               "detail": {
                 "intro": "Designs, manufactures and installs steel structures, power panels, cabling and cooling-ready enclosures inside data center server rooms. ~84% of revenue comes from fixed-price custom projects.",
@@ -439,11 +1012,11 @@
                 "sourceLabel": "Final prospectus (424B4)"
               },
               "returns": {
-                "firstDay": "+0%",
-                "firstDayNote": "Opened $17.55; ~flat first day",
-                "latest": "-8.9%",
-                "latestPrice": "$16.40",
-                "latestDate": "2026-10-06"
+                "firstDay": "-0.3%",
+                "firstDayNote": "Opened $17.55; closed $17.95",
+                "latest": "-7.1%",
+                "latestPrice": "$16.72",
+                "latestDate": "2026-10-09"
               }
             },
             {
@@ -457,19 +1030,19 @@
               "description": "South Korean maker of AI-powered fire detection and disaster-prevention sensors and software.",
               "isSpac": false,
               "unconfirmed": true,
-              "unconfirmedNote": "First-day figures conflict: Renaissance shows +174%, while reported Sep 29 closes differ ($17.17 in a company filing vs $27.63 in a news report). No IPO price, so no since-IPO return.",
+              "unconfirmedNote": "First-day figures conflict: Renaissance shows +174%, while Nasdaq's history shows a $17.17 Sep 29 print with no volume and a first full session on Sep 30 (open $27.63, close $21.88). No IPO price, so no since-IPO return.",
               "returns": {
                 "firstDay": "+174%",
                 "firstDayNote": "Per Renaissance; unconfirmed",
                 "latest": "n/a",
-                "latestPrice": "$11.79",
-                "latestDate": "2026-10-06",
-                "latestNote": "+149% for the week through Oct 2 (Renaissance)"
+                "latestPrice": "$10.15",
+                "latestDate": "2026-10-09",
+                "latestNote": "Down ~54% from its Sep 30 close of $21.88"
               },
               "sourceUrl": [
                 "https://www.renaissancecapital.com/IPO-Center/News/122042/us-ipo-weekly-recap-oura-postpones-2.1-billion-ipo-and-accelevation-trades",
                 "https://www.publicnow.com/view/72E7CC808429FFC998CBECADD2F7EED6175FE536",
-                "https://stockanalysis.com/stocks/rzai/"
+                "https://www.nasdaq.com/market-activity/stocks/rzai/historical"
               ]
             },
             {
@@ -488,112 +1061,37 @@
                 "latest": "+0%",
                 "latestPrice": "n/a",
                 "latestDate": "2026-10-02",
-                "latestNote": "per Renaissance"
+                "latestNote": "Per Renaissance (Oct 2); no Oct 9 unit quote found"
               },
               "sourceUrl": [
                 "https://www.globenewswire.com/news-release/2026/10/01/3372488/0/en/Southport-Acquisition-Corp-II-Announces-Pricing-of-200-000-000-Initial-Public-Offering.html",
                 "https://www.renaissancecapital.com/IPO-Center/News/122042/us-ipo-weekly-recap-oura-postpones-2.1-billion-ipo-and-accelevation-trades"
               ]
-            }
-          ]
-        },
-        {
-          "label": "Week of Sep 21 – 25",
-          "ipos": [
+            },
             {
-              "id": "adarx",
-              "company": "ADARx Pharmaceuticals",
-              "ticker": "ADRX",
-              "exchange": "Nasdaq Global Select",
-              "tradeDate": "Fri, Sep 25",
-              "priceRange": "$15–$17 → priced $17 (top, upsized)",
-              "dealSize": "$446M",
-              "description": "Phase 3 biotech developing siRNA drugs; lead program aims to prevent hereditary angioedema attacks.",
+              "id": "chilwa",
+              "company": "Chilwa Minerals",
+              "ticker": "CHWM",
+              "exchange": "Nasdaq Capital Market",
+              "tradeDate": "Thu, Oct 1",
+              "priceRange": "$5.60 per ADS + warrant",
+              "dealSize": "$3.5M (625,000 ADSs)",
+              "description": "ASX-listed (CHW) explorer of the Chilwa critical-minerals project in Malawi; US listing of ADSs (10 shares each).",
               "isSpac": false,
               "unconfirmed": false,
-              "returns": {
-                "firstDay": "+14%",
-                "firstDayNote": "First-day close $19.35",
-                "latest": "+9.3%",
-                "latestPrice": "$18.58",
-                "latestDate": "2026-10-06"
-              },
-              "detail": {
-                "facts": [
-                  {
-                    "label": "Shares sold",
-                    "value": "26.25M (upsized from 21.9M)"
-                  },
-                  {
-                    "label": "AbbVie private placement",
-                    "value": "~$89.3M at $17 (~4.9% stake)"
-                  },
-                  {
-                    "label": "Market cap at IPO",
-                    "value": "~$2.0B"
-                  },
-                  {
-                    "label": "Bookrunners",
-                    "value": "J.P. Morgan, Morgan Stanley, TD Cowen, UBS, LifeSci Capital"
-                  }
-                ],
-                "bullets": [
-                  "Phase 3 topline data expected by end of 2027; potential NDA in 2028 if positive."
-                ]
-              },
               "sourceUrl": [
-                "https://www.globenewswire.com/news-release/2026/09/24/3368818/0/en/adarx-pharmaceuticals-announces-pricing-of-upsized-446-3-million-initial-public-offering.html",
-                "https://www.renaissancecapital.com/IPO-Center/News/121908/us-ipo-weekly-recap-postponed-deals-put-damper-on-fall-ipo-market",
-                "https://stockanalysis.com/stocks/adrx/"
-              ]
-            },
-            {
-              "id": "live-oak-vi",
-              "company": "Live Oak Acquisition VI",
-              "ticker": "LOVIU",
-              "exchange": "Nasdaq Global Market",
-              "tradeDate": "Wed, Sep 23",
-              "priceRange": "$10.00 units",
-              "dealSize": "$200M ($230M with over-allotment)",
-              "description": "Blank-check company formed by Live Oak Merchant Partners; may pursue a deal in any industry.",
-              "isSpac": true,
-              "unconfirmed": false,
+                "https://www.globenewswire.com/news-release/2026/10/01/3372478/0/en/chilwa-announces-nasdaq-listing-and-pricing-of-us-3-5-million-offering.html",
+                "https://www.globenewswire.com/news-release/2026/10/02/3374050/0/en/chilwa-announces-closing-of-us-3-5-million-offering.html",
+                "https://www.nasdaq.com/market-activity/stocks/chwm/historical"
+              ],
               "returns": {
-                "firstDay": "+0%",
-                "latest": "+0%",
-                "latestPrice": "n/a",
-                "latestDate": "2026-09-25",
-                "latestNote": "per Renaissance"
-              },
-              "sourceUrl": [
-                "https://www.liveoakacq.com/blog/live-oak-acquisition-corp-vi-announces-the-pricing-of-200000000-initial-public-offering",
-                "https://www.stocktitan.net/sec-filings/LOVIU/8-k-live-oak-acquisition-corp-vi-reports-material-event-9b4933d07f18.html",
-                "https://www.renaissancecapital.com/IPO-Center/News/121908/us-ipo-weekly-recap-postponed-deals-put-damper-on-fall-ipo-market"
-              ]
-            },
-            {
-              "id": "bluerock-ii",
-              "company": "Bluerock Acquisition II",
-              "ticker": "BRRKU",
-              "exchange": "Nasdaq Global Market",
-              "tradeDate": "Fri, Sep 25",
-              "priceRange": "$10.00 units",
-              "dealSize": "$150M ($172.5M with over-allotment)",
-              "description": "Blank-check company backed by Bluerock; Renaissance says it is targeting Web3 businesses.",
-              "isSpac": true,
-              "unconfirmed": false,
-              "returns": {
-                "firstDay": "+0%",
-                "latest": "+0%",
-                "latestPrice": "n/a",
-                "latestDate": "2026-09-25",
-                "latestNote": "per Renaissance"
-              },
-              "sourceUrl": [
-                "https://www.prnewswire.com/news-releases/bluerock-acquisition-corp-ii-announces-pricing-of-150-million-initial-public-offering-302889820.html",
-                "https://www.prnewswire.com/news-releases/bluerock-acquisition-corp-ii-announces-closing-of-172-5-million-initial-public-offering-including-exercise-of-underwriters-over-allotment-option-in-full-302891769.html",
-                "https://www.renaissancecapital.com/IPO-Center/News/121908/us-ipo-weekly-recap-postponed-deals-put-damper-on-fall-ipo-market"
-              ]
+                "firstDay": "+17.9%",
+                "firstDayNote": "Closed $6.60 (offer price included a warrant)",
+                "latest": "-7.1%",
+                "latestPrice": "$5.20",
+                "latestDate": "2026-10-09",
+                "latestNote": "Measured vs the $5.60 ADS-plus-warrant price"
+              }
             }
           ]
         }
