@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-10",
+  "lastUpdated": "2026-10-11",
   "priceDate": "2026-10-09",
   "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 (full marks at 150%+); acceleration (TTM growth above the prior fiscal year's) +5; momentum up to 25, measured as true relative strength — the stock's 1-year price change versus the S&P 500 (SPY), scaled as clamp((RS+50)/150×25), using 6- or 3-month relative strength for IPOs under a year old; upside to the consensus price target up to 20 (full marks at 100%+); and consensus Strong Buy 10 / Buy 7 / Hold 2. There is no valuation cap and losses are allowed. The top 12 are the picks and the next 18 form the ranked bench. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue). Also excludes crypto-treasury companies whose main strategy is holding or staking crypto (e.g. SBET, BMNR, MSTR).",
-  "dataNotes": "Prices (Oct 9, 2026 close), market cap, net income, gross margin, beta, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence). TTM revenue growth, its period and prior fiscal-year growth come from the StockAnalysis revenue page; this- and next-year consensus revenue growth from the forecast page. Momentum uses 1-year price changes from Nasdaq daily closes (close on or before the same date a year earlier to the latest close, matching the grade inputs), vs SPY +16.0% (6-month +14.6%); StockAnalysis 52-week changes are used only where Nasdaq history is unavailable (0 stocks). Gross-margin trend compares the latest quarter's gross margin with the same quarter a year earlier (StockAnalysis quarterly statements), and price-target revisions count raises and cuts in the analyst actions on the StockAnalysis forecast page over the last 90 days. Both are shown for context and are not scored. Consensus EPS/revenue estimate revisions were not available from free sources. 385 stocks passed every filter and were fully scored, out of 1977 that passed the size, revenue, analyst and liquidity prefilter. 'n/a' means not available. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue). Also excludes crypto-treasury companies whose main strategy is holding or staking crypto (e.g. SBET, BMNR, MSTR).",
+  "dataNotes": "Prices (Oct 9, 2026 close), market cap, net income, gross margin, beta, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence). TTM revenue growth, its period and prior fiscal-year growth come from the StockAnalysis revenue page; this- and next-year consensus revenue growth from the forecast page. Momentum uses 1-year price changes from Nasdaq daily closes (close on or before the same date a year earlier to the latest close, matching the grade inputs), vs SPY +16.0% (6-month +14.6%); StockAnalysis 52-week changes are used only where Nasdaq history is unavailable (0 stocks). Gross-margin trend compares the latest quarter's gross margin with the same quarter a year earlier (StockAnalysis quarterly statements), and price-target revisions count raises and cuts in the analyst actions on the StockAnalysis forecast page over the last 90 days. Both are shown for context and are not scored. Consensus EPS/revenue estimate revisions were not available from free sources. 384 stocks passed every filter and were fully scored, out of 1974 that passed the size, revenue, analyst and liquidity prefilter. 'n/a' means not available. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue).",
   "disclaimer": "Higher-risk, speculative ideas for research only. Many of these companies lose money, dilute shareholders and swing violently. Not financial advice.",
   "picks": [
     {
@@ -41,7 +41,7 @@
         "https://stockanalysis.com/stocks/alm/forecast/"
       ],
       "grades": {
-        "growth": "C-",
+        "growth": "C",
         "value": "C+",
         "momentum": "C",
         "profitability": "B+"
@@ -106,7 +106,7 @@
       ],
       "grades": {
         "growth": "A",
-        "value": "D+",
+        "value": "C-",
         "momentum": "B+",
         "profitability": "D"
       },
@@ -360,8 +360,8 @@
       ],
       "grades": {
         "growth": "C+",
-        "value": "D-",
-        "momentum": "D+",
+        "value": "D",
+        "momentum": "D",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -422,9 +422,9 @@
         "https://stockanalysis.com/stocks/bbio/forecast/"
       ],
       "grades": {
-        "growth": "D+",
+        "growth": "C-",
         "value": "F",
-        "momentum": "C-",
+        "momentum": "D+",
         "profitability": "C+"
       },
       "gradeInputs": {
@@ -553,7 +553,7 @@
         "growth": "A",
         "value": "C",
         "momentum": "A-",
-        "profitability": "D-"
+        "profitability": "F"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -617,7 +617,7 @@
         "growth": "A-",
         "value": "D-",
         "momentum": "D+",
-        "profitability": "C-"
+        "profitability": "C"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -745,7 +745,7 @@
         "growth": "D",
         "value": "F",
         "momentum": "D",
-        "profitability": "D+"
+        "profitability": "C-"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -806,7 +806,7 @@
         "https://stockanalysis.com/stocks/vsec/forecast/"
       ],
       "grades": {
-        "growth": "D-",
+        "growth": "D",
         "value": "C-",
         "momentum": "C-",
         "profitability": "B-"
@@ -998,7 +998,18 @@
         "https://stockanalysis.com/stocks/skhy/revenue/",
         "https://stockanalysis.com/stocks/skhy/forecast/"
       ],
-      "rank": 4,
+      "grades": {
+        "growth": "C+",
+        "value": "A-",
+        "momentum": "n/a",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "0/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 145.0,
         "forwardPE": 4.17,
@@ -1015,18 +1026,7 @@
         "relStrength1yPct": null,
         "priceAsOf": "2026-10-09"
       },
-      "grades": {
-        "growth": "C+",
-        "value": "A-",
-        "momentum": "n/a",
-        "profitability": "A"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "0/3",
-        "profitability": "4/4"
-      }
+      "rank": 4
     },
     {
       "company": "QXO, Inc.",
@@ -1065,7 +1065,7 @@
       ],
       "grades": {
         "growth": "C",
-        "value": "D",
+        "value": "D+",
         "momentum": "F",
         "profitability": "B"
       },
@@ -1388,8 +1388,8 @@
         "https://stockanalysis.com/stocks/crdo/forecast/"
       ],
       "grades": {
-        "growth": "D",
-        "value": "F",
+        "growth": "D+",
+        "value": "D-",
         "momentum": "A-",
         "profitability": "A"
       },
@@ -1710,8 +1710,8 @@
         "https://stockanalysis.com/stocks/simo/forecast/"
       ],
       "grades": {
-        "growth": "F",
-        "value": "B-",
+        "growth": "D-",
+        "value": "B",
         "momentum": "A",
         "profitability": "A-"
       },
@@ -1868,12 +1868,76 @@
         "priceAsOf": "2026-10-09"
       },
       "rank": 17
+    },
+    {
+      "company": "Cerebras Systems Inc.",
+      "ticker": "CBRS",
+      "sector": "Technology – Semiconductors",
+      "price": 164.17,
+      "priceDate": "2026-10-09",
+      "marketCap": "$39.00B",
+      "forwardPE": "n/a",
+      "peg": "n/a",
+      "revenueGrowth": "+111.68% YoY (TTM ending Jun 2026; revenue $680.67M)",
+      "score": 64,
+      "riskLevel": "Very High",
+      "drivers": [
+        "Revenue growth +111.7% YoY (TTM) → 30/40",
+        "Acceleration: TTM 111.7% vs FY2025 75.7% → 5/5",
+        "Momentum (IPO under a year): 3-month price -23.7% vs SPY +3.1% = relative strength -26.8% → 4/25",
+        "Upside to target +77.6% → 16/20",
+        "Consensus Strong Buy (11) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 14.5% vs 41.1% a year earlier → margin contracting",
+        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended June 30, 2026) revenue +164% YoY; consensus sees revenue +74% this fiscal year and +233% next.",
+      "fundamentals": "TTM revenue $680.67M, net income -$487.24M, gross margin 34.90%; market cap $39.00B, net cash $6.43B.",
+      "risks": [
+        "Unprofitable: TTM net income -$487.24M",
+        "Dilution: share count +61.2% YoY"
+      ],
+      "analystRating": "Strong Buy (11 analysts)",
+      "priceTarget": 291.64,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/cbrs/statistics/",
+        "https://stockanalysis.com/stocks/cbrs/revenue/",
+        "https://stockanalysis.com/stocks/cbrs/forecast/"
+      ],
+      "rank": 18,
+      "metrics": {
+        "revenueGrowthPct": 111.68,
+        "forwardPE": null,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 47.84,
+        "grossMarginPct": 34.903,
+        "operatingMarginPct": -81.167,
+        "netMarginPct": -75.271,
+        "fcfMarginPct": -99.93,
+        "chg3mPct": -17.31,
+        "chg6mPct": null,
+        "chg1yPct": null,
+        "relStrength1yPct": null,
+        "priceAsOf": "2026-10-09"
+      },
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "B",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "1/3",
+        "momentum": "1/3",
+        "profitability": "4/4"
+      }
     }
   ],
   "grading": {
-    "asOf": "2026-10-10",
+    "asOf": "2026-10-11",
     "spy1yPct": 16.0,
-    "pool": "29 stocks (this list's picks + bench)",
+    "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",

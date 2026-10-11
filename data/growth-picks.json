@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-10",
+  "lastUpdated": "2026-10-11",
   "method": "Conservative growth at a reasonable price (GARP), rerun on the full US-listed market (StockAnalysis / S&P Global screener, Oct 9, 2026 close). A stock qualifies if it has: market cap of $10B or more and at least a year of trading history; TTM revenue growth of 15% or more that analysts expect to continue (consensus revenue growth of 8%+ next fiscal year and 8%+ a year over the next 3 years); a positive forward P/E of 35 or less and a PEG of 1.5 or less where available; a Buy or Strong Buy consensus from 5+ analysts with 15%+ upside to the average target; beta of 2.6 or less; share count up no more than 20% in a year (screens out stock-funded mergers); and at least $20M a day of trading volume. The 12 picks stay as long as they keep qualifying, and the ranked bench (best-first by a GARP score: revenue growth 35 (full at 75%+), PEG 25 (full at 0.3 or less; forward P/E when PEG is missing), upside 25 (full at 50%+), rating 15 (Strong Buy 15, Buy 10); at most two names per industry) refills any card you dismiss. Speculative, pre-profit and very high-beta names are left to the Risk It tab. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue). Excludes bitcoin/crypto miners and crypto-treasury companies (e.g. SBET, BMNR, MSTR).",
   "disclaimer": "Information only, not investment advice",
   "dataNotes": "Price, market cap, forward P/E, PEG, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence) as of the Oct 9, 2026 close; TTM revenue growth and its period come from the StockAnalysis revenue page (where a fiscal year just ended, TTM equals that fiscal year); next-year revenue forecasts from the StockAnalysis forecast page. 83 US-listed stocks passed the screen today; 12 of the 12 picks still qualify, and the bench holds the next 18 by score. 'n/a' means the figure was not available. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue).",
@@ -117,10 +117,10 @@
       "priceDate": "2026-10-09",
       "marketCap": "$92.71B",
       "forwardPE": 15.42,
-      "peg": 0.48,
+      "peg": 0.471,
       "revenueGrowth": "+60.59% YoY (TTM ending Jun 2026)",
       "trend": "AI-driven ad platform expanding from mobile games into e-commerce advertisers; Q3 guidance is $2.055–2.085B revenue at roughly 83% adj. EBITDA margin (Q3 report expected Nov 4).",
-      "fundamentals": "TTM revenue $6.83B (+60.59%), net income $4.41B, free cash flow $4.53B and a 88.46% gross margin; 15.42x forward earnings, PEG 0.48.",
+      "fundamentals": "TTM revenue $6.83B (+60.59%), net income $4.41B, free cash flow $4.53B and a 88.46% gross margin; 15.42x forward earnings, PEG 0.471.",
       "risks": [
         "More competition and rising inventory costs (analysts have cut price targets)",
         "High volatility (beta 2.56)"
@@ -131,9 +131,9 @@
         "https://stockanalysis.com/stocks/app/statistics/",
         "https://stockanalysis.com/stocks/app/revenue/"
       ],
-      "garpScore": 82.8,
+      "garpScore": 83.0,
       "grades": {
-        "growth": "C+",
+        "growth": "C",
         "value": "C+",
         "momentum": "F",
         "profitability": "A+"
@@ -147,7 +147,7 @@
       "metrics": {
         "revenueGrowthPct": 60.59,
         "forwardPE": 15.42,
-        "peg": 0.48,
+        "peg": 0.471,
         "epsGrowth3yPct": 34.46,
         "evSales": 13.64,
         "grossMarginPct": 88.464,
@@ -1016,7 +1016,18 @@
         "https://stockanalysis.com/stocks/wpm/revenue/"
       ],
       "garpScore": 70.2,
-      "rank": 8,
+      "grades": {
+        "growth": "C-",
+        "value": "F",
+        "momentum": "B",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 90.79,
         "forwardPE": 24.54,
@@ -1033,18 +1044,7 @@
         "relStrength1yPct": 18.12,
         "priceAsOf": "2026-10-09"
       },
-      "grades": {
-        "growth": "C-",
-        "value": "F",
-        "momentum": "B",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      }
+      "rank": 8
     },
     {
       "company": "argenx SE",
@@ -1068,7 +1068,18 @@
         "https://stockanalysis.com/stocks/argx/revenue/"
       ],
       "garpScore": 67.5,
-      "rank": 9,
+      "grades": {
+        "growth": "C+",
+        "value": "F",
+        "momentum": "C",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 70.59,
         "forwardPE": 27.76,
@@ -1085,18 +1096,7 @@
         "relStrength1yPct": -13.5,
         "priceAsOf": "2026-10-09"
       },
-      "grades": {
-        "growth": "C+",
-        "value": "F",
-        "momentum": "C",
-        "profitability": "B-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      }
+      "rank": 9
     },
     {
       "company": "MasTec",
@@ -1108,13 +1108,13 @@
       "forwardPE": 19.89,
       "peg": 0.501,
       "revenueGrowth": "+23.46% YoY (TTM ending Jun 2026)",
-      "trend": "Consensus target implies about 85% upside; analysts forecast revenue +27% this fiscal year and +18% next (S&P Global consensus).",
+      "trend": "Consensus target implies about 83% upside; analysts forecast revenue +27% this fiscal year and +18% next (S&P Global consensus).",
       "fundamentals": "TTM revenue $16.11B (+23.46%), net income $494.33M, free cash flow $244.80M and a 12.91% gross margin; 19.89x forward earnings, PEG 0.501.",
       "risks": [
         "High volatility (beta 1.84; 52-week change +5.79%)"
       ],
       "analystRating": "Strong Buy (21 analysts)",
-      "priceTarget": 392.8,
+      "priceTarget": 388.65,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/mtz/statistics/",
         "https://stockanalysis.com/stocks/mtz/revenue/"
@@ -1149,59 +1149,6 @@
         "priceAsOf": "2026-10-09"
       },
       "rank": 10
-    },
-    {
-      "company": "Advanced Energy Industries",
-      "ticker": "AEIS",
-      "sector": "Industrials – Electrical Equipment & Parts",
-      "price": 288.66,
-      "priceDate": "2026-10-09",
-      "marketCap": "$11.56B",
-      "forwardPE": 21.24,
-      "peg": 0.513,
-      "revenueGrowth": "+24.58% YoY (TTM ending Jun 2026)",
-      "trend": "Consensus target implies about 49% upside; analysts forecast revenue +35% this fiscal year and +24% next (S&P Global consensus).",
-      "fundamentals": "TTM revenue $2.04B (+24.58%), net income $219.40M, free cash flow $86.70M and a 39.96% gross margin; 21.24x forward earnings, PEG 0.513.",
-      "risks": [
-        "Tied to semiconductor-equipment and data-center power spending cycles",
-        "Share count up 7.4% YoY (dilution)"
-      ],
-      "analystRating": "Strong Buy (12 analysts)",
-      "priceTarget": 429.08,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/aeis/statistics/",
-        "https://stockanalysis.com/stocks/aeis/revenue/"
-      ],
-      "garpScore": 65.2,
-      "grades": {
-        "growth": "C-",
-        "value": "D+",
-        "momentum": "C",
-        "profitability": "D-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 24.58,
-        "forwardPE": 21.24,
-        "peg": 0.513,
-        "epsGrowth3yPct": 44.35,
-        "evSales": 5.66,
-        "grossMarginPct": 39.96,
-        "operatingMarginPct": 14.251,
-        "netMarginPct": 10.767,
-        "fcfMarginPct": 4.255,
-        "chg3mPct": -6.66,
-        "chg6mPct": -23.02,
-        "chg1yPct": 60.38,
-        "relStrength1yPct": 44.38,
-        "priceAsOf": "2026-10-09"
-      },
-      "rank": 11
     },
     {
       "company": "Amer Sports",
@@ -1255,7 +1202,7 @@
         "relStrength1yPct": -29.26,
         "priceAsOf": "2026-10-09"
       },
-      "rank": 12
+      "rank": 11
     },
     {
       "company": "TTM Technologies",
@@ -1306,6 +1253,59 @@
         "chg6mPct": 12.54,
         "chg1yPct": 114.1,
         "relStrength1yPct": 98.1,
+        "priceAsOf": "2026-10-09"
+      },
+      "rank": 12
+    },
+    {
+      "company": "Advanced Energy Industries",
+      "ticker": "AEIS",
+      "sector": "Industrials – Electrical Equipment & Parts",
+      "price": 288.66,
+      "priceDate": "2026-10-09",
+      "marketCap": "$11.56B",
+      "forwardPE": 21.24,
+      "peg": 0.513,
+      "revenueGrowth": "+24.58% YoY (TTM ending Jun 2026)",
+      "trend": "Consensus target implies about 46% upside; analysts forecast revenue +35% this fiscal year and +24% next (S&P Global consensus).",
+      "fundamentals": "TTM revenue $2.04B (+24.58%), net income $219.40M, free cash flow $86.70M and a 39.96% gross margin; 21.24x forward earnings, PEG 0.513.",
+      "risks": [
+        "Tied to semiconductor-equipment and data-center power spending cycles",
+        "Share count up 7.4% YoY (dilution)"
+      ],
+      "analystRating": "Strong Buy (12 analysts)",
+      "priceTarget": 420.33,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/aeis/statistics/",
+        "https://stockanalysis.com/stocks/aeis/revenue/"
+      ],
+      "garpScore": 63.0,
+      "grades": {
+        "growth": "C-",
+        "value": "D+",
+        "momentum": "C",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 24.58,
+        "forwardPE": 21.24,
+        "peg": 0.513,
+        "epsGrowth3yPct": 44.35,
+        "evSales": 5.66,
+        "grossMarginPct": 39.96,
+        "operatingMarginPct": 14.251,
+        "netMarginPct": 10.767,
+        "fcfMarginPct": 4.255,
+        "chg3mPct": -6.66,
+        "chg6mPct": -23.02,
+        "chg1yPct": 60.38,
+        "relStrength1yPct": 44.38,
         "priceAsOf": "2026-10-09"
       },
       "rank": 13
@@ -1477,7 +1477,7 @@
       "forwardPE": 16.86,
       "peg": 0.484,
       "revenueGrowth": "+16.26% YoY (TTM ending Jun 2026)",
-      "trend": "Consensus target implies about 55% upside; analysts forecast revenue +29% this fiscal year and +21% next (S&P Global consensus).",
+      "trend": "Consensus target implies about 55% upside; analysts forecast revenue +29% this fiscal year and +20% next (S&P Global consensus).",
       "fundamentals": "TTM revenue $4.35B (+16.26%), net income $439.00M, free cash flow $455.00M and a 46.95% gross margin; 16.86x forward earnings, PEG 0.484.",
       "risks": [
         "High volatility (beta 2.02)"
@@ -1505,7 +1505,7 @@
         "revenueGrowthPct": 16.26,
         "forwardPE": 16.86,
         "peg": 0.484,
-        "epsGrowth3yPct": 37.12,
+        "epsGrowth3yPct": 36.52,
         "evSales": 4.94,
         "grossMarginPct": 46.952,
         "operatingMarginPct": 16.425,
@@ -1573,7 +1573,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-10",
+    "asOf": "2026-10-11",
     "spy1yPct": 16.0,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

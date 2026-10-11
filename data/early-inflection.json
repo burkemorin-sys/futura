@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-10",
+  "lastUpdated": "2026-10-11",
   "priceDate": "2026-10-09",
   "title": "Early Inflection",
   "method": "Looks for stocks in an 'early LITE-2025' position: revenue that has bottomed and is accelerating, rising margins, strong forward growth and a reasonable price, before the stock has already run. Universe: every US-listed stock with a $1B–$30B market cap on Nasdaq's screener (excluding banks, insurers, REITs and other financials), then 3+ analysts with a price target, $100M+ TTM revenue and $5M+ a day of trading, with revenue growing in the latest quarter and 8%+ implied growth over the next 12 months. Each survivor is scored 0–100 on the rubric below; the top 12 are the picks and the next 18 form the ranked bench, with at most 3 per industry. Excludes bitcoin/crypto miners, other commodity producers (metal, coal and lithium miners, oil & gas producers, refiners, smelters, fertilizer makers: their revenue tracks commodity prices) and pending-merger targets. Revenue points are halved when growth looks bought (a big jump in goodwill/intangibles or share count).",
@@ -47,11 +47,11 @@
       "how": "AI-infrastructure supplier industries (semis, chip equipment, optics/communication equipment, electronic components, hardware, electrical equipment) 5; adjacent industries (instruments, industrial machinery, power producers, engineering & construction) 3."
     }
   ],
-  "dataNotes": "Prices are Nasdaq closes (2026-10-09). Quarterly revenue and margins come from StockAnalysis income statements (S&P Global Market Intelligence); forward P/E, P/S, forward P/S, EV/sales, EPS growth forecast, 50/200-day averages, consensus rating, analyst count and average target come from StockAnalysis statistics pages. Next-12-month revenue growth is implied as P/S ÷ forward P/S. Beat-and-raise history is not scored automatically. Analyst target and forward P/S are saved daily (data/early-inflection-history.json), so 30-day revisions show up from early November 2026. This run: 1432 names screened, 1190 passed the filters, 528 scored on fundamentals, top 70 checked against price history. 'n/a' means not available.",
+  "dataNotes": "Prices are Nasdaq closes (2026-10-09). Quarterly revenue and margins come from StockAnalysis income statements (S&P Global Market Intelligence); forward P/E, P/S, forward P/S, EV/sales, EPS growth forecast, 50/200-day averages, consensus rating, analyst count and average target come from StockAnalysis statistics pages. Next-12-month revenue growth is implied as P/S ÷ forward P/S. Beat-and-raise history is not scored automatically. Analyst target and forward P/S are saved daily (data/early-inflection-history.json), so 30-day revisions show up from early November 2026. This run: 1432 names screened, 1189 passed the filters, 528 scored on fundamentals, top 70 checked against price history. 'n/a' means not available.",
   "universe": {
     "listed": 7004,
     "screened": 1432,
-    "passedFilters": 1190,
+    "passedFilters": 1189,
     "scored": 528,
     "priceChecked": 70
   },
@@ -1362,7 +1362,7 @@
         "psForward": 2.23,
         "netcash": 101739000.0,
         "sharesYoY": -6.29,
-        "shortFloat": 5.9,
+        "shortFloat": 6.37,
         "beta": 1.33,
         "grossMarginTTM": 50.01,
         "mcap": 1198640231.0,
@@ -1571,7 +1571,7 @@
         "psForward": 1.03,
         "netcash": -129868000.0,
         "sharesYoY": 5.7,
-        "shortFloat": 5.98,
+        "shortFloat": 7.43,
         "beta": 0.48,
         "grossMarginTTM": 13.28,
         "mcap": 2297402956.0,
@@ -2213,6 +2213,11 @@
         "rs3m": 28.54,
         "acqJump": -0.3
       },
+      "catalyst": {
+        "text": "2Q26: Ipiranga's recurring adjusted EBITDA was R$2.78B (+310% YoY) at R$451/m³ vs R$118 a year earlier; group recurring adjusted EBITDA R$3.7B, net income R$1.7B and record R$4.8B operating cash generation. Figures are in Brazilian reais; fuel-distribution margins are volatile.",
+        "source": "https://www.sec.gov/Archives/edgar/data/1094972/000155485526001812/MainDocument.htm",
+        "asOf": "2026-10-10"
+      },
       "grades": {
         "growth": "F",
         "value": "A",
@@ -2240,11 +2245,6 @@
         "chg1yPct": 97.01,
         "relStrength1yPct": 81.01,
         "priceAsOf": "2026-10-09"
-      },
-      "catalyst": {
-        "text": "2Q26: Ipiranga's recurring adjusted EBITDA was R$2.78B (+310% YoY) at R$451/m³ vs R$118 a year earlier; group recurring adjusted EBITDA R$3.7B, net income R$1.7B and record R$4.8B operating cash generation. Figures are in Brazilian reais; fuel-distribution margins are volatile.",
-        "source": "https://www.sec.gov/Archives/edgar/data/1094972/000155485526001812/MainDocument.htm",
-        "asOf": "2026-10-10"
       }
     },
     {
@@ -2423,6 +2423,11 @@
         "rs3m": -5.0,
         "acqJump": 0.0
       },
+      "catalyst": {
+        "text": "Upsized its buyback to $3.0B through 2028 with $1.5B of accelerated repurchases, funded by monetizing ~$1.5B of future PJM capacity revenue; projects ~$4B adjusted FCF from 2H26 through 2028. President Terry Nutt becomes CEO on Jan 1, 2027. The stock jumped ~9.7% intraday on Oct 6.",
+        "source": "https://www.investing.com/news/stock-market-news/why-is-talen-energy-stock-surging-today-93CH-4934813",
+        "asOf": "2026-10-10"
+      },
       "grades": {
         "growth": "B+",
         "value": "C+",
@@ -2450,11 +2455,6 @@
         "chg1yPct": -14.83,
         "relStrength1yPct": -30.83,
         "priceAsOf": "2026-10-09"
-      },
-      "catalyst": {
-        "text": "Upsized its buyback to $3.0B through 2028 with $1.5B of accelerated repurchases, funded by monetizing ~$1.5B of future PJM capacity revenue; projects ~$4B adjusted FCF from 2H26 through 2028. President Terry Nutt becomes CEO on Jan 1, 2027. The stock jumped ~9.7% intraday on Oct 6.",
-        "source": "https://www.investing.com/news/stock-market-news/why-is-talen-energy-stock-surging-today-93CH-4934813",
-        "asOf": "2026-10-10"
       }
     },
     {
@@ -2633,6 +2633,11 @@
         "rs3m": -8.13,
         "acqJump": -0.58
       },
+      "catalyst": {
+        "text": "Fiscal Q4 (Jun 2026) sales $737M, +43% YoY (42% organic), on pricing in an \"unprecedented tungsten environment\"; record adjusted EPS $2.96. FY27 guide: sales $3.33B–$3.45B (vs $2.36B in FY26), adjusted EPS $4.15–$5.15. Risk: much of the margin jump is raw-material pricing timing (~$252M in Q4), and FY26 free operating cash flow was −$79M on tungsten inventory.",
+        "source": "https://www.prnewswire.com/news-releases/kennametal-reports-fiscal-2026-and-fourth-quarter-results-302843158.html",
+        "asOf": "2026-10-10"
+      },
       "grades": {
         "growth": "F",
         "value": "A",
@@ -2660,11 +2665,6 @@
         "chg1yPct": 50.35,
         "relStrength1yPct": 34.35,
         "priceAsOf": "2026-10-09"
-      },
-      "catalyst": {
-        "text": "Fiscal Q4 (Jun 2026) sales $737M, +43% YoY (42% organic), on pricing in an \"unprecedented tungsten environment\"; record adjusted EPS $2.96. FY27 guide: sales $3.33B–$3.45B (vs $2.36B in FY26), adjusted EPS $4.15–$5.15. Risk: much of the margin jump is raw-material pricing timing (~$252M in Q4), and FY26 free operating cash flow was −$79M on tungsten inventory.",
-        "source": "https://www.prnewswire.com/news-releases/kennametal-reports-fiscal-2026-and-fourth-quarter-results-302843158.html",
-        "asOf": "2026-10-10"
       }
     }
   ],
@@ -2832,7 +2832,7 @@
         "psForward": 0.94,
         "netcash": -520000000.0,
         "sharesYoY": 0.33,
-        "shortFloat": 8.16,
+        "shortFloat": 8.38,
         "beta": 1.85,
         "grossMarginTTM": 15.83,
         "mcap": 3105551419.0,
@@ -3113,7 +3113,7 @@
         "value": 11.5,
         "notRun": 10,
         "trend": 0,
-        "analysts": 9.8,
+        "analysts": 9.5,
         "theme": 5
       },
       "alsoIn": [
@@ -3172,7 +3172,7 @@
           "key": "analysts",
           "label": "Analysts constructive (Buy+ and 15%+ upside)",
           "met": true,
-          "detail": "Strong Buy (12), +49% to target"
+          "detail": "Strong Buy (12), +46% to target"
         },
         {
           "key": "revisions",
@@ -3188,7 +3188,7 @@
         "Valuation: forward P/E 21.242, EV/forward sales 4.2x → 12/15",
         "Not already run: 1-yr +60%, -26% vs 52-week high → 10/10",
         "Trend: price below 200-day, below 50-day, 3-month vs SPY -9 pts → 0/10",
-        "Analysts: Strong Buy (12), +49% to target → 10/10",
+        "Analysts: Strong Buy (12), +46% to target → 9/10",
         "Bottleneck theme: AI-infrastructure supplier industry (Electrical Equipment & Parts) → 5/5"
       ],
       "keyFigures": [
@@ -3224,7 +3224,7 @@
         "Cyclical hardware demand: AI capex pauses or inventory digestion would hit results"
       ],
       "analystRating": "Strong Buy (12 analysts)",
-      "priceTarget": 429.08,
+      "priceTarget": 420.33,
       "revisions": {
         "since": "2026-10-07",
         "note": "under 30 days of history"
@@ -3251,7 +3251,7 @@
         "evFwdSales": 4.16,
         "peg": 0.51,
         "ch1y": 65.02,
-        "pt": 429.08,
+        "pt": 420.33,
         "rating": "Strong Buy",
         "analysts": 12,
         "psForward": 4.17,
@@ -3265,7 +3265,7 @@
         "currency": "USD",
         "lastQ": "2026-06-30",
         "price": 288.66,
-        "upside": 48.65,
+        "upside": 45.61,
         "priceDate": "2026-10-09",
         "offHigh": -25.8,
         "ch1yNasdaq": 60.38,
@@ -3321,7 +3321,7 @@
       "scoreParts": {
         "rev": 16.4,
         "margin": 3.8,
-        "forward": 13.5,
+        "forward": 13.3,
         "value": 13.1,
         "notRun": 10,
         "trend": 0,
@@ -3457,17 +3457,17 @@
         "om": 20.59,
         "gmChg": 0.36,
         "omChg": 4.24,
-        "fwdRevGrowth": 30.89,
-        "eps3y": 37.12,
+        "fwdRevGrowth": 30.69,
+        "eps3y": 36.52,
         "fpe": 16.86,
         "evSales": 4.94,
-        "evFwdSales": 3.77,
+        "evFwdSales": 3.78,
         "peg": 0.48,
         "ch1y": 98.92,
         "pt": 410.86,
         "rating": "Buy",
         "analysts": 14,
-        "psForward": 3.14,
+        "psForward": 3.15,
         "netcash": -3575000000.0,
         "sharesYoY": 3.4,
         "shortFloat": 9.04,
@@ -3502,7 +3502,7 @@
         "revenueGrowthPct": 16.3,
         "forwardPE": 16.86,
         "peg": 0.48,
-        "epsGrowth3yPct": 37.12,
+        "epsGrowth3yPct": 36.52,
         "evSales": 4.94,
         "grossMarginPct": 46.952,
         "operatingMarginPct": 16.425,
@@ -3675,7 +3675,7 @@
         "psForward": 1.5,
         "netcash": 102314000.0,
         "sharesYoY": 2.28,
-        "shortFloat": 7.6,
+        "shortFloat": 8.65,
         "beta": 1.79,
         "grossMarginTTM": 12.67,
         "mcap": 2243882859.0,
@@ -4701,7 +4701,7 @@
         "psForward": 1.47,
         "netcash": -1565989000.0,
         "sharesYoY": 0.64,
-        "shortFloat": 8.89,
+        "shortFloat": 9.07,
         "beta": 1.08,
         "grossMarginTTM": 57.33,
         "mcap": 10536161746.0,
@@ -4922,6 +4922,18 @@
         "acqJump": 2.33
       },
       "rank": 11,
+      "grades": {
+        "growth": "B",
+        "value": "C-",
+        "momentum": "B+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 58.6,
         "forwardPE": 17.27,
@@ -4937,18 +4949,6 @@
         "chg1yPct": 66.85,
         "relStrength1yPct": 50.85,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B",
-        "value": "C-",
-        "momentum": "B+",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -5726,7 +5726,7 @@
         "psForward": 4.48,
         "netcash": 505008000.0,
         "sharesYoY": 5.92,
-        "shortFloat": 3.54,
+        "shortFloat": 3.29,
         "beta": 0.97,
         "grossMarginTTM": 45.22,
         "mcap": 6784202922.0,
@@ -6355,6 +6355,18 @@
         "acqJump": 117.22
       },
       "rank": 18,
+      "grades": {
+        "growth": "B",
+        "value": "D-",
+        "momentum": "C+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 41.5,
         "forwardPE": 133.0,
@@ -6370,23 +6382,11 @@
         "chg1yPct": -44.63,
         "relStrength1yPct": -60.63,
         "priceAsOf": "2026-10-09"
-      },
-      "grades": {
-        "growth": "B",
-        "value": "D-",
-        "momentum": "C+",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     }
   ],
   "grading": {
-    "asOf": "2026-10-10",
+    "asOf": "2026-10-11",
     "spy1yPct": 16.0,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
