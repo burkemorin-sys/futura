@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-11",
+  "lastUpdated": "2026-10-12",
   "priceDate": "2026-10-09",
   "title": "Experiment Screener",
   "method": "Your eight rules, applied strictly to every US-listed stock over $2B on Nasdaq's screener (bitcoin/crypto miners excluded). A stock is a pick only if it passes all eight. Passers are ranked by a simple 0–100 score; stocks that miss exactly one rule are listed below as near misses with the rule they missed. Nothing is loosened: if few stocks pass, few are shown.",
@@ -46,11 +46,11 @@
     "RSI(14): Wilder's 14-day RSI on Nasdaq daily closes, inclusive 50–65.",
     "Market cap: StockAnalysis, over $2B."
   ],
-  "dataNotes": "Prices and moving averages/RSI from Nasdaq daily closes (2026-10-09). Fundamentals from StockAnalysis statistics pages, quarterly income statements and balance sheets. This run: 2025 stocks over $2B screened, 997 checked against all eight rules (the rest already failed two or more of ROIC, OCF/debt or positive FCF), 20 passed everything, 82 missed exactly one. 'n/a' means the data wasn't available, which counts as a miss.",
+  "dataNotes": "Prices and moving averages/RSI from Nasdaq daily closes (2026-10-09). Fundamentals from StockAnalysis statistics pages, quarterly income statements and balance sheets. This run: 2029 stocks over $2B screened, 998 checked against all eight rules (the rest already failed two or more of ROIC, OCF/debt or positive FCF), 20 passed everything, 82 missed exactly one. 'n/a' means the data wasn't available, which counts as a miss.",
   "universe": {
-    "listed": 7004,
-    "screened": 2025,
-    "fullyChecked": 997,
+    "listed": 7010,
+    "screened": 2029,
+    "fullyChecked": 998,
     "passed": 20,
     "nearMisses": 82,
     "noStatistics": 24
@@ -453,7 +453,7 @@
           "key": "epsQoQ",
           "label": "QoQ EPS growth > 20%",
           "met": true,
-          "detail": "Diluted EPS 32.87 (latest quarter, 2026-09-03) vs 24.67 prior quarter: +33% vs > 20%; YoY same quarter +1060% (context)"
+          "detail": "Diluted EPS 32.851255 (latest quarter, 2026-09-03) vs 24.67 prior quarter: +33% vs > 20%; YoY same quarter +1059% (context)"
         },
         {
           "key": "revGrowth",
@@ -503,7 +503,7 @@
         },
         {
           "label": "EPS YoY (Q)",
-          "value": "+1060%"
+          "value": "+1059%"
         }
       ],
       "drivers": [
@@ -533,11 +533,11 @@
         "lastQ": "2026-09-03",
         "assets": 195888000000.0,
         "fcfAssets": 30.1,
-        "eps0": 32.87,
+        "eps0": 32.851,
         "eps1": 24.67,
         "eps4": 2.833,
-        "epsQoQ": 33.239,
-        "epsYoYq": 1060.118,
+        "epsQoQ": 33.163,
+        "epsYoYq": 1059.456,
         "revGrowth": 256.327,
         "price": 1029.0,
         "priceDate": "2026-10-09",
@@ -745,7 +745,7 @@
       "price": 143.73,
       "priceDate": "2026-10-09",
       "marketCap": "$9.3B",
-      "forwardPE": 70.05,
+      "forwardPE": 71.54,
       "peg": "n/a",
       "revenueGrowth": "+34.8% YoY (TTM)",
       "score": 80,
@@ -842,11 +842,11 @@
         "Annual revenue growth > 15%: 34.8% → 13/20"
       ],
       "risks": [
-        "Rich forward P/E (70)",
-        "Short interest 15% of float"
+        "Rich forward P/E (72)",
+        "Short interest 18% of float"
       ],
-      "analystRating": "Strong Buy (13 analysts)",
-      "priceTarget": 174.69,
+      "analystRating": "Strong Buy (14 analysts)",
+      "priceTarget": 175.36,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/ptgx/statistics/",
         "https://stockanalysis.com/stocks/ptgx/financials/?p=quarterly"
@@ -888,7 +888,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 34.8,
-        "forwardPE": 70.05,
+        "forwardPE": 71.54,
         "peg": null,
         "epsGrowth3yPct": null,
         "evSales": 30.0,
@@ -1074,7 +1074,7 @@
       "price": 91.26,
       "priceDate": "2026-10-09",
       "marketCap": "$7.7B",
-      "forwardPE": 13.06,
+      "forwardPE": 12.95,
       "peg": "n/a",
       "revenueGrowth": "+89.4% YoY (TTM)",
       "score": 73,
@@ -1216,7 +1216,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 89.4,
-        "forwardPE": 13.06,
+        "forwardPE": 12.95,
         "peg": null,
         "epsGrowth3yPct": 58.28,
         "evSales": 6.1,
@@ -1500,7 +1500,7 @@
       ],
       "risks": [
         "RSI 64, near the top of the 50–65 band",
-        "Short interest 18% of float"
+        "Short interest 19% of float"
       ],
       "analystRating": "Buy (10 analysts)",
       "priceTarget": 18.8,
@@ -2060,8 +2060,8 @@
       "sector": "Technology – Semiconductors",
       "price": 453.31,
       "priceDate": "2026-10-09",
-      "marketCap": "$2.07T",
-      "forwardPE": 20.27,
+      "marketCap": "$2.06T",
+      "forwardPE": 20.07,
       "peg": "n/a",
       "revenueGrowth": "+30.6% YoY (TTM)",
       "score": 54,
@@ -2085,13 +2085,13 @@
           "key": "ocfDebt",
           "label": "Operating cash flow > 30% of total debt",
           "met": true,
-          "detail": "Operating cash flow $82.4B vs total debt $33.6B: 245% vs > 30%"
+          "detail": "Operating cash flow $82.6B vs total debt $33.6B: 246% vs > 30%"
         },
         {
           "key": "fcfAssets",
           "label": "Free cash flow / total assets > 10%",
           "met": true,
-          "detail": "FCF $35.8B (TTM) / total assets $294.7B = 12.1% vs > 10%"
+          "detail": "FCF $35.8B (TTM) / total assets $294.7B = 12.2% vs > 10%"
         },
         {
           "key": "epsQoQ",
@@ -2121,7 +2121,7 @@
           "key": "mcap",
           "label": "Market cap > $2B",
           "met": true,
-          "detail": "Market cap $2.07T vs > $2B"
+          "detail": "Market cap $2.06T vs > $2B"
         }
       ],
       "keyFigures": [
@@ -2131,11 +2131,11 @@
         },
         {
           "label": "OCF / debt",
-          "value": "245%"
+          "value": "246%"
         },
         {
           "label": "FCF / assets",
-          "value": "12.1%"
+          "value": "12.2%"
         },
         {
           "label": "EPS QoQ",
@@ -2152,8 +2152,8 @@
       ],
       "drivers": [
         "ROIC > 15%: 54.0% → 20/20",
-        "Operating cash flow > 30% of total debt: 245% → 20/20",
-        "Free cash flow / total assets > 10%: 12.1% → 3/20",
+        "Operating cash flow > 30% of total debt: 246% → 20/20",
+        "Free cash flow / total assets > 10%: 12.2% → 3/20",
         "QoQ EPS growth > 20%: +23% → 1/20",
         "Annual revenue growth > 15%: 30.6% → 10/20"
       ],
@@ -2161,22 +2161,22 @@
         "Financials reported in TWD"
       ],
       "analystRating": "Strong Buy (21 analysts)",
-      "priceTarget": 555.01,
+      "priceTarget": 578.22,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/tsm/statistics/",
         "https://stockanalysis.com/stocks/tsm/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 2068101428645.0,
+        "mcap": 2060635681627.0,
         "roic": 53.96,
-        "ocf": 82433156401.0,
+        "ocf": 82557529709.0,
         "debt": 33586626327.0,
-        "fcf": 35779295338.0,
-        "ocfDebt": 245.434,
+        "fcf": 35833278341.0,
+        "ocfDebt": 245.805,
         "currency": "TWD",
         "lastQ": "2026-06-30",
         "assets": 294692907317.311,
-        "fcfAssets": 12.141,
+        "fcfAssets": 12.16,
         "eps0": 27.248,
         "eps1": 22.078,
         "eps4": 15.36,
@@ -2204,10 +2204,10 @@
       },
       "metrics": {
         "revenueGrowthPct": 30.6,
-        "forwardPE": 20.27,
+        "forwardPE": 20.07,
         "peg": null,
-        "epsGrowth3yPct": 40.62,
-        "evSales": 14.28,
+        "epsGrowth3yPct": 41.18,
+        "evSales": 14.22,
         "grossMarginPct": 64.23,
         "operatingMarginPct": 56.081,
         "netMarginPct": 49.923,
@@ -2491,7 +2491,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Strong Buy (19 analysts)",
-      "priceTarget": 101.66,
+      "priceTarget": 102.18,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/aph/statistics/",
         "https://stockanalysis.com/stocks/aph/financials/?p=quarterly"
@@ -3985,7 +3985,7 @@
         "Annual revenue growth > 15%: 41.5% → 18/20"
       ],
       "risks": [
-        "Short interest 12% of float"
+        "Short interest 13% of float"
       ],
       "analystRating": "Buy (5 analysts)",
       "priceTarget": 25.8,
@@ -7213,7 +7213,7 @@
       "price": 362.16,
       "priceDate": "2026-10-09",
       "marketCap": "$41.6B",
-      "forwardPE": 23.33,
+      "forwardPE": 24.25,
       "peg": "n/a",
       "revenueGrowth": "+47.3% YoY (TTM)",
       "score": 70,
@@ -7347,7 +7347,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 47.3,
-        "forwardPE": 23.33,
+        "forwardPE": 24.25,
         "peg": null,
         "epsGrowth3yPct": 65.63,
         "evSales": 2.7,
@@ -8013,7 +8013,7 @@
         "revenueGrowthPct": 20.1,
         "forwardPE": 24.81,
         "peg": null,
-        "epsGrowth3yPct": 18.37,
+        "epsGrowth3yPct": 18.36,
         "evSales": 9.37,
         "grossMarginPct": 60.897,
         "operatingMarginPct": 33.11,
@@ -8987,10 +8987,10 @@
       "screenMetrics": {
         "mcap": 7029080273.0,
         "roic": 1105.359,
-        "ocf": 692130680.0,
+        "ocf": 692141021.0,
         "debt": 31811624.0,
-        "fcf": 662736713.0,
-        "ocfDebt": 2175.716,
+        "fcf": 662746616.0,
+        "ocfDebt": 2175.749,
         "currency": "CNY",
         "lastQ": "2026-06-30",
         "assets": 3956503062.901,
@@ -9707,7 +9707,7 @@
       "price": 79.8,
       "priceDate": "2026-10-09",
       "marketCap": "$5.5B",
-      "forwardPE": 16.13,
+      "forwardPE": 16.45,
       "peg": "n/a",
       "revenueGrowth": "+9.3% YoY (TTM)",
       "score": 47,
@@ -9809,7 +9809,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (7 analysts)",
-      "priceTarget": 97.4,
+      "priceTarget": 95.4,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/ftdr/statistics/",
         "https://stockanalysis.com/stocks/ftdr/financials/?p=quarterly"
@@ -9839,9 +9839,9 @@
       },
       "metrics": {
         "revenueGrowthPct": 9.3,
-        "forwardPE": 16.13,
+        "forwardPE": 16.45,
         "peg": null,
-        "epsGrowth3yPct": 11.94,
+        "epsGrowth3yPct": 10.93,
         "evSales": 2.82,
         "grossMarginPct": 55.545,
         "operatingMarginPct": 20.084,
@@ -9972,7 +9972,7 @@
         "Annual revenue growth > 15%: 4.7% → 0/20"
       ],
       "risks": [
-        "Short interest 13% of float"
+        "Short interest 11% of float"
       ],
       "analystRating": "Buy (15 analysts)",
       "priceTarget": 163.55,
@@ -10205,7 +10205,7 @@
       "price": 45.88,
       "priceDate": "2026-10-09",
       "marketCap": "$15.6B",
-      "forwardPE": 8.71,
+      "forwardPE": 8.46,
       "peg": "n/a",
       "revenueGrowth": "-12.5% YoY (TTM)",
       "score": 35,
@@ -10307,7 +10307,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Hold (27 analysts)",
-      "priceTarget": 46.44,
+      "priceTarget": 46.76,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/apa/statistics/",
         "https://stockanalysis.com/stocks/apa/financials/?p=quarterly"
@@ -10337,9 +10337,9 @@
       },
       "metrics": {
         "revenueGrowthPct": -12.5,
-        "forwardPE": 8.71,
+        "forwardPE": 8.46,
         "peg": null,
-        "epsGrowth3yPct": 6.53,
+        "epsGrowth3yPct": 6.84,
         "evSales": 2.22,
         "grossMarginPct": 78.255,
         "operatingMarginPct": 39.022,
@@ -10563,7 +10563,7 @@
           "key": "ocfDebt",
           "label": "Operating cash flow > 30% of total debt",
           "met": true,
-          "detail": "Operating cash flow $13.1B vs total debt $11.5B: 113% vs > 30%"
+          "detail": "Operating cash flow $13.0B vs total debt $11.5B: 113% vs > 30%"
         },
         {
           "key": "fcfAssets",
@@ -10647,14 +10647,14 @@
       "screenMetrics": {
         "mcap": 141451497089.0,
         "roic": 15.631,
-        "ocf": 13050655463.0,
+        "ocf": 13043445043.0,
         "debt": 11508184521.0,
-        "fcf": 10046852197.0,
-        "ocfDebt": 113.403,
+        "fcf": 10041301362.0,
+        "ocfDebt": 113.341,
         "currency": "JPY",
         "lastQ": "2026-06-30",
         "assets": 98725280620.641,
-        "fcfAssets": 10.177,
+        "fcfAssets": 10.171,
         "eps0": 57.82,
         "eps1": 13.897,
         "eps4": 39.182,
@@ -10685,7 +10685,7 @@
       },
       "grades": {
         "growth": "F",
-        "value": "B+",
+        "value": "A-",
         "momentum": "D-",
         "profitability": "F"
       },
@@ -10703,7 +10703,7 @@
       "price": 72.23,
       "priceDate": "2026-10-09",
       "marketCap": "$84.5B",
-      "forwardPE": 11.34,
+      "forwardPE": 9.95,
       "peg": "n/a",
       "revenueGrowth": "+13.7% YoY (TTM)",
       "score": 35,
@@ -10814,10 +10814,10 @@
       "screenMetrics": {
         "mcap": 84466008665.0,
         "roic": 16.268,
-        "ocf": 11073644362.0,
+        "ocf": 11073916076.0,
         "debt": 10337300186.0,
-        "fcf": 7239650882.0,
-        "ocfDebt": 107.123,
+        "fcf": 7239828521.0,
+        "ocfDebt": 107.126,
         "currency": "CAD",
         "lastQ": "2026-06-30",
         "assets": 66719245097.805,
@@ -10836,7 +10836,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 13.7,
-        "forwardPE": 11.34,
+        "forwardPE": 9.95,
         "peg": null,
         "epsGrowth3yPct": 23.65,
         "evSales": 2.28,
@@ -11350,7 +11350,7 @@
       },
       "grades": {
         "growth": "F",
-        "value": "A-",
+        "value": "B+",
         "momentum": "C+",
         "profitability": "C-"
       },
@@ -12801,7 +12801,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (20 analysts)",
-      "priceTarget": 79.11,
+      "priceTarget": 79.37,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/cgnx/statistics/",
         "https://stockanalysis.com/stocks/cgnx/financials/?p=quarterly"
@@ -14468,7 +14468,7 @@
         "RSI 69, near the top of the 50–65 band"
       ],
       "analystRating": "Buy (17 analysts)",
-      "priceTarget": 110.56,
+      "priceTarget": 111.19,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/hnge/statistics/",
         "https://stockanalysis.com/stocks/hnge/financials/?p=quarterly"
@@ -15298,7 +15298,7 @@
         "RSI 73, near the top of the 50–65 band"
       ],
       "analystRating": "Buy (19 analysts)",
-      "priceTarget": 409.28,
+      "priceTarget": 410.39,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/mpc/statistics/",
         "https://stockanalysis.com/stocks/mpc/financials/?p=quarterly"
@@ -15330,7 +15330,7 @@
         "revenueGrowthPct": 15.2,
         "forwardPE": 6.48,
         "peg": 0.2,
-        "epsGrowth3yPct": 41.66,
+        "epsGrowth3yPct": 41.69,
         "evSales": 1.0,
         "grossMarginPct": 12.819,
         "operatingMarginPct": 7.837,
@@ -16861,7 +16861,7 @@
       "price": 71.51,
       "priceDate": "2026-10-09",
       "marketCap": "$146.1B",
-      "forwardPE": 17.64,
+      "forwardPE": 17.71,
       "peg": 0.65,
       "revenueGrowth": "+16.7% YoY (TTM)",
       "score": 38,
@@ -16995,7 +16995,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 16.7,
-        "forwardPE": 17.64,
+        "forwardPE": 17.71,
         "peg": 0.65,
         "epsGrowth3yPct": 30.94,
         "evSales": 2.73,
@@ -17024,7 +17024,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-11",
+    "asOf": "2026-10-12",
     "spy1yPct": 16.0,
     "pool": "102 stocks (this list's picks + bench + near misses)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

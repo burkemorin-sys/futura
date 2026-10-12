@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-11",
+  "lastUpdated": "2026-10-12",
   "priceDate": "2026-10-09",
   "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 (full marks at 150%+); acceleration (TTM growth above the prior fiscal year's) +5; momentum up to 25, measured as true relative strength — the stock's 1-year price change versus the S&P 500 (SPY), scaled as clamp((RS+50)/150×25), using 6- or 3-month relative strength for IPOs under a year old; upside to the consensus price target up to 20 (full marks at 100%+); and consensus Strong Buy 10 / Buy 7 / Hold 2. There is no valuation cap and losses are allowed. The top 12 are the picks and the next 18 form the ranked bench. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue). Also excludes crypto-treasury companies whose main strategy is holding or staking crypto (e.g. SBET, BMNR, MSTR).",
-  "dataNotes": "Prices (Oct 9, 2026 close), market cap, net income, gross margin, beta, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence). TTM revenue growth, its period and prior fiscal-year growth come from the StockAnalysis revenue page; this- and next-year consensus revenue growth from the forecast page. Momentum uses 1-year price changes from Nasdaq daily closes (close on or before the same date a year earlier to the latest close, matching the grade inputs), vs SPY +16.0% (6-month +14.6%); StockAnalysis 52-week changes are used only where Nasdaq history is unavailable (0 stocks). Gross-margin trend compares the latest quarter's gross margin with the same quarter a year earlier (StockAnalysis quarterly statements), and price-target revisions count raises and cuts in the analyst actions on the StockAnalysis forecast page over the last 90 days. Both are shown for context and are not scored. Consensus EPS/revenue estimate revisions were not available from free sources. 384 stocks passed every filter and were fully scored, out of 1974 that passed the size, revenue, analyst and liquidity prefilter. 'n/a' means not available. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue).",
+  "dataNotes": "Prices (Oct 9, 2026 close), market cap, net income, gross margin, beta, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence). TTM revenue growth, its period and prior fiscal-year growth come from the StockAnalysis revenue page; this- and next-year consensus revenue growth from the forecast page. Momentum uses 1-year price changes from Nasdaq daily closes (close on or before the same date a year earlier to the latest close, matching the grade inputs), vs SPY +16.0% (6-month +14.6%); StockAnalysis 52-week changes are used only where Nasdaq history is unavailable (0 stocks). Gross-margin trend compares the latest quarter's gross margin with the same quarter a year earlier (StockAnalysis quarterly statements), and price-target revisions count raises and cuts in the analyst actions on the StockAnalysis forecast page over the last 90 days. Both are shown for context and are not scored. Consensus EPS/revenue estimate revisions were not available from free sources. 385 stocks passed every filter and were fully scored, out of 1975 that passed the size, revenue, analyst and liquidity prefilter. 'n/a' means not available. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue).",
   "disclaimer": "Higher-risk, speculative ideas for research only. Many of these companies lose money, dilute shareholders and swing violently. Not financial advice.",
   "picks": [
     {
@@ -61,7 +61,7 @@
         "grossMarginPct": 49.807,
         "operatingMarginPct": 5.222,
         "netMarginPct": 125.23,
-        "fcfMarginPct": -64.38,
+        "fcfMarginPct": -64.39,
         "chg3mPct": -19.25,
         "chg6mPct": -32.67,
         "chg1yPct": 51.6,
@@ -140,7 +140,7 @@
       "price": 8.65,
       "priceDate": "2026-10-09",
       "marketCap": "$2.56B",
-      "forwardPE": 8.43,
+      "forwardPE": 7.1,
       "peg": "n/a",
       "revenueGrowth": "+197.60% YoY (TTM ending Jun 2026; revenue $737.20M)",
       "score": 79,
@@ -182,7 +182,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 197.6,
-        "forwardPE": 8.43,
+        "forwardPE": 7.1,
         "peg": null,
         "epsGrowth3yPct": null,
         "evSales": 3.48,
@@ -971,8 +971,8 @@
       "sector": "Technology – Semiconductors",
       "price": 169.03,
       "priceDate": "2026-10-09",
-      "marketCap": "$911.37B",
-      "forwardPE": 4.17,
+      "marketCap": "$872.10B",
+      "forwardPE": 3.99,
       "peg": "n/a",
       "revenueGrowth": "+145.00% YoY (TTM ending Jun 2026; revenue $122.16B, KRW 189.17T as reported)",
       "score": 71,
@@ -987,7 +987,7 @@
         "Analyst price-target revisions, last 90 days (not scored): 3 raised, 0 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +257% YoY; consensus sees revenue +254% this fiscal year and +54% next.",
-      "fundamentals": "TTM revenue $122.16B, net income $104.59B, gross margin 76.27%; market cap $911.37B, net cash $43.18B. Financials are reported in KRW (TTM revenue KRW 189.17T as reported); the dollar amounts above are StockAnalysis's US-dollar conversions.",
+      "fundamentals": "TTM revenue $122.16B, net income $104.59B, gross margin 76.27%; market cap $872.10B, net cash $43.18B. Financials are reported in KRW (TTM revenue KRW 189.17T as reported); the dollar amounts above are StockAnalysis's US-dollar conversions.",
       "risks": [
         "High volatility (beta 2.39)"
       ],
@@ -1012,10 +1012,10 @@
       },
       "metrics": {
         "revenueGrowthPct": 145.0,
-        "forwardPE": 4.17,
+        "forwardPE": 3.99,
         "peg": null,
         "epsGrowth3yPct": 104.89,
-        "evSales": 7.25,
+        "evSales": 6.93,
         "grossMarginPct": 76.268,
         "operatingMarginPct": 68.037,
         "netMarginPct": 85.619,
@@ -1045,7 +1045,7 @@
         "Acceleration: TTM 408.3% vs FY2025 11925.0% → 0/5",
         "Momentum: 1-yr price -45.2% vs S&P 500 (SPY) +16.0% = relative strength -61.2% → 0/25",
         "Upside to target +149.3% → 20/20",
-        "Consensus Strong Buy (19) → 10/10",
+        "Consensus Strong Buy (18) → 10/10",
         "Gross-margin trend (not scored): latest quarter 24.7% vs 25.2% a year earlier → margin flat",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
@@ -1056,7 +1056,7 @@
         "Unprofitable: TTM net income -$656.30M",
         "Dilution: share count +60.9% YoY"
       ],
-      "analystRating": "Strong Buy (19 analysts)",
+      "analystRating": "Strong Buy (18 analysts)",
       "priceTarget": 26.95,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/qxo/statistics/",
@@ -1079,7 +1079,7 @@
         "revenueGrowthPct": 408.3,
         "forwardPE": 25.57,
         "peg": 0.664,
-        "epsGrowth3yPct": 44.06,
+        "epsGrowth3yPct": 43.9,
         "evSales": 1.56,
         "grossMarginPct": 24.544,
         "operatingMarginPct": -0.871,
@@ -1174,7 +1174,7 @@
         "Revenue growth +179.2% YoY (TTM) → 40/40",
         "Acceleration: TTM 179.2% vs FY2025 162.9% → 5/5",
         "Momentum: 1-yr price -33.5% vs S&P 500 (SPY) +16.0% = relative strength -49.5% → 0/25",
-        "Upside to target +90.9% → 18/20",
+        "Upside to target +90.0% → 18/20",
         "Consensus Buy (11) → 7/10",
         "Gross-margin trend (not scored): latest quarter 20.3% vs 25.7% a year earlier → margin contracting",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
@@ -1187,7 +1187,7 @@
         "Dilution: share count +970.5% YoY"
       ],
       "analystRating": "Buy (11 analysts)",
-      "priceTarget": 38.18,
+      "priceTarget": 38.0,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/fly/statistics/",
         "https://stockanalysis.com/stocks/fly/revenue/",
@@ -1230,7 +1230,7 @@
       "price": 9.44,
       "priceDate": "2026-10-09",
       "marketCap": "$1.38B",
-      "forwardPE": 426.21,
+      "forwardPE": 5244.44,
       "peg": "n/a",
       "revenueGrowth": "+143.61% YoY (TTM ending Jun 2026; revenue $109.23M)",
       "score": 70,
@@ -1272,7 +1272,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 143.61,
-        "forwardPE": 426.21,
+        "forwardPE": 5244.44,
         "peg": null,
         "epsGrowth3yPct": null,
         "evSales": 12.0,
@@ -1820,12 +1820,12 @@
         "Revenue growth +118568.4% YoY (TTM) → 40/40",
         "Acceleration: TTM 118568.4% vs FY2025 39183.1% → 5/5",
         "Momentum: 1-yr price -68.3% vs S&P 500 (SPY) +16.0% = relative strength -84.3% → 0/25",
-        "Upside to target +92.1% → 18/20",
+        "Upside to target +90.1% → 18/20",
         "Consensus Hold (11) → 2/10",
         "Gross-margin trend (not scored): latest quarter 26.8% vs 33.3% a year earlier → margin contracting",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +257493% YoY; consensus sees revenue +124% this fiscal year and +83% next.",
+      "trend": "Latest quarter (ended June 30, 2026) revenue +257493% YoY; consensus sees revenue +126% this fiscal year and +78% next.",
       "fundamentals": "TTM revenue $116.30M, net income -$878.15M, gross margin 34.29%; market cap $5.38B, net cash $1.52B.",
       "risks": [
         "Unprofitable: TTM net income -$878.15M",
@@ -1833,7 +1833,7 @@
         "High volatility (beta 2.66)"
       ],
       "analystRating": "Hold (11 analysts)",
-      "priceTarget": 10.45,
+      "priceTarget": 10.34,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/joby/statistics/",
         "https://stockanalysis.com/stocks/joby/revenue/",
@@ -1903,7 +1903,18 @@
         "https://stockanalysis.com/stocks/cbrs/revenue/",
         "https://stockanalysis.com/stocks/cbrs/forecast/"
       ],
-      "rank": 18,
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "B",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "1/3",
+        "momentum": "1/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 111.68,
         "forwardPE": null,
@@ -1920,22 +1931,11 @@
         "relStrength1yPct": null,
         "priceAsOf": "2026-10-09"
       },
-      "grades": {
-        "growth": "F",
-        "value": "F",
-        "momentum": "B",
-        "profitability": "D-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "1/3",
-        "profitability": "4/4"
-      }
+      "rank": 18
     }
   ],
   "grading": {
-    "asOf": "2026-10-11",
+    "asOf": "2026-10-12",
     "spy1yPct": 16.0,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

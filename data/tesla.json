@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-11",
+  "lastUpdated": "2026-10-12",
   "company": "Tesla",
   "ticker": "TSLA",
   "exchange": "NASDAQ",
@@ -184,8 +184,8 @@
     "analyst": {
       "rating": "Buy",
       "count": 44,
-      "priceTarget": "$396.57",
-      "upside": "+3.6%",
+      "priceTarget": "$397.88",
+      "upside": "+4.0%",
       "sourceUrl": "https://stockanalysis.com/stocks/tsla/",
       "calls": [
         {
@@ -391,6 +391,13 @@
   },
   "news": [
     {
+      "date": "2026-10-12",
+      "outlet": "Yahoo Finance (Benzinga)",
+      "title": "300+ Cybercabs now serve Austin; Tesla hints Dallas is next",
+      "summary": "Tesla's Robotaxi account said the Austin Cybercab fleet passed 300, an 8x increase in 30 days, and AI chief Ashok Elluswamy replied \"Dallas soon\" (no launch date announced). NHTSA gave Tesla until Oct 30 to answer 21 questions on the pedal-free Cybercab's safety compliance. TSLA rose ~0.6% overnight after a 3% gain last week.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/tsla-stock-climbs-overnight-cybercab-063452049.html"
+    },
+    {
       "date": "2026-10-10",
       "outlet": "TipRanks",
       "title": "Week in review: China discounts, a Europe rename for FSD, and a Georgia Megacharger",
@@ -466,19 +473,12 @@
       "title": "Musk confirms early Terafab talks with TSMC",
       "summary": "A dedicated Texas fab could exclusively supply Tesla, SpaceX and xAI; nothing finalized.",
       "url": "https://www.tomshardware.com/tech-industry/semiconductors/elon-musk-confirms-discussions-with-tsmc-about-terafab-chipmaking-collaboration-intel-is-the-only-other-named-partner-terafab-to-exclusively-supply-tesla-spacex-and-xai"
-    },
-    {
-      "date": "2026-10-02",
-      "outlet": "Electrek",
-      "title": "Tesla Q3 deliveries: 486,532",
-      "summary": "Down 2.1% YoY but up 1.3% QoQ and above company-compiled consensus; 13.7 GWh storage deployed.",
-      "url": "https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532/"
     }
   ],
   "grades": {
     "growth": "F",
     "value": "F",
-    "momentum": "C-",
+    "momentum": "C",
     "profitability": "F"
   },
   "gradeInputs": {
@@ -505,10 +505,10 @@
     "priceAsOf": "2026-10-09"
   },
   "grading": {
-    "asOf": "2026-10-11",
+    "asOf": "2026-10-12",
     "spy1yPct": 16.0,
-    "pool": "Ranked against 146 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 18, Piotroski 17, Magic Formula 28, duplicates counted once), plus TSLA itself",
-    "poolSize": 146,
+    "pool": "Ranked against 145 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 18, Piotroski 17, Magic Formula 27, duplicates counted once), plus TSLA itself",
+    "poolSize": 145,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -523,7 +523,7 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-11",
+    "asOf": "2026-10-12",
     "priceDate": "2026-10-09",
     "inScreen": false,
     "outsideScreenReason": "market cap $1.51T is outside the screen's $1B-$30B range",
@@ -535,7 +535,7 @@
       "value": 0.0,
       "notRun": 10,
       "trend": 2,
-      "analysts": 3.4,
+      "analysts": 3.5,
       "theme": 0
     },
     "penalty": 0,
@@ -659,13 +659,13 @@
       "evFwdSales": 13.1,
       "peg": 10.45,
       "ch1y": -12.76,
-      "pt": 396.57,
+      "pt": 397.88,
       "rating": "Buy",
       "analysts": 44,
       "psForward": 13.35,
       "netcash": 27444000000.0,
       "sharesYoY": 0.58,
-      "shortFloat": 2.44,
+      "shortFloat": 2.52,
       "beta": 1.92,
       "grossMarginTTM": 18.85,
       "mcap": 1511491787684.0,
@@ -678,7 +678,7 @@
       "ch1yNasdaq": -12.13,
       "rs3m": -9.27,
       "acqJump": -0.31,
-      "upside": 3.62
+      "upside": 3.97
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/tsla/statistics/",

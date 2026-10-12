@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-11",
+  "lastUpdated": "2026-10-12",
   "priceDate": "2026-10-09",
   "title": "Piotroski",
-  "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1915 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (383 stocks, P/B ≤ 1.49) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
+  "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1917 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (383 stocks, P/B ≤ 1.49) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
   "rubric": [
     {
       "component": "ROA positive",
@@ -51,24 +51,24 @@
       "how": "Revenue ÷ start-of-year total assets above last year's"
     }
   ],
-  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 1, 8: 16, 7: 66, 6: 84, 5: 118, 4: 58, 3: 24, 2: 9, 1: 4. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
+  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 1, 8: 16, 7: 65, 6: 84, 5: 118, 4: 59, 3: 23, 2: 9, 1: 4. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
   "universe": {
-    "listed": 7004,
-    "screened": 2025,
-    "positiveBook": 1915,
+    "listed": 7010,
+    "screened": 2029,
+    "positiveBook": 1917,
     "quintile": 383,
-    "pbCutoff": 1.488,
-    "scored": 380,
+    "pbCutoff": 1.489,
+    "scored": 379,
     "picks8plus": 17,
     "distribution": {
       "0": 0,
       "1": 4,
       "2": 9,
-      "3": 24,
-      "4": 58,
+      "3": 23,
+      "4": 59,
       "5": 118,
       "6": 84,
-      "7": 66,
+      "7": 65,
       "8": 16,
       "9": 1
     }
@@ -96,7 +96,7 @@
       "price": 67.48,
       "priceDate": "2026-10-09",
       "marketCap": "$32.2B",
-      "forwardPE": 13.66,
+      "forwardPE": 12.88,
       "peg": "n/a",
       "revenueGrowth": "+3.7% YoY (FY)",
       "score": 9,
@@ -201,9 +201,9 @@
       },
       "metrics": {
         "revenueGrowthPct": 3.7,
-        "forwardPE": 13.66,
+        "forwardPE": 12.88,
         "peg": null,
-        "epsGrowth3yPct": -0.15,
+        "epsGrowth3yPct": 0.33,
         "evSales": 1.61,
         "grossMarginPct": 32.062,
         "operatingMarginPct": 13.5,
@@ -222,8 +222,8 @@
       "sector": "Utilities – Electric Utilities: Central",
       "price": 11.03,
       "priceDate": "2026-10-09",
-      "marketCap": "$13.9B",
-      "forwardPE": 3.23,
+      "marketCap": "$13.7B",
+      "forwardPE": 3.18,
       "peg": "n/a",
       "revenueGrowth": "+4.3% YoY (FY)",
       "score": 8,
@@ -329,7 +329,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 4.3,
-        "forwardPE": 3.23,
+        "forwardPE": 3.18,
         "peg": null,
         "epsGrowth3yPct": 1.0,
         "evSales": 1.78,
@@ -341,6 +341,135 @@
         "chg6mPct": -26.02,
         "chg1yPct": -12.67,
         "relStrength1yPct": -28.67,
+        "priceAsOf": "2026-10-09"
+      }
+    },
+    {
+      "company": "LG Display Co Ltd AMERICAN DEPOSITORY SHARES",
+      "ticker": "LPL",
+      "sector": "Technology – Industrial Machinery/Components",
+      "price": 2.89,
+      "priceDate": "2026-10-09",
+      "marketCap": "$2.9B",
+      "forwardPE": 9.25,
+      "peg": "n/a",
+      "revenueGrowth": "-3.0% YoY (FY)",
+      "score": 8,
+      "scoreMax": 9,
+      "alsoIn": [
+        "Piotroski"
+      ],
+      "keyFigures": [
+        {
+          "label": "F-Score",
+          "value": "8/9"
+        },
+        {
+          "label": "Price / book",
+          "value": "0.59"
+        },
+        {
+          "label": "ROA",
+          "value": "0.8%"
+        },
+        {
+          "label": "Fiscal year",
+          "value": "2025-12-31"
+        }
+      ],
+      "checklist": [
+        {
+          "key": "roa",
+          "label": "ROA positive",
+          "met": true,
+          "detail": "ROA 0.8%"
+        },
+        {
+          "key": "cfo",
+          "label": "Operating cash flow positive",
+          "met": true,
+          "detail": "Operating cash flow KRW 3.11T"
+        },
+        {
+          "key": "droa",
+          "label": "ROA improving",
+          "met": true,
+          "detail": "ROA 0.8% vs -7.8% prior year"
+        },
+        {
+          "key": "accrual",
+          "label": "Cash flow > net income",
+          "met": true,
+          "detail": "Cash flow KRW 3.11T vs net income KRW 226.3B"
+        },
+        {
+          "key": "lev",
+          "label": "Long-term debt / assets falling",
+          "met": true,
+          "detail": "LT debt / assets 26.6% vs 33.1%"
+        },
+        {
+          "key": "cr",
+          "label": "Current ratio rising",
+          "met": false,
+          "detail": "Current ratio 0.63 vs 0.73"
+        },
+        {
+          "key": "shares",
+          "label": "No new shares issued",
+          "met": true,
+          "detail": "Shares 500M vs 500M"
+        },
+        {
+          "key": "gm",
+          "label": "Gross margin rising",
+          "met": true,
+          "detail": "Gross margin 13.1% vs 9.7%"
+        },
+        {
+          "key": "at",
+          "label": "Asset turnover rising",
+          "met": true,
+          "detail": "Asset turnover 0.96 vs 0.81"
+        }
+      ],
+      "risks": [
+        "Financials reported in KRW",
+        "Very low P/B (0.59): the market may expect lower book value (write-downs)",
+        "Stock down 47% in a year"
+      ],
+      "analystRating": "Hold (2 analysts)",
+      "priceTarget": 4.31,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/lpl/financials/",
+        "https://stockanalysis.com/stocks/lpl/statistics/"
+      ],
+      "grades": {
+        "growth": "C+",
+        "value": "B+",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": -3.0,
+        "forwardPE": 9.25,
+        "peg": null,
+        "epsGrowth3yPct": 56.49,
+        "evSales": 0.78,
+        "grossMarginPct": 14.447,
+        "operatingMarginPct": 2.523,
+        "netMarginPct": -5.343,
+        "fcfMarginPct": 5.999,
+        "chg3mPct": -21.47,
+        "chg6mPct": -31.68,
+        "chg1yPct": -47.26,
+        "relStrength1yPct": -63.26,
         "priceAsOf": "2026-10-09"
       }
     },
@@ -472,135 +601,6 @@
       }
     },
     {
-      "company": "LG Display Co Ltd AMERICAN DEPOSITORY SHARES",
-      "ticker": "LPL",
-      "sector": "Technology – Industrial Machinery/Components",
-      "price": 2.89,
-      "priceDate": "2026-10-09",
-      "marketCap": "$3.0B",
-      "forwardPE": 9.71,
-      "peg": "n/a",
-      "revenueGrowth": "-3.0% YoY (FY)",
-      "score": 8,
-      "scoreMax": 9,
-      "alsoIn": [
-        "Piotroski"
-      ],
-      "keyFigures": [
-        {
-          "label": "F-Score",
-          "value": "8/9"
-        },
-        {
-          "label": "Price / book",
-          "value": "0.61"
-        },
-        {
-          "label": "ROA",
-          "value": "0.8%"
-        },
-        {
-          "label": "Fiscal year",
-          "value": "2025-12-31"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "roa",
-          "label": "ROA positive",
-          "met": true,
-          "detail": "ROA 0.8%"
-        },
-        {
-          "key": "cfo",
-          "label": "Operating cash flow positive",
-          "met": true,
-          "detail": "Operating cash flow KRW 3.11T"
-        },
-        {
-          "key": "droa",
-          "label": "ROA improving",
-          "met": true,
-          "detail": "ROA 0.8% vs -7.8% prior year"
-        },
-        {
-          "key": "accrual",
-          "label": "Cash flow > net income",
-          "met": true,
-          "detail": "Cash flow KRW 3.11T vs net income KRW 226.3B"
-        },
-        {
-          "key": "lev",
-          "label": "Long-term debt / assets falling",
-          "met": true,
-          "detail": "LT debt / assets 26.6% vs 33.1%"
-        },
-        {
-          "key": "cr",
-          "label": "Current ratio rising",
-          "met": false,
-          "detail": "Current ratio 0.63 vs 0.73"
-        },
-        {
-          "key": "shares",
-          "label": "No new shares issued",
-          "met": true,
-          "detail": "Shares 500M vs 500M"
-        },
-        {
-          "key": "gm",
-          "label": "Gross margin rising",
-          "met": true,
-          "detail": "Gross margin 13.1% vs 9.7%"
-        },
-        {
-          "key": "at",
-          "label": "Asset turnover rising",
-          "met": true,
-          "detail": "Asset turnover 0.96 vs 0.81"
-        }
-      ],
-      "risks": [
-        "Financials reported in KRW",
-        "Very low P/B (0.61): the market may expect lower book value (write-downs)",
-        "Stock down 47% in a year"
-      ],
-      "analystRating": "Hold (2 analysts)",
-      "priceTarget": 4.31,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/lpl/financials/",
-        "https://stockanalysis.com/stocks/lpl/statistics/"
-      ],
-      "grades": {
-        "growth": "C+",
-        "value": "B",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": -3.0,
-        "forwardPE": 9.71,
-        "peg": null,
-        "epsGrowth3yPct": 56.49,
-        "evSales": 0.79,
-        "grossMarginPct": 14.447,
-        "operatingMarginPct": 2.523,
-        "netMarginPct": -5.343,
-        "fcfMarginPct": 5.999,
-        "chg3mPct": -21.47,
-        "chg6mPct": -31.68,
-        "chg1yPct": -47.26,
-        "relStrength1yPct": -63.26,
-        "priceAsOf": "2026-10-09"
-      }
-    },
-    {
       "company": "Amentum Holdings Inc.",
       "ticker": "AMTM",
       "sector": "Consumer Discretionary – Business Services",
@@ -693,7 +693,7 @@
         "No data-driven red flags; check why the market prices it below peers"
       ],
       "analystRating": "Buy (12 analysts)",
-      "priceTarget": 29.42,
+      "priceTarget": 29.33,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/amtm/financials/",
         "https://stockanalysis.com/stocks/amtm/statistics/"
@@ -846,7 +846,7 @@
         "grossMarginPct": 47.027,
         "operatingMarginPct": 37.17,
         "netMarginPct": 27.47,
-        "fcfMarginPct": -39.5,
+        "fcfMarginPct": -39.49,
         "chg3mPct": -2.72,
         "chg6mPct": -16.09,
         "chg1yPct": 2.06,
@@ -1589,7 +1589,7 @@
       ],
       "grades": {
         "growth": "C",
-        "value": "C+",
+        "value": "B-",
         "momentum": "F",
         "profitability": "F"
       },
@@ -1969,7 +1969,7 @@
       "rank": 3,
       "grades": {
         "growth": "C-",
-        "value": "B-",
+        "value": "C+",
         "momentum": "D-",
         "profitability": "D"
       },
@@ -2250,7 +2250,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-11",
+    "asOf": "2026-10-12",
     "spy1yPct": 16.0,
     "pool": "17 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

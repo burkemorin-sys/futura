@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-11",
+  "lastUpdated": "2026-10-12",
   "company": "Lumentum",
   "ticker": "LITE",
   "exchange": "NASDAQ",
@@ -131,12 +131,12 @@
     "analyst": {
       "rating": "Buy",
       "count": 26,
-      "priceTarget": "$1,161.96",
-      "upside": "+5.3%",
+      "priceTarget": "$1,177.34",
+      "upside": "+6.7%",
       "sourceUrl": "https://stockanalysis.com/stocks/lite/statistics/",
       "calls": [
         {
-          "text": "Consensus Buy across 26 analysts; average target $1,161.96 (+5.3% vs the Oct 9 close)",
+          "text": "Consensus Buy across 26 analysts; average target $1,177.34 (+6.7% vs the Oct 9 close)",
           "url": "https://stockanalysis.com/stocks/lite/statistics/"
         },
         {
@@ -444,10 +444,10 @@
     "priceAsOf": "2026-10-09"
   },
   "grading": {
-    "asOf": "2026-10-11",
+    "asOf": "2026-10-12",
     "spy1yPct": 16.0,
-    "pool": "Ranked against 146 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 18, Piotroski 17, Magic Formula 28, duplicates counted once), plus LITE itself",
-    "poolSize": 146,
+    "pool": "Ranked against 145 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 18, Piotroski 17, Magic Formula 27, duplicates counted once), plus LITE itself",
+    "poolSize": 145,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -462,7 +462,7 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-11",
+    "asOf": "2026-10-12",
     "priceDate": "2026-10-09",
     "inScreen": false,
     "outsideScreenReason": "market cap $99.9B is outside the screen's $1B-$30B range",
@@ -474,7 +474,7 @@
       "value": 0.0,
       "notRun": 0.5,
       "trend": 10,
-      "analysts": 3.6,
+      "analysts": 3.8,
       "theme": 5
     },
     "penalty": 5,
@@ -531,7 +531,7 @@
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": false,
-        "detail": "Buy (26), +5% to target"
+        "detail": "Buy (26), +7% to target"
       },
       {
         "key": "revisions",
@@ -547,7 +547,7 @@
       "Valuation: forward P/E 50.653, EV/forward sales 15.7x → 0/15",
       "Not already run: 1-yr +591% (heavy penalty −5), -3% vs 52-week high → 1/10 −5",
       "Trend: price above 200-day, above 50-day, 3-month vs SPY +34 pts → 10/10",
-      "Analysts: Buy (26), +5% to target → 4/10",
+      "Analysts: Buy (26), +7% to target → 4/10",
       "Bottleneck theme: AI-infrastructure supplier industry (Communication Equipment) → 5/5"
     ],
     "risks": [
@@ -598,7 +598,7 @@
       "evFwdSales": 15.74,
       "peg": 0.47,
       "ch1y": 576.53,
-      "pt": 1161.96,
+      "pt": 1177.34,
       "rating": "Buy",
       "analysts": 26,
       "psForward": 15.91,
@@ -617,7 +617,7 @@
       "ch1yNasdaq": 590.63,
       "rs3m": 34.45,
       "acqJump": -3.08,
-      "upside": 5.31
+      "upside": 6.71
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/lite/statistics/",
