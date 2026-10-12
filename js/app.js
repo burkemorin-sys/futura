@@ -2116,7 +2116,7 @@
   function etfCard(e) {
     const chg = e.change || "";
     const tick = normalizeTicker(e.ticker);
-    return `<a class="etf-card panel" href="#/search?t=${esc(tick)}" data-etf="${esc(tick)}">
+    return `<div class="etf-card panel" role="link" tabindex="0" data-etf="${esc(tick)}" aria-label="${esc(tick)} details">
       <div class="etf-top">
         <div>
           <div class="tags"><span class="tag ticker">${esc(tick)}</span><span class="tag sector">${esc(e.exchange || "ETF")}</span>${followToggleHTML(tick, { compact: true })}</div>
@@ -2139,7 +2139,7 @@
         <span class="fineprint">${esc(e.ytdNote || e.return1yNote || "")}</span>
         <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </div>
-    </a>`;
+    </div>`;
   }
 
   async function renderHome(el) {
@@ -2176,9 +2176,12 @@
       // Prefer goSearch so recent searches update when tapping a card.
       grid.querySelectorAll("[data-etf]").forEach((a) => {
         a.addEventListener("click", (ev) => {
-          if (ev.target.closest("[data-follow-toggle]")) return;
+          if (ev.target.closest("[data-follow-toggle], .sa-link")) return;
           ev.preventDefault();
           goSearch(a.dataset.etf);
+        });
+        a.addEventListener("keydown", (ev) => {
+          if ((ev.key === "Enter" || ev.key === " ") && ev.target === a) { ev.preventDefault(); goSearch(a.dataset.etf); }
         });
       });
       bindFollowToggles(el);
