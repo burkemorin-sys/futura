@@ -270,7 +270,7 @@ def main():
             "marketCap": ei.fmt_money(ei.fnum(st.get("marketcap")) or u["mcap"]),
             "forwardPE": round(ei.fnum(st.get("peForward")), 2) if ei.fnum(st.get("peForward")) else "n/a",
             "peg": round(ei.fnum(st.get("pegRatio")), 2) if ei.fnum(st.get("pegRatio")) else "n/a",
-            "revenueGrowth": "n/a", "score": len(ins), "alsoIn": also.get(s, []),
+            "revenueGrowth": "n/a", "alsoIn": also.get(s, []),
             "insiderCount": len(ins), "totalBought": round(tot, 2),
             "firstBuy": dates[0], "lastBuy": dates[-1],
             "keyFigures": [
@@ -296,7 +296,17 @@ def main():
             ],
         }
 
-    rows = [entry(s, c) for s, c in keep]
+    rows, mismatch = [], []
+    for s, c in keep:
+        e = entry(s, c)
+        sh = sum(i["shares"] for i in c["ins"].values())
+        avg = e["totalBought"] / sh if sh else None
+        # Foreign issuers sometimes file prices in local currency for a home-market share class (e.g. BBD: BRL, not the ADR).
+        # If the average price paid is more than 2x away from the US close, the dollar totals can't be trusted: leave it out.
+        if avg and e["price"] and not (0.5 <= avg / e["price"] <= 2):
+            mismatch.append(f"{s} (avg filed price {avg:.2f} vs US close {e['price']:.2f})")
+            continue
+        rows.append(e)
     picks = rows[:PICKS_N]
     bench = [dict(e, rank=i + 1) for i, e in enumerate(rows[PICKS_N:])]
     data = {
@@ -320,14 +330,15 @@ def main():
             f"Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the ${MIN_CAP/1e6:.0f}M+ universe are fetched). "
             f"Duplicate rows from joint filings and amendments are counted once. "
             f"{len(co)} companies had insider purchases; {len(cand)} met the insider/dollar test; "
-            f"{len(excl)} excluded as bitcoin miners or crypto-treasury companies. Prices are Nasdaq closes. "
+            f"{len(excl)} excluded as bitcoin miners or crypto-treasury companies; "
+            f"{len(mismatch)} left out because filed prices don't match the US share price (local-currency or other share class: {', '.join(mismatch) or 'none'}). Prices are Nasdaq closes. "
             f"Form 4s are due within 2 business days of the trade."
         ),
         "universe": {
             "listed": listed, "screened": len(U), "filings": len(paths),
             "companiesWithBuys": len(co), "clusters": len(cand), "qualified": len(keep),
         },
-        "excluded": {"minersOrCryptoTreasury": sorted(excl), "minersUniverse": miners},
+        "excluded": {"minersOrCryptoTreasury": sorted(excl), "priceMismatch": mismatch, "minersUniverse": miners},
         "disclaimer": "Insider buying is a signal, not a guarantee. For research only, not financial advice.",
         "picks": picks, "bench": bench,
     }

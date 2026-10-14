@@ -360,7 +360,9 @@
    "GME": 27.22,
    "BWMX": 16.34,
    "ADC": 65.41,
-   "DKS": 137.55
+   "DKS": 137.55,
+   "KRMN": 30.15,
+   "PDI": 14.12
   }
  },
  "lists": {
@@ -2567,19 +2569,6 @@
    "startPriceDate": "2026-10-13",
    "holdings": [
     {
-     "ticker": "BBD",
-     "company": "Banco Bradesco Sa",
-     "entryDate": "2026-10-14",
-     "entryPriceDate": "2026-10-13",
-     "entryPrice": 4.19,
-     "lastPrice": 4.19,
-     "lastPriceDate": "2026-10-13",
-     "returnPct": 0.0,
-     "qqqPct": 0.0,
-     "spyPct": 0.0,
-     "beatQQQ": false
-    },
-    {
      "ticker": "SPG",
      "company": "Simon Property Group Inc.",
      "entryDate": "2026-10-14",
@@ -2658,19 +2647,6 @@
      "beatQQQ": false
     },
     {
-     "ticker": "GAM",
-     "company": "General American Investors Inc.",
-     "entryDate": "2026-10-14",
-     "entryPriceDate": "2026-10-13",
-     "entryPrice": 64.85,
-     "lastPrice": 64.85,
-     "lastPriceDate": "2026-10-13",
-     "returnPct": 0.0,
-     "qqqPct": 0.0,
-     "spyPct": 0.0,
-     "beatQQQ": false
-    },
-    {
      "ticker": "GME",
      "company": "GameStop Corporation",
      "entryDate": "2026-10-14",
@@ -2721,26 +2697,81 @@
      "qqqPct": 0.0,
      "spyPct": 0.0,
      "beatQQQ": false
+    },
+    {
+     "ticker": "KRMN",
+     "company": "Karman Holdings Inc.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 30.15,
+     "lastPrice": 30.15,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "PDI",
+     "company": "PIMCO Dynamic Income Fund",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 14.12,
+     "lastPrice": 14.12,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
     }
    ],
-   "closed": [],
+   "closed": [
+    {
+     "ticker": "BBD",
+     "company": "Banco Bradesco Sa",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 4.19,
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false,
+     "exitDate": "2026-10-14",
+     "exitPriceDate": "2026-10-13",
+     "exitPrice": 4.19
+    },
+    {
+     "ticker": "GAM",
+     "company": "General American Investors Inc.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 64.85,
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false,
+     "exitDate": "2026-10-14",
+     "exitPriceDate": "2026-10-13",
+     "exitPrice": 64.85
+    }
+   ],
    "segments": [
     {
      "start": "2026-10-13",
      "startValue": 100.0,
      "tickers": [
-      "BBD",
       "SPG",
       "HEI",
       "FUL",
       "SBLK",
       "RWT",
       "ACCV",
-      "GAM",
       "GME",
       "BWMX",
       "ADC",
-      "DKS"
+      "DKS",
+      "KRMN",
+      "PDI"
      ]
     }
    ],
@@ -2764,6 +2795,44 @@
       "ADC",
       "DKS"
      ]
+    },
+    {
+     "date": "2026-10-14",
+     "priceDate": "2026-10-13",
+     "action": "remove",
+     "ticker": "BBD",
+     "company": "Banco Bradesco Sa",
+     "price": 4.19
+    },
+    {
+     "date": "2026-10-14",
+     "priceDate": "2026-10-13",
+     "action": "remove",
+     "ticker": "GAM",
+     "company": "General American Investors Inc.",
+     "price": 64.85
+    },
+    {
+     "date": "2026-10-14",
+     "priceDate": "2026-10-13",
+     "action": "add",
+     "ticker": "KRMN",
+     "company": "Karman Holdings Inc.",
+     "price": 30.15
+    },
+    {
+     "date": "2026-10-14",
+     "priceDate": "2026-10-13",
+     "action": "add",
+     "ticker": "PDI",
+     "company": "PIMCO Dynamic Income Fund",
+     "price": 14.12
+    },
+    {
+     "date": "2026-10-14",
+     "priceDate": "2026-10-13",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [

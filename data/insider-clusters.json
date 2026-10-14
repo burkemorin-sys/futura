@@ -21,7 +21,7 @@
       "how": "Market cap above $300M on Nasdaq's screener"
     }
   ],
-  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 154 companies had insider purchases; 16 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies. Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
+  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 154 companies had insider purchases; 16 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 2 left out because filed prices don't match the US share price (local-currency or other share class: BBD (avg filed price 17.97 vs US close 4.19), GAM (avg filed price 23.18 vs US close 64.85)). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
   "universe": {
     "listed": 6996,
     "screened": 3427,
@@ -32,6 +32,10 @@
   },
   "excluded": {
     "minersOrCryptoTreasury": [],
+    "priceMismatch": [
+      "BBD (avg filed price 17.97 vs US close 4.19)",
+      "GAM (avg filed price 23.18 vs US close 64.85)"
+    ],
     "minersUniverse": [
       "ABTC",
       "BMNR",
@@ -51,372 +55,6 @@
   "disclaimer": "Insider buying is a signal, not a guarantee. For research only, not financial advice.",
   "picks": [
     {
-      "company": "Banco Bradesco Sa",
-      "ticker": "BBD",
-      "sector": "Finance – Major Banks",
-      "price": 4.19,
-      "priceDate": "2026-10-13",
-      "marketCap": "$42.5B",
-      "forwardPE": 7.33,
-      "peg": "n/a",
-      "revenueGrowth": "n/a",
-      "score": 19,
-      "alsoIn": [],
-      "insiderCount": 19,
-      "totalBought": 25714316.54,
-      "firstBuy": "2026-09-18",
-      "lastBuy": "2026-09-29",
-      "keyFigures": [
-        {
-          "label": "Insiders buying",
-          "value": "19"
-        },
-        {
-          "label": "Total bought",
-          "value": "$25.7M"
-        },
-        {
-          "label": "Avg price paid",
-          "value": "$17.97"
-        },
-        {
-          "label": "Buy dates",
-          "value": "2026-09-18 → 2026-09-29"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "i0",
-          "label": "De Oliveira Andre Luis Duarte",
-          "met": true,
-          "detail": "Executive Officer: $5.6M (309,111 sh) on 2026-09-18"
-        },
-        {
-          "key": "i1",
-          "label": "Alvarez Denise Aguiar",
-          "met": true,
-          "detail": "Director: $2.3M (130,596 sh) on 2026-09-18"
-        },
-        {
-          "key": "i2",
-          "label": "Paris Roberto De Jesus",
-          "met": true,
-          "detail": "Executive Officer: $1.7M (96,702 sh) on 2026-09-18"
-        },
-        {
-          "key": "i3",
-          "label": "Fernandes Oswaldo Tadeu",
-          "met": true,
-          "detail": "Executive Officer: $1.4M (79,782 sh) on 2026-09-18"
-        },
-        {
-          "key": "i4",
-          "label": "Ramalho Miranda Jose Augusto",
-          "met": true,
-          "detail": "Executive Officer: $1.1M (63,719 sh) on 2026-09-18"
-        },
-        {
-          "key": "i5",
-          "label": "Machado Silvana Rosa",
-          "met": true,
-          "detail": "Executive Officer: $1.1M (62,048 sh) on 2026-09-18"
-        },
-        {
-          "key": "i6",
-          "label": "Marcilio Juliano Ribeiro",
-          "met": true,
-          "detail": "Executive Officer: $1.1M (60,779 sh) on 2026-09-18"
-        },
-        {
-          "key": "i7",
-          "label": "Favarao Vinicius Urias",
-          "met": true,
-          "detail": "Executive Officer: $1.1M (60,492 sh) on 2026-09-18"
-        },
-        {
-          "key": "i8",
-          "label": "De Souza Cintia Scovine Barcelos",
-          "met": true,
-          "detail": "Executive Officer: $1.1M (60,093 sh) on 2026-09-18"
-        },
-        {
-          "key": "i9",
-          "label": "Tescarolo Marcos Valerio",
-          "met": true,
-          "detail": "Executive Officer: $1.0M (57,012 sh) on 2026-09-18"
-        },
-        {
-          "key": "i10",
-          "label": "Bueno Julio Cesar",
-          "met": true,
-          "detail": "Executive Officer: $1.0M (56,355 sh) on 2026-09-18"
-        },
-        {
-          "key": "i11",
-          "label": "Di Marcello Francesco",
-          "met": true,
-          "detail": "Executive Officer: $1.0M (57,160 sh) on 2026-09-28, 2026-09-29"
-        },
-        {
-          "key": "i12",
-          "label": "Pedras Carlos Henrique Villela",
-          "met": true,
-          "detail": "Executive Officer: $1.0M (55,850 sh) on 2026-09-18"
-        },
-        {
-          "key": "i13",
-          "label": "De Oliveira Tulio Xavier",
-          "met": true,
-          "detail": "Executive Officer: $997K (55,444 sh) on 2026-09-18"
-        },
-        {
-          "key": "i14",
-          "label": "Mantarro Renata Geiser",
-          "met": true,
-          "detail": "Executive Officer: $985K (54,760 sh) on 2026-09-18"
-        },
-        {
-          "key": "i15",
-          "label": "Freiberger Fernando",
-          "met": true,
-          "detail": "Executive Officer: $891K (49,550 sh) on 2026-09-18"
-        },
-        {
-          "key": "i16",
-          "label": "Da Cunha Paulo Roberto Simoes",
-          "met": true,
-          "detail": "Director: $843K (46,874 sh) on 2026-09-18"
-        },
-        {
-          "key": "i17",
-          "label": "Panico Alexandre",
-          "met": true,
-          "detail": "Executive Officer: $784K (43,620 sh) on 2026-09-18"
-        },
-        {
-          "key": "i18",
-          "label": "Nunes Regina Helena Jorge",
-          "met": true,
-          "detail": "Director: $562K (31,266 sh) on 2026-09-18"
-        }
-      ],
-      "risks": [
-        "No data-driven red flags; insiders can still be wrong"
-      ],
-      "analystRating": "Hold (6 analysts)",
-      "priceTarget": 4.38,
-      "transactions": [
-        {
-          "insider": "Di Marcello Francesco",
-          "date": "2026-09-29",
-          "shares": 10.0,
-          "price": 17.56,
-          "value": 175.6,
-          "accession": "0001292814-26-004756"
-        },
-        {
-          "insider": "Di Marcello Francesco",
-          "date": "2026-09-29",
-          "shares": 300.0,
-          "price": 17.55,
-          "value": 5265.0,
-          "accession": "0001292814-26-004756"
-        },
-        {
-          "insider": "Di Marcello Francesco",
-          "date": "2026-09-28",
-          "shares": 56800.0,
-          "price": 17.65,
-          "value": 1002519.9999999999,
-          "accession": "0001292814-26-004756"
-        },
-        {
-          "insider": "Di Marcello Francesco",
-          "date": "2026-09-28",
-          "shares": 50.0,
-          "price": 17.66,
-          "value": 883.0,
-          "accession": "0001292814-26-004756"
-        },
-        {
-          "insider": "Pedras Carlos Henrique Villela",
-          "date": "2026-09-18",
-          "shares": 55850.0,
-          "price": 17.98,
-          "value": 1004183.0,
-          "accession": "0001292814-26-004615"
-        },
-        {
-          "insider": "de Souza Cintia Scovine Barcelos",
-          "date": "2026-09-18",
-          "shares": 60093.0,
-          "price": 17.98,
-          "value": 1080472.1400000001,
-          "accession": "0001292814-26-004617"
-        },
-        {
-          "insider": "Panico Alexandre",
-          "date": "2026-09-18",
-          "shares": 43620.0,
-          "price": 17.98,
-          "value": 784287.6,
-          "accession": "0001292814-26-004619"
-        },
-        {
-          "insider": "de Oliveira Andre Luis Duarte",
-          "date": "2026-09-18",
-          "shares": 309111.0,
-          "price": 17.98,
-          "value": 5557815.78,
-          "accession": "0001292814-26-004621"
-        },
-        {
-          "insider": "da Cunha Paulo Roberto Simoes",
-          "date": "2026-09-18",
-          "shares": 46874.0,
-          "price": 17.98,
-          "value": 842794.52,
-          "accession": "0001292814-26-004625"
-        },
-        {
-          "insider": "Alvarez Denise Aguiar",
-          "date": "2026-09-18",
-          "shares": 130596.0,
-          "price": 17.98,
-          "value": 2348116.08,
-          "accession": "0001292814-26-004635"
-        },
-        {
-          "insider": "Marcilio Juliano Ribeiro",
-          "date": "2026-09-18",
-          "shares": 60779.0,
-          "price": 17.98,
-          "value": 1092806.42,
-          "accession": "0001292814-26-004642"
-        },
-        {
-          "insider": "Nunes Regina Helena Jorge",
-          "date": "2026-09-18",
-          "shares": 31266.0,
-          "price": 17.98,
-          "value": 562162.68,
-          "accession": "0001292814-26-004644"
-        },
-        {
-          "insider": "Ramalho Miranda Jose Augusto",
-          "date": "2026-09-18",
-          "shares": 63719.0,
-          "price": 17.98,
-          "value": 1145667.62,
-          "accession": "0001292814-26-004646"
-        },
-        {
-          "insider": "Freiberger Fernando",
-          "date": "2026-09-18",
-          "shares": 49550.0,
-          "price": 17.98,
-          "value": 890909.0,
-          "accession": "0001292814-26-004648"
-        },
-        {
-          "insider": "Bueno Julio Cesar",
-          "date": "2026-09-18",
-          "shares": 56355.0,
-          "price": 17.98,
-          "value": 1013262.9,
-          "accession": "0001292814-26-004650"
-        },
-        {
-          "insider": "Tescarolo Marcos Valerio",
-          "date": "2026-09-18",
-          "shares": 57012.0,
-          "price": 17.98,
-          "value": 1025075.76,
-          "accession": "0001292814-26-004652"
-        },
-        {
-          "insider": "Fernandes Oswaldo Tadeu",
-          "date": "2026-09-18",
-          "shares": 79782.0,
-          "price": 17.98,
-          "value": 1434480.36,
-          "accession": "0001292814-26-004654"
-        },
-        {
-          "insider": "Mantarro Renata Geiser",
-          "date": "2026-09-18",
-          "shares": 54760.0,
-          "price": 17.98,
-          "value": 984584.8,
-          "accession": "0001292814-26-004656"
-        },
-        {
-          "insider": "Paris Roberto de Jesus",
-          "date": "2026-09-18",
-          "shares": 96702.0,
-          "price": 17.98,
-          "value": 1738701.96,
-          "accession": "0001292814-26-004658"
-        },
-        {
-          "insider": "Machado Silvana Rosa",
-          "date": "2026-09-18",
-          "shares": 62048.0,
-          "price": 17.98,
-          "value": 1115623.04,
-          "accession": "0001292814-26-004660"
-        },
-        {
-          "insider": "de Oliveira Tulio Xavier",
-          "date": "2026-09-18",
-          "shares": 55444.0,
-          "price": 17.98,
-          "value": 996883.12,
-          "accession": "0001292814-26-004662"
-        },
-        {
-          "insider": "Favarao Vinicius Urias",
-          "date": "2026-09-18",
-          "shares": 60492.0,
-          "price": 17.98,
-          "value": 1087646.16,
-          "accession": "0001292814-26-004664"
-        }
-      ],
-      "sourceUrl": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001160330&type=4&dateb=&owner=include&count=40",
-        "https://stockanalysis.com/stocks/bbd/statistics/"
-      ],
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 7.33,
-        "peg": null,
-        "epsGrowth3yPct": 10.91,
-        "evSales": null,
-        "grossMarginPct": 98.82,
-        "operatingMarginPct": 31.558,
-        "netMarginPct": 26.071,
-        "fcfMarginPct": -307.24,
-        "chg3mPct": 16.07,
-        "chg6mPct": 2.44,
-        "chg1yPct": 35.6,
-        "relStrength1yPct": 18.26,
-        "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "C",
-        "value": "A",
-        "momentum": "A-",
-        "profitability": "B"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      }
-    },
-    {
       "company": "Simon Property Group Inc.",
       "ticker": "SPG",
       "sector": "Real Estate – Real Estate Investment Trusts",
@@ -426,8 +64,9 @@
       "forwardPE": 30.14,
       "peg": "n/a",
       "revenueGrowth": "n/a",
-      "score": 11,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 11,
       "totalBought": 460716.16,
       "firstBuy": "2026-09-30",
@@ -617,6 +256,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001063761&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/spg/statistics/"
       ],
+      "grades": {
+        "growth": "F",
+        "value": "D-",
+        "momentum": "A-",
+        "profitability": "A+"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 30.14,
@@ -632,18 +283,6 @@
         "chg1yPct": 13.68,
         "relStrength1yPct": -3.66,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "F",
-        "momentum": "B",
-        "profitability": "A+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -656,8 +295,9 @@
       "forwardPE": 42.73,
       "peg": 2.25,
       "revenueGrowth": "n/a",
-      "score": 8,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 8,
       "totalBought": 1400594.54,
       "firstBuy": "2026-10-08",
@@ -805,6 +445,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000046619&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/hei/statistics/"
       ],
+      "grades": {
+        "growth": "C",
+        "value": "F",
+        "momentum": "B-",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 42.73,
@@ -820,18 +472,6 @@
         "chg1yPct": -4.7,
         "relStrength1yPct": -22.04,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "C+",
-        "value": "F",
-        "momentum": "C+",
-        "profitability": "B-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -844,8 +484,9 @@
       "forwardPE": 9.76,
       "peg": 0.59,
       "revenueGrowth": "n/a",
-      "score": 8,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 8,
       "totalBought": 1121315.61,
       "firstBuy": "2026-09-28",
@@ -1009,6 +650,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000039368&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/ful/statistics/"
       ],
+      "grades": {
+        "growth": "C-",
+        "value": "B+",
+        "momentum": "C+",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 9.76,
@@ -1024,18 +677,6 @@
         "chg1yPct": -13.0,
         "relStrength1yPct": -30.34,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "D+",
-        "value": "B",
-        "momentum": "C",
-        "profitability": "D-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1048,8 +689,9 @@
       "forwardPE": 7.52,
       "peg": 0.13,
       "revenueGrowth": "n/a",
-      "score": 7,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 7,
       "totalBought": 4534508.0,
       "firstBuy": "2026-09-15",
@@ -1183,6 +825,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001386716&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/sblk/statistics/"
       ],
+      "grades": {
+        "growth": "A-",
+        "value": "A",
+        "momentum": "A+",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 7.52,
@@ -1198,18 +852,6 @@
         "chg1yPct": 71.5,
         "relStrength1yPct": 54.16,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "A",
-        "value": "A-",
-        "momentum": "A+",
-        "profitability": "A-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1222,8 +864,9 @@
       "forwardPE": 3.08,
       "peg": "n/a",
       "revenueGrowth": "n/a",
-      "score": 6,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 6,
       "totalBought": 968839.65,
       "firstBuy": "2026-09-15",
@@ -1343,6 +986,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000930236&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/rwt/statistics/"
       ],
+      "grades": {
+        "growth": "A+",
+        "value": "C-",
+        "momentum": "F",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "3/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 3.08,
@@ -1358,18 +1013,6 @@
         "chg1yPct": -45.83,
         "relStrength1yPct": -63.17,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "A+",
-        "value": "C-",
-        "momentum": "F",
-        "profitability": "D"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "3/4"
       }
     },
     {
@@ -1382,8 +1025,9 @@
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "n/a",
-      "score": 5,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 5,
       "totalBought": 4098600.0,
       "firstBuy": "2026-10-01",
@@ -1497,6 +1141,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141406&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/accv/statistics/"
       ],
+      "grades": {
+        "growth": "n/a",
+        "value": "D",
+        "momentum": "n/a",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "0/2",
+        "value": "1/3",
+        "momentum": "0/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": null,
@@ -1512,177 +1168,6 @@
         "chg1yPct": null,
         "relStrength1yPct": null,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "n/a",
-        "value": "D",
-        "momentum": "n/a",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "0/2",
-        "value": "1/3",
-        "momentum": "0/3",
-        "profitability": "4/4"
-      }
-    },
-    {
-      "company": "General American Investors Inc.",
-      "ticker": "GAM",
-      "sector": "Finance – Investment Managers",
-      "price": 64.85,
-      "priceDate": "2026-10-13",
-      "marketCap": "$1.6B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "n/a",
-      "score": 5,
-      "alsoIn": [],
-      "insiderCount": 5,
-      "totalBought": 672290.0,
-      "firstBuy": "2026-09-15",
-      "lastBuy": "2026-09-23",
-      "keyFigures": [
-        {
-          "label": "Insiders buying",
-          "value": "5"
-        },
-        {
-          "label": "Total bought",
-          "value": "$672K"
-        },
-        {
-          "label": "Avg price paid",
-          "value": "$23.18"
-        },
-        {
-          "label": "Buy dates",
-          "value": "2026-09-15 → 2026-09-23"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "i0",
-          "label": "Stark Eugene S",
-          "met": true,
-          "detail": "VP Administration: $234K (10,000 sh) on 2026-09-15, 2026-09-23"
-        },
-        {
-          "key": "i1",
-          "label": "Davidson Spencer",
-          "met": true,
-          "detail": "Chairman: $228K (10,000 sh) on 2026-09-23"
-        },
-        {
-          "key": "i2",
-          "label": "Priest Jeffrey W",
-          "met": true,
-          "detail": "President & CEO: $94K (4,000 sh) on 2026-09-18"
-        },
-        {
-          "key": "i3",
-          "label": "Jin Samantha X.",
-          "met": true,
-          "detail": "Treasurer/PAO/PFO: $71K (3,000 sh) on 2026-09-17"
-        },
-        {
-          "key": "i4",
-          "label": "Grassi Craig Anthony",
-          "met": true,
-          "detail": "Vice-President: $46K (2,000 sh) on 2026-09-22"
-        }
-      ],
-      "risks": [
-        "No data-driven red flags; insiders can still be wrong"
-      ],
-      "analystRating": "n/a (0 analysts)",
-      "priceTarget": null,
-      "transactions": [
-        {
-          "insider": "Stark Eugene S",
-          "date": "2026-09-23",
-          "shares": 5000.0,
-          "price": 22.75,
-          "value": 113750.0,
-          "accession": "0000040417-26-000051"
-        },
-        {
-          "insider": "DAVIDSON SPENCER",
-          "date": "2026-09-23",
-          "shares": 10000.0,
-          "price": 22.75,
-          "value": 227500.0,
-          "accession": "0000040417-26-000052"
-        },
-        {
-          "insider": "Grassi Craig Anthony",
-          "date": "2026-09-22",
-          "shares": 2000.0,
-          "price": 23.08,
-          "value": 46160.0,
-          "accession": "0000040417-26-000050"
-        },
-        {
-          "insider": "Priest Jeffrey W",
-          "date": "2026-09-18",
-          "shares": 4000.0,
-          "price": 23.46,
-          "value": 93840.0,
-          "accession": "0000040417-26-000049"
-        },
-        {
-          "insider": "Jin Samantha X.",
-          "date": "2026-09-17",
-          "shares": 1000.0,
-          "price": 23.66,
-          "value": 23660.0,
-          "accession": "0000040417-26-000048"
-        },
-        {
-          "insider": "Jin Samantha X.",
-          "date": "2026-09-17",
-          "shares": 2000.0,
-          "price": 23.69,
-          "value": 47380.0,
-          "accession": "0000040417-26-000048"
-        },
-        {
-          "insider": "Stark Eugene S",
-          "date": "2026-09-15",
-          "shares": 5000.0,
-          "price": 24.0,
-          "value": 120000.0,
-          "accession": "0000040417-26-000047"
-        }
-      ],
-      "sourceUrl": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000040417&type=4&dateb=&owner=include&count=40",
-        "https://stockanalysis.com/stocks/gam/statistics/"
-      ],
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": null,
-        "peg": null,
-        "chg3mPct": 0.95,
-        "chg6mPct": 4.56,
-        "chg1yPct": 2.5,
-        "relStrength1yPct": -14.84,
-        "priceAsOf": "2026-10-13",
-        "notes": [
-          "StockAnalysis statistics unavailable (HTTP Error 404: Not Found)"
-        ]
-      },
-      "grades": {
-        "growth": "n/a",
-        "value": "n/a",
-        "momentum": "B+",
-        "profitability": "n/a"
-      },
-      "gradeInputs": {
-        "growth": "0/2",
-        "value": "0/3",
-        "momentum": "3/3",
-        "profitability": "0/4"
       }
     },
     {
@@ -1695,8 +1180,9 @@
       "forwardPE": 14.87,
       "peg": "n/a",
       "revenueGrowth": "n/a",
-      "score": 3,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 3,
       "totalBought": 77473014.06,
       "firstBuy": "2026-09-21",
@@ -1814,6 +1300,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326380&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/gme/statistics/"
       ],
+      "grades": {
+        "growth": "n/a",
+        "value": "C",
+        "momentum": "A",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "0/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 14.87,
@@ -1829,18 +1327,6 @@
         "chg1yPct": 15.39,
         "relStrength1yPct": -1.95,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "n/a",
-        "value": "C-",
-        "momentum": "A",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "0/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1853,8 +1339,9 @@
       "forwardPE": 5.89,
       "peg": 0.18,
       "revenueGrowth": "n/a",
-      "score": 3,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 3,
       "totalBought": 2293811.0,
       "firstBuy": "2026-09-15",
@@ -1948,6 +1435,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001788257&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/bwmx/statistics/"
       ],
+      "grades": {
+        "growth": "B-",
+        "value": "A+",
+        "momentum": "B",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 5.89,
@@ -1963,18 +1462,6 @@
         "chg1yPct": 29.48,
         "relStrength1yPct": 12.14,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "B",
-        "value": "A+",
-        "momentum": "B-",
-        "profitability": "C+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1987,8 +1474,9 @@
       "forwardPE": 33.76,
       "peg": 5.97,
       "revenueGrowth": "n/a",
-      "score": 3,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 3,
       "totalBought": 1944071.6,
       "firstBuy": "2026-09-16",
@@ -2066,6 +1554,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000917251&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/adc/statistics/"
       ],
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "C",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 33.76,
@@ -2081,18 +1581,6 @@
         "chg1yPct": -10.02,
         "relStrength1yPct": -27.36,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "F",
-        "momentum": "D+",
-        "profitability": "A"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2105,8 +1593,9 @@
       "forwardPE": 11.52,
       "peg": 1.86,
       "revenueGrowth": "n/a",
-      "score": 3,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 3,
       "totalBought": 1744758.43,
       "firstBuy": "2026-09-22",
@@ -2184,6 +1673,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001089063&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/dks/statistics/"
       ],
+      "grades": {
+        "growth": "F",
+        "value": "B",
+        "momentum": "D-",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 11.52,
@@ -2199,22 +1700,8 @@
         "chg1yPct": -40.12,
         "relStrength1yPct": -57.46,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "B-",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
-    }
-  ],
-  "bench": [
+    },
     {
       "company": "Karman Holdings Inc.",
       "ticker": "KRMN",
@@ -2225,8 +1712,9 @@
       "forwardPE": 39.39,
       "peg": "n/a",
       "revenueGrowth": "n/a",
-      "score": 3,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 3,
       "totalBought": 1036485.3,
       "firstBuy": "2026-09-16",
@@ -2306,7 +1794,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002040127&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/krmn/statistics/"
       ],
-      "rank": 1,
+      "grades": {
+        "growth": "B+",
+        "value": "F",
+        "momentum": "F",
+        "profitability": "C-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 39.39,
@@ -2322,18 +1821,6 @@
         "chg1yPct": -61.87,
         "relStrength1yPct": -79.21,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "B+",
-        "value": "D-",
-        "momentum": "F",
-        "profitability": "D+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2346,8 +1833,9 @@
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "n/a",
-      "score": 3,
-      "alsoIn": [],
+      "alsoIn": [
+        "Insider Buys"
+      ],
       "insiderCount": 3,
       "totalBought": 405048.46,
       "firstBuy": "2026-09-22",
@@ -2425,7 +1913,18 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001510599&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/pdi/statistics/"
       ],
-      "rank": 2,
+      "grades": {
+        "growth": "n/a",
+        "value": "n/a",
+        "momentum": "D",
+        "profitability": "n/a"
+      },
+      "gradeInputs": {
+        "growth": "0/2",
+        "value": "0/3",
+        "momentum": "3/3",
+        "profitability": "0/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": null,
@@ -2438,20 +1937,10 @@
         "notes": [
           "StockAnalysis statistics unavailable (HTTP Error 404: Not Found)"
         ]
-      },
-      "grades": {
-        "growth": "n/a",
-        "value": "n/a",
-        "momentum": "D-",
-        "profitability": "n/a"
-      },
-      "gradeInputs": {
-        "growth": "0/2",
-        "value": "0/3",
-        "momentum": "3/3",
-        "profitability": "0/4"
       }
-    },
+    }
+  ],
+  "bench": [
     {
       "company": "Limbach Holdings Inc.",
       "ticker": "LMB",
@@ -2462,7 +1951,6 @@
       "forwardPE": 15.54,
       "peg": 1.58,
       "revenueGrowth": "n/a",
-      "score": 3,
       "alsoIn": [],
       "insiderCount": 3,
       "totalBought": 338904.61,
@@ -2558,7 +2046,19 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001606163&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/lmb/statistics/"
       ],
-      "rank": 3,
+      "rank": 1,
+      "grades": {
+        "growth": "D",
+        "value": "B-",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 15.54,
@@ -2574,18 +2074,6 @@
         "chg1yPct": -44.33,
         "relStrength1yPct": -61.67,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "D",
-        "value": "C+",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2598,7 +2086,6 @@
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "n/a",
-      "score": 3,
       "alsoIn": [],
       "insiderCount": 3,
       "totalBought": 267670.0,
@@ -2709,7 +2196,19 @@
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002020932&type=4&dateb=&owner=include&count=40",
         "https://stockanalysis.com/stocks/agmb/statistics/"
       ],
-      "rank": 4,
+      "rank": 2,
+      "grades": {
+        "growth": "n/a",
+        "value": "n/a",
+        "momentum": "D+",
+        "profitability": "n/a"
+      },
+      "gradeInputs": {
+        "growth": "0/2",
+        "value": "0/3",
+        "momentum": "2/3",
+        "profitability": "0/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": null,
@@ -2725,25 +2224,13 @@
         "chg1yPct": null,
         "relStrength1yPct": null,
         "priceAsOf": "2026-10-13"
-      },
-      "grades": {
-        "growth": "n/a",
-        "value": "n/a",
-        "momentum": "D",
-        "profitability": "n/a"
-      },
-      "gradeInputs": {
-        "growth": "0/2",
-        "value": "0/3",
-        "momentum": "2/3",
-        "profitability": "0/4"
       }
     }
   ],
   "grading": {
     "asOf": "2026-10-14",
     "spy1yPct": 17.34,
-    "pool": "16 stocks (this list's picks + bench)",
+    "pool": "14 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",

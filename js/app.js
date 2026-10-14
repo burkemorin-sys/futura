@@ -696,7 +696,7 @@
   const growthState = new Proxy({}, { get: (_, k) => gMode.state[k], set: (_, k, v) => { gMode.state[k] = v; return true; } });
   const SORTS = {
     default: { label: "Default order" },
-    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early", "experiment", "piotroski", "insider"] },
+    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early", "experiment", "piotroski"] },
     growth: { label: "Revenue growth", key: (p) => pctNum(p.revenueGrowth), dir: -1 },
     upside: { label: "Upside to target", key: (p) => upside(p), dir: -1 },
     peg: { label: "PEG (low → high)", key: (p) => num(p.peg), dir: 1 },
