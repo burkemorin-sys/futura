@@ -38,6 +38,7 @@ LISTS = {
     "experiment": {"file": os.path.join(ROOT, "data", "experiment-screener.json"), "label": "Experiment Screener"},
     "piotroski": {"file": os.path.join(ROOT, "data", "piotroski.json"), "label": "Piotroski"},
     "magic": {"file": os.path.join(ROOT, "data", "magic-formula.json"), "label": "Magic Formula"},
+    "insider": {"file": os.path.join(ROOT, "data", "insider-clusters.json"), "label": "Insider Buys"},
 }
 BENCH = ["QQQ", "SPY"]
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
@@ -282,6 +283,8 @@ def main():
     for k, nm in (("piotroski", "Piotroski"), ("magic", "Magic Formula")):
         if k in data["lists"] and f"{nm} was added" not in data.get("method", ""):
             data["method"] += f" {nm} was added on Oct 10, 2026, starting at 100 on the {data['lists'][k]['startPriceDate']} close (no backfill)."
+    if "insider" in data["lists"] and "Insider Buys was added" not in data.get("method", ""):
+        data["method"] += f" Insider Buys was added on Oct 14, 2026, starting at 100 on the {data['lists']['insider']['startPriceDate']} close (no backfill)."
     recompute(data)
     with open(TRACK, "w") as f:
         json.dump(data, f, indent=1)

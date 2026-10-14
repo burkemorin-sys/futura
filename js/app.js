@@ -406,6 +406,7 @@
     { id: "experiment", label: "Experiment Screener", short: "Exp", icon: "flask", render: renderExperiment, overflow: true },
     { id: "piotroski", label: "Piotroski", short: "F-Score", icon: "shield9", render: renderPiotroski, overflow: true },
     { id: "magic", label: "Magic Formula", short: "Magic", icon: "wand", render: renderMagic, overflow: true },
+    { id: "insider", label: "Insider Buys", short: "Insiders", icon: "growth", render: renderInsider, overflow: true },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex"), overflow: true },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla"), overflow: true },
     { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch },
@@ -688,13 +689,14 @@
     early: { id: "early", file: "data/early-inflection.json", example: null, dismissKey: "earlyDismissed", sortKey: "earlySort", title: "Early Inflection", sub: "Turning up, not yet run · the LITE 2025 pattern", scoreLabel: "Early Inflection score", banner: "EARLY-STAGE", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("earlySort") || "default" } },
     experiment: { id: "experiment", file: "data/experiment-screener.json", example: null, dismissKey: "expDismissed", sortKey: "expSort", title: "Experiment Screener", sub: "Your 8 rules: ROIC, cash flow, EPS & revenue growth, Stage 2, RSI 50–65", scoreLabel: "Experiment score", banner: "EXPERIMENT", checklistTitle: "Your 8 rules", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("expSort") || "default" } },
     piotroski: { id: "piotroski", file: "data/piotroski.json", example: null, dismissKey: "pioDismissed", sortKey: "pioSort", title: "Piotroski", sub: "F-Score 8–9 among the cheapest fifth by price-to-book", scoreLabel: "F-Score", banner: "VALUE", checklistTitle: "F-Score tests", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("pioSort") || "default" } },
+    insider: { id: "insider", file: "data/insider-clusters.json", example: null, dismissKey: "insiderDismissed", sortKey: "insiderSort", title: "Insider Buys", sub: "3+ insiders bought on the open market in 30 days · SEC Form 4", scoreLabel: "Insiders buying", banner: "INSIDERS", checklistTitle: "Who bought", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("insiderSort") || "default" } },
     magic: { id: "magic", file: "data/magic-formula.json", example: null, dismissKey: "magicDismissed", sortKey: "magicSort", title: "Magic Formula", sub: "Greenblatt: high earnings yield + high return on capital", banner: "VALUE", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("magicSort") || "default" } },
   };
   let gMode = GROWTH_MODES.growth;
   const growthState = new Proxy({}, { get: (_, k) => gMode.state[k], set: (_, k, v) => { gMode.state[k] = v; return true; } });
   const SORTS = {
     default: { label: "Default order" },
-    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early", "experiment", "piotroski"] },
+    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early", "experiment", "piotroski", "insider"] },
     growth: { label: "Revenue growth", key: (p) => pctNum(p.revenueGrowth), dir: -1 },
     upside: { label: "Upside to target", key: (p) => upside(p), dir: -1 },
     peg: { label: "PEG (low → high)", key: (p) => num(p.peg), dir: 1 },
@@ -736,6 +738,7 @@
   function renderRiskIt(el) { gMode = GROWTH_MODES.riskit; return loadGrowth(el); }
   function renderEarly(el) { gMode = GROWTH_MODES.early; return loadGrowth(el); }
   function renderPiotroski(el) { gMode = GROWTH_MODES.piotroski; return loadGrowth(el); }
+  function renderInsider(el) { gMode = GROWTH_MODES.insider; return loadGrowth(el); }
   function renderMagic(el) { gMode = GROWTH_MODES.magic; return loadGrowth(el); }
   function renderExperiment(el) { gMode = GROWTH_MODES.experiment; return loadGrowth(el); }
   async function renderGrowth(el) { gMode = GROWTH_MODES.growth; return loadGrowth(el); }
@@ -1031,7 +1034,7 @@
     const benchRet = (s) => (s && s.length ? s[s.length - 1][1] - 100 : null);
     const summary = Object.entries(d.lists).map(([k, L]) => {
       const hr = L.hitRate || {};
-      return `<button type="button" class="panel tr-sum ${k === "riskit" ? "is-risk" : k === "early" ? "is-early" : k === "experiment" ? "is-exp" : k === "piotroski" ? "is-pio" : k === "magic" ? "is-magic" : ""}${trackState.list === k ? " is-active" : ""}" data-list="${esc(k)}" aria-pressed="${trackState.list === k}">
+      return `<button type="button" class="panel tr-sum ${k === "riskit" ? "is-risk" : k === "early" ? "is-early" : k === "experiment" ? "is-exp" : k === "piotroski" ? "is-pio" : k === "magic" ? "is-magic" : k === "insider" ? "is-ins" : ""}${trackState.list === k ? " is-active" : ""}" data-list="${esc(k)}" aria-pressed="${trackState.list === k}">
         <span class="tr-sum-label">${esc(L.label)}</span>${(L.startPriceDate || L.startDate) && (L.startPriceDate || L.startDate) !== d.baseDate ? `<span class="tr-sum-since">from ${esc(fmtShortDate(L.startPriceDate || L.startDate).replace(/, \d{4}$/, ""))} close</span>` : ""}
         <span class="tr-sum-ret ${retTone(L.returnPct)}">${esc(fmtRet(L.returnPct))}</span>
         <span class="tr-sum-vs">vs QQQ <b class="${retTone(L.vsQQQPct)}">${esc(fmtRet(L.vsQQQPct).replace("%", " pts"))}</b> · vs SPY <b class="${retTone(L.vsSPYPct)}">${esc(fmtRet(L.vsSPYPct).replace("%", " pts"))}</b></span>
@@ -1044,6 +1047,7 @@
       ...(d.lists.early ? [{ label: "Early Inflection", cls: "l-early", points: d.lists.early.series || [] }] : []),
       ...(d.lists.piotroski ? [{ label: "Piotroski", cls: "l-pio", points: d.lists.piotroski.series || [] }] : []),
       ...(d.lists.magic ? [{ label: "Magic Formula", cls: "l-magic", points: d.lists.magic.series || [] }] : []),
+      ...(d.lists.insider ? [{ label: "Insider Buys", cls: "l-ins", points: d.lists.insider.series || [] }] : []),
       ...(d.lists.experiment ? [{ label: "Experiment", cls: "l-exp", points: d.lists.experiment.series || [] }] : []),
       { label: "QQQ", cls: "l-qqq", points: qqq || [] },
       { label: "SPY", cls: "l-spy", points: spy || [] },
@@ -1325,7 +1329,7 @@
         ${rc.caveat ? `<p class="fineprint top">${esc(rc.caveat)}</p>` : ""}
         ${(rc.sources || []).length ? `<div class="srcs tbl-src">${rc.sources.map((x) => srcLink(x.url, x.label)).join("")}</div>` : ""}
       </div>` : "";
-    const routes = { "Growth": "#/growth", "Risk It": "#/riskit", "Early Inflection": "#/early", "Experiment Screener": "#/experiment", "Piotroski": "#/piotroski", "Magic Formula": "#/magic" };
+    const routes = { "Growth": "#/growth", "Risk It": "#/riskit", "Early Inflection": "#/early", "Experiment Screener": "#/experiment", "Piotroski": "#/piotroski", "Magic Formula": "#/magic", "Insider Buys": "#/insider" };
     const lists = (Array.isArray(d.listContext) ? d.listContext : []).filter((c) => c && c.list);
     const listPanels = lists.map((c) => {
       const isRisk = c.list === "Risk It", route = routes[c.list] || "#/";
@@ -2104,6 +2108,7 @@
     { id: "experiment", title: "Experiment Screener", icon: "flask", fallback: "Your 8-rule screen: high ROIC, cash-rich, EPS + revenue growth, Stage 2 uptrend, RSI 50–65" },
     { id: "piotroski", title: "Piotroski", icon: "shield9", fallback: "Cheap stocks (lowest price-to-book fifth) with an F-Score of 8 or 9" },
     { id: "magic", title: "Magic Formula", icon: "wand", fallback: "Greenblatt's ranking: high earnings yield plus high return on capital" },
+    { id: "insider", title: "Insider Buys", icon: "growth", fallback: "Cluster buys: 3+ insiders bought over $250K of stock in 30 days (SEC Form 4)" },
     { id: "track", title: "Track Record", icon: "chart", fallback: "How the Growth, Risk It, Early Inflection and Experiment picks are doing vs QQQ and SPY" },
     { id: "cassiopeia", title: "Cassiopeia", icon: "cas", fallback: "The five stars behind the Futura W" },
   ];

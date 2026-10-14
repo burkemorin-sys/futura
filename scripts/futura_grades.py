@@ -41,7 +41,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILES = {"growth": os.path.join(ROOT, "data", "growth-picks.json"), "riskit": os.path.join(ROOT, "data", "risk-it.json"),
          "early": os.path.join(ROOT, "data", "early-inflection.json"),
          "experiment": os.path.join(ROOT, "data", "experiment-screener.json"),
-         "piotroski": os.path.join(ROOT, "data", "piotroski.json"), "magic": os.path.join(ROOT, "data", "magic-formula.json")}
+         "piotroski": os.path.join(ROOT, "data", "piotroski.json"), "magic": os.path.join(ROOT, "data", "magic-formula.json"),
+         "insider": os.path.join(ROOT, "data", "insider-clusters.json")}
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 LETTERS = [(97, "A+"), (90, "A"), (83, "A-"), (77, "B+"), (70, "B"), (63, "B-"), (57, "C+"), (50, "C"),
            (43, "C-"), (37, "D+"), (30, "D"), (23, "D-"), (0, "F")]
@@ -276,7 +277,7 @@ def main():
 
 
 # ---------------- Search deep dives ----------------
-LIST_LABELS = {"growth": "Growth", "riskit": "Risk It", "early": "Early Inflection", "experiment": "Experiment Screener", "piotroski": "Piotroski", "magic": "Magic Formula"}
+LIST_LABELS = {"growth": "Growth", "riskit": "Risk It", "early": "Early Inflection", "experiment": "Experiment Screener", "piotroski": "Piotroski", "magic": "Magic Formula", "insider": "Insider Buys"}
 
 
 def company_files():
@@ -306,7 +307,7 @@ def reference_pool():
     return pool, counts, early
 
 
-LIST_ROUTES = {"growth": "#/growth", "riskit": "#/riskit", "early": "#/early", "experiment": "#/experiment", "piotroski": "#/piotroski", "magic": "#/magic"}
+LIST_ROUTES = {"growth": "#/growth", "riskit": "#/riskit", "early": "#/early", "experiment": "#/experiment", "piotroski": "#/piotroski", "magic": "#/magic", "insider": "#/insider"}
 
 
 def list_context(t, files=None):

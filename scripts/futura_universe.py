@@ -33,7 +33,7 @@ def also_in():
     import os
     out = ei.load_also_in()
     for fn, label in (("early-inflection.json", "Early Inflection"), ("experiment-screener.json", "Experiment"),
-                      ("piotroski.json", "Piotroski"), ("magic-formula.json", "Magic Formula")):
+                      ("piotroski.json", "Piotroski"), ("magic-formula.json", "Magic Formula"), ("insider-clusters.json", "Insider Buys")):
         try:
             d = json.load(open(os.path.join(ei.ROOT, "data", fn)))
         except Exception:  # noqa: BLE001

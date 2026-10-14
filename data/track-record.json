@@ -3,7 +3,7 @@
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
  "lastUpdated": "2026-10-14",
- "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill).",
+ "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Insider Buys was added on Oct 14, 2026, starting at 100 on the 2026-10-13 close (no backfill).",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
   "SPY": "SPDR S&P 500 ETF"
@@ -348,7 +348,19 @@
    "UCTT": 61.02,
    "KLIC": 88.54,
    "MO": 71.56,
-   "TXN": 287.85
+   "TXN": 287.85,
+   "BBD": 4.19,
+   "SPG": 200.65,
+   "HEI": 296.73,
+   "FUL": 50.44,
+   "SBLK": 29.79,
+   "RWT": 3.05,
+   "ACCV": 15.31,
+   "GAM": 64.85,
+   "GME": 27.22,
+   "BWMX": 16.34,
+   "ADC": 65.41,
+   "DKS": 137.55
   }
  },
  "lists": {
@@ -2547,6 +2559,227 @@
     "of": 13,
     "openBeat": 9,
     "openOf": 12
+   }
+  },
+  "insider": {
+   "label": "Insider Buys",
+   "startDate": "2026-10-14",
+   "startPriceDate": "2026-10-13",
+   "holdings": [
+    {
+     "ticker": "BBD",
+     "company": "Banco Bradesco Sa",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 4.19,
+     "lastPrice": 4.19,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "SPG",
+     "company": "Simon Property Group Inc.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 200.65,
+     "lastPrice": 200.65,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "HEI",
+     "company": "Heico Corporation",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 296.73,
+     "lastPrice": 296.73,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "FUL",
+     "company": "H. B. Fuller Company",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 50.44,
+     "lastPrice": 50.44,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "SBLK",
+     "company": "Star Bulk Carriers Corp.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 29.79,
+     "lastPrice": 29.79,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "RWT",
+     "company": "Redwood Trust Inc.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 3.05,
+     "lastPrice": 3.05,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "ACCV",
+     "company": "Accelevation Holdings Corp.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 15.31,
+     "lastPrice": 15.31,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "GAM",
+     "company": "General American Investors Inc.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 64.85,
+     "lastPrice": 64.85,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "GME",
+     "company": "GameStop Corporation",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 27.22,
+     "lastPrice": 27.22,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "BWMX",
+     "company": "Betterware de Mexico S.A.P.I. de C.V.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 16.34,
+     "lastPrice": 16.34,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "ADC",
+     "company": "Agree Realty Corporation",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 65.41,
+     "lastPrice": 65.41,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "DKS",
+     "company": "Dick's Sporting Goods Inc",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 137.55,
+     "lastPrice": 137.55,
+     "lastPriceDate": "2026-10-13",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    }
+   ],
+   "closed": [],
+   "segments": [
+    {
+     "start": "2026-10-13",
+     "startValue": 100.0,
+     "tickers": [
+      "BBD",
+      "SPG",
+      "HEI",
+      "FUL",
+      "SBLK",
+      "RWT",
+      "ACCV",
+      "GAM",
+      "GME",
+      "BWMX",
+      "ADC",
+      "DKS"
+     ]
+    }
+   ],
+   "log": [
+    {
+     "date": "2026-10-14",
+     "priceDate": "2026-10-13",
+     "action": "start",
+     "note": "Tracking began with the 12 published Insider Buys picks at the 2026-10-13 close",
+     "tickers": [
+      "BBD",
+      "SPG",
+      "HEI",
+      "FUL",
+      "SBLK",
+      "RWT",
+      "ACCV",
+      "GAM",
+      "GME",
+      "BWMX",
+      "ADC",
+      "DKS"
+     ]
+    }
+   ],
+   "series": [
+    [
+     "2026-10-13",
+     100.0
+    ]
+   ],
+   "returnPct": 0.0,
+   "vsQQQPct": 0.0,
+   "vsSPYPct": 0.0,
+   "hitRate": {
+    "beat": 0,
+    "of": 0,
+    "openBeat": 0,
+    "openOf": 0
    }
   }
  },
