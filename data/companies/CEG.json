@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14",
+  "lastUpdated": "2026-10-15",
   "company": "Constellation Energy",
   "ticker": "CEG",
   "exchange": "NASDAQ",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "The largest US nuclear fleet operator, and since buying Calpine in January 2026 also the largest US wholesale generator (gas, geothermal), selling long-term carbon-free power to hyperscalers.",
   "snapshot": {
-    "price": 295.79,
-    "change": "+0.65%",
-    "asOf": "Oct 13, 2026 close",
-    "marketCap": "$104.8B",
+    "price": 279.54,
+    "change": "−5.49%",
+    "asOf": "Oct 14, 2026 close",
+    "marketCap": "$99.0B",
     "range52w": "$236.50 – $403.95 (closes)",
     "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/ceg/historical"
   },
@@ -123,13 +123,13 @@
     "notesSourceUrl": "https://www.constellationenergy.com/news/2026/08/constellation-reports-second-quarter-2026-results.html",
     "analyst": {
       "rating": "Buy",
-      "count": 22,
-      "priceTarget": "$341.53",
-      "upside": "+15.5%",
+      "count": 23,
+      "priceTarget": "$336.60",
+      "upside": "+20.4%",
       "sourceUrl": "https://stockanalysis.com/stocks/ceg/forecast/",
       "calls": [
         {
-          "text": "Consensus Buy across 22 analysts; average target $341.53 (+14.6% vs the Oct 9 close)",
+          "text": "Consensus Buy across 23 analysts; average target $336.60 (+20.4% vs the Oct 14 close)",
           "url": "https://stockanalysis.com/stocks/ceg/statistics/"
         },
         {
@@ -407,6 +407,13 @@
   },
   "news": [
     {
+      "date": "2026-10-14",
+      "outlet": "Blockonomi",
+      "title": "Constellation falls 5.5% even as it closes the Brazos Valley plant sale to LS Power",
+      "summary": "Constellation completed the sale of the 606-MW Brazos Valley gas plant near Houston, part of the antitrust divestitures tied to its $16.4B Calpine deal; a ~$5B sale of about 4.4 GW in Delaware and Pennsylvania to LS Power is still expected to close by year-end. CEG closed at $279.54 in the broad market selloff.",
+      "url": "https://blockonomi.com/constellation-energy-ceg-stock-plunges-5-49-despite-completing-major-power-plant-sale-to-ls-power/"
+    },
+    {
       "date": "2026-10-12",
       "outlet": "GuruFocus",
       "title": "FERC rejects PJM's plan to connect data centers without new capacity",
@@ -478,9 +485,9 @@
     }
   ],
   "grades": {
-    "growth": "D-",
+    "growth": "D",
     "value": "F",
-    "momentum": "C+",
+    "momentum": "C",
     "profitability": "D"
   },
   "gradeInputs": {
@@ -490,27 +497,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 23.891,
-    "peg": 1.531,
+    "forwardPE": 22.579,
+    "peg": 1.446,
     "revenueGrowthPct": 25.98,
     "revenueGrowthQuarter": "2026-06-30",
-    "epsGrowth3yPct": 20.72,
-    "evSales": 4.12,
+    "epsGrowth3yPct": 20.58,
+    "evSales": 3.93,
     "grossMarginPct": 22.107,
     "operatingMarginPct": 15.05,
     "netMarginPct": 11.081,
     "fcfMarginPct": 0.943,
-    "chg3mPct": 14.84,
-    "chg6mPct": 1.4,
-    "chg1yPct": -22.35,
-    "relStrength1yPct": -39.69,
-    "priceAsOf": "2026-10-13"
+    "chg3mPct": 9.01,
+    "chg6mPct": -5.76,
+    "chg1yPct": -28.24,
+    "relStrength1yPct": -44.45,
+    "priceAsOf": "2026-10-14"
   },
   "grading": {
-    "asOf": "2026-10-14",
-    "spy1yPct": 17.34,
-    "pool": "Ranked against 138 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 9, Piotroski 17, Magic Formula 29, duplicates counted once), plus CEG itself",
-    "poolSize": 138,
+    "asOf": "2026-10-15",
+    "spy1yPct": 16.21,
+    "pool": "Ranked against 149 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 8, Piotroski 17, Magic Formula 27, Insider Buys 13, duplicates counted once), plus CEG itself",
+    "poolSize": 149,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -525,19 +532,19 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-14",
-    "priceDate": "2026-10-13",
+    "asOf": "2026-10-15",
+    "priceDate": "2026-10-14",
     "inScreen": false,
-    "outsideScreenReason": "market cap $104.8B is outside the screen's $1B-$30B range",
-    "score": 48,
+    "outsideScreenReason": "market cap $99.0B is outside the screen's $1B-$30B range",
+    "score": 45,
     "scoreParts": {
       "rev": 3.3,
       "margin": 0,
       "forward": 7.2,
-      "value": 11.2,
+      "value": 11.7,
       "notRun": 10,
-      "trend": 8,
-      "analysts": 4.9,
+      "trend": 4,
+      "analysts": 5.4,
       "theme": 3
     },
     "penalty": 0,
@@ -570,31 +577,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": true,
-        "detail": "Forward P/E 23.891, EV/forward sales 3.5x"
+        "detail": "Forward P/E 22.579, EV/forward sales 3.4x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr -22% vs SPY +17%"
+        "detail": "1-yr -28% vs SPY +16%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": true,
-        "detail": "-27% vs 52-week high"
+        "detail": "-31% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
-        "met": true,
-        "detail": "Above 200-day; 3-month vs SPY +12 pts"
+        "met": false,
+        "detail": "Below 200-day; 3-month vs SPY +6 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": true,
-        "detail": "Buy (22), +15% to target"
+        "detail": "Buy (23), +20% to target"
       },
       {
         "key": "revisions",
@@ -607,15 +614,16 @@
       "Revenue: latest quarter +23% YoY vs +64% the quarter before and +11% a year earlier (halved: goodwill/intangibles up 21% of assets in a year suggests acquisition-driven growth) → 3/20",
       "Margins: gross n/a, operating n/a YoY (last 2 quarters) → 0/15",
       "Forward: next-12-month revenue +16% (implied), 3-yr EPS growth forecast +21% a year → 7/15",
-      "Valuation: forward P/E 23.891, EV/forward sales 3.5x → 11/15",
-      "Not already run: 1-yr -22%, -27% vs 52-week high → 10/10",
-      "Trend: price above 200-day, above 50-day, 3-month vs SPY +12 pts → 8/10",
-      "Analysts: Buy (22), +15% to target → 5/10",
+      "Valuation: forward P/E 22.579, EV/forward sales 3.4x → 12/15",
+      "Not already run: 1-yr -28%, -31% vs 52-week high → 10/10",
+      "Trend: price below 200-day, above 50-day, 3-month vs SPY +6 pts → 4/10",
+      "Analysts: Buy (23), +20% to target → 5/10",
       "Bottleneck theme: Adjacent to AI infrastructure (Independent Power Producers) → 3/5"
     ],
     "risks": [
-      "Net debt $24.0B (23% of market cap)",
-      "Recent acquisition (goodwill/intangibles up 21% of assets in a year): part of the revenue jump is bought, not organic"
+      "Net debt $24.0B (24% of market cap)",
+      "Recent acquisition (goodwill/intangibles up 21% of assets in a year): part of the revenue jump is bought, not organic",
+      "Still below its 200-day average: the turn isn't confirmed"
     ],
     "keyFigures": [
       {
@@ -632,15 +640,15 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "3.5x"
+        "value": "3.4x"
       },
       {
         "label": "1-yr move",
-        "value": "-22%"
+        "value": "-28%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-27%"
+        "value": "-31%"
       }
     ],
     "eiMetrics": {
@@ -653,33 +661,33 @@
       "om": null,
       "gmChg": null,
       "omChg": null,
-      "fwdRevGrowth": 16.27,
-      "eps3y": 20.72,
-      "fpe": 23.89,
-      "evSales": 4.12,
-      "evFwdSales": 3.54,
-      "peg": 1.53,
-      "ch1y": -19.73,
-      "pt": 341.53,
+      "fwdRevGrowth": 16.31,
+      "eps3y": 20.58,
+      "fpe": 22.58,
+      "evSales": 3.93,
+      "evFwdSales": 3.38,
+      "peg": 1.45,
+      "ch1y": -26.61,
+      "pt": 336.6,
       "rating": "Buy",
-      "analysts": 22,
-      "psForward": 2.88,
+      "analysts": 23,
+      "psForward": 2.72,
       "netcash": -24003000000.0,
       "sharesYoY": 6.85,
       "shortFloat": 3.35,
       "beta": 1.13,
       "grossMarginTTM": 22.11,
-      "mcap": 104800579634.0,
-      "revUSD": 31274419467.02,
+      "mcap": 99043084726.0,
+      "revUSD": 31273471653.3,
       "currency": "USD",
       "lastQ": "2026-06-30",
-      "price": 295.79,
-      "priceDate": "2026-10-13",
-      "offHigh": -26.78,
-      "ch1yNasdaq": -22.35,
-      "rs3m": 11.87,
+      "price": 279.54,
+      "priceDate": "2026-10-14",
+      "offHigh": -30.8,
+      "ch1yNasdaq": -28.24,
+      "rs3m": 6.34,
       "acqJump": 20.94,
-      "upside": 15.46
+      "upside": 20.41
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/ceg/statistics/",

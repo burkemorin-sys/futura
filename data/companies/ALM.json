@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14",
+  "lastUpdated": "2026-10-15",
   "company": "Almonty Industries",
   "ticker": "ALM",
   "exchange": "NASDAQ",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "Tungsten miner: concentrate from Panasqueira (Portugal) and the newly restarted Sangdong mine (South Korea), with Gentung (Montana) and Spanish projects behind them. Canadian-incorporated, headquartered in Dillon, Montana, listed only on Nasdaq (plus a Frankfurt quote).",
   "snapshot": {
-    "price": 10.98,
-    "change": "−0.90%",
-    "asOf": "Oct 13, 2026 close",
-    "marketCap": "$3.2B",
+    "price": 10.19,
+    "change": "−7.19%",
+    "asOf": "Oct 14, 2026 close",
+    "marketCap": "$2.9B",
     "range52w": "$5.59 – $23.42 (closes)",
     "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/alm/historical"
   },
@@ -125,12 +125,12 @@
     "analyst": {
       "rating": "Strong Buy",
       "count": 11,
-      "priceTarget": "$24.52",
-      "upside": "+123.3%",
+      "priceTarget": "$24.21",
+      "upside": "+137.6%",
       "sourceUrl": "https://stockanalysis.com/stocks/alm/forecast/",
       "calls": [
         {
-          "text": "Consensus Strong Buy across 11 analysts; average target $24.52 (+121.3% vs the Oct 12 close)",
+          "text": "Consensus Strong Buy across 11 analysts; average target $24.21 (+137.6% vs the Oct 14 close)",
           "url": "https://stockanalysis.com/stocks/alm/statistics/"
         },
         {
@@ -384,6 +384,13 @@
   },
   "news": [
     {
+      "date": "2026-10-13",
+      "outlet": "Almonty Industries",
+      "title": "Almonty sets its 2026 Investor Day for Monday, Oct. 19",
+      "summary": "Management will webcast a tungsten-market overview and mine-by-mine update at 9 a.m. ET on Oct. 19, citing Sangdong now being commercially operational, Phase II moving forward, and new short-cycle supply at Los Santos and Rwanda. ALM fell 7.2% to $10.19 on Oct. 14 in the broad selloff.",
+      "url": "https://almonty.com/almonty-to-host-investor-day-october-19-2026/"
+    },
+    {
       "date": "2026-10-12",
       "outlet": "TipRanks (auto-generated)",
       "title": "Almonty falls 6.7% as traders question the quality of its profit surge",
@@ -455,7 +462,7 @@
     }
   ],
   "grades": {
-    "growth": "A-",
+    "growth": "A",
     "value": "F",
     "momentum": "F",
     "profitability": "C-"
@@ -467,27 +474,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 15.549,
+    "forwardPE": 14.502,
     "peg": null,
     "revenueGrowthPct": 204.55,
     "revenueGrowthQuarter": "2026-06-30",
     "epsGrowth3yPct": null,
-    "evSales": 47.6,
+    "evSales": 43.83,
     "grossMarginPct": 49.807,
     "operatingMarginPct": 5.222,
     "netMarginPct": 125.23,
-    "fcfMarginPct": -64.61,
-    "chg3mPct": -26.87,
-    "chg6mPct": -46.75,
-    "chg1yPct": 27.08,
-    "relStrength1yPct": 9.74,
-    "priceAsOf": "2026-10-13"
+    "fcfMarginPct": -64.66,
+    "chg3mPct": -35.47,
+    "chg6mPct": -53.26,
+    "chg1yPct": 2.31,
+    "relStrength1yPct": -13.9,
+    "priceAsOf": "2026-10-14"
   },
   "grading": {
-    "asOf": "2026-10-14",
-    "spy1yPct": 17.34,
-    "pool": "Ranked against 137 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 9, Piotroski 17, Magic Formula 29, duplicates counted once), plus ALM itself",
-    "poolSize": 137,
+    "asOf": "2026-10-15",
+    "spy1yPct": 16.21,
+    "pool": "Ranked against 148 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 8, Piotroski 17, Magic Formula 27, Insider Buys 13, duplicates counted once), plus ALM itself",
+    "poolSize": 148,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -502,8 +509,8 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-14",
-    "priceDate": "2026-10-13",
+    "asOf": "2026-10-15",
+    "priceDate": "2026-10-14",
     "inScreen": false,
     "outsideScreenReason": "commodity producer (Nasdaq industry: Other Metals and Minerals), excluded from the screen; TTM revenue under $100M",
     "score": 66,
@@ -511,7 +518,7 @@
       "rev": 10.0,
       "margin": 15.0,
       "forward": 10.0,
-      "value": 13.0,
+      "value": 13.5,
       "notRun": 8,
       "trend": 0,
       "analysts": 10.0,
@@ -547,31 +554,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": true,
-        "detail": "Forward P/E 15.549, EV/forward sales 4.4x"
+        "detail": "Forward P/E 14.502, EV/forward sales 4.1x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr +27% vs SPY +17%"
+        "detail": "1-yr +2% vs SPY +16%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": false,
-        "detail": "-53% vs 52-week high"
+        "detail": "-56% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
         "met": false,
-        "detail": "Below 200-day; 3-month vs SPY -34 pts"
+        "detail": "Below 200-day; 3-month vs SPY -29 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": true,
-        "detail": "Strong Buy (11), +123% to target"
+        "detail": "Strong Buy (11), +138% to target"
       },
       {
         "key": "revisions",
@@ -584,14 +591,14 @@
       "Revenue: latest quarter +498% YoY vs +221% the quarter before and -9% a year earlier (halved: share count +44% YoY suggests acquisition-driven growth) → 10/20",
       "Margins: gross +54.9 pts, operating +127.4 pts YoY (last 2 quarters) → 15/15",
       "Forward: next-12-month revenue +980% (implied), 3-yr EPS growth forecast n/a a year → 10/15",
-      "Valuation: forward P/E 15.549, EV/forward sales 4.4x → 13/15",
-      "Not already run: 1-yr +27%, -53% vs 52-week high → 8/10",
-      "Trend: price below 200-day, below 50-day, 3-month vs SPY -34 pts → 0/10",
-      "Analysts: Strong Buy (11), +123% to target → 10/10",
+      "Valuation: forward P/E 14.502, EV/forward sales 4.1x → 13/15",
+      "Not already run: 1-yr +2%, -56% vs 52-week high → 8/10",
+      "Trend: price below 200-day, below 50-day, 3-month vs SPY -29 pts → 0/10",
+      "Analysts: Strong Buy (11), +138% to target → 10/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
-      "Down 53% from its 52-week high: falling-knife risk",
+      "Down 56% from its 52-week high: falling-knife risk",
       "Share count +44% YoY (dilution or a stock-funded deal can flatter growth)",
       "Still below its 200-day average: the turn isn't confirmed",
       "Financials reported in CAD"
@@ -611,15 +618,15 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "4.4x"
+        "value": "4.1x"
       },
       {
         "label": "1-yr move",
-        "value": "+27%"
+        "value": "+2%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-53%"
+        "value": "-56%"
       }
     ],
     "eiMetrics": {
@@ -632,33 +639,33 @@
       "om": 37.51,
       "gmChg": 54.94,
       "omChg": 127.4,
-      "fwdRevGrowth": 979.81,
+      "fwdRevGrowth": 979.74,
       "eps3y": null,
-      "fpe": 15.55,
-      "evSales": 47.6,
-      "evFwdSales": 4.41,
+      "fpe": 14.5,
+      "evSales": 43.83,
+      "evFwdSales": 4.06,
       "peg": null,
-      "ch1y": 41.68,
-      "pt": 24.52,
+      "ch1y": 17.94,
+      "pt": 24.21,
       "rating": "Strong Buy",
       "analysts": 11,
-      "psForward": 4.86,
+      "psForward": 4.51,
       "netcash": 291594958.0,
       "sharesYoY": 44.05,
       "shortFloat": 9.65,
       "beta": 1.4,
       "grossMarginTTM": 49.81,
-      "mcap": 3167518635.0,
-      "revUSD": 60420002.58,
+      "mcap": 2939618843.0,
+      "revUSD": 60420094.2,
       "currency": "CAD",
       "lastQ": "2026-06-30",
-      "price": 10.98,
-      "priceDate": "2026-10-13",
-      "offHigh": -53.12,
-      "ch1yNasdaq": 27.08,
-      "rs3m": -33.94,
+      "price": 10.19,
+      "priceDate": "2026-10-14",
+      "offHigh": -56.49,
+      "ch1yNasdaq": 2.31,
+      "rs3m": -29.23,
       "acqJump": 0.0,
-      "upside": 123.32
+      "upside": 137.59
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/alm/statistics/",
@@ -673,24 +680,24 @@
       "role": "pick",
       "rank": 2,
       "of": 12,
-      "score": 85,
+      "score": 81,
       "riskLevel": "High",
       "drivers": [
         "Revenue growth +204.6% YoY (TTM) → 40/40",
         "Acceleration: TTM 204.6% vs FY2025 12.8% → 5/5",
-        "Momentum: 1-yr price +27.1% vs S&P 500 (SPY) +17.3% = relative strength +9.7% → 10/25",
-        "Upside to target +123.3% → 20/20",
+        "Momentum: 1-yr price +2.3% vs S&P 500 (SPY) +16.2% = relative strength -13.9% → 6/25",
+        "Upside to target +137.6% → 20/20",
         "Consensus Strong Buy (11) → 10/10",
         "Gross-margin trend (not scored): latest quarter 61.5% vs -9.4% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +498% YoY; consensus sees revenue +966% this fiscal year and +186% next.",
+      "trend": "Latest quarter (ended June 30, 2026) revenue +498% YoY; consensus sees revenue +900% this fiscal year and +199% next.",
       "risks": [
         "Tungsten price and single-mine (Sangdong) ramp-up risk; geopolitical supply-chain exposure",
         "Dilution: share count +44.1% YoY"
       ],
-      "priceDate": "2026-10-13",
-      "listUpdated": "2026-10-14",
+      "priceDate": "2026-10-14",
+      "listUpdated": "2026-10-15",
       "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 "
     }
   ],

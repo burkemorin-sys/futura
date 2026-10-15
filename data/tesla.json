@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14",
+  "lastUpdated": "2026-10-15",
   "company": "Tesla",
   "ticker": "TSLA",
   "exchange": "NASDAQ",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "EVs, energy storage, autonomy (FSD / Robotaxi / Cybercab) and Optimus robots.",
   "snapshot": {
-    "price": 375.23,
-    "change": "−0.74%",
-    "asOf": "Oct 13, 2026 close",
-    "marketCap": "$1.48T",
+    "price": 367.16,
+    "change": "−2.15%",
+    "asOf": "Oct 14, 2026 close",
+    "marketCap": "$1.45T",
     "range52w": "$297.38 – $498.83",
     "sourceUrl": "https://stockanalysis.com/stocks/tsla/"
   },
@@ -185,7 +185,7 @@
       "rating": "Buy",
       "count": 44,
       "priceTarget": "$397.83",
-      "upside": "+6.0%",
+      "upside": "+8.4%",
       "sourceUrl": "https://stockanalysis.com/stocks/tsla/",
       "calls": [
         {
@@ -391,6 +391,13 @@
   },
   "news": [
     {
+      "date": "2026-10-14",
+      "outlet": "Tesla News Wire",
+      "title": "Tesla slides 2.1% to $367 on the hot September CPI, a week before Q3 earnings",
+      "summary": "No Tesla-specific catalyst: September CPI ran 3.7% year over year (3.6% expected), lifting odds of a Fed hike at the Oct. 27-28 meeting and dragging big tech lower. TSLA closed at $367.16, about 4% below its Oct. 9 close. The Roadster event streams Thursday, Oct. 15, and Q3 results come after the close Oct. 21.",
+      "url": "https://teslanewswire.com/articles/tesla-stock-falls-367-hot-september-cpi-rate-hike-odds-week-before-q3-earnings"
+    },
+    {
       "date": "2026-10-13",
       "outlet": "Gotrade",
       "title": "Tesla slips 0.7% on light volume as BNP Paribas flags $25B+ spending",
@@ -466,19 +473,12 @@
       "title": "Musk welcomes German backing for FSD as Tesla chases EU approval",
       "summary": "Germany's transport minister backs prompt EU approval and accepts FSD exceeding speed limits by up to 10%; Sweden and France have concerns, and the EU vote has slipped from October to at least December. A Reuters special report detailed Tesla's European lobbying campaign.",
       "url": "https://money.usnews.com/investing/news/articles/2026-10-07/musk-welcomes-german-backing-for-tesla-driver-assistance-tech-as-group-chases-eu-approval"
-    },
-    {
-      "date": "2026-10-06",
-      "outlet": "Tesla North",
-      "title": "Germany pushes EU on FSD approval",
-      "summary": "An EU committee discussed FSD (Supervised) without a vote; a decision is expected in December, and Germany may approve on its own.",
-      "url": "https://teslanorth.com/2026/10/06/germany-eu-fsd-approval-push/"
     }
   ],
   "grades": {
     "growth": "D-",
     "value": "F",
-    "momentum": "C",
+    "momentum": "C-",
     "profitability": "F"
   },
   "gradeInputs": {
@@ -488,27 +488,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 191.219,
-    "peg": 10.192,
+    "forwardPE": 188.046,
+    "peg": 10.023,
     "revenueGrowthPct": 11.75,
     "revenueGrowthQuarter": "2026-06-30",
-    "epsGrowth3yPct": 23.12,
-    "evSales": 14.04,
+    "epsGrowth3yPct": 23.03,
+    "evSales": 13.73,
     "grossMarginPct": 18.852,
     "operatingMarginPct": 4.129,
     "netMarginPct": 3.671,
     "fcfMarginPct": 5.561,
-    "chg3mPct": -4.95,
-    "chg6mPct": 6.47,
-    "chg1yPct": -13.92,
-    "relStrength1yPct": -31.26,
-    "priceAsOf": "2026-10-13"
+    "chg3mPct": -7.32,
+    "chg6mPct": 0.81,
+    "chg1yPct": -14.46,
+    "relStrength1yPct": -30.67,
+    "priceAsOf": "2026-10-14"
   },
   "grading": {
-    "asOf": "2026-10-14",
-    "spy1yPct": 17.34,
-    "pool": "Ranked against 138 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 9, Piotroski 17, Magic Formula 29, duplicates counted once), plus TSLA itself",
-    "poolSize": 138,
+    "asOf": "2026-10-15",
+    "spy1yPct": 16.21,
+    "pool": "Ranked against 149 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 8, Piotroski 17, Magic Formula 27, Insider Buys 13, duplicates counted once), plus TSLA itself",
+    "poolSize": 149,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -523,10 +523,10 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-14",
-    "priceDate": "2026-10-13",
+    "asOf": "2026-10-15",
+    "priceDate": "2026-10-14",
     "inScreen": false,
-    "outsideScreenReason": "market cap $1.48T is outside the screen's $1B-$30B range",
+    "outsideScreenReason": "market cap $1.45T is outside the screen's $1B-$30B range",
     "score": 43,
     "scoreParts": {
       "rev": 17.6,
@@ -535,7 +535,7 @@
       "value": 0.0,
       "notRun": 10,
       "trend": 2,
-      "analysts": 3.7,
+      "analysts": 4.0,
       "theme": 0
     },
     "penalty": 0,
@@ -568,19 +568,19 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": false,
-        "detail": "Forward P/E 191.219, EV/forward sales 12.8x"
+        "detail": "Forward P/E 188.046, EV/forward sales 12.6x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr -14% vs SPY +17%"
+        "detail": "1-yr -14% vs SPY +16%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": true,
-        "detail": "-23% vs 52-week high"
+        "detail": "-25% vs 52-week high"
       },
       {
         "key": "trend",
@@ -592,7 +592,7 @@
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": false,
-        "detail": "Buy (44), +6% to target"
+        "detail": "Buy (44), +8% to target"
       },
       {
         "key": "revisions",
@@ -605,15 +605,15 @@
       "Revenue: latest quarter +26% YoY vs +16% the quarter before and -12% a year earlier → 18/20",
       "Margins: gross +2.2 pts, operating -0.5 pts YoY (last 2 quarters) → 4/15",
       "Forward: next-12-month revenue +9% (implied), 3-yr EPS growth forecast +23% a year → 6/15",
-      "Valuation: forward P/E 191.219, EV/forward sales 12.8x → 0/15",
-      "Not already run: 1-yr -14%, -23% vs 52-week high → 10/10",
+      "Valuation: forward P/E 188.046, EV/forward sales 12.6x → 0/15",
+      "Not already run: 1-yr -14%, -25% vs 52-week high → 10/10",
       "Trend: price below 200-day, above 50-day, 3-month vs SPY -9 pts → 2/10",
-      "Analysts: Buy (44), +6% to target → 4/10",
+      "Analysts: Buy (44), +8% to target → 4/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
       "Thin gross margin (17%) leaves little room for error",
-      "Rich forward P/E (191)",
+      "Rich forward P/E (188)",
       "Still below its 200-day average: the turn isn't confirmed"
     ],
     "keyFigures": [
@@ -631,7 +631,7 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "12.8x"
+        "value": "12.6x"
       },
       {
         "label": "1-yr move",
@@ -639,7 +639,7 @@
       },
       {
         "label": "vs 52-wk high",
-        "value": "-23%"
+        "value": "-25%"
       }
     ],
     "eiMetrics": {
@@ -653,32 +653,32 @@
       "gmChg": 2.18,
       "omChg": -0.52,
       "fwdRevGrowth": 9.28,
-      "eps3y": 23.12,
-      "fpe": 191.22,
-      "evSales": 14.04,
-      "evFwdSales": 12.85,
-      "peg": 10.19,
-      "ch1y": -9.25,
+      "eps3y": 23.03,
+      "fpe": 188.05,
+      "evSales": 13.73,
+      "evFwdSales": 12.56,
+      "peg": 10.02,
+      "ch1y": -15.77,
       "pt": 397.83,
       "rating": "Buy",
       "analysts": 44,
-      "psForward": 13.09,
+      "psForward": 12.81,
       "netcash": 27444000000.0,
       "sharesYoY": 0.58,
       "shortFloat": 2.52,
       "beta": 1.92,
       "grossMarginTTM": 18.85,
-      "mcap": 1481988668651.0,
-      "revUSD": 103621078775.77,
+      "mcap": 1450115821181.0,
+      "revUSD": 103616707479.89,
       "currency": "USD",
       "lastQ": "2026-06-30",
-      "price": 375.23,
-      "priceDate": "2026-10-13",
-      "offHigh": -23.4,
-      "ch1yNasdaq": -13.92,
-      "rs3m": -8.77,
+      "price": 367.16,
+      "priceDate": "2026-10-14",
+      "offHigh": -25.05,
+      "ch1yNasdaq": -14.46,
+      "rs3m": -8.88,
       "acqJump": -0.31,
-      "upside": 6.02
+      "upside": 8.35
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/tsla/statistics/",
