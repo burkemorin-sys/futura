@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-15",
+  "lastUpdated": "2026-10-16",
   "company": "Lumentum",
   "ticker": "LITE",
   "exchange": "NASDAQ",
@@ -7,11 +7,11 @@
   "status": "public",
   "tagline": "Lasers, optical transceivers and optical circuit switches for AI data centers, cloud and telecom networks.",
   "snapshot": {
-    "price": 896.33,
-    "change": "−9.28%",
-    "asOf": "Oct 14, 2026 close",
-    "marketCap": "$81.2B",
-    "range52w": "$156.57 – $1,133.40 (closes)",
+    "price": 869.54,
+    "change": "−2.99%",
+    "asOf": "Oct 15, 2026 close",
+    "marketCap": "$78.8B",
+    "range52w": "$158.06 – $1,133.40 (closes)",
     "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/lite/historical"
   },
   "fundamentals": {
@@ -132,7 +132,7 @@
       "rating": "Buy",
       "count": 26,
       "priceTarget": "$1,179.07",
-      "upside": "+31.5%",
+      "upside": "+35.6%",
       "sourceUrl": "https://stockanalysis.com/stocks/lite/statistics/",
       "calls": [
         {
@@ -351,6 +351,13 @@
   },
   "news": [
     {
+      "date": "2026-10-15",
+      "outlet": "24/7 Wall St.",
+      "title": "Optical stocks extend their slide as money rotates into defensives; Lumentum slips again",
+      "summary": "Coherent fell about 7%, Applied Optoelectronics about 6% and the Roundhill photonics ETF about 5% as fund managers trimmed AI hardware; none of the three issued news in the past week. LITE closed down 3.0% at $869.54, still up well over 100% year to date.",
+      "url": "https://247wallst.com/investing/2026/10/15/optical-stocks-extend-slide-as-money-rotates-into-defensives-applied-optoelectronics-falls-6-coherent-drops-7-lumentum-slips-5/"
+    },
+    {
       "date": "2026-10-14",
       "outlet": "24/7 Wall St.",
       "title": "Optical stocks slide again on AI funding fears; Lumentum closes down 9.3%",
@@ -429,8 +436,8 @@
     }
   ],
   "grades": {
-    "growth": "B+",
-    "value": "F",
+    "growth": "A-",
+    "value": "D-",
     "momentum": "A",
     "profitability": "D"
   },
@@ -441,27 +448,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 41.134,
-    "peg": 0.35,
+    "forwardPE": 39.904,
+    "peg": 0.339,
     "revenueGrowthPct": 83.22,
     "revenueGrowthQuarter": "2026-06-27",
     "epsGrowth3yPct": 77.35,
-    "evSales": 26.58,
+    "evSales": 25.78,
     "grossMarginPct": 44.244,
     "operatingMarginPct": 17.79,
     "netMarginPct": -230.096,
     "fcfMarginPct": 9.957,
-    "chg3mPct": 10.01,
-    "chg6mPct": 5.11,
-    "chg1yPct": 471.71,
-    "relStrength1yPct": 455.5,
-    "priceAsOf": "2026-10-14"
+    "chg3mPct": 15.63,
+    "chg6mPct": 5.53,
+    "chg1yPct": 455.37,
+    "relStrength1yPct": 439.34,
+    "priceAsOf": "2026-10-15"
   },
   "grading": {
-    "asOf": "2026-10-15",
-    "spy1yPct": 16.21,
-    "pool": "Ranked against 148 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 8, Piotroski 17, Magic Formula 27, Insider Buys 13, duplicates counted once), plus LITE itself",
-    "poolSize": 148,
+    "asOf": "2026-10-16",
+    "spy1yPct": 16.03,
+    "pool": "Ranked against 152 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 13, Piotroski 18, Magic Formula 27, Insider Buys 11, duplicates counted once), plus LITE itself",
+    "poolSize": 152,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -476,19 +483,19 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-15",
-    "priceDate": "2026-10-14",
+    "asOf": "2026-10-16",
+    "priceDate": "2026-10-15",
     "inScreen": false,
-    "outsideScreenReason": "market cap $81.2B is outside the screen's $1B-$30B range",
-    "score": 69,
+    "outsideScreenReason": "market cap $78.8B is outside the screen's $1B-$30B range",
+    "score": 70,
     "scoreParts": {
       "rev": 20.0,
       "margin": 15.0,
       "forward": 15.0,
-      "value": 1.2,
+      "value": 1.5,
       "notRun": 3,
       "trend": 8,
-      "analysts": 6.8,
+      "analysts": 7.3,
       "theme": 5
     },
     "penalty": 5,
@@ -521,31 +528,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": false,
-        "detail": "Forward P/E 41.134, EV/forward sales 12.7x"
+        "detail": "Forward P/E 39.904, EV/forward sales 12.4x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": false,
-        "detail": "1-yr +472% vs SPY +16%"
+        "detail": "1-yr +455% vs SPY +16%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": true,
-        "detail": "-21% vs 52-week high"
+        "detail": "-23% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
         "met": true,
-        "detail": "Above 200-day; 3-month vs SPY +17 pts"
+        "detail": "Above 200-day; 3-month vs SPY +20 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": true,
-        "detail": "Buy (26), +32% to target"
+        "detail": "Buy (26), +36% to target"
       },
       {
         "key": "revisions",
@@ -558,15 +565,14 @@
       "Revenue: latest quarter +109% YoY vs +90% the quarter before and +56% a year earlier → 20/20",
       "Margins: gross +12.7 pts, operating +32.9 pts YoY (last 2 quarters) → 15/15",
       "Forward: next-12-month revenue +109% (implied), 3-yr EPS growth forecast +77% a year → 15/15",
-      "Valuation: forward P/E 41.134, EV/forward sales 12.7x → 1/15",
-      "Not already run: 1-yr +472% (heavy penalty −5), -21% vs 52-week high → 3/10 −5",
-      "Trend: price above 200-day, below 50-day, 3-month vs SPY +17 pts → 8/10",
-      "Analysts: Buy (26), +32% to target → 7/10",
+      "Valuation: forward P/E 39.904, EV/forward sales 12.4x → 2/15",
+      "Not already run: 1-yr +455% (heavy penalty −5), -23% vs 52-week high → 3/10 −5",
+      "Trend: price above 200-day, below 50-day, 3-month vs SPY +20 pts → 8/10",
+      "Analysts: Buy (26), +36% to target → 7/10",
       "Bottleneck theme: AI-infrastructure supplier industry (Communication Equipment) → 5/5"
     ],
     "risks": [
-      "Already up 472% in a year: much of the turn may be priced in",
-      "Rich forward P/E (41)",
+      "Already up 455% in a year: much of the turn may be priced in",
       "Cyclical hardware demand: AI capex pauses or inventory digestion would hit results"
     ],
     "keyFigures": [
@@ -584,15 +590,15 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "12.7x"
+        "value": "12.4x"
       },
       {
         "label": "1-yr move",
-        "value": "+472%"
+        "value": "+455%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-21%"
+        "value": "-23%"
       }
     ],
     "eiMetrics": {
@@ -607,31 +613,31 @@
       "omChg": 32.89,
       "fwdRevGrowth": 108.61,
       "eps3y": 77.35,
-      "fpe": 41.13,
-      "evSales": 26.58,
-      "evFwdSales": 12.74,
-      "peg": 0.35,
-      "ch1y": 458.25,
+      "fpe": 39.9,
+      "evSales": 25.78,
+      "evFwdSales": 12.36,
+      "peg": 0.34,
+      "ch1y": 454.62,
       "pt": 1179.07,
       "rating": "Buy",
       "analysts": 26,
-      "psForward": 12.91,
+      "psForward": 12.53,
       "netcash": 1067200000.0,
       "sharesYoY": 7.18,
       "shortFloat": 8.28,
       "beta": 1.54,
       "grossMarginTTM": 44.24,
-      "mcap": 81192131318.0,
-      "revUSD": 3014037096.96,
+      "mcap": 78765416606.0,
+      "revUSD": 3014021222.44,
       "currency": "USD",
       "lastQ": "2026-06-27",
-      "price": 896.33,
-      "priceDate": "2026-10-14",
-      "offHigh": -20.92,
-      "ch1yNasdaq": 471.71,
-      "rs3m": 17.23,
+      "price": 869.54,
+      "priceDate": "2026-10-15",
+      "offHigh": -23.28,
+      "ch1yNasdaq": 455.37,
+      "rs3m": 20.32,
       "acqJump": -3.08,
-      "upside": 31.54
+      "upside": 35.6
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/lite/statistics/",
@@ -652,8 +658,8 @@
       "drivers": [
         "Revenue growth +83.2% YoY (TTM) → 22/40",
         "Acceleration: TTM 83.2% vs FY2025 21.0% → 5/5",
-        "Momentum: 1-yr price +471.7% vs S&P 500 (SPY) +16.2% = relative strength +455.5% → 25/25",
-        "Upside to target +31.5% → 6/20",
+        "Momentum: 1-yr price +455.4% vs S&P 500 (SPY) +16.0% = relative strength +439.3% → 25/25",
+        "Upside to target +35.6% → 7/20",
         "Consensus Buy (26) → 7/10",
         "Gross-margin trend (not scored): latest quarter 49.3% vs 37.3% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 2 raised, 0 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
@@ -662,8 +668,8 @@
       "risks": [
         "Unprofitable: TTM net income -$6.94B"
       ],
-      "priceDate": "2026-10-14",
-      "listUpdated": "2026-10-15",
+      "priceDate": "2026-10-15",
+      "listUpdated": "2026-10-16",
       "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 "
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-15",
+  "lastUpdated": "2026-10-16",
   "company": "Lennar",
   "ticker": "LEN",
   "exchange": "NYSE",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "America's second-largest homebuilder (Miami): builds and sells single-family homes under the Lennar brand (about 80,000 deliveries a year at a ~$372K average price), plus mortgage and title services, multifamily and technology investments. Berkshire Hathaway crossed 10% ownership in September 2026.",
   "snapshot": {
-    "price": 73.53,
-    "change": "−1.86%",
-    "asOf": "Oct 14, 2026 close",
-    "marketCap": "$17.5B",
+    "price": 77.69,
+    "change": "+5.66%",
+    "asOf": "Oct 15, 2026 close",
+    "marketCap": "$18.5B",
     "range52w": "$71.78 – $133.76",
     "sourceUrl": "https://stockanalysis.com/stocks/len/"
   },
@@ -187,7 +187,7 @@
       "rating": "Sell",
       "count": 21,
       "priceTarget": "$77.87",
-      "upside": "+5.9%",
+      "upside": "+0.2%",
       "sourceUrl": "https://stockanalysis.com/stocks/len/forecast/",
       "calls": [
         {
@@ -419,6 +419,13 @@
   },
   "news": [
     {
+      "date": "2026-10-15",
+      "outlet": "FactorPulse",
+      "title": "Homebuilders rally as the 10-year yield drops 10 bps; Lennar jumps 5.7%",
+      "summary": "A flight to Treasurys during the AI-credit selloff cut the 10-year yield to about 5.09%, and the ITB homebuilder ETF rose 3.9% (still down about 16% over three months). LEN closed at $77.69, up 5.7% from its 52-week-low area; Yahoo Finance noted 30-year mortgage rates fell to 7.33%.",
+      "url": "https://www.factorpulse.com/digest/20261015/chip-stocks-fall-a-fifth-straight-day-as-bonds-and-homebuilders-rally"
+    },
+    {
       "date": "2026-10-14",
       "outlet": "Investing.com",
       "title": "Lennar hits a 52-week low near $73.40",
@@ -486,7 +493,7 @@
   "grades": {
     "growth": "F",
     "value": "B",
-    "momentum": "F",
+    "momentum": "D-",
     "profitability": "F"
   },
   "gradeInputs": {
@@ -496,27 +503,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 15.486,
+    "forwardPE": 16.362,
     "peg": null,
     "revenueGrowthPct": -8.03,
     "revenueGrowthQuarter": "2026-08-31",
     "epsGrowth3yPct": -3.09,
-    "evSales": 0.7,
+    "evSales": 0.73,
     "grossMarginPct": 16.015,
     "operatingMarginPct": 5.763,
     "netMarginPct": 4.092,
     "fcfMarginPct": 2.537,
-    "chg3mPct": -12.16,
-    "chg6mPct": -17.22,
-    "chg1yPct": -39.84,
-    "relStrength1yPct": -56.05,
-    "priceAsOf": "2026-10-14"
+    "chg3mPct": -8.91,
+    "chg6mPct": -12.16,
+    "chg1yPct": -36.55,
+    "relStrength1yPct": -52.58,
+    "priceAsOf": "2026-10-15"
   },
   "grading": {
-    "asOf": "2026-10-15",
-    "spy1yPct": 16.21,
-    "pool": "Ranked against 149 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 8, Piotroski 17, Magic Formula 27, Insider Buys 13, duplicates counted once), plus LEN itself",
-    "poolSize": 149,
+    "asOf": "2026-10-16",
+    "spy1yPct": 16.03,
+    "pool": "Ranked against 153 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 13, Piotroski 18, Magic Formula 27, Insider Buys 11, duplicates counted once), plus LEN itself",
+    "poolSize": 153,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -531,19 +538,19 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-15",
-    "priceDate": "2026-10-14",
+    "asOf": "2026-10-16",
+    "priceDate": "2026-10-15",
     "inScreen": false,
     "outsideScreenReason": "fails the inflection gate (shrinking revenue or <8% forward growth)",
-    "score": 26,
+    "score": 25,
     "scoreParts": {
       "rev": 0.0,
       "margin": 0.0,
       "forward": 0.4,
-      "value": 14.9,
+      "value": 14.6,
       "notRun": 10,
       "trend": 0,
-      "analysts": 0.7,
+      "analysts": 0.0,
       "theme": 0
     },
     "penalty": 0,
@@ -576,31 +583,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": true,
-        "detail": "Forward P/E 15.486, EV/forward sales 0.7x"
+        "detail": "Forward P/E 16.362, EV/forward sales 0.7x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr -40% vs SPY +16%"
+        "detail": "1-yr -37% vs SPY +16%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": true,
-        "detail": "-45% vs 52-week high"
+        "detail": "-42% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
         "met": false,
-        "detail": "Below 200-day; 3-month vs SPY -16 pts"
+        "detail": "Below 200-day; 3-month vs SPY -13 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": false,
-        "detail": "Sell (21), +6% to target"
+        "detail": "Sell (21), +0% to target"
       },
       {
         "key": "revisions",
@@ -613,16 +620,16 @@
       "Revenue: latest quarter -9% YoY vs -5% the quarter before and -6% a year earlier → 0/20",
       "Margins: gross -1.6 pts, operating -2.4 pts YoY (last 2 quarters) → 0/15",
       "Forward: next-12-month revenue +1% (implied), 3-yr EPS growth forecast -3% a year → 0/15",
-      "Valuation: forward P/E 15.486, EV/forward sales 0.7x → 15/15",
-      "Not already run: 1-yr -40%, -45% vs 52-week high → 10/10",
-      "Trend: price below 200-day, below 50-day, 3-month vs SPY -16 pts → 0/10",
-      "Analysts: Sell (21), +6% to target → 1/10",
+      "Valuation: forward P/E 16.362, EV/forward sales 0.7x → 15/15",
+      "Not already run: 1-yr -37%, -42% vs 52-week high → 10/10",
+      "Trend: price below 200-day, below 50-day, 3-month vs SPY -13 pts → 0/10",
+      "Analysts: Sell (21), +0% to target → 0/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
       "Gross margin down 1.6 pts YoY",
       "Thin gross margin (17%) leaves little room for error",
-      "Net debt $4.9B (28% of market cap)",
+      "Net debt $4.9B (27% of market cap)",
       "Short interest 10% of float",
       "Still below its 200-day average: the turn isn't confirmed"
     ],
@@ -645,11 +652,11 @@
       },
       {
         "label": "1-yr move",
-        "value": "-40%"
+        "value": "-37%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-45%"
+        "value": "-42%"
       }
     ],
     "eiMetrics": {
@@ -662,33 +669,33 @@
       "om": 5.69,
       "gmChg": -1.64,
       "omChg": -2.37,
-      "fwdRevGrowth": 1.3,
+      "fwdRevGrowth": 1.23,
       "eps3y": -3.09,
-      "fpe": 15.49,
-      "evSales": 0.7,
-      "evFwdSales": 0.69,
+      "fpe": 16.36,
+      "evSales": 0.73,
+      "evFwdSales": 0.72,
       "peg": null,
-      "ch1y": -37.7,
+      "ch1y": -36.44,
       "pt": 77.87,
       "rating": "Sell",
       "analysts": 21,
-      "psForward": 0.54,
+      "psForward": 0.57,
       "netcash": -4917745000.0,
       "sharesYoY": -6.75,
       "shortFloat": 10.49,
       "beta": 1.38,
       "grossMarginTTM": 16.02,
-      "mcap": 17492804574.0,
-      "revUSD": 31979533042.05,
+      "mcap": 18482469568.0,
+      "revUSD": 31976590948.1,
       "currency": "USD",
       "lastQ": "2026-08-31",
-      "price": 73.53,
-      "priceDate": "2026-10-14",
-      "offHigh": -44.77,
-      "ch1yNasdaq": -39.84,
-      "rs3m": -15.75,
+      "price": 77.69,
+      "priceDate": "2026-10-15",
+      "offHigh": -41.64,
+      "ch1yNasdaq": -36.55,
+      "rs3m": -12.89,
       "acqJump": 0.0,
-      "upside": 5.9
+      "upside": 0.23
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/len/statistics/",
