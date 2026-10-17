@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16",
+  "lastUpdated": "2026-10-17",
   "company": "Materion",
   "ticker": "MTRN",
   "exchange": "NYSE",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "Advanced-materials maker (Mayfield Heights, Ohio): beryllium alloys and beryllium mined at its own Utah operation, precious-metal sputtering targets and clad materials for chips, and precision optical filters, sold into semiconductor, aerospace & defense, space, energy and data-center markets.",
   "snapshot": {
-    "price": 252.16,
-    "change": "−1.42%",
-    "asOf": "Oct 15, 2026 close",
-    "marketCap": "$5.3B",
+    "price": 245.44,
+    "change": "−2.66%",
+    "asOf": "Oct 16, 2026 close",
+    "marketCap": "$5.1B",
     "range52w": "$111.50 – $319.18 (closes)",
     "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/mtrn/historical"
   },
@@ -167,7 +167,7 @@
       "rating": "Buy",
       "count": 5,
       "priceTarget": "$303.75",
-      "upside": "+20.5%",
+      "upside": "+23.8%",
       "sourceUrl": "https://stockanalysis.com/stocks/mtrn/forecast/",
       "calls": [
         {
@@ -364,6 +364,13 @@
   },
   "news": [
     {
+      "date": "2026-10-15",
+      "outlet": "AD HOC NEWS (citing Yahoo Finance)",
+      "title": "Argus raises its Materion target to $354",
+      "summary": "Argus lifted its target to $354 on Oct. 7, about 43% above the Oct. 15 midday price of $247.82; the stock was about 24% below its 52-week high. Q2 revenue was $613.9M vs. $525.1M consensus; full-year EPS guidance is $6.80–$7.20.",
+      "url": "https://www.ad-hoc-news.de/boerse/news/nebenwerte/argus-raises-materion-stock-target-to-usd-354-00/70331439"
+    },
+    {
       "date": "2026-10-08",
       "outlet": "Kalkine",
       "title": "Materion falls 6.9% in the rate-shock industrial selloff",
@@ -413,27 +420,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 31.852,
-    "peg": 1.82,
+    "forwardPE": 31.003,
+    "peg": 1.772,
     "revenueGrowthPct": 21.6,
     "revenueGrowthQuarter": "2026-07-03",
     "epsGrowth3yPct": 24.31,
-    "evSales": 2.74,
+    "evSales": 2.67,
     "grossMarginPct": 16.011,
     "operatingMarginPct": 6.33,
     "netMarginPct": 4.295,
     "fcfMarginPct": 1.546,
-    "chg3mPct": 0.46,
-    "chg6mPct": 54.78,
-    "chg1yPct": 95.96,
-    "relStrength1yPct": 79.93,
-    "priceAsOf": "2026-10-15"
+    "chg3mPct": 1.05,
+    "chg6mPct": 47.37,
+    "chg1yPct": 92.01,
+    "relStrength1yPct": 76.48,
+    "priceAsOf": "2026-10-16"
   },
   "grading": {
-    "asOf": "2026-10-16",
-    "spy1yPct": 16.03,
-    "pool": "Ranked against 153 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 13, Piotroski 18, Magic Formula 27, Insider Buys 11, duplicates counted once), plus MTRN itself",
-    "poolSize": 153,
+    "asOf": "2026-10-17",
+    "spy1yPct": 15.53,
+    "pool": "Ranked against 148 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 25, Experiment Screener 10, Piotroski 18, Magic Formula 27, Insider Buys 8, duplicates counted once), plus MTRN itself",
+    "poolSize": 148,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -448,19 +455,19 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-16",
-    "priceDate": "2026-10-15",
+    "asOf": "2026-10-17",
+    "priceDate": "2026-10-16",
     "inScreen": false,
     "outsideScreenReason": null,
-    "score": 62,
+    "score": 61,
     "scoreParts": {
       "rev": 20.0,
       "margin": 0.0,
       "forward": 8.8,
-      "value": 9.7,
+      "value": 10.0,
       "notRun": 10,
-      "trend": 8,
-      "analysts": 5.5,
+      "trend": 6,
+      "analysts": 5.9,
       "theme": 0
     },
     "penalty": 0,
@@ -493,31 +500,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": true,
-        "detail": "Forward P/E 31.852, EV/forward sales 2.3x"
+        "detail": "Forward P/E 31.003, EV/forward sales 2.2x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr +96% vs SPY +16%"
+        "detail": "1-yr +92% vs SPY +16%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": true,
-        "detail": "-21% vs 52-week high"
+        "detail": "-23% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
-        "met": true,
-        "detail": "Above 200-day; 3-month vs SPY +1 pts"
+        "met": false,
+        "detail": "Above 200-day; 3-month vs SPY -3 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": true,
-        "detail": "Buy (5), +20% to target"
+        "detail": "Buy (5), +24% to target"
       },
       {
         "key": "revisions",
@@ -530,10 +537,10 @@
       "Revenue: latest quarter +42% YoY vs +31% the quarter before and +1% a year earlier → 20/20",
       "Margins: gross -2.7 pts, operating -0.7 pts YoY (last 2 quarters) → 0/15",
       "Forward: next-12-month revenue +20% (implied), 3-yr EPS growth forecast +24% a year → 9/15",
-      "Valuation: forward P/E 31.852, EV/forward sales 2.3x → 10/15",
-      "Not already run: 1-yr +96%, -21% vs 52-week high → 10/10",
-      "Trend: price above 200-day, below 50-day, 3-month vs SPY +1 pts → 8/10",
-      "Analysts: Buy (5), +20% to target → 5/10",
+      "Valuation: forward P/E 31.003, EV/forward sales 2.2x → 10/15",
+      "Not already run: 1-yr +92%, -23% vs 52-week high → 10/10",
+      "Trend: price above 200-day, below 50-day, 3-month vs SPY -3 pts → 6/10",
+      "Analysts: Buy (5), +24% to target → 6/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
@@ -555,15 +562,15 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "2.3x"
+        "value": "2.2x"
       },
       {
         "label": "1-yr move",
-        "value": "+96%"
+        "value": "+92%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-21%"
+        "value": "-23%"
       }
     ],
     "eiMetrics": {
@@ -576,33 +583,33 @@
       "om": 8.57,
       "gmChg": -2.7,
       "omChg": -0.67,
-      "fwdRevGrowth": 20.21,
+      "fwdRevGrowth": 20.17,
       "eps3y": 24.31,
-      "fpe": 31.85,
-      "evSales": 2.74,
-      "evFwdSales": 2.28,
-      "peg": 1.82,
-      "ch1y": 98.02,
+      "fpe": 31.0,
+      "evSales": 2.67,
+      "evFwdSales": 2.22,
+      "peg": 1.77,
+      "ch1y": 90.74,
       "pt": 303.75,
       "rating": "Buy",
       "analysts": 5,
-      "psForward": 2.08,
+      "psForward": 2.03,
       "netcash": -490765000.0,
       "sharesYoY": 0.49,
       "shortFloat": 2.95,
       "beta": 1.05,
       "grossMarginTTM": 16.01,
-      "mcap": 5253432096.0,
-      "revUSD": 2098016012.78,
+      "mcap": 5113429464.0,
+      "revUSD": 2098247625.77,
       "currency": "USD",
       "lastQ": "2026-07-03",
-      "price": 252.16,
-      "priceDate": "2026-10-15",
-      "offHigh": -21.0,
-      "ch1yNasdaq": 95.96,
-      "rs3m": 1.01,
+      "price": 245.44,
+      "priceDate": "2026-10-16",
+      "offHigh": -23.1,
+      "ch1yNasdaq": 92.01,
+      "rs3m": -2.55,
       "acqJump": 0.39,
-      "upside": 20.46
+      "upside": 23.76
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/mtrn/statistics/",
