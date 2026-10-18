@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-17",
+  "lastUpdated": "2026-10-18",
   "priceDate": "2026-10-16",
   "title": "Early Inflection",
   "method": "Looks for stocks in an 'early LITE-2025' position: revenue that has bottomed and is accelerating, rising margins, strong forward growth and a reasonable price, before the stock has already run. Universe: every US-listed stock with a $1B–$30B market cap on Nasdaq's screener (excluding banks, insurers, REITs and other financials), then 3+ analysts with a price target, $100M+ TTM revenue and $5M+ a day of trading, with revenue growing in the latest quarter and 8%+ implied growth over the next 12 months. Each survivor is scored 0–100 on the rubric below; the top 12 are the picks and the next 18 form the ranked bench, with at most 3 per industry. Excludes bitcoin/crypto miners, other commodity producers (metal, coal and lithium miners, oil & gas producers, refiners, smelters, fertilizer makers: their revenue tracks commodity prices) and pending-merger targets. Revenue points are halved when growth looks bought (a big jump in goodwill/intangibles or share count).",
@@ -1346,7 +1346,10 @@
       ],
       "analystRating": "Buy (6 analysts)",
       "priceTarget": 24.85,
-      "revisions": null,
+      "revisions": {
+        "since": "2026-10-17",
+        "note": "under 30 days of history"
+      },
       "sourceUrl": [
         "https://stockanalysis.com/stocks/dht/statistics/",
         "https://stockanalysis.com/stocks/dht/financials/?p=quarterly",
@@ -1395,6 +1398,18 @@
         "source": "https://www.tankeroperator.com/news/dht-estimates-tce-earnings-for-fleet-at-141k-day-in-q3/15619.aspx",
         "asOf": "2026-10-14"
       },
+      "grades": {
+        "growth": "D+",
+        "value": "B-",
+        "momentum": "A+",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 43.2,
         "forwardPE": 6.04,
@@ -1410,18 +1425,6 @@
         "chg1yPct": 98.65,
         "relStrength1yPct": 83.12,
         "priceAsOf": "2026-10-16"
-      },
-      "grades": {
-        "growth": "D+",
-        "value": "B-",
-        "momentum": "A+",
-        "profitability": "A"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1607,18 +1610,6 @@
         "source": "https://ir.penguinsolutions.com/news/news-details/2026/Penguin-Solutions-Announces-Fourth-Quarter-and-Full-Year-Fiscal-2026-Results/default.aspx",
         "asOf": "2026-10-06"
       },
-      "grades": {
-        "growth": "D+",
-        "value": "C+",
-        "momentum": "A",
-        "profitability": "D-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
       "metrics": {
         "revenueGrowthPct": 26.5,
         "forwardPE": 12.53,
@@ -1634,6 +1625,18 @@
         "chg1yPct": 153.89,
         "relStrength1yPct": 138.36,
         "priceAsOf": "2026-10-16"
+      },
+      "grades": {
+        "growth": "D+",
+        "value": "C+",
+        "momentum": "A",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
       }
     },
     {
@@ -2023,6 +2026,11 @@
         "rs3m": -22.09,
         "acqJump": 0.0
       },
+      "catalyst": {
+        "text": "Q2 2026 revenue $143.4M (+27% QoQ; royalties $30.4M vs $10.4M a year ago); backlog $380M, +26% QoQ and +145% YoY, as AI/high-performance-compute demand fills its first ChiP fab and it plans a second fab for 2nd Gen VPD.",
+        "source": "https://www.globenewswire.com/news-release/2026/07/21/3330291/0/en/Vicor-Corporation-Reports-Results-for-the-Second-Quarter-Ended-June-30-2026.html",
+        "asOf": "2026-07-21"
+      },
       "grades": {
         "growth": "C+",
         "value": "F",
@@ -2050,11 +2058,6 @@
         "chg1yPct": 216.69,
         "relStrength1yPct": 201.16,
         "priceAsOf": "2026-10-16"
-      },
-      "catalyst": {
-        "text": "Q2 2026 revenue $143.4M (+27% QoQ; royalties $30.4M vs $10.4M a year ago); backlog $380M, +26% QoQ and +145% YoY, as AI/high-performance-compute demand fills its first ChiP fab and it plans a second fab for 2nd Gen VPD.",
-        "source": "https://www.globenewswire.com/news-release/2026/07/21/3330291/0/en/Vicor-Corporation-Reports-Results-for-the-Second-Quarter-Ended-June-30-2026.html",
-        "asOf": "2026-07-21"
       }
     },
     {
@@ -4952,18 +4955,6 @@
         "acqJump": -2.74
       },
       "rank": 11,
-      "grades": {
-        "growth": "D-",
-        "value": "D",
-        "momentum": "F",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
       "metrics": {
         "revenueGrowthPct": 16.3,
         "forwardPE": 13.69,
@@ -4979,6 +4970,18 @@
         "chg1yPct": 55.96,
         "relStrength1yPct": 40.43,
         "priceAsOf": "2026-10-16"
+      },
+      "grades": {
+        "growth": "D-",
+        "value": "D",
+        "momentum": "F",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
       }
     },
     {
@@ -5236,7 +5239,7 @@
           "key": "value",
           "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
           "met": true,
-          "detail": "Forward P/E 13.927, EV/forward sales 0.7x"
+          "detail": "Forward P/E 13.926, EV/forward sales 0.7x"
         },
         {
           "key": "notrun",
@@ -5273,7 +5276,7 @@
         "Revenue: latest quarter +53% YoY vs +42% the quarter before and +6% a year earlier → 20/20",
         "Margins: gross +2.5 pts, operating +4.7 pts YoY (last 2 quarters) → 8/15",
         "Forward: next-12-month revenue +17% (implied), 3-yr EPS growth forecast +31% a year → 9/15",
-        "Valuation: forward P/E 13.927, EV/forward sales 0.7x → 15/15",
+        "Valuation: forward P/E 13.926, EV/forward sales 0.7x → 15/15",
         "Not already run: 1-yr +85%, -25% vs 52-week high → 10/10",
         "Trend: price below 200-day, below 50-day, 3-month vs SPY -9 pts → 2/10",
         "Analysts: Buy (5), +16% to target → 5/10",
@@ -5348,8 +5351,8 @@
         "shortFloat": 5.99,
         "beta": 1.58,
         "grossMarginTTM": 14.52,
-        "mcap": 2385431312.0,
-        "revUSD": 4134196381.28,
+        "mcap": 2385269324.0,
+        "revUSD": 4133915639.51,
         "currency": "USD",
         "lastQ": "2026-06-30",
         "price": 147.25,
@@ -5979,6 +5982,18 @@
         "acqJump": 17.6
       },
       "rank": 16,
+      "grades": {
+        "growth": "B",
+        "value": "F",
+        "momentum": "C",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 40.0,
         "forwardPE": 20.31,
@@ -5994,18 +6009,6 @@
         "chg1yPct": 150.6,
         "relStrength1yPct": 135.07,
         "priceAsOf": "2026-10-16"
-      },
-      "grades": {
-        "growth": "B",
-        "value": "F",
-        "momentum": "C",
-        "profitability": "C+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -6182,6 +6185,18 @@
         "acqJump": -2.52
       },
       "rank": 17,
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "B",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 11.9,
         "forwardPE": 30.38,
@@ -6197,18 +6212,6 @@
         "chg1yPct": 120.23,
         "relStrength1yPct": 104.7,
         "priceAsOf": "2026-10-16"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "F",
-        "momentum": "B",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -6418,7 +6421,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-17",
+    "asOf": "2026-10-18",
     "spy1yPct": 15.53,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

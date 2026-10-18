@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-17",
+  "lastUpdated": "2026-10-18",
   "priceDate": "2026-10-16",
   "title": "Magic Formula",
   "method": "Joel Greenblatt's Magic Formula: good businesses at bargain prices. Universe: US-listed stocks over $2B on Nasdaq's screener, excluding financials, utilities and real estate, and bitcoin miners (1479 stocks; 1243 with positive EBIT, EV and capital). Every stock is ranked on earnings yield (EBIT ÷ enterprise value) and on return on capital (EBIT ÷ net working capital + net fixed assets); the two ranks are added and the lowest totals win. Top 12 are the picks; the next 18 are backups.",
@@ -384,7 +384,7 @@
       "price": 24.42,
       "priceDate": "2026-10-16",
       "marketCap": "$2.7B",
-      "forwardPE": "n/a",
+      "forwardPE": 6.6,
       "peg": "n/a",
       "alsoIn": [
         "Magic Formula"
@@ -433,19 +433,19 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "n/a",
-        "value": "C",
+        "value": "B",
         "momentum": "A",
         "profitability": "B"
       },
       "gradeInputs": {
         "growth": "0/2",
-        "value": "1/3",
+        "value": "2/3",
         "momentum": "3/3",
         "profitability": "4/4"
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": null,
+        "forwardPE": 6.6,
         "peg": null,
         "epsGrowth3yPct": null,
         "evSales": 2.4,
@@ -599,7 +599,7 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "A",
-        "value": "C+",
+        "value": "C",
         "momentum": "C-",
         "profitability": "C+"
       },
@@ -767,7 +767,7 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "C",
-        "value": "B-",
+        "value": "C+",
         "momentum": "B+",
         "profitability": "D"
       },
@@ -1017,7 +1017,7 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "F",
-        "value": "D-",
+        "value": "F",
         "momentum": "F",
         "profitability": "D+"
       },
@@ -1680,7 +1680,7 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "D-",
-        "value": "B",
+        "value": "B-",
         "momentum": "B-",
         "profitability": "F"
       },
@@ -2307,7 +2307,7 @@
         },
         {
           "label": "EY rank",
-          "value": "267 of 1243"
+          "value": "266 of 1243"
         },
         {
           "label": "ROC rank",
@@ -2315,7 +2315,7 @@
         },
         {
           "label": "Combined",
-          "value": "293"
+          "value": "292"
         },
         {
           "label": "EV",
@@ -2323,9 +2323,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $1.1B ÷ EV $12.9B = 8.5% (rank 267)",
+        "Earnings yield: EBIT $1.1B ÷ EV $12.9B = 8.5% (rank 266)",
         "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $146M) = 726% (rank 26; balance sheet 2026-06-30)",
-        "Combined rank 293 → #28 of 1243"
+        "Combined rank 292 → #28 of 1243"
       ],
       "risks": [
         "Return on capital 726% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -2338,6 +2338,18 @@
       ],
       "rank": 16,
       "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "C",
+        "value": "F",
+        "momentum": "A-",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": null,
         "forwardPE": 14.24,
@@ -2353,18 +2365,6 @@
         "chg1yPct": 32.77,
         "relStrength1yPct": 17.24,
         "priceAsOf": "2026-10-16"
-      },
-      "grades": {
-        "growth": "C",
-        "value": "F",
-        "momentum": "A-",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2389,7 +2389,7 @@
         },
         {
           "label": "EY rank",
-          "value": "295 of 1243"
+          "value": "294 of 1243"
         },
         {
           "label": "ROC rank",
@@ -2397,7 +2397,7 @@
         },
         {
           "label": "Combined",
-          "value": "296"
+          "value": "295"
         },
         {
           "label": "EV",
@@ -2405,9 +2405,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $5.1B ÷ EV $63.6B = 8.0% (rank 295)",
+        "Earnings yield: EBIT $5.1B ÷ EV $63.6B = 8.0% (rank 294)",
         "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $36M) = 14139% (rank 1; balance sheet 2026-06-30)",
-        "Combined rank 296 → #29 of 1243"
+        "Combined rank 295 → #29 of 1243"
       ],
       "risks": [
         "Return on capital 14139% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -2534,7 +2534,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-17",
+    "asOf": "2026-10-18",
     "spy1yPct": 15.53,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
