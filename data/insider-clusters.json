@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-18",
+  "lastUpdated": "2026-10-19",
   "priceDate": "2026-10-16",
   "title": "Insider Buys",
-  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-09-18 to 2026-10-18 for US-listed issuers over $300M (7,030 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
+  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-09-19 to 2026-10-19 for US-listed issuers over $300M (6,670 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
   "rubric": [
     {
       "component": "Insiders",
@@ -21,21 +21,20 @@
       "how": "Market cap above $300M on Nasdaq's screener"
     }
   ],
-  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 123 companies had insider purchases; 12 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 3 left out because filed prices don't match the US share price (local-currency or other share class: BBD (avg filed price 17.97 vs US close 3.96), GAM (avg filed price 22.92 vs US close 64.16), PAM (avg filed price 22.55 vs US close 81.10)). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
+  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 114 companies had insider purchases; 10 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 2 left out because filed prices don't match the US share price (local-currency or other share class: PAM (avg filed price 22.55 vs US close 81.10), GAM (avg filed price 22.79 vs US close 64.16)). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
   "universe": {
-    "listed": 7002,
-    "screened": 3416,
-    "filings": 7030,
-    "companiesWithBuys": 123,
-    "clusters": 12,
-    "qualified": 12
+    "listed": 6963,
+    "screened": 3388,
+    "filings": 6670,
+    "companiesWithBuys": 114,
+    "clusters": 10,
+    "qualified": 10
   },
   "excluded": {
     "minersOrCryptoTreasury": [],
     "priceMismatch": [
-      "BBD (avg filed price 17.97 vs US close 3.96)",
-      "GAM (avg filed price 22.92 vs US close 64.16)",
-      "PAM (avg filed price 22.55 vs US close 81.10)"
+      "PAM (avg filed price 22.55 vs US close 81.10)",
+      "GAM (avg filed price 22.79 vs US close 64.16)"
     ],
     "minersUniverse": [
       "ABTC",
@@ -258,9 +257,9 @@
         "https://stockanalysis.com/stocks/spg/statistics/"
       ],
       "grades": {
-        "growth": "D-",
+        "growth": "D",
         "value": "F",
-        "momentum": "C+",
+        "momentum": "B-",
         "profitability": "A+"
       },
       "gradeInputs": {
@@ -447,10 +446,10 @@
         "https://stockanalysis.com/stocks/hei/statistics/"
       ],
       "grades": {
-        "growth": "B",
+        "growth": "A+",
         "value": "F",
-        "momentum": "B",
-        "profitability": "A-"
+        "momentum": "A-",
+        "profitability": "B+"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -652,10 +651,10 @@
         "https://stockanalysis.com/stocks/ful/statistics/"
       ],
       "grades": {
-        "growth": "C",
+        "growth": "B-",
         "value": "A+",
-        "momentum": "D+",
-        "profitability": "D"
+        "momentum": "C",
+        "profitability": "D+"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -808,7 +807,7 @@
       ],
       "grades": {
         "growth": "n/a",
-        "value": "D",
+        "value": "D+",
         "momentum": "n/a",
         "profitability": "F"
       },
@@ -967,9 +966,9 @@
       ],
       "grades": {
         "growth": "n/a",
-        "value": "B-",
+        "value": "C+",
         "momentum": "A+",
-        "profitability": "B-"
+        "profitability": "C+"
       },
       "gradeInputs": {
         "growth": "0/2",
@@ -991,173 +990,6 @@
         "chg6mPct": 6.47,
         "chg1yPct": 16.82,
         "relStrength1yPct": 1.29,
-        "priceAsOf": "2026-10-16"
-      }
-    },
-    {
-      "company": "Borr Drilling Limited",
-      "ticker": "BORR",
-      "sector": "Energy – Oil & Gas Production",
-      "price": 4.54,
-      "priceDate": "2026-10-16",
-      "marketCap": "$1.4B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "n/a",
-      "alsoIn": [
-        "Insider Buys"
-      ],
-      "insiderCount": 3,
-      "totalBought": 44711550.0,
-      "firstBuy": "2026-09-18",
-      "lastBuy": "2026-10-15",
-      "keyFigures": [
-        {
-          "label": "Insiders buying",
-          "value": "3"
-        },
-        {
-          "label": "Total bought",
-          "value": "$44.7M"
-        },
-        {
-          "label": "Avg price paid",
-          "value": "$4.54"
-        },
-        {
-          "label": "Buy dates",
-          "value": "2026-09-18 → 2026-10-15"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "i0",
-          "label": "Troim Tor Olav",
-          "met": true,
-          "detail": "Director: $43.0M (9,500,000 sh) on 2026-10-05, 2026-10-06, 2026-10-07, 2026-10-09, 2026-10-13, 2026-10-14, 2026-10-15"
-        },
-        {
-          "key": "i1",
-          "label": "Snowling Harvey Edward",
-          "met": true,
-          "detail": "Chief Operating Officer: $1.5M (300,000 sh) on 2026-10-14"
-        },
-        {
-          "key": "i2",
-          "label": "Morand De Oliveira Bruno",
-          "met": true,
-          "detail": "Chief Executive Officer: $200K (45,500 sh) on 2026-09-18"
-        }
-      ],
-      "risks": [
-        "One insider (Troim Tor Olav) accounts for 96% of the dollars"
-      ],
-      "analystRating": "Buy (7 analysts)",
-      "priceTarget": 4.97,
-      "transactions": [
-        {
-          "insider": "Troim Tor Olav",
-          "date": "2026-10-15",
-          "shares": 500000.0,
-          "price": 4.5983,
-          "value": 2299150.0,
-          "accession": "0001628280-26-066045"
-        },
-        {
-          "insider": "Troim Tor Olav",
-          "date": "2026-10-14",
-          "shares": 750000.0,
-          "price": 4.7234,
-          "value": 3542550.0,
-          "accession": "0001628280-26-065947"
-        },
-        {
-          "insider": "Snowling Harvey Edward",
-          "date": "2026-10-14",
-          "shares": 300000.0,
-          "price": 4.91,
-          "value": 1473000.0,
-          "accession": "0001628280-26-066061"
-        },
-        {
-          "insider": "Troim Tor Olav",
-          "date": "2026-10-13",
-          "shares": 1500000.0,
-          "price": 4.9344,
-          "value": 7401600.0,
-          "accession": "0001628280-26-065849"
-        },
-        {
-          "insider": "Troim Tor Olav",
-          "date": "2026-10-09",
-          "shares": 2500000.0,
-          "price": 4.7374,
-          "value": 11843500.0,
-          "accession": "0001628280-26-065603"
-        },
-        {
-          "insider": "Troim Tor Olav",
-          "date": "2026-10-07",
-          "shares": 1250000.0,
-          "price": 4.3122,
-          "value": 5390250.0,
-          "accession": "0001628280-26-065416"
-        },
-        {
-          "insider": "Troim Tor Olav",
-          "date": "2026-10-06",
-          "shares": 1500000.0,
-          "price": 4.2428,
-          "value": 6364200.0,
-          "accession": "0001628280-26-065290"
-        },
-        {
-          "insider": "Troim Tor Olav",
-          "date": "2026-10-05",
-          "shares": 1500000.0,
-          "price": 4.1314,
-          "value": 6197100.0,
-          "accession": "0001628280-26-065174"
-        },
-        {
-          "insider": "Morand De Oliveira Bruno",
-          "date": "2026-09-18",
-          "shares": 45500.0,
-          "price": 4.4,
-          "value": 200200.00000000003,
-          "accession": "0001628280-26-062804"
-        }
-      ],
-      "sourceUrl": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001715497&type=4&dateb=&owner=include&count=40",
-        "https://stockanalysis.com/stocks/borr/statistics/"
-      ],
-      "grades": {
-        "growth": "A+",
-        "value": "C",
-        "momentum": "A-",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": null,
-        "peg": null,
-        "epsGrowth3yPct": 32.73,
-        "evSales": 3.61,
-        "grossMarginPct": 43.68,
-        "operatingMarginPct": 20.841,
-        "netMarginPct": -23.981,
-        "fcfMarginPct": -14.18,
-        "chg3mPct": 8.35,
-        "chg6mPct": -16.54,
-        "chg1yPct": 75.29,
-        "relStrength1yPct": 59.76,
         "priceAsOf": "2026-10-16"
       }
     },
@@ -1253,7 +1085,7 @@
       ],
       "grades": {
         "growth": "F",
-        "value": "A-",
+        "value": "B+",
         "momentum": "F",
         "profitability": "F"
       },
@@ -1373,7 +1205,7 @@
       "grades": {
         "growth": "n/a",
         "value": "n/a",
-        "momentum": "D-",
+        "momentum": "D",
         "profitability": "n/a"
       },
       "gradeInputs": {
@@ -1550,9 +1382,9 @@
   ],
   "bench": [],
   "grading": {
-    "asOf": "2026-10-18",
+    "asOf": "2026-10-19",
     "spy1yPct": 15.53,
-    "pool": "9 stocks (this list's picks + bench)",
+    "pool": "8 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",

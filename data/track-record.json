@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
- "lastUpdated": "2026-10-18",
+ "lastUpdated": "2026-10-19",
  "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Insider Buys was added on Oct 14, 2026, starting at 100 on the 2026-10-13 close (no backfill).",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
@@ -639,7 +639,9 @@
    "STRL": 424.36,
    "TLN": 354.81,
    "SKHY": 136.49,
-   "HRMY": 37.95
+   "HRMY": 37.95,
+   "AAP": 44.45,
+   "STNE": 11.28
   }
  },
  "lists": {
@@ -3385,17 +3387,17 @@
      "beatQQQ": true
     },
     {
-     "ticker": "ZD",
-     "company": "Ziff Davis Inc.",
-     "entryDate": "2026-10-16",
-     "entryPriceDate": "2026-10-15",
-     "entryPrice": 58.44,
-     "lastPrice": 57.15,
+     "ticker": "AAP",
+     "company": "Advance Auto Parts Inc.",
+     "entryDate": "2026-10-19",
+     "entryPriceDate": "2026-10-16",
+     "entryPrice": 44.45,
+     "lastPrice": 44.45,
      "lastPriceDate": "2026-10-16",
-     "returnPct": -2.21,
-     "qqqPct": -2.5,
-     "spyPct": -1.11,
-     "beatQQQ": true
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
     }
    ],
    "closed": [
@@ -3412,6 +3414,20 @@
      "exitDate": "2026-10-16",
      "exitPriceDate": "2026-10-15",
      "exitPrice": 43.92
+    },
+    {
+     "ticker": "ZD",
+     "company": "Ziff Davis Inc.",
+     "entryDate": "2026-10-16",
+     "entryPriceDate": "2026-10-15",
+     "entryPrice": 58.44,
+     "returnPct": -2.21,
+     "qqqPct": -2.5,
+     "spyPct": -1.11,
+     "beatQQQ": true,
+     "exitDate": "2026-10-19",
+     "exitPriceDate": "2026-10-16",
+     "exitPrice": 57.15
     }
    ],
    "segments": [
@@ -3449,6 +3465,24 @@
       "OCTV",
       "SUZ",
       "ZD"
+     ]
+    },
+    {
+     "start": "2026-10-16",
+     "startValue": 99.48342,
+     "tickers": [
+      "NTR",
+      "KEP",
+      "PPLI",
+      "LPL",
+      "AMTM",
+      "CDLR",
+      "APTV",
+      "PAGS",
+      "EXE",
+      "OCTV",
+      "SUZ",
+      "AAP"
      ]
     }
    ],
@@ -3494,6 +3528,28 @@
      "priceDate": "2026-10-15",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-19",
+     "priceDate": "2026-10-16",
+     "action": "remove",
+     "ticker": "ZD",
+     "company": "Ziff Davis Inc.",
+     "price": 57.15
+    },
+    {
+     "date": "2026-10-19",
+     "priceDate": "2026-10-16",
+     "action": "add",
+     "ticker": "AAP",
+     "company": "Advance Auto Parts Inc.",
+     "price": 44.45
+    },
+    {
+     "date": "2026-10-19",
+     "priceDate": "2026-10-16",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -3528,8 +3584,8 @@
    "hitRate": {
     "beat": 12,
     "of": 13,
-    "openBeat": 11,
-    "openOf": 12
+    "openBeat": 10,
+    "openOf": 11
    }
   },
   "magic": {
@@ -3549,19 +3605,6 @@
      "qqqPct": -5.52,
      "spyPct": -1.97,
      "beatQQQ": true
-    },
-    {
-     "ticker": "BCRX",
-     "company": "BioCryst Pharmaceuticals Inc.",
-     "entryDate": "2026-10-09",
-     "entryPriceDate": "2026-10-09",
-     "entryPrice": 8.55,
-     "lastPrice": 7.79,
-     "lastPriceDate": "2026-10-16",
-     "returnPct": -8.89,
-     "qqqPct": -5.52,
-     "spyPct": -1.97,
-     "beatQQQ": false
     },
     {
      "ticker": "HRMY",
@@ -3692,6 +3735,19 @@
      "qqqPct": -4.86,
      "spyPct": -1.91,
      "beatQQQ": true
+    },
+    {
+     "ticker": "STNE",
+     "company": "StoneCo Ltd. Class A",
+     "entryDate": "2026-10-19",
+     "entryPriceDate": "2026-10-16",
+     "entryPrice": 11.28,
+     "lastPrice": 11.28,
+     "lastPriceDate": "2026-10-16",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
     }
    ],
    "closed": [
@@ -3708,6 +3764,20 @@
      "exitDate": "2026-10-13",
      "exitPriceDate": "2026-10-12",
      "exitPrice": 23.35
+    },
+    {
+     "ticker": "BCRX",
+     "company": "BioCryst Pharmaceuticals Inc.",
+     "entryDate": "2026-10-09",
+     "entryPriceDate": "2026-10-09",
+     "entryPrice": 8.55,
+     "returnPct": -8.89,
+     "qqqPct": -5.52,
+     "spyPct": -1.97,
+     "beatQQQ": false,
+     "exitDate": "2026-10-19",
+     "exitPriceDate": "2026-10-16",
+     "exitPrice": 7.79
     }
    ],
    "segments": [
@@ -3745,6 +3815,24 @@
       "ASR",
       "VSNT",
       "NRIX"
+     ]
+    },
+    {
+     "start": "2026-10-16",
+     "startValue": 100.072435,
+     "tickers": [
+      "PDD",
+      "HRMY",
+      "WSE",
+      "CAAP",
+      "TME",
+      "WEX",
+      "MO",
+      "INDV",
+      "ASR",
+      "VSNT",
+      "NRIX",
+      "STNE"
      ]
     }
    ],
@@ -3790,6 +3878,28 @@
      "priceDate": "2026-10-12",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-19",
+     "priceDate": "2026-10-16",
+     "action": "remove",
+     "ticker": "BCRX",
+     "company": "BioCryst Pharmaceuticals Inc.",
+     "price": 7.79
+    },
+    {
+     "date": "2026-10-19",
+     "priceDate": "2026-10-16",
+     "action": "add",
+     "ticker": "STNE",
+     "company": "StoneCo Ltd. Class A",
+     "price": 11.28
+    },
+    {
+     "date": "2026-10-19",
+     "priceDate": "2026-10-16",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -3825,7 +3935,7 @@
     "beat": 9,
     "of": 13,
     "openBeat": 8,
-    "openOf": 12
+    "openOf": 11
    }
   },
   "insider": {
@@ -3936,19 +4046,6 @@
      "qqqPct": -2.5,
      "spyPct": -1.11,
      "beatQQQ": true
-    },
-    {
-     "ticker": "BORR",
-     "company": "Borr Drilling Limited",
-     "entryDate": "2026-10-17",
-     "entryPriceDate": "2026-10-16",
-     "entryPrice": 4.54,
-     "lastPrice": 4.54,
-     "lastPriceDate": "2026-10-16",
-     "returnPct": 0.0,
-     "qqqPct": 0.0,
-     "spyPct": 0.0,
-     "beatQQQ": false
     }
    ],
    "closed": [
@@ -4049,6 +4146,20 @@
      "exitDate": "2026-10-17",
      "exitPriceDate": "2026-10-16",
      "exitPrice": 34.68
+    },
+    {
+     "ticker": "BORR",
+     "company": "Borr Drilling Limited",
+     "entryDate": "2026-10-17",
+     "entryPriceDate": "2026-10-16",
+     "entryPrice": 4.54,
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false,
+     "exitDate": "2026-10-19",
+     "exitPriceDate": "2026-10-16",
+     "exitPrice": 4.54
     }
    ],
    "segments": [
@@ -4099,8 +4210,7 @@
       "GME",
       "DKS",
       "PDI",
-      "AGMB",
-      "BORR"
+      "AGMB"
      ]
     }
    ],
@@ -4230,6 +4340,20 @@
      "priceDate": "2026-10-16",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 9 picks"
+    },
+    {
+     "date": "2026-10-19",
+     "priceDate": "2026-10-16",
+     "action": "remove",
+     "ticker": "BORR",
+     "company": "Borr Drilling Limited",
+     "price": 4.54
+    },
+    {
+     "date": "2026-10-19",
+     "priceDate": "2026-10-16",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 8 picks"
     }
    ],
    "series": [

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-18",
+  "lastUpdated": "2026-10-19",
   "priceDate": "2026-10-16",
   "title": "Experiment Screener",
   "method": "Your eight rules, applied strictly to every US-listed stock over $2B on Nasdaq's screener (bitcoin/crypto miners excluded). A stock is a pick only if it passes all eight. Passers are ranked by a simple 0–100 score; stocks that miss exactly one rule are listed below as near misses with the rule they missed. Nothing is loosened: if few stocks pass, few are shown.",
@@ -46,11 +46,11 @@
     "RSI(14): Wilder's 14-day RSI on Nasdaq daily closes, inclusive 50–65.",
     "Market cap: StockAnalysis, over $2B."
   ],
-  "dataNotes": "Prices and moving averages/RSI from Nasdaq daily closes (2026-10-16). Fundamentals from StockAnalysis statistics pages, quarterly income statements and balance sheets. This run: 2019 stocks over $2B screened, 996 checked against all eight rules (the rest already failed two or more of ROIC, OCF/debt or positive FCF), 10 passed everything, 77 missed exactly one. 'n/a' means the data wasn't available, which counts as a miss.",
+  "dataNotes": "Prices and moving averages/RSI from Nasdaq daily closes (2026-10-16). Fundamentals from StockAnalysis statistics pages, quarterly income statements and balance sheets. This run: 2000 stocks over $2B screened, 994 checked against all eight rules (the rest already failed two or more of ROIC, OCF/debt or positive FCF), 10 passed everything, 77 missed exactly one. 'n/a' means the data wasn't available, which counts as a miss.",
   "universe": {
-    "listed": 7002,
-    "screened": 2019,
-    "fullyChecked": 996,
+    "listed": 6963,
+    "screened": 2000,
+    "fullyChecked": 994,
     "passed": 10,
     "nearMisses": 77,
     "noStatistics": 24
@@ -1730,7 +1730,7 @@
       "price": 24.42,
       "priceDate": "2026-10-16",
       "marketCap": "$2.7B",
-      "forwardPE": 6.6,
+      "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+738.8% YoY (TTM)",
       "score": 80,
@@ -1862,7 +1862,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 738.8,
-        "forwardPE": 6.6,
+        "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
         "evSales": 2.4,
@@ -1878,13 +1878,13 @@
       },
       "grades": {
         "growth": "A+",
-        "value": "A",
+        "value": "A-",
         "momentum": "B",
         "profitability": "A-"
       },
       "gradeInputs": {
         "growth": "1/2",
-        "value": "2/3",
+        "value": "1/3",
         "momentum": "3/3",
         "profitability": "4/4"
       }
@@ -2561,7 +2561,7 @@
       "price": 212.13,
       "priceDate": "2026-10-16",
       "marketCap": "$7.5B",
-      "forwardPE": 27.38,
+      "forwardPE": 27.41,
       "peg": 1.14,
       "revenueGrowth": "+20.7% YoY (TTM)",
       "score": 63,
@@ -2693,7 +2693,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 20.7,
-        "forwardPE": 27.38,
+        "forwardPE": 27.41,
         "peg": 1.14,
         "epsGrowth3yPct": 24.97,
         "evSales": 7.04,
@@ -3557,8 +3557,8 @@
       "price": 118.6,
       "priceDate": "2026-10-16",
       "marketCap": "$123.6B",
-      "forwardPE": 13.1,
-      "peg": 1.01,
+      "forwardPE": 13.24,
+      "peg": 1.02,
       "revenueGrowth": "+25.2% YoY (TTM)",
       "score": 45,
       "scoreParts": {
@@ -3689,8 +3689,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 25.2,
-        "forwardPE": 13.1,
-        "peg": 1.01,
+        "forwardPE": 13.24,
+        "peg": 1.02,
         "epsGrowth3yPct": 16.39,
         "evSales": 4.65,
         "grossMarginPct": 68.041,
@@ -4222,8 +4222,8 @@
       "price": 186.51,
       "priceDate": "2026-10-16",
       "marketCap": "$26.3B",
-      "forwardPE": 26.22,
-      "peg": 1.82,
+      "forwardPE": 26.07,
+      "peg": 1.81,
       "revenueGrowth": "+17.5% YoY (TTM)",
       "score": 27,
       "scoreParts": {
@@ -4355,8 +4355,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 17.5,
-        "forwardPE": 26.22,
-        "peg": 1.82,
+        "forwardPE": 26.07,
+        "peg": 1.81,
         "epsGrowth3yPct": 17.79,
         "evSales": 3.82,
         "grossMarginPct": 48.921,
@@ -4555,7 +4555,7 @@
       "price": 120.85,
       "priceDate": "2026-10-16",
       "marketCap": "$18.3B",
-      "forwardPE": 9.89,
+      "forwardPE": 9.79,
       "peg": "n/a",
       "revenueGrowth": "+20.0% YoY (TTM)",
       "score": 22,
@@ -4687,7 +4687,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 20.0,
-        "forwardPE": 9.89,
+        "forwardPE": 9.79,
         "peg": null,
         "epsGrowth3yPct": -1.53,
         "evSales": 2.51,
@@ -4869,7 +4869,7 @@
       },
       "grades": {
         "growth": "C",
-        "value": "A-",
+        "value": "A",
         "momentum": "B+",
         "profitability": "F"
       },
@@ -4887,7 +4887,7 @@
       "price": 38.61,
       "priceDate": "2026-10-16",
       "marketCap": "$5.3B",
-      "forwardPE": 17.56,
+      "forwardPE": 17.55,
       "peg": 1.0,
       "revenueGrowth": "+17.9% YoY (TTM)",
       "score": 12,
@@ -4995,7 +4995,7 @@
         "https://stockanalysis.com/stocks/laur/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 5319880283.0,
+        "mcap": 5318502790.0,
         "roic": 19.493,
         "ocf": 407254000.0,
         "debt": 733992000.0,
@@ -5019,7 +5019,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 17.9,
-        "forwardPE": 17.56,
+        "forwardPE": 17.55,
         "peg": 1.0,
         "epsGrowth3yPct": 17.2,
         "evSales": 3.22,
@@ -5053,7 +5053,7 @@
       "price": 5.31,
       "priceDate": "2026-10-16",
       "marketCap": "$7.0B",
-      "forwardPE": 7.09,
+      "forwardPE": 7.68,
       "peg": "n/a",
       "revenueGrowth": "+74.2% YoY (TTM)",
       "score": 63,
@@ -5185,7 +5185,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 74.2,
-        "forwardPE": 7.09,
+        "forwardPE": 7.68,
         "peg": null,
         "epsGrowth3yPct": 35.41,
         "evSales": 1.9,
@@ -5219,7 +5219,7 @@
       "price": 89.7,
       "priceDate": "2026-10-16",
       "marketCap": "$3.5B",
-      "forwardPE": 6.04,
+      "forwardPE": 8.44,
       "peg": "n/a",
       "revenueGrowth": "+105.2% YoY (TTM)",
       "score": 47,
@@ -5351,7 +5351,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 105.2,
-        "forwardPE": 6.04,
+        "forwardPE": 8.44,
         "peg": null,
         "epsGrowth3yPct": 9.12,
         "evSales": 5.75,
@@ -5551,7 +5551,7 @@
       "price": 38.2,
       "priceDate": "2026-10-16",
       "marketCap": "$4.0B",
-      "forwardPE": 4.06,
+      "forwardPE": 6.83,
       "peg": "n/a",
       "revenueGrowth": "+33.2% YoY (TTM)",
       "score": 42,
@@ -5683,7 +5683,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 33.2,
-        "forwardPE": 4.06,
+        "forwardPE": 6.83,
         "peg": null,
         "epsGrowth3yPct": 3.56,
         "evSales": 2.66,
@@ -6051,7 +6051,7 @@
       "price": 149.11,
       "priceDate": "2026-10-16",
       "marketCap": "$6.2B",
-      "forwardPE": 27.36,
+      "forwardPE": 27.38,
       "peg": 0.95,
       "revenueGrowth": "+15.5% YoY (TTM)",
       "score": 34,
@@ -6183,7 +6183,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 15.5,
-        "forwardPE": 27.36,
+        "forwardPE": 27.38,
         "peg": 0.95,
         "epsGrowth3yPct": 17.95,
         "evSales": 5.07,
@@ -6383,7 +6383,7 @@
       "price": 173.7,
       "priceDate": "2026-10-16",
       "marketCap": "$102.4B",
-      "forwardPE": 30.75,
+      "forwardPE": 30.77,
       "peg": 1.51,
       "revenueGrowth": "+13.6% YoY (TTM)",
       "score": 50,
@@ -6515,7 +6515,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 13.6,
-        "forwardPE": 30.75,
+        "forwardPE": 30.77,
         "peg": 1.51,
         "epsGrowth3yPct": 22.67,
         "evSales": 7.06,
@@ -6715,14 +6715,14 @@
       "price": 133.92,
       "priceDate": "2026-10-16",
       "marketCap": "$64.8B",
-      "forwardPE": 12.28,
+      "forwardPE": 10.98,
       "peg": "n/a",
       "revenueGrowth": "+4.5% YoY (TTM)",
       "score": 43,
       "scoreParts": {
         "roic": 1.8,
         "ocfDebt": 20.0,
-        "fcfAssets": 0.7,
+        "fcfAssets": 0.8,
         "epsQoQ": 20.0,
         "revGrowth": 0.0
       },
@@ -6741,7 +6741,7 @@
           "key": "ocfDebt",
           "label": "Operating cash flow > 30% of total debt",
           "met": true,
-          "detail": "Operating cash flow $5.1B vs total debt $3.0B: 171% vs > 30%"
+          "detail": "Operating cash flow $5.1B vs total debt $3.0B: 172% vs > 30%"
         },
         {
           "key": "fcfAssets",
@@ -6787,7 +6787,7 @@
         },
         {
           "label": "OCF / debt",
-          "value": "171%"
+          "value": "172%"
         },
         {
           "label": "FCF / assets",
@@ -6808,7 +6808,7 @@
       ],
       "drivers": [
         "ROIC > 15%: 17.8% → 2/20",
-        "Operating cash flow > 30% of total debt: 171% → 20/20",
+        "Operating cash flow > 30% of total debt: 172% → 20/20",
         "Free cash flow / total assets > 10%: 10.6% → 1/20",
         "QoQ EPS growth > 20%: +133% → 20/20",
         "Annual revenue growth > 15%: 4.5% → 0/20"
@@ -6827,14 +6827,14 @@
       "screenMetrics": {
         "mcap": 64778969328.0,
         "roic": 17.762,
-        "ocf": 5068691506.0,
+        "ocf": 5090748119.0,
         "debt": 2957538200.0,
-        "fcf": 3556418859.0,
-        "ocfDebt": 171.382,
+        "fcf": 3571894757.0,
+        "ocfDebt": 172.128,
         "currency": "CAD",
         "lastQ": "2026-06-30",
         "assets": 33703964496.196,
-        "fcfAssets": 10.552,
+        "fcfAssets": 10.598,
         "eps0": 4.52,
         "eps1": 1.94,
         "eps4": 1.86,
@@ -6849,7 +6849,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 4.5,
-        "forwardPE": 12.28,
+        "forwardPE": 10.98,
         "peg": null,
         "epsGrowth3yPct": 14.98,
         "evSales": 1.81,
@@ -7381,14 +7381,14 @@
       "price": 32.94,
       "priceDate": "2026-10-16",
       "marketCap": "$60.8B",
-      "forwardPE": 8.87,
+      "forwardPE": 6.85,
       "peg": "n/a",
       "revenueGrowth": "+3.1% YoY (TTM)",
       "score": 36,
       "scoreParts": {
         "roic": 1.0,
         "ocfDebt": 12.8,
-        "fcfAssets": 2.0,
+        "fcfAssets": 2.1,
         "epsQoQ": 20.0,
         "revGrowth": 0.0
       },
@@ -7407,13 +7407,13 @@
           "key": "ocfDebt",
           "label": "Operating cash flow > 30% of total debt",
           "met": true,
-          "detail": "Operating cash flow $8.7B vs total debt $8.2B: 107% vs > 30%"
+          "detail": "Operating cash flow $8.8B vs total debt $8.2B: 107% vs > 30%"
         },
         {
           "key": "fcfAssets",
           "label": "Free cash flow / total assets > 10%",
           "met": true,
-          "detail": "FCF $5.3B (TTM) / total assets $45.9B = 11.5% vs > 10%"
+          "detail": "FCF $5.3B (TTM) / total assets $45.9B = 11.6% vs > 10%"
         },
         {
           "key": "epsQoQ",
@@ -7457,7 +7457,7 @@
         },
         {
           "label": "FCF / assets",
-          "value": "11.5%"
+          "value": "11.6%"
         },
         {
           "label": "EPS QoQ",
@@ -7475,7 +7475,7 @@
       "drivers": [
         "ROIC > 15%: 16.5% → 1/20",
         "Operating cash flow > 30% of total debt: 107% → 13/20",
-        "Free cash flow / total assets > 10%: 11.5% → 2/20",
+        "Free cash flow / total assets > 10%: 11.6% → 2/20",
         "QoQ EPS growth > 20%: +84% → 20/20",
         "Annual revenue growth > 15%: 3.1% → 0/20"
       ],
@@ -7491,14 +7491,14 @@
       "screenMetrics": {
         "mcap": 60848142269.0,
         "roic": 16.467,
-        "ocf": 8727529578.0,
+        "ocf": 8768064263.0,
         "debt": 8190268288.0,
-        "fcf": 5277767968.0,
-        "ocfDebt": 106.56,
+        "fcf": 5302280364.0,
+        "ocfDebt": 107.055,
         "currency": "CAD",
         "lastQ": "2026-06-30",
         "assets": 45854517269.817,
-        "fcfAssets": 11.51,
+        "fcfAssets": 11.563,
         "eps0": 1.53,
         "eps1": 0.83,
         "eps4": 0.451,
@@ -7513,7 +7513,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 3.1,
-        "forwardPE": 8.87,
+        "forwardPE": 6.85,
         "peg": null,
         "epsGrowth3yPct": 23.48,
         "evSales": 1.76,
@@ -7529,7 +7529,7 @@
       },
       "grades": {
         "growth": "D-",
-        "value": "A",
+        "value": "A+",
         "momentum": "B",
         "profitability": "F"
       },
@@ -7695,7 +7695,7 @@
       },
       "grades": {
         "growth": "D-",
-        "value": "A+",
+        "value": "A",
         "momentum": "F",
         "profitability": "F"
       },
@@ -8211,8 +8211,8 @@
       "price": 485.07,
       "priceDate": "2026-10-16",
       "marketCap": "$84.0B",
-      "forwardPE": 27.52,
-      "peg": 2.15,
+      "forwardPE": 27.7,
+      "peg": "n/a",
       "revenueGrowth": "+11.7% YoY (TTM)",
       "score": 32,
       "scoreParts": {
@@ -8343,8 +8343,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 11.7,
-        "forwardPE": 27.52,
-        "peg": 2.15,
+        "forwardPE": 27.7,
+        "peg": null,
         "epsGrowth3yPct": 12.04,
         "evSales": 11.05,
         "grossMarginPct": 74.975,
@@ -8365,7 +8365,7 @@
       },
       "gradeInputs": {
         "growth": "2/2",
-        "value": "3/3",
+        "value": "2/3",
         "momentum": "3/3",
         "profitability": "4/4"
       }
@@ -8544,7 +8544,7 @@
       "price": 10.01,
       "priceDate": "2026-10-16",
       "marketCap": "$5.0B",
-      "forwardPE": 9.18,
+      "forwardPE": 11.25,
       "peg": "n/a",
       "revenueGrowth": "+13.3% YoY (TTM)",
       "score": 27,
@@ -8676,7 +8676,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 13.3,
-        "forwardPE": 9.18,
+        "forwardPE": 11.25,
         "peg": null,
         "epsGrowth3yPct": 0.69,
         "evSales": 2.12,
@@ -10539,8 +10539,8 @@
       "price": 113.07,
       "priceDate": "2026-10-16",
       "marketCap": "$22.9B",
-      "forwardPE": 57.55,
-      "peg": 5.26,
+      "forwardPE": 57.92,
+      "peg": 5.29,
       "revenueGrowth": "+26.9% YoY (TTM)",
       "score": 87,
       "scoreParts": {
@@ -10671,8 +10671,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 26.9,
-        "forwardPE": 57.55,
-        "peg": 5.26,
+        "forwardPE": 57.92,
+        "peg": 5.29,
         "epsGrowth3yPct": 10.37,
         "evSales": 3.17,
         "grossMarginPct": 55.659,
@@ -12703,8 +12703,8 @@
       "price": 158.01,
       "priceDate": "2026-10-16",
       "marketCap": "$82.9B",
-      "forwardPE": 9.27,
-      "peg": 0.78,
+      "forwardPE": 9.19,
+      "peg": 0.77,
       "revenueGrowth": "+17.2% YoY (TTM)",
       "score": 34,
       "scoreParts": {
@@ -12835,8 +12835,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 17.2,
-        "forwardPE": 9.27,
-        "peg": 0.78,
+        "forwardPE": 9.19,
+        "peg": 0.77,
         "epsGrowth3yPct": 14.28,
         "evSales": 3.23,
         "grossMarginPct": 62.636,
@@ -13035,8 +13035,8 @@
       "price": 478.07,
       "priceDate": "2026-10-16",
       "marketCap": "$134.3B",
-      "forwardPE": 6.34,
-      "peg": 0.2,
+      "forwardPE": 6.17,
+      "peg": 0.19,
       "revenueGrowth": "+15.2% YoY (TTM)",
       "score": 30,
       "scoreParts": {
@@ -13167,8 +13167,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 15.2,
-        "forwardPE": 6.34,
-        "peg": 0.2,
+        "forwardPE": 6.17,
+        "peg": 0.19,
         "epsGrowth3yPct": 42.71,
         "evSales": 1.04,
         "grossMarginPct": 12.819,
@@ -13201,7 +13201,7 @@
       "price": 276.48,
       "priceDate": "2026-10-16",
       "marketCap": "$252.5B",
-      "forwardPE": 28.57,
+      "forwardPE": 28.48,
       "peg": 1.2,
       "revenueGrowth": "+16.7% YoY (TTM)",
       "score": 22,
@@ -13333,7 +13333,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 16.7,
-        "forwardPE": 28.57,
+        "forwardPE": 28.48,
         "peg": 1.2,
         "epsGrowth3yPct": 32.47,
         "evSales": 13.34,
@@ -13367,7 +13367,7 @@
       "price": 125.29,
       "priceDate": "2026-10-16",
       "marketCap": "$22.3B",
-      "forwardPE": 5.8,
+      "forwardPE": 5.66,
       "peg": "n/a",
       "revenueGrowth": "+16.3% YoY (TTM)",
       "score": 20,
@@ -13499,7 +13499,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 16.3,
-        "forwardPE": 5.8,
+        "forwardPE": 5.66,
         "peg": null,
         "epsGrowth3yPct": 20.3,
         "evSales": 0.75,
@@ -13893,13 +13893,13 @@
           "key": "ocfDebt",
           "label": "Operating cash flow > 30% of total debt",
           "met": true,
-          "detail": "Operating cash flow $344M vs total debt $1M: 49492% vs > 30%"
+          "detail": "Operating cash flow $345M vs total debt $1M: 49594% vs > 30%"
         },
         {
           "key": "fcfAssets",
           "label": "Free cash flow / total assets > 10%",
           "met": true,
-          "detail": "FCF $130M (TTM) / total assets $624M = 20.8% vs > 10%"
+          "detail": "FCF $130M (TTM) / total assets $624M = 20.9% vs > 10%"
         },
         {
           "key": "epsQoQ",
@@ -13939,11 +13939,11 @@
         },
         {
           "label": "OCF / debt",
-          "value": "49492%"
+          "value": "49594%"
         },
         {
           "label": "FCF / assets",
-          "value": "20.8%"
+          "value": "20.9%"
         },
         {
           "label": "EPS QoQ",
@@ -13960,8 +13960,8 @@
       ],
       "drivers": [
         "ROIC > 15%: 41.2% → 18/20",
-        "Operating cash flow > 30% of total debt: 49492% → 20/20",
-        "Free cash flow / total assets > 10%: 20.8% → 14/20",
+        "Operating cash flow > 30% of total debt: 49594% → 20/20",
+        "Free cash flow / total assets > 10%: 20.9% → 14/20",
         "QoQ EPS growth > 20%: +21% → 0/20",
         "Annual revenue growth > 15%: 62.2% → 20/20"
       ],
@@ -13977,14 +13977,14 @@
       "screenMetrics": {
         "mcap": 2179770395.0,
         "roic": 41.214,
-        "ocf": 344082697.0,
+        "ocf": 344792726.0,
         "debt": 695228.0,
-        "fcf": 129968473.0,
-        "ocfDebt": 49492.065,
+        "fcf": 130236669.0,
+        "ocfDebt": 49594.194,
         "currency": "ZAR",
         "lastQ": "2026-06-30",
         "assets": 623506299.885,
-        "fcfAssets": 20.845,
+        "fcfAssets": 20.888,
         "eps0": 26.737,
         "eps1": 22.18,
         "eps4": 8.54,
@@ -14526,7 +14526,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-18",
+    "asOf": "2026-10-19",
     "spy1yPct": 15.53,
     "pool": "87 stocks (this list's picks + bench + near misses)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

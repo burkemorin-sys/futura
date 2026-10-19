@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-18",
+  "lastUpdated": "2026-10-19",
   "priceDate": "2026-10-16",
   "title": "Early Inflection",
   "method": "Looks for stocks in an 'early LITE-2025' position: revenue that has bottomed and is accelerating, rising margins, strong forward growth and a reasonable price, before the stock has already run. Universe: every US-listed stock with a $1B–$30B market cap on Nasdaq's screener (excluding banks, insurers, REITs and other financials), then 3+ analysts with a price target, $100M+ TTM revenue and $5M+ a day of trading, with revenue growing in the latest quarter and 8%+ implied growth over the next 12 months. Each survivor is scored 0–100 on the rubric below; the top 12 are the picks and the next 18 form the ranked bench, with at most 3 per industry. Excludes bitcoin/crypto miners, other commodity producers (metal, coal and lithium miners, oil & gas producers, refiners, smelters, fertilizer makers: their revenue tracks commodity prices) and pending-merger targets. Revenue points are halved when growth looks bought (a big jump in goodwill/intangibles or share count).",
@@ -47,12 +47,12 @@
       "how": "AI-infrastructure supplier industries (semis, chip equipment, optics/communication equipment, electronic components, hardware, electrical equipment) 5; adjacent industries (instruments, industrial machinery, power producers, engineering & construction) 3."
     }
   ],
-  "dataNotes": "Prices are Nasdaq closes (2026-10-16). Quarterly revenue and margins come from StockAnalysis income statements (S&P Global Market Intelligence); forward P/E, P/S, forward P/S, EV/sales, EPS growth forecast, 50/200-day averages, consensus rating, analyst count and average target come from StockAnalysis statistics pages. Next-12-month revenue growth is implied as P/S ÷ forward P/S. Beat-and-raise history is not scored automatically. Analyst target and forward P/S are saved daily (data/early-inflection-history.json), so 30-day revisions show up from early November 2026. This run: 1426 names screened, 1195 passed the filters, 531 scored on fundamentals, top 70 checked against price history. 'n/a' means not available.",
+  "dataNotes": "Prices are Nasdaq closes (2026-10-16). Quarterly revenue and margins come from StockAnalysis income statements (S&P Global Market Intelligence); forward P/E, P/S, forward P/S, EV/sales, EPS growth forecast, 50/200-day averages, consensus rating, analyst count and average target come from StockAnalysis statistics pages. Next-12-month revenue growth is implied as P/S ÷ forward P/S. Beat-and-raise history is not scored automatically. Analyst target and forward P/S are saved daily (data/early-inflection-history.json), so 30-day revisions show up from early November 2026. This run: 1418 names screened, 1192 passed the filters, 529 scored on fundamentals, top 70 checked against price history. 'n/a' means not available.",
   "universe": {
-    "listed": 7002,
-    "screened": 1426,
-    "passedFilters": 1195,
-    "scored": 531,
+    "listed": 6963,
+    "screened": 1418,
+    "passedFilters": 1192,
+    "scored": 529,
     "priceChecked": 70
   },
   "excluded": {
@@ -1610,6 +1610,18 @@
         "source": "https://ir.penguinsolutions.com/news/news-details/2026/Penguin-Solutions-Announces-Fourth-Quarter-and-Full-Year-Fiscal-2026-Results/default.aspx",
         "asOf": "2026-10-06"
       },
+      "grades": {
+        "growth": "D+",
+        "value": "C+",
+        "momentum": "A",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 26.5,
         "forwardPE": 12.53,
@@ -1625,18 +1637,6 @@
         "chg1yPct": 153.89,
         "relStrength1yPct": 138.36,
         "priceAsOf": "2026-10-16"
-      },
-      "grades": {
-        "growth": "D+",
-        "value": "C+",
-        "momentum": "A",
-        "profitability": "D-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2910,7 +2910,7 @@
       "price": 238.05,
       "priceDate": "2026-10-16",
       "marketCap": "$9.5B",
-      "forwardPE": 17.47,
+      "forwardPE": 17.41,
       "peg": 0.4,
       "revenueGrowth": "+24.6% YoY (TTM; latest quarter +30.0%)",
       "score": 73,
@@ -2954,7 +2954,7 @@
           "key": "value",
           "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
           "met": true,
-          "detail": "Forward P/E 17.466, EV/forward sales 3.4x"
+          "detail": "Forward P/E 17.41, EV/forward sales 3.4x"
         },
         {
           "key": "notrun",
@@ -2991,7 +2991,7 @@
         "Revenue: latest quarter +30% YoY vs +26% the quarter before and +21% a year earlier → 10/20",
         "Margins: gross +2.9 pts, operating +6.9 pts YoY (last 2 quarters) → 10/15",
         "Forward: next-12-month revenue +36% (implied), 3-yr EPS growth forecast +44% a year → 15/15",
-        "Valuation: forward P/E 17.466, EV/forward sales 3.4x → 13/15",
+        "Valuation: forward P/E 17.41, EV/forward sales 3.4x → 13/15",
         "Not already run: 1-yr +24%, -39% vs 52-week high → 10/10",
         "Trend: price below 200-day, below 50-day, 3-month vs SPY -19 pts → 0/10",
         "Analysts: Strong Buy (12), +77% to target → 10/10",
@@ -3052,7 +3052,7 @@
         "omChg": 6.93,
         "fwdRevGrowth": 36.1,
         "eps3y": 44.35,
-        "fpe": 17.47,
+        "fpe": 17.41,
         "evSales": 4.67,
         "evFwdSales": 3.43,
         "peg": 0.4,
@@ -3098,7 +3098,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 24.6,
-        "forwardPE": 17.47,
+        "forwardPE": 17.41,
         "peg": 0.4,
         "epsGrowth3yPct": 44.35,
         "evSales": 4.67,
@@ -3957,7 +3957,7 @@
       "price": 6.13,
       "priceDate": "2026-10-16",
       "marketCap": "$10.4B",
-      "forwardPE": 8.5,
+      "forwardPE": 8.48,
       "peg": 0.23,
       "revenueGrowth": "+12.6% YoY (TTM; latest quarter +18.9%)",
       "score": 72,
@@ -4001,7 +4001,7 @@
           "key": "value",
           "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
           "met": true,
-          "detail": "Forward P/E 8.503, EV/forward sales 1.7x"
+          "detail": "Forward P/E 8.48, EV/forward sales 1.7x"
         },
         {
           "key": "notrun",
@@ -4038,7 +4038,7 @@
         "Revenue: latest quarter +19% YoY vs +12% the quarter before and +9% a year earlier → 10/20",
         "Margins: gross +5.4 pts, operating +13.0 pts YoY (last 2 quarters) → 15/15",
         "Forward: next-12-month revenue +13% (implied), 3-yr EPS growth forecast +34% a year → 8/15",
-        "Valuation: forward P/E 8.503, EV/forward sales 1.7x → 15/15",
+        "Valuation: forward P/E 8.48, EV/forward sales 1.7x → 15/15",
         "Not already run: 1-yr -21%, -33% vs 52-week high → 10/10",
         "Trend: price above 200-day, above 50-day, 3-month vs SPY +33 pts → 10/10",
         "Analysts: Hold (42), +21% to target → 4/10",
@@ -4097,7 +4097,7 @@
         "omChg": 13.01,
         "fwdRevGrowth": 12.79,
         "eps3y": 33.54,
-        "fpe": 8.5,
+        "fpe": 8.48,
         "evSales": 1.88,
         "evFwdSales": 1.67,
         "peg": 0.23,
@@ -4138,7 +4138,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 12.6,
-        "forwardPE": 8.5,
+        "forwardPE": 8.48,
         "peg": 0.23,
         "epsGrowth3yPct": 33.54,
         "evSales": 1.88,
@@ -4725,7 +4725,7 @@
         "evSales": 4.11,
         "evFwdSales": 3.19,
         "peg": 0.29,
-        "ch1y": -1.42,
+        "ch1y": -1.47,
         "pt": 206.81,
         "rating": "Strong Buy",
         "analysts": 29,
@@ -4955,6 +4955,18 @@
         "acqJump": -2.74
       },
       "rank": 11,
+      "grades": {
+        "growth": "D-",
+        "value": "D",
+        "momentum": "F",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 16.3,
         "forwardPE": 13.69,
@@ -4970,18 +4982,6 @@
         "chg1yPct": 55.96,
         "relStrength1yPct": 40.43,
         "priceAsOf": "2026-10-16"
-      },
-      "grades": {
-        "growth": "D-",
-        "value": "D",
-        "momentum": "F",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -4991,7 +4991,7 @@
       "price": 64.96,
       "priceDate": "2026-10-16",
       "marketCap": "$5.0B",
-      "forwardPE": 8.2,
+      "forwardPE": 8.17,
       "peg": "n/a",
       "revenueGrowth": "+19.2% YoY (TTM; latest quarter +75.2%)",
       "score": 69,
@@ -5035,7 +5035,7 @@
           "key": "value",
           "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
           "met": true,
-          "detail": "Forward P/E 8.204, EV/forward sales 1.7x"
+          "detail": "Forward P/E 8.167, EV/forward sales 1.7x"
         },
         {
           "key": "notrun",
@@ -5072,7 +5072,7 @@
         "Revenue: latest quarter +75% YoY vs +9% the quarter before and -13% a year earlier → 20/20",
         "Margins: gross +2.1 pts, operating +2.4 pts YoY (last 2 quarters) → 6/15",
         "Forward: next-12-month revenue +11% (implied), 3-yr EPS growth forecast +28% a year → 7/15",
-        "Valuation: forward P/E 8.204, EV/forward sales 1.7x → 15/15",
+        "Valuation: forward P/E 8.167, EV/forward sales 1.7x → 15/15",
         "Not already run: 1-yr +85%, -1% vs 52-week high → 7/10",
         "Trend: price above 200-day, above 50-day, 3-month vs SPY +16 pts → 10/10",
         "Analysts: Buy (10), +10% to target → 4/10",
@@ -5132,7 +5132,7 @@
         "omChg": 2.35,
         "fwdRevGrowth": 11.33,
         "eps3y": 28.3,
-        "fpe": 8.2,
+        "fpe": 8.17,
         "evSales": 1.9,
         "evFwdSales": 1.71,
         "peg": null,
@@ -5173,7 +5173,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 19.2,
-        "forwardPE": 8.2,
+        "forwardPE": 8.17,
         "peg": null,
         "epsGrowth3yPct": 28.3,
         "evSales": 1.9,
@@ -5341,7 +5341,7 @@
         "evSales": 0.82,
         "evFwdSales": 0.7,
         "peg": null,
-        "ch1y": 84.08,
+        "ch1y": 84.06,
         "pt": 170.2,
         "rating": "Buy",
         "analysts": 5,
@@ -6421,7 +6421,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-18",
+    "asOf": "2026-10-19",
     "spy1yPct": 15.53,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
