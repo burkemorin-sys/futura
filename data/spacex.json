@@ -39,66 +39,73 @@
     "sourceUrl": "https://stockanalysis.com/stocks/spcx/"
   },
   "fundamentals": {
-    "asOf": "TTM through Q2 2026 (S&P Global via StockAnalysis), prices as of Oct 7, 2026",
+    "asOf": "Q3 2026 (quarter ended Sept 30, 2026), reported Oct 20, 2026",
     "kpis": [
       {
-        "label": "Revenue (TTM)",
-        "value": "$23.04B",
-        "note": "+121.9% YoY"
+        "label": "Revenue (Q3)",
+        "value": "$14.58B",
+        "note": "+161% YoY (from $5.58B); LSEG est. $12.72B"
       },
       {
-        "label": "Net income (TTM)",
-        "value": "−$8.89B"
+        "label": "Net income (Q3)",
+        "value": "$4.40B",
+        "note": "vs −$1.05B; incl. $1.03B other income and a $390M tax benefit"
       },
       {
-        "label": "EPS (TTM)",
-        "value": "−$2.27"
+        "label": "EPS (Q3)",
+        "value": "$0.35 diluted",
+        "note": "$0.45 adjusted vs $0.13 expected (LSEG)"
       },
       {
-        "label": "Gross margin",
-        "value": "51.87%"
+        "label": "Adj. EBITDA (Q3)",
+        "value": "$8.81B",
+        "note": "+306% YoY"
       },
       {
-        "label": "Operating margin",
-        "value": "−14.92%"
+        "label": "Operating income (Q3)",
+        "value": "$2.79B",
+        "note": "19.1% margin, vs −$273M a year ago"
       },
       {
-        "label": "Free cash flow (TTM)",
-        "value": "−$32.52B",
-        "note": "OCF $9.90B − capex $42.42B"
+        "label": "Gross margin (Q3)",
+        "value": "62.4%",
+        "note": "Q4 expected closer to Q2 levels (one-time mix benefits)"
       },
       {
-        "label": "Cash",
-        "value": "$100.01B"
+        "label": "Capex (Q3)",
+        "value": "$19.59B",
+        "note": "$16.44B in Super Intelligence"
       },
       {
-        "label": "Total debt",
-        "value": "$39.71B",
-        "note": "Net cash $60.30B"
+        "label": "Operating cash flow (9M)",
+        "value": "$13.10B",
+        "note": "vs capex $48.07B over 9 months"
       },
       {
-        "label": "Forward P/E",
-        "value": "107.5x"
+        "label": "Cash + securities",
+        "value": "$89.86B",
+        "note": "Cash $51.29B + marketable securities $38.56B"
       },
       {
-        "label": "Price / sales",
-        "value": "98.7x",
-        "note": "Forward P/S 27.6x"
+        "label": "Total debt & leases",
+        "value": "$38.84B",
+        "note": "Net cash ≈ $51.0B"
       },
       {
-        "label": "EV / EBITDA",
-        "value": "375.5x"
+        "label": "Starlink consumer subs",
+        "value": "13.6M",
+        "note": "+1.6M QoQ; ARPU $69/mo"
       },
       {
         "label": "Shares outstanding",
-        "value": "13.57B",
-        "note": "Float ~2.23B"
+        "value": "13.58B",
+        "note": "Class A 8.24B + Class B 5.34B (Sept 30)"
       }
     ],
-    "kpiSource": "https://stockanalysis.com/stocks/spcx/statistics/",
+    "kpiSource": "https://ir.spacex.com/files/content_files/SpaceX-Reports-Third-Quarter-2026-Results.pdf",
     "tables": [
       {
-        "caption": "Segments: Q2 2026 ($M)",
+        "caption": "Segments: Q3 2026 ($M)",
         "columns": [
           "",
           "Revenue",
@@ -110,83 +117,129 @@
         "rows": [
           [
             "Space (launch)",
-            "962",
-            "+29%",
-            "(542)",
-            "(205)",
-            "1,174"
+            "1,767",
+            "+6%",
+            "(7)",
+            "357",
+            "1,606"
           ],
           [
             "Connectivity (Starlink)",
-            "4,291",
-            "+66%",
-            "1,656",
-            "2,597",
-            "1,367"
+            "5,248",
+            "+69%",
+            "2,367",
+            "3,499",
+            "1,543"
           ],
           [
-            "AI (xAI, X, compute)",
-            "2,561",
-            "+247%",
-            "(1,257)",
-            "1,146",
-            "15,828"
+            "Super Intelligence (AI)",
+            "7,560",
+            "+830%",
+            "431",
+            "4,953",
+            "16,444"
           ],
           [
             "Total",
-            "7,814",
-            "+92%",
-            "(143)",
-            "3,538",
-            "18,369"
+            "14,575",
+            "+161%",
+            "2,791",
+            "8,809",
+            "19,593"
           ]
         ],
-        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm",
-        "sourceLabel": "SpaceX Q2 2026 results (SEC)"
+        "sourceUrl": "https://ir.spacex.com/files/content_files/SpaceX-Reports-Third-Quarter-2026-Results.pdf",
+        "sourceLabel": "SpaceX Q3 2026 results"
       },
       {
-        "caption": "Key operating metrics: Q2 2026",
+        "caption": "Key operating metrics",
         "columns": [
           "",
-          "Q2-25",
-          "Q1-26",
-          "Q2-26"
+          "Q3-25",
+          "Q2-26",
+          "Q3-26"
         ],
         "rows": [
           [
-            "Starlink subscribers",
-            "6.0M",
-            "10.3M",
-            "12.0M"
+            "Starlink consumer subscribers",
+            "7.2M",
+            "12.0M",
+            "13.6M"
           ],
           [
             "Starlink ARPU / month",
-            "$85",
+            "$83",
             "$66",
-            "$66"
+            "$69"
           ],
           [
-            "AI nameplate compute",
-            "0.4 GW",
-            "1.0 GW",
-            "1.4 GW"
+            "SI nameplate compute",
+            "0.6 GW",
+            "1.4 GW",
+            "1.7 GW"
           ],
           [
-            "Net loss ($M)",
-            "(1,008)",
-            "n/a",
-            "(541)"
+            "Total launches",
+            "44",
+            "38",
+            "35"
+          ],
+          [
+            "Mass to orbit (t)",
+            "525",
+            "485",
+            "476"
+          ],
+          [
+            "Net income ($M)",
+            "(1,054)",
+            "(541)",
+            "4,404"
           ]
         ],
-        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm",
-        "sourceLabel": "SpaceX Q2 2026 results (SEC)"
+        "sourceUrl": "https://ir.spacex.com/files/content_files/SpaceX-Reports-Third-Quarter-2026-Results.pdf",
+        "sourceLabel": "SpaceX Q3 2026 results"
+      },
+      {
+        "caption": "Guidance (Q3 earnings call)",
+        "columns": [
+          "",
+          "Guide"
+        ],
+        "rows": [
+          [
+            "Q1 2027 revenue",
+            "$33B–$37B (LSEG est. $22.2B)"
+          ],
+          [
+            "Q4 2026 capex",
+            "$35B–$40B"
+          ],
+          [
+            "Nameplate compute",
+            "~2 GW end of Oct; 2.5–3 GW by year-end"
+          ],
+          [
+            "ARR (December run-rate)",
+            "On track for $100B by end of 2026"
+          ],
+          [
+            "Backlog (Sept 30)",
+            "$63B, ~$42B expected within a year"
+          ]
+        ],
+        "sourceUrl": "https://stockanalysis.com/stocks/spcx/transcripts/723936-q3-2026/",
+        "sourceLabel": "Q3 2026 call transcript (StockAnalysis)"
       }
     ],
     "notes": [
-      "Q2: signed Cloud Services Agreements totaling $14.1B; agreed to acquire Cursor for $60B (expected to close in Q3 2026).",
-      "Google's AI-compute contract ($920M/month) ramps to full billing in October."
+      "First revenue-generating Starship mission (Flight 14, first orbital Starship flight) delivered 26 Starlink V3 satellites, about 10x the downlink capacity of a Falcon 9 Starlink launch.",
+      "Cursor acquisition closed Aug 14 ($60B implied equity value); it contributed $608M of Q3 revenue, and $1.2B of related stock comp was booked in SI.",
+      "Musk said on the call that Tesla and SpaceX boards formed special committees of independent directors to evaluate a possible merger; no terms or timeline, shareholder approval required.",
+      "Agreed Oct 8 to acquire 800 MHz spectrum for Starlink Mobile (expected to close 1H 2027).",
+      "Lock-up overhang: about 1.3B shares become tradable around Oct 22 and another 328.4M on Oct 24."
     ],
-    "notesSourceUrl": "https://ir.spacex.com/files/doc_financials/2026/q2/SpaceX-Reports-Second-Quarter-2026-Results.pdf",
+    "notesSourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
     "analyst": {
       "rating": "Buy",
       "count": 38,
@@ -248,12 +301,12 @@
     ],
     "bull": [
       {
-        "text": "Starlink is solidly profitable and growing: 12.0M subscribers, $1.66B Q2 operating income (+79% YoY).",
-        "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm"
+        "text": "Profitable at scale: Q3 net income $4.4B and adj. EBITDA $8.8B (+306%); Connectivity operating income +99% YoY to $2.4B with 13.6M subscribers.",
+        "url": "https://ir.spacex.com/files/content_files/SpaceX-Reports-Third-Quarter-2026-Results.pdf"
       },
       {
-        "text": "AI compute contracts ($14.1B signed in Q2; Google $920M/month at full rate from October) drove AI revenue +247%.",
-        "url": "https://ir.spacex.com/files/doc_financials/2026/q2/SpaceX-Reports-Second-Quarter-2026-Results.pdf"
+        "text": "Super Intelligence revenue hit $7.6B (+830%) and Q1 2027 revenue guidance of $33B–$37B is far above the $22.2B consensus.",
+        "url": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html"
       },
       {
         "text": "Starship Flight 14 reached orbit and deployed the first Starlink V3 satellites.",
@@ -270,15 +323,15 @@
         "url": "https://invezz.com/news/2026/10/07/spacex-stock-40b-nvidia-financing/"
       },
       {
-        "text": "Burning cash: TTM free cash flow −$32.5B on $42.4B capex, mostly AI data centers ($15.8B AI capex in Q2 alone).",
-        "url": "https://stockanalysis.com/stocks/spcx/statistics/"
+        "text": "Spending is accelerating: Q3 capex $19.6B ($16.4B AI) and Q4 guided to $35B–$40B; 9-month capex $48.1B vs $13.1B operating cash flow. Q3 profit was helped by ~$1.0B other income and a $390M tax benefit.",
+        "url": "https://ir.spacex.com/files/content_files/SpaceX-Reports-Third-Quarter-2026-Results.pdf"
       },
       {
         "text": "Valuation ~100x trailing sales; Morningstar fair value ~$780B and Damodaran ~$1.3T EV, against a $2.3T market cap.",
         "url": "https://en.wikipedia.org/wiki/Initial_public_offering_of_SpaceX"
       },
       {
-        "text": "Lock-up overhang: 328.4M shares on Oct 9, another 328.4M on Oct 24, ~1.3B after Q3 earnings.",
+        "text": "Lock-up overhang: ~1.3B shares unlock around Oct 22 and another 328.4M on Oct 24.",
         "url": "https://www.tipranks.com/news/spacex-stock-forecast-spcx-gains-ahead-of-unlock-what-investors-should-know"
       },
       {
