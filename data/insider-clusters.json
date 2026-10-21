@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-20",
-  "priceDate": "2026-10-19",
+  "lastUpdated": "2026-10-21",
+  "priceDate": "2026-10-20",
   "title": "Insider Buys",
-  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-09-20 to 2026-10-20 for US-listed issuers over $300M (7,044 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
+  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-09-21 to 2026-10-21 for US-listed issuers over $300M (7,260 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
   "rubric": [
     {
       "component": "Insiders",
@@ -21,20 +21,20 @@
       "how": "Market cap above $300M on Nasdaq's screener"
     }
   ],
-  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 119 companies had insider purchases; 10 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 2 left out because filed prices don't match the US share price (local-currency or other share class: PAM (avg filed price 22.55 vs US close 79.70), GAM (avg filed price 22.79 vs US close 64.61)). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
+  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 120 companies had insider purchases; 10 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 2 left out because filed prices don't match the US share price (local-currency or other share class: PAM (avg filed price 22.55 vs US close 78.07), GAM (avg filed price 22.79 vs US close 64.86)). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
   "universe": {
-    "listed": 6986,
-    "screened": 3386,
-    "filings": 7044,
-    "companiesWithBuys": 119,
+    "listed": 6956,
+    "screened": 3398,
+    "filings": 7260,
+    "companiesWithBuys": 120,
     "clusters": 10,
     "qualified": 10
   },
   "excluded": {
     "minersOrCryptoTreasury": [],
     "priceMismatch": [
-      "PAM (avg filed price 22.55 vs US close 79.70)",
-      "GAM (avg filed price 22.79 vs US close 64.61)"
+      "PAM (avg filed price 22.55 vs US close 78.07)",
+      "GAM (avg filed price 22.79 vs US close 64.86)"
     ],
     "minersUniverse": [
       "ABTC",
@@ -58,10 +58,10 @@
       "company": "Simon Property Group Inc.",
       "ticker": "SPG",
       "sector": "Real Estate – Real Estate Investment Trusts",
-      "price": 202.49,
-      "priceDate": "2026-10-19",
-      "marketCap": "$76.8B",
-      "forwardPE": 30.42,
+      "price": 206.99,
+      "priceDate": "2026-10-20",
+      "marketCap": "$78.5B",
+      "forwardPE": 31.07,
       "peg": "n/a",
       "revenueGrowth": "n/a",
       "alsoIn": [
@@ -259,7 +259,7 @@
       "grades": {
         "growth": "D",
         "value": "F",
-        "momentum": "B-",
+        "momentum": "A-",
         "profitability": "A+"
       },
       "gradeInputs": {
@@ -270,30 +270,30 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 30.42,
+        "forwardPE": 31.07,
         "peg": null,
         "epsGrowth3yPct": 4.71,
-        "evSales": 15.16,
+        "evSales": 15.41,
         "grossMarginPct": 81.426,
         "operatingMarginPct": 47.399,
         "netMarginPct": 66.571,
         "fcfMarginPct": 46.357,
-        "chg3mPct": -11.46,
-        "chg6mPct": -1.81,
-        "chg1yPct": 13.7,
-        "relStrength1yPct": -1.67,
-        "priceAsOf": "2026-10-19"
+        "chg3mPct": -9.29,
+        "chg6mPct": -0.27,
+        "chg1yPct": 15.98,
+        "relStrength1yPct": 1.42,
+        "priceAsOf": "2026-10-20"
       }
     },
     {
       "company": "H. B. Fuller Company",
       "ticker": "FUL",
       "sector": "Industrials – Home Furnishings",
-      "price": 51.06,
-      "priceDate": "2026-10-19",
+      "price": 50.57,
+      "priceDate": "2026-10-20",
       "marketCap": "$2.7B",
-      "forwardPE": 9.88,
-      "peg": 0.59,
+      "forwardPE": 9.67,
+      "peg": 0.58,
       "revenueGrowth": "n/a",
       "alsoIn": [
         "Insider Buys"
@@ -489,30 +489,30 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 9.88,
-        "peg": 0.59,
+        "forwardPE": 9.67,
+        "peg": 0.58,
         "epsGrowth3yPct": 10.62,
-        "evSales": 1.36,
+        "evSales": 1.35,
         "grossMarginPct": 32.7,
         "operatingMarginPct": 11.999,
         "netMarginPct": 5.564,
         "fcfMarginPct": 2.815,
-        "chg3mPct": -10.36,
-        "chg6mPct": -20.75,
-        "chg1yPct": -13.18,
-        "relStrength1yPct": -28.55,
-        "priceAsOf": "2026-10-19"
+        "chg3mPct": -8.77,
+        "chg6mPct": -22.03,
+        "chg1yPct": -14.42,
+        "relStrength1yPct": -28.98,
+        "priceAsOf": "2026-10-20"
       }
     },
     {
       "company": "Heico Corporation",
       "ticker": "HEI",
       "sector": "Industrials – Aerospace",
-      "price": 308.17,
-      "priceDate": "2026-10-19",
-      "marketCap": "$43.1B",
-      "forwardPE": 44.38,
-      "peg": 2.34,
+      "price": 305.21,
+      "priceDate": "2026-10-20",
+      "marketCap": "$42.7B",
+      "forwardPE": 43.95,
+      "peg": 2.31,
       "revenueGrowth": "n/a",
       "alsoIn": [
         "Insider Buys"
@@ -667,7 +667,7 @@
       "grades": {
         "growth": "A+",
         "value": "F",
-        "momentum": "A-",
+        "momentum": "B-",
         "profitability": "B+"
       },
       "gradeInputs": {
@@ -678,27 +678,27 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 44.38,
-        "peg": 2.34,
+        "forwardPE": 43.95,
+        "peg": 2.31,
         "epsGrowth3yPct": 18.61,
-        "evSales": 8.76,
+        "evSales": 8.68,
         "grossMarginPct": 40.398,
         "operatingMarginPct": 24.271,
         "netMarginPct": 16.376,
         "fcfMarginPct": 19.902,
-        "chg3mPct": -10.07,
-        "chg6mPct": 5.69,
-        "chg1yPct": 0.38,
-        "relStrength1yPct": -14.99,
-        "priceAsOf": "2026-10-19"
+        "chg3mPct": -10.35,
+        "chg6mPct": 4.46,
+        "chg1yPct": -2.5,
+        "relStrength1yPct": -17.06,
+        "priceAsOf": "2026-10-20"
       }
     },
     {
       "company": "Accelevation Holdings Corp.",
       "ticker": "ACCV",
       "sector": "Energy – Industrial Machinery/Components",
-      "price": 12.49,
-      "priceDate": "2026-10-19",
+      "price": 12.31,
+      "priceDate": "2026-10-20",
       "marketCap": "$2.8B",
       "forwardPE": "n/a",
       "peg": "n/a",
@@ -836,7 +836,7 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 4.75,
+        "evSales": 4.7,
         "grossMarginPct": 29.251,
         "operatingMarginPct": 12.399,
         "netMarginPct": 6.77,
@@ -845,17 +845,17 @@
         "chg6mPct": null,
         "chg1yPct": null,
         "relStrength1yPct": null,
-        "priceAsOf": "2026-10-19"
+        "priceAsOf": "2026-10-20"
       }
     },
     {
       "company": "GameStop Corporation",
       "ticker": "GME",
       "sector": "Consumer Discretionary – Electronics Distribution",
-      "price": 26.44,
-      "priceDate": "2026-10-19",
-      "marketCap": "$13.3B",
-      "forwardPE": 14.45,
+      "price": 26.47,
+      "priceDate": "2026-10-20",
+      "marketCap": "$13.4B",
+      "forwardPE": 14.46,
       "peg": "n/a",
       "revenueGrowth": "n/a",
       "alsoIn": [
@@ -992,30 +992,30 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 14.45,
+        "forwardPE": 14.46,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 3.55,
+        "evSales": 3.56,
         "grossMarginPct": 37.893,
         "operatingMarginPct": 13.867,
         "netMarginPct": 25.158,
         "fcfMarginPct": 19.376,
-        "chg3mPct": 20.79,
-        "chg6mPct": 7.7,
-        "chg1yPct": 14.61,
-        "relStrength1yPct": -0.76,
-        "priceAsOf": "2026-10-19"
+        "chg3mPct": 21.65,
+        "chg6mPct": 6.22,
+        "chg1yPct": 13.26,
+        "relStrength1yPct": -1.3,
+        "priceAsOf": "2026-10-20"
       }
     },
     {
       "company": "Dick's Sporting Goods Inc",
       "ticker": "DKS",
       "sector": "Consumer Discretionary – Other Specialty Stores",
-      "price": 143.77,
-      "priceDate": "2026-10-19",
-      "marketCap": "$12.8B",
-      "forwardPE": 12.05,
-      "peg": 1.95,
+      "price": 143.08,
+      "priceDate": "2026-10-20",
+      "marketCap": "$12.7B",
+      "forwardPE": 11.99,
+      "peg": 1.94,
       "revenueGrowth": "n/a",
       "alsoIn": [
         "Insider Buys"
@@ -1111,27 +1111,27 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 12.05,
-        "peg": 1.95,
+        "forwardPE": 11.99,
+        "peg": 1.94,
         "epsGrowth3yPct": 4.18,
         "evSales": 0.94,
         "grossMarginPct": 33.093,
         "operatingMarginPct": 7.023,
         "netMarginPct": 3.967,
         "fcfMarginPct": 1.132,
-        "chg3mPct": -33.86,
-        "chg6mPct": -35.92,
-        "chg1yPct": -37.18,
-        "relStrength1yPct": -52.55,
-        "priceAsOf": "2026-10-19"
+        "chg3mPct": -33.24,
+        "chg6mPct": -37.96,
+        "chg1yPct": -36.63,
+        "relStrength1yPct": -51.19,
+        "priceAsOf": "2026-10-20"
       }
     },
     {
       "company": "PIMCO Dynamic Income Fund",
       "ticker": "PDI",
       "sector": "Finance – Trusts Except Educational Religious and Charitable",
-      "price": 14.13,
-      "priceDate": "2026-10-19",
+      "price": 14.14,
+      "priceDate": "2026-10-20",
       "marketCap": "$3.4B",
       "forwardPE": "n/a",
       "peg": "n/a",
@@ -1232,11 +1232,11 @@
         "revenueGrowthPct": null,
         "forwardPE": null,
         "peg": null,
-        "chg3mPct": -13.58,
-        "chg6mPct": -18.75,
-        "chg1yPct": -25.44,
-        "relStrength1yPct": -40.81,
-        "priceAsOf": "2026-10-19",
+        "chg3mPct": -13.25,
+        "chg6mPct": -18.88,
+        "chg1yPct": -21.62,
+        "relStrength1yPct": -36.18,
+        "priceAsOf": "2026-10-20",
         "notes": [
           "StockAnalysis statistics unavailable (HTTP Error 404: Not Found)"
         ]
@@ -1246,9 +1246,9 @@
       "company": "AgomAb Therapeutics NV",
       "ticker": "AGMB",
       "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
-      "price": 8.23,
-      "priceDate": "2026-10-19",
-      "marketCap": "$405M",
+      "price": 8.73,
+      "priceDate": "2026-10-20",
+      "marketCap": "$430M",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "n/a",
@@ -1386,18 +1386,18 @@
         "operatingMarginPct": null,
         "netMarginPct": null,
         "fcfMarginPct": null,
-        "chg3mPct": -31.64,
-        "chg6mPct": -27.36,
+        "chg3mPct": -27.13,
+        "chg6mPct": -19.09,
         "chg1yPct": null,
         "relStrength1yPct": null,
-        "priceAsOf": "2026-10-19"
+        "priceAsOf": "2026-10-20"
       }
     }
   ],
   "bench": [],
   "grading": {
-    "asOf": "2026-10-20",
-    "spy1yPct": 15.37,
+    "asOf": "2026-10-21",
+    "spy1yPct": 14.56,
     "pool": "8 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
