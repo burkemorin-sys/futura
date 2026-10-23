@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-22",
+  "lastUpdated": "2026-10-23",
   "company": "Intuitive Machines",
   "ticker": "LUNR",
   "exchange": "NASDAQ",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "Lunar landers (NASA CLPS), lunar data relay (NASA Near Space Network) and, since buying Lanteris (formerly Maxar Space Systems), satellites for commercial, civil and national-security customers.",
   "snapshot": {
-    "price": 10.91,
-    "change": "+3.51%",
-    "asOf": "Oct 21, 2026 close",
-    "marketCap": "$2.5B",
+    "price": 10.45,
+    "change": "−4.22%",
+    "asOf": "Oct 22, 2026 close",
+    "marketCap": "$2.4B",
     "range52w": "$8.05 – $45.70 (closes)",
     "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/lunr/historical"
   },
@@ -126,7 +126,7 @@
       "rating": "Strong Buy",
       "count": 10,
       "priceTarget": "$29.00",
-      "upside": "+165.8%",
+      "upside": "+177.5%",
       "sourceUrl": "https://stockanalysis.com/stocks/lunr/forecast/",
       "calls": [
         {
@@ -389,6 +389,13 @@
   },
   "news": [
     {
+      "date": "2026-10-22",
+      "outlet": "Intuitive Machines (GlobeNewswire)",
+      "title": "Intuitive Machines adds former NRO director Christopher Scolese to its board",
+      "summary": "Scolese, a former director of the National Reconnaissance Office and senior NASA executive, replaces Michael Blitzer, who resigned effective Oct. 21; he joins the audit and nominating/governance committees and chairs the conflicts committee. Space stocks fell with tech Thursday.",
+      "url": "https://www.globenewswire.com/news-release/2026/10/22/3386959/0/en/intuitive-machines-appoints-dr-christopher-scolese-to-board-of-directors.html"
+    },
+    {
       "date": "2026-10-21",
       "outlet": "Benzinga",
       "title": "Intuitive Machines rallies with space stocks after SpaceX's Q3 beat",
@@ -464,18 +471,11 @@
       "title": "Why Intuitive Machines stock dropped",
       "summary": "Adjusted EPS was −$0.29 vs −$0.09 expected. Shares fell as much as 16% intraday before recovering to −3%.",
       "url": "https://finance.yahoo.com/markets/stocks/articles/why-intuitive-machines-stock-dropped-154505146.html"
-    },
-    {
-      "date": "2026-01-13",
-      "outlet": "Intuitive Machines",
-      "title": "Intuitive Machines completes Lanteris Space Systems acquisition",
-      "summary": "Closed the $800M purchase of the former Maxar Space Systems ($450M cash + $350M stock, before adjustments).",
-      "url": "https://investors.intuitivemachines.com/news-releases/news-release-details/intuitive-machines-completes-acquisition-lanteris-space-systems"
     }
   ],
   "grades": {
     "growth": "B",
-    "value": "D-",
+    "value": "D",
     "momentum": "F",
     "profitability": "F"
   },
@@ -491,22 +491,22 @@
     "revenueGrowthPct": 116.89,
     "revenueGrowthQuarter": "2026-06-30",
     "epsGrowth3yPct": null,
-    "evSales": 5.33,
+    "evSales": 5.11,
     "grossMarginPct": 16.349,
     "operatingMarginPct": -21.277,
     "netMarginPct": -26.636,
     "fcfMarginPct": -38.31,
-    "chg3mPct": -25.48,
-    "chg6mPct": -60.78,
-    "chg1yPct": -13.96,
-    "relStrength1yPct": -29.12,
-    "priceAsOf": "2026-10-21"
+    "chg3mPct": -25.83,
+    "chg6mPct": -65.1,
+    "chg1yPct": -7.93,
+    "relStrength1yPct": -22.33,
+    "priceAsOf": "2026-10-22"
   },
   "grading": {
-    "asOf": "2026-10-22",
-    "spy1yPct": 15.16,
-    "pool": "Ranked against 146 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 10, Piotroski 18, Magic Formula 28, Insider Buys 7, duplicates counted once), plus LUNR itself",
-    "poolSize": 146,
+    "asOf": "2026-10-23",
+    "spy1yPct": 14.4,
+    "pool": "Ranked against 145 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 9, Piotroski 19, Magic Formula 28, Insider Buys 6, duplicates counted once), plus LUNR itself",
+    "poolSize": 145,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -521,8 +521,8 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-22",
-    "priceDate": "2026-10-21",
+    "asOf": "2026-10-23",
+    "priceDate": "2026-10-22",
     "inScreen": false,
     "outsideScreenReason": null,
     "score": 59,
@@ -530,7 +530,7 @@
       "rev": 10.0,
       "margin": 15.0,
       "forward": 10.0,
-      "value": 5.6,
+      "value": 5.7,
       "notRun": 8,
       "trend": 0,
       "analysts": 10.0,
@@ -566,31 +566,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": true,
-        "detail": "Forward P/E n/a, EV/forward sales 2.5x"
+        "detail": "Forward P/E n/a, EV/forward sales 2.4x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr -14% vs SPY +15%"
+        "detail": "1-yr -8% vs SPY +14%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": false,
-        "detail": "-76% vs 52-week high"
+        "detail": "-77% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
         "met": false,
-        "detail": "Below 200-day; 3-month vs SPY -26 pts"
+        "detail": "Below 200-day; 3-month vs SPY -27 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": true,
-        "detail": "Strong Buy (10), +166% to target"
+        "detail": "Strong Buy (10), +178% to target"
       },
       {
         "key": "revisions",
@@ -603,14 +603,14 @@
       "Revenue: latest quarter +310% YoY vs +199% the quarter before and +21% a year earlier (halved: share count +45% YoY and goodwill/intangibles up 142% of assets in a year suggests acquisition-driven growth) → 10/20",
       "Margins: gross +23.2 pts, operating +22.3 pts YoY (last 2 quarters) → 15/15",
       "Forward: next-12-month revenue +116% (implied), 3-yr EPS growth forecast n/a a year → 10/15",
-      "Valuation: forward P/E n/a, EV/forward sales 2.5x → 6/15",
-      "Not already run: 1-yr -14%, -76% vs 52-week high → 8/10",
-      "Trend: price below 200-day, below 50-day, 3-month vs SPY -26 pts → 0/10",
-      "Analysts: Strong Buy (10), +166% to target → 10/10",
+      "Valuation: forward P/E n/a, EV/forward sales 2.4x → 6/15",
+      "Not already run: 1-yr -8%, -77% vs 52-week high → 8/10",
+      "Trend: price below 200-day, below 50-day, 3-month vs SPY -27 pts → 0/10",
+      "Analysts: Strong Buy (10), +178% to target → 10/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
-      "Down 76% from its 52-week high: falling-knife risk",
+      "Down 77% from its 52-week high: falling-knife risk",
       "Thin gross margin (17%) leaves little room for error",
       "Recent acquisition (goodwill/intangibles up 142% of assets in a year): part of the revenue jump is bought, not organic",
       "Share count +45% YoY (dilution or a stock-funded deal can flatter growth)",
@@ -632,15 +632,15 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "2.5x"
+        "value": "2.4x"
       },
       {
         "label": "1-yr move",
-        "value": "-14%"
+        "value": "-8%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-76%"
+        "value": "-77%"
       }
     ],
     "eiMetrics": {
@@ -653,33 +653,33 @@
       "om": -18.1,
       "gmChg": 23.19,
       "omChg": 22.32,
-      "fwdRevGrowth": 115.66,
+      "fwdRevGrowth": 115.69,
       "eps3y": null,
       "fpe": null,
-      "evSales": 5.33,
-      "evFwdSales": 2.47,
+      "evSales": 5.11,
+      "evFwdSales": 2.37,
       "peg": null,
-      "ch1y": -15.36,
+      "ch1y": -17.59,
       "pt": 29.0,
       "rating": "Strong Buy",
       "analysts": 10,
-      "psForward": 2.36,
+      "psForward": 2.26,
       "netcash": -114093000.0,
       "sharesYoY": 44.58,
       "shortFloat": 27.66,
       "beta": 1.86,
       "grossMarginTTM": 16.35,
-      "mcap": 2497561582.0,
-      "revUSD": 490102351.26,
+      "mcap": 2392256511.0,
+      "revUSD": 490116064.54,
       "currency": "USD",
       "lastQ": "2026-06-30",
-      "price": 10.91,
-      "priceDate": "2026-10-21",
-      "offHigh": -76.13,
-      "ch1yNasdaq": -13.96,
-      "rs3m": -26.01,
+      "price": 10.45,
+      "priceDate": "2026-10-22",
+      "offHigh": -77.13,
+      "ch1yNasdaq": -7.93,
+      "rs3m": -27.27,
       "acqJump": 142.18,
-      "upside": 165.81
+      "upside": 177.51
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/lunr/statistics/",
@@ -694,13 +694,13 @@
       "role": "bench",
       "rank": 9,
       "of": 18,
-      "score": 70,
+      "score": 71,
       "riskLevel": "Very High",
       "drivers": [
         "Revenue growth +116.9% YoY (TTM) → 31/40",
         "Acceleration: TTM 116.9% vs FY2025 -7.9% → 5/5",
-        "Momentum: 1-yr price -14.0% vs S&P 500 (SPY) +15.2% = relative strength -29.1% → 3/25",
-        "Upside to target +165.8% → 20/20",
+        "Momentum: 1-yr price -7.9% vs S&P 500 (SPY) +14.4% = relative strength -22.3% → 5/25",
+        "Upside to target +177.5% → 20/20",
         "Consensus Strong Buy (10) → 10/10",
         "Gross-margin trend (not scored): latest quarter 17.4% vs -23.5% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 1 raised, 4 cut, 0 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
@@ -711,8 +711,8 @@
         "Unprofitable: TTM net income -$131.20M",
         "Dilution: share count +44.6% YoY"
       ],
-      "priceDate": "2026-10-21",
-      "listUpdated": "2026-10-22",
+      "priceDate": "2026-10-22",
+      "listUpdated": "2026-10-23",
       "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 "
     }
   ],
