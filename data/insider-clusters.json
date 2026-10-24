@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-23",
-  "priceDate": "2026-10-22",
+  "lastUpdated": "2026-10-24",
+  "priceDate": "2026-10-23",
   "title": "Insider Buys",
-  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-09-23 to 2026-10-23 for US-listed issuers over $300M (6,983 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
+  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-09-24 to 2026-10-24 for US-listed issuers over $300M (6,938 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
   "rubric": [
     {
       "component": "Insiders",
@@ -21,19 +21,19 @@
       "how": "Market cap above $300M on Nasdaq's screener"
     }
   ],
-  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 113 companies had insider purchases; 8 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 1 left out because filed prices don't match the US share price (local-currency or other share class: PAM (avg filed price 22.55 vs US close 77.90)). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
+  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 112 companies had insider purchases; 8 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 1 left out because filed prices don't match the US share price (local-currency or other share class: PAM (avg filed price 22.55 vs US close 79.50)). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
   "universe": {
     "listed": 6978,
     "screened": 3398,
-    "filings": 6983,
-    "companiesWithBuys": 113,
+    "filings": 6938,
+    "companiesWithBuys": 112,
     "clusters": 8,
     "qualified": 8
   },
   "excluded": {
     "minersOrCryptoTreasury": [],
     "priceMismatch": [
-      "PAM (avg filed price 22.55 vs US close 77.90)"
+      "PAM (avg filed price 22.55 vs US close 79.50)"
     ],
     "minersUniverse": [
       "ABTC",
@@ -57,10 +57,10 @@
       "company": "Simon Property Group Inc.",
       "ticker": "SPG",
       "sector": "Real Estate – Real Estate Investment Trusts",
-      "price": 212.04,
-      "priceDate": "2026-10-22",
-      "marketCap": "$80.4B",
-      "forwardPE": 31.82,
+      "price": 211.63,
+      "priceDate": "2026-10-23",
+      "marketCap": "$80.3B",
+      "forwardPE": 31.76,
       "peg": "n/a",
       "revenueGrowth": "n/a",
       "alsoIn": [
@@ -269,30 +269,30 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 31.82,
+        "forwardPE": 31.76,
         "peg": null,
         "epsGrowth3yPct": 4.71,
-        "evSales": 15.68,
+        "evSales": 15.66,
         "grossMarginPct": 81.426,
         "operatingMarginPct": 47.399,
         "netMarginPct": 66.571,
         "fcfMarginPct": 46.357,
-        "chg3mPct": -6.27,
-        "chg6mPct": 5.14,
-        "chg1yPct": 17.81,
-        "relStrength1yPct": 3.41,
-        "priceAsOf": "2026-10-22"
+        "chg3mPct": -6.03,
+        "chg6mPct": 3.91,
+        "chg1yPct": 18.42,
+        "relStrength1yPct": 5.29,
+        "priceAsOf": "2026-10-23"
       }
     },
     {
       "company": "H. B. Fuller Company",
       "ticker": "FUL",
       "sector": "Industrials – Home Furnishings",
-      "price": 50.89,
-      "priceDate": "2026-10-22",
+      "price": 49.61,
+      "priceDate": "2026-10-23",
       "marketCap": "$2.7B",
-      "forwardPE": 9.73,
-      "peg": 0.58,
+      "forwardPE": 9.48,
+      "peg": 0.57,
       "revenueGrowth": "n/a",
       "alsoIn": [
         "Insider Buys"
@@ -477,7 +477,7 @@
       "grades": {
         "growth": "D",
         "value": "A+",
-        "momentum": "C+",
+        "momentum": "F",
         "profitability": "D"
       },
       "gradeInputs": {
@@ -488,30 +488,30 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 9.73,
-        "peg": 0.58,
+        "forwardPE": 9.48,
+        "peg": 0.57,
         "epsGrowth3yPct": 10.62,
-        "evSales": 1.36,
+        "evSales": 1.34,
         "grossMarginPct": 32.7,
         "operatingMarginPct": 11.999,
         "netMarginPct": 5.564,
         "fcfMarginPct": 2.815,
-        "chg3mPct": -9.53,
-        "chg6mPct": -19.25,
-        "chg1yPct": -14.64,
-        "relStrength1yPct": -29.04,
-        "priceAsOf": "2026-10-22"
+        "chg3mPct": -10.0,
+        "chg6mPct": -21.42,
+        "chg1yPct": -18.05,
+        "relStrength1yPct": -31.18,
+        "priceAsOf": "2026-10-23"
       }
     },
     {
       "company": "Heico Corporation",
       "ticker": "HEI",
       "sector": "Industrials – Aerospace",
-      "price": 300.02,
-      "priceDate": "2026-10-22",
-      "marketCap": "$41.9B",
-      "forwardPE": 43.2,
-      "peg": 2.27,
+      "price": 297.36,
+      "priceDate": "2026-10-23",
+      "marketCap": "$41.6B",
+      "forwardPE": 42.82,
+      "peg": 2.25,
       "revenueGrowth": "n/a",
       "alsoIn": [
         "Insider Buys"
@@ -677,28 +677,197 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 43.2,
-        "peg": 2.27,
+        "forwardPE": 42.82,
+        "peg": 2.25,
         "epsGrowth3yPct": 18.61,
-        "evSales": 8.54,
+        "evSales": 8.47,
         "grossMarginPct": 40.398,
         "operatingMarginPct": 24.271,
         "netMarginPct": 16.376,
         "fcfMarginPct": 19.902,
-        "chg3mPct": -10.51,
-        "chg6mPct": 11.71,
-        "chg1yPct": -3.83,
-        "relStrength1yPct": -18.23,
-        "priceAsOf": "2026-10-22"
+        "chg3mPct": -12.68,
+        "chg6mPct": 10.65,
+        "chg1yPct": -6.36,
+        "relStrength1yPct": -19.49,
+        "priceAsOf": "2026-10-23"
+      }
+    },
+    {
+      "company": "Rapport Therapeutics Inc.",
+      "ticker": "RAPP",
+      "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
+      "price": 25.93,
+      "priceDate": "2026-10-23",
+      "marketCap": "$1.2B",
+      "forwardPE": "n/a",
+      "peg": "n/a",
+      "revenueGrowth": "n/a",
+      "alsoIn": [
+        "Insider Buys"
+      ],
+      "insiderCount": 6,
+      "totalBought": 1664824.34,
+      "firstBuy": "2026-10-21",
+      "lastBuy": "2026-10-23",
+      "keyFigures": [
+        {
+          "label": "Insiders buying",
+          "value": "6"
+        },
+        {
+          "label": "Total bought",
+          "value": "$1.7M"
+        },
+        {
+          "label": "Avg price paid",
+          "value": "$26.99"
+        },
+        {
+          "label": "Buy dates",
+          "value": "2026-10-21 → 2026-10-23"
+        }
+      ],
+      "checklist": [
+        {
+          "key": "i0",
+          "label": "Paul Steven M",
+          "met": true,
+          "detail": "Director: $974K (35,714 sh) on 2026-10-22"
+        },
+        {
+          "key": "i1",
+          "label": "Maraganore John",
+          "met": true,
+          "detail": "Director: $249K (9,411 sh) on 2026-10-22"
+        },
+        {
+          "key": "i2",
+          "label": "Ignelzi Troy A.",
+          "met": true,
+          "detail": "Chief Financial Officer: $144K (5,500 sh) on 2026-10-21"
+        },
+        {
+          "key": "i3",
+          "label": "Young Wendy B.",
+          "met": true,
+          "detail": "Director: $100K (3,789 sh) on 2026-10-22"
+        },
+        {
+          "key": "i4",
+          "label": "Silva Paul M",
+          "met": true,
+          "detail": "Director: $100K (3,680 sh) on 2026-10-22"
+        },
+        {
+          "key": "i5",
+          "label": "Sanchez Ramiro",
+          "met": true,
+          "detail": "Director: $98K (3,600 sh) on 2026-10-23"
+        }
+      ],
+      "risks": [
+        "No data-driven red flags; insiders can still be wrong"
+      ],
+      "analystRating": "Strong Buy (16 analysts)",
+      "priceTarget": 62.71,
+      "transactions": [
+        {
+          "insider": "Sanchez Ramiro",
+          "date": "2026-10-23",
+          "shares": 3600.0,
+          "price": 27.3549,
+          "value": 98477.64,
+          "accession": "0001193125-26-430397"
+        },
+        {
+          "insider": "MARAGANORE JOHN",
+          "date": "2026-10-22",
+          "shares": 8239.0,
+          "price": 26.3799,
+          "value": 217343.9961,
+          "accession": "0001193125-26-429071"
+        },
+        {
+          "insider": "MARAGANORE JOHN",
+          "date": "2026-10-22",
+          "shares": 1172.0,
+          "price": 26.9173,
+          "value": 31547.0756,
+          "accession": "0001193125-26-429071"
+        },
+        {
+          "insider": "PAUL STEVEN M",
+          "date": "2026-10-22",
+          "shares": 35714.0,
+          "price": 27.28,
+          "value": 974277.92,
+          "accession": "0001193125-26-429073"
+        },
+        {
+          "insider": "Young Wendy B.",
+          "date": "2026-10-22",
+          "shares": 3789.0,
+          "price": 26.39,
+          "value": 99991.71,
+          "accession": "0001193125-26-429074"
+        },
+        {
+          "insider": "Silva Paul M",
+          "date": "2026-10-22",
+          "shares": 3680.0,
+          "price": 27.075,
+          "value": 99636.0,
+          "accession": "0001193125-26-429075"
+        },
+        {
+          "insider": "Ignelzi Troy A.",
+          "date": "2026-10-21",
+          "shares": 5500.0,
+          "price": 26.1,
+          "value": 143550.0,
+          "accession": "0001193125-26-428018"
+        }
+      ],
+      "sourceUrl": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002012593&type=4&dateb=&owner=include&count=40",
+        "https://stockanalysis.com/stocks/rapp/statistics/"
+      ],
+      "grades": {
+        "growth": "n/a",
+        "value": "F",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "0/2",
+        "value": "1/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": null,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 40.91,
+        "grossMarginPct": -109.39,
+        "operatingMarginPct": -767.58,
+        "netMarginPct": -685.8,
+        "fcfMarginPct": -485.75,
+        "chg3mPct": -37.34,
+        "chg6mPct": -28.69,
+        "chg1yPct": -0.99,
+        "relStrength1yPct": -14.12,
+        "priceAsOf": "2026-10-23"
       }
     },
     {
       "company": "Accelevation Holdings Corp.",
       "ticker": "ACCV",
       "sector": "Energy – Industrial Machinery/Components",
-      "price": 12.25,
-      "priceDate": "2026-10-22",
-      "marketCap": "$2.7B",
+      "price": 12.38,
+      "priceDate": "2026-10-23",
+      "marketCap": "$2.8B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "n/a",
@@ -835,7 +1004,7 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 4.68,
+        "evSales": 4.72,
         "grossMarginPct": 29.251,
         "operatingMarginPct": 12.399,
         "netMarginPct": 6.77,
@@ -844,170 +1013,17 @@
         "chg6mPct": null,
         "chg1yPct": null,
         "relStrength1yPct": null,
-        "priceAsOf": "2026-10-22"
-      }
-    },
-    {
-      "company": "Rapport Therapeutics Inc.",
-      "ticker": "RAPP",
-      "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
-      "price": 26.53,
-      "priceDate": "2026-10-22",
-      "marketCap": "$1.3B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "n/a",
-      "alsoIn": [],
-      "insiderCount": 5,
-      "totalBought": 1566346.7,
-      "firstBuy": "2026-10-21",
-      "lastBuy": "2026-10-22",
-      "keyFigures": [
-        {
-          "label": "Insiders buying",
-          "value": "5"
-        },
-        {
-          "label": "Total bought",
-          "value": "$1.6M"
-        },
-        {
-          "label": "Avg price paid",
-          "value": "$26.96"
-        },
-        {
-          "label": "Buy dates",
-          "value": "2026-10-21 → 2026-10-22"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "i0",
-          "label": "Paul Steven M",
-          "met": true,
-          "detail": "Director: $974K (35,714 sh) on 2026-10-22"
-        },
-        {
-          "key": "i1",
-          "label": "Maraganore John",
-          "met": true,
-          "detail": "Director: $249K (9,411 sh) on 2026-10-22"
-        },
-        {
-          "key": "i2",
-          "label": "Ignelzi Troy A.",
-          "met": true,
-          "detail": "Chief Financial Officer: $144K (5,500 sh) on 2026-10-21"
-        },
-        {
-          "key": "i3",
-          "label": "Young Wendy B.",
-          "met": true,
-          "detail": "Director: $100K (3,789 sh) on 2026-10-22"
-        },
-        {
-          "key": "i4",
-          "label": "Silva Paul M",
-          "met": true,
-          "detail": "Director: $100K (3,680 sh) on 2026-10-22"
-        }
-      ],
-      "risks": [
-        "No data-driven red flags; insiders can still be wrong"
-      ],
-      "analystRating": "Strong Buy (16 analysts)",
-      "priceTarget": 62.71,
-      "transactions": [
-        {
-          "insider": "MARAGANORE JOHN",
-          "date": "2026-10-22",
-          "shares": 8239.0,
-          "price": 26.3799,
-          "value": 217343.9961,
-          "accession": "0001193125-26-429071"
-        },
-        {
-          "insider": "MARAGANORE JOHN",
-          "date": "2026-10-22",
-          "shares": 1172.0,
-          "price": 26.9173,
-          "value": 31547.0756,
-          "accession": "0001193125-26-429071"
-        },
-        {
-          "insider": "PAUL STEVEN M",
-          "date": "2026-10-22",
-          "shares": 35714.0,
-          "price": 27.28,
-          "value": 974277.92,
-          "accession": "0001193125-26-429073"
-        },
-        {
-          "insider": "Young Wendy B.",
-          "date": "2026-10-22",
-          "shares": 3789.0,
-          "price": 26.39,
-          "value": 99991.71,
-          "accession": "0001193125-26-429074"
-        },
-        {
-          "insider": "Silva Paul M",
-          "date": "2026-10-22",
-          "shares": 3680.0,
-          "price": 27.075,
-          "value": 99636.0,
-          "accession": "0001193125-26-429075"
-        },
-        {
-          "insider": "Ignelzi Troy A.",
-          "date": "2026-10-21",
-          "shares": 5500.0,
-          "price": 26.1,
-          "value": 143550.0,
-          "accession": "0001193125-26-428018"
-        }
-      ],
-      "sourceUrl": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002012593&type=4&dateb=&owner=include&count=40",
-        "https://stockanalysis.com/stocks/rapp/statistics/"
-      ],
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": null,
-        "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 42.34,
-        "grossMarginPct": -109.39,
-        "operatingMarginPct": -767.58,
-        "netMarginPct": -685.8,
-        "fcfMarginPct": -485.75,
-        "chg3mPct": -35.81,
-        "chg6mPct": -27.87,
-        "chg1yPct": 6.55,
-        "relStrength1yPct": -7.85,
-        "priceAsOf": "2026-10-22"
-      },
-      "grades": {
-        "growth": "n/a",
-        "value": "F",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "0/2",
-        "value": "1/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
+        "priceAsOf": "2026-10-23"
       }
     },
     {
       "company": "Dynex Capital Inc.",
       "ticker": "DX",
       "sector": "Real Estate – Real Estate Investment Trusts",
-      "price": 11.05,
-      "priceDate": "2026-10-22",
-      "marketCap": "$2.9B",
-      "forwardPE": 7.01,
+      "price": 10.92,
+      "priceDate": "2026-10-23",
+      "marketCap": "$2.8B",
+      "forwardPE": 6.93,
       "peg": "n/a",
       "revenueGrowth": "n/a",
       "alsoIn": [
@@ -1115,7 +1131,7 @@
       "grades": {
         "growth": "A+",
         "value": "C+",
-        "momentum": "F",
+        "momentum": "D+",
         "profitability": "C+"
       },
       "gradeInputs": {
@@ -1126,28 +1142,28 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 7.01,
+        "forwardPE": 6.93,
         "peg": null,
         "epsGrowth3yPct": 26.74,
-        "evSales": 1542.13,
+        "evSales": 1540.15,
         "grossMarginPct": 100.0,
         "operatingMarginPct": -293.458,
         "netMarginPct": -293.458,
         "fcfMarginPct": 36.694,
-        "chg3mPct": -14.67,
-        "chg6mPct": -19.81,
-        "chg1yPct": -17.35,
-        "relStrength1yPct": -31.75,
-        "priceAsOf": "2026-10-22"
+        "chg3mPct": -13.33,
+        "chg6mPct": -19.71,
+        "chg1yPct": -17.46,
+        "relStrength1yPct": -30.59,
+        "priceAsOf": "2026-10-23"
       }
     },
     {
       "company": "AgomAb Therapeutics NV",
       "ticker": "AGMB",
       "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
-      "price": 9.26,
-      "priceDate": "2026-10-22",
-      "marketCap": "$456M",
+      "price": 9.05,
+      "priceDate": "2026-10-23",
+      "marketCap": "$446M",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "n/a",
@@ -1282,7 +1298,7 @@
       "grades": {
         "growth": "n/a",
         "value": "n/a",
-        "momentum": "D+",
+        "momentum": "C+",
         "profitability": "n/a"
       },
       "gradeInputs": {
@@ -1301,18 +1317,18 @@
         "operatingMarginPct": null,
         "netMarginPct": null,
         "fcfMarginPct": null,
-        "chg3mPct": -20.17,
-        "chg6mPct": -12.23,
+        "chg3mPct": -30.22,
+        "chg6mPct": -15.42,
         "chg1yPct": null,
         "relStrength1yPct": null,
-        "priceAsOf": "2026-10-22"
+        "priceAsOf": "2026-10-23"
       }
     }
   ],
   "bench": [],
   "grading": {
-    "asOf": "2026-10-23",
-    "spy1yPct": 14.4,
+    "asOf": "2026-10-24",
+    "spy1yPct": 13.13,
     "pool": "7 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
