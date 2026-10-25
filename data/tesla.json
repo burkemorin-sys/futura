@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-24",
+  "lastUpdated": "2026-10-25",
   "company": "Tesla",
   "ticker": "TSLA",
   "exchange": "NASDAQ",
@@ -183,9 +183,9 @@
     "notesSourceUrl": "https://www.cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html",
     "analyst": {
       "rating": "Buy",
-      "count": 44,
-      "priceTarget": "$397.83",
-      "upside": "+6.9%",
+      "count": 43,
+      "priceTarget": "$407.22",
+      "upside": "+9.4%",
       "sourceUrl": "https://stockanalysis.com/stocks/tsla/",
       "calls": [
         {
@@ -492,7 +492,7 @@
     "peg": 5.334,
     "revenueGrowthPct": 8.3,
     "revenueGrowthQuarter": "2026-09-30",
-    "epsGrowth3yPct": 23.03,
+    "epsGrowth3yPct": 24.67,
     "evSales": 13.93,
     "grossMarginPct": 19.286,
     "operatingMarginPct": 3.026,
@@ -505,7 +505,7 @@
     "priceAsOf": "2026-10-23"
   },
   "grading": {
-    "asOf": "2026-10-24",
+    "asOf": "2026-10-25",
     "spy1yPct": 13.13,
     "pool": "Ranked against 148 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 11, Piotroski 19, Magic Formula 28, Insider Buys 6, duplicates counted once), plus TSLA itself",
     "poolSize": 148,
@@ -523,19 +523,19 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-24",
+    "asOf": "2026-10-25",
     "priceDate": "2026-10-23",
     "inScreen": false,
     "outsideScreenReason": "market cap $1.47T is outside the screen's $1B-$30B range; fails the inflection gate (shrinking revenue or <8% forward growth)",
-    "score": 25,
+    "score": 26,
     "scoreParts": {
       "rev": 0.0,
       "margin": 1.1,
-      "forward": 6.4,
+      "forward": 7.2,
       "value": 0.0,
       "notRun": 10,
       "trend": 4,
-      "analysts": 3.8,
+      "analysts": 4.1,
       "theme": 0
     },
     "penalty": 0,
@@ -562,13 +562,13 @@
         "key": "forward",
         "label": "Strong forward growth (20%+ next 12 months)",
         "met": false,
-        "detail": "Implied next-12-month revenue +12%"
+        "detail": "Implied next-12-month revenue +14%"
       },
       {
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": false,
-        "detail": "Forward P/E 174.587, EV/forward sales 12.4x"
+        "detail": "Forward P/E 174.587, EV/forward sales 12.2x"
       },
       {
         "key": "notrun",
@@ -592,7 +592,7 @@
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": false,
-        "detail": "Buy (44), +7% to target"
+        "detail": "Buy (43), +9% to target"
       },
       {
         "key": "revisions",
@@ -604,11 +604,11 @@
     "drivers": [
       "Revenue: latest quarter -0% YoY vs +26% the quarter before and +12% a year earlier → 0/20",
       "Margins: gross +0.6 pts, operating -3.4 pts YoY (last 2 quarters) → 1/15",
-      "Forward: next-12-month revenue +12% (implied), 3-yr EPS growth forecast +23% a year → 6/15",
-      "Valuation: forward P/E 174.587, EV/forward sales 12.4x → 0/15",
+      "Forward: next-12-month revenue +14% (implied), 3-yr EPS growth forecast +25% a year → 7/15",
+      "Valuation: forward P/E 174.587, EV/forward sales 12.2x → 0/15",
       "Not already run: 1-yr -17%, -24% vs 52-week high → 10/10",
       "Trend: price below 200-day, above 50-day, 3-month vs SPY +16 pts → 4/10",
-      "Analysts: Buy (44), +7% to target → 4/10",
+      "Analysts: Buy (43), +9% to target → 4/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
@@ -627,11 +627,11 @@
       },
       {
         "label": "Next-12m rev",
-        "value": "+12%"
+        "value": "+14%"
       },
       {
         "label": "EV / fwd sales",
-        "value": "12.4x"
+        "value": "12.2x"
       },
       {
         "label": "1-yr move",
@@ -652,18 +652,18 @@
       "om": 2.56,
       "gmChg": 0.59,
       "omChg": -3.38,
-      "fwdRevGrowth": 12.15,
-      "eps3y": 23.03,
+      "fwdRevGrowth": 14.31,
+      "eps3y": 24.67,
       "fpe": 174.59,
       "evSales": 13.93,
-      "evFwdSales": 12.42,
+      "evFwdSales": 12.19,
       "peg": 5.33,
       "ch1y": -15.21,
-      "pt": 397.83,
+      "pt": 407.22,
       "rating": "Buy",
-      "analysts": 44,
-      "psForward": 12.67,
-      "netcash": 29002000000.0,
+      "analysts": 43,
+      "psForward": 12.43,
+      "netcash": 28771000000.0,
       "sharesYoY": 0.47,
       "shortFloat": 2.51,
       "beta": 1.92,
@@ -678,7 +678,7 @@
       "ch1yNasdaq": -17.1,
       "rs3m": 16.06,
       "acqJump": -0.29,
-      "upside": 6.88
+      "upside": 9.4
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/tsla/statistics/",

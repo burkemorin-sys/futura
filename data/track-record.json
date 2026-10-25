@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
- "lastUpdated": "2026-10-24",
+ "lastUpdated": "2026-10-25",
  "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Insider Buys was added on Oct 14, 2026, starting at 100 on the 2026-10-13 close (no backfill).",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
@@ -1074,7 +1074,10 @@
    "NESR": 20.46,
    "VICR": 176.04,
    "COHU": 47.96,
-   "URGN": 34.49
+   "URGN": 34.49,
+   "SNDX": 13.4,
+   "IONQ": 31.27,
+   "MXL": 63.46
   }
  },
  "lists": {
@@ -1527,19 +1530,6 @@
      "beatQQQ": false
     },
     {
-     "ticker": "ANAB",
-     "company": "AnaptysBio Inc.",
-     "entryDate": "2026-10-22",
-     "entryPriceDate": "2026-10-21",
-     "entryPrice": 47.94,
-     "lastPrice": 48.73,
-     "lastPriceDate": "2026-10-23",
-     "returnPct": 1.65,
-     "qqqPct": -2.87,
-     "spyPct": -1.7,
-     "beatQQQ": true
-    },
-    {
      "ticker": "SKHY",
      "company": "SK hynix Inc.",
      "entryDate": "2026-10-23",
@@ -1553,16 +1543,29 @@
      "beatQQQ": true
     },
     {
-     "ticker": "SIMO",
-     "company": "Silicon Motion Technology Corporation",
-     "entryDate": "2026-10-23",
-     "entryPriceDate": "2026-10-22",
-     "entryPrice": 187.96,
-     "lastPrice": 187.39,
+     "ticker": "IONQ",
+     "company": "IonQ",
+     "entryDate": "2026-10-25",
+     "entryPriceDate": "2026-10-23",
+     "entryPrice": 31.27,
+     "lastPrice": 31.27,
      "lastPriceDate": "2026-10-23",
-     "returnPct": -0.3,
-     "qqqPct": -0.01,
-     "spyPct": -0.52,
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "SNDX",
+     "company": "Syndax Pharmaceuticals",
+     "entryDate": "2026-10-25",
+     "entryPriceDate": "2026-10-23",
+     "entryPrice": 13.4,
+     "lastPrice": 13.4,
+     "lastPriceDate": "2026-10-23",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
      "beatQQQ": false
     }
    ],
@@ -1734,6 +1737,34 @@
      "exitDate": "2026-10-23",
      "exitPriceDate": "2026-10-22",
      "exitPrice": 31.16
+    },
+    {
+     "ticker": "ANAB",
+     "company": "AnaptysBio Inc.",
+     "entryDate": "2026-10-22",
+     "entryPriceDate": "2026-10-21",
+     "entryPrice": 47.94,
+     "returnPct": 1.65,
+     "qqqPct": -2.87,
+     "spyPct": -1.7,
+     "beatQQQ": true,
+     "exitDate": "2026-10-25",
+     "exitPriceDate": "2026-10-23",
+     "exitPrice": 48.73
+    },
+    {
+     "ticker": "SIMO",
+     "company": "Silicon Motion Technology Corporation",
+     "entryDate": "2026-10-23",
+     "entryPriceDate": "2026-10-22",
+     "entryPrice": 187.96,
+     "returnPct": -0.3,
+     "qqqPct": -0.01,
+     "spyPct": -0.52,
+     "beatQQQ": false,
+     "exitDate": "2026-10-25",
+     "exitPriceDate": "2026-10-23",
+     "exitPrice": 187.39
     }
    ],
    "segments": [
@@ -1915,6 +1946,24 @@
       "ANAB",
       "SKHY",
       "SIMO"
+     ]
+    },
+    {
+     "start": "2026-10-23",
+     "startValue": 87.844959,
+     "tickers": [
+      "ALM",
+      "NUVB",
+      "VSTM",
+      "ONDS",
+      "EXK",
+      "URGN",
+      "BBIO",
+      "RCAT",
+      "NBIS",
+      "SKHY",
+      "IONQ",
+      "SNDX"
      ]
     }
    ],
@@ -2190,6 +2239,44 @@
      "priceDate": "2026-10-22",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-25",
+     "priceDate": "2026-10-23",
+     "action": "remove",
+     "ticker": "ANAB",
+     "company": "AnaptysBio Inc.",
+     "price": 48.73
+    },
+    {
+     "date": "2026-10-25",
+     "priceDate": "2026-10-23",
+     "action": "remove",
+     "ticker": "SIMO",
+     "company": "Silicon Motion Technology Corporation",
+     "price": 187.39
+    },
+    {
+     "date": "2026-10-25",
+     "priceDate": "2026-10-23",
+     "action": "add",
+     "ticker": "IONQ",
+     "company": "IonQ",
+     "price": 31.27
+    },
+    {
+     "date": "2026-10-25",
+     "priceDate": "2026-10-23",
+     "action": "add",
+     "ticker": "SNDX",
+     "company": "Syndax Pharmaceuticals",
+     "price": 13.4
+    },
+    {
+     "date": "2026-10-25",
+     "priceDate": "2026-10-23",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -2256,8 +2343,8 @@
    "hitRate": {
     "beat": 9,
     "of": 23,
-    "openBeat": 5,
-    "openOf": 12
+    "openBeat": 4,
+    "openOf": 10
    },
    "startDate": "2026-10-07",
    "startPriceDate": "2026-10-06"
@@ -2359,19 +2446,6 @@
      "beatQQQ": false
     },
     {
-     "ticker": "PENG",
-     "company": "Penguin Solutions Inc.",
-     "entryDate": "2026-10-15",
-     "entryPriceDate": "2026-10-14",
-     "entryPrice": 67.59,
-     "lastPrice": 53.41,
-     "lastPriceDate": "2026-10-23",
-     "returnPct": -20.98,
-     "qqqPct": -3.37,
-     "spyPct": -1.25,
-     "beatQQQ": false
-    },
-    {
      "ticker": "DHT",
      "company": "DHT Holdings Inc.",
      "entryDate": "2026-10-17",
@@ -2417,6 +2491,19 @@
      "entryPriceDate": "2026-10-23",
      "entryPrice": 47.96,
      "lastPrice": 47.96,
+     "lastPriceDate": "2026-10-23",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "MXL",
+     "company": "MaxLinear Inc.",
+     "entryDate": "2026-10-25",
+     "entryPriceDate": "2026-10-23",
+     "entryPrice": 63.46,
+     "lastPrice": 63.46,
      "lastPriceDate": "2026-10-23",
      "returnPct": 0.0,
      "qqqPct": 0.0,
@@ -2620,6 +2707,20 @@
      "exitDate": "2026-10-24",
      "exitPriceDate": "2026-10-23",
      "exitPrice": 50.08
+    },
+    {
+     "ticker": "PENG",
+     "company": "Penguin Solutions Inc.",
+     "entryDate": "2026-10-15",
+     "entryPriceDate": "2026-10-14",
+     "entryPrice": 67.59,
+     "returnPct": -20.98,
+     "qqqPct": -3.37,
+     "spyPct": -1.25,
+     "beatQQQ": false,
+     "exitDate": "2026-10-25",
+     "exitPriceDate": "2026-10-23",
+     "exitPrice": 53.41
     }
    ],
    "segments": [
@@ -2760,11 +2861,11 @@
       "SMCI",
       "HLIT",
       "NESR",
-      "PENG",
       "DHT",
       "VICR",
       "TTMI",
-      "COHU"
+      "COHU",
+      "MXL"
      ]
     }
    ],
@@ -3054,6 +3155,28 @@
      "priceDate": "2026-10-23",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-25",
+     "priceDate": "2026-10-23",
+     "action": "remove",
+     "ticker": "PENG",
+     "company": "Penguin Solutions Inc.",
+     "price": 53.41
+    },
+    {
+     "date": "2026-10-25",
+     "priceDate": "2026-10-23",
+     "action": "add",
+     "ticker": "MXL",
+     "company": "MaxLinear Inc.",
+     "price": 63.46
+    },
+    {
+     "date": "2026-10-25",
+     "priceDate": "2026-10-23",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -3117,7 +3240,7 @@
     "beat": 5,
     "of": 25,
     "openBeat": 1,
-    "openOf": 11
+    "openOf": 10
    }
   },
   "experiment": {

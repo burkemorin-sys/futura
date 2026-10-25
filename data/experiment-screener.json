@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-24",
+  "lastUpdated": "2026-10-25",
   "priceDate": "2026-10-23",
   "title": "Experiment Screener",
   "method": "Your eight rules, applied strictly to every US-listed stock over $2B on Nasdaq's screener (bitcoin/crypto miners excluded). A stock is a pick only if it passes all eight. Passers are ranked by a simple 0–100 score; stocks that miss exactly one rule are listed below as near misses with the rule they missed. Nothing is loosened: if few stocks pass, few are shown.",
@@ -46,11 +46,11 @@
     "RSI(14): Wilder's 14-day RSI on Nasdaq daily closes, inclusive 50–65.",
     "Market cap: StockAnalysis, over $2B."
   ],
-  "dataNotes": "Prices and moving averages/RSI from Nasdaq daily closes (2026-10-23). Fundamentals from StockAnalysis statistics pages, quarterly income statements and balance sheets. This run: 2012 stocks over $2B screened, 1003 checked against all eight rules (the rest already failed two or more of ROIC, OCF/debt or positive FCF), 12 passed everything, 69 missed exactly one. 'n/a' means the data wasn't available, which counts as a miss.",
+  "dataNotes": "Prices and moving averages/RSI from Nasdaq daily closes (2026-10-23). Fundamentals from StockAnalysis statistics pages, quarterly income statements and balance sheets. This run: 2012 stocks over $2B screened, 1001 checked against all eight rules (the rest already failed two or more of ROIC, OCF/debt or positive FCF), 12 passed everything, 69 missed exactly one. 'n/a' means the data wasn't available, which counts as a miss.",
   "universe": {
     "listed": 6978,
     "screened": 2012,
-    "fullyChecked": 1003,
+    "fullyChecked": 1001,
     "passed": 12,
     "nearMisses": 69,
     "noStatistics": 24
@@ -230,7 +230,7 @@
         "revenueGrowthPct": 23.8,
         "forwardPE": 16.44,
         "peg": 0.25,
-        "epsGrowth3yPct": 23.47,
+        "epsGrowth3yPct": 23.05,
         "evSales": 2.55,
         "grossMarginPct": 61.548,
         "operatingMarginPct": 10.322,
@@ -514,7 +514,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Strong Buy (13 analysts)",
-      "priceTarget": 50.77,
+      "priceTarget": 51.15,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/glbe/statistics/",
         "https://stockanalysis.com/stocks/glbe/financials/?p=quarterly"
@@ -707,6 +707,18 @@
         "sma200": 126.566,
         "rsi": 64.439
       },
+      "grades": {
+        "growth": "B+",
+        "value": "F",
+        "momentum": "B-",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 18.5,
         "forwardPE": 50.58,
@@ -722,18 +734,6 @@
         "chg1yPct": 61.36,
         "relStrength1yPct": 48.23,
         "priceAsOf": "2026-10-23"
-      },
-      "grades": {
-        "growth": "B+",
-        "value": "F",
-        "momentum": "B-",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -843,7 +843,7 @@
         "Short interest 19% of float"
       ],
       "analystRating": "Buy (10 analysts)",
-      "priceTarget": 18.8,
+      "priceTarget": 18.7,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/dlo/statistics/",
         "https://stockanalysis.com/stocks/dlo/financials/?p=quarterly"
@@ -1007,7 +1007,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (31 analysts)",
-      "priceTarget": 38.85,
+      "priceTarget": 38.81,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/tost/statistics/",
         "https://stockanalysis.com/stocks/tost/financials/?p=quarterly"
@@ -1200,7 +1200,7 @@
         "rsi": 53.737
       },
       "grades": {
-        "growth": "B",
+        "growth": "B+",
         "value": "C-",
         "momentum": "D+",
         "profitability": "F"
@@ -1363,6 +1363,18 @@
         "sma200": 78.216,
         "rsi": 52.74
       },
+      "grades": {
+        "growth": "F",
+        "value": "A",
+        "momentum": "B",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 15.6,
         "forwardPE": 7.42,
@@ -1378,18 +1390,6 @@
         "chg1yPct": 68.85,
         "relStrength1yPct": 55.72,
         "priceAsOf": "2026-10-23"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "A",
-        "momentum": "B",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1527,6 +1527,18 @@
         "sma200": 126.089,
         "rsi": 63.249
       },
+      "grades": {
+        "growth": "B",
+        "value": "C+",
+        "momentum": "D",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 60.0,
         "forwardPE": 12.97,
@@ -1542,18 +1554,6 @@
         "chg1yPct": 24.72,
         "relStrength1yPct": 11.59,
         "priceAsOf": "2026-10-23"
-      },
-      "grades": {
-        "growth": "B",
-        "value": "C+",
-        "momentum": "D",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -1562,13 +1562,13 @@
       "sector": "Technology – Semiconductors",
       "price": 284.69,
       "priceDate": "2026-10-23",
-      "marketCap": "$260.2B",
+      "marketCap": "$260.1B",
       "forwardPE": 24.94,
       "peg": 0.89,
       "revenueGrowth": "+20.3% YoY (TTM)",
       "score": 35,
       "scoreParts": {
-        "roic": 10.1,
+        "roic": 10.0,
         "ocfDebt": 7.2,
         "fcfAssets": 13.2,
         "epsQoQ": 0.8,
@@ -1599,7 +1599,7 @@
           "key": "epsQoQ",
           "label": "QoQ EPS growth > 20%",
           "met": true,
-          "detail": "Diluted EPS 2.617806 (latest quarter, 2026-09-30) vs 2.14 prior quarter: +22% vs > 20%; YoY same quarter +77% (context)"
+          "detail": "Diluted EPS 2.62 (latest quarter, 2026-09-30) vs 2.14 prior quarter: +22% vs > 20%; YoY same quarter +77% (context)"
         },
         {
           "key": "revGrowth",
@@ -1623,7 +1623,7 @@
           "key": "mcap",
           "label": "Market cap > $2B",
           "met": true,
-          "detail": "Market cap $260.2B vs > $2B"
+          "detail": "Market cap $260.1B vs > $2B"
         }
       ],
       "keyFigures": [
@@ -1662,15 +1662,15 @@
       "risks": [
         "No data-driven red flags; check the latest earnings report"
       ],
-      "analystRating": "Buy (36 analysts)",
-      "priceTarget": 324.71,
+      "analystRating": "Buy (35 analysts)",
+      "priceTarget": 336.86,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/txn/statistics/",
         "https://stockanalysis.com/stocks/txn/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 260206660000.0,
-        "roic": 30.087,
+        "mcap": 260141271262.0,
+        "roic": 30.073,
         "ocf": 9896000000.0,
         "debt": 13555000000.0,
         "fcf": 7318000000.0,
@@ -1679,11 +1679,11 @@
         "lastQ": "2026-09-30",
         "assets": 36839000000.0,
         "fcfAssets": 19.865,
-        "eps0": 2.618,
+        "eps0": 2.62,
         "eps1": 2.14,
         "eps4": 1.48,
-        "epsQoQ": 22.327,
-        "epsYoYq": 76.879,
+        "epsQoQ": 22.43,
+        "epsYoYq": 77.027,
         "revGrowth": 20.271,
         "price": 284.69,
         "priceDate": "2026-10-23",
@@ -1707,10 +1707,10 @@
         "revenueGrowthPct": 20.3,
         "forwardPE": 24.94,
         "peg": 0.89,
-        "epsGrowth3yPct": 32.47,
+        "epsGrowth3yPct": 35.76,
         "evSales": 12.79,
         "grossMarginPct": 60.243,
-        "operatingMarginPct": 41.11,
+        "operatingMarginPct": 41.091,
         "netMarginPct": 34.253,
         "fcfMarginPct": 35.24,
         "chg3mPct": -0.11,
@@ -1827,7 +1827,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (19 analysts)",
-      "priceTarget": 442.33,
+      "priceTarget": 458.72,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/mpc/statistics/",
         "https://stockanalysis.com/stocks/mpc/financials/?p=quarterly"
@@ -1871,7 +1871,7 @@
         "revenueGrowthPct": 15.2,
         "forwardPE": 5.78,
         "peg": 0.17,
-        "epsGrowth3yPct": 42.71,
+        "epsGrowth3yPct": 44.0,
         "evSales": 1.01,
         "grossMarginPct": 12.819,
         "operatingMarginPct": 7.837,
@@ -1991,7 +1991,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Hold (16 analysts)",
-      "priceTarget": 116.8,
+      "priceTarget": 122.07,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/dino/statistics/",
         "https://stockanalysis.com/stocks/dino/financials/?p=quarterly"
@@ -2035,7 +2035,7 @@
         "revenueGrowthPct": 16.3,
         "forwardPE": 5.38,
         "peg": null,
-        "epsGrowth3yPct": 20.3,
+        "epsGrowth3yPct": 22.41,
         "evSales": 0.73,
         "grossMarginPct": 12.892,
         "operatingMarginPct": 8.406,
@@ -2492,13 +2492,13 @@
         "Short interest 11% of float"
       ],
       "analystRating": "Buy (9 analysts)",
-      "priceTarget": 238.54,
+      "priceTarget": 245.91,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/appf/statistics/",
         "https://stockanalysis.com/stocks/appf/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 7459526855.0,
+        "mcap": 7467695541.0,
         "roic": 50.699,
         "ocf": 283658000.0,
         "debt": 29288000.0,
@@ -2524,7 +2524,7 @@
         "revenueGrowthPct": 20.0,
         "forwardPE": 26.39,
         "peg": 1.1,
-        "epsGrowth3yPct": 24.97,
+        "epsGrowth3yPct": 24.2,
         "evSales": 6.61,
         "grossMarginPct": 63.789,
         "operatingMarginPct": 18.829,
@@ -2824,7 +2824,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (7 analysts)",
-      "priceTarget": 17.86,
+      "priceTarget": 18.0,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/auph/statistics/",
         "https://stockanalysis.com/stocks/auph/financials/?p=quarterly"
@@ -2856,7 +2856,7 @@
         "revenueGrowthPct": 19.8,
         "forwardPE": 20.17,
         "peg": null,
-        "epsGrowth3yPct": -17.13,
+        "epsGrowth3yPct": -12.96,
         "evSales": 5.98,
         "grossMarginPct": 77.884,
         "operatingMarginPct": 51.507,
@@ -2990,7 +2990,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (25 analysts)",
-      "priceTarget": 49.85,
+      "priceTarget": 49.78,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/mnst/statistics/",
         "https://stockanalysis.com/stocks/mnst/financials/?p=quarterly"
@@ -3022,7 +3022,7 @@
         "revenueGrowthPct": 20.4,
         "forwardPE": 37.53,
         "peg": 3.31,
-        "epsGrowth3yPct": 14.05,
+        "epsGrowth3yPct": 14.01,
         "evSales": 9.45,
         "grossMarginPct": 55.546,
         "operatingMarginPct": 30.514,
@@ -3156,7 +3156,7 @@
         "Rich forward P/E (80)"
       ],
       "analystRating": "Buy (54 analysts)",
-      "priceTarget": 175.71,
+      "priceTarget": 176.35,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/shop/statistics/",
         "https://stockanalysis.com/stocks/shop/financials/?p=quarterly"
@@ -3322,7 +3322,7 @@
         "RSI 62, near the top of the 50–65 band"
       ],
       "analystRating": "Buy (31 analysts)",
-      "priceTarget": 1328.05,
+      "priceTarget": 1331.55,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/lly/statistics/",
         "https://stockanalysis.com/stocks/lly/financials/?p=quarterly"
@@ -3354,7 +3354,7 @@
         "revenueGrowthPct": 49.6,
         "forwardPE": 32.95,
         "peg": 1.6,
-        "epsGrowth3yPct": 31.0,
+        "epsGrowth3yPct": 30.99,
         "evSales": 14.82,
         "grossMarginPct": 83.399,
         "operatingMarginPct": 49.718,
@@ -3655,7 +3655,7 @@
         "Short interest 11% of float"
       ],
       "analystRating": "Strong Buy (23 analysts)",
-      "priceTarget": 39.77,
+      "priceTarget": 39.55,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/chym/statistics/",
         "https://stockanalysis.com/stocks/chym/financials/?p=quarterly"
@@ -3987,7 +3987,7 @@
         "EPS is up on the prior quarter but down 16% vs the same quarter a year ago (possible seasonality)"
       ],
       "analystRating": "Strong Buy (8 analysts)",
-      "priceTarget": 19.04,
+      "priceTarget": 19.0,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/kyiv/statistics/",
         "https://stockanalysis.com/stocks/kyiv/financials/?p=quarterly"
@@ -4155,7 +4155,7 @@
         "Short interest 10% of float"
       ],
       "analystRating": "Strong Buy (13 analysts)",
-      "priceTarget": 209.56,
+      "priceTarget": 210.9,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/sn/statistics/",
         "https://stockanalysis.com/stocks/sn/financials/?p=quarterly"
@@ -4187,7 +4187,7 @@
         "revenueGrowthPct": 17.5,
         "forwardPE": 27.63,
         "peg": 1.92,
-        "epsGrowth3yPct": 17.79,
+        "epsGrowth3yPct": 18.04,
         "evSales": 4.02,
         "grossMarginPct": 48.921,
         "operatingMarginPct": 13.879,
@@ -4321,7 +4321,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Hold (10 analysts)",
-      "priceTarget": 404.0,
+      "priceTarget": 403.71,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/wts/statistics/",
         "https://stockanalysis.com/stocks/wts/financials/?p=quarterly"
@@ -4353,7 +4353,7 @@
         "revenueGrowthPct": 17.1,
         "forwardPE": 26.92,
         "peg": 3.37,
-        "epsGrowth3yPct": 12.99,
+        "epsGrowth3yPct": 12.91,
         "evSales": 4.42,
         "grossMarginPct": 48.853,
         "operatingMarginPct": 19.457,
@@ -4487,7 +4487,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Hold (22 analysts)",
-      "priceTarget": 127.69,
+      "priceTarget": 128.34,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/cf/statistics/",
         "https://stockanalysis.com/stocks/cf/financials/?p=quarterly"
@@ -4519,7 +4519,7 @@
         "revenueGrowthPct": 20.0,
         "forwardPE": 9.53,
         "peg": null,
-        "epsGrowth3yPct": -1.53,
+        "epsGrowth3yPct": -1.34,
         "evSales": 2.51,
         "grossMarginPct": 42.486,
         "operatingMarginPct": 38.571,
@@ -4984,8 +4984,8 @@
       "risks": [
         "No data-driven red flags; check the latest earnings report"
       ],
-      "analystRating": "Buy (20 analysts)",
-      "priceTarget": 406.58,
+      "analystRating": "Hold (20 analysts)",
+      "priceTarget": 423.53,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/vlo/statistics/",
         "https://stockanalysis.com/stocks/vlo/financials/?p=quarterly"
@@ -5017,7 +5017,7 @@
         "revenueGrowthPct": 27.1,
         "forwardPE": 6.75,
         "peg": 0.15,
-        "epsGrowth3yPct": 37.82,
+        "epsGrowth3yPct": 41.89,
         "evSales": 0.85,
         "grossMarginPct": 19.512,
         "operatingMarginPct": 12.203,
@@ -5517,7 +5517,7 @@
         "revenueGrowthPct": 43.2,
         "forwardPE": 6.18,
         "peg": null,
-        "epsGrowth3yPct": 20.66,
+        "epsGrowth3yPct": 18.22,
         "evSales": 5.32,
         "grossMarginPct": 76.67,
         "operatingMarginPct": 60.811,
@@ -5530,7 +5530,7 @@
         "priceAsOf": "2026-10-23"
       },
       "grades": {
-        "growth": "B+",
+        "growth": "B",
         "value": "B-",
         "momentum": "B+",
         "profitability": "B"
@@ -5548,7 +5548,7 @@
       "sector": "Industrials – Steel/Iron Ore",
       "price": 241.53,
       "priceDate": "2026-10-23",
-      "marketCap": "$34.6B",
+      "marketCap": "$34.3B",
       "forwardPE": 10.73,
       "peg": 0.52,
       "revenueGrowth": "+26.0% YoY (TTM)",
@@ -5611,7 +5611,7 @@
           "key": "mcap",
           "label": "Market cap > $2B",
           "met": true,
-          "detail": "Market cap $34.6B vs > $2B"
+          "detail": "Market cap $34.3B vs > $2B"
         }
       ],
       "keyFigures": [
@@ -5651,13 +5651,13 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (14 analysts)",
-      "priceTarget": 270.82,
+      "priceTarget": 272.68,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/stld/statistics/",
         "https://stockanalysis.com/stocks/stld/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 34618033095.0,
+        "mcap": 34349789635.0,
         "roic": 15.162,
         "ocf": 1694758000.0,
         "debt": 4412827000.0,
@@ -5683,8 +5683,8 @@
         "revenueGrowthPct": 26.0,
         "forwardPE": 10.73,
         "peg": 0.52,
-        "epsGrowth3yPct": 31.48,
-        "evSales": 1.71,
+        "epsGrowth3yPct": 32.64,
+        "evSales": 1.7,
         "grossMarginPct": 15.904,
         "operatingMarginPct": 11.499,
         "netMarginPct": 8.819,
@@ -5849,7 +5849,7 @@
         "revenueGrowthPct": 15.4,
         "forwardPE": 13.26,
         "peg": null,
-        "epsGrowth3yPct": -1.17,
+        "epsGrowth3yPct": -1.4,
         "evSales": 4.0,
         "grossMarginPct": 40.637,
         "operatingMarginPct": 33.626,
@@ -5983,7 +5983,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Hold (10 analysts)",
-      "priceTarget": 106.0,
+      "priceTarget": 106.2,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/logi/statistics/",
         "https://stockanalysis.com/stocks/logi/financials/?p=quarterly"
@@ -6015,7 +6015,7 @@
         "revenueGrowthPct": 6.6,
         "forwardPE": 19.75,
         "peg": null,
-        "epsGrowth3yPct": 4.99,
+        "epsGrowth3yPct": 4.89,
         "evSales": 2.8,
         "grossMarginPct": 45.239,
         "operatingMarginPct": 17.963,
@@ -6149,7 +6149,7 @@
         "Financials reported in CNY"
       ],
       "analystRating": "Strong Buy (23 analysts)",
-      "priceTarget": 21.76,
+      "priceTarget": 21.81,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/bz/statistics/",
         "https://stockanalysis.com/stocks/bz/financials/?p=quarterly"
@@ -6315,7 +6315,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (23 analysts)",
-      "priceTarget": 246.35,
+      "priceTarget": 248.45,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/wsm/statistics/",
         "https://stockanalysis.com/stocks/wsm/financials/?p=quarterly"
@@ -6347,7 +6347,7 @@
         "revenueGrowthPct": 2.2,
         "forwardPE": 25.45,
         "peg": 2.0,
-        "epsGrowth3yPct": 9.43,
+        "epsGrowth3yPct": 9.38,
         "evSales": 3.78,
         "grossMarginPct": 45.692,
         "operatingMarginPct": 17.848,
@@ -6481,7 +6481,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (30 analysts)",
-      "priceTarget": 118.24,
+      "priceTarget": 118.58,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/zm/statistics/",
         "https://stockanalysis.com/stocks/zm/financials/?p=quarterly"
@@ -6513,7 +6513,7 @@
         "revenueGrowthPct": 5.0,
         "forwardPE": 15.62,
         "peg": 2.25,
-        "epsGrowth3yPct": 4.34,
+        "epsGrowth3yPct": 4.75,
         "evSales": 4.16,
         "grossMarginPct": 77.663,
         "operatingMarginPct": 24.099,
@@ -6550,8 +6550,8 @@
       "revenueGrowth": "+5.5% YoY (TTM)",
       "score": 52,
       "scoreParts": {
-        "roic": 5.4,
-        "ocfDebt": 6.3,
+        "roic": 6.0,
+        "ocfDebt": 6.1,
         "fcfAssets": 20.0,
         "epsQoQ": 20.0,
         "revGrowth": 0.0
@@ -6565,13 +6565,13 @@
           "key": "roic",
           "label": "ROIC > 15%",
           "met": true,
-          "detail": "ROIC 23.1% (TTM) vs > 15%"
+          "detail": "ROIC 24.0% (TTM) vs > 15%"
         },
         {
           "key": "ocfDebt",
           "label": "Operating cash flow > 30% of total debt",
           "met": true,
-          "detail": "Operating cash flow $699M vs total debt $1.0B: 68% vs > 30%"
+          "detail": "Operating cash flow $699M vs total debt $1.1B: 66% vs > 30%"
         },
         {
           "key": "fcfAssets",
@@ -6613,11 +6613,11 @@
       "keyFigures": [
         {
           "label": "ROIC",
-          "value": "23.1%"
+          "value": "24.0%"
         },
         {
           "label": "OCF / debt",
-          "value": "68%"
+          "value": "66%"
         },
         {
           "label": "FCF / assets",
@@ -6637,8 +6637,8 @@
         }
       ],
       "drivers": [
-        "ROIC > 15%: 23.1% → 5/20",
-        "Operating cash flow > 30% of total debt: 68% → 6/20",
+        "ROIC > 15%: 24.0% → 6/20",
+        "Operating cash flow > 30% of total debt: 66% → 6/20",
         "Free cash flow / total assets > 10%: 35.6% → 20/20",
         "QoQ EPS growth > 20%: +1344% → 20/20",
         "Annual revenue growth > 15%: 5.5% → 0/20"
@@ -6646,19 +6646,19 @@
       "risks": [
         "No data-driven red flags; check the latest earnings report"
       ],
-      "analystRating": "Buy (15 analysts)",
-      "priceTarget": 57.64,
+      "analystRating": "Buy (14 analysts)",
+      "priceTarget": 97.86,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/rng/statistics/",
         "https://stockanalysis.com/stocks/rng/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 6963578849.0,
-        "roic": 23.111,
+        "mcap": 7043148670.0,
+        "roic": 23.954,
         "ocf": 699358000.0,
-        "debt": 1032915000.0,
+        "debt": 1053395000.0,
         "fcf": 667240000.0,
-        "ocfDebt": 67.707,
+        "ocfDebt": 66.391,
         "currency": "USD",
         "lastQ": "2026-09-30",
         "assets": 1875056000.0,
@@ -6679,10 +6679,10 @@
         "revenueGrowthPct": 5.5,
         "forwardPE": 15.4,
         "peg": 0.77,
-        "epsGrowth3yPct": 12.31,
-        "evSales": 3.01,
-        "grossMarginPct": 72.209,
-        "operatingMarginPct": 8.061,
+        "epsGrowth3yPct": 12.06,
+        "evSales": 3.05,
+        "grossMarginPct": 72.214,
+        "operatingMarginPct": 8.449,
         "netMarginPct": 25.27,
         "fcfMarginPct": 25.455,
         "chg3mPct": 115.92,
@@ -7311,8 +7311,8 @@
         "Financials reported in CAD",
         "Short interest 11% of float"
       ],
-      "analystRating": "Sell (12 analysts)",
-      "priceTarget": 115.48,
+      "analystRating": "n/a (0 analysts)",
+      "priceTarget": null,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/imo/statistics/",
         "https://stockanalysis.com/stocks/imo/financials/?p=quarterly"
@@ -7344,7 +7344,7 @@
         "revenueGrowthPct": 4.5,
         "forwardPE": 11.35,
         "peg": null,
-        "epsGrowth3yPct": 14.98,
+        "epsGrowth3yPct": 14.99,
         "evSales": 1.82,
         "grossMarginPct": 18.057,
         "operatingMarginPct": 11.617,
@@ -7479,7 +7479,7 @@
         "Short interest 11% of float"
       ],
       "analystRating": "Buy (15 analysts)",
-      "priceTarget": 163.55,
+      "priceTarget": 165.82,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/anf/statistics/",
         "https://stockanalysis.com/stocks/anf/financials/?p=quarterly"
@@ -7511,7 +7511,7 @@
         "revenueGrowthPct": 4.7,
         "forwardPE": 12.41,
         "peg": null,
-        "epsGrowth3yPct": 12.91,
+        "epsGrowth3yPct": 13.03,
         "evSales": 1.36,
         "grossMarginPct": 63.675,
         "operatingMarginPct": 14.079,
@@ -7977,7 +7977,7 @@
         "Financials reported in CAD"
       ],
       "analystRating": "Buy (16 analysts)",
-      "priceTarget": 36.48,
+      "priceTarget": 37.05,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/cve/statistics/",
         "https://stockanalysis.com/stocks/cve/financials/?p=quarterly"
@@ -8009,7 +8009,7 @@
         "revenueGrowthPct": 3.1,
         "forwardPE": 6.91,
         "peg": null,
-        "epsGrowth3yPct": 23.48,
+        "epsGrowth3yPct": 25.95,
         "evSales": 1.76,
         "grossMarginPct": 29.86,
         "operatingMarginPct": 16.57,
@@ -8308,8 +8308,8 @@
       "risks": [
         "No data-driven red flags; check the latest earnings report"
       ],
-      "analystRating": "Buy (19 analysts)",
-      "priceTarget": 446.71,
+      "analystRating": "Buy (18 analysts)",
+      "priceTarget": 446.19,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/rl/statistics/",
         "https://stockanalysis.com/stocks/rl/financials/?p=quarterly"
@@ -8341,7 +8341,7 @@
         "revenueGrowthPct": 14.7,
         "forwardPE": 19.3,
         "peg": 1.31,
-        "epsGrowth3yPct": 11.84,
+        "epsGrowth3yPct": 10.98,
         "evSales": 2.82,
         "grossMarginPct": 70.269,
         "operatingMarginPct": 16.239,
@@ -8507,7 +8507,7 @@
         "revenueGrowthPct": 10.9,
         "forwardPE": 9.89,
         "peg": null,
-        "epsGrowth3yPct": 36.68,
+        "epsGrowth3yPct": 38.68,
         "evSales": 0.36,
         "grossMarginPct": 8.392,
         "operatingMarginPct": 4.944,
@@ -8641,7 +8641,7 @@
         "RSI 63, near the top of the 50–65 band"
       ],
       "analystRating": "Buy (10 analysts)",
-      "priceTarget": 57.56,
+      "priceTarget": 56.89,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/zws/statistics/",
         "https://stockanalysis.com/stocks/zws/financials/?p=quarterly"
@@ -8673,7 +8673,7 @@
         "revenueGrowthPct": 10.7,
         "forwardPE": 24.93,
         "peg": 1.66,
-        "epsGrowth3yPct": 13.19,
+        "epsGrowth3yPct": 13.63,
         "evSales": 4.61,
         "grossMarginPct": 49.009,
         "operatingMarginPct": 21.275,
@@ -9198,178 +9198,12 @@
       }
     },
     {
-      "company": "Acuity Inc.",
-      "ticker": "AYI",
-      "sector": "Consumer Discretionary – Building Products",
-      "price": 318.72,
-      "priceDate": "2026-10-23",
-      "marketCap": "$9.5B",
-      "forwardPE": 14.96,
-      "peg": 1.5,
-      "revenueGrowth": "+6.8% YoY (TTM)",
-      "score": 24,
-      "scoreParts": {
-        "roic": 1.4,
-        "ocfDebt": 14.7,
-        "fcfAssets": 7.1,
-        "epsQoQ": 1.2,
-        "revGrowth": 0.0
-      },
-      "alsoIn": [],
-      "failed": [
-        "Annual revenue growth > 15%"
-      ],
-      "checklist": [
-        {
-          "key": "roic",
-          "label": "ROIC > 15%",
-          "met": true,
-          "detail": "ROIC 17.1% (TTM) vs > 15%"
-        },
-        {
-          "key": "ocfDebt",
-          "label": "Operating cash flow > 30% of total debt",
-          "met": true,
-          "detail": "Operating cash flow $826M vs total debt $697M: 118% vs > 30%"
-        },
-        {
-          "key": "fcfAssets",
-          "label": "Free cash flow / total assets > 10%",
-          "met": true,
-          "detail": "FCF $748M (TTM) / total assets $4.9B = 15.3% vs > 10%"
-        },
-        {
-          "key": "epsQoQ",
-          "label": "QoQ EPS growth > 20%",
-          "met": true,
-          "detail": "Diluted EPS 5.63 (latest quarter, 2026-08-31) vs 4.56 prior quarter: +23% vs > 20%; YoY same quarter +56% (context)"
-        },
-        {
-          "key": "revGrowth",
-          "label": "Annual revenue growth > 15%",
-          "met": false,
-          "detail": "TTM revenue 6.8% YoY vs > 15%"
-        },
-        {
-          "key": "stage2",
-          "label": "Price above 150-day and 200-day averages",
-          "met": true,
-          "detail": "Price 318.72 vs 150-day 312.04 and 200-day 309.52"
-        },
-        {
-          "key": "rsi",
-          "label": "RSI(14) between 50 and 65",
-          "met": true,
-          "detail": "RSI(14) 58.7 vs 50–65"
-        },
-        {
-          "key": "mcap",
-          "label": "Market cap > $2B",
-          "met": true,
-          "detail": "Market cap $9.5B vs > $2B"
-        }
-      ],
-      "keyFigures": [
-        {
-          "label": "ROIC",
-          "value": "17.1%"
-        },
-        {
-          "label": "OCF / debt",
-          "value": "118%"
-        },
-        {
-          "label": "FCF / assets",
-          "value": "15.3%"
-        },
-        {
-          "label": "EPS QoQ",
-          "value": "+23%"
-        },
-        {
-          "label": "RSI(14)",
-          "value": "58.7"
-        },
-        {
-          "label": "EPS YoY (Q)",
-          "value": "+56%"
-        }
-      ],
-      "drivers": [
-        "ROIC > 15%: 17.1% → 1/20",
-        "Operating cash flow > 30% of total debt: 118% → 15/20",
-        "Free cash flow / total assets > 10%: 15.3% → 7/20",
-        "QoQ EPS growth > 20%: +23% → 1/20",
-        "Annual revenue growth > 15%: 6.8% → 0/20"
-      ],
-      "risks": [
-        "No data-driven red flags; check the latest earnings report"
-      ],
-      "analystRating": "Buy (7 analysts)",
-      "priceTarget": 375.17,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/ayi/statistics/",
-        "https://stockanalysis.com/stocks/ayi/financials/?p=quarterly"
-      ],
-      "screenMetrics": {
-        "mcap": 9477313540.0,
-        "roic": 17.057,
-        "ocf": 825600000.0,
-        "debt": 697400000.0,
-        "fcf": 747900000.0,
-        "ocfDebt": 118.383,
-        "currency": "USD",
-        "lastQ": "2026-08-31",
-        "assets": 4873500000.0,
-        "fcfAssets": 15.346,
-        "eps0": 5.63,
-        "eps1": 4.56,
-        "eps4": 3.613,
-        "epsQoQ": 23.465,
-        "epsYoYq": 55.813,
-        "revGrowth": 6.816,
-        "price": 318.72,
-        "priceDate": "2026-10-23",
-        "sma150": 312.039,
-        "sma200": 309.523,
-        "rsi": 58.658
-      },
-      "metrics": {
-        "revenueGrowthPct": 6.8,
-        "forwardPE": 14.96,
-        "peg": 1.5,
-        "epsGrowth3yPct": 7.82,
-        "evSales": 2.05,
-        "grossMarginPct": 49.537,
-        "operatingMarginPct": 14.781,
-        "netMarginPct": 11.446,
-        "fcfMarginPct": 16.112,
-        "chg3mPct": -2.52,
-        "chg6mPct": 10.12,
-        "chg1yPct": -13.94,
-        "relStrength1yPct": -27.07,
-        "priceAsOf": "2026-10-23"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "B-",
-        "momentum": "F",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      }
-    },
-    {
       "company": "Procter & Gamble Company (The)",
       "ticker": "PG",
       "sector": "Consumer Discretionary – Package Goods/Cosmetics",
       "price": 161.02,
       "priceDate": "2026-10-23",
-      "marketCap": "$374.0B",
+      "marketCap": "$373.2B",
       "forwardPE": 22.74,
       "peg": 4.89,
       "revenueGrowth": "+3.5% YoY (TTM)",
@@ -9432,7 +9266,7 @@
           "key": "mcap",
           "label": "Market cap > $2B",
           "met": true,
-          "detail": "Market cap $374.0B vs > $2B"
+          "detail": "Market cap $373.2B vs > $2B"
         }
       ],
       "keyFigures": [
@@ -9472,13 +9306,13 @@
         "RSI 64, near the top of the 50–65 band"
       ],
       "analystRating": "Buy (25 analysts)",
-      "priceTarget": 161.65,
+      "priceTarget": 172.35,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/pg/statistics/",
         "https://stockanalysis.com/stocks/pg/financials/?p=quarterly"
       ],
       "screenMetrics": {
-        "mcap": 373996695678.0,
+        "mcap": 373209441686.0,
         "roic": 21.885,
         "ocf": 19915000000.0,
         "debt": 38925000000.0,
@@ -9504,8 +9338,8 @@
         "revenueGrowthPct": 3.5,
         "forwardPE": 22.74,
         "peg": 4.89,
-        "epsGrowth3yPct": 4.23,
-        "evSales": 4.52,
+        "epsGrowth3yPct": 4.37,
+        "evSales": 4.51,
         "grossMarginPct": 50.597,
         "operatingMarginPct": 24.89,
         "netMarginPct": 18.229,
@@ -9521,6 +9355,172 @@
         "value": "D-",
         "momentum": "F",
         "profitability": "C-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Acuity Inc.",
+      "ticker": "AYI",
+      "sector": "Consumer Discretionary – Building Products",
+      "price": 318.72,
+      "priceDate": "2026-10-23",
+      "marketCap": "$9.4B",
+      "forwardPE": 14.96,
+      "peg": 1.5,
+      "revenueGrowth": "+6.8% YoY (TTM)",
+      "score": 22,
+      "scoreParts": {
+        "roic": 1.4,
+        "ocfDebt": 12.0,
+        "fcfAssets": 7.1,
+        "epsQoQ": 1.2,
+        "revGrowth": 0.0
+      },
+      "alsoIn": [],
+      "failed": [
+        "Annual revenue growth > 15%"
+      ],
+      "checklist": [
+        {
+          "key": "roic",
+          "label": "ROIC > 15%",
+          "met": true,
+          "detail": "ROIC 17.1% (TTM) vs > 15%"
+        },
+        {
+          "key": "ocfDebt",
+          "label": "Operating cash flow > 30% of total debt",
+          "met": true,
+          "detail": "Operating cash flow $826M vs total debt $809M: 102% vs > 30%"
+        },
+        {
+          "key": "fcfAssets",
+          "label": "Free cash flow / total assets > 10%",
+          "met": true,
+          "detail": "FCF $748M (TTM) / total assets $4.9B = 15.3% vs > 10%"
+        },
+        {
+          "key": "epsQoQ",
+          "label": "QoQ EPS growth > 20%",
+          "met": true,
+          "detail": "Diluted EPS 5.63 (latest quarter, 2026-08-31) vs 4.56 prior quarter: +23% vs > 20%; YoY same quarter +56% (context)"
+        },
+        {
+          "key": "revGrowth",
+          "label": "Annual revenue growth > 15%",
+          "met": false,
+          "detail": "TTM revenue 6.8% YoY vs > 15%"
+        },
+        {
+          "key": "stage2",
+          "label": "Price above 150-day and 200-day averages",
+          "met": true,
+          "detail": "Price 318.72 vs 150-day 312.04 and 200-day 309.52"
+        },
+        {
+          "key": "rsi",
+          "label": "RSI(14) between 50 and 65",
+          "met": true,
+          "detail": "RSI(14) 58.7 vs 50–65"
+        },
+        {
+          "key": "mcap",
+          "label": "Market cap > $2B",
+          "met": true,
+          "detail": "Market cap $9.4B vs > $2B"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "ROIC",
+          "value": "17.1%"
+        },
+        {
+          "label": "OCF / debt",
+          "value": "102%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "15.3%"
+        },
+        {
+          "label": "EPS QoQ",
+          "value": "+23%"
+        },
+        {
+          "label": "RSI(14)",
+          "value": "58.7"
+        },
+        {
+          "label": "EPS YoY (Q)",
+          "value": "+56%"
+        }
+      ],
+      "drivers": [
+        "ROIC > 15%: 17.1% → 1/20",
+        "Operating cash flow > 30% of total debt: 102% → 12/20",
+        "Free cash flow / total assets > 10%: 15.3% → 7/20",
+        "QoQ EPS growth > 20%: +23% → 1/20",
+        "Annual revenue growth > 15%: 6.8% → 0/20"
+      ],
+      "risks": [
+        "No data-driven red flags; check the latest earnings report"
+      ],
+      "analystRating": "Buy (7 analysts)",
+      "priceTarget": 370.17,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/ayi/statistics/",
+        "https://stockanalysis.com/stocks/ayi/financials/?p=quarterly"
+      ],
+      "screenMetrics": {
+        "mcap": 9400812453.0,
+        "roic": 17.057,
+        "ocf": 825600000.0,
+        "debt": 808900000.0,
+        "fcf": 747900000.0,
+        "ocfDebt": 102.065,
+        "currency": "USD",
+        "lastQ": "2026-08-31",
+        "assets": 4873500000.0,
+        "fcfAssets": 15.346,
+        "eps0": 5.63,
+        "eps1": 4.56,
+        "eps4": 3.613,
+        "epsQoQ": 23.465,
+        "epsYoYq": 55.813,
+        "revGrowth": 6.816,
+        "price": 318.72,
+        "priceDate": "2026-10-23",
+        "sma150": 312.039,
+        "sma200": 309.523,
+        "rsi": 58.658
+      },
+      "metrics": {
+        "revenueGrowthPct": 6.8,
+        "forwardPE": 14.96,
+        "peg": 1.5,
+        "epsGrowth3yPct": 8.1,
+        "evSales": 2.06,
+        "grossMarginPct": 50.642,
+        "operatingMarginPct": 15.806,
+        "netMarginPct": 11.446,
+        "fcfMarginPct": 16.112,
+        "chg3mPct": -2.52,
+        "chg6mPct": 10.12,
+        "chg1yPct": -13.94,
+        "relStrength1yPct": -27.07,
+        "priceAsOf": "2026-10-23"
+      },
+      "grades": {
+        "growth": "F",
+        "value": "B-",
+        "momentum": "F",
+        "profitability": "F"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -9638,8 +9638,8 @@
         "EPS is up on the prior quarter but down 9% vs the same quarter a year ago (possible seasonality)",
         "Rich forward P/E (47)"
       ],
-      "analystRating": "Buy (21 analysts)",
-      "priceTarget": 241.05,
+      "analystRating": "Hold (21 analysts)",
+      "priceTarget": 248.9,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/ilmn/statistics/",
         "https://stockanalysis.com/stocks/ilmn/financials/?p=quarterly"
@@ -10139,7 +10139,7 @@
         "Short interest 13% of float"
       ],
       "analystRating": "Buy (7 analysts)",
-      "priceTarget": 61.67,
+      "priceTarget": 64.17,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/cdna/statistics/",
         "https://stockanalysis.com/stocks/cdna/financials/?p=quarterly"
@@ -10472,7 +10472,7 @@
         "EPS is up on the prior quarter but down 25% vs the same quarter a year ago (possible seasonality)"
       ],
       "analystRating": "Buy (37 analysts)",
-      "priceTarget": 62.53,
+      "priceTarget": 63.94,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/dt/statistics/",
         "https://stockanalysis.com/stocks/dt/financials/?p=quarterly"
@@ -10868,8 +10868,8 @@
       "price": 115.71,
       "priceDate": "2026-10-23",
       "marketCap": "$23.5B",
-      "forwardPE": 59.56,
-      "peg": 5.44,
+      "forwardPE": 59.68,
+      "peg": 5.45,
       "revenueGrowth": "+26.9% YoY (TTM)",
       "score": 87,
       "scoreParts": {
@@ -10970,7 +10970,7 @@
         "Rich forward P/E (60)"
       ],
       "analystRating": "Buy (28 analysts)",
-      "priceTarget": 129.5,
+      "priceTarget": 129.54,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/incy/statistics/",
         "https://stockanalysis.com/stocks/incy/financials/?p=quarterly"
@@ -11000,9 +11000,9 @@
       },
       "metrics": {
         "revenueGrowthPct": 26.9,
-        "forwardPE": 59.56,
-        "peg": 5.44,
-        "epsGrowth3yPct": 10.37,
+        "forwardPE": 59.68,
+        "peg": 5.45,
+        "epsGrowth3yPct": 10.18,
         "evSales": 3.26,
         "grossMarginPct": 55.659,
         "operatingMarginPct": 31.687,
@@ -11138,7 +11138,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Strong Buy (49 analysts)",
-      "priceTarget": 1560.57,
+      "priceTarget": 1561.91,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/mu/statistics/",
         "https://stockanalysis.com/stocks/mu/financials/?p=quarterly"
@@ -11471,7 +11471,7 @@
         "Short interest 18% of float"
       ],
       "analystRating": "Strong Buy (14 analysts)",
-      "priceTarget": 178.21,
+      "priceTarget": 178.57,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/ptgx/statistics/",
         "https://stockanalysis.com/stocks/ptgx/financials/?p=quarterly"
@@ -11546,7 +11546,9 @@
         "epsQoQ": 20.0,
         "revGrowth": 20.0
       },
-      "alsoIn": [],
+      "alsoIn": [
+        "Risk It bench"
+      ],
       "failed": [
         "RSI(14) between 50 and 65"
       ],
@@ -11971,7 +11973,7 @@
         "Short interest 11% of float"
       ],
       "analystRating": "Buy (9 analysts)",
-      "priceTarget": 18.63,
+      "priceTarget": 19.13,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/figs/statistics/",
         "https://stockanalysis.com/stocks/figs/financials/?p=quarterly"
@@ -12139,7 +12141,7 @@
         "Short interest 13% of float"
       ],
       "analystRating": "Buy (17 analysts)",
-      "priceTarget": 112.13,
+      "priceTarget": 113.38,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/hnge/statistics/",
         "https://stockanalysis.com/stocks/hnge/financials/?p=quarterly"
@@ -12638,7 +12640,7 @@
         "RSI 69, near the top of the 50–65 band"
       ],
       "analystRating": "Buy (35 analysts)",
-      "priceTarget": 248.77,
+      "priceTarget": 250.44,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/hubs/statistics/",
         "https://stockanalysis.com/stocks/hubs/financials/?p=quarterly"
@@ -12804,7 +12806,7 @@
         "RSI 88, near the top of the 50–65 band"
       ],
       "analystRating": "Strong Buy (14 analysts)",
-      "priceTarget": 111.38,
+      "priceTarget": 117.77,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/has/statistics/",
         "https://stockanalysis.com/stocks/has/financials/?p=quarterly"
@@ -12836,7 +12838,7 @@
         "revenueGrowthPct": 18.9,
         "forwardPE": 17.67,
         "peg": 1.35,
-        "epsGrowth3yPct": 9.32,
+        "epsGrowth3yPct": 11.99,
         "evSales": 3.6,
         "grossMarginPct": 65.345,
         "operatingMarginPct": 25.945,
@@ -12970,7 +12972,7 @@
         "RSI 76, near the top of the 50–65 band"
       ],
       "analystRating": "Buy (33 analysts)",
-      "priceTarget": 164.41,
+      "priceTarget": 166.41,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/eog/statistics/",
         "https://stockanalysis.com/stocks/eog/financials/?p=quarterly"
@@ -13002,7 +13004,7 @@
         "revenueGrowthPct": 17.2,
         "forwardPE": 9.33,
         "peg": 0.78,
-        "epsGrowth3yPct": 14.28,
+        "epsGrowth3yPct": 14.56,
         "evSales": 3.33,
         "grossMarginPct": 62.636,
         "operatingMarginPct": 33.337,
@@ -13347,7 +13349,7 @@
         "priceAsOf": "2026-10-23"
       },
       "grades": {
-        "growth": "C",
+        "growth": "C+",
         "value": "D+",
         "momentum": "F",
         "profitability": "B-"
@@ -13468,7 +13470,7 @@
         "No data-driven red flags; check the latest earnings report"
       ],
       "analystRating": "Buy (19 analysts)",
-      "priceTarget": 55.87,
+      "priceTarget": 55.81,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/bam/statistics/",
         "https://stockanalysis.com/stocks/bam/financials/?p=quarterly"
@@ -13500,7 +13502,7 @@
         "revenueGrowthPct": 31.9,
         "forwardPE": 23.4,
         "peg": null,
-        "epsGrowth3yPct": 14.44,
+        "epsGrowth3yPct": 14.36,
         "evSales": 14.34,
         "grossMarginPct": 74.377,
         "operatingMarginPct": 65.853,
@@ -13513,7 +13515,7 @@
         "priceAsOf": "2026-10-23"
       },
       "grades": {
-        "growth": "C+",
+        "growth": "C",
         "value": "F",
         "momentum": "F",
         "profitability": "A"
@@ -13527,7 +13529,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-24",
+    "asOf": "2026-10-25",
     "spy1yPct": 13.13,
     "pool": "81 stocks (this list's picks + bench + near misses)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
