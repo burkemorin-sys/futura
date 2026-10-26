@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-25",
+  "lastUpdated": "2026-10-26",
   "priceDate": "2026-10-23",
   "title": "Piotroski",
-  "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1906 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (381 stocks, P/B ≤ 1.49) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
+  "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1905 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (381 stocks, P/B ≤ 1.49) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
   "rubric": [
     {
       "component": "ROA positive",
@@ -51,24 +51,24 @@
       "how": "Revenue ÷ start-of-year total assets above last year's"
     }
   ],
-  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 1, 8: 18, 7: 44, 6: 64, 5: 125, 4: 74, 3: 40, 2: 9, 1: 3. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
+  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 1, 8: 18, 7: 45, 6: 63, 5: 126, 4: 72, 3: 40, 2: 10, 1: 3. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
   "universe": {
-    "listed": 6978,
-    "screened": 2012,
-    "positiveBook": 1906,
+    "listed": 6938,
+    "screened": 2011,
+    "positiveBook": 1905,
     "quintile": 381,
-    "pbCutoff": 1.488,
+    "pbCutoff": 1.49,
     "scored": 378,
     "picks8plus": 19,
     "distribution": {
       "0": 0,
       "1": 3,
-      "2": 9,
+      "2": 10,
       "3": 40,
-      "4": 74,
-      "5": 125,
-      "6": 64,
-      "7": 44,
+      "4": 72,
+      "5": 126,
+      "6": 63,
+      "7": 45,
       "8": 18,
       "9": 1
     }
@@ -95,7 +95,7 @@
       "price": 69.74,
       "priceDate": "2026-10-23",
       "marketCap": "$33.3B",
-      "forwardPE": 14.45,
+      "forwardPE": 13.54,
       "peg": "n/a",
       "revenueGrowth": "+3.7% YoY (FY)",
       "score": 9,
@@ -188,7 +188,7 @@
       ],
       "grades": {
         "growth": "D",
-        "value": "F",
+        "value": "D-",
         "momentum": "C+",
         "profitability": "C"
       },
@@ -200,7 +200,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 3.7,
-        "forwardPE": 14.45,
+        "forwardPE": 13.54,
         "peg": null,
         "epsGrowth3yPct": 1.07,
         "evSales": 1.66,
@@ -221,7 +221,7 @@
       "sector": "Utilities – Electric Utilities: Central",
       "price": 10.59,
       "priceDate": "2026-10-23",
-      "marketCap": "$13.9B",
+      "marketCap": "$13.6B",
       "forwardPE": 2.75,
       "peg": "n/a",
       "revenueGrowth": "+4.3% YoY (FY)",
@@ -332,7 +332,7 @@
         "forwardPE": 2.75,
         "peg": null,
         "epsGrowth3yPct": -0.03,
-        "evSales": 1.8,
+        "evSales": 1.79,
         "grossMarginPct": 15.972,
         "operatingMarginPct": 12.751,
         "netMarginPct": 8.035,
@@ -350,8 +350,8 @@
       "sector": "Technology – Industrial Machinery/Components",
       "price": 2.59,
       "priceDate": "2026-10-23",
-      "marketCap": "$2.7B",
-      "forwardPE": 10.8,
+      "marketCap": "$2.8B",
+      "forwardPE": 11.06,
       "peg": "n/a",
       "revenueGrowth": "-3.0% YoY (FY)",
       "score": 8,
@@ -366,7 +366,7 @@
         },
         {
           "label": "Price / book",
-          "value": "0.55"
+          "value": "0.49"
         },
         {
           "label": "ROA",
@@ -435,7 +435,7 @@
       ],
       "risks": [
         "Financials reported in KRW",
-        "Very low P/B (0.55): the market may expect lower book value (write-downs)",
+        "Very low P/B (0.49): the market may expect lower book value (write-downs)",
         "Stock down 48% in a year"
       ],
       "analystRating": "Hold (2 analysts)",
@@ -458,13 +458,13 @@
       },
       "metrics": {
         "revenueGrowthPct": -3.0,
-        "forwardPE": 10.8,
+        "forwardPE": 11.06,
         "peg": null,
         "epsGrowth3yPct": 45.49,
-        "evSales": 0.78,
-        "grossMarginPct": 14.447,
-        "operatingMarginPct": 2.523,
-        "netMarginPct": -5.343,
+        "evSales": 0.7,
+        "grossMarginPct": 11.232,
+        "operatingMarginPct": 1.86,
+        "netMarginPct": -2.338,
         "fcfMarginPct": 5.999,
         "chg3mPct": -23.15,
         "chg6mPct": -39.49,
@@ -1208,7 +1208,7 @@
       ],
       "grades": {
         "growth": "A+",
-        "value": "D-",
+        "value": "F",
         "momentum": "C",
         "profitability": "A-"
       },
@@ -1481,7 +1481,7 @@
         "grossMarginPct": 47.027,
         "operatingMarginPct": 37.17,
         "netMarginPct": 27.47,
-        "fcfMarginPct": -39.5,
+        "fcfMarginPct": -39.48,
         "chg3mPct": 9.84,
         "chg6mPct": -2.45,
         "chg1yPct": 28.11,
@@ -1496,7 +1496,7 @@
       "price": 145.92,
       "priceDate": "2026-10-23",
       "marketCap": "$22.5B",
-      "forwardPE": 8.41,
+      "forwardPE": 8.37,
       "peg": 0.63,
       "revenueGrowth": "+6.5% YoY (FY)",
       "score": 8,
@@ -1601,7 +1601,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 6.5,
-        "forwardPE": 8.41,
+        "forwardPE": 8.37,
         "peg": 0.63,
         "epsGrowth3yPct": 7.55,
         "evSales": 7.1,
@@ -1962,8 +1962,8 @@
       "risks": [
         "No data-driven red flags; check why the market prices it below peers"
       ],
-      "analystRating": "Hold (24 analysts)",
-      "priceTarget": 50.06,
+      "analystRating": "Hold (25 analysts)",
+      "priceTarget": 49.11,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/aap/financials/",
         "https://stockanalysis.com/stocks/aap/statistics/"
@@ -1971,7 +1971,7 @@
       "rank": 3,
       "grades": {
         "growth": "C-",
-        "value": "C-",
+        "value": "D+",
         "momentum": "F",
         "profitability": "F"
       },
@@ -1985,7 +1985,7 @@
         "revenueGrowthPct": -5.4,
         "forwardPE": 14.0,
         "peg": 1.0,
-        "epsGrowth3yPct": 24.47,
+        "epsGrowth3yPct": 23.42,
         "evSales": 0.62,
         "grossMarginPct": 45.14,
         "operatingMarginPct": 4.326,
@@ -2131,7 +2131,7 @@
       "price": 59.05,
       "priceDate": "2026-10-23",
       "marketCap": "$29.0B",
-      "forwardPE": 14.11,
+      "forwardPE": 13.96,
       "peg": "n/a",
       "revenueGrowth": "+18.7% YoY (FY)",
       "score": 8,
@@ -2235,7 +2235,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 18.7,
-        "forwardPE": 14.11,
+        "forwardPE": 13.96,
         "peg": null,
         "epsGrowth3yPct": 14.42,
         "evSales": 3.29,
@@ -2257,7 +2257,7 @@
       "price": 39.1,
       "priceDate": "2026-10-23",
       "marketCap": "$2.5B",
-      "forwardPE": 13.37,
+      "forwardPE": 13.62,
       "peg": "n/a",
       "revenueGrowth": "-2.2% YoY (FY)",
       "score": 8,
@@ -2349,7 +2349,7 @@
       "rank": 6,
       "grades": {
         "growth": "F",
-        "value": "C",
+        "value": "C-",
         "momentum": "A",
         "profitability": "D"
       },
@@ -2361,7 +2361,7 @@
       },
       "metrics": {
         "revenueGrowthPct": -2.2,
-        "forwardPE": 13.37,
+        "forwardPE": 13.62,
         "peg": null,
         "epsGrowth3yPct": 4.14,
         "evSales": 0.95,
@@ -2475,7 +2475,7 @@
       "rank": 7,
       "grades": {
         "growth": "C",
-        "value": "D+",
+        "value": "C",
         "momentum": "B",
         "profitability": "D+"
       },
@@ -2504,7 +2504,7 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-25",
+    "asOf": "2026-10-26",
     "spy1yPct": 13.13,
     "pool": "19 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",

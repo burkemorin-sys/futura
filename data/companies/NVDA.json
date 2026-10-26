@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-25",
+  "lastUpdated": "2026-10-26",
   "company": "NVIDIA",
   "ticker": "NVDA",
   "exchange": "NASDAQ",
@@ -240,6 +240,20 @@
   },
   "news": [
     {
+      "date": "2026-10-26",
+      "outlet": "CNBC",
+      "title": "Neocloud stocks fall premarket as Musk says more than 200 face 'guppy-level death'",
+      "summary": "Nebius, CoreWeave and Iren fell more than 4% early Monday premarket before paring losses after Musk said debt markets have shut for companies without revenue outside AI data centers. Nvidia, an investor in several neoclouds, has said neocloud demand is \"off the charts\" and the gap is working capital.",
+      "url": "https://www.cnbc.com/2026/10/26/neocloud-stocks-today-coreweave-nebius-iren-elon-musk.html"
+    },
+    {
+      "date": "2026-10-26",
+      "outlet": "Stocktwits",
+      "title": "a16z data shows Nvidia GPU rental prices rising sharply, even for older chips",
+      "summary": "Per a16z (citing Ornn Data), H200 rental rates are up 160% year to date and B200 up 120%, with H100 +35% and even A100s above January levels. NVDA is down 7.6% in October and was up 0.2% overnight.",
+      "url": "https://stocktwits.com/news-articles/markets/equity/nvda-stock-ticks-higher-overnight-a16z-data-shows-gpu-rental-prices-rising-sharply-even-for-older-chips/cZUdsyzRBy4"
+    },
+    {
       "date": "2026-10-23",
       "outlet": "CNBC",
       "title": "At Nvidia's GTC Berlin: Jensen-mania, a shippable Vera Rubin container and neocloud distress",
@@ -308,25 +322,11 @@
       "title": "Nvidia trims losses as the chip sell-off eases amid AI financing concerns",
       "summary": "Chip stocks fell for a fifth day on worries about debt-heavy AI balance sheets, even after TSMC posted record Q3 profit; CoreWeave reversed a 7% drop to close up more than 5% after Jensen Huang voiced optimism about the neocloud. NVDA closed down 1.8% at $217.23.",
       "url": "https://finance.yahoo.com/markets/stocks/article/nvidia-stock-trims-losses-as-chip-sell-off-eases-amid-ai-financing-concerns-203300012.html"
-    },
-    {
-      "date": "2026-10-14",
-      "outlet": "CNN Business",
-      "title": "Nvidia falls 3.2% as a hot inflation report hits AI 'picks and shovels' stocks",
-      "summary": "The S&P 500 (-1.1%) and Nasdaq (-1.9%) had their worst day since July after September CPI raised Fed rate-hike bets. The semiconductor index fell 4.3% (about -12% over a week); NVDA closed at $221.30, roughly 7.5% below its early-October record, while CoreWeave plunged 15.5% on debt worries.",
-      "url": "https://www.cnn.com/2026/10/14/investing/us-stocks-ai-chipmakers"
-    },
-    {
-      "date": "2026-10-13",
-      "outlet": "GuruFocus",
-      "title": "Nvidia takes minority stakes in French startups Doctolib and Genesis AI",
-      "summary": "Nvidia agreed to buy a minority stake in health-tech company Doctolib (terms undisclosed) and was confirmed as a strategic investor in Genesis AI, small deals that extend its push to build future AI customers beyond data centers. NVDA closed up 1.0% at $228.52.",
-      "url": "https://www.gurufocus.com/news/9121573/nvidia-is-using-its-cash-to-build-the-next-generation-of-ai-customers"
     }
   ],
   "grades": {
     "growth": "B+",
-    "value": "D",
+    "value": "D+",
     "momentum": "B-",
     "profitability": "A"
   },
@@ -354,9 +354,9 @@
     "priceAsOf": "2026-10-23"
   },
   "grading": {
-    "asOf": "2026-10-25",
+    "asOf": "2026-10-26",
     "spy1yPct": 13.13,
-    "pool": "Ranked against 147 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 11, Piotroski 19, Magic Formula 28, Insider Buys 6, duplicates counted once), plus NVDA itself",
+    "pool": "Ranked against 147 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 12, Piotroski 19, Magic Formula 28, Insider Buys 6, duplicates counted once), plus NVDA itself",
     "poolSize": 147,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
@@ -372,7 +372,7 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-25",
+    "asOf": "2026-10-26",
     "priceDate": "2026-10-23",
     "inScreen": false,
     "outsideScreenReason": "market cap $5.09T is outside the screen's $1B-$30B range",
@@ -547,7 +547,7 @@
         "High volatility (beta 2.22; 52-week change +27.51%)"
       ],
       "priceDate": "2026-10-23",
-      "listUpdated": "2026-10-25",
+      "listUpdated": "2026-10-26",
       "method": "Conservative growth at a reasonable price (GARP), rerun on the full US-listed market (StockAnalysis / S&P Global screener, Oct 23, 2026 close). A stock qualifies if it has: market cap of $10B or more and at least a year of trading history; TTM revenue growth of 15% or more that analysts expect to continue (consensus revenue growth of 8%+ next fiscal year and 8%+ a year over the next 3 years); a positive forward P/E of 35 or less and a PEG of 1.5 or less where available; a Buy or Strong Buy consensus from 5+ analysts with 15%+ upside to the average target; beta of 2.6 or less; share count up no"
     }
   ]

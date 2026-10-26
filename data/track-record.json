@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
- "lastUpdated": "2026-10-25",
+ "lastUpdated": "2026-10-26",
  "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Insider Buys was added on Oct 14, 2026, starting at 100 on the 2026-10-13 close (no backfill).",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
@@ -1077,7 +1077,8 @@
    "URGN": 34.49,
    "SNDX": 13.4,
    "IONQ": 31.27,
-   "MXL": 63.46
+   "MXL": 63.46,
+   "GEN": 24.88
   }
  },
  "lists": {
@@ -5249,25 +5250,25 @@
      "beatQQQ": false
     },
     {
-     "ticker": "WU",
-     "company": "Western Union Company (The)",
-     "entryDate": "2026-10-23",
-     "entryPriceDate": "2026-10-22",
-     "entryPrice": 6.43,
-     "lastPrice": 6.34,
-     "lastPriceDate": "2026-10-23",
-     "returnPct": -1.4,
-     "qqqPct": -0.01,
-     "spyPct": -0.52,
-     "beatQQQ": false
-    },
-    {
      "ticker": "STNE",
      "company": "StoneCo Ltd. Class A",
      "entryDate": "2026-10-24",
      "entryPriceDate": "2026-10-23",
      "entryPrice": 11.48,
      "lastPrice": 11.48,
+     "lastPriceDate": "2026-10-23",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "GEN",
+     "company": "Gen Digital Inc.",
+     "entryDate": "2026-10-26",
+     "entryPriceDate": "2026-10-23",
+     "entryPrice": 24.88,
+     "lastPrice": 24.88,
      "lastPriceDate": "2026-10-23",
      "returnPct": 0.0,
      "qqqPct": 0.0,
@@ -5401,6 +5402,20 @@
      "exitDate": "2026-10-24",
      "exitPriceDate": "2026-10-23",
      "exitPrice": 248.37
+    },
+    {
+     "ticker": "WU",
+     "company": "Western Union Company (The)",
+     "entryDate": "2026-10-23",
+     "entryPriceDate": "2026-10-22",
+     "entryPrice": 6.43,
+     "returnPct": -1.4,
+     "qqqPct": -0.01,
+     "spyPct": -0.52,
+     "beatQQQ": false,
+     "exitDate": "2026-10-26",
+     "exitPriceDate": "2026-10-23",
+     "exitPrice": 6.34
     }
    ],
    "segments": [
@@ -5544,8 +5559,8 @@
       "VSNT",
       "NRIX",
       "NTES",
-      "WU",
-      "STNE"
+      "STNE",
+      "GEN"
      ]
     }
    ],
@@ -5755,6 +5770,28 @@
      "priceDate": "2026-10-23",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-26",
+     "priceDate": "2026-10-23",
+     "action": "remove",
+     "ticker": "WU",
+     "company": "Western Union Company (The)",
+     "price": 6.34
+    },
+    {
+     "date": "2026-10-26",
+     "priceDate": "2026-10-23",
+     "action": "add",
+     "ticker": "GEN",
+     "company": "Gen Digital Inc.",
+     "price": 24.88
+    },
+    {
+     "date": "2026-10-26",
+     "priceDate": "2026-10-23",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -5810,7 +5847,7 @@
     "beat": 12,
     "of": 20,
     "openBeat": 7,
-    "openOf": 11
+    "openOf": 10
    }
   },
   "insider": {
