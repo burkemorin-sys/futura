@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-26",
+  "lastUpdated": "2026-10-27",
   "company": "Apple",
   "ticker": "AAPL",
   "exchange": "NASDAQ",
@@ -7,10 +7,10 @@
   "status": "public",
   "tagline": "Consumer electronics and services: iPhone, Mac, iPad, Wearables, and a high-margin Services business.",
   "snapshot": {
-    "price": 347.725,
-    "change": "−0.14%",
-    "asOf": "Oct 23, 2026 close",
-    "marketCap": "$5.07T",
+    "price": 343.91,
+    "change": "−1.10%",
+    "asOf": "Oct 26, 2026 close",
+    "marketCap": "$5.02T",
     "range52w": "$243.42 – $351.73",
     "sourceUrl": "https://stockanalysis.com/stocks/aapl/statistics/"
   },
@@ -125,12 +125,12 @@
     "analyst": {
       "rating": "Buy",
       "count": 44,
-      "priceTarget": "$329.25",
-      "upside": "−5.3%",
+      "priceTarget": "$330.02",
+      "upside": "−4.0%",
       "sourceUrl": "https://stockanalysis.com/stocks/aapl/statistics/",
       "calls": [
         {
-          "text": "Consensus Buy across 44 analysts; average target $329.25 (−5.3% vs the Oct 23 close)",
+          "text": "Consensus Buy across 44 analysts; average target $330.02 (−4.0% vs the Oct 26 close)",
           "url": "https://stockanalysis.com/stocks/aapl/statistics/"
         },
         {
@@ -366,27 +366,27 @@
     "profitability": "4/4"
   },
   "gradeMetrics": {
-    "forwardPE": 37.934,
-    "peg": 3.417,
+    "forwardPE": 37.512,
+    "peg": 3.379,
     "revenueGrowthPct": 14.24,
     "revenueGrowthQuarter": "2026-06-27",
-    "epsGrowth3yPct": 13.27,
-    "evSales": 10.74,
+    "epsGrowth3yPct": 13.25,
+    "evSales": 10.62,
     "grossMarginPct": 48.653,
     "operatingMarginPct": 33.173,
     "netMarginPct": 27.619,
     "fcfMarginPct": 29.279,
-    "chg3mPct": 8.1,
-    "chg6mPct": 27.17,
-    "chg1yPct": 33.96,
-    "relStrength1yPct": 20.83,
-    "priceAsOf": "2026-10-23"
+    "chg3mPct": 3.27,
+    "chg6mPct": 26.88,
+    "chg1yPct": 30.85,
+    "relStrength1yPct": 17.84,
+    "priceAsOf": "2026-10-26"
   },
   "grading": {
-    "asOf": "2026-10-26",
-    "spy1yPct": 13.13,
-    "pool": "Ranked against 148 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 23, Experiment Screener 12, Piotroski 19, Magic Formula 28, Insider Buys 6, duplicates counted once), plus AAPL itself",
-    "poolSize": 148,
+    "asOf": "2026-10-27",
+    "spy1yPct": 13.01,
+    "pool": "Ranked against 150 stocks: every Growth, Risk It and Early Inflection pick and backup (Growth 30, Risk It 30, Early Inflection 24, Experiment Screener 11, Piotroski 19, Magic Formula 29, Insider Buys 7, duplicates counted once), plus AAPL itself",
+    "poolSize": 150,
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (last 4 quarters vs the 4 before, StockAnalysis) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
@@ -401,18 +401,18 @@
     ]
   },
   "earlyInflection": {
-    "asOf": "2026-10-26",
-    "priceDate": "2026-10-23",
+    "asOf": "2026-10-27",
+    "priceDate": "2026-10-26",
     "inScreen": false,
-    "outsideScreenReason": "market cap $5.07T is outside the screen's $1B-$30B range",
-    "score": 38,
+    "outsideScreenReason": "market cap $5.02T is outside the screen's $1B-$30B range",
+    "score": 36,
     "scoreParts": {
       "rev": 4.3,
       "margin": 6.7,
       "forward": 4.4,
-      "value": 2.3,
-      "notRun": 7.0,
-      "trend": 10,
+      "value": 2.5,
+      "notRun": 7.2,
+      "trend": 8,
       "analysts": 3.0,
       "theme": 0
     },
@@ -446,31 +446,31 @@
         "key": "value",
         "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
         "met": false,
-        "detail": "Forward P/E 37.934, EV/forward sales 9.8x"
+        "detail": "Forward P/E 37.512, EV/forward sales 9.7x"
       },
       {
         "key": "notrun",
         "label": "Not already run (1-yr ≤ +150%)",
         "met": true,
-        "detail": "1-yr +34% vs SPY +13%"
+        "detail": "1-yr +31% vs SPY +13%"
       },
       {
         "key": "pullback",
         "label": "Pulled back 15–50% from the 52-week high",
         "met": false,
-        "detail": "-0% vs 52-week high"
+        "detail": "-1% vs 52-week high"
       },
       {
         "key": "trend",
         "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
-        "met": true,
-        "detail": "Above 200-day; 3-month vs SPY +2 pts"
+        "met": false,
+        "detail": "Above 200-day; 3-month vs SPY -1 pts"
       },
       {
         "key": "analysts",
         "label": "Analysts constructive (Buy+ and 15%+ upside)",
         "met": false,
-        "detail": "Buy (44), -5% to target"
+        "detail": "Buy (44), -4% to target"
       },
       {
         "key": "revisions",
@@ -483,10 +483,10 @@
       "Revenue: latest quarter +16% YoY vs +17% the quarter before and +10% a year earlier → 4/20",
       "Margins: gross +2.9 pts, operating +1.9 pts YoY (last 2 quarters) → 7/15",
       "Forward: next-12-month revenue +10% (implied), 3-yr EPS growth forecast +13% a year → 4/15",
-      "Valuation: forward P/E 37.934, EV/forward sales 9.8x → 2/15",
-      "Not already run: 1-yr +34%, -0% vs 52-week high → 7/10",
-      "Trend: price above 200-day, above 50-day, 3-month vs SPY +2 pts → 10/10",
-      "Analysts: Buy (44), -5% to target → 3/10",
+      "Valuation: forward P/E 37.512, EV/forward sales 9.7x → 2/15",
+      "Not already run: 1-yr +31%, -1% vs 52-week high → 7/10",
+      "Trend: price above 200-day, above 50-day, 3-month vs SPY -1 pts → 8/10",
+      "Analysts: Buy (44), -4% to target → 3/10",
       "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
     ],
     "risks": [
@@ -507,15 +507,15 @@
       },
       {
         "label": "EV / fwd sales",
-        "value": "9.8x"
+        "value": "9.7x"
       },
       {
         "label": "1-yr move",
-        "value": "+34%"
+        "value": "+31%"
       },
       {
         "label": "vs 52-wk high",
-        "value": "-0%"
+        "value": "-1%"
       }
     ],
     "eiMetrics": {
@@ -529,32 +529,32 @@
       "gmChg": 2.89,
       "omChg": 1.94,
       "fwdRevGrowth": 9.7,
-      "eps3y": 13.27,
-      "fpe": 37.93,
-      "evSales": 10.74,
-      "evFwdSales": 9.79,
-      "peg": 3.42,
-      "ch1y": 34.54,
-      "pt": 329.25,
+      "eps3y": 13.25,
+      "fpe": 37.51,
+      "evSales": 10.62,
+      "evFwdSales": 9.68,
+      "peg": 3.38,
+      "ch1y": 30.85,
+      "pt": 330.02,
       "rating": "Buy",
       "analysts": 44,
-      "psForward": 9.91,
+      "psForward": 9.8,
       "netcash": 62173000000.0,
       "sharesYoY": -2.12,
       "shortFloat": 0.83,
       "beta": 1.07,
       "grossMarginTTM": 48.65,
-      "mcap": 5074761240500.0,
-      "revUSD": 466816414359.3,
+      "mcap": 5019084443800.0,
+      "revUSD": 466804728776.04,
       "currency": "USD",
       "lastQ": "2026-06-27",
-      "price": 347.73,
-      "priceDate": "2026-10-23",
-      "offHigh": -0.14,
-      "ch1yNasdaq": 33.96,
-      "rs3m": 1.57,
+      "price": 343.91,
+      "priceDate": "2026-10-26",
+      "offHigh": -1.24,
+      "ch1yNasdaq": 30.85,
+      "rs3m": -1.48,
       "acqJump": 6.14,
-      "upside": -5.31
+      "upside": -4.04
     },
     "sourceUrl": [
       "https://stockanalysis.com/stocks/aapl/statistics/",
