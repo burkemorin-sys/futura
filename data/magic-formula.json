@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-27",
-  "priceDate": "2026-10-26",
+  "lastUpdated": "2026-10-28",
+  "priceDate": "2026-10-27",
   "title": "Magic Formula",
-  "method": "Joel Greenblatt's Magic Formula: good businesses at bargain prices. Universe: US-listed stocks over $2B on Nasdaq's screener, excluding financials, utilities and real estate, and bitcoin miners (1473 stocks; 1229 with positive EBIT, EV and capital). Every stock is ranked on earnings yield (EBIT ÷ enterprise value) and on return on capital (EBIT ÷ net working capital + net fixed assets); the two ranks are added and the lowest totals win. Top 12 are the picks; the next 18 are backups.",
+  "method": "Joel Greenblatt's Magic Formula: good businesses at bargain prices. Universe: US-listed stocks over $2B on Nasdaq's screener, excluding financials, utilities and real estate, and bitcoin miners (1487 stocks; 1227 with positive EBIT, EV and capital). Every stock is ranked on earnings yield (EBIT ÷ enterprise value) and on return on capital (EBIT ÷ net working capital + net fixed assets); the two ranks are added and the lowest totals win. Top 12 are the picks; the next 18 are backups.",
   "rubric": [
     {
       "component": "Earnings yield",
@@ -18,14 +18,16 @@
   ],
   "dataNotes": "EBIT and enterprise value from StockAnalysis statistics; working capital and PP&E from StockAnalysis quarterly balance sheets; prices are Nasdaq closes. Greenblatt suggests holding a basket for a year; this tab is a daily snapshot.",
   "universe": {
-    "listed": 6967,
-    "screened": 1473,
-    "ranked": 1229
+    "listed": 7010,
+    "screened": 1487,
+    "ranked": 1227
   },
   "excluded": {
     "miners": [
       "BMNR",
+      "BTDR",
       "CIFR",
+      "CLSK",
       "CORZ",
       "HUT",
       "IREN",
@@ -45,10 +47,10 @@
       "company": "PDD Holdings Inc.",
       "ticker": "PDD",
       "sector": "Consumer Discretionary – Business Services",
-      "price": 78.13,
-      "priceDate": "2026-10-26",
-      "marketCap": "$111.2B",
-      "forwardPE": 6.82,
+      "price": 78.4,
+      "priceDate": "2026-10-27",
+      "marketCap": "$111.6B",
+      "forwardPE": 6.84,
       "peg": 0.78,
       "alsoIn": [
         "Magic Formula"
@@ -57,7 +59,7 @@
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "32.4%"
+          "value": "32.2%"
         },
         {
           "label": "Return on capital",
@@ -65,33 +67,33 @@
         },
         {
           "label": "EY rank",
-          "value": "3 of 1229"
+          "value": "4 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "16 of 1229"
+          "value": "16 of 1227"
         },
         {
           "label": "Combined",
-          "value": "19"
+          "value": "20"
         },
         {
           "label": "EV",
-          "value": "$44.7B"
+          "value": "$45.1B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $14.5B ÷ EV $44.7B = 32.4% (rank 3)",
+        "Earnings yield: EBIT $14.5B ÷ EV $45.1B = 32.2% (rank 4)",
         "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $9.1B) = 1087% (rank 16; balance sheet 2026-06-30)",
-        "Combined rank 19 → #1 of 1229"
+        "Combined rank 20 → #1 of 1227"
       ],
       "risks": [
         "Return on capital 1087% reflects a very small capital base (asset-light), so it overstates the edge",
         "Financials reported in CNY",
-        "Stock down 42% in a year: high earnings yield may mean the market expects EBIT to fall"
+        "Stock down 41% in a year: high earnings yield may mean the market expects EBIT to fall"
       ],
-      "analystRating": "Buy (36 analysts)",
-      "priceTarget": 114.99,
+      "analystRating": "Buy (35 analysts)",
+      "priceTarget": 115.0,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/pdd/statistics/",
         "https://stockanalysis.com/stocks/pdd/financials/balance-sheet/?p=quarterly"
@@ -99,7 +101,7 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "D",
-        "value": "A-",
+        "value": "B+",
         "momentum": "F",
         "profitability": "D+"
       },
@@ -111,36 +113,38 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 6.82,
+        "forwardPE": 6.84,
         "peg": 0.78,
         "epsGrowth3yPct": 9.99,
-        "evSales": 0.67,
+        "evSales": 0.68,
         "grossMarginPct": 56.318,
         "operatingMarginPct": 21.863,
         "netMarginPct": 20.426,
         "fcfMarginPct": 24.569,
-        "chg3mPct": -5.48,
-        "chg6mPct": -20.3,
-        "chg1yPct": -41.68,
-        "relStrength1yPct": -54.69,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -7.6,
+        "chg6mPct": -20.38,
+        "chg1yPct": -43.09,
+        "relStrength1yPct": -55.41,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "BioCryst Pharmaceuticals Inc.",
       "ticker": "BCRX",
       "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
-      "price": 7.88,
-      "priceDate": "2026-10-26",
-      "marketCap": "$2.0B",
-      "forwardPE": 15.19,
+      "price": 8.1,
+      "priceDate": "2026-10-27",
+      "marketCap": "$2.1B",
+      "forwardPE": 15.61,
       "peg": "n/a",
-      "alsoIn": [],
+      "alsoIn": [
+        "Magic Formula"
+      ],
       "magicRank": 2,
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "17.2%"
+          "value": "16.8%"
         },
         {
           "label": "Return on capital",
@@ -148,11 +152,11 @@
         },
         {
           "label": "EY rank",
-          "value": "30 of 1229"
+          "value": "30 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "9 of 1229"
+          "value": "9 of 1227"
         },
         {
           "label": "Combined",
@@ -160,13 +164,13 @@
         },
         {
           "label": "EV",
-          "value": "$2.5B"
+          "value": "$2.6B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $429M ÷ EV $2.5B = 17.2% (rank 30)",
+        "Earnings yield: EBIT $429M ÷ EV $2.6B = 16.8% (rank 30)",
         "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $22M) = 1804% (rank 9; balance sheet 2026-06-30)",
-        "Combined rank 39 → #2 of 1229"
+        "Combined rank 39 → #2 of 1227"
       ],
       "risks": [
         "Return on capital 1804% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -178,26 +182,10 @@
         "https://stockanalysis.com/stocks/bcrx/financials/balance-sheet/?p=quarterly"
       ],
       "revenueGrowth": "n/a",
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 15.19,
-        "peg": null,
-        "epsGrowth3yPct": 25.01,
-        "evSales": 2.66,
-        "grossMarginPct": 77.388,
-        "operatingMarginPct": 45.635,
-        "netMarginPct": -40.896,
-        "fcfMarginPct": 39.695,
-        "chg3mPct": -15.63,
-        "chg6mPct": -11.86,
-        "chg1yPct": 9.44,
-        "relStrength1yPct": -3.57,
-        "priceAsOf": "2026-10-26"
-      },
       "grades": {
         "growth": "A-",
         "value": "F",
-        "momentum": "D-",
+        "momentum": "D",
         "profitability": "C+"
       },
       "gradeInputs": {
@@ -205,17 +193,33 @@
         "value": "2/3",
         "momentum": "3/3",
         "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 15.61,
+        "peg": null,
+        "epsGrowth3yPct": 25.01,
+        "evSales": 2.72,
+        "grossMarginPct": 77.388,
+        "operatingMarginPct": 45.635,
+        "netMarginPct": -40.896,
+        "fcfMarginPct": 39.695,
+        "chg3mPct": -15.45,
+        "chg6mPct": -8.99,
+        "chg1yPct": 10.81,
+        "relStrength1yPct": -1.51,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
-      "company": "Harmony Biosciences Holdings Inc.",
-      "ticker": "HRMY",
-      "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
-      "price": 36.83,
-      "priceDate": "2026-10-26",
-      "marketCap": "$2.1B",
-      "forwardPE": 9.19,
-      "peg": 0.28,
+      "company": "Wise Group plc",
+      "ticker": "WSE",
+      "sector": "Industrials – Diversified Commercial Services",
+      "price": 10.84,
+      "priceDate": "2026-10-27",
+      "marketCap": "$11.1B",
+      "forwardPE": 18.67,
+      "peg": 1.16,
       "alsoIn": [
         "Magic Formula"
       ],
@@ -223,7 +227,90 @@
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "14.1%"
+          "value": "18.1%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "593%"
+        },
+        {
+          "label": "EY rank",
+          "value": "21 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "33 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "54"
+        },
+        {
+          "label": "EV",
+          "value": "$6.2B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $1.1B ÷ EV $6.2B = 18.1% (rank 21)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $190M) = 593% (rank 33; balance sheet 2026-03-31)",
+        "Combined rank 54 → #3 of 1227"
+      ],
+      "risks": [
+        "Return on capital 593% reflects a very small capital base (asset-light), so it overstates the edge"
+      ],
+      "analystRating": "Strong Buy (13 analysts)",
+      "priceTarget": 17.02,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/wse/statistics/",
+        "https://stockanalysis.com/stocks/wse/financials/balance-sheet/?p=quarterly"
+      ],
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "B",
+        "value": "F",
+        "momentum": "F",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 18.67,
+        "peg": 1.16,
+        "epsGrowth3yPct": 18.34,
+        "evSales": 2.48,
+        "grossMarginPct": 84.154,
+        "operatingMarginPct": 44.75,
+        "netMarginPct": 19.926,
+        "fcfMarginPct": 301.035,
+        "chg3mPct": -8.98,
+        "chg6mPct": -25.24,
+        "chg1yPct": -20.0,
+        "relStrength1yPct": -32.32,
+        "priceAsOf": "2026-10-27"
+      }
+    },
+    {
+      "company": "Harmony Biosciences Holdings Inc.",
+      "ticker": "HRMY",
+      "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
+      "price": 37.95,
+      "priceDate": "2026-10-27",
+      "marketCap": "$2.2B",
+      "forwardPE": 9.51,
+      "peg": 0.29,
+      "alsoIn": [
+        "Magic Formula"
+      ],
+      "magicRank": 4,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "13.5%"
         },
         {
           "label": "Return on capital",
@@ -231,25 +318,25 @@
         },
         {
           "label": "EY rank",
-          "value": "49 of 1229"
+          "value": "55 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "2 of 1229"
+          "value": "2 of 1227"
         },
         {
           "label": "Combined",
-          "value": "51"
+          "value": "57"
         },
         {
           "label": "EV",
-          "value": "$1.6B"
+          "value": "$1.7B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $231M ÷ EV $1.6B = 14.1% (rank 49)",
+        "Earnings yield: EBIT $231M ÷ EV $1.7B = 13.5% (rank 55)",
         "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $6M) = 3950% (rank 2; balance sheet 2026-06-30)",
-        "Combined rank 51 → #3 of 1229"
+        "Combined rank 57 → #4 of 1227"
       ],
       "risks": [
         "Return on capital 3950% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -263,8 +350,8 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "A",
-        "value": "B+",
-        "momentum": "B+",
+        "value": "B",
+        "momentum": "A-",
         "profitability": "C-"
       },
       "gradeInputs": {
@@ -275,111 +362,28 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 9.19,
-        "peg": 0.28,
+        "forwardPE": 9.51,
+        "peg": 0.29,
         "epsGrowth3yPct": 25.56,
-        "evSales": 1.71,
+        "evSales": 1.77,
         "grossMarginPct": 75.424,
         "operatingMarginPct": 24.029,
         "netMarginPct": 18.884,
         "fcfMarginPct": 36.973,
-        "chg3mPct": 4.28,
-        "chg6mPct": 19.58,
-        "chg1yPct": 21.75,
-        "relStrength1yPct": 8.74,
-        "priceAsOf": "2026-10-26"
-      }
-    },
-    {
-      "company": "Wise Group plc",
-      "ticker": "WSE",
-      "sector": "Industrials – Diversified Commercial Services",
-      "price": 10.99,
-      "priceDate": "2026-10-26",
-      "marketCap": "$11.3B",
-      "forwardPE": 18.93,
-      "peg": 1.18,
-      "alsoIn": [
-        "Magic Formula"
-      ],
-      "magicRank": 4,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "17.6%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "593%"
-        },
-        {
-          "label": "EY rank",
-          "value": "28 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "34 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "62"
-        },
-        {
-          "label": "EV",
-          "value": "$6.4B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $1.1B ÷ EV $6.4B = 17.6% (rank 28)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $190M) = 593% (rank 34; balance sheet 2026-03-31)",
-        "Combined rank 62 → #4 of 1229"
-      ],
-      "risks": [
-        "Return on capital 593% reflects a very small capital base (asset-light), so it overstates the edge"
-      ],
-      "analystRating": "Strong Buy (13 analysts)",
-      "priceTarget": 16.98,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/wse/statistics/",
-        "https://stockanalysis.com/stocks/wse/financials/balance-sheet/?p=quarterly"
-      ],
-      "revenueGrowth": "n/a",
-      "grades": {
-        "growth": "B",
-        "value": "F",
-        "momentum": "D-",
-        "profitability": "A-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 18.93,
-        "peg": 1.18,
-        "epsGrowth3yPct": 18.34,
-        "evSales": 2.54,
-        "grossMarginPct": 84.154,
-        "operatingMarginPct": 44.75,
-        "netMarginPct": 19.926,
-        "fcfMarginPct": 301.035,
-        "chg3mPct": -3.0,
-        "chg6mPct": -22.03,
-        "chg1yPct": -15.98,
-        "relStrength1yPct": -28.99,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 5.39,
+        "chg6mPct": 22.22,
+        "chg1yPct": 26.04,
+        "relStrength1yPct": 13.72,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Nurix Therapeutics Inc.",
       "ticker": "NRIX",
       "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
-      "price": 25.55,
-      "priceDate": "2026-10-26",
-      "marketCap": "$2.8B",
+      "price": 26.7,
+      "priceDate": "2026-10-27",
+      "marketCap": "$2.9B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "alsoIn": [
@@ -389,7 +393,7 @@
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "16.0%"
+          "value": "15.0%"
         },
         {
           "label": "Return on capital",
@@ -397,25 +401,25 @@
         },
         {
           "label": "EY rank",
-          "value": "35 of 1229"
+          "value": "41 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "59 of 1229"
+          "value": "57 of 1227"
         },
         {
           "label": "Combined",
-          "value": "94"
+          "value": "98"
         },
         {
           "label": "EV",
-          "value": "$1.8B"
+          "value": "$1.9B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $290M ÷ EV $1.8B = 16.0% (rank 35)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $68M) = 426% (rank 59; balance sheet 2026-08-31)",
-        "Combined rank 94 → #5 of 1229"
+        "Earnings yield: EBIT $290M ÷ EV $1.9B = 15.0% (rank 41)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $68M) = 426% (rank 57; balance sheet 2026-08-31)",
+        "Combined rank 98 → #5 of 1227"
       ],
       "risks": [
         "Return on capital 426% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -444,27 +448,27 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 2.58,
+        "evSales": 2.76,
         "grossMarginPct": 52.407,
         "operatingMarginPct": 41.265,
         "netMarginPct": 42.009,
         "fcfMarginPct": 52.684,
-        "chg3mPct": 9.28,
-        "chg6mPct": 53.18,
-        "chg1yPct": 130.39,
-        "relStrength1yPct": 117.38,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 13.96,
+        "chg6mPct": 61.92,
+        "chg1yPct": 122.87,
+        "relStrength1yPct": 110.55,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Corporacion America Airports SA",
       "ticker": "CAAP",
       "sector": "Consumer Discretionary – Aerospace",
-      "price": 23.84,
-      "priceDate": "2026-10-26",
-      "marketCap": "$3.9B",
-      "forwardPE": 9.07,
-      "peg": 0.53,
+      "price": 23.41,
+      "priceDate": "2026-10-27",
+      "marketCap": "$3.8B",
+      "forwardPE": 8.91,
+      "peg": 0.52,
       "alsoIn": [
         "Magic Formula"
       ],
@@ -472,7 +476,7 @@
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "12.5%"
+          "value": "12.7%"
         },
         {
           "label": "Return on capital",
@@ -480,15 +484,15 @@
         },
         {
           "label": "EY rank",
-          "value": "73 of 1229"
+          "value": "73 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "42 of 1229"
+          "value": "41 of 1227"
         },
         {
           "label": "Combined",
-          "value": "115"
+          "value": "114"
         },
         {
           "label": "EV",
@@ -496,9 +500,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $515M ÷ EV $4.1B = 12.5% (rank 73)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $100M) = 526% (rank 42; balance sheet 2026-06-30)",
-        "Combined rank 115 → #6 of 1229"
+        "Earnings yield: EBIT $515M ÷ EV $4.1B = 12.7% (rank 73)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $100M) = 526% (rank 41; balance sheet 2026-06-30)",
+        "Combined rank 114 → #6 of 1227"
       ],
       "risks": [
         "Return on capital 526% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -513,7 +517,7 @@
       "grades": {
         "growth": "B+",
         "value": "B+",
-        "momentum": "C-",
+        "momentum": "D+",
         "profitability": "D-"
       },
       "gradeInputs": {
@@ -524,29 +528,29 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 9.07,
-        "peg": 0.53,
+        "forwardPE": 8.91,
+        "peg": 0.52,
         "epsGrowth3yPct": 19.72,
-        "evSales": 1.94,
+        "evSales": 1.91,
         "grossMarginPct": 34.428,
         "operatingMarginPct": 24.244,
         "netMarginPct": 13.604,
         "fcfMarginPct": 21.535,
-        "chg3mPct": -5.28,
-        "chg6mPct": -4.64,
-        "chg1yPct": 29.28,
-        "relStrength1yPct": 16.27,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -10.79,
+        "chg6mPct": -5.64,
+        "chg1yPct": 8.28,
+        "relStrength1yPct": -4.04,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "NetEase Inc.",
       "ticker": "NTES",
       "sector": "Technology – Computer Software: Prepackaged Software",
-      "price": 118.32,
-      "priceDate": "2026-10-26",
-      "marketCap": "$72.8B",
-      "forwardPE": 11.99,
+      "price": 114.09,
+      "priceDate": "2026-10-27",
+      "marketCap": "$71.9B",
+      "forwardPE": 11.56,
       "peg": "n/a",
       "alsoIn": [
         "Magic Formula"
@@ -555,7 +559,7 @@
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "12.2%"
+          "value": "12.5%"
         },
         {
           "label": "Return on capital",
@@ -563,25 +567,25 @@
         },
         {
           "label": "EY rank",
-          "value": "81 of 1229"
+          "value": "76 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "44 of 1229"
+          "value": "43 of 1227"
         },
         {
           "label": "Combined",
-          "value": "125"
+          "value": "119"
         },
         {
           "label": "EV",
-          "value": "$49.5B"
+          "value": "$48.6B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $6.0B ÷ EV $49.5B = 12.2% (rank 81)",
-        "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $8.2B) = 502% (rank 44; balance sheet 2026-06-30)",
-        "Combined rank 125 → #7 of 1229"
+        "Earnings yield: EBIT $6.0B ÷ EV $48.6B = 12.5% (rank 76)",
+        "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $8.2B) = 502% (rank 43; balance sheet 2026-06-30)",
+        "Combined rank 119 → #7 of 1227"
       ],
       "risks": [
         "Return on capital 502% reflects a very small capital base (asset-light), so it overstates the edge",
@@ -597,8 +601,8 @@
       "grades": {
         "growth": "D+",
         "value": "D-",
-        "momentum": "D+",
-        "profitability": "B-"
+        "momentum": "D",
+        "profitability": "B"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -608,27 +612,27 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 11.99,
+        "forwardPE": 11.56,
         "peg": null,
         "epsGrowth3yPct": 10.71,
-        "evSales": 2.89,
+        "evSales": 2.83,
         "grossMarginPct": 67.154,
         "operatingMarginPct": 35.229,
         "netMarginPct": 27.883,
         "fcfMarginPct": 43.502,
-        "chg3mPct": -1.03,
-        "chg6mPct": 7.0,
-        "chg1yPct": -19.35,
-        "relStrength1yPct": -32.36,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -7.82,
+        "chg6mPct": 2.45,
+        "chg1yPct": -21.88,
+        "relStrength1yPct": -34.2,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Tencent Music Entertainment Group",
       "ticker": "TME",
       "sector": "Consumer Discretionary – Broadcasting",
-      "price": 8.48,
-      "priceDate": "2026-10-26",
+      "price": 8.49,
+      "priceDate": "2026-10-27",
       "marketCap": "$14.0B",
       "forwardPE": 8.82,
       "peg": 1.83,
@@ -647,11 +651,11 @@
         },
         {
           "label": "EY rank",
-          "value": "77 of 1229"
+          "value": "78 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "62 of 1229"
+          "value": "61 of 1227"
         },
         {
           "label": "Combined",
@@ -663,9 +667,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $1.5B ÷ EV $12.0B = 12.4% (rank 77)",
-        "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $1.9B) = 405% (rank 62; balance sheet 2026-06-30)",
-        "Combined rank 139 → #8 of 1229"
+        "Earnings yield: EBIT $1.5B ÷ EV $12.0B = 12.4% (rank 78)",
+        "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $1.9B) = 405% (rank 61; balance sheet 2026-06-30)",
+        "Combined rank 139 → #8 of 1227"
       ],
       "risks": [
         "Return on capital 405% reflects a very small capital base (asset-light), so it overstates the edge",
@@ -695,27 +699,27 @@
         "revenueGrowthPct": null,
         "forwardPE": 8.82,
         "peg": 1.83,
-        "epsGrowth3yPct": 6.52,
+        "epsGrowth3yPct": 6.58,
         "evSales": 2.4,
         "grossMarginPct": 44.321,
         "operatingMarginPct": 29.662,
         "netMarginPct": 26.282,
         "fcfMarginPct": 32.132,
-        "chg3mPct": -4.29,
-        "chg6mPct": -9.21,
-        "chg1yPct": -62.97,
-        "relStrength1yPct": -75.98,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -9.0,
+        "chg6mPct": -9.29,
+        "chg1yPct": -64.19,
+        "relStrength1yPct": -76.51,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Indivior Pharmaceuticals Inc.",
       "ticker": "INDV",
       "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
-      "price": 34.56,
-      "priceDate": "2026-10-26",
+      "price": 34.72,
+      "priceDate": "2026-10-27",
       "marketCap": "$4.1B",
-      "forwardPE": 7.46,
+      "forwardPE": 7.5,
       "peg": "n/a",
       "alsoIn": [
         "Magic Formula"
@@ -724,7 +728,7 @@
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "13.0%"
+          "value": "12.9%"
         },
         {
           "label": "Return on capital",
@@ -732,15 +736,15 @@
         },
         {
           "label": "EY rank",
-          "value": "62 of 1229"
+          "value": "62 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "87 of 1229"
+          "value": "85 of 1227"
         },
         {
           "label": "Combined",
-          "value": "149"
+          "value": "147"
         },
         {
           "label": "EV",
@@ -748,9 +752,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $567M ÷ EV $4.4B = 13.0% (rank 62)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $183M) = 304% (rank 87; balance sheet 2026-06-30)",
-        "Combined rank 149 → #9 of 1229"
+        "Earnings yield: EBIT $567M ÷ EV $4.4B = 12.9% (rank 62)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $183M) = 304% (rank 85; balance sheet 2026-06-30)",
+        "Combined rank 147 → #9 of 1227"
       ],
       "risks": [
         "Return on capital 304% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -765,7 +769,7 @@
       "grades": {
         "growth": "A",
         "value": "C",
-        "momentum": "D+",
+        "momentum": "C-",
         "profitability": "C+"
       },
       "gradeInputs": {
@@ -776,30 +780,30 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 7.46,
+        "forwardPE": 7.5,
         "peg": null,
         "epsGrowth3yPct": 28.18,
-        "evSales": 3.28,
+        "evSales": 3.29,
         "grossMarginPct": 85.725,
         "operatingMarginPct": 42.6,
         "netMarginPct": 26.747,
         "fcfMarginPct": -8.34,
-        "chg3mPct": -14.72,
-        "chg6mPct": 4.0,
-        "chg1yPct": 37.52,
-        "relStrength1yPct": 24.51,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -13.27,
+        "chg6mPct": 1.19,
+        "chg1yPct": 40.11,
+        "relStrength1yPct": 27.79,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
-      "company": "Versant Media Group Inc.",
-      "ticker": "VSNT",
-      "sector": "Industrials – Broadcasting",
-      "price": 30.63,
-      "priceDate": "2026-10-26",
-      "marketCap": "$4.3B",
-      "forwardPE": 6.19,
-      "peg": "n/a",
+      "company": "WEX Inc.",
+      "ticker": "WEX",
+      "sector": "Consumer Discretionary – Business Services",
+      "price": 186.38,
+      "priceDate": "2026-10-27",
+      "marketCap": "$6.4B",
+      "forwardPE": 9.01,
+      "peg": 0.72,
       "alsoIn": [
         "Magic Formula"
       ],
@@ -807,7 +811,90 @@
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "18.9%"
+          "value": "12.9%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "278%"
+        },
+        {
+          "label": "EY rank",
+          "value": "64 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "96 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "160"
+        },
+        {
+          "label": "EV",
+          "value": "$5.6B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $721M ÷ EV $5.6B = 12.9% (rank 64)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $259M) = 278% (rank 96; balance sheet 2026-06-30)",
+        "Combined rank 160 → #10 of 1227"
+      ],
+      "risks": [
+        "Return on capital 278% reflects a very small capital base (asset-light), so it overstates the edge"
+      ],
+      "analystRating": "Buy (15 analysts)",
+      "priceTarget": 195.91,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/wex/statistics/",
+        "https://stockanalysis.com/stocks/wex/financials/balance-sheet/?p=quarterly"
+      ],
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "C",
+        "value": "B-",
+        "momentum": "A-",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 9.01,
+        "peg": 0.72,
+        "epsGrowth3yPct": 13.84,
+        "evSales": 2.01,
+        "grossMarginPct": 73.232,
+        "operatingMarginPct": 25.83,
+        "netMarginPct": 12.56,
+        "fcfMarginPct": 3.886,
+        "chg3mPct": 4.72,
+        "chg6mPct": 25.0,
+        "chg1yPct": 15.82,
+        "relStrength1yPct": 3.5,
+        "priceAsOf": "2026-10-27"
+      }
+    },
+    {
+      "company": "Versant Media Group Inc.",
+      "ticker": "VSNT",
+      "sector": "Industrials – Broadcasting",
+      "price": 30.85,
+      "priceDate": "2026-10-27",
+      "marketCap": "$4.3B",
+      "forwardPE": 6.23,
+      "peg": "n/a",
+      "alsoIn": [
+        "Magic Formula"
+      ],
+      "magicRank": 11,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "18.8%"
         },
         {
           "label": "Return on capital",
@@ -815,15 +902,15 @@
         },
         {
           "label": "EY rank",
-          "value": "18 of 1229"
+          "value": "18 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "150 of 1229"
+          "value": "149 of 1227"
         },
         {
           "label": "Combined",
-          "value": "168"
+          "value": "167"
         },
         {
           "label": "EV",
@@ -831,9 +918,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $1.1B ÷ EV $6.0B = 18.9% (rank 18)",
-        "Return on capital: EBIT ÷ (net working capital $220M + net PP&E $441M) = 177% (rank 150; balance sheet 2026-06-30)",
-        "Combined rank 168 → #10 of 1229"
+        "Earnings yield: EBIT $1.1B ÷ EV $6.0B = 18.8% (rank 18)",
+        "Return on capital: EBIT ÷ (net working capital $220M + net PP&E $441M) = 177% (rank 149; balance sheet 2026-06-30)",
+        "Combined rank 167 → #11 of 1227"
       ],
       "risks": [
         "No data-driven red flags; check whether recent EBIT is sustainable"
@@ -859,7 +946,7 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 6.19,
+        "forwardPE": 6.23,
         "peg": null,
         "epsGrowth3yPct": null,
         "evSales": 0.91,
@@ -867,195 +954,24 @@
         "operatingMarginPct": 17.141,
         "netMarginPct": 11.478,
         "fcfMarginPct": 25.939,
-        "chg3mPct": -13.43,
-        "chg6mPct": -20.93,
+        "chg3mPct": -14.02,
+        "chg6mPct": -22.68,
         "chg1yPct": null,
         "relStrength1yPct": null,
-        "priceAsOf": "2026-10-26"
+        "priceAsOf": "2026-10-27"
       }
     },
-    {
-      "company": "WEX Inc.",
-      "ticker": "WEX",
-      "sector": "Consumer Discretionary – Business Services",
-      "price": 192.09,
-      "priceDate": "2026-10-26",
-      "marketCap": "$6.5B",
-      "forwardPE": 9.32,
-      "peg": 0.75,
-      "alsoIn": [
-        "Magic Formula"
-      ],
-      "magicRank": 11,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "12.4%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "278%"
-        },
-        {
-          "label": "EY rank",
-          "value": "74 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "97 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "171"
-        },
-        {
-          "label": "EV",
-          "value": "$5.8B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $721M ÷ EV $5.8B = 12.4% (rank 74)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $259M) = 278% (rank 97; balance sheet 2026-06-30)",
-        "Combined rank 171 → #11 of 1229"
-      ],
-      "risks": [
-        "Return on capital 278% reflects a very small capital base (asset-light), so it overstates the edge"
-      ],
-      "analystRating": "Buy (15 analysts)",
-      "priceTarget": 195.36,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/wex/statistics/",
-        "https://stockanalysis.com/stocks/wex/financials/balance-sheet/?p=quarterly"
-      ],
-      "revenueGrowth": "n/a",
-      "grades": {
-        "growth": "C",
-        "value": "C+",
-        "momentum": "A-",
-        "profitability": "D"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 9.32,
-        "peg": 0.75,
-        "epsGrowth3yPct": 13.84,
-        "evSales": 2.08,
-        "grossMarginPct": 73.232,
-        "operatingMarginPct": 25.83,
-        "netMarginPct": 12.56,
-        "fcfMarginPct": 3.886,
-        "chg3mPct": 9.05,
-        "chg6mPct": 27.68,
-        "chg1yPct": 20.15,
-        "relStrength1yPct": 7.14,
-        "priceAsOf": "2026-10-26"
-      }
-    },
-    {
-      "company": "StoneCo Ltd. Class A",
-      "ticker": "STNE",
-      "sector": "Technology – EDP Services",
-      "price": 8.33,
-      "priceDate": "2026-10-26",
-      "marketCap": "$1.9B",
-      "forwardPE": 4.12,
-      "peg": 0.27,
-      "alsoIn": [
-        "Magic Formula"
-      ],
-      "magicRank": 12,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "33.2%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "156%"
-        },
-        {
-          "label": "EY rank",
-          "value": "2 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "176 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "178"
-        },
-        {
-          "label": "EV",
-          "value": "$3.6B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $1.2B ÷ EV $3.6B = 33.2% (rank 2)",
-        "Return on capital (BRL): EBIT ÷ (net working capital $2.2B + net PP&E $1.7B) = 156% (rank 176; balance sheet 2026-06-30)",
-        "Combined rank 178 → #12 of 1229"
-      ],
-      "risks": [
-        "Financials reported in BRL",
-        "Stock down 56% in a year: high earnings yield may mean the market expects EBIT to fall"
-      ],
-      "analystRating": "Buy (17 analysts)",
-      "priceTarget": 13.91,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/stne/statistics/",
-        "https://stockanalysis.com/stocks/stne/financials/balance-sheet/?p=quarterly"
-      ],
-      "revenueGrowth": "n/a",
-      "grades": {
-        "growth": "D-",
-        "value": "A+",
-        "momentum": "F",
-        "profitability": "B-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 4.12,
-        "peg": 0.27,
-        "epsGrowth3yPct": 8.85,
-        "evSales": 1.38,
-        "grossMarginPct": 71.558,
-        "operatingMarginPct": 45.673,
-        "netMarginPct": 24.714,
-        "fcfMarginPct": 34.079,
-        "chg3mPct": -22.58,
-        "chg6mPct": -31.83,
-        "chg1yPct": -56.16,
-        "relStrength1yPct": -69.17,
-        "priceAsOf": "2026-10-26"
-      }
-    }
-  ],
-  "bench": [
     {
       "company": "Gen Digital Inc.",
       "ticker": "GEN",
       "sector": "Technology – Computer Software: Prepackaged Software",
-      "price": 24.41,
-      "priceDate": "2026-10-26",
-      "marketCap": "$14.6B",
-      "forwardPE": 8.1,
+      "price": 24.25,
+      "priceDate": "2026-10-27",
+      "marketCap": "$14.5B",
+      "forwardPE": 8.04,
       "peg": 0.94,
-      "alsoIn": [
-        "Magic Formula"
-      ],
-      "magicRank": 13,
+      "alsoIn": [],
+      "magicRank": 12,
       "keyFigures": [
         {
           "label": "Earnings yield",
@@ -1067,25 +983,25 @@
         },
         {
           "label": "EY rank",
-          "value": "175 of 1229"
+          "value": "170 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "5 of 1229"
+          "value": "5 of 1227"
         },
         {
           "label": "Combined",
-          "value": "180"
+          "value": "175"
         },
         {
           "label": "EV",
-          "value": "$22.3B"
+          "value": "$22.2B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $2.2B ÷ EV $22.3B = 9.8% (rank 175)",
+        "Earnings yield: EBIT $2.2B ÷ EV $22.2B = 9.8% (rank 170)",
         "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $70M) = 3110% (rank 5; balance sheet 2026-07-03)",
-        "Combined rank 180 → #13 of 1229"
+        "Combined rank 175 → #12 of 1227"
       ],
       "risks": [
         "Return on capital 3110% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -1096,7 +1012,6 @@
         "https://stockanalysis.com/stocks/gen/statistics/",
         "https://stockanalysis.com/stocks/gen/financials/balance-sheet/?p=quarterly"
       ],
-      "rank": 1,
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "D+",
@@ -1112,36 +1027,123 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 8.1,
+        "forwardPE": 8.04,
         "peg": 0.94,
         "epsGrowth3yPct": 12.18,
-        "evSales": 4.38,
+        "evSales": 4.36,
         "grossMarginPct": 78.007,
         "operatingMarginPct": 42.804,
         "netMarginPct": 20.732,
         "fcfMarginPct": 30.478,
-        "chg3mPct": -5.53,
-        "chg6mPct": 28.2,
-        "chg1yPct": -10.32,
-        "relStrength1yPct": -23.33,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -9.31,
+        "chg6mPct": 27.5,
+        "chg1yPct": -9.65,
+        "relStrength1yPct": -21.97,
+        "priceAsOf": "2026-10-27"
+      }
+    }
+  ],
+  "bench": [
+    {
+      "company": "StoneCo Ltd. Class A",
+      "ticker": "STNE",
+      "sector": "Technology – EDP Services",
+      "price": 8.15,
+      "priceDate": "2026-10-27",
+      "marketCap": "$1.9B",
+      "forwardPE": 3.95,
+      "peg": 0.26,
+      "alsoIn": [
+        "Magic Formula"
+      ],
+      "magicRank": 13,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "33.5%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "156%"
+        },
+        {
+          "label": "EY rank",
+          "value": "2 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "175 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "177"
+        },
+        {
+          "label": "EV",
+          "value": "$3.6B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $1.2B ÷ EV $3.6B = 33.5% (rank 2)",
+        "Return on capital (BRL): EBIT ÷ (net working capital $2.2B + net PP&E $1.7B) = 156% (rank 175; balance sheet 2026-06-30)",
+        "Combined rank 177 → #13 of 1227"
+      ],
+      "risks": [
+        "Financials reported in BRL",
+        "Stock down 57% in a year: high earnings yield may mean the market expects EBIT to fall"
+      ],
+      "analystRating": "Buy (17 analysts)",
+      "priceTarget": 13.91,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/stne/statistics/",
+        "https://stockanalysis.com/stocks/stne/financials/balance-sheet/?p=quarterly"
+      ],
+      "rank": 1,
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "D-",
+        "value": "A+",
+        "momentum": "F",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 3.95,
+        "peg": 0.26,
+        "epsGrowth3yPct": 8.85,
+        "evSales": 1.36,
+        "grossMarginPct": 71.558,
+        "operatingMarginPct": 45.673,
+        "netMarginPct": 24.714,
+        "fcfMarginPct": 34.079,
+        "chg3mPct": -25.11,
+        "chg6mPct": -31.98,
+        "chg1yPct": -57.94,
+        "relStrength1yPct": -70.26,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Super Group (SGHC) Limited",
       "ticker": "SGHC",
       "sector": "Consumer Discretionary – Services-Misc. Amusement & Recreation",
-      "price": 10.87,
-      "priceDate": "2026-10-26",
-      "marketCap": "$5.5B",
-      "forwardPE": 11.69,
+      "price": 10.55,
+      "priceDate": "2026-10-27",
+      "marketCap": "$5.4B",
+      "forwardPE": 11.34,
       "peg": "n/a",
       "alsoIn": [],
       "magicRank": 14,
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "10.4%"
+          "value": "10.7%"
         },
         {
           "label": "Return on capital",
@@ -1149,25 +1151,25 @@
         },
         {
           "label": "EY rank",
-          "value": "147 of 1229"
+          "value": "127 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "51 of 1229"
+          "value": "50 of 1227"
         },
         {
           "label": "Combined",
-          "value": "198"
+          "value": "177"
         },
         {
           "label": "EV",
-          "value": "$5.1B"
+          "value": "$4.9B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $526M ÷ EV $5.1B = 10.4% (rank 147)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $115M) = 458% (rank 51; balance sheet 2026-06-30)",
-        "Combined rank 198 → #14 of 1229"
+        "Earnings yield: EBIT $526M ÷ EV $4.9B = 10.7% (rank 127)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $115M) = 458% (rank 50; balance sheet 2026-06-30)",
+        "Combined rank 177 → #14 of 1227"
       ],
       "risks": [
         "Return on capital 458% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -1182,7 +1184,7 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "A+",
-        "value": "C-",
+        "value": "C",
         "momentum": "F",
         "profitability": "F"
       },
@@ -1194,36 +1196,36 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 11.69,
+        "forwardPE": 11.34,
         "peg": null,
         "epsGrowth3yPct": 33.96,
-        "evSales": 2.08,
+        "evSales": 2.02,
         "grossMarginPct": 32.25,
         "operatingMarginPct": 21.637,
         "netMarginPct": 15.056,
         "fcfMarginPct": 17.153,
-        "chg3mPct": -24.3,
-        "chg6mPct": -13.25,
-        "chg1yPct": -8.89,
-        "relStrength1yPct": -21.9,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -28.04,
+        "chg6mPct": -15.46,
+        "chg1yPct": -11.05,
+        "relStrength1yPct": -23.37,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Full Truck Alliance Co. Ltd.",
       "ticker": "YMM",
       "sector": "Technology – Computer Software: Prepackaged Software",
-      "price": 8.35,
-      "priceDate": "2026-10-26",
+      "price": 8.42,
+      "priceDate": "2026-10-27",
       "marketCap": "$8.7B",
-      "forwardPE": 10.31,
-      "peg": 0.65,
+      "forwardPE": 10.39,
+      "peg": 0.66,
       "alsoIn": [],
       "magicRank": 15,
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "12.2%"
+          "value": "12.0%"
         },
         {
           "label": "Return on capital",
@@ -1231,33 +1233,33 @@
         },
         {
           "label": "EY rank",
-          "value": "82 of 1229"
+          "value": "85 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "123 of 1229"
+          "value": "121 of 1227"
         },
         {
           "label": "Combined",
-          "value": "205"
+          "value": "206"
         },
         {
           "label": "EV",
-          "value": "$5.2B"
+          "value": "$5.3B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $632M ÷ EV $5.2B = 12.2% (rank 82)",
-        "Return on capital (CNY): EBIT ÷ (net working capital $1.4B + net PP&E $656M) = 208% (rank 123; balance sheet 2026-06-30)",
-        "Combined rank 205 → #15 of 1229"
+        "Earnings yield: EBIT $632M ÷ EV $5.3B = 12.0% (rank 85)",
+        "Return on capital (CNY): EBIT ÷ (net working capital $1.4B + net PP&E $656M) = 208% (rank 121; balance sheet 2026-06-30)",
+        "Combined rank 206 → #15 of 1227"
       ],
       "risks": [
         "Return on capital 208% reflects a very small capital base (asset-light), so it overstates the edge",
         "Financials reported in CNY",
-        "Stock down 36% in a year: high earnings yield may mean the market expects EBIT to fall"
+        "Stock down 35% in a year: high earnings yield may mean the market expects EBIT to fall"
       ],
       "analystRating": "Buy (15 analysts)",
-      "priceTarget": 12.49,
+      "priceTarget": 12.53,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/ymm/statistics/",
         "https://stockanalysis.com/stocks/ymm/financials/balance-sheet/?p=quarterly"
@@ -1267,7 +1269,7 @@
       "grades": {
         "growth": "C+",
         "value": "C-",
-        "momentum": "F",
+        "momentum": "D-",
         "profitability": "A"
       },
       "gradeInputs": {
@@ -1278,36 +1280,36 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 10.31,
-        "peg": 0.65,
+        "forwardPE": 10.39,
+        "peg": 0.66,
         "epsGrowth3yPct": 15.25,
-        "evSales": 2.76,
+        "evSales": 2.8,
         "grossMarginPct": 87.265,
         "operatingMarginPct": 33.615,
         "netMarginPct": 32.987,
         "fcfMarginPct": 51.409,
-        "chg3mPct": -9.34,
-        "chg6mPct": -3.58,
-        "chg1yPct": -35.97,
-        "relStrength1yPct": -48.98,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -9.56,
+        "chg6mPct": -2.21,
+        "chg1yPct": -36.69,
+        "relStrength1yPct": -49.01,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "The Cigna Group",
       "ticker": "CI",
       "sector": "Health Care – Medical Specialities",
-      "price": 305.78,
-      "priceDate": "2026-10-26",
-      "marketCap": "$80.8B",
-      "forwardPE": 9.62,
-      "peg": 0.91,
+      "price": 298.28,
+      "priceDate": "2026-10-27",
+      "marketCap": "$78.8B",
+      "forwardPE": 9.38,
+      "peg": 0.89,
       "alsoIn": [],
       "magicRank": 16,
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "10.5%"
+          "value": "10.7%"
         },
         {
           "label": "Return on capital",
@@ -1315,25 +1317,25 @@
         },
         {
           "label": "EY rank",
-          "value": "141 of 1229"
+          "value": "129 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "82 of 1229"
+          "value": "80 of 1227"
         },
         {
           "label": "Combined",
-          "value": "223"
+          "value": "209"
         },
         {
           "label": "EV",
-          "value": "$105.4B"
+          "value": "$103.4B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $11.0B ÷ EV $105.4B = 10.5% (rank 141)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $3.7B) = 320% (rank 82; balance sheet 2026-06-30)",
-        "Combined rank 223 → #16 of 1229"
+        "Earnings yield: EBIT $11.0B ÷ EV $103.4B = 10.7% (rank 129)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $3.7B) = 320% (rank 80; balance sheet 2026-06-30)",
+        "Combined rank 209 → #16 of 1227"
       ],
       "risks": [
         "Return on capital 320% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -1349,7 +1351,7 @@
       "grades": {
         "growth": "F",
         "value": "B-",
-        "momentum": "B-",
+        "momentum": "C+",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -1360,32 +1362,115 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 9.62,
-        "peg": 0.91,
+        "forwardPE": 9.38,
+        "peg": 0.89,
         "epsGrowth3yPct": 7.6,
         "evSales": 0.37,
         "grossMarginPct": 9.136,
         "operatingMarginPct": 3.903,
         "netMarginPct": 2.272,
         "fcfMarginPct": 3.227,
-        "chg3mPct": 5.6,
-        "chg6mPct": 10.93,
-        "chg1yPct": 1.33,
-        "relStrength1yPct": -11.68,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 2.49,
+        "chg6mPct": 5.56,
+        "chg1yPct": -3.53,
+        "relStrength1yPct": -15.85,
+        "priceAsOf": "2026-10-27"
+      }
+    },
+    {
+      "company": "Open Text Corporation",
+      "ticker": "OTEX",
+      "sector": "Technology – EDP Services",
+      "price": 27.22,
+      "priceDate": "2026-10-27",
+      "marketCap": "$6.6B",
+      "forwardPE": 6.92,
+      "peg": "n/a",
+      "alsoIn": [],
+      "magicRank": 17,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "10.4%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "344%"
+        },
+        {
+          "label": "EY rank",
+          "value": "142 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "73 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "215"
+        },
+        {
+          "label": "EV",
+          "value": "$11.6B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $1.2B ÷ EV $11.6B = 10.4% (rank 142)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $349M) = 344% (rank 73; balance sheet 2026-06-30)",
+        "Combined rank 215 → #17 of 1227"
+      ],
+      "risks": [
+        "Return on capital 344% reflects a very small capital base (asset-light), so it overstates the edge",
+        "Stock down 31% in a year: high earnings yield may mean the market expects EBIT to fall"
+      ],
+      "analystRating": "Hold (12 analysts)",
+      "priceTarget": 27.95,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/otex/statistics/",
+        "https://stockanalysis.com/stocks/otex/financials/balance-sheet/?p=quarterly"
+      ],
+      "rank": 5,
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "n/a",
+        "value": "B",
+        "momentum": "B-",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "0/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 6.92,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 2.21,
+        "grossMarginPct": 77.064,
+        "operatingMarginPct": 22.893,
+        "netMarginPct": 12.256,
+        "fcfMarginPct": 15.392,
+        "chg3mPct": 15.24,
+        "chg6mPct": 20.92,
+        "chg1yPct": -30.88,
+        "relStrength1yPct": -43.2,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Atour Lifestyle Holdings Limited",
       "ticker": "ATAT",
       "sector": "Consumer Discretionary – Hotels/Resorts",
-      "price": 32.65,
-      "priceDate": "2026-10-26",
+      "price": 32.75,
+      "priceDate": "2026-10-27",
       "marketCap": "$4.5B",
-      "forwardPE": 12.7,
+      "forwardPE": 12.73,
       "peg": 0.71,
       "alsoIn": [],
-      "magicRank": 17,
+      "magicRank": 18,
       "keyFigures": [
         {
           "label": "Earnings yield",
@@ -1397,42 +1482,42 @@
         },
         {
           "label": "EY rank",
-          "value": "124 of 1229"
+          "value": "119 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "103 of 1229"
+          "value": "102 of 1227"
         },
         {
           "label": "Combined",
-          "value": "227"
+          "value": "221"
         },
         {
           "label": "EV",
-          "value": "$3.8B"
+          "value": "$3.9B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $419M ÷ EV $3.8B = 10.9% (rank 124)",
-        "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $1.1B) = 260% (rank 103; balance sheet 2026-06-30)",
-        "Combined rank 227 → #17 of 1229"
+        "Earnings yield: EBIT $419M ÷ EV $3.9B = 10.9% (rank 119)",
+        "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $1.1B) = 260% (rank 102; balance sheet 2026-06-30)",
+        "Combined rank 221 → #18 of 1227"
       ],
       "risks": [
         "Return on capital 260% reflects a very small capital base (asset-light), so it overstates the edge",
         "Financials reported in CNY"
       ],
       "analystRating": "Strong Buy (21 analysts)",
-      "priceTarget": 49.24,
+      "priceTarget": 49.2,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/atat/statistics/",
         "https://stockanalysis.com/stocks/atat/financials/balance-sheet/?p=quarterly"
       ],
-      "rank": 5,
+      "rank": 6,
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "A-",
         "value": "D+",
-        "momentum": "D",
+        "momentum": "D-",
         "profitability": "D"
       },
       "gradeInputs": {
@@ -1443,200 +1528,36 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 12.7,
+        "forwardPE": 12.73,
         "peg": 0.71,
-        "epsGrowth3yPct": 20.61,
-        "evSales": 2.22,
+        "epsGrowth3yPct": 20.65,
+        "evSales": 2.23,
         "grossMarginPct": 43.746,
         "operatingMarginPct": 24.296,
         "netMarginPct": 16.771,
         "fcfMarginPct": 19.664,
-        "chg3mPct": 2.19,
-        "chg6mPct": -16.32,
-        "chg1yPct": -17.96,
-        "relStrength1yPct": -30.97,
-        "priceAsOf": "2026-10-26"
-      }
-    },
-    {
-      "company": "Open Text Corporation",
-      "ticker": "OTEX",
-      "sector": "Technology – EDP Services",
-      "price": 27.63,
-      "priceDate": "2026-10-26",
-      "marketCap": "$6.7B",
-      "forwardPE": 7.03,
-      "peg": "n/a",
-      "alsoIn": [],
-      "magicRank": 18,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "10.3%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "344%"
-        },
-        {
-          "label": "EY rank",
-          "value": "153 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "75 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "228"
-        },
-        {
-          "label": "EV",
-          "value": "$11.7B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $1.2B ÷ EV $11.7B = 10.3% (rank 153)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $349M) = 344% (rank 75; balance sheet 2026-06-30)",
-        "Combined rank 228 → #18 of 1229"
-      ],
-      "risks": [
-        "Return on capital 344% reflects a very small capital base (asset-light), so it overstates the edge"
-      ],
-      "analystRating": "Hold (12 analysts)",
-      "priceTarget": 27.95,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/otex/statistics/",
-        "https://stockanalysis.com/stocks/otex/financials/balance-sheet/?p=quarterly"
-      ],
-      "rank": 6,
-      "revenueGrowth": "n/a",
-      "grades": {
-        "growth": "n/a",
-        "value": "B",
-        "momentum": "B",
-        "profitability": "D+"
-      },
-      "gradeInputs": {
-        "growth": "0/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 7.03,
-        "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 2.23,
-        "grossMarginPct": 77.064,
-        "operatingMarginPct": 22.893,
-        "netMarginPct": 12.256,
-        "fcfMarginPct": 15.392,
-        "chg3mPct": 23.51,
-        "chg6mPct": 23.29,
-        "chg1yPct": -29.78,
-        "relStrength1yPct": -42.79,
-        "priceAsOf": "2026-10-26"
-      }
-    },
-    {
-      "company": "Omnicom Group Inc.",
-      "ticker": "OMC",
-      "sector": "Consumer Discretionary – Advertising",
-      "price": 79.83,
-      "priceDate": "2026-10-26",
-      "marketCap": "$21.8B",
-      "forwardPE": 7.36,
-      "peg": 0.64,
-      "alsoIn": [],
-      "magicRank": 19,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "12.2%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "168%"
-        },
-        {
-          "label": "EY rank",
-          "value": "80 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "160 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "240"
-        },
-        {
-          "label": "EV",
-          "value": "$29.3B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $3.6B ÷ EV $29.3B = 12.2% (rank 80)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $2.1B) = 168% (rank 160; balance sheet 2026-09-30)",
-        "Combined rank 240 → #19 of 1229"
-      ],
-      "risks": [
-        "No data-driven red flags; check whether recent EBIT is sustainable"
-      ],
-      "analystRating": "Buy (13 analysts)",
-      "priceTarget": 101.17,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/omc/statistics/",
-        "https://stockanalysis.com/stocks/omc/financials/balance-sheet/?p=quarterly"
-      ],
-      "rank": 7,
-      "revenueGrowth": "n/a",
-      "grades": {
-        "growth": "C",
-        "value": "A",
-        "momentum": "C",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 7.36,
-        "peg": 0.64,
-        "epsGrowth3yPct": 13.45,
-        "evSales": 1.19,
-        "grossMarginPct": 19.332,
-        "operatingMarginPct": 14.485,
-        "netMarginPct": 2.847,
-        "fcfMarginPct": 11.566,
-        "chg3mPct": 0.21,
-        "chg6mPct": 5.4,
-        "chg1yPct": 1.05,
-        "relStrength1yPct": -11.96,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -2.38,
+        "chg6mPct": -11.2,
+        "chg1yPct": -15.94,
+        "relStrength1yPct": -28.26,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Adobe Inc.",
       "ticker": "ADBE",
       "sector": "Technology – Computer Software: Prepackaged Software",
-      "price": 258.62,
-      "priceDate": "2026-10-26",
-      "marketCap": "$100.7B",
-      "forwardPE": 9.63,
-      "peg": 0.69,
+      "price": 248.36,
+      "priceDate": "2026-10-27",
+      "marketCap": "$96.7B",
+      "forwardPE": 9.25,
+      "peg": 0.66,
       "alsoIn": [],
-      "magicRank": 20,
+      "magicRank": 19,
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "9.3%"
+          "value": "9.6%"
         },
         {
           "label": "Return on capital",
@@ -1644,25 +1565,25 @@
         },
         {
           "label": "EY rank",
-          "value": "201 of 1229"
+          "value": "180 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "55 of 1229"
+          "value": "54 of 1227"
         },
         {
           "label": "Combined",
-          "value": "256"
+          "value": "234"
         },
         {
           "label": "EV",
-          "value": "$101.8B"
+          "value": "$97.8B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $9.4B ÷ EV $101.8B = 9.3% (rank 201)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $2.2B) = 438% (rank 55; balance sheet 2026-08-28)",
-        "Combined rank 256 → #20 of 1229"
+        "Earnings yield: EBIT $9.4B ÷ EV $97.8B = 9.6% (rank 180)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $2.2B) = 438% (rank 54; balance sheet 2026-08-28)",
+        "Combined rank 234 → #19 of 1227"
       ],
       "risks": [
         "Return on capital 438% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -1673,7 +1594,7 @@
         "https://stockanalysis.com/stocks/adbe/statistics/",
         "https://stockanalysis.com/stocks/adbe/financials/balance-sheet/?p=quarterly"
       ],
-      "rank": 8,
+      "rank": 7,
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "C+",
@@ -1689,36 +1610,118 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 9.63,
-        "peg": 0.69,
+        "forwardPE": 9.25,
+        "peg": 0.66,
         "epsGrowth3yPct": 14.22,
-        "evSales": 3.92,
+        "evSales": 3.77,
         "grossMarginPct": 89.253,
         "operatingMarginPct": 36.323,
         "netMarginPct": 28.048,
         "fcfMarginPct": 40.786,
-        "chg3mPct": 14.89,
-        "chg6mPct": 5.37,
-        "chg1yPct": -26.84,
-        "relStrength1yPct": -39.85,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 4.46,
+        "chg6mPct": 3.78,
+        "chg1yPct": -30.59,
+        "relStrength1yPct": -42.91,
+        "priceAsOf": "2026-10-27"
+      }
+    },
+    {
+      "company": "Omnicom Group Inc.",
+      "ticker": "OMC",
+      "sector": "Consumer Discretionary – Advertising",
+      "price": 78.73,
+      "priceDate": "2026-10-27",
+      "marketCap": "$21.5B",
+      "forwardPE": 7.26,
+      "peg": 0.63,
+      "alsoIn": [],
+      "magicRank": 20,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "12.3%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "168%"
+        },
+        {
+          "label": "EY rank",
+          "value": "79 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "159 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "238"
+        },
+        {
+          "label": "EV",
+          "value": "$29.0B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $3.6B ÷ EV $29.0B = 12.3% (rank 79)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $2.1B) = 168% (rank 159; balance sheet 2026-09-30)",
+        "Combined rank 238 → #20 of 1227"
+      ],
+      "risks": [
+        "No data-driven red flags; check whether recent EBIT is sustainable"
+      ],
+      "analystRating": "Buy (13 analysts)",
+      "priceTarget": 101.17,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/omc/statistics/",
+        "https://stockanalysis.com/stocks/omc/financials/balance-sheet/?p=quarterly"
+      ],
+      "rank": 8,
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "C",
+        "value": "A",
+        "momentum": "C",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 7.26,
+        "peg": 0.63,
+        "epsGrowth3yPct": 13.82,
+        "evSales": 1.17,
+        "grossMarginPct": 19.332,
+        "operatingMarginPct": 14.485,
+        "netMarginPct": 2.847,
+        "fcfMarginPct": 11.566,
+        "chg3mPct": -4.47,
+        "chg6mPct": 3.58,
+        "chg1yPct": -0.59,
+        "relStrength1yPct": -12.91,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "CGI Inc.",
       "ticker": "GIB",
       "sector": "Consumer Discretionary – Professional Services",
-      "price": 81.9,
-      "priceDate": "2026-10-26",
-      "marketCap": "$16.8B",
-      "forwardPE": 11.95,
+      "price": 79.63,
+      "priceDate": "2026-10-27",
+      "marketCap": "$16.3B",
+      "forwardPE": 11.64,
       "peg": "n/a",
       "alsoIn": [],
       "magicRank": 21,
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "9.7%"
+          "value": "10.0%"
         },
         {
           "label": "Return on capital",
@@ -1726,32 +1729,32 @@
         },
         {
           "label": "EY rank",
-          "value": "179 of 1229"
+          "value": "159 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "85 of 1229"
+          "value": "83 of 1227"
         },
         {
           "label": "Combined",
-          "value": "264"
+          "value": "242"
         },
         {
           "label": "EV",
-          "value": "$19.5B"
+          "value": "$19.0B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $1.9B ÷ EV $19.5B = 9.7% (rank 179)",
-        "Return on capital (CAD): EBIT ÷ (net working capital $0M + net PP&E $878M) = 307% (rank 85; balance sheet 2026-06-30)",
-        "Combined rank 264 → #21 of 1229"
+        "Earnings yield: EBIT $1.9B ÷ EV $19.0B = 10.0% (rank 159)",
+        "Return on capital (CAD): EBIT ÷ (net working capital $0M + net PP&E $878M) = 307% (rank 83; balance sheet 2026-06-30)",
+        "Combined rank 242 → #21 of 1227"
       ],
       "risks": [
         "Return on capital 307% reflects a very small capital base (asset-light), so it overstates the edge",
         "Financials reported in CAD"
       ],
       "analystRating": "Buy (15 analysts)",
-      "priceTarget": 83.13,
+      "priceTarget": 82.93,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/gib/statistics/",
         "https://stockanalysis.com/stocks/gib/financials/balance-sheet/?p=quarterly"
@@ -1760,7 +1763,7 @@
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "D-",
-        "value": "B-",
+        "value": "C+",
         "momentum": "B",
         "profitability": "F"
       },
@@ -1772,30 +1775,30 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 11.95,
+        "forwardPE": 11.64,
         "peg": null,
         "epsGrowth3yPct": 8.23,
-        "evSales": 1.68,
+        "evSales": 1.64,
         "grossMarginPct": 20.433,
         "operatingMarginPct": 16.402,
         "netMarginPct": 10.542,
         "fcfMarginPct": 15.076,
-        "chg3mPct": 23.29,
-        "chg6mPct": 12.65,
-        "chg1yPct": -6.21,
-        "relStrength1yPct": -19.22,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 14.63,
+        "chg6mPct": 8.38,
+        "chg1yPct": -9.49,
+        "relStrength1yPct": -21.81,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Altria Group Inc.",
       "ticker": "MO",
       "sector": "Health Care –  Medicinal Chemicals and Botanical Products ",
-      "price": 73.62,
-      "priceDate": "2026-10-26",
-      "marketCap": "$122.9B",
-      "forwardPE": 12.77,
-      "peg": 3.25,
+      "price": 73.49,
+      "priceDate": "2026-10-27",
+      "marketCap": "$122.7B",
+      "forwardPE": 12.74,
+      "peg": 3.24,
       "alsoIn": [],
       "magicRank": 22,
       "keyFigures": [
@@ -1809,25 +1812,25 @@
         },
         {
           "label": "EY rank",
-          "value": "239 of 1229"
+          "value": "231 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "27 of 1229"
+          "value": "26 of 1227"
         },
         {
           "label": "Combined",
-          "value": "266"
+          "value": "257"
         },
         {
           "label": "EV",
-          "value": "$145.1B"
+          "value": "$144.9B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $12.5B ÷ EV $145.1B = 8.6% (rank 239)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $1.8B) = 710% (rank 27; balance sheet 2026-06-30)",
-        "Combined rank 266 → #22 of 1229"
+        "Earnings yield: EBIT $12.5B ÷ EV $144.9B = 8.6% (rank 231)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $1.8B) = 710% (rank 26; balance sheet 2026-06-30)",
+        "Combined rank 257 → #22 of 1227"
       ],
       "risks": [
         "Return on capital 710% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -1843,7 +1846,7 @@
       "grades": {
         "growth": "F",
         "value": "F",
-        "momentum": "B-",
+        "momentum": "B",
         "profitability": "A+"
       },
       "gradeInputs": {
@@ -1854,29 +1857,29 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 12.77,
-        "peg": 3.25,
+        "forwardPE": 12.74,
+        "peg": 3.24,
         "epsGrowth3yPct": 4.06,
-        "evSales": 7.1,
+        "evSales": 7.09,
         "grossMarginPct": 72.359,
         "operatingMarginPct": 61.309,
         "netMarginPct": 38.999,
         "fcfMarginPct": 44.571,
-        "chg3mPct": 0.86,
-        "chg6mPct": 10.08,
-        "chg1yPct": 13.84,
-        "relStrength1yPct": 0.83,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 0.82,
+        "chg6mPct": 11.35,
+        "chg1yPct": 15.3,
+        "relStrength1yPct": 2.98,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Pediatrix Medical Group Inc.",
       "ticker": "MD",
       "sector": "Health Care – Hospital/Nursing Management",
-      "price": 29.04,
-      "priceDate": "2026-10-26",
+      "price": 28.84,
+      "priceDate": "2026-10-27",
       "marketCap": "$2.3B",
-      "forwardPE": 12.26,
+      "forwardPE": 12.18,
       "peg": "n/a",
       "alsoIn": [],
       "magicRank": 23,
@@ -1891,15 +1894,15 @@
         },
         {
           "label": "EY rank",
-          "value": "187 of 1229"
+          "value": "185 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "80 of 1229"
+          "value": "78 of 1227"
         },
         {
           "label": "Combined",
-          "value": "267"
+          "value": "263"
         },
         {
           "label": "EV",
@@ -1907,9 +1910,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $241M ÷ EV $2.5B = 9.6% (rank 187)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $74M) = 326% (rank 80; balance sheet 2026-06-30)",
-        "Combined rank 267 → #23 of 1229"
+        "Earnings yield: EBIT $241M ÷ EV $2.5B = 9.6% (rank 185)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $74M) = 326% (rank 78; balance sheet 2026-06-30)",
+        "Combined rank 263 → #23 of 1227"
       ],
       "risks": [
         "Return on capital 326% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -1936,201 +1939,36 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 12.26,
+        "forwardPE": 12.18,
         "peg": null,
         "epsGrowth3yPct": 7.11,
-        "evSales": 1.29,
+        "evSales": 1.28,
         "grossMarginPct": 26.236,
         "operatingMarginPct": 12.337,
         "netMarginPct": 8.962,
         "fcfMarginPct": 11.72,
-        "chg3mPct": 10.59,
-        "chg6mPct": 26.04,
-        "chg1yPct": 65.0,
-        "relStrength1yPct": 51.99,
-        "priceAsOf": "2026-10-26"
-      }
-    },
-    {
-      "company": "AerCap Holdings N.V.",
-      "ticker": "AER",
-      "sector": "Consumer Discretionary – Diversified Commercial Services",
-      "price": 147.88,
-      "priceDate": "2026-10-26",
-      "marketCap": "$22.8B",
-      "forwardPE": 8.49,
-      "peg": 0.64,
-      "alsoIn": [],
-      "magicRank": 24,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "8.0%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "14139%"
-        },
-        {
-          "label": "EY rank",
-          "value": "277 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "1 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "278"
-        },
-        {
-          "label": "EV",
-          "value": "$64.0B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $5.1B ÷ EV $64.0B = 8.0% (rank 277)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $36M) = 14139% (rank 1; balance sheet 2026-06-30)",
-        "Combined rank 278 → #24 of 1229"
-      ],
-      "risks": [
-        "Return on capital 14139% reflects a very small capital base (asset-light), so it overstates the edge"
-      ],
-      "analystRating": "Strong Buy (10 analysts)",
-      "priceTarget": 179.8,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/aer/statistics/",
-        "https://stockanalysis.com/stocks/aer/financials/balance-sheet/?p=quarterly"
-      ],
-      "rank": 12,
-      "revenueGrowth": "n/a",
-      "grades": {
-        "growth": "F",
-        "value": "C",
-        "momentum": "C+",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 8.49,
-        "peg": 0.64,
-        "epsGrowth3yPct": 7.55,
-        "evSales": 7.14,
-        "grossMarginPct": 62.824,
-        "operatingMarginPct": 57.047,
-        "netMarginPct": 37.854,
-        "fcfMarginPct": -3.43,
-        "chg3mPct": -2.26,
-        "chg6mPct": 7.1,
-        "chg1yPct": 21.31,
-        "relStrength1yPct": 8.3,
-        "priceAsOf": "2026-10-26"
-      }
-    },
-    {
-      "company": "Grupo Aeroportuario del Centro Norte S.A.B. de C.V.",
-      "ticker": "OMAB",
-      "sector": "Consumer Discretionary – Aerospace",
-      "price": 98.99,
-      "priceDate": "2026-10-26",
-      "marketCap": "$4.8B",
-      "forwardPE": 14.56,
-      "peg": "n/a",
-      "alsoIn": [],
-      "magicRank": 25,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "9.5%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "283%"
-        },
-        {
-          "label": "EY rank",
-          "value": "188 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "94 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "282"
-        },
-        {
-          "label": "EV",
-          "value": "$5.4B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $515M ÷ EV $5.4B = 9.5% (rank 188)",
-        "Return on capital (MXN): EBIT ÷ (net working capital $0M + net PP&E $3.2B) = 283% (rank 94; balance sheet 2026-06-30)",
-        "Combined rank 282 → #25 of 1229"
-      ],
-      "risks": [
-        "Return on capital 283% reflects a very small capital base (asset-light), so it overstates the edge",
-        "Financials reported in MXN"
-      ],
-      "analystRating": "Buy (7 analysts)",
-      "priceTarget": 116.41,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/omab/statistics/",
-        "https://stockanalysis.com/stocks/omab/financials/balance-sheet/?p=quarterly"
-      ],
-      "rank": 13,
-      "revenueGrowth": "n/a",
-      "grades": {
-        "growth": "B-",
-        "value": "F",
-        "momentum": "D",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 14.56,
-        "peg": null,
-        "epsGrowth3yPct": 15.52,
-        "evSales": 5.78,
-        "grossMarginPct": 67.664,
-        "operatingMarginPct": 55.153,
-        "netMarginPct": 33.208,
-        "fcfMarginPct": 42.755,
-        "chg3mPct": -4.29,
-        "chg6mPct": -15.04,
-        "chg1yPct": -3.62,
-        "relStrength1yPct": -16.63,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 10.33,
+        "chg6mPct": 23.3,
+        "chg1yPct": 65.37,
+        "relStrength1yPct": 53.05,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Booking Holdings Inc.",
       "ticker": "BKNG",
       "sector": "Consumer Discretionary – Transportation Services",
-      "price": 153.14,
-      "priceDate": "2026-10-26",
-      "marketCap": "$115.1B",
-      "forwardPE": 13.77,
-      "peg": 0.79,
+      "price": 150.14,
+      "priceDate": "2026-10-27",
+      "marketCap": "$112.8B",
+      "forwardPE": 13.5,
+      "peg": 0.78,
       "alsoIn": [],
-      "magicRank": 26,
+      "magicRank": 24,
       "keyFigures": [
         {
           "label": "Earnings yield",
-          "value": "8.3%"
+          "value": "8.5%"
         },
         {
           "label": "Return on capital",
@@ -2138,25 +1976,25 @@
         },
         {
           "label": "EY rank",
-          "value": "257 of 1229"
+          "value": "247 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "25 of 1229"
+          "value": "24 of 1227"
         },
         {
           "label": "Combined",
-          "value": "282"
+          "value": "271"
         },
         {
           "label": "EV",
-          "value": "$118.5B"
+          "value": "$116.2B"
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $9.8B ÷ EV $118.5B = 8.3% (rank 257)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $1.4B) = 723% (rank 25; balance sheet 2026-06-30)",
-        "Combined rank 282 → #26 of 1229"
+        "Earnings yield: EBIT $9.8B ÷ EV $116.2B = 8.5% (rank 247)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $1.4B) = 723% (rank 24; balance sheet 2026-06-30)",
+        "Combined rank 271 → #24 of 1227"
       ],
       "risks": [
         "Return on capital 723% reflects a very small capital base (asset-light), so it overstates the edge"
@@ -2167,7 +2005,7 @@
         "https://stockanalysis.com/stocks/bkng/statistics/",
         "https://stockanalysis.com/stocks/bkng/financials/balance-sheet/?p=quarterly"
       ],
-      "rank": 14,
+      "rank": 12,
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "B",
@@ -2183,32 +2021,32 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 13.77,
-        "peg": 0.79,
-        "epsGrowth3yPct": 16.6,
-        "evSales": 4.2,
+        "forwardPE": 13.5,
+        "peg": 0.78,
+        "epsGrowth3yPct": 16.57,
+        "evSales": 4.12,
         "grossMarginPct": 87.228,
         "operatingMarginPct": 34.85,
         "netMarginPct": 25.527,
         "fcfMarginPct": 33.777,
-        "chg3mPct": -13.7,
-        "chg6mPct": -15.04,
-        "chg1yPct": -25.6,
-        "relStrength1yPct": -38.61,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": -19.62,
+        "chg6mPct": -15.42,
+        "chg1yPct": -28.56,
+        "relStrength1yPct": -40.88,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "KANZHUN LIMITED American Depository Shares",
       "ticker": "BZ",
       "sector": "Technology – Computer Software: Programming Data Processing",
-      "price": 16.66,
-      "priceDate": "2026-10-26",
+      "price": 16.65,
+      "priceDate": "2026-10-27",
       "marketCap": "$7.4B",
-      "forwardPE": 11.61,
+      "forwardPE": 11.59,
       "peg": 1.24,
       "alsoIn": [],
-      "magicRank": 27,
+      "magicRank": 25,
       "keyFigures": [
         {
           "label": "Earnings yield",
@@ -2220,15 +2058,15 @@
         },
         {
           "label": "EY rank",
-          "value": "159 of 1229"
+          "value": "149 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "126 of 1229"
+          "value": "124 of 1227"
         },
         {
           "label": "Combined",
-          "value": "285"
+          "value": "273"
         },
         {
           "label": "EV",
@@ -2236,9 +2074,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $446M ÷ EV $4.4B = 10.2% (rank 159)",
-        "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $1.5B) = 204% (rank 126; balance sheet 2026-06-30)",
-        "Combined rank 285 → #27 of 1229"
+        "Earnings yield: EBIT $446M ÷ EV $4.4B = 10.2% (rank 149)",
+        "Return on capital (CNY): EBIT ÷ (net working capital $0M + net PP&E $1.5B) = 204% (rank 124; balance sheet 2026-06-30)",
+        "Combined rank 273 → #25 of 1227"
       ],
       "risks": [
         "Return on capital 204% reflects a very small capital base (asset-light), so it overstates the edge",
@@ -2250,7 +2088,7 @@
         "https://stockanalysis.com/stocks/bz/statistics/",
         "https://stockanalysis.com/stocks/bz/financials/balance-sheet/?p=quarterly"
       ],
-      "rank": 15,
+      "rank": 13,
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "D",
@@ -2266,7 +2104,7 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 11.61,
+        "forwardPE": 11.59,
         "peg": 1.24,
         "epsGrowth3yPct": 10.62,
         "evSales": 3.42,
@@ -2274,24 +2112,353 @@
         "operatingMarginPct": 34.801,
         "netMarginPct": 52.848,
         "fcfMarginPct": 50.929,
-        "chg3mPct": 8.04,
-        "chg6mPct": 22.32,
-        "chg1yPct": -24.75,
-        "relStrength1yPct": -37.76,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 5.85,
+        "chg6mPct": 22.07,
+        "chg1yPct": -25.6,
+        "relStrength1yPct": -37.92,
+        "priceAsOf": "2026-10-27"
+      }
+    },
+    {
+      "company": "AerCap Holdings N.V.",
+      "ticker": "AER",
+      "sector": "Consumer Discretionary – Diversified Commercial Services",
+      "price": 150.05,
+      "priceDate": "2026-10-27",
+      "marketCap": "$23.2B",
+      "forwardPE": 8.61,
+      "peg": 0.65,
+      "alsoIn": [],
+      "magicRank": 26,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "8.0%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "14139%"
+        },
+        {
+          "label": "EY rank",
+          "value": "275 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "1 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "276"
+        },
+        {
+          "label": "EV",
+          "value": "$64.3B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $5.1B ÷ EV $64.3B = 8.0% (rank 275)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $36M) = 14139% (rank 1; balance sheet 2026-06-30)",
+        "Combined rank 276 → #26 of 1227"
+      ],
+      "risks": [
+        "Return on capital 14139% reflects a very small capital base (asset-light), so it overstates the edge"
+      ],
+      "analystRating": "Strong Buy (10 analysts)",
+      "priceTarget": 179.8,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/aer/statistics/",
+        "https://stockanalysis.com/stocks/aer/financials/balance-sheet/?p=quarterly"
+      ],
+      "rank": 14,
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "F",
+        "value": "C-",
+        "momentum": "B-",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 8.61,
+        "peg": 0.65,
+        "epsGrowth3yPct": 7.55,
+        "evSales": 7.17,
+        "grossMarginPct": 62.824,
+        "operatingMarginPct": 57.047,
+        "netMarginPct": 37.854,
+        "fcfMarginPct": -3.43,
+        "chg3mPct": -0.89,
+        "chg6mPct": 8.22,
+        "chg1yPct": 23.95,
+        "relStrength1yPct": 11.63,
+        "priceAsOf": "2026-10-27"
+      }
+    },
+    {
+      "company": "Match Group Inc.",
+      "ticker": "MTCH",
+      "sector": "Technology – Computer Software: Programming Data Processing",
+      "price": 43.69,
+      "priceDate": "2026-10-27",
+      "marketCap": "$10.0B",
+      "forwardPE": 14.48,
+      "peg": 0.8,
+      "alsoIn": [],
+      "magicRank": 27,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "8.4%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "726%"
+        },
+        {
+          "label": "EY rank",
+          "value": "254 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "23 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "277"
+        },
+        {
+          "label": "EV",
+          "value": "$13.1B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $1.1B ÷ EV $13.1B = 8.4% (rank 254)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $146M) = 726% (rank 23; balance sheet 2026-06-30)",
+        "Combined rank 277 → #27 of 1227"
+      ],
+      "risks": [
+        "Return on capital 726% reflects a very small capital base (asset-light), so it overstates the edge"
+      ],
+      "analystRating": "Buy (20 analysts)",
+      "priceTarget": 43.29,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/mtch/statistics/",
+        "https://stockanalysis.com/stocks/mtch/financials/balance-sheet/?p=quarterly"
+      ],
+      "rank": 15,
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "C-",
+        "value": "F",
+        "momentum": "A",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 14.48,
+        "peg": 0.8,
+        "epsGrowth3yPct": 12.81,
+        "evSales": 3.74,
+        "grossMarginPct": 74.872,
+        "operatingMarginPct": 31.273,
+        "netMarginPct": 20.169,
+        "fcfMarginPct": 32.526,
+        "chg3mPct": 12.6,
+        "chg6mPct": 18.34,
+        "chg1yPct": 33.12,
+        "relStrength1yPct": 20.8,
+        "priceAsOf": "2026-10-27"
+      }
+    },
+    {
+      "company": "H&R Block Inc.",
+      "ticker": "HRB",
+      "sector": "Consumer Discretionary – Other Consumer Services",
+      "price": 47.98,
+      "priceDate": "2026-10-27",
+      "marketCap": "$5.9B",
+      "forwardPE": 7.81,
+      "peg": 0.62,
+      "alsoIn": [],
+      "magicRank": 28,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "12.9%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "123%"
+        },
+        {
+          "label": "EY rank",
+          "value": "65 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "216 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "281"
+        },
+        {
+          "label": "EV",
+          "value": "$7.1B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $908M ÷ EV $7.1B = 12.9% (rank 65)",
+        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $739M) = 123% (rank 216; balance sheet 2026-06-30)",
+        "Combined rank 281 → #28 of 1227"
+      ],
+      "risks": [
+        "No data-driven red flags; check whether recent EBIT is sustainable"
+      ],
+      "analystRating": "Hold (5 analysts)",
+      "priceTarget": 51.67,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/hrb/statistics/",
+        "https://stockanalysis.com/stocks/hrb/financials/balance-sheet/?p=quarterly"
+      ],
+      "rank": 16,
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "B-",
+        "value": "A-",
+        "momentum": "B+",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 7.81,
+        "peg": 0.62,
+        "epsGrowth3yPct": 15.68,
+        "evSales": 1.79,
+        "grossMarginPct": 44.33,
+        "operatingMarginPct": 23.006,
+        "netMarginPct": 18.594,
+        "fcfMarginPct": 19.164,
+        "chg3mPct": 13.35,
+        "chg6mPct": 56.59,
+        "chg1yPct": -8.49,
+        "relStrength1yPct": -20.81,
+        "priceAsOf": "2026-10-27"
+      }
+    },
+    {
+      "company": "Grupo Aeroportuario del Centro Norte S.A.B. de C.V.",
+      "ticker": "OMAB",
+      "sector": "Consumer Discretionary – Aerospace",
+      "price": 99.06,
+      "priceDate": "2026-10-27",
+      "marketCap": "$4.8B",
+      "forwardPE": 14.68,
+      "peg": "n/a",
+      "alsoIn": [],
+      "magicRank": 29,
+      "keyFigures": [
+        {
+          "label": "Earnings yield",
+          "value": "9.4%"
+        },
+        {
+          "label": "Return on capital",
+          "value": "291%"
+        },
+        {
+          "label": "EY rank",
+          "value": "192 of 1227"
+        },
+        {
+          "label": "ROC rank",
+          "value": "89 of 1227"
+        },
+        {
+          "label": "Combined",
+          "value": "281"
+        },
+        {
+          "label": "EV",
+          "value": "$5.4B"
+        }
+      ],
+      "drivers": [
+        "Earnings yield: EBIT $510M ÷ EV $5.4B = 9.4% (rank 192)",
+        "Return on capital (MXN): EBIT ÷ (net working capital $0M + net PP&E $3.2B) = 291% (rank 89; balance sheet 2026-09-30)",
+        "Combined rank 281 → #29 of 1227"
+      ],
+      "risks": [
+        "Return on capital 291% reflects a very small capital base (asset-light), so it overstates the edge",
+        "Financials reported in MXN"
+      ],
+      "analystRating": "Buy (7 analysts)",
+      "priceTarget": 116.41,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/omab/statistics/",
+        "https://stockanalysis.com/stocks/omab/financials/balance-sheet/?p=quarterly"
+      ],
+      "rank": 17,
+      "revenueGrowth": "n/a",
+      "grades": {
+        "growth": "B-",
+        "value": "F",
+        "momentum": "D+",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 14.68,
+        "peg": null,
+        "epsGrowth3yPct": 15.52,
+        "evSales": 5.67,
+        "grossMarginPct": 65.632,
+        "operatingMarginPct": 53.29,
+        "netMarginPct": 31.668,
+        "fcfMarginPct": 42.179,
+        "chg3mPct": -5.48,
+        "chg6mPct": -10.79,
+        "chg1yPct": -3.38,
+        "relStrength1yPct": -15.7,
+        "priceAsOf": "2026-10-27"
       }
     },
     {
       "company": "Bausch Health Companies Inc.",
       "ticker": "BHC",
       "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
-      "price": 6.35,
-      "priceDate": "2026-10-26",
+      "price": 6.31,
+      "priceDate": "2026-10-27",
       "marketCap": "$2.4B",
-      "forwardPE": 1.44,
+      "forwardPE": 1.43,
       "peg": "n/a",
       "alsoIn": [],
-      "magicRank": 28,
+      "magicRank": 30,
       "keyFigures": [
         {
           "label": "Earnings yield",
@@ -2303,15 +2470,15 @@
         },
         {
           "label": "EY rank",
-          "value": "65 of 1229"
+          "value": "67 of 1227"
         },
         {
           "label": "ROC rank",
-          "value": "221 of 1229"
+          "value": "217 of 1227"
         },
         {
           "label": "Combined",
-          "value": "286"
+          "value": "284"
         },
         {
           "label": "EV",
@@ -2319,9 +2486,9 @@
         }
       ],
       "drivers": [
-        "Earnings yield: EBIT $2.7B ÷ EV $21.3B = 12.8% (rank 65)",
-        "Return on capital: EBIT ÷ (net working capital $153M + net PP&E $2.1B) = 122% (rank 221; balance sheet 2026-06-30)",
-        "Combined rank 286 → #28 of 1229"
+        "Earnings yield: EBIT $2.7B ÷ EV $21.3B = 12.8% (rank 67)",
+        "Return on capital: EBIT ÷ (net working capital $153M + net PP&E $2.1B) = 122% (rank 217; balance sheet 2026-06-30)",
+        "Combined rank 284 → #30 of 1227"
       ],
       "risks": [
         "No data-driven red flags; check whether recent EBIT is sustainable"
@@ -2332,7 +2499,7 @@
         "https://stockanalysis.com/stocks/bhc/statistics/",
         "https://stockanalysis.com/stocks/bhc/financials/balance-sheet/?p=quarterly"
       ],
-      "rank": 16,
+      "rank": 18,
       "revenueGrowth": "n/a",
       "grades": {
         "growth": "F",
@@ -2348,189 +2515,25 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 1.44,
+        "forwardPE": 1.43,
         "peg": null,
         "epsGrowth3yPct": -3.62,
-        "evSales": 1.97,
+        "evSales": 1.96,
         "grossMarginPct": 71.823,
         "operatingMarginPct": 25.21,
         "netMarginPct": -10.117,
         "fcfMarginPct": 13.185,
-        "chg3mPct": 43.34,
-        "chg6mPct": 12.79,
-        "chg1yPct": 2.42,
-        "relStrength1yPct": -10.59,
-        "priceAsOf": "2026-10-26"
-      }
-    },
-    {
-      "company": "Match Group Inc.",
-      "ticker": "MTCH",
-      "sector": "Technology – Computer Software: Programming Data Processing",
-      "price": 45.21,
-      "priceDate": "2026-10-26",
-      "marketCap": "$10.4B",
-      "forwardPE": 14.99,
-      "peg": 0.82,
-      "alsoIn": [],
-      "magicRank": 29,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "8.2%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "726%"
-        },
-        {
-          "label": "EY rank",
-          "value": "270 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "24 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "294"
-        },
-        {
-          "label": "EV",
-          "value": "$13.5B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $1.1B ÷ EV $13.5B = 8.2% (rank 270)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $146M) = 726% (rank 24; balance sheet 2026-06-30)",
-        "Combined rank 294 → #29 of 1229"
-      ],
-      "risks": [
-        "Return on capital 726% reflects a very small capital base (asset-light), so it overstates the edge"
-      ],
-      "analystRating": "Buy (20 analysts)",
-      "priceTarget": 43.29,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/mtch/statistics/",
-        "https://stockanalysis.com/stocks/mtch/financials/balance-sheet/?p=quarterly"
-      ],
-      "rank": 17,
-      "revenueGrowth": "n/a",
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 14.99,
-        "peg": 0.82,
-        "epsGrowth3yPct": 12.81,
-        "evSales": 3.84,
-        "grossMarginPct": 74.872,
-        "operatingMarginPct": 31.273,
-        "netMarginPct": 20.169,
-        "fcfMarginPct": 32.526,
-        "chg3mPct": 19.26,
-        "chg6mPct": 23.02,
-        "chg1yPct": 38.6,
-        "relStrength1yPct": 25.59,
-        "priceAsOf": "2026-10-26"
-      },
-      "grades": {
-        "growth": "C-",
-        "value": "F",
-        "momentum": "A",
-        "profitability": "C"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      }
-    },
-    {
-      "company": "H&R Block Inc.",
-      "ticker": "HRB",
-      "sector": "Consumer Discretionary – Other Consumer Services",
-      "price": 50.06,
-      "priceDate": "2026-10-26",
-      "marketCap": "$6.2B",
-      "forwardPE": 8.14,
-      "peg": 0.65,
-      "alsoIn": [],
-      "magicRank": 30,
-      "keyFigures": [
-        {
-          "label": "Earnings yield",
-          "value": "12.4%"
-        },
-        {
-          "label": "Return on capital",
-          "value": "123%"
-        },
-        {
-          "label": "EY rank",
-          "value": "75 of 1229"
-        },
-        {
-          "label": "ROC rank",
-          "value": "220 of 1229"
-        },
-        {
-          "label": "Combined",
-          "value": "295"
-        },
-        {
-          "label": "EV",
-          "value": "$7.3B"
-        }
-      ],
-      "drivers": [
-        "Earnings yield: EBIT $908M ÷ EV $7.3B = 12.4% (rank 75)",
-        "Return on capital: EBIT ÷ (net working capital $0M + net PP&E $739M) = 123% (rank 220; balance sheet 2026-06-30)",
-        "Combined rank 295 → #30 of 1229"
-      ],
-      "risks": [
-        "No data-driven red flags; check whether recent EBIT is sustainable"
-      ],
-      "analystRating": "Hold (5 analysts)",
-      "priceTarget": 51.67,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/hrb/statistics/",
-        "https://stockanalysis.com/stocks/hrb/financials/balance-sheet/?p=quarterly"
-      ],
-      "rank": 18,
-      "revenueGrowth": "n/a",
-      "grades": {
-        "growth": "B-",
-        "value": "B",
-        "momentum": "A-",
-        "profitability": "D-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 8.14,
-        "peg": 0.65,
-        "epsGrowth3yPct": 15.68,
-        "evSales": 1.85,
-        "grossMarginPct": 44.33,
-        "operatingMarginPct": 23.006,
-        "netMarginPct": 18.594,
-        "fcfMarginPct": 19.164,
-        "chg3mPct": 22.61,
-        "chg6mPct": 65.43,
-        "chg1yPct": -4.12,
-        "relStrength1yPct": -17.13,
-        "priceAsOf": "2026-10-26"
+        "chg3mPct": 40.85,
+        "chg6mPct": 13.08,
+        "chg1yPct": 1.77,
+        "relStrength1yPct": -10.55,
+        "priceAsOf": "2026-10-27"
       }
     }
   ],
   "grading": {
-    "asOf": "2026-10-27",
-    "spy1yPct": 13.01,
+    "asOf": "2026-10-28",
+    "spy1yPct": 12.32,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
