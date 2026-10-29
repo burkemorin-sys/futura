@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-28",
-  "priceDate": "2026-10-27",
+  "lastUpdated": "2026-10-29",
+  "priceDate": "2026-10-28",
   "title": "Piotroski",
-  "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1915 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (383 stocks, P/B ≤ 1.51) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
+  "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1914 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (382 stocks, P/B ≤ 1.50) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
   "rubric": [
     {
       "component": "ROA positive",
@@ -51,26 +51,26 @@
       "how": "Revenue ÷ start-of-year total assets above last year's"
     }
   ],
-  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 1, 8: 17, 7: 43, 6: 57, 5: 127, 4: 76, 3: 44, 2: 12, 1: 3. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
+  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 2, 8: 17, 7: 43, 6: 57, 5: 119, 4: 77, 3: 48, 2: 12, 1: 4. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
   "universe": {
-    "listed": 7010,
+    "listed": 6983,
     "screened": 2024,
-    "positiveBook": 1915,
-    "quintile": 383,
-    "pbCutoff": 1.514,
-    "scored": 380,
-    "picks8plus": 18,
+    "positiveBook": 1914,
+    "quintile": 382,
+    "pbCutoff": 1.505,
+    "scored": 379,
+    "picks8plus": 19,
     "distribution": {
       "0": 0,
-      "1": 3,
+      "1": 4,
       "2": 12,
-      "3": 44,
-      "4": 76,
-      "5": 127,
+      "3": 48,
+      "4": 77,
+      "5": 119,
       "6": 57,
       "7": 43,
       "8": 17,
-      "9": 1
+      "9": 2
     }
   },
   "excluded": {
@@ -93,10 +93,10 @@
       "company": "Nutrien Ltd.",
       "ticker": "NTR",
       "sector": "Industrials – Agricultural Chemicals",
-      "price": 69.37,
-      "priceDate": "2026-10-27",
-      "marketCap": "$33.1B",
-      "forwardPE": 13.47,
+      "price": 69.07,
+      "priceDate": "2026-10-28",
+      "marketCap": "$32.8B",
+      "forwardPE": 13.32,
       "peg": "n/a",
       "revenueGrowth": "+3.7% YoY (FY)",
       "score": 9,
@@ -111,7 +111,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.28"
+          "value": "1.26"
         },
         {
           "label": "ROA",
@@ -182,7 +182,7 @@
         "No data-driven red flags; check why the market prices it below peers"
       ],
       "analystRating": "Buy (26 analysts)",
-      "priceTarget": 77.31,
+      "priceTarget": 77.13,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/ntr/financials/",
         "https://stockanalysis.com/stocks/ntr/statistics/"
@@ -190,8 +190,8 @@
       "grades": {
         "growth": "D",
         "value": "D-",
-        "momentum": "B",
-        "profitability": "C-"
+        "momentum": "B-",
+        "profitability": "D+"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -201,19 +201,144 @@
       },
       "metrics": {
         "revenueGrowthPct": 3.7,
-        "forwardPE": 13.47,
+        "forwardPE": 13.32,
         "peg": null,
-        "epsGrowth3yPct": 1.07,
-        "evSales": 1.65,
+        "epsGrowth3yPct": 1.2,
+        "evSales": 1.64,
         "grossMarginPct": 32.062,
         "operatingMarginPct": 13.5,
         "netMarginPct": 8.722,
         "fcfMarginPct": 8.183,
-        "chg3mPct": 2.92,
-        "chg6mPct": -4.15,
-        "chg1yPct": 20.62,
-        "relStrength1yPct": 8.3,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -0.56,
+        "chg6mPct": -5.27,
+        "chg1yPct": 21.15,
+        "relStrength1yPct": 8.74,
+        "priceAsOf": "2026-10-28"
+      }
+    },
+    {
+      "company": "AerCap Holdings N.V.",
+      "ticker": "AER",
+      "sector": "Consumer Discretionary – Diversified Commercial Services",
+      "price": 155.48,
+      "priceDate": "2026-10-28",
+      "marketCap": "$24.0B",
+      "forwardPE": 8.47,
+      "peg": 0.64,
+      "revenueGrowth": "+6.5% YoY (FY)",
+      "score": 9,
+      "scoreMax": 9,
+      "alsoIn": [],
+      "keyFigures": [
+        {
+          "label": "F-Score",
+          "value": "9/9"
+        },
+        {
+          "label": "Price / book",
+          "value": "1.27"
+        },
+        {
+          "label": "ROA",
+          "value": "5.2%"
+        },
+        {
+          "label": "Fiscal year",
+          "value": "2025-12-31"
+        }
+      ],
+      "checklist": [
+        {
+          "key": "roa",
+          "label": "ROA positive",
+          "met": true,
+          "detail": "ROA 5.2%"
+        },
+        {
+          "key": "cfo",
+          "label": "Operating cash flow positive",
+          "met": true,
+          "detail": "Operating cash flow $5.9B"
+        },
+        {
+          "key": "droa",
+          "label": "ROA improving",
+          "met": true,
+          "detail": "ROA 5.2% vs 2.9% prior year"
+        },
+        {
+          "key": "accrual",
+          "label": "Cash flow > net income",
+          "met": true,
+          "detail": "Cash flow $5.9B vs net income $3.8B"
+        },
+        {
+          "key": "lev",
+          "label": "Long-term debt / assets falling",
+          "met": true,
+          "detail": "LT debt / assets 60.0% vs 60.6%"
+        },
+        {
+          "key": "cr",
+          "label": "Current ratio rising",
+          "met": true,
+          "detail": "Current ratio 1.45 vs 1.34"
+        },
+        {
+          "key": "shares",
+          "label": "No new shares issued",
+          "met": true,
+          "detail": "Shares 149M vs 163M"
+        },
+        {
+          "key": "gm",
+          "label": "Gross margin rising",
+          "met": true,
+          "detail": "Gross margin 61.3% vs 57.6%"
+        },
+        {
+          "key": "at",
+          "label": "Asset turnover rising",
+          "met": true,
+          "detail": "Asset turnover 0.12 vs 0.11"
+        }
+      ],
+      "risks": [
+        "No data-driven red flags; check why the market prices it below peers"
+      ],
+      "analystRating": "Strong Buy (10 analysts)",
+      "priceTarget": 184.9,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/aer/financials/",
+        "https://stockanalysis.com/stocks/aer/statistics/"
+      ],
+      "grades": {
+        "growth": "C",
+        "value": "D+",
+        "momentum": "A-",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 6.5,
+        "forwardPE": 8.47,
+        "peg": 0.64,
+        "epsGrowth3yPct": 9.42,
+        "evSales": 7.13,
+        "grossMarginPct": 63.018,
+        "operatingMarginPct": 57.357,
+        "netMarginPct": 34.465,
+        "fcfMarginPct": -8.21,
+        "chg3mPct": 0.9,
+        "chg6mPct": 13.38,
+        "chg1yPct": 28.5,
+        "relStrength1yPct": 16.09,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
@@ -221,9 +346,9 @@
       "ticker": "KEP",
       "sector": "Utilities – Electric Utilities: Central",
       "price": 10.48,
-      "priceDate": "2026-10-27",
-      "marketCap": "$13.5B",
-      "forwardPE": 2.76,
+      "priceDate": "2026-10-28",
+      "marketCap": "$13.7B",
+      "forwardPE": 2.79,
       "peg": "n/a",
       "revenueGrowth": "+4.3% YoY (FY)",
       "score": 8,
@@ -238,7 +363,7 @@
         },
         {
           "label": "Price / book",
-          "value": "0.40"
+          "value": "0.41"
         },
         {
           "label": "ROA",
@@ -307,8 +432,8 @@
       ],
       "risks": [
         "Financials reported in KRW",
-        "Very low P/B (0.40): the market may expect lower book value (write-downs)",
-        "Stock down 31% in a year"
+        "Very low P/B (0.41): the market may expect lower book value (write-downs)",
+        "Stock down 30% in a year"
       ],
       "analystRating": "n/a (0 analysts)",
       "priceTarget": null,
@@ -318,7 +443,7 @@
       ],
       "grades": {
         "growth": "D-",
-        "value": "B+",
+        "value": "A-",
         "momentum": "F",
         "profitability": "F"
       },
@@ -330,29 +455,29 @@
       },
       "metrics": {
         "revenueGrowthPct": 4.3,
-        "forwardPE": 2.76,
+        "forwardPE": 2.79,
         "peg": null,
         "epsGrowth3yPct": -0.03,
-        "evSales": 1.79,
+        "evSales": 1.77,
         "grossMarginPct": 15.972,
         "operatingMarginPct": 12.751,
         "netMarginPct": 8.035,
         "fcfMarginPct": 1.634,
-        "chg3mPct": -14.17,
-        "chg6mPct": -32.17,
-        "chg1yPct": -30.46,
-        "relStrength1yPct": -42.78,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -9.97,
+        "chg6mPct": -29.95,
+        "chg1yPct": -32.69,
+        "relStrength1yPct": -45.1,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "People Incorporated",
       "ticker": "PPLI",
       "sector": "Technology – Computer Software: Programming Data Processing",
-      "price": 37.29,
-      "priceDate": "2026-10-27",
-      "marketCap": "$2.8B",
-      "forwardPE": 84.06,
+      "price": 35.75,
+      "priceDate": "2026-10-28",
+      "marketCap": "$2.7B",
+      "forwardPE": 80.59,
       "peg": "n/a",
       "revenueGrowth": "-8.7% YoY (FY)",
       "score": 8,
@@ -367,7 +492,7 @@
         },
         {
           "label": "Price / book",
-          "value": "0.55"
+          "value": "0.52"
         },
         {
           "label": "ROA",
@@ -435,7 +560,7 @@
         }
       ],
       "risks": [
-        "Very low P/B (0.55): the market may expect lower book value (write-downs)"
+        "Very low P/B (0.52): the market may expect lower book value (write-downs)"
       ],
       "analystRating": "Buy (12 analysts)",
       "priceTarget": 56.73,
@@ -446,7 +571,7 @@
       "grades": {
         "growth": "F",
         "value": "F",
-        "momentum": "C-",
+        "momentum": "D",
         "profitability": "C"
       },
       "gradeInputs": {
@@ -457,30 +582,30 @@
       },
       "metrics": {
         "revenueGrowthPct": -8.7,
-        "forwardPE": 84.06,
+        "forwardPE": 80.59,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 1.29,
+        "evSales": 1.24,
         "grossMarginPct": 66.347,
         "operatingMarginPct": 2.088,
         "netMarginPct": 14.123,
         "fcfMarginPct": 3.424,
-        "chg3mPct": -11.93,
-        "chg6mPct": -16.39,
-        "chg1yPct": 10.82,
-        "relStrength1yPct": -1.5,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -15.06,
+        "chg6mPct": -18.9,
+        "chg1yPct": 8.79,
+        "relStrength1yPct": -3.62,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "PagSeguro Digital Ltd. Class A",
       "ticker": "PAGS",
       "sector": "Technology – EDP Services",
-      "price": 8.4,
-      "priceDate": "2026-10-27",
-      "marketCap": "$2.3B",
-      "forwardPE": 4.9,
-      "peg": 0.46,
+      "price": 8.15,
+      "priceDate": "2026-10-28",
+      "marketCap": "$2.2B",
+      "forwardPE": 4.77,
+      "peg": 0.45,
       "revenueGrowth": "+7.7% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
@@ -494,7 +619,7 @@
         },
         {
           "label": "Price / book",
-          "value": "0.80"
+          "value": "0.78"
         },
         {
           "label": "ROA",
@@ -571,7 +696,7 @@
         "https://stockanalysis.com/stocks/pags/statistics/"
       ],
       "grades": {
-        "growth": "B-",
+        "growth": "C",
         "value": "A+",
         "momentum": "D-",
         "profitability": "A+"
@@ -584,29 +709,29 @@
       },
       "metrics": {
         "revenueGrowthPct": 7.7,
-        "forwardPE": 4.9,
-        "peg": 0.46,
+        "forwardPE": 4.77,
+        "peg": 0.45,
         "epsGrowth3yPct": 8.76,
-        "evSales": 0.63,
+        "evSales": 0.61,
         "grossMarginPct": 51.472,
         "operatingMarginPct": 37.761,
         "netMarginPct": 10.862,
         "fcfMarginPct": 25.795,
-        "chg3mPct": -10.45,
-        "chg6mPct": -18.05,
-        "chg1yPct": -15.58,
-        "relStrength1yPct": -27.9,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -15.19,
+        "chg6mPct": -19.39,
+        "chg1yPct": -15.81,
+        "relStrength1yPct": -28.22,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Aptiv PLC",
       "ticker": "APTV",
       "sector": "Consumer Discretionary – Auto Parts:O.E.M.",
-      "price": 43.65,
-      "priceDate": "2026-10-27",
-      "marketCap": "$9.1B",
-      "forwardPE": 7.25,
+      "price": 44.08,
+      "priceDate": "2026-10-28",
+      "marketCap": "$9.2B",
+      "forwardPE": 7.33,
       "peg": "n/a",
       "revenueGrowth": "+3.5% YoY (FY)",
       "score": 8,
@@ -621,7 +746,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.04"
+          "value": "1.05"
         },
         {
           "label": "ROA",
@@ -711,30 +836,30 @@
       },
       "metrics": {
         "revenueGrowthPct": 3.5,
-        "forwardPE": 7.25,
+        "forwardPE": 7.33,
         "peg": null,
         "epsGrowth3yPct": -1.4,
-        "evSales": 0.68,
+        "evSales": 0.69,
         "grossMarginPct": 19.251,
         "operatingMarginPct": 10.981,
         "netMarginPct": 1.072,
         "fcfMarginPct": 3.334,
-        "chg3mPct": -24.02,
-        "chg6mPct": -27.33,
-        "chg1yPct": -41.49,
-        "relStrength1yPct": -53.81,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -25.79,
+        "chg6mPct": -25.44,
+        "chg1yPct": -41.27,
+        "relStrength1yPct": -53.68,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Expand Energy Corporation",
       "ticker": "EXE",
       "sector": "Energy – Oil & Gas Production",
-      "price": 94.62,
-      "priceDate": "2026-10-27",
-      "marketCap": "$21.9B",
-      "forwardPE": 12.15,
-      "peg": 0.87,
+      "price": 91.57,
+      "priceDate": "2026-10-28",
+      "marketCap": "$21.1B",
+      "forwardPE": 11.77,
+      "peg": 0.84,
       "revenueGrowth": "+173.3% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
@@ -748,7 +873,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.12"
+          "value": "1.08"
         },
         {
           "label": "ROA",
@@ -819,7 +944,7 @@
         "No data-driven red flags; check why the market prices it below peers"
       ],
       "analystRating": "Buy (29 analysts)",
-      "priceTarget": 123.37,
+      "priceTarget": 123.33,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/exe/financials/",
         "https://stockanalysis.com/stocks/exe/statistics/"
@@ -827,7 +952,7 @@
       "grades": {
         "growth": "A+",
         "value": "F",
-        "momentum": "B-",
+        "momentum": "C+",
         "profitability": "A"
       },
       "gradeInputs": {
@@ -838,29 +963,29 @@
       },
       "metrics": {
         "revenueGrowthPct": 173.3,
-        "forwardPE": 12.15,
-        "peg": 0.87,
-        "epsGrowth3yPct": 24.66,
-        "evSales": 1.92,
-        "grossMarginPct": 49.0,
-        "operatingMarginPct": 26.908,
-        "netMarginPct": 20.026,
-        "fcfMarginPct": 17.873,
-        "chg3mPct": 4.54,
-        "chg6mPct": -1.74,
-        "chg1yPct": -8.91,
-        "relStrength1yPct": -21.23,
-        "priceAsOf": "2026-10-27"
+        "forwardPE": 11.77,
+        "peg": 0.84,
+        "epsGrowth3yPct": 24.23,
+        "evSales": 1.98,
+        "grossMarginPct": 45.861,
+        "operatingMarginPct": 28.934,
+        "netMarginPct": 21.259,
+        "fcfMarginPct": 18.973,
+        "chg3mPct": 3.45,
+        "chg6mPct": -5.56,
+        "chg1yPct": -9.34,
+        "relStrength1yPct": -21.75,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Amentum Holdings Inc.",
       "ticker": "AMTM",
       "sector": "Consumer Discretionary – Business Services",
-      "price": 21.75,
-      "priceDate": "2026-10-27",
+      "price": 21.69,
+      "priceDate": "2026-10-28",
       "marketCap": "$5.3B",
-      "forwardPE": 8.59,
+      "forwardPE": 8.56,
       "peg": 0.59,
       "revenueGrowth": "+71.6% YoY (FY)",
       "score": 8,
@@ -946,7 +1071,7 @@
         "No data-driven red flags; check why the market prices it below peers"
       ],
       "analystRating": "Buy (12 analysts)",
-      "priceTarget": 29.33,
+      "priceTarget": 29.25,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/amtm/financials/",
         "https://stockanalysis.com/stocks/amtm/statistics/"
@@ -954,7 +1079,7 @@
       "grades": {
         "growth": "B+",
         "value": "A-",
-        "momentum": "D+",
+        "momentum": "C-",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -965,7 +1090,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 71.6,
-        "forwardPE": 8.59,
+        "forwardPE": 8.56,
         "peg": 0.59,
         "epsGrowth3yPct": 9.95,
         "evSales": 0.61,
@@ -973,21 +1098,21 @@
         "operatingMarginPct": 4.013,
         "netMarginPct": 1.444,
         "fcfMarginPct": 3.355,
-        "chg3mPct": -4.9,
-        "chg6mPct": -16.79,
-        "chg1yPct": -3.16,
-        "relStrength1yPct": -15.48,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -7.54,
+        "chg6mPct": -16.25,
+        "chg1yPct": -0.87,
+        "relStrength1yPct": -13.28,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Suzano S.A.",
       "ticker": "SUZ",
       "sector": "Basic Materials – Paper",
-      "price": 8.9,
-      "priceDate": "2026-10-27",
+      "price": 8.99,
+      "priceDate": "2026-10-28",
       "marketCap": "$11.0B",
-      "forwardPE": 6.75,
+      "forwardPE": 6.84,
       "peg": "n/a",
       "revenueGrowth": "+5.7% YoY (FY)",
       "score": 8,
@@ -1002,7 +1127,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.14"
+          "value": "1.15"
         },
         {
           "label": "ROA",
@@ -1080,9 +1205,9 @@
       ],
       "grades": {
         "growth": "F",
-        "value": "C+",
+        "value": "B-",
         "momentum": "B",
-        "profitability": "C+"
+        "profitability": "C"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -1092,7 +1217,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 5.7,
-        "forwardPE": 6.75,
+        "forwardPE": 6.84,
         "peg": null,
         "epsGrowth3yPct": -14.12,
         "evSales": 2.67,
@@ -1100,21 +1225,21 @@
         "operatingMarginPct": 17.435,
         "netMarginPct": 17.08,
         "fcfMarginPct": 10.448,
-        "chg3mPct": 8.27,
-        "chg6mPct": -2.2,
-        "chg1yPct": -2.41,
-        "relStrength1yPct": -14.73,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": 6.9,
+        "chg6mPct": -0.88,
+        "chg1yPct": -2.71,
+        "relStrength1yPct": -15.12,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Octave Intelligence plc",
       "ticker": "OCTV",
       "sector": "Technology – Computer Software: Prepackaged Software",
-      "price": 21.73,
-      "priceDate": "2026-10-27",
-      "marketCap": "$5.8B",
-      "forwardPE": 15.66,
+      "price": 22.11,
+      "priceDate": "2026-10-28",
+      "marketCap": "$5.9B",
+      "forwardPE": 15.94,
       "peg": "n/a",
       "revenueGrowth": "+1.3% YoY (FY)",
       "score": 8,
@@ -1129,7 +1254,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.15"
+          "value": "1.17"
         },
         {
           "label": "ROA",
@@ -1209,7 +1334,7 @@
         "growth": "F",
         "value": "F",
         "momentum": "A+",
-        "profitability": "B"
+        "profitability": "B-"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -1219,27 +1344,27 @@
       },
       "metrics": {
         "revenueGrowthPct": 1.3,
-        "forwardPE": 15.66,
+        "forwardPE": 15.94,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 3.83,
+        "evSales": 3.89,
         "grossMarginPct": 76.438,
         "operatingMarginPct": 18.462,
         "netMarginPct": -111.261,
         "fcfMarginPct": 27.488,
-        "chg3mPct": 27.9,
+        "chg3mPct": 27.22,
         "chg6mPct": null,
         "chg1yPct": null,
         "relStrength1yPct": null,
-        "priceAsOf": "2026-10-27"
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Cadeler A/S",
       "ticker": "CDLR",
       "sector": "Consumer Discretionary – Marine Transportation",
-      "price": 25.26,
-      "priceDate": "2026-10-27",
+      "price": 25.79,
+      "priceDate": "2026-10-28",
       "marketCap": "$2.4B",
       "forwardPE": 5.69,
       "peg": "n/a",
@@ -1256,7 +1381,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.20"
+          "value": "1.21"
         },
         {
           "label": "ROA",
@@ -1333,10 +1458,10 @@
         "https://stockanalysis.com/stocks/cdlr/statistics/"
       ],
       "grades": {
-        "growth": "B",
-        "value": "D+",
-        "momentum": "A",
-        "profitability": "B-"
+        "growth": "B-",
+        "value": "C-",
+        "momentum": "A-",
+        "profitability": "C+"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -1349,31 +1474,33 @@
         "forwardPE": 5.69,
         "peg": null,
         "epsGrowth3yPct": 5.4,
-        "evSales": 4.97,
+        "evSales": 4.99,
         "grossMarginPct": 47.027,
         "operatingMarginPct": 37.17,
         "netMarginPct": 27.47,
-        "fcfMarginPct": -39.21,
-        "chg3mPct": 13.02,
-        "chg6mPct": -4.1,
-        "chg1yPct": 35.37,
-        "relStrength1yPct": 23.05,
-        "priceAsOf": "2026-10-27"
+        "fcfMarginPct": -39.25,
+        "chg3mPct": 19.51,
+        "chg6mPct": -1.49,
+        "chg1yPct": 36.82,
+        "relStrength1yPct": 24.41,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Advance Auto Parts Inc.",
       "ticker": "AAP",
       "sector": "Consumer Discretionary – Auto & Home Supply Stores",
-      "price": 45.83,
-      "priceDate": "2026-10-27",
+      "price": 45.59,
+      "priceDate": "2026-10-28",
       "marketCap": "$2.8B",
-      "forwardPE": 13.84,
+      "forwardPE": 13.77,
       "peg": 0.78,
       "revenueGrowth": "-5.4% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -1381,7 +1508,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.22"
+          "value": "1.21"
         },
         {
           "label": "ROA",
@@ -1459,7 +1586,7 @@
       ],
       "grades": {
         "growth": "C-",
-        "value": "B-",
+        "value": "C+",
         "momentum": "F",
         "profitability": "F"
       },
@@ -1471,7 +1598,7 @@
       },
       "metrics": {
         "revenueGrowthPct": -5.4,
-        "forwardPE": 13.84,
+        "forwardPE": 13.77,
         "peg": 0.78,
         "epsGrowth3yPct": 23.42,
         "evSales": 0.61,
@@ -1479,21 +1606,23 @@
         "operatingMarginPct": 4.326,
         "netMarginPct": 0.986,
         "fcfMarginPct": 0.267,
-        "chg3mPct": -20.61,
-        "chg6mPct": -20.81,
-        "chg1yPct": -18.63,
-        "relStrength1yPct": -30.95,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -22.33,
+        "chg6mPct": -19.45,
+        "chg1yPct": -20.02,
+        "relStrength1yPct": -32.43,
+        "priceAsOf": "2026-10-28"
       }
-    },
+    }
+  ],
+  "bench": [
     {
       "company": "H. B. Fuller Company",
       "ticker": "FUL",
       "sector": "Industrials – Home Furnishings",
-      "price": 49.55,
-      "priceDate": "2026-10-27",
+      "price": 49.35,
+      "priceDate": "2026-10-28",
       "marketCap": "$2.7B",
-      "forwardPE": 9.47,
+      "forwardPE": 9.43,
       "peg": 0.57,
       "revenueGrowth": "-2.7% YoY (FY)",
       "score": 8,
@@ -1585,11 +1714,12 @@
         "https://stockanalysis.com/stocks/ful/financials/",
         "https://stockanalysis.com/stocks/ful/statistics/"
       ],
+      "rank": 1,
       "grades": {
         "growth": "D+",
-        "value": "B",
-        "momentum": "D-",
-        "profitability": "D-"
+        "value": "B+",
+        "momentum": "F",
+        "profitability": "F"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -1599,7 +1729,7 @@
       },
       "metrics": {
         "revenueGrowthPct": -2.7,
-        "forwardPE": 9.47,
+        "forwardPE": 9.43,
         "peg": 0.57,
         "epsGrowth3yPct": 10.42,
         "evSales": 1.34,
@@ -1607,30 +1737,26 @@
         "operatingMarginPct": 11.999,
         "netMarginPct": 5.564,
         "fcfMarginPct": 2.815,
-        "chg3mPct": -12.35,
-        "chg6mPct": -21.16,
-        "chg1yPct": -17.54,
-        "relStrength1yPct": -29.86,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -13.59,
+        "chg6mPct": -20.26,
+        "chg1yPct": -17.65,
+        "relStrength1yPct": -30.06,
+        "priceAsOf": "2026-10-28"
       }
-    }
-  ],
-  "bench": [
+    },
     {
       "company": "Envista Holdings Corporation",
       "ticker": "NVST",
       "sector": "Health Care – Medical/Dental Instruments",
-      "price": 23.58,
-      "priceDate": "2026-10-27",
+      "price": 23.94,
+      "priceDate": "2026-10-28",
       "marketCap": "$3.8B",
-      "forwardPE": 15.07,
-      "peg": 1.08,
+      "forwardPE": 15.3,
+      "peg": 1.09,
       "revenueGrowth": "+8.3% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [
-        "Piotroski"
-      ],
+      "alsoIn": [],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -1638,7 +1764,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.23"
+          "value": "1.25"
         },
         {
           "label": "ROA",
@@ -1714,12 +1840,12 @@
         "https://stockanalysis.com/stocks/nvst/financials/",
         "https://stockanalysis.com/stocks/nvst/statistics/"
       ],
-      "rank": 1,
+      "rank": 2,
       "grades": {
         "growth": "A-",
         "value": "F",
         "momentum": "C",
-        "profitability": "D+"
+        "profitability": "C-"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -1729,31 +1855,31 @@
       },
       "metrics": {
         "revenueGrowthPct": 8.3,
-        "forwardPE": 15.07,
-        "peg": 1.08,
+        "forwardPE": 15.3,
+        "peg": 1.09,
         "epsGrowth3yPct": 14.98,
-        "evSales": 1.49,
+        "evSales": 1.51,
         "grossMarginPct": 55.421,
         "operatingMarginPct": 10.184,
         "netMarginPct": 3.326,
         "fcfMarginPct": 8.685,
-        "chg3mPct": -11.49,
-        "chg6mPct": -11.92,
-        "chg1yPct": 15.87,
-        "relStrength1yPct": 3.55,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -11.2,
+        "chg6mPct": -9.63,
+        "chg1yPct": 19.34,
+        "relStrength1yPct": 6.93,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
-      "company": "AerCap Holdings N.V.",
-      "ticker": "AER",
-      "sector": "Consumer Discretionary – Diversified Commercial Services",
-      "price": 150.05,
-      "priceDate": "2026-10-27",
-      "marketCap": "$23.2B",
-      "forwardPE": 8.61,
-      "peg": 0.65,
-      "revenueGrowth": "+6.5% YoY (FY)",
+      "company": "TAL Education Group",
+      "ticker": "TAL",
+      "sector": "Real Estate – Other Consumer Services",
+      "price": 10.06,
+      "priceDate": "2026-10-28",
+      "marketCap": "$5.6B",
+      "forwardPE": 8.93,
+      "peg": 0.66,
+      "revenueGrowth": "+33.7% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
       "alsoIn": [],
@@ -1764,15 +1890,15 @@
         },
         {
           "label": "Price / book",
-          "value": "1.26"
+          "value": "1.33"
         },
         {
           "label": "ROA",
-          "value": "5.2%"
+          "value": "8.9%"
         },
         {
           "label": "Fiscal year",
-          "value": "2025-12-31"
+          "value": "2026-02-28"
         }
       ],
       "checklist": [
@@ -1780,71 +1906,71 @@
           "key": "roa",
           "label": "ROA positive",
           "met": true,
-          "detail": "ROA 5.2%"
+          "detail": "ROA 8.9%"
         },
         {
           "key": "cfo",
           "label": "Operating cash flow positive",
           "met": true,
-          "detail": "Operating cash flow $5.6B"
+          "detail": "Operating cash flow $611M"
         },
         {
           "key": "droa",
           "label": "ROA improving",
           "met": true,
-          "detail": "ROA 5.2% vs 2.9% prior year"
+          "detail": "ROA 8.9% vs 1.5% prior year"
         },
         {
           "key": "accrual",
           "label": "Cash flow > net income",
           "met": true,
-          "detail": "Cash flow $5.6B vs net income $3.8B"
+          "detail": "Cash flow $611M vs net income $531M"
         },
         {
           "key": "lev",
           "label": "Long-term debt / assets falling",
           "met": true,
-          "detail": "LT debt / assets 60.1% vs 60.6%"
+          "detail": "LT debt / assets 0.0% vs 0.0%"
         },
         {
           "key": "cr",
           "label": "Current ratio rising",
           "met": false,
-          "detail": "Current ratio 1.30 vs 1.34"
+          "detail": "Current ratio 1.84 vs 2.17"
         },
         {
           "key": "shares",
           "label": "No new shares issued",
           "met": true,
-          "detail": "Shares 154M vs 163M"
+          "detail": "Shares 552M vs 553M"
         },
         {
           "key": "gm",
           "label": "Gross margin rising",
           "met": true,
-          "detail": "Gross margin 61.3% vs 57.6%"
+          "detail": "Gross margin 55.4% vs 53.3%"
         },
         {
           "key": "at",
           "label": "Asset turnover rising",
           "met": true,
-          "detail": "Asset turnover 0.12 vs 0.11"
+          "detail": "Asset turnover 0.51 vs 0.41"
         }
       ],
       "risks": [
         "No data-driven red flags; check why the market prices it below peers"
       ],
-      "analystRating": "Strong Buy (10 analysts)",
-      "priceTarget": 179.8,
+      "analystRating": "Buy (19 analysts)",
+      "priceTarget": 16.1,
       "sourceUrl": [
-        "https://stockanalysis.com/stocks/aer/financials/",
-        "https://stockanalysis.com/stocks/aer/statistics/"
+        "https://stockanalysis.com/stocks/tal/financials/",
+        "https://stockanalysis.com/stocks/tal/statistics/"
       ],
-      "rank": 2,
+      "rank": 3,
       "grades": {
-        "growth": "C",
-        "value": "D",
-        "momentum": "B+",
+        "growth": "A-",
+        "value": "B",
+        "momentum": "D+",
         "profitability": "B+"
       },
       "gradeInputs": {
@@ -1854,31 +1980,31 @@
         "profitability": "4/4"
       },
       "metrics": {
-        "revenueGrowthPct": 6.5,
-        "forwardPE": 8.61,
-        "peg": 0.65,
-        "epsGrowth3yPct": 7.55,
-        "evSales": 7.17,
-        "grossMarginPct": 62.824,
-        "operatingMarginPct": 57.047,
-        "netMarginPct": 37.854,
-        "fcfMarginPct": -3.43,
-        "chg3mPct": -0.89,
-        "chg6mPct": 8.22,
-        "chg1yPct": 23.95,
-        "relStrength1yPct": 11.63,
-        "priceAsOf": "2026-10-27"
+        "revenueGrowthPct": 33.7,
+        "forwardPE": 8.93,
+        "peg": 0.66,
+        "epsGrowth3yPct": 13.02,
+        "evSales": 0.98,
+        "grossMarginPct": 56.889,
+        "operatingMarginPct": 16.198,
+        "netMarginPct": 22.13,
+        "fcfMarginPct": 15.569,
+        "chg3mPct": -3.64,
+        "chg6mPct": -6.59,
+        "chg1yPct": -17.81,
+        "relStrength1yPct": -30.22,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Universal Health Services Inc.",
       "ticker": "UHS",
       "sector": "Health Care – Hospital/Nursing Management",
-      "price": 177.32,
-      "priceDate": "2026-10-27",
-      "marketCap": "$10.5B",
-      "forwardPE": 7.58,
-      "peg": 1.09,
+      "price": 172.18,
+      "priceDate": "2026-10-28",
+      "marketCap": "$10.1B",
+      "forwardPE": 7.6,
+      "peg": 1.12,
       "revenueGrowth": "+9.7% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
@@ -1890,7 +2016,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.37"
+          "value": "1.33"
         },
         {
           "label": "ROA",
@@ -1966,11 +2092,11 @@
         "https://stockanalysis.com/stocks/uhs/financials/",
         "https://stockanalysis.com/stocks/uhs/statistics/"
       ],
-      "rank": 3,
+      "rank": 4,
       "grades": {
         "growth": "C+",
         "value": "C",
-        "momentum": "C+",
+        "momentum": "C",
         "profitability": "D"
       },
       "gradeInputs": {
@@ -1981,155 +2107,29 @@
       },
       "metrics": {
         "revenueGrowthPct": 9.7,
-        "forwardPE": 7.58,
-        "peg": 1.09,
-        "epsGrowth3yPct": 6.58,
-        "evSales": 0.9,
+        "forwardPE": 7.6,
+        "peg": 1.12,
+        "epsGrowth3yPct": 5.71,
+        "evSales": 0.88,
         "grossMarginPct": 44.505,
         "operatingMarginPct": 10.85,
         "netMarginPct": 7.965,
         "fcfMarginPct": 6.077,
-        "chg3mPct": 11.31,
-        "chg6mPct": -1.22,
-        "chg1yPct": -17.15,
-        "relStrength1yPct": -29.47,
-        "priceAsOf": "2026-10-27"
-      }
-    },
-    {
-      "company": "TAL Education Group",
-      "ticker": "TAL",
-      "sector": "Real Estate – Other Consumer Services",
-      "price": 10.21,
-      "priceDate": "2026-10-27",
-      "marketCap": "$5.7B",
-      "forwardPE": 10.12,
-      "peg": 0.74,
-      "revenueGrowth": "+33.7% YoY (FY)",
-      "score": 8,
-      "scoreMax": 9,
-      "alsoIn": [],
-      "keyFigures": [
-        {
-          "label": "F-Score",
-          "value": "8/9"
-        },
-        {
-          "label": "Price / book",
-          "value": "1.38"
-        },
-        {
-          "label": "ROA",
-          "value": "8.9%"
-        },
-        {
-          "label": "Fiscal year",
-          "value": "2026-02-28"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "roa",
-          "label": "ROA positive",
-          "met": true,
-          "detail": "ROA 8.9%"
-        },
-        {
-          "key": "cfo",
-          "label": "Operating cash flow positive",
-          "met": true,
-          "detail": "Operating cash flow $732M"
-        },
-        {
-          "key": "droa",
-          "label": "ROA improving",
-          "met": true,
-          "detail": "ROA 8.9% vs 1.5% prior year"
-        },
-        {
-          "key": "accrual",
-          "label": "Cash flow > net income",
-          "met": true,
-          "detail": "Cash flow $732M vs net income $531M"
-        },
-        {
-          "key": "lev",
-          "label": "Long-term debt / assets falling",
-          "met": true,
-          "detail": "LT debt / assets 0.0% vs 0.0%"
-        },
-        {
-          "key": "cr",
-          "label": "Current ratio rising",
-          "met": false,
-          "detail": "Current ratio 1.69 vs 2.17"
-        },
-        {
-          "key": "shares",
-          "label": "No new shares issued",
-          "met": true,
-          "detail": "Shares 553M vs 553M"
-        },
-        {
-          "key": "gm",
-          "label": "Gross margin rising",
-          "met": true,
-          "detail": "Gross margin 55.4% vs 53.3%"
-        },
-        {
-          "key": "at",
-          "label": "Asset turnover rising",
-          "met": true,
-          "detail": "Asset turnover 0.51 vs 0.41"
-        }
-      ],
-      "risks": [
-        "No data-driven red flags; check why the market prices it below peers"
-      ],
-      "analystRating": "Buy (19 analysts)",
-      "priceTarget": 16.1,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/tal/financials/",
-        "https://stockanalysis.com/stocks/tal/statistics/"
-      ],
-      "rank": 4,
-      "grades": {
-        "growth": "A",
-        "value": "B",
-        "momentum": "D",
-        "profitability": "A"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 33.7,
-        "forwardPE": 10.12,
-        "peg": 0.74,
-        "epsGrowth3yPct": 13.02,
-        "evSales": 1.0,
-        "grossMarginPct": 56.018,
-        "operatingMarginPct": 12.496,
-        "netMarginPct": 28.427,
-        "fcfMarginPct": 20.008,
-        "chg3mPct": -3.31,
-        "chg6mPct": -4.67,
-        "chg1yPct": -18.58,
-        "relStrength1yPct": -30.9,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": 3.59,
+        "chg6mPct": 5.93,
+        "chg1yPct": -21.49,
+        "relStrength1yPct": -33.9,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Central Garden & Pet Company",
       "ticker": "CENTA",
       "sector": "Consumer Discretionary – Consumer Specialties",
-      "price": 38.8,
-      "priceDate": "2026-10-27",
+      "price": 38.31,
+      "priceDate": "2026-10-28",
       "marketCap": "$2.5B",
-      "forwardPE": 13.51,
+      "forwardPE": 13.34,
       "peg": "n/a",
       "revenueGrowth": "-2.2% YoY (FY)",
       "score": 8,
@@ -2142,7 +2142,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.43"
+          "value": "1.41"
         },
         {
           "label": "ROA",
@@ -2221,8 +2221,8 @@
       "rank": 5,
       "grades": {
         "growth": "F",
-        "value": "C-",
-        "momentum": "A-",
+        "value": "C",
+        "momentum": "B+",
         "profitability": "D-"
       },
       "gradeInputs": {
@@ -2233,29 +2233,29 @@
       },
       "metrics": {
         "revenueGrowthPct": -2.2,
-        "forwardPE": 13.51,
+        "forwardPE": 13.34,
         "peg": null,
         "epsGrowth3yPct": 4.14,
-        "evSales": 0.94,
+        "evSales": 0.93,
         "grossMarginPct": 32.572,
         "operatingMarginPct": 8.323,
         "netMarginPct": 5.393,
         "fcfMarginPct": 11.207,
-        "chg3mPct": 1.38,
-        "chg6mPct": 13.32,
-        "chg1yPct": 32.74,
-        "relStrength1yPct": 20.42,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -1.77,
+        "chg6mPct": 12.88,
+        "chg1yPct": 30.71,
+        "relStrength1yPct": 18.3,
+        "priceAsOf": "2026-10-28"
       }
     },
     {
       "company": "Telefonica Brasil S.A.",
       "ticker": "VIV",
       "sector": "Telecommunications – Telecommunications Equipment",
-      "price": 11.6,
-      "priceDate": "2026-10-27",
-      "marketCap": "$18.6B",
-      "forwardPE": 11.16,
+      "price": 11.42,
+      "priceDate": "2026-10-28",
+      "marketCap": "$18.3B",
+      "forwardPE": 11.05,
       "peg": "n/a",
       "revenueGrowth": "+6.7% YoY (FY)",
       "score": 8,
@@ -2268,7 +2268,7 @@
         },
         {
           "label": "Price / book",
-          "value": "1.47"
+          "value": "1.44"
         },
         {
           "label": "ROA",
@@ -2339,7 +2339,7 @@
         "Financials reported in BRL"
       ],
       "analystRating": "Hold (8 analysts)",
-      "priceTarget": 14.58,
+      "priceTarget": 14.49,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/viv/financials/",
         "https://stockanalysis.com/stocks/viv/statistics/"
@@ -2347,9 +2347,9 @@
       "rank": 6,
       "grades": {
         "growth": "B",
-        "value": "D-",
+        "value": "D",
         "momentum": "F",
-        "profitability": "B"
+        "profitability": "B-"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -2359,26 +2359,152 @@
       },
       "metrics": {
         "revenueGrowthPct": 6.7,
-        "forwardPE": 11.16,
+        "forwardPE": 11.05,
         "peg": null,
         "epsGrowth3yPct": 20.15,
-        "evSales": 1.74,
+        "evSales": 1.71,
         "grossMarginPct": 48.257,
         "operatingMarginPct": 18.22,
         "netMarginPct": 10.682,
         "fcfMarginPct": 17.388,
-        "chg3mPct": -17.79,
-        "chg6mPct": -27.41,
-        "chg1yPct": -9.94,
-        "relStrength1yPct": -22.26,
-        "priceAsOf": "2026-10-27"
+        "chg3mPct": -13.16,
+        "chg6mPct": -27.17,
+        "chg1yPct": -10.99,
+        "relStrength1yPct": -23.4,
+        "priceAsOf": "2026-10-28"
+      }
+    },
+    {
+      "company": "Teck Resources Ltd",
+      "ticker": "TECK",
+      "sector": "Industrials – Mining & Quarrying of Nonmetallic Minerals (No Fuels)",
+      "price": 63.04,
+      "priceDate": "2026-10-28",
+      "marketCap": "$30.8B",
+      "forwardPE": 15.61,
+      "peg": "n/a",
+      "revenueGrowth": "+18.7% YoY (FY)",
+      "score": 8,
+      "scoreMax": 9,
+      "alsoIn": [],
+      "keyFigures": [
+        {
+          "label": "F-Score",
+          "value": "8/9"
+        },
+        {
+          "label": "Price / book",
+          "value": "1.45"
+        },
+        {
+          "label": "ROA",
+          "value": "3.1%"
+        },
+        {
+          "label": "Fiscal year",
+          "value": "2025-12-31"
+        }
+      ],
+      "checklist": [
+        {
+          "key": "roa",
+          "label": "ROA positive",
+          "met": true,
+          "detail": "ROA 3.1%"
+        },
+        {
+          "key": "cfo",
+          "label": "Operating cash flow positive",
+          "met": true,
+          "detail": "Operating cash flow CAD 5.6B"
+        },
+        {
+          "key": "droa",
+          "label": "ROA improving",
+          "met": true,
+          "detail": "ROA 3.1% vs 0.9% prior year"
+        },
+        {
+          "key": "accrual",
+          "label": "Cash flow > net income",
+          "met": true,
+          "detail": "Cash flow CAD 5.6B vs net income CAD 1.4B"
+        },
+        {
+          "key": "lev",
+          "label": "Long-term debt / assets falling",
+          "met": true,
+          "detail": "LT debt / assets 16.7% vs 18.1%"
+        },
+        {
+          "key": "cr",
+          "label": "Current ratio rising",
+          "met": true,
+          "detail": "Current ratio 2.80 vs 2.54"
+        },
+        {
+          "key": "shares",
+          "label": "No new shares issued",
+          "met": false,
+          "detail": "Shares 491M vs 488M"
+        },
+        {
+          "key": "gm",
+          "label": "Gross margin rising",
+          "met": true,
+          "detail": "Gross margin 24.7% vs 17.7%"
+        },
+        {
+          "key": "at",
+          "label": "Asset turnover rising",
+          "met": true,
+          "detail": "Asset turnover 0.24 vs 0.19"
+        }
+      ],
+      "risks": [
+        "Financials reported in CAD"
+      ],
+      "analystRating": "Hold (17 analysts)",
+      "priceTarget": 59.17,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/teck/financials/",
+        "https://stockanalysis.com/stocks/teck/statistics/"
+      ],
+      "rank": 7,
+      "metrics": {
+        "revenueGrowthPct": 18.7,
+        "forwardPE": 15.61,
+        "peg": null,
+        "epsGrowth3yPct": 14.42,
+        "evSales": 3.21,
+        "grossMarginPct": 40.091,
+        "operatingMarginPct": 38.108,
+        "netMarginPct": 25.187,
+        "fcfMarginPct": 16.736,
+        "chg3mPct": 7.52,
+        "chg6mPct": 9.05,
+        "chg1yPct": 45.93,
+        "relStrength1yPct": 33.52,
+        "priceAsOf": "2026-10-28"
+      },
+      "grades": {
+        "growth": "A",
+        "value": "F",
+        "momentum": "A",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
       }
     }
   ],
   "grading": {
-    "asOf": "2026-10-28",
-    "spy1yPct": 12.32,
-    "pool": "18 stocks (this list's picks + bench)",
+    "asOf": "2026-10-29",
+    "spy1yPct": 12.41,
+    "pool": "19 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
