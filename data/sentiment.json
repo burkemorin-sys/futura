@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-29T12:15:01Z",
+  "lastUpdated": "2026-10-30T12:14:50Z",
   "method": "Snapshot computed server-side (none of these sources allow browser CORS requests). StockTwits: the most recent ~120 public messages per symbol, counting messages the author tagged Bullish or Bearish; untagged messages are ignored for the ratio. ApeWisdom: 24-hour mention counts across Reddit investing subreddits (incl. r/wallstreetbets) and 4chan /biz/. Tradestie: WallStreetBets daily sentiment score, only for its top-50 tickers. Small samples are noisy; treat as a mood gauge, not a signal.",
   "unavailable": [
     {
@@ -20,192 +20,194 @@
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 38,
-        "bearish": 25,
-        "untagged": 57,
-        "bullishPctOfTagged": 60.3,
-        "windowStart": "2026-10-29T01:33:54Z",
-        "windowEnd": "2026-10-29T12:14:56Z",
-        "watchlistCount": 1071370,
+        "bullish": 26,
+        "bearish": 28,
+        "untagged": 66,
+        "bullishPctOfTagged": 48.1,
+        "windowStart": "2026-10-30T02:35:22Z",
+        "windowEnd": "2026-10-30T12:14:38Z",
+        "watchlistCount": 1071502,
         "url": "https://stocktwits.com/symbol/TSLA"
       },
       "apewisdom": {
         "status": "ok",
         "rank": 15,
-        "mentions24h": 37,
-        "mentionsPrev24h": 66,
-        "upvotes24h": 77,
-        "rankPrev24h": 6,
+        "mentions24h": 57,
+        "mentionsPrev24h": 38,
+        "upvotes24h": 686,
+        "rankPrev24h": 15,
         "url": "https://apewisdom.io/stocks/TSLA/"
       },
       "wsbTradestie": {
-        "status": "not-in-top-50",
-        "note": "Not among today's top-50 WallStreetBets tickers on Tradestie."
+        "status": "ok",
+        "sentiment": "Bullish",
+        "score": 0.065,
+        "comments": 11
       }
     },
     "SPCX": {
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 53,
-        "bearish": 6,
-        "untagged": 61,
-        "bullishPctOfTagged": 89.8,
-        "windowStart": "2026-10-29T02:37:32Z",
-        "windowEnd": "2026-10-29T12:14:35Z",
-        "watchlistCount": 111363,
+        "bullish": 30,
+        "bearish": 17,
+        "untagged": 73,
+        "bullishPctOfTagged": 63.8,
+        "windowStart": "2026-10-30T08:24:56Z",
+        "windowEnd": "2026-10-30T12:14:17Z",
+        "watchlistCount": 111471,
         "url": "https://stocktwits.com/symbol/SPCX"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 14,
-        "mentions24h": 38,
-        "mentionsPrev24h": 47,
-        "upvotes24h": 329,
-        "rankPrev24h": 12,
+        "rank": 24,
+        "mentions24h": 25,
+        "mentionsPrev24h": 38,
+        "upvotes24h": 137,
+        "rankPrev24h": 16,
         "url": "https://apewisdom.io/stocks/SPCX/"
       },
       "wsbTradestie": {
         "status": "ok",
-        "sentiment": "Bearish",
-        "score": -0.695,
-        "comments": 2
+        "sentiment": "Bullish",
+        "score": 0.187,
+        "comments": 5
       }
     },
     "AAPL": {
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 17,
-        "bearish": 15,
-        "untagged": 88,
-        "bullishPctOfTagged": 53.1,
-        "windowStart": "2026-10-28T19:18:48Z",
-        "windowEnd": "2026-10-29T12:12:22Z",
-        "watchlistCount": 998949,
+        "bullish": 5,
+        "bearish": 63,
+        "untagged": 52,
+        "bullishPctOfTagged": 7.4,
+        "windowStart": "2026-10-30T07:33:33Z",
+        "windowEnd": "2026-10-30T12:14:23Z",
+        "watchlistCount": 999145,
         "url": "https://stocktwits.com/symbol/AAPL"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 32,
-        "mentions24h": 17,
-        "mentionsPrev24h": 22,
-        "upvotes24h": 672,
-        "rankPrev24h": 23,
+        "rank": 10,
+        "mentions24h": 86,
+        "mentionsPrev24h": 15,
+        "upvotes24h": 2984,
+        "rankPrev24h": 35,
         "url": "https://apewisdom.io/stocks/AAPL/"
       },
       "wsbTradestie": {
-        "status": "not-in-top-50",
-        "note": "Not among today's top-50 WallStreetBets tickers on Tradestie."
+        "status": "ok",
+        "sentiment": "Bearish",
+        "score": -0.053,
+        "comments": 12
       }
     },
     "NVDA": {
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 51,
-        "bearish": 10,
-        "untagged": 59,
-        "bullishPctOfTagged": 83.6,
-        "windowStart": "2026-10-29T01:42:27Z",
-        "windowEnd": "2026-10-29T12:14:24Z",
-        "watchlistCount": 673606,
+        "bullish": 34,
+        "bearish": 14,
+        "untagged": 72,
+        "bullishPctOfTagged": 70.8,
+        "windowStart": "2026-10-30T07:07:08Z",
+        "windowEnd": "2026-10-30T12:14:20Z",
+        "watchlistCount": 673818,
         "url": "https://stocktwits.com/symbol/NVDA"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 11,
-        "mentions24h": 48,
-        "mentionsPrev24h": 46,
-        "upvotes24h": 594,
-        "rankPrev24h": 9,
+        "rank": 13,
+        "mentions24h": 63,
+        "mentionsPrev24h": 48,
+        "upvotes24h": 719,
+        "rankPrev24h": 11,
         "url": "https://apewisdom.io/stocks/NVDA/"
       },
       "wsbTradestie": {
         "status": "ok",
         "sentiment": "Bullish",
-        "score": 0.491,
-        "comments": 3
+        "score": 0.162,
+        "comments": 10
       }
     },
     "MU": {
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 59,
-        "bearish": 12,
-        "untagged": 49,
-        "bullishPctOfTagged": 83.1,
-        "windowStart": "2026-10-29T02:37:04Z",
-        "windowEnd": "2026-10-29T12:10:26Z",
-        "watchlistCount": 220750,
+        "bullish": 35,
+        "bearish": 19,
+        "untagged": 66,
+        "bullishPctOfTagged": 64.8,
+        "windowStart": "2026-10-30T09:32:06Z",
+        "windowEnd": "2026-10-30T12:14:58Z",
+        "watchlistCount": 220818,
         "url": "https://stocktwits.com/symbol/MU"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 5,
-        "mentions24h": 104,
-        "mentionsPrev24h": 130,
-        "upvotes24h": 463,
-        "rankPrev24h": 3,
+        "rank": 12,
+        "mentions24h": 79,
+        "mentionsPrev24h": 105,
+        "upvotes24h": 507,
+        "rankPrev24h": 5,
         "url": "https://apewisdom.io/stocks/MU/"
       },
       "wsbTradestie": {
         "status": "ok",
         "sentiment": "Bullish",
-        "score": 0.246,
-        "comments": 7
+        "score": 0.066,
+        "comments": 10
       }
     },
     "LITE": {
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 19,
-        "bearish": 8,
-        "untagged": 93,
-        "bullishPctOfTagged": 70.4,
-        "windowStart": "2026-10-28T23:36:02Z",
-        "windowEnd": "2026-10-29T12:10:26Z",
-        "watchlistCount": 16473,
+        "bullish": 33,
+        "bearish": 11,
+        "untagged": 76,
+        "bullishPctOfTagged": 75.0,
+        "windowStart": "2026-10-29T13:29:26Z",
+        "windowEnd": "2026-10-30T12:03:29Z",
+        "watchlistCount": 16519,
         "url": "https://stocktwits.com/symbol/LITE"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 12,
-        "mentions24h": 46,
-        "mentionsPrev24h": 1,
-        "upvotes24h": 214,
-        "rankPrev24h": 280,
+        "rank": 127,
+        "mentions24h": 3,
+        "mentionsPrev24h": 46,
+        "upvotes24h": 4,
+        "rankPrev24h": 12,
         "url": "https://apewisdom.io/stocks/LITE/"
       },
       "wsbTradestie": {
-        "status": "ok",
-        "sentiment": "Bearish",
-        "score": -0.036,
-        "comments": 5
+        "status": "not-in-top-50",
+        "note": "Not among today's top-50 WallStreetBets tickers on Tradestie."
       }
     },
     "LUNR": {
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 63,
-        "bearish": 10,
-        "untagged": 47,
-        "bullishPctOfTagged": 86.3,
-        "windowStart": "2026-10-26T18:47:56Z",
-        "windowEnd": "2026-10-29T12:12:54Z",
-        "watchlistCount": 39067,
+        "bullish": 62,
+        "bearish": 12,
+        "untagged": 46,
+        "bullishPctOfTagged": 83.8,
+        "windowStart": "2026-10-27T15:37:49Z",
+        "windowEnd": "2026-10-30T12:03:10Z",
+        "watchlistCount": 39065,
         "url": "https://stocktwits.com/symbol/LUNR"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 686,
+        "rank": 747,
         "mentions24h": 1,
         "mentionsPrev24h": 1,
-        "upvotes24h": 2,
-        "rankPrev24h": 670,
+        "upvotes24h": 0,
+        "rankPrev24h": 691,
         "url": "https://apewisdom.io/stocks/LUNR/"
       },
       "wsbTradestie": {
@@ -217,22 +219,22 @@
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 47,
+        "bullish": 43,
         "bearish": 1,
-        "untagged": 72,
-        "bullishPctOfTagged": 97.9,
-        "windowStart": "2026-10-12T16:04:01Z",
-        "windowEnd": "2026-10-29T04:51:04Z",
-        "watchlistCount": 12761,
+        "untagged": 76,
+        "bullishPctOfTagged": 97.7,
+        "windowStart": "2026-10-12T19:25:39Z",
+        "windowEnd": "2026-10-30T09:47:10Z",
+        "watchlistCount": 12767,
         "url": "https://stocktwits.com/symbol/CEG"
       },
       "apewisdom": {
         "status": "ok",
-        "rank": 635,
+        "rank": 690,
         "mentions24h": 1,
-        "mentionsPrev24h": null,
+        "mentionsPrev24h": 1,
         "upvotes24h": 1,
-        "rankPrev24h": 0,
+        "rankPrev24h": 641,
         "url": "https://apewisdom.io/stocks/CEG/"
       },
       "wsbTradestie": {
@@ -244,13 +246,13 @@
       "stocktwits": {
         "status": "ok",
         "messagesSampled": 120,
-        "bullish": 32,
+        "bullish": 36,
         "bearish": 7,
-        "untagged": 81,
-        "bullishPctOfTagged": 82.1,
-        "windowStart": "2026-10-07T13:45:07Z",
-        "windowEnd": "2026-10-28T20:24:28Z",
-        "watchlistCount": 1347,
+        "untagged": 77,
+        "bullishPctOfTagged": 83.7,
+        "windowStart": "2026-10-08T18:04:25Z",
+        "windowEnd": "2026-10-29T19:20:26Z",
+        "watchlistCount": 1349,
         "url": "https://stocktwits.com/symbol/ALM"
       },
       "apewisdom": {
@@ -272,7 +274,7 @@
         "bullishPctOfTagged": 95.8,
         "windowStart": "2025-06-03T00:58:17Z",
         "windowEnd": "2026-10-26T14:02:36Z",
-        "watchlistCount": 524,
+        "watchlistCount": 525,
         "url": "https://stocktwits.com/symbol/MTRN"
       },
       "apewisdom": {
@@ -294,7 +296,7 @@
         "bullishPctOfTagged": 78.1,
         "windowStart": "2026-10-05T21:41:29Z",
         "windowEnd": "2026-10-28T15:21:29Z",
-        "watchlistCount": 7505,
+        "watchlistCount": 7510,
         "url": "https://stocktwits.com/symbol/LEN"
       },
       "apewisdom": {

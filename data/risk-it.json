@@ -1,34 +1,34 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-29",
-  "priceDate": "2026-10-28",
+  "lastUpdated": "2026-10-30",
+  "priceDate": "2026-10-29",
   "method": "Risk It is a maximum-growth screen that accepts much higher risk. We start from every US-listed stock in the StockAnalysis / S&P Global screener and keep those with a market cap over $300M, at least $10M a day of average trading volume, TTM revenue of $50M or more, coverage from 5+ analysts with a price target, and growth that is current and expected to continue (latest-quarter revenue up 15%+ YoY and consensus revenue growth of 15%+ this fiscal year and 10%+ next). Mortgage REITs, SPACs and anything already in Growth Picks are excluded. Each stock is scored 0–100: TTM revenue growth up to 40 (full marks at 150%+); acceleration (TTM growth above the prior fiscal year's) +5; momentum up to 25, measured as true relative strength — the stock's 1-year price change versus the S&P 500 (SPY), scaled as clamp((RS+50)/150×25), using 6- or 3-month relative strength for IPOs under a year old; upside to the consensus price target up to 20 (full marks at 100%+); and consensus Strong Buy 10 / Buy 7 / Hold 2. There is no valuation cap and losses are allowed. The top 12 are the picks and the next 18 form the ranked bench. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue). Also excludes crypto-treasury companies whose main strategy is holding or staking crypto (e.g. SBET, BMNR, MSTR).",
-  "dataNotes": "Prices (Oct 28, 2026 close), market cap, net income, gross margin, beta, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence). TTM revenue growth, its period and prior fiscal-year growth come from the StockAnalysis revenue page; this- and next-year consensus revenue growth from the forecast page. Momentum uses 1-year price changes from Nasdaq daily closes (close on or before the same date a year earlier to the latest close, matching the grade inputs), vs SPY +12.4% (6-month +8.5%); StockAnalysis 52-week changes are used only where Nasdaq history is unavailable (0 stocks). Gross-margin trend compares the latest quarter's gross margin with the same quarter a year earlier (StockAnalysis quarterly statements), and price-target revisions count raises and cuts in the analyst actions on the StockAnalysis forecast page over the last 90 days. Both are shown for context and are not scored. Consensus EPS/revenue estimate revisions were not available from free sources. 383 stocks passed every filter and were fully scored, out of 1960 that passed the size, revenue, analyst and liquidity prefilter. 'n/a' means not available. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue).",
+  "dataNotes": "Prices (Oct 29, 2026 close), market cap, net income, gross margin, beta, consensus rating, analyst count and average price target come from each company's StockAnalysis.com statistics page (S&P Global Market Intelligence). TTM revenue growth, its period and prior fiscal-year growth come from the StockAnalysis revenue page; this- and next-year consensus revenue growth from the forecast page. Momentum uses 1-year price changes from Nasdaq daily closes (close on or before the same date a year earlier to the latest close, matching the grade inputs), vs SPY +11.9% (6-month +7.1%); StockAnalysis 52-week changes are used only where Nasdaq history is unavailable (0 stocks). Gross-margin trend compares the latest quarter's gross margin with the same quarter a year earlier (StockAnalysis quarterly statements), and price-target revisions count raises and cuts in the analyst actions on the StockAnalysis forecast page over the last 90 days. Both are shown for context and are not scored. Consensus EPS/revenue estimate revisions were not available from free sources. 382 stocks passed every filter and were fully scored, out of 1957 that passed the size, revenue, analyst and liquidity prefilter. 'n/a' means not available. Excludes bitcoin/crypto miners (including miners pivoting to AI/HPC hosting that still earn meaningful mining revenue).",
   "disclaimer": "Higher-risk, speculative ideas for research only. Many of these companies lose money, dilute shareholders and swing violently. Not financial advice.",
   "picks": [
     {
       "company": "Almonty Industries",
       "ticker": "ALM",
       "sector": "Materials – Other Industrial Metals & Mining",
-      "price": 9.39,
-      "priceDate": "2026-10-28",
-      "marketCap": "$2.71B",
-      "forwardPE": 14.72,
+      "price": 9.3,
+      "priceDate": "2026-10-29",
+      "marketCap": "$2.68B",
+      "forwardPE": 14.53,
       "peg": "n/a",
       "revenueGrowth": "+204.55% YoY (TTM ending Jun 2026; revenue $60.42M, C$85.80M as reported)",
-      "score": 86,
+      "score": 87,
       "riskLevel": "High",
       "drivers": [
         "Revenue growth +204.6% YoY (TTM) → 40/40",
         "Acceleration: TTM 204.6% vs FY2025 12.8% → 5/5",
-        "Momentum: 1-yr price +26.4% vs S&P 500 (SPY) +12.4% = relative strength +14.0% → 11/25",
-        "Upside to target +150.6% → 20/20",
+        "Momentum: 1-yr price +31.2% vs S&P 500 (SPY) +11.9% = relative strength +19.2% → 12/25",
+        "Upside to target +153.0% → 20/20",
         "Consensus Strong Buy (11) → 10/10",
         "Gross-margin trend (not scored): latest quarter 61.5% vs -9.4% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +498% YoY; consensus sees revenue +834% this fiscal year and +217% next.",
-      "fundamentals": "TTM revenue $60.42M, net income $75.66M, gross margin 49.81%; market cap $2.71B, net cash $291.59M. Financials are reported in Canadian dollars (TTM revenue C$85.80M as reported); the dollar amounts above are StockAnalysis's US-dollar conversions.",
+      "fundamentals": "TTM revenue $60.42M, net income $75.66M, gross margin 49.81%; market cap $2.68B, net cash $291.59M. Financials are reported in Canadian dollars (TTM revenue C$85.80M as reported); the dollar amounts above are StockAnalysis's US-dollar conversions.",
       "risks": [
         "Tungsten price and single-mine (Sangdong) ramp-up risk; geopolitical supply-chain exposure",
         "Dilution: share count +44.1% YoY"
@@ -41,8 +41,8 @@
         "https://stockanalysis.com/stocks/alm/forecast/"
       ],
       "grades": {
-        "growth": "C-",
-        "value": "D+",
+        "growth": "C",
+        "value": "D",
         "momentum": "D",
         "profitability": "B"
       },
@@ -54,44 +54,44 @@
       },
       "metrics": {
         "revenueGrowthPct": 204.55,
-        "forwardPE": 14.72,
+        "forwardPE": 14.53,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 40.01,
+        "evSales": 39.58,
         "grossMarginPct": 49.807,
         "operatingMarginPct": 5.222,
         "netMarginPct": 125.23,
-        "fcfMarginPct": -65.63,
-        "chg3mPct": -23.22,
-        "chg6mPct": -54.79,
-        "chg1yPct": 26.38,
-        "relStrength1yPct": 13.97,
-        "priceAsOf": "2026-10-28"
+        "fcfMarginPct": -65.75,
+        "chg3mPct": -15.07,
+        "chg6mPct": -52.96,
+        "chg1yPct": 31.17,
+        "relStrength1yPct": 19.25,
+        "priceAsOf": "2026-10-29"
       }
     },
     {
       "company": "Ondas",
       "ticker": "ONDS",
       "sector": "Technology – Communication Equipment",
-      "price": 6.86,
-      "priceDate": "2026-10-28",
-      "marketCap": "$3.91B",
+      "price": 6.88,
+      "priceDate": "2026-10-29",
+      "marketCap": "$3.93B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+979.30% YoY (TTM ending Jun 2026; revenue $174.10M)",
-      "score": 81,
+      "score": 82,
       "riskLevel": "High",
       "drivers": [
         "Revenue growth +979.3% YoY (TTM) → 40/40",
         "Acceleration: TTM 979.3% vs FY2025 605.3% → 5/5",
-        "Momentum: 1-yr price +1.0% vs S&P 500 (SPY) +12.4% = relative strength -11.4% → 6/25",
-        "Upside to target +175.2% → 20/20",
+        "Momentum: 1-yr price +1.9% vs S&P 500 (SPY) +11.9% = relative strength -10.0% → 7/25",
+        "Upside to target +174.4% → 20/20",
         "Consensus Strong Buy (10) → 10/10",
         "Gross-margin trend (not scored): latest quarter 43.1% vs 53.1% a year earlier → margin contracting",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +1235% YoY; consensus sees revenue +958% this fiscal year and +89% next.",
-      "fundamentals": "TTM revenue $174.10M, net income $85.75M, gross margin 43.72%; market cap $3.91B, net cash $1.34B.",
+      "fundamentals": "TTM revenue $174.10M, net income $85.75M, gross margin 43.72%; market cap $3.93B, net cash $1.34B.",
       "risks": [
         "Acquisition-fuelled growth and customer concentration; execution risk",
         "Dilution: share count +297.3% YoY",
@@ -105,10 +105,10 @@
         "https://stockanalysis.com/stocks/onds/forecast/"
       ],
       "grades": {
-        "growth": "A-",
-        "value": "D",
+        "growth": "A",
+        "value": "D-",
         "momentum": "C",
-        "profitability": "C"
+        "profitability": "C-"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -121,41 +121,41 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 14.76,
+        "evSales": 14.83,
         "grossMarginPct": 43.724,
         "operatingMarginPct": -121.019,
         "netMarginPct": 96.248,
         "fcfMarginPct": -98.75,
-        "chg3mPct": -12.72,
-        "chg6mPct": -34.54,
-        "chg1yPct": 1.03,
-        "relStrength1yPct": -11.38,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": 1.18,
+        "chg6mPct": -27.5,
+        "chg1yPct": 1.93,
+        "relStrength1yPct": -9.99,
+        "priceAsOf": "2026-10-29"
       }
     },
     {
       "company": "Endeavour Silver",
       "ticker": "EXK",
       "sector": "Materials – Silver",
-      "price": 7.97,
-      "priceDate": "2026-10-28",
-      "marketCap": "$2.35B",
-      "forwardPE": 8.35,
+      "price": 7.76,
+      "priceDate": "2026-10-29",
+      "marketCap": "$2.29B",
+      "forwardPE": 8.13,
       "peg": "n/a",
       "revenueGrowth": "+197.60% YoY (TTM ending Jun 2026; revenue $737.20M)",
-      "score": 80,
+      "score": 81,
       "riskLevel": "High",
       "drivers": [
         "Revenue growth +197.6% YoY (TTM) → 40/40",
         "Acceleration: TTM 197.6% vs FY2025 114.8% → 5/5",
-        "Momentum: 1-yr price -1.1% vs S&P 500 (SPY) +12.4% = relative strength -13.5% → 6/25",
-        "Upside to target +94.5% → 19/20",
+        "Momentum: 1-yr price -4.0% vs S&P 500 (SPY) +11.9% = relative strength -15.9% → 6/25",
+        "Upside to target +99.7% → 20/20",
         "Consensus Strong Buy (7) → 10/10",
         "Gross-margin trend (not scored): latest quarter 47.0% vs 25.6% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 1 raised, 2 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +139% YoY; consensus sees revenue +93% this fiscal year and +15% next.",
-      "fundamentals": "TTM revenue $737.20M, net income $65.70M, gross margin 44.09%; market cap $2.35B, net debt $4.80M.",
+      "fundamentals": "TTM revenue $737.20M, net income $65.70M, gross margin 44.09%; market cap $2.29B, net debt $4.80M.",
       "risks": [
         "Revenue is leveraged to silver prices; mine-ramp and jurisdiction risk",
         "Dilution: share count +18.7% YoY",
@@ -171,8 +171,8 @@
       "grades": {
         "growth": "D+",
         "value": "A",
-        "momentum": "B-",
-        "profitability": "A"
+        "momentum": "C+",
+        "profitability": "A-"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -182,110 +182,48 @@
       },
       "metrics": {
         "revenueGrowthPct": 197.6,
-        "forwardPE": 8.35,
+        "forwardPE": 8.13,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 3.19,
+        "evSales": 3.12,
         "grossMarginPct": 44.086,
         "operatingMarginPct": 24.932,
         "netMarginPct": 8.912,
         "fcfMarginPct": -5.07,
-        "chg3mPct": 2.84,
-        "chg6mPct": -13.56,
-        "chg1yPct": -1.12,
-        "relStrength1yPct": -13.53,
-        "priceAsOf": "2026-10-28"
-      }
-    },
-    {
-      "company": "Silicon Motion Technology Corporation",
-      "ticker": "SIMO",
-      "sector": "Technology – Semiconductors",
-      "price": 219.61,
-      "priceDate": "2026-10-28",
-      "marketCap": "$7.45B",
-      "forwardPE": 14.62,
-      "peg": 0.273,
-      "revenueGrowth": "+104.40% YoY (TTM ending Sep 2026; revenue $1.63B)",
-      "score": 80,
-      "riskLevel": "High",
-      "drivers": [
-        "Revenue growth +104.4% YoY (TTM) → 28/40",
-        "Acceleration: TTM 104.4% vs FY2025 10.2% → 5/5",
-        "Momentum: 1-yr price +118.6% vs S&P 500 (SPY) +12.4% = relative strength +106.2% → 25/25",
-        "Upside to target +62.9% → 13/20",
-        "Consensus Strong Buy (13) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 53.6% vs 48.6% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended September 30, 2026) revenue +132% YoY; consensus sees revenue +112% this fiscal year and +31% next.",
-      "fundamentals": "TTM revenue $1.63B, net income $315.97M, gross margin 50.54%; market cap $7.45B, net debt $280.59M.",
-      "risks": [
-        "No data-driven red flags; check the latest earnings call"
-      ],
-      "analystRating": "Strong Buy (13 analysts)",
-      "priceTarget": 357.73,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/simo/statistics/",
-        "https://stockanalysis.com/stocks/simo/revenue/",
-        "https://stockanalysis.com/stocks/simo/forecast/"
-      ],
-      "grades": {
-        "growth": "D-",
-        "value": "A-",
-        "momentum": "A-",
-        "profitability": "A"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 104.4,
-        "forwardPE": 14.62,
-        "peg": 0.273,
-        "epsGrowth3yPct": 75.82,
-        "evSales": 4.74,
-        "grossMarginPct": 50.538,
-        "operatingMarginPct": 21.301,
-        "netMarginPct": 19.363,
-        "fcfMarginPct": -24.9,
-        "chg3mPct": -0.82,
-        "chg6mPct": 47.21,
-        "chg1yPct": 118.63,
-        "relStrength1yPct": 106.22,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": 2.65,
+        "chg6mPct": -12.81,
+        "chg1yPct": -3.96,
+        "relStrength1yPct": -15.88,
+        "priceAsOf": "2026-10-29"
       }
     },
     {
       "company": "Nuvation Bio",
       "ticker": "NUVB",
       "sector": "Health Care – Biotechnology",
-      "price": 4.59,
-      "priceDate": "2026-10-28",
-      "marketCap": "$1.61B",
+      "price": 4.77,
+      "priceDate": "2026-10-29",
+      "marketCap": "$1.67B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+1083.56% YoY (TTM ending Jun 2026; revenue $169.90M)",
-      "score": 79,
+      "score": 80,
       "riskLevel": "Very High",
       "drivers": [
         "Revenue growth +1083.6% YoY (TTM) → 40/40",
         "Acceleration: TTM 1083.6% vs FY2025 699.0% → 5/5",
-        "Momentum: 1-yr price -14.5% vs S&P 500 (SPY) +12.4% = relative strength -26.9% → 4/25",
-        "Upside to target +183.2% → 20/20",
+        "Momentum: 1-yr price -9.3% vs S&P 500 (SPY) +11.9% = relative strength -21.2% → 5/25",
+        "Upside to target +172.5% → 20/20",
         "Consensus Strong Buy (13) → 10/10",
         "Gross-margin trend (not scored): latest quarter 70.1% vs 46.7% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +556% YoY; consensus sees revenue +209% this fiscal year and +42% next.",
-      "fundamentals": "TTM revenue $169.90M, net income -$149.83M, gross margin 88.17%; market cap $1.61B, net cash $244.69M.",
+      "fundamentals": "TTM revenue $169.90M, net income -$149.83M, gross margin 88.17%; market cap $1.67B, net cash $244.69M.",
       "risks": [
         "Early commercial launch: revenue depends on one or two products; clinical, regulatory and reimbursement risk",
         "Unprofitable: TTM net income -$149.83M",
-        "Short interest 22% of float"
+        "Short interest 24% of float"
       ],
       "analystRating": "Strong Buy (13 analysts)",
       "priceTarget": 13.0,
@@ -296,9 +234,9 @@
       ],
       "grades": {
         "growth": "A",
-        "value": "C+",
-        "momentum": "C-",
-        "profitability": "D"
+        "value": "C",
+        "momentum": "D",
+        "profitability": "D-"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -311,25 +249,87 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 8.05,
+        "evSales": 8.42,
         "grossMarginPct": 88.175,
         "operatingMarginPct": -81.004,
         "netMarginPct": -88.185,
         "fcfMarginPct": -71.17,
-        "chg3mPct": -31.39,
-        "chg6mPct": 0.66,
-        "chg1yPct": -14.53,
-        "relStrength1yPct": -26.94,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": -27.62,
+        "chg6mPct": 9.91,
+        "chg1yPct": -9.32,
+        "relStrength1yPct": -21.24,
+        "priceAsOf": "2026-10-29"
+      }
+    },
+    {
+      "company": "Silicon Motion Technology Corporation",
+      "ticker": "SIMO",
+      "sector": "Technology – Semiconductors",
+      "price": 227.75,
+      "priceDate": "2026-10-29",
+      "marketCap": "$7.72B",
+      "forwardPE": 11.93,
+      "peg": 0.219,
+      "revenueGrowth": "+104.40% YoY (TTM ending Sep 2026; revenue $1.63B)",
+      "score": 79,
+      "riskLevel": "High",
+      "drivers": [
+        "Revenue growth +104.4% YoY (TTM) → 28/40",
+        "Acceleration: TTM 104.4% vs FY2025 10.2% → 5/5",
+        "Momentum: 1-yr price +126.4% vs S&P 500 (SPY) +11.9% = relative strength +114.5% → 25/25",
+        "Upside to target +57.9% → 12/20",
+        "Consensus Strong Buy (13) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 53.6% vs 48.6% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended September 30, 2026) revenue +132% YoY; consensus sees revenue +121% this fiscal year and +37% next.",
+      "fundamentals": "TTM revenue $1.63B, net income $315.97M, gross margin 50.54%; market cap $7.72B, net debt $280.59M.",
+      "risks": [
+        "No data-driven red flags; check the latest earnings call"
+      ],
+      "analystRating": "Strong Buy (13 analysts)",
+      "priceTarget": 359.73,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/simo/statistics/",
+        "https://stockanalysis.com/stocks/simo/revenue/",
+        "https://stockanalysis.com/stocks/simo/forecast/"
+      ],
+      "grades": {
+        "growth": "C-",
+        "value": "A-",
+        "momentum": "A-",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 104.4,
+        "forwardPE": 11.93,
+        "peg": 0.219,
+        "epsGrowth3yPct": 78.64,
+        "evSales": 4.9,
+        "grossMarginPct": 50.538,
+        "operatingMarginPct": 21.301,
+        "netMarginPct": 19.363,
+        "fcfMarginPct": -24.9,
+        "chg3mPct": 8.62,
+        "chg6mPct": 4.71,
+        "chg1yPct": 126.39,
+        "relStrength1yPct": 114.47,
+        "priceAsOf": "2026-10-29"
       }
     },
     {
       "company": "Verastem",
       "ticker": "VSTM",
       "sector": "Health Care – Biotechnology",
-      "price": 9.835,
-      "priceDate": "2026-10-28",
-      "marketCap": "$1.19B",
+      "price": 9.66,
+      "priceDate": "2026-10-29",
+      "marketCap": "$1.17B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+3995.74% YoY (TTM ending Jun 2026; revenue $87.53M)",
@@ -338,31 +338,31 @@
       "drivers": [
         "Revenue growth +3995.7% YoY (TTM) → 40/40",
         "Acceleration: TTM 3995.7% vs FY2025 209.1% → 5/5",
-        "Momentum: 1-yr price +11.1% vs S&P 500 (SPY) +12.4% = relative strength -1.3% → 8/25",
-        "Upside to target +75.1% → 15/20",
+        "Momentum: 1-yr price +9.8% vs S&P 500 (SPY) +11.9% = relative strength -2.2% → 8/25",
+        "Upside to target +77.1% → 15/20",
         "Consensus Strong Buy (10) → 10/10",
         "Gross-margin trend (not scored): latest quarter 90.6% vs 85.1% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 2 raised, 0 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +1775% YoY; consensus sees revenue +260% this fiscal year and +43% next.",
-      "fundamentals": "TTM revenue $87.53M, net income -$202.70M, gross margin 87.64%; market cap $1.19B, net cash $52.02M.",
+      "fundamentals": "TTM revenue $87.53M, net income -$202.70M, gross margin 87.64%; market cap $1.17B, net cash $52.02M.",
       "risks": [
         "Early commercial launch: revenue depends on one or two products; clinical, regulatory and reimbursement risk",
         "Unprofitable: TTM net income -$202.70M",
         "Dilution: share count +69.5% YoY"
       ],
       "analystRating": "Strong Buy (10 analysts)",
-      "priceTarget": 17.22,
+      "priceTarget": 17.11,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/vstm/statistics/",
         "https://stockanalysis.com/stocks/vstm/revenue/",
         "https://stockanalysis.com/stocks/vstm/forecast/"
       ],
       "grades": {
-        "growth": "A",
+        "growth": "A+",
         "value": "D",
         "momentum": "A",
-        "profitability": "D-"
+        "profitability": "F"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -375,103 +375,41 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 13.06,
+        "evSales": 12.82,
         "grossMarginPct": 87.645,
         "operatingMarginPct": -182.57,
         "netMarginPct": -231.586,
         "fcfMarginPct": -185.31,
-        "chg3mPct": 57.87,
-        "chg6mPct": 80.13,
-        "chg1yPct": 11.13,
-        "relStrength1yPct": -1.28,
-        "priceAsOf": "2026-10-28"
-      }
-    },
-    {
-      "company": "SK hynix Inc.",
-      "ticker": "SKHY",
-      "sector": "Technology – Semiconductors",
-      "price": 164.7,
-      "priceDate": "2026-10-28",
-      "marketCap": "$827.40B",
-      "forwardPE": 3.84,
-      "peg": "n/a",
-      "revenueGrowth": "+145.00% YoY (TTM ending Jun 2026; revenue $122.16B, KRW 189.17T as reported)",
-      "score": 78,
-      "riskLevel": "High",
-      "drivers": [
-        "Revenue growth +145.0% YoY (TTM) → 39/40",
-        "Acceleration: TTM 145.0% vs FY2025 46.8% → 5/5",
-        "Momentum (IPO under a year): 3-month price +29.9% vs SPY +5.9% = relative strength +24.0% → 12/25",
-        "Upside to target +58.3% → 12/20",
-        "Consensus Strong Buy (15) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 83.2% vs 53.9% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 2 raised, 1 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +257% YoY; consensus sees revenue +274% this fiscal year and +56% next.",
-      "fundamentals": "TTM revenue $122.16B, net income $104.59B, gross margin 76.27%; market cap $827.40B, net cash $43.18B. Financials are reported in KRW (TTM revenue KRW 189.17T as reported); the dollar amounts above are StockAnalysis's US-dollar conversions.",
-      "risks": [
-        "High volatility (beta 2.39)"
-      ],
-      "analystRating": "Strong Buy (15 analysts)",
-      "priceTarget": 260.64,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/skhy/statistics/",
-        "https://stockanalysis.com/stocks/skhy/revenue/",
-        "https://stockanalysis.com/stocks/skhy/forecast/"
-      ],
-      "grades": {
-        "growth": "C+",
-        "value": "A-",
-        "momentum": "A+",
-        "profitability": "A+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "1/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 145.0,
-        "forwardPE": 3.84,
-        "peg": null,
-        "epsGrowth3yPct": 113.36,
-        "evSales": 6.56,
-        "grossMarginPct": 76.268,
-        "operatingMarginPct": 68.037,
-        "netMarginPct": 85.619,
-        "fcfMarginPct": 48.471,
-        "chg3mPct": 26.53,
-        "chg6mPct": null,
-        "chg1yPct": null,
-        "relStrength1yPct": null,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": 60.73,
+        "chg6mPct": 78.89,
+        "chg1yPct": 9.77,
+        "relStrength1yPct": -2.15,
+        "priceAsOf": "2026-10-29"
       }
     },
     {
       "company": "Syndax Pharmaceuticals",
       "ticker": "SNDX",
       "sector": "Health Care – Biotechnology",
-      "price": 14.32,
-      "priceDate": "2026-10-28",
-      "marketCap": "$1.28B",
+      "price": 14.15,
+      "priceDate": "2026-10-29",
+      "marketCap": "$1.26B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+222.65% YoY (TTM ending Jun 2026; revenue $252.25M)",
-      "score": 77,
+      "score": 78,
       "riskLevel": "Very High",
       "drivers": [
         "Revenue growth +222.7% YoY (TTM) → 40/40",
         "Acceleration: TTM 222.7% vs FY2025 627.8% → 0/5",
-        "Momentum: 1-yr price +6.0% vs S&P 500 (SPY) +12.4% = relative strength -6.4% → 7/25",
-        "Upside to target +160.3% → 20/20",
+        "Momentum: 1-yr price +7.0% vs S&P 500 (SPY) +11.9% = relative strength -4.9% → 8/25",
+        "Upside to target +163.4% → 20/20",
         "Consensus Strong Buy (12) → 10/10",
         "Gross-margin trend (not scored): latest quarter 2.1% vs -67.3% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +92% YoY; consensus sees revenue +82% this fiscal year and +46% next.",
-      "fundamentals": "TTM revenue $252.25M, net income -$220.76M, gross margin -8.01%; market cap $1.28B, net debt $35.12M.",
+      "fundamentals": "TTM revenue $252.25M, net income -$220.76M, gross margin -8.01%; market cap $1.26B, net debt $35.12M.",
       "risks": [
         "Early commercial launch: revenue depends on one or two products; clinical, regulatory and reimbursement risk",
         "Unprofitable: TTM net income -$220.76M",
@@ -485,9 +423,9 @@
         "https://stockanalysis.com/stocks/sndx/forecast/"
       ],
       "grades": {
-        "growth": "C",
-        "value": "B+",
-        "momentum": "C-",
+        "growth": "C+",
+        "value": "B",
+        "momentum": "D-",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -501,25 +439,87 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 5.21,
+        "evSales": 5.15,
         "grossMarginPct": -8.007,
         "operatingMarginPct": -76.975,
         "netMarginPct": -87.518,
         "fcfMarginPct": -87.56,
-        "chg3mPct": -27.05,
-        "chg6mPct": -32.16,
-        "chg1yPct": 6.0,
-        "relStrength1yPct": -6.41,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": -26.38,
+        "chg6mPct": -31.41,
+        "chg1yPct": 7.03,
+        "relStrength1yPct": -4.89,
+        "priceAsOf": "2026-10-29"
+      }
+    },
+    {
+      "company": "SK hynix Inc.",
+      "ticker": "SKHY",
+      "sector": "Technology – Semiconductors",
+      "price": 162.09,
+      "priceDate": "2026-10-29",
+      "marketCap": "$770.73B",
+      "forwardPE": 5.02,
+      "peg": "n/a",
+      "revenueGrowth": "+220.31% YoY (TTM ending Sep 2026; revenue $198.83B, KRW 269.34T as reported)",
+      "score": 76,
+      "riskLevel": "High",
+      "drivers": [
+        "Revenue growth +220.3% YoY (TTM) → 40/40",
+        "Acceleration: TTM 220.3% vs FY2025 46.8% → 5/5",
+        "Momentum (IPO under a year): 3-month price +8.8% vs SPY +3.7% = relative strength +5.1% → 9/25",
+        "Upside to target +60.8% → 12/20",
+        "Consensus Strong Buy (15) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 85.7% vs 57.4% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 2 raised, 1 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended September 30, 2026) revenue +328% YoY; consensus sees revenue +274% this fiscal year and +58% next.",
+      "fundamentals": "TTM revenue $198.83B, net income $139.72B, gross margin 77.38%; market cap $770.73B, net cash $72.83B. Financials are reported in KRW (TTM revenue KRW 269.34T as reported); the dollar amounts above are StockAnalysis's US-dollar conversions.",
+      "risks": [
+        "High volatility (beta 2.39)"
+      ],
+      "analystRating": "Strong Buy (15 analysts)",
+      "priceTarget": 260.64,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/skhy/statistics/",
+        "https://stockanalysis.com/stocks/skhy/revenue/",
+        "https://stockanalysis.com/stocks/skhy/forecast/"
+      ],
+      "grades": {
+        "growth": "B",
+        "value": "A",
+        "momentum": "A-",
+        "profitability": "A+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "1/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 220.31,
+        "forwardPE": 5.02,
+        "peg": null,
+        "epsGrowth3yPct": 116.29,
+        "evSales": 3.51,
+        "grossMarginPct": 77.381,
+        "operatingMarginPct": 74.5,
+        "netMarginPct": 70.27,
+        "fcfMarginPct": 48.471,
+        "chg3mPct": 27.84,
+        "chg6mPct": null,
+        "chg1yPct": null,
+        "relStrength1yPct": null,
+        "priceAsOf": "2026-10-29"
       }
     },
     {
       "company": "Red Cat Holdings",
       "ticker": "RCAT",
       "sector": "Industrials – Aerospace & Defense",
-      "price": 4.91,
-      "priceDate": "2026-10-28",
-      "marketCap": "$749.83M",
+      "price": 5.05,
+      "priceDate": "2026-10-29",
+      "marketCap": "$771.21M",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+866.90% YoY (TTM ending Jun 2026; revenue $71.54M)",
@@ -528,14 +528,14 @@
       "drivers": [
         "Revenue growth +866.9% YoY (TTM) → 40/40",
         "Acceleration: TTM 866.9% vs FY2025 128.3% → 5/5",
-        "Momentum: 1-yr price -55.6% vs S&P 500 (SPY) +12.4% = relative strength -68.1% → 0/25",
-        "Upside to target +217.1% → 20/20",
+        "Momentum: 1-yr price -55.6% vs S&P 500 (SPY) +11.9% = relative strength -67.5% → 0/25",
+        "Upside to target +208.3% → 20/20",
         "Consensus Strong Buy (7) → 10/10",
         "Gross-margin trend (not scored): latest quarter 16.1% vs 11.7% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +527% YoY; consensus sees revenue +271% this fiscal year and +42% next.",
-      "fundamentals": "TTM revenue $71.54M, net income -$97.48M, gross margin 9.75%; market cap $749.83M, net cash $310.68M.",
+      "fundamentals": "TTM revenue $71.54M, net income -$97.48M, gross margin 9.75%; market cap $771.21M, net cash $310.68M.",
       "risks": [
         "Lumpy, contract-driven revenue and launch/mission execution risk",
         "Unprofitable: TTM net income -$97.48M",
@@ -550,7 +550,7 @@
       ],
       "grades": {
         "growth": "A-",
-        "value": "B",
+        "value": "B-",
         "momentum": "F",
         "profitability": "F"
       },
@@ -565,25 +565,25 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 6.14,
+        "evSales": 6.44,
         "grossMarginPct": 9.75,
         "operatingMarginPct": -150.149,
         "netMarginPct": -136.265,
         "fcfMarginPct": -220.44,
-        "chg3mPct": -34.09,
-        "chg6mPct": -56.7,
-        "chg1yPct": -55.65,
-        "relStrength1yPct": -68.06,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": -25.41,
+        "chg6mPct": -54.38,
+        "chg1yPct": -55.62,
+        "relStrength1yPct": -67.54,
+        "priceAsOf": "2026-10-29"
       }
     },
     {
       "company": "IonQ",
       "ticker": "IONQ",
       "sector": "Technology – Quantum Computing",
-      "price": 32.43,
-      "priceDate": "2026-10-28",
-      "marketCap": "$13.93B",
+      "price": 31.72,
+      "priceDate": "2026-10-29",
+      "marketCap": "$13.62B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+370.64% YoY (TTM ending Jun 2026; revenue $246.47M)",
@@ -592,14 +592,14 @@
       "drivers": [
         "Revenue growth +370.6% YoY (TTM) → 40/40",
         "Acceleration: TTM 370.6% vs FY2025 201.8% → 5/5",
-        "Momentum: 1-yr price -43.2% vs S&P 500 (SPY) +12.4% = relative strength -55.7% → 0/25",
-        "Upside to target +97.5% → 20/20",
+        "Momentum: 1-yr price -48.1% vs S&P 500 (SPY) +11.9% = relative strength -60.0% → 0/25",
+        "Upside to target +102.0% → 20/20",
         "Consensus Strong Buy (14) → 10/10",
         "Gross-margin trend (not scored): latest quarter 26.3% vs 60.6% a year earlier → margin contracting",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +287% YoY; consensus sees revenue +250% this fiscal year and +78% next.",
-      "fundamentals": "TTM revenue $246.47M, net income -$1.36B, gross margin 30.85%; market cap $13.93B, net cash $2.06B.",
+      "fundamentals": "TTM revenue $246.47M, net income -$1.36B, gross margin 30.85%; market cap $13.62B, net cash $2.06B.",
       "risks": [
         "Pre-profit technology with long commercialization timeline",
         "Unprofitable: TTM net income -$1.36B",
@@ -615,7 +615,7 @@
       "grades": {
         "growth": "B",
         "value": "F",
-        "momentum": "D+",
+        "momentum": "F",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -629,89 +629,25 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 48.12,
+        "evSales": 46.89,
         "grossMarginPct": 30.854,
         "operatingMarginPct": -381.579,
         "netMarginPct": -553.27,
         "fcfMarginPct": -196.32,
-        "chg3mPct": -4.28,
-        "chg6mPct": -24.72,
-        "chg1yPct": -43.25,
-        "relStrength1yPct": -55.66,
-        "priceAsOf": "2026-10-28"
-      }
-    },
-    {
-      "company": "Insmed",
-      "ticker": "INSM",
-      "sector": "Health Care – Biotechnology",
-      "price": 96.98,
-      "priceDate": "2026-10-28",
-      "marketCap": "$21.18B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+239.97% YoY (TTM ending Sep 2026; revenue $1.14B)",
-      "score": 75,
-      "riskLevel": "High",
-      "drivers": [
-        "Revenue growth +240.0% YoY (TTM) → 40/40",
-        "Acceleration: TTM 240.0% vs FY2025 66.7% → 5/5",
-        "Momentum: 1-yr price -41.3% vs S&P 500 (SPY) +12.4% = relative strength -53.7% → 0/25",
-        "Upside to target +102.2% → 20/20",
-        "Consensus Strong Buy (24) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 84.2% vs 73.9% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended September 30, 2026) revenue +268% YoY; consensus sees revenue +198% this fiscal year and +61% next.",
-      "fundamentals": "TTM revenue $1.14B, net income -$875.31M, gross margin 83.45%; market cap $21.18B, net cash $420.59M.",
-      "risks": [
-        "Early commercial launch: revenue depends on one or two products; clinical, regulatory and reimbursement risk",
-        "Unprofitable: TTM net income -$875.31M",
-        "Dilution: share count +18.7% YoY"
-      ],
-      "analystRating": "Strong Buy (24 analysts)",
-      "priceTarget": 196.14,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/insm/statistics/",
-        "https://stockanalysis.com/stocks/insm/revenue/",
-        "https://stockanalysis.com/stocks/insm/forecast/"
-      ],
-      "grades": {
-        "growth": "B-",
-        "value": "D-",
-        "momentum": "D-",
-        "profitability": "C-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 239.97,
-        "forwardPE": null,
-        "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 18.25,
-        "grossMarginPct": 83.455,
-        "operatingMarginPct": -71.433,
-        "netMarginPct": -76.941,
-        "fcfMarginPct": -71.0,
-        "chg3mPct": -6.87,
-        "chg6mPct": -28.13,
-        "chg1yPct": -41.33,
-        "relStrength1yPct": -53.74,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": -0.84,
+        "chg6mPct": -24.67,
+        "chg1yPct": -48.09,
+        "relStrength1yPct": -60.01,
+        "priceAsOf": "2026-10-29"
       }
     },
     {
       "company": "Applied Digital",
       "ticker": "APLD",
       "sector": "Technology – AI Data Centers",
-      "price": 20.39,
-      "priceDate": "2026-10-28",
-      "marketCap": "$6.17B",
+      "price": 19.41,
+      "priceDate": "2026-10-29",
+      "marketCap": "$5.87B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+217.58% YoY (TTM ending Aug 2026; revenue $872.25M)",
@@ -720,14 +656,14 @@
       "drivers": [
         "Revenue growth +217.6% YoY (TTM) → 40/40",
         "Acceleration: TTM 217.6% vs FY2026 167.4% → 5/5",
-        "Momentum: 1-yr price -40.6% vs S&P 500 (SPY) +12.4% = relative strength -53.0% → 0/25",
-        "Upside to target +206.2% → 20/20",
+        "Momentum: 1-yr price -43.6% vs S&P 500 (SPY) +11.9% = relative strength -55.5% → 0/25",
+        "Upside to target +221.7% → 20/20",
         "Consensus Strong Buy (16) → 10/10",
         "Gross-margin trend (not scored): latest quarter 15.4% vs 27.1% a year earlier → margin contracting",
         "Analyst price-target revisions, last 90 days (not scored): 2 raised, 1 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended August 31, 2026) revenue +322% YoY; consensus sees revenue +60% this fiscal year and +101% next.",
-      "fundamentals": "TTM revenue $872.25M, net income -$468.84M, gross margin 21.65%; market cap $6.17B, net debt $3.53B.",
+      "fundamentals": "TTM revenue $872.25M, net income -$468.84M, gross margin 21.65%; market cap $5.87B, net debt $3.53B.",
       "risks": [
         "AI data-center buildout is capital-intensive; tenant concentration and financing risk",
         "Unprofitable: TTM net income -$468.84M",
@@ -742,7 +678,7 @@
       ],
       "grades": {
         "growth": "C",
-        "value": "C-",
+        "value": "D+",
         "momentum": "F",
         "profitability": "F"
       },
@@ -757,28 +693,26 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 11.12,
+        "evSales": 10.78,
         "grossMarginPct": 21.646,
         "operatingMarginPct": -26.285,
         "netMarginPct": -53.033,
         "fcfMarginPct": -510.79,
-        "chg3mPct": -23.4,
-        "chg6mPct": -36.5,
-        "chg1yPct": -40.61,
-        "relStrength1yPct": -53.02,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": -16.41,
+        "chg6mPct": -40.61,
+        "chg1yPct": -43.61,
+        "relStrength1yPct": -55.53,
+        "priceAsOf": "2026-10-29"
       }
-    }
-  ],
-  "bench": [
+    },
     {
       "company": "UroGen Pharma",
       "ticker": "URGN",
       "sector": "Health Care – Biotechnology",
-      "price": 33.75,
-      "priceDate": "2026-10-28",
-      "marketCap": "$1.65B",
-      "forwardPE": 24.17,
+      "price": 33.48,
+      "priceDate": "2026-10-29",
+      "marketCap": "$1.64B",
+      "forwardPE": 23.98,
       "peg": "n/a",
       "revenueGrowth": "+100.27% YoY (TTM ending Jun 2026; revenue $188.73M)",
       "score": 75,
@@ -786,14 +720,14 @@
       "drivers": [
         "Revenue growth +100.3% YoY (TTM) → 27/40",
         "Acceleration: TTM 100.3% vs FY2025 21.4% → 5/5",
-        "Momentum: 1-yr price +67.2% vs S&P 500 (SPY) +12.4% = relative strength +54.8% → 17/25",
-        "Upside to target +77.8% → 16/20",
+        "Momentum: 1-yr price +69.3% vs S&P 500 (SPY) +11.9% = relative strength +57.3% → 18/25",
+        "Upside to target +79.2% → 16/20",
         "Consensus Strong Buy (8) → 10/10",
         "Gross-margin trend (not scored): latest quarter 90.9% vs 85.3% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 2 raised, 0 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +199% YoY; consensus sees revenue +193% this fiscal year and +65% next.",
-      "fundamentals": "TTM revenue $188.73M, net income -$97.64M, gross margin 90.84%; market cap $1.65B, net debt $88.15M.",
+      "fundamentals": "TTM revenue $188.73M, net income -$97.64M, gross margin 90.84%; market cap $1.64B, net debt $88.15M.",
       "risks": [
         "Early commercial launch: revenue depends on one or two products; clinical, regulatory and reimbursement risk",
         "Unprofitable: TTM net income -$97.64M",
@@ -810,7 +744,7 @@
         "growth": "F",
         "value": "C-",
         "momentum": "B",
-        "profitability": "C+"
+        "profitability": "C"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -820,93 +754,30 @@
       },
       "metrics": {
         "revenueGrowthPct": 100.27,
-        "forwardPE": 24.17,
+        "forwardPE": 23.98,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 9.21,
+        "evSales": 9.14,
         "grossMarginPct": 90.845,
         "operatingMarginPct": -35.316,
         "netMarginPct": -51.732,
         "fcfMarginPct": -84.32,
-        "chg3mPct": -17.44,
-        "chg6mPct": 39.93,
-        "chg1yPct": 67.24,
-        "relStrength1yPct": 54.83,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 1
-    },
-    {
-      "company": "BridgeBio Pharma",
-      "ticker": "BBIO",
-      "sector": "Health Care – Biotechnology",
-      "price": 70.82,
-      "priceDate": "2026-10-28",
-      "marketCap": "$13.84B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+202.39% YoY (TTM ending Jun 2026; revenue $713.07M)",
-      "score": 73,
-      "riskLevel": "High",
-      "drivers": [
-        "Revenue growth +202.4% YoY (TTM) → 40/40",
-        "Acceleration: TTM 202.4% vs FY2025 126.3% → 5/5",
-        "Momentum: 1-yr price +9.8% vs S&P 500 (SPY) +12.4% = relative strength -2.6% → 8/25",
-        "Upside to target +52.2% → 10/20",
-        "Consensus Strong Buy (23) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 93.8% vs 96.7% a year earlier → margin contracting",
-        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 2 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +120% YoY; consensus sees revenue +107% this fiscal year and +60% next.",
-      "fundamentals": "TTM revenue $713.07M, net income -$691.87M, gross margin 94.44%; market cap $13.84B, net debt $2.65B.",
-      "risks": [
-        "Early commercial launch: revenue depends on one or two products; clinical, regulatory and reimbursement risk",
-        "Unprofitable: TTM net income -$691.87M"
-      ],
-      "analystRating": "Strong Buy (23 analysts)",
-      "priceTarget": 107.81,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/bbio/statistics/",
-        "https://stockanalysis.com/stocks/bbio/revenue/",
-        "https://stockanalysis.com/stocks/bbio/forecast/"
-      ],
-      "grades": {
-        "growth": "D+",
-        "value": "F",
-        "momentum": "B-",
-        "profitability": "C+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 202.39,
-        "forwardPE": null,
-        "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 23.14,
-        "grossMarginPct": 94.439,
-        "operatingMarginPct": -67.01,
-        "netMarginPct": -97.026,
-        "fcfMarginPct": -61.06,
-        "chg3mPct": -17.22,
-        "chg6mPct": 1.59,
-        "chg1yPct": 9.8,
-        "relStrength1yPct": -2.61,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 2
-    },
+        "chg3mPct": -17.23,
+        "chg6mPct": 43.44,
+        "chg1yPct": 69.26,
+        "relStrength1yPct": 57.34,
+        "priceAsOf": "2026-10-29"
+      }
+    }
+  ],
+  "bench": [
     {
       "company": "Firefly Aerospace",
       "ticker": "FLY",
       "sector": "Industrials – Aerospace & Defense",
-      "price": 19.85,
-      "priceDate": "2026-10-28",
-      "marketCap": "$3.32B",
+      "price": 19.87,
+      "priceDate": "2026-10-29",
+      "marketCap": "$3.33B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+179.17% YoY (TTM ending Jun 2026; revenue $287.01M)",
@@ -915,14 +786,14 @@
       "drivers": [
         "Revenue growth +179.2% YoY (TTM) → 40/40",
         "Acceleration: TTM 179.2% vs FY2025 162.9% → 5/5",
-        "Momentum: 1-yr price -23.0% vs S&P 500 (SPY) +12.4% = relative strength -35.4% → 2/25",
-        "Upside to target +91.4% → 18/20",
+        "Momentum: 1-yr price -20.7% vs S&P 500 (SPY) +11.9% = relative strength -32.6% → 3/25",
+        "Upside to target +91.2% → 18/20",
         "Consensus Buy (11) → 7/10",
         "Gross-margin trend (not scored): latest quarter 20.3% vs 25.7% a year earlier → margin contracting",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +657% YoY; consensus sees revenue +174% this fiscal year and +56% next.",
-      "fundamentals": "TTM revenue $287.01M, net income -$370.41M, gross margin 22.92%; market cap $3.32B, net cash $581.87M.",
+      "fundamentals": "TTM revenue $287.01M, net income -$370.41M, gross margin 22.92%; market cap $3.33B, net cash $581.87M.",
       "risks": [
         "Lumpy, contract-driven revenue and launch/mission execution risk",
         "Unprofitable: TTM net income -$370.41M",
@@ -936,9 +807,9 @@
         "https://stockanalysis.com/stocks/fly/forecast/"
       ],
       "grades": {
-        "growth": "D",
-        "value": "C",
-        "momentum": "C",
+        "growth": "D+",
+        "value": "C-",
+        "momentum": "D+",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -952,26 +823,90 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 9.55,
+        "evSales": 9.56,
         "grossMarginPct": 22.921,
         "operatingMarginPct": -106.049,
         "netMarginPct": -129.058,
         "fcfMarginPct": -113.76,
-        "chg3mPct": 2.74,
-        "chg6mPct": -41.98,
-        "chg1yPct": -22.97,
-        "relStrength1yPct": -35.38,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": 11.38,
+        "chg6mPct": -40.67,
+        "chg1yPct": -20.68,
+        "relStrength1yPct": -32.6,
+        "priceAsOf": "2026-10-29"
       },
-      "rank": 3
+      "rank": 1
+    },
+    {
+      "company": "BridgeBio Pharma",
+      "ticker": "BBIO",
+      "sector": "Health Care – Biotechnology",
+      "price": 70.73,
+      "priceDate": "2026-10-29",
+      "marketCap": "$13.83B",
+      "forwardPE": "n/a",
+      "peg": "n/a",
+      "revenueGrowth": "+167.27% YoY (TTM ending Sep 2026; revenue $945.54M)",
+      "score": 73,
+      "riskLevel": "High",
+      "drivers": [
+        "Revenue growth +167.3% YoY (TTM) → 40/40",
+        "Acceleration: TTM 167.3% vs FY2025 126.3% → 5/5",
+        "Momentum: 1-yr price +6.2% vs S&P 500 (SPY) +11.9% = relative strength -5.8% → 7/25",
+        "Upside to target +52.4% → 10/20",
+        "Consensus Strong Buy (23) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 94.2% vs 94.6% a year earlier → margin flat",
+        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 0 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended September 30, 2026) revenue +193% YoY; consensus sees revenue +107% this fiscal year and +60% next.",
+      "fundamentals": "TTM revenue $945.54M, net income -$592.12M, gross margin 94.34%; market cap $13.83B, net debt $1.84B.",
+      "risks": [
+        "Early commercial launch: revenue depends on one or two products; clinical, regulatory and reimbursement risk",
+        "Unprofitable: TTM net income -$592.12M"
+      ],
+      "analystRating": "Strong Buy (23 analysts)",
+      "priceTarget": 107.81,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/bbio/statistics/",
+        "https://stockanalysis.com/stocks/bbio/revenue/",
+        "https://stockanalysis.com/stocks/bbio/forecast/"
+      ],
+      "grades": {
+        "growth": "D",
+        "value": "F",
+        "momentum": "B-",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "1/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 167.27,
+        "forwardPE": null,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 16.57,
+        "grossMarginPct": 94.337,
+        "operatingMarginPct": -37.344,
+        "netMarginPct": -59.842,
+        "fcfMarginPct": -39.11,
+        "chg3mPct": -15.33,
+        "chg6mPct": -0.3,
+        "chg1yPct": 6.17,
+        "relStrength1yPct": -5.75,
+        "priceAsOf": "2026-10-29"
+      },
+      "rank": 2
     },
     {
       "company": "Nebius Group",
       "ticker": "NBIS",
       "sector": "Communication Services – AI Cloud",
-      "price": 182.34,
-      "priceDate": "2026-10-28",
-      "marketCap": "$49.98B",
+      "price": 171.99,
+      "priceDate": "2026-10-29",
+      "marketCap": "$47.14B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+443.56% YoY (TTM ending Jun 2026; revenue $1.36B)",
@@ -980,14 +915,14 @@
       "drivers": [
         "Revenue growth +443.6% YoY (TTM) → 40/40",
         "Acceleration: TTM 443.6% vs FY2025 479.0% → 0/5",
-        "Momentum: 1-yr price +49.7% vs S&P 500 (SPY) +12.4% = relative strength +37.3% → 15/25",
-        "Upside to target +54.1% → 11/20",
+        "Momentum: 1-yr price +37.5% vs S&P 500 (SPY) +11.9% = relative strength +25.6% → 13/25",
+        "Upside to target +63.4% → 13/20",
         "Consensus Buy (22) → 7/10",
         "Gross-margin trend (not scored): latest quarter 77.1% vs 71.4% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +454% YoY; consensus sees revenue +531% this fiscal year and +266% next.",
-      "fundamentals": "TTM revenue $1.36B, net income $42.40M, gross margin 74.26%; market cap $49.98B, net debt $2.15B.",
+      "fundamentals": "TTM revenue $1.36B, net income $42.40M, gross margin 74.26%; market cap $47.14B, net debt $2.15B.",
       "risks": [
         "Heavy capex and financing needs for AI infrastructure; customer concentration",
         "Dilution: share count +22.1% YoY",
@@ -1003,7 +938,7 @@
       "grades": {
         "growth": "B+",
         "value": "F",
-        "momentum": "A-",
+        "momentum": "B+",
         "profitability": "C-"
       },
       "gradeInputs": {
@@ -1017,36 +952,489 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 38.47,
+        "evSales": 36.38,
         "grossMarginPct": 74.26,
         "operatingMarginPct": -37.436,
         "netMarginPct": 3.129,
         "fcfMarginPct": -434.2,
-        "chg3mPct": 7.45,
-        "chg6mPct": 34.56,
-        "chg1yPct": 49.67,
-        "relStrength1yPct": 37.26,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": 16.04,
+        "chg6mPct": 21.81,
+        "chg1yPct": 37.48,
+        "relStrength1yPct": 25.56,
+        "priceAsOf": "2026-10-29"
+      },
+      "rank": 3
+    },
+    {
+      "company": "Intuitive Machines",
+      "ticker": "LUNR",
+      "sector": "Industrials – Space Infrastructure",
+      "price": 11.68,
+      "priceDate": "2026-10-29",
+      "marketCap": "$2.67B",
+      "forwardPE": "n/a",
+      "peg": "n/a",
+      "revenueGrowth": "+116.89% YoY (TTM ending Jun 2026; revenue $490.12M)",
+      "score": 72,
+      "riskLevel": "Very High",
+      "drivers": [
+        "Revenue growth +116.9% YoY (TTM) → 31/40",
+        "Acceleration: TTM 116.9% vs FY2025 -7.9% → 5/5",
+        "Momentum: 1-yr price -2.8% vs S&P 500 (SPY) +11.9% = relative strength -14.8% → 6/25",
+        "Upside to target +148.3% → 20/20",
+        "Consensus Strong Buy (10) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 17.4% vs -23.5% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 4 cut, 0 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended June 30, 2026) revenue +310% YoY; consensus sees revenue +338% this fiscal year and +27% next.",
+      "fundamentals": "TTM revenue $490.12M, net income -$131.20M, gross margin 16.35%; market cap $2.67B, net debt $114.09M.",
+      "risks": [
+        "Lumpy, contract-driven revenue and launch/mission execution risk",
+        "Unprofitable: TTM net income -$131.20M",
+        "Dilution: share count +44.6% YoY"
+      ],
+      "analystRating": "Strong Buy (10 analysts)",
+      "priceTarget": 29.0,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/lunr/statistics/",
+        "https://stockanalysis.com/stocks/lunr/revenue/",
+        "https://stockanalysis.com/stocks/lunr/forecast/"
+      ],
+      "grades": {
+        "growth": "F",
+        "value": "B-",
+        "momentum": "D-",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "1/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 116.89,
+        "forwardPE": null,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 5.69,
+        "grossMarginPct": 16.349,
+        "operatingMarginPct": -21.277,
+        "netMarginPct": -26.636,
+        "fcfMarginPct": -38.31,
+        "chg3mPct": 2.55,
+        "chg6mPct": -52.88,
+        "chg1yPct": -2.83,
+        "relStrength1yPct": -14.75,
+        "priceAsOf": "2026-10-29"
       },
       "rank": 4
+    },
+    {
+      "company": "Insmed",
+      "ticker": "INSM",
+      "sector": "Health Care – Biotechnology",
+      "price": 111.59,
+      "priceDate": "2026-10-29",
+      "marketCap": "$24.37B",
+      "forwardPE": "n/a",
+      "peg": "n/a",
+      "revenueGrowth": "+239.97% YoY (TTM ending Sep 2026; revenue $1.52B)",
+      "score": 71,
+      "riskLevel": "High",
+      "drivers": [
+        "Revenue growth +240.0% YoY (TTM) → 40/40",
+        "Acceleration: TTM 240.0% vs FY2025 66.7% → 5/5",
+        "Momentum: 1-yr price -33.2% vs S&P 500 (SPY) +11.9% = relative strength -45.1% → 1/25",
+        "Upside to target +74.1% → 15/20",
+        "Consensus Strong Buy (24) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 85.1% vs 79.4% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended September 30, 2026) revenue +268% YoY; consensus sees revenue +205% this fiscal year and +59% next.",
+      "fundamentals": "TTM revenue $1.52B, net income -$605.61M, gross margin 84.40%; market cap $24.37B, net cash $415.69M.",
+      "risks": [
+        "Early commercial launch: revenue depends on one or two products; clinical, regulatory and reimbursement risk",
+        "Unprofitable: TTM net income -$605.61M",
+        "Dilution: share count +13.7% YoY"
+      ],
+      "analystRating": "Strong Buy (24 analysts)",
+      "priceTarget": 194.23,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/insm/statistics/",
+        "https://stockanalysis.com/stocks/insm/revenue/",
+        "https://stockanalysis.com/stocks/insm/forecast/"
+      ],
+      "grades": {
+        "growth": "B-",
+        "value": "F",
+        "momentum": "C-",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "1/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 239.97,
+        "forwardPE": null,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 15.76,
+        "grossMarginPct": 84.401,
+        "operatingMarginPct": -41.661,
+        "netMarginPct": -39.85,
+        "fcfMarginPct": -41.3,
+        "chg3mPct": 8.21,
+        "chg6mPct": -17.36,
+        "chg1yPct": -33.16,
+        "relStrength1yPct": -45.08,
+        "priceAsOf": "2026-10-29"
+      },
+      "rank": 5
+    },
+    {
+      "company": "AXT Inc",
+      "ticker": "AXTI",
+      "sector": "Technology – Semiconductors",
+      "price": 60.88,
+      "priceDate": "2026-10-29",
+      "marketCap": "$3.91B",
+      "forwardPE": 32.42,
+      "peg": "n/a",
+      "revenueGrowth": "+89.14% YoY (TTM ending Sep 2026; revenue $170.96M)",
+      "score": 71,
+      "riskLevel": "High",
+      "drivers": [
+        "Revenue growth +89.1% YoY (TTM) → 24/40",
+        "Acceleration: TTM 89.1% vs FY2025 -11.1% → 5/5",
+        "Momentum: 1-yr price +761.1% vs S&P 500 (SPY) +11.9% = relative strength +749.2% → 25/25",
+        "Upside to target +50.5% → 10/20",
+        "Consensus Buy (5) → 7/10",
+        "Gross-margin trend (not scored): latest quarter 56.0% vs 22.3% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 1 other (initiations, reiterations or undisclosed targets) across the latest 1 actions"
+      ],
+      "trend": "Latest quarter (ended September 30, 2026) revenue +163% YoY; consensus sees revenue +147% this fiscal year and +111% next.",
+      "fundamentals": "TTM revenue $170.96M, net income $31.51M, gross margin 44.02%; market cap $3.91B, net cash $396.13M.",
+      "risks": [
+        "Dilution: share count +31.7% YoY",
+        "Short interest 19% of float"
+      ],
+      "analystRating": "Buy (5 analysts)",
+      "priceTarget": 91.6,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/axti/statistics/",
+        "https://stockanalysis.com/stocks/axti/revenue/",
+        "https://stockanalysis.com/stocks/axti/forecast/"
+      ],
+      "rank": 6,
+      "metrics": {
+        "revenueGrowthPct": 89.14,
+        "forwardPE": 32.42,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 20.54,
+        "grossMarginPct": 44.024,
+        "operatingMarginPct": 19.555,
+        "netMarginPct": 18.532,
+        "fcfMarginPct": -11.44,
+        "chg3mPct": 64.67,
+        "chg6mPct": -14.34,
+        "chg1yPct": 761.1,
+        "relStrength1yPct": 749.18,
+        "priceAsOf": "2026-10-29"
+      },
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "A",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "T1 Energy Inc.",
+      "ticker": "TE",
+      "sector": "Technology – Semiconductors",
+      "price": 2.86,
+      "priceDate": "2026-10-29",
+      "marketCap": "$842.20M",
+      "forwardPE": "n/a",
+      "peg": "n/a",
+      "revenueGrowth": "+426.99% YoY (TTM ending Jun 2026; revenue $996.85M)",
+      "score": 70,
+      "riskLevel": "Very High",
+      "drivers": [
+        "Revenue growth +427.0% YoY (TTM) → 40/40",
+        "Acceleration: TTM 427.0% vs FY2025 25572.8% → 0/5",
+        "Momentum: 1-yr price -20.6% vs S&P 500 (SPY) +11.9% = relative strength -32.5% → 3/25",
+        "Upside to target +175.9% → 20/20",
+        "Consensus Buy (9) → 7/10",
+        "Gross-margin trend (not scored): latest quarter 9.9% vs 24.7% a year earlier → margin contracting",
+        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 4 actions"
+      ],
+      "trend": "Latest quarter (ended June 30, 2026) revenue +88% YoY; consensus sees revenue +36% this fiscal year and +34% next.",
+      "fundamentals": "TTM revenue $996.85M, net income -$396.79M, gross margin 5.90%; market cap $842.20M, net debt $699.39M.",
+      "risks": [
+        "Unprofitable: TTM net income -$396.79M",
+        "Dilution: share count +58.4% YoY",
+        "High volatility (beta 2.36)"
+      ],
+      "analystRating": "Buy (9 analysts)",
+      "priceTarget": 7.89,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/te/statistics/",
+        "https://stockanalysis.com/stocks/te/revenue/",
+        "https://stockanalysis.com/stocks/te/forecast/"
+      ],
+      "grades": {
+        "growth": "B+",
+        "value": "A+",
+        "momentum": "F",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "1/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 426.99,
+        "forwardPE": null,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 1.55,
+        "grossMarginPct": 5.901,
+        "operatingMarginPct": -19.448,
+        "netMarginPct": -38.485,
+        "fcfMarginPct": -18.54,
+        "chg3mPct": -23.12,
+        "chg6mPct": -41.51,
+        "chg1yPct": -20.56,
+        "relStrength1yPct": -32.48,
+        "priceAsOf": "2026-10-29"
+      },
+      "rank": 7
+    },
+    {
+      "company": "QXO, Inc.",
+      "ticker": "QXO",
+      "sector": "Industrials – Industrial Distribution",
+      "price": 11.38,
+      "priceDate": "2026-10-29",
+      "marketCap": "$11.81B",
+      "forwardPE": 28.02,
+      "peg": 0.667,
+      "revenueGrowth": "+408.30% YoY (TTM ending Jun 2026; revenue $9.90B)",
+      "score": 70,
+      "riskLevel": "Very High",
+      "drivers": [
+        "Revenue growth +408.3% YoY (TTM) → 40/40",
+        "Acceleration: TTM 408.3% vs FY2025 11925.0% → 0/5",
+        "Momentum: 1-yr price -38.5% vs S&P 500 (SPY) +11.9% = relative strength -50.4% → 0/25",
+        "Upside to target +111.4% → 20/20",
+        "Consensus Strong Buy (19) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 24.7% vs 25.2% a year earlier → margin flat",
+        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 4 cut, 1 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended June 30, 2026) revenue +70% YoY; consensus sees revenue +105% this fiscal year and +32% next.",
+      "fundamentals": "TTM revenue $9.90B, net income -$656.30M, gross margin 24.54%; market cap $11.81B, net debt $4.26B.",
+      "risks": [
+        "Growth is acquisition-driven (Beacon Roofing); integration, leverage and further-deal risk",
+        "Unprofitable: TTM net income -$656.30M",
+        "Dilution: share count +60.9% YoY"
+      ],
+      "analystRating": "Strong Buy (19 analysts)",
+      "priceTarget": 24.06,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/qxo/statistics/",
+        "https://stockanalysis.com/stocks/qxo/revenue/",
+        "https://stockanalysis.com/stocks/qxo/forecast/"
+      ],
+      "grades": {
+        "growth": "C+",
+        "value": "D+",
+        "momentum": "F",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 408.3,
+        "forwardPE": 28.02,
+        "peg": 0.667,
+        "epsGrowth3yPct": 41.14,
+        "evSales": 1.62,
+        "grossMarginPct": 24.544,
+        "operatingMarginPct": -0.871,
+        "netMarginPct": -5.167,
+        "fcfMarginPct": 1.427,
+        "chg3mPct": -15.07,
+        "chg6mPct": -41.97,
+        "chg1yPct": -38.45,
+        "relStrength1yPct": -50.37,
+        "priceAsOf": "2026-10-29"
+      },
+      "rank": 8
+    },
+    {
+      "company": "Energy Vault Holdings Inc.",
+      "ticker": "NRGV",
+      "sector": "Miscellaneous – Industrial Machinery/Components",
+      "price": 3.27,
+      "priceDate": "2026-10-29",
+      "marketCap": "$594.62M",
+      "forwardPE": "n/a",
+      "peg": "n/a",
+      "revenueGrowth": "+336.76% YoY (TTM ending Jun 2026; revenue $225.87M)",
+      "score": 70,
+      "riskLevel": "Very High",
+      "drivers": [
+        "Revenue growth +336.8% YoY (TTM) → 40/40",
+        "Acceleration: TTM 336.8% vs FY2025 340.9% → 0/5",
+        "Momentum: 1-yr price +0.3% vs S&P 500 (SPY) +11.9% = relative strength -11.6% → 6/25",
+        "Upside to target +82.3% → 16/20",
+        "Consensus Buy (5) → 7/10",
+        "Gross-margin trend (not scored): latest quarter 31.0% vs 29.6% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended June 30, 2026) revenue +104% YoY; consensus sees revenue +45% this fiscal year and +65% next.",
+      "fundamentals": "TTM revenue $225.87M, net income -$112.15M, gross margin 22.47%; market cap $594.62M, net debt $151.59M.",
+      "risks": [
+        "Unprofitable: TTM net income -$112.15M",
+        "Dilution: share count +11.0% YoY",
+        "Short interest 23% of float"
+      ],
+      "analystRating": "Buy (5 analysts)",
+      "priceTarget": 5.96,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/nrgv/statistics/",
+        "https://stockanalysis.com/stocks/nrgv/revenue/",
+        "https://stockanalysis.com/stocks/nrgv/forecast/"
+      ],
+      "grades": {
+        "growth": "B-",
+        "value": "A-",
+        "momentum": "B-",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "1/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 336.76,
+        "forwardPE": null,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 3.3,
+        "grossMarginPct": 22.474,
+        "operatingMarginPct": -34.029,
+        "netMarginPct": -48.578,
+        "fcfMarginPct": -64.08,
+        "chg3mPct": 30.28,
+        "chg6mPct": -20.63,
+        "chg1yPct": 0.31,
+        "relStrength1yPct": -11.61,
+        "priceAsOf": "2026-10-29"
+      },
+      "rank": 9
+    },
+    {
+      "company": "Credo Technology Group Holding",
+      "ticker": "CRDO",
+      "sector": "Technology – Semiconductors",
+      "price": 165.29,
+      "priceDate": "2026-10-29",
+      "marketCap": "$31.07B",
+      "forwardPE": 22.66,
+      "peg": 0.453,
+      "revenueGrowth": "+165.11% YoY (TTM ending Aug 2026; revenue $1.59B)",
+      "score": 70,
+      "riskLevel": "High",
+      "drivers": [
+        "Revenue growth +165.1% YoY (TTM) → 40/40",
+        "Acceleration: TTM 165.1% vs FY2026 205.7% → 0/5",
+        "Momentum: 1-yr price -3.6% vs S&P 500 (SPY) +11.9% = relative strength -15.6% → 6/25",
+        "Upside to target +71.8% → 14/20",
+        "Consensus Strong Buy (20) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 64.5% vs 67.4% a year earlier → margin contracting",
+        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended August 1, 2026) revenue +115% YoY; consensus sees revenue +87% this fiscal year and +55% next.",
+      "fundamentals": "TTM revenue $1.59B, net income $538.30M, gross margin 67.07%; market cap $31.07B, net cash $738.05M.",
+      "risks": [
+        "Cyclical demand and customer concentration in AI/data-center spending",
+        "High volatility (beta 3.25)"
+      ],
+      "analystRating": "Strong Buy (20 analysts)",
+      "priceTarget": 284.05,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/crdo/statistics/",
+        "https://stockanalysis.com/stocks/crdo/revenue/",
+        "https://stockanalysis.com/stocks/crdo/forecast/"
+      ],
+      "grades": {
+        "growth": "D",
+        "value": "C",
+        "momentum": "C",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 165.11,
+        "forwardPE": 22.66,
+        "peg": 0.453,
+        "epsGrowth3yPct": 53.37,
+        "evSales": 19.06,
+        "grossMarginPct": 67.067,
+        "operatingMarginPct": 31.738,
+        "netMarginPct": 33.833,
+        "fcfMarginPct": 27.567,
+        "chg3mPct": -6.85,
+        "chg6mPct": -5.96,
+        "chg1yPct": -3.63,
+        "relStrength1yPct": -15.55,
+        "priceAsOf": "2026-10-29"
+      },
+      "rank": 10
     },
     {
       "company": "Amprius Technologies",
       "ticker": "AMPX",
       "sector": "Industrials – Electrical Equipment & Parts",
-      "price": 9.16,
-      "priceDate": "2026-10-28",
+      "price": 9.14,
+      "priceDate": "2026-10-29",
       "marketCap": "$1.34B",
-      "forwardPE": 5088.89,
+      "forwardPE": 5077.78,
       "peg": "n/a",
       "revenueGrowth": "+143.61% YoY (TTM ending Jun 2026; revenue $109.23M)",
-      "score": 71,
+      "score": 70,
       "riskLevel": "Very High",
       "drivers": [
         "Revenue growth +143.6% YoY (TTM) → 38/40",
         "Acceleration: TTM 143.6% vs FY2025 202.1% → 0/5",
-        "Momentum: 1-yr price -23.0% vs S&P 500 (SPY) +12.4% = relative strength -35.4% → 2/25",
-        "Upside to target +141.3% → 20/20",
+        "Momentum: 1-yr price -26.9% vs S&P 500 (SPY) +11.9% = relative strength -38.8% → 2/25",
+        "Upside to target +141.8% → 20/20",
         "Consensus Strong Buy (11) → 10/10",
         "Gross-margin trend (not scored): latest quarter 27.3% vs 8.9% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
@@ -1068,8 +1456,8 @@
       "grades": {
         "growth": "F",
         "value": "F",
-        "momentum": "D-",
-        "profitability": "C"
+        "momentum": "F",
+        "profitability": "D+"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -1079,368 +1467,45 @@
       },
       "metrics": {
         "revenueGrowthPct": 143.61,
-        "forwardPE": 5088.89,
+        "forwardPE": 5077.78,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 11.63,
+        "evSales": 11.6,
         "grossMarginPct": 22.252,
         "operatingMarginPct": -17.05,
         "netMarginPct": -33.401,
         "fcfMarginPct": -53.5,
-        "chg3mPct": 0.33,
-        "chg6mPct": -53.48,
-        "chg1yPct": -23.03,
-        "relStrength1yPct": -35.44,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": 8.29,
+        "chg6mPct": -55.06,
+        "chg1yPct": -26.88,
+        "relStrength1yPct": -38.8,
+        "priceAsOf": "2026-10-29"
       },
-      "rank": 5
-    },
-    {
-      "company": "Intuitive Machines",
-      "ticker": "LUNR",
-      "sector": "Industrials – Space Infrastructure",
-      "price": 11.59,
-      "priceDate": "2026-10-28",
-      "marketCap": "$2.65B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+116.89% YoY (TTM ending Jun 2026; revenue $490.12M)",
-      "score": 71,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +116.9% YoY (TTM) → 31/40",
-        "Acceleration: TTM 116.9% vs FY2025 -7.9% → 5/5",
-        "Momentum: 1-yr price -6.2% vs S&P 500 (SPY) +12.4% = relative strength -18.6% → 5/25",
-        "Upside to target +150.2% → 20/20",
-        "Consensus Strong Buy (10) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 17.4% vs -23.5% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 4 cut, 0 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +310% YoY; consensus sees revenue +338% this fiscal year and +27% next.",
-      "fundamentals": "TTM revenue $490.12M, net income -$131.20M, gross margin 16.35%; market cap $2.65B, net debt $114.09M.",
-      "risks": [
-        "Lumpy, contract-driven revenue and launch/mission execution risk",
-        "Unprofitable: TTM net income -$131.20M",
-        "Dilution: share count +44.6% YoY"
-      ],
-      "analystRating": "Strong Buy (10 analysts)",
-      "priceTarget": 29.0,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/lunr/statistics/",
-        "https://stockanalysis.com/stocks/lunr/revenue/",
-        "https://stockanalysis.com/stocks/lunr/forecast/"
-      ],
-      "grades": {
-        "growth": "F",
-        "value": "B",
-        "momentum": "D",
-        "profitability": "D+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 116.89,
-        "forwardPE": null,
-        "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 5.65,
-        "grossMarginPct": 16.349,
-        "operatingMarginPct": -21.277,
-        "netMarginPct": -26.636,
-        "fcfMarginPct": -38.31,
-        "chg3mPct": -6.31,
-        "chg6mPct": -52.85,
-        "chg1yPct": -6.15,
-        "relStrength1yPct": -18.56,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 6
-    },
-    {
-      "company": "QXO, Inc.",
-      "ticker": "QXO",
-      "sector": "Industrials – Industrial Distribution",
-      "price": 10.86,
-      "priceDate": "2026-10-28",
-      "marketCap": "$11.27B",
-      "forwardPE": 26.18,
-      "peg": 0.623,
-      "revenueGrowth": "+408.30% YoY (TTM ending Jun 2026; revenue $9.90B)",
-      "score": 70,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +408.3% YoY (TTM) → 40/40",
-        "Acceleration: TTM 408.3% vs FY2025 11925.0% → 0/5",
-        "Momentum: 1-yr price -40.0% vs S&P 500 (SPY) +12.4% = relative strength -52.4% → 0/25",
-        "Upside to target +123.6% → 20/20",
-        "Consensus Strong Buy (19) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 24.7% vs 25.2% a year earlier → margin flat",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 4 cut, 1 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +70% YoY; consensus sees revenue +105% this fiscal year and +32% next.",
-      "fundamentals": "TTM revenue $9.90B, net income -$656.30M, gross margin 24.54%; market cap $11.27B, net debt $4.26B.",
-      "risks": [
-        "Growth is acquisition-driven (Beacon Roofing); integration, leverage and further-deal risk",
-        "Unprofitable: TTM net income -$656.30M",
-        "Dilution: share count +60.9% YoY"
-      ],
-      "analystRating": "Strong Buy (19 analysts)",
-      "priceTarget": 24.28,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/qxo/statistics/",
-        "https://stockanalysis.com/stocks/qxo/revenue/",
-        "https://stockanalysis.com/stocks/qxo/forecast/"
-      ],
-      "grades": {
-        "growth": "C-",
-        "value": "D+",
-        "momentum": "F",
-        "profitability": "B-"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 408.3,
-        "forwardPE": 26.18,
-        "peg": 0.623,
-        "epsGrowth3yPct": 41.14,
-        "evSales": 1.57,
-        "grossMarginPct": 24.544,
-        "operatingMarginPct": -0.871,
-        "netMarginPct": -5.167,
-        "fcfMarginPct": 1.427,
-        "chg3mPct": -23.79,
-        "chg6mPct": -44.62,
-        "chg1yPct": -40.0,
-        "relStrength1yPct": -52.41,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 7
-    },
-    {
-      "company": "Energy Vault Holdings Inc.",
-      "ticker": "NRGV",
-      "sector": "Miscellaneous – Industrial Machinery/Components",
-      "price": 3.22,
-      "priceDate": "2026-10-28",
-      "marketCap": "$585.52M",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+336.76% YoY (TTM ending Jun 2026; revenue $225.87M)",
-      "score": 70,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +336.8% YoY (TTM) → 40/40",
-        "Acceleration: TTM 336.8% vs FY2025 340.9% → 0/5",
-        "Momentum: 1-yr price -2.7% vs S&P 500 (SPY) +12.4% = relative strength -15.1% → 6/25",
-        "Upside to target +85.1% → 17/20",
-        "Consensus Buy (5) → 7/10",
-        "Gross-margin trend (not scored): latest quarter 31.0% vs 29.6% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +104% YoY; consensus sees revenue +45% this fiscal year and +65% next.",
-      "fundamentals": "TTM revenue $225.87M, net income -$112.15M, gross margin 22.47%; market cap $585.52M, net debt $151.59M.",
-      "risks": [
-        "Unprofitable: TTM net income -$112.15M",
-        "Dilution: share count +11.0% YoY",
-        "Short interest 23% of float"
-      ],
-      "analystRating": "Buy (5 analysts)",
-      "priceTarget": 5.96,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/nrgv/statistics/",
-        "https://stockanalysis.com/stocks/nrgv/revenue/",
-        "https://stockanalysis.com/stocks/nrgv/forecast/"
-      ],
-      "grades": {
-        "growth": "B-",
-        "value": "A",
-        "momentum": "C+",
-        "profitability": "D"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 336.76,
-        "forwardPE": null,
-        "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 3.26,
-        "grossMarginPct": 22.474,
-        "operatingMarginPct": -34.029,
-        "netMarginPct": -48.578,
-        "fcfMarginPct": -64.08,
-        "chg3mPct": 17.09,
-        "chg6mPct": -23.33,
-        "chg1yPct": -2.72,
-        "relStrength1yPct": -15.13,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 8
-    },
-    {
-      "company": "Credo Technology Group Holding",
-      "ticker": "CRDO",
-      "sector": "Technology – Semiconductors",
-      "price": 173.69,
-      "priceDate": "2026-10-28",
-      "marketCap": "$32.65B",
-      "forwardPE": 23.81,
-      "peg": 0.476,
-      "revenueGrowth": "+165.11% YoY (TTM ending Aug 2026; revenue $1.59B)",
-      "score": 70,
-      "riskLevel": "High",
-      "drivers": [
-        "Revenue growth +165.1% YoY (TTM) → 40/40",
-        "Acceleration: TTM 165.1% vs FY2026 205.7% → 0/5",
-        "Momentum: 1-yr price +7.1% vs S&P 500 (SPY) +12.4% = relative strength -5.3% → 7/25",
-        "Upside to target +63.5% → 13/20",
-        "Consensus Strong Buy (20) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 64.5% vs 67.4% a year earlier → margin contracting",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended August 1, 2026) revenue +115% YoY; consensus sees revenue +87% this fiscal year and +55% next.",
-      "fundamentals": "TTM revenue $1.59B, net income $538.30M, gross margin 67.07%; market cap $32.65B, net cash $738.05M.",
-      "risks": [
-        "Cyclical demand and customer concentration in AI/data-center spending",
-        "High volatility (beta 3.25)"
-      ],
-      "analystRating": "Strong Buy (20 analysts)",
-      "priceTarget": 284.05,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/crdo/statistics/",
-        "https://stockanalysis.com/stocks/crdo/revenue/",
-        "https://stockanalysis.com/stocks/crdo/forecast/"
-      ],
-      "grades": {
-        "growth": "D",
-        "value": "C",
-        "momentum": "B",
-        "profitability": "A"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 165.11,
-        "forwardPE": 23.81,
-        "peg": 0.476,
-        "epsGrowth3yPct": 53.37,
-        "evSales": 20.05,
-        "grossMarginPct": 67.067,
-        "operatingMarginPct": 31.738,
-        "netMarginPct": 33.833,
-        "fcfMarginPct": 27.567,
-        "chg3mPct": -9.67,
-        "chg6mPct": 4.68,
-        "chg1yPct": 7.1,
-        "relStrength1yPct": -5.31,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 9
-    },
-    {
-      "company": "Bloom Energy Corporation",
-      "ticker": "BE",
-      "sector": "Energy – Industrial Machinery/Components",
-      "price": 228.08,
-      "priceDate": "2026-10-28",
-      "marketCap": "$67.43B",
-      "forwardPE": 47.09,
-      "peg": 0.512,
-      "revenueGrowth": "+110.59% YoY (TTM ending Sep 2026; revenue $3.83B)",
-      "score": 70,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +110.6% YoY (TTM) → 29/40",
-        "Acceleration: TTM 110.6% vs FY2025 37.3% → 5/5",
-        "Momentum: 1-yr price +101.3% vs S&P 500 (SPY) +12.4% = relative strength +88.9% → 23/25",
-        "Upside to target +24.9% → 5/20",
-        "Consensus Buy (29) → 7/10",
-        "Gross-margin trend (not scored): latest quarter 34.0% vs 29.2% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended September 30, 2026) revenue +138% YoY; consensus sees revenue +124% this fiscal year and +56% next.",
-      "fundamentals": "TTM revenue $3.83B, net income $518.31M, gross margin 31.77%; market cap $67.43B, net debt $299.89M.",
-      "risks": [
-        "Dilution: share count +33.4% YoY",
-        "High volatility (beta 3.77)"
-      ],
-      "analystRating": "Buy (29 analysts)",
-      "priceTarget": 284.77,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/be/statistics/",
-        "https://stockanalysis.com/stocks/be/revenue/",
-        "https://stockanalysis.com/stocks/be/forecast/"
-      ],
-      "grades": {
-        "growth": "C+",
-        "value": "F",
-        "momentum": "A",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 110.59,
-        "forwardPE": 47.09,
-        "peg": 0.512,
-        "epsGrowth3yPct": 121.27,
-        "evSales": 17.69,
-        "grossMarginPct": 31.768,
-        "operatingMarginPct": 14.334,
-        "netMarginPct": 13.533,
-        "fcfMarginPct": 11.402,
-        "chg3mPct": 36.71,
-        "chg6mPct": 0.76,
-        "chg1yPct": 101.34,
-        "relStrength1yPct": 88.93,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 10
+      "rank": 11
     },
     {
       "company": "VSE Corporation",
       "ticker": "VSEC",
       "sector": "Consumer Discretionary – Military/Government/Technical",
-      "price": 146.11,
-      "priceDate": "2026-10-28",
-      "marketCap": "$4.60B",
-      "forwardPE": 19.82,
-      "peg": 0.544,
+      "price": 155.02,
+      "priceDate": "2026-10-29",
+      "marketCap": "$4.88B",
+      "forwardPE": 21.02,
+      "peg": 0.577,
       "revenueGrowth": "+271.24% YoY (TTM ending Jun 2026; revenue $1.36B)",
-      "score": 69,
+      "score": 68,
       "riskLevel": "High",
       "drivers": [
         "Revenue growth +271.2% YoY (TTM) → 40/40",
         "Acceleration: TTM 271.2% vs FY2025 41.5% → 5/5",
-        "Momentum: 1-yr price -20.0% vs S&P 500 (SPY) +12.4% = relative strength -32.5% → 3/25",
-        "Upside to target +71.4% → 14/20",
+        "Momentum: 1-yr price -14.1% vs S&P 500 (SPY) +11.9% = relative strength -26.0% → 4/25",
+        "Upside to target +61.6% → 12/20",
         "Consensus Buy (12) → 7/10",
         "Gross-margin trend (not scored): latest quarter 17.0% vs 13.8% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 2 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +65% YoY; consensus sees revenue +63% this fiscal year and +21% next.",
-      "fundamentals": "TTM revenue $1.36B, net income $75.06M, gross margin 15.62%; market cap $4.60B, net debt $950.31M.",
+      "fundamentals": "TTM revenue $1.36B, net income $75.06M, gross margin 15.62%; market cap $4.88B, net debt $950.31M.",
       "risks": [
         "Dilution: share count +28.0% YoY"
       ],
@@ -1452,9 +1517,9 @@
         "https://stockanalysis.com/stocks/vsec/forecast/"
       ],
       "grades": {
-        "growth": "F",
+        "growth": "D-",
         "value": "C+",
-        "momentum": "D+",
+        "momentum": "C-",
         "profitability": "B-"
       },
       "gradeInputs": {
@@ -1465,84 +1530,19 @@
       },
       "metrics": {
         "revenueGrowthPct": 271.24,
-        "forwardPE": 19.82,
-        "peg": 0.544,
+        "forwardPE": 21.02,
+        "peg": 0.577,
         "epsGrowth3yPct": 33.95,
-        "evSales": 4.09,
+        "evSales": 4.29,
         "grossMarginPct": 15.621,
         "operatingMarginPct": 12.136,
         "netMarginPct": 5.528,
         "fcfMarginPct": -0.08,
-        "chg3mPct": -26.7,
-        "chg6mPct": -17.03,
-        "chg1yPct": -20.04,
-        "relStrength1yPct": -32.45,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 11
-    },
-    {
-      "company": "T1 Energy Inc.",
-      "ticker": "TE",
-      "sector": "Technology – Semiconductors",
-      "price": 2.63,
-      "priceDate": "2026-10-28",
-      "marketCap": "$774.47M",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+426.99% YoY (TTM ending Jun 2026; revenue $996.85M)",
-      "score": 68,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +427.0% YoY (TTM) → 40/40",
-        "Acceleration: TTM 427.0% vs FY2025 25572.8% → 0/5",
-        "Momentum: 1-yr price -28.9% vs S&P 500 (SPY) +12.4% = relative strength -41.3% → 1/25",
-        "Upside to target +200.0% → 20/20",
-        "Consensus Buy (9) → 7/10",
-        "Gross-margin trend (not scored): latest quarter 9.9% vs 24.7% a year earlier → margin contracting",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 4 actions"
-      ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +88% YoY; consensus sees revenue +36% this fiscal year and +34% next.",
-      "fundamentals": "TTM revenue $996.85M, net income -$396.79M, gross margin 5.90%; market cap $774.47M, net debt $699.39M.",
-      "risks": [
-        "Unprofitable: TTM net income -$396.79M",
-        "Dilution: share count +58.4% YoY",
-        "High volatility (beta 2.36)"
-      ],
-      "analystRating": "Buy (9 analysts)",
-      "priceTarget": 7.89,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/te/statistics/",
-        "https://stockanalysis.com/stocks/te/revenue/",
-        "https://stockanalysis.com/stocks/te/forecast/"
-      ],
-      "grades": {
-        "growth": "B",
-        "value": "A+",
-        "momentum": "F",
-        "profitability": "D+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 426.99,
-        "forwardPE": null,
-        "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 1.48,
-        "grossMarginPct": 5.901,
-        "operatingMarginPct": -19.448,
-        "netMarginPct": -38.485,
-        "fcfMarginPct": -18.54,
-        "chg3mPct": -36.63,
-        "chg6mPct": -46.33,
-        "chg1yPct": -28.92,
-        "relStrength1yPct": -41.33,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": -16.2,
+        "chg6mPct": -3.22,
+        "chg1yPct": -14.08,
+        "relStrength1yPct": -26.0,
+        "priceAsOf": "2026-10-29"
       },
       "rank": 12
     },
@@ -1550,9 +1550,9 @@
       "company": "Madrigal Pharmaceuticals Inc.",
       "ticker": "MDGL",
       "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
-      "price": 431.0,
-      "priceDate": "2026-10-28",
-      "marketCap": "$9.96B",
+      "price": 431.7,
+      "priceDate": "2026-10-29",
+      "marketCap": "$9.97B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+149.04% YoY (TTM ending Jun 2026; revenue $1.28B)",
@@ -1561,14 +1561,14 @@
       "drivers": [
         "Revenue growth +149.0% YoY (TTM) → 40/40",
         "Acceleration: TTM 149.0% vs FY2025 432.1% → 0/5",
-        "Momentum: 1-yr price +0.4% vs S&P 500 (SPY) +12.4% = relative strength -12.0% → 6/25",
-        "Upside to target +59.0% → 12/20",
+        "Momentum: 1-yr price +2.4% vs S&P 500 (SPY) +11.9% = relative strength -9.5% → 7/25",
+        "Upside to target +58.7% → 12/20",
         "Consensus Strong Buy (19) → 10/10",
         "Gross-margin trend (not scored): latest quarter 89.0% vs 95.7% a year earlier → margin contracting",
-        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 1 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+        "Analyst price-target revisions, last 90 days (not scored): 1 raised, 2 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +71% YoY; consensus sees revenue +59% this fiscal year and +39% next.",
-      "fundamentals": "TTM revenue $1.28B, net income -$325.10M, gross margin 91.48%; market cap $9.96B, net cash $491.00M.",
+      "fundamentals": "TTM revenue $1.28B, net income -$325.10M, gross margin 91.48%; market cap $9.97B, net cash $491.00M.",
       "risks": [
         "Unprofitable: TTM net income -$325.10M",
         "Short interest 16% of float"
@@ -1582,9 +1582,9 @@
       ],
       "grades": {
         "growth": "F",
-        "value": "B-",
-        "momentum": "C+",
-        "profitability": "B"
+        "value": "C+",
+        "momentum": "D+",
+        "profitability": "B-"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -1597,90 +1597,154 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 7.37,
+        "evSales": 7.39,
         "grossMarginPct": 91.477,
         "operatingMarginPct": -25.127,
         "netMarginPct": -25.32,
         "fcfMarginPct": -16.07,
-        "chg3mPct": -20.01,
-        "chg6mPct": -16.58,
-        "chg1yPct": 0.42,
-        "relStrength1yPct": -11.99,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": -21.06,
+        "chg6mPct": -16.75,
+        "chg1yPct": 2.4,
+        "relStrength1yPct": -9.52,
+        "priceAsOf": "2026-10-29"
       },
       "rank": 13
     },
     {
-      "company": "SiTime Corporation",
-      "ticker": "SITM",
+      "company": "Applied Optoelectronics Inc.",
+      "ticker": "AAOI",
       "sector": "Technology – Semiconductors",
-      "price": 501.18,
-      "priceDate": "2026-10-28",
-      "marketCap": "$15.07B",
-      "forwardPE": 35.61,
-      "peg": 0.503,
-      "revenueGrowth": "+83.03% YoY (TTM ending Jun 2026; revenue $467.85M)",
+      "price": 79.19,
+      "priceDate": "2026-10-29",
+      "marketCap": "$7.17B",
+      "forwardPE": 34.41,
+      "peg": "n/a",
+      "revenueGrowth": "+61.85% YoY (TTM ending Jun 2026; revenue $595.97M)",
       "score": 68,
       "riskLevel": "Very High",
       "drivers": [
-        "Revenue growth +83.0% YoY (TTM) → 22/40",
-        "Acceleration: TTM 83.0% vs FY2025 61.2% → 5/5",
-        "Momentum: 1-yr price +84.8% vs S&P 500 (SPY) +12.4% = relative strength +72.4% → 20/25",
-        "Upside to target +66.1% → 13/20",
-        "Consensus Buy (12) → 7/10",
-        "Gross-margin trend (not scored): latest quarter 63.0% vs 51.9% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+        "Revenue growth +61.9% YoY (TTM) → 16/40",
+        "Acceleration: TTM 61.9% vs FY2025 82.8% → 0/5",
+        "Momentum: 1-yr price +123.2% vs S&P 500 (SPY) +11.9% = relative strength +111.3% → 25/25",
+        "Upside to target +97.0% → 19/20",
+        "Consensus Buy (6) → 7/10",
+        "Gross-margin trend (not scored): latest quarter 27.7% vs 30.3% a year earlier → margin contracting",
+        "Analyst price-target revisions, last 90 days (not scored): 2 raised, 1 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +127% YoY; consensus sees revenue +167% this fiscal year and +55% next.",
-      "fundamentals": "TTM revenue $467.85M, net income $14.09M, gross margin 58.71%; market cap $15.07B, net cash $594.53M.",
+      "trend": "Latest quarter (ended June 30, 2026) revenue +86% YoY; consensus sees revenue +128% this fiscal year and +156% next.",
+      "fundamentals": "TTM revenue $595.97M, net income -$57.02M, gross margin 28.92%; market cap $7.17B, net cash $199.60M.",
       "risks": [
-        "Dilution: share count +13.4% YoY",
-        "High volatility (beta 2.88)"
+        "Unprofitable: TTM net income -$57.02M",
+        "Dilution: share count +49.3% YoY",
+        "High volatility (beta 3.84)"
       ],
-      "analystRating": "Buy (12 analysts)",
-      "priceTarget": 832.27,
+      "analystRating": "Buy (6 analysts)",
+      "priceTarget": 156.0,
       "sourceUrl": [
-        "https://stockanalysis.com/stocks/sitm/statistics/",
-        "https://stockanalysis.com/stocks/sitm/revenue/",
-        "https://stockanalysis.com/stocks/sitm/forecast/"
+        "https://stockanalysis.com/stocks/aaoi/statistics/",
+        "https://stockanalysis.com/stocks/aaoi/revenue/",
+        "https://stockanalysis.com/stocks/aaoi/forecast/"
+      ],
+      "rank": 14,
+      "metrics": {
+        "revenueGrowthPct": 61.85,
+        "forwardPE": 34.41,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 11.7,
+        "grossMarginPct": 28.916,
+        "operatingMarginPct": -11.31,
+        "netMarginPct": -9.568,
+        "fcfMarginPct": -151.09,
+        "chg3mPct": 3.49,
+        "chg6mPct": -48.18,
+        "chg1yPct": 123.2,
+        "relStrength1yPct": 111.28,
+        "priceAsOf": "2026-10-29"
+      },
+      "grades": {
+        "growth": "F",
+        "value": "D-",
+        "momentum": "C+",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Viavi Solutions Inc.",
+      "ticker": "VIAV",
+      "sector": "Technology – Semiconductors",
+      "price": 33.32,
+      "priceDate": "2026-10-29",
+      "marketCap": "$8.22B",
+      "forwardPE": 20.27,
+      "peg": "n/a",
+      "revenueGrowth": "+40.03% YoY (TTM ending Jun 2026; revenue $1.52B)",
+      "score": 68,
+      "riskLevel": "Very High",
+      "drivers": [
+        "Revenue growth +40.0% YoY (TTM) → 11/40",
+        "Acceleration: TTM 40.0% vs FY2025 8.4% → 5/5",
+        "Momentum: 1-yr price +138.3% vs S&P 500 (SPY) +11.9% = relative strength +126.4% → 25/25",
+        "Upside to target +87.8% → 18/20",
+        "Consensus Strong Buy (8) → 10/10",
+        "Gross-margin trend (not scored): latest quarter 60.6% vs 58.0% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+      ],
+      "trend": "Latest quarter (ended June 27, 2026) revenue +53% YoY; consensus sees revenue +24% this fiscal year and +13% next.",
+      "fundamentals": "TTM revenue $1.52B, net income -$30.40M, gross margin 60.89%; market cap $8.22B, net debt $49.00M.",
+      "risks": [
+        "Unprofitable: TTM net income -$30.40M"
+      ],
+      "analystRating": "Strong Buy (8 analysts)",
+      "priceTarget": 62.57,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/viav/statistics/",
+        "https://stockanalysis.com/stocks/viav/revenue/",
+        "https://stockanalysis.com/stocks/viav/forecast/"
       ],
       "grades": {
-        "growth": "D-",
-        "value": "D-",
-        "momentum": "B+",
-        "profitability": "B+"
+        "growth": "F",
+        "value": "B",
+        "momentum": "B",
+        "profitability": "A-"
       },
       "gradeInputs": {
         "growth": "2/2",
-        "value": "3/3",
+        "value": "2/3",
         "momentum": "3/3",
         "profitability": "4/4"
       },
       "metrics": {
-        "revenueGrowthPct": 83.03,
-        "forwardPE": 35.61,
-        "peg": 0.503,
-        "epsGrowth3yPct": 83.86,
-        "evSales": 30.94,
-        "grossMarginPct": 58.714,
-        "operatingMarginPct": -0.196,
-        "netMarginPct": 3.012,
-        "fcfMarginPct": 18.059,
-        "chg3mPct": 2.05,
-        "chg6mPct": -2.81,
-        "chg1yPct": 84.76,
-        "relStrength1yPct": 72.35,
-        "priceAsOf": "2026-10-28"
+        "revenueGrowthPct": 40.03,
+        "forwardPE": 20.27,
+        "peg": null,
+        "epsGrowth3yPct": 35.88,
+        "evSales": 5.45,
+        "grossMarginPct": 60.89,
+        "operatingMarginPct": 11.269,
+        "netMarginPct": -2.002,
+        "fcfMarginPct": 5.453,
+        "chg3mPct": 3.38,
+        "chg6mPct": -26.82,
+        "chg1yPct": 138.34,
+        "relStrength1yPct": 126.42,
+        "priceAsOf": "2026-10-29"
       },
-      "rank": 14
+      "rank": 15
     },
     {
       "company": "Eos Energy Enterprises",
       "ticker": "EOSE",
       "sector": "Industrials – Electrical Equipment & Parts",
-      "price": 1.95,
-      "priceDate": "2026-10-28",
-      "marketCap": "$710.13M",
+      "price": 1.98,
+      "priceDate": "2026-10-29",
+      "marketCap": "$721.05M",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "+533.87% YoY (TTM ending Jun 2026; revenue $214.25M)",
@@ -1689,14 +1753,14 @@
       "drivers": [
         "Revenue growth +533.9% YoY (TTM) → 40/40",
         "Acceleration: TTM 533.9% vs FY2025 631.8% → 0/5",
-        "Momentum: 1-yr price -87.0% vs S&P 500 (SPY) +12.4% = relative strength -99.4% → 0/25",
-        "Upside to target +217.4% → 20/20",
+        "Momentum: 1-yr price -86.2% vs S&P 500 (SPY) +11.9% = relative strength -98.1% → 0/25",
+        "Upside to target +212.6% → 20/20",
         "Consensus Buy (11) → 7/10",
         "Gross-margin trend (not scored): latest quarter -71.0% vs -203.2% a year earlier → margin expanding",
         "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
       "trend": "Latest quarter (ended June 30, 2026) revenue +351% YoY; consensus sees revenue +169% this fiscal year and +87% next.",
-      "fundamentals": "TTM revenue $214.25M, net income -$1.02B, gross margin -84.75%; market cap $710.13M, net debt $335.33M.",
+      "fundamentals": "TTM revenue $214.25M, net income -$1.02B, gross margin -84.75%; market cap $721.05M, net debt $335.33M.",
       "risks": [
         "Manufacturing scale-up risk and policy/tariff exposure",
         "Unprofitable: TTM net income -$1.02B",
@@ -1710,7 +1774,7 @@
         "https://stockanalysis.com/stocks/eose/forecast/"
       ],
       "grades": {
-        "growth": "B+",
+        "growth": "A-",
         "value": "B+",
         "momentum": "F",
         "profitability": "F"
@@ -1726,216 +1790,150 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 4.88,
+        "evSales": 4.93,
         "grossMarginPct": -84.749,
         "operatingMarginPct": -142.136,
         "netMarginPct": -246.757,
         "fcfMarginPct": -196.12,
-        "chg3mPct": -42.14,
-        "chg6mPct": -71.37,
-        "chg1yPct": -87.01,
-        "relStrength1yPct": -99.42,
-        "priceAsOf": "2026-10-28"
+        "chg3mPct": -36.94,
+        "chg6mPct": -68.77,
+        "chg1yPct": -86.22,
+        "relStrength1yPct": -98.14,
+        "priceAsOf": "2026-10-29"
       },
-      "rank": 15
+      "rank": 16
     },
     {
-      "company": "Cerebras Systems Inc.",
-      "ticker": "CBRS",
-      "sector": "Technology – Semiconductors",
-      "price": 112.56,
-      "priceDate": "2026-10-28",
-      "marketCap": "$26.74B",
-      "forwardPE": "n/a",
+      "company": "Aura Minerals Inc.",
+      "ticker": "AUGO",
+      "sector": "Basic Materials – Metal Mining",
+      "price": 78.3,
+      "priceDate": "2026-10-29",
+      "marketCap": "$6.56B",
+      "forwardPE": 11.06,
       "peg": "n/a",
-      "revenueGrowth": "+111.68% YoY (TTM ending Jun 2026; revenue $680.67M)",
+      "revenueGrowth": "+89.45% YoY (TTM ending Jun 2026; revenue $1.29B)",
       "score": 67,
-      "riskLevel": "Very High",
+      "riskLevel": "High",
       "drivers": [
-        "Revenue growth +111.7% YoY (TTM) → 30/40",
-        "Acceleration: TTM 111.7% vs FY2025 75.7% → 5/5",
-        "Momentum (IPO under a year): 3-month price -33.5% vs SPY +5.9% = relative strength -39.4% → 2/25",
-        "Upside to target +151.0% → 20/20",
-        "Consensus Strong Buy (11) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 14.5% vs 41.1% a year earlier → margin contracting",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+        "Revenue growth +89.5% YoY (TTM) → 24/40",
+        "Acceleration: TTM 89.5% vs FY2025 55.1% → 5/5",
+        "Momentum: 1-yr price +159.4% vs S&P 500 (SPY) +11.9% = relative strength +147.4% → 25/25",
+        "Upside to target +31.5% → 6/20",
+        "Consensus Buy (10) → 7/10",
+        "Gross-margin trend (not scored): latest quarter 57.0% vs 54.6% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 2 raised, 0 cut, 3 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +164% YoY; consensus sees revenue +74% this fiscal year and +233% next.",
-      "fundamentals": "TTM revenue $680.67M, net income -$487.24M, gross margin 34.90%; market cap $26.74B, net cash $6.43B.",
+      "trend": "Latest quarter (ended June 30, 2026) revenue +76% YoY; consensus sees revenue +74% this fiscal year and +19% next.",
+      "fundamentals": "TTM revenue $1.29B, net income $298.61M, gross margin 60.00%; market cap $6.56B, net debt $209.69M.",
       "risks": [
-        "Unprofitable: TTM net income -$487.24M",
-        "Dilution: share count +61.2% YoY",
-        "Short interest 18% of float"
+        "Dilution: share count +14.7% YoY"
       ],
-      "analystRating": "Strong Buy (11 analysts)",
-      "priceTarget": 282.55,
+      "analystRating": "Buy (10 analysts)",
+      "priceTarget": 102.96,
       "sourceUrl": [
-        "https://stockanalysis.com/stocks/cbrs/statistics/",
-        "https://stockanalysis.com/stocks/cbrs/revenue/",
-        "https://stockanalysis.com/stocks/cbrs/forecast/"
+        "https://stockanalysis.com/stocks/augo/statistics/",
+        "https://stockanalysis.com/stocks/augo/revenue/",
+        "https://stockanalysis.com/stocks/augo/forecast/"
       ],
-      "rank": 16,
+      "rank": 17,
       "metrics": {
-        "revenueGrowthPct": 111.68,
-        "forwardPE": null,
+        "revenueGrowthPct": 89.45,
+        "forwardPE": 11.06,
         "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 29.83,
-        "grossMarginPct": 34.903,
-        "operatingMarginPct": -81.167,
-        "netMarginPct": -75.271,
-        "fcfMarginPct": -99.93,
-        "chg3mPct": -41.59,
-        "chg6mPct": null,
-        "chg1yPct": null,
-        "relStrength1yPct": null,
-        "priceAsOf": "2026-10-28"
+        "epsGrowth3yPct": 59.59,
+        "evSales": 5.26,
+        "grossMarginPct": 59.998,
+        "operatingMarginPct": 53.159,
+        "netMarginPct": 23.183,
+        "fcfMarginPct": 16.156,
+        "chg3mPct": 43.67,
+        "chg6mPct": -3.84,
+        "chg1yPct": 159.36,
+        "relStrength1yPct": 147.44,
+        "priceAsOf": "2026-10-29"
       },
       "grades": {
-        "growth": "F",
-        "value": "F",
-        "momentum": "F",
-        "profitability": "D-"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
-        "momentum": "1/3",
-        "profitability": "4/4"
-      }
-    },
-    {
-      "company": "Viavi Solutions Inc.",
-      "ticker": "VIAV",
-      "sector": "Technology – Semiconductors",
-      "price": 34.46,
-      "priceDate": "2026-10-28",
-      "marketCap": "$8.50B",
-      "forwardPE": 20.96,
-      "peg": "n/a",
-      "revenueGrowth": "+40.03% YoY (TTM ending Jun 2026; revenue $1.52B)",
-      "score": 67,
-      "riskLevel": "Very High",
-      "drivers": [
-        "Revenue growth +40.0% YoY (TTM) → 11/40",
-        "Acceleration: TTM 40.0% vs FY2025 8.4% → 5/5",
-        "Momentum: 1-yr price +146.1% vs S&P 500 (SPY) +12.4% = relative strength +133.7% → 25/25",
-        "Upside to target +81.6% → 16/20",
-        "Consensus Strong Buy (8) → 10/10",
-        "Gross-margin trend (not scored): latest quarter 60.6% vs 58.0% a year earlier → margin expanding",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 1 cut, 4 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
-      ],
-      "trend": "Latest quarter (ended June 27, 2026) revenue +53% YoY; consensus sees revenue +24% this fiscal year and +13% next.",
-      "fundamentals": "TTM revenue $1.52B, net income -$30.40M, gross margin 60.89%; market cap $8.50B, net debt $49.00M.",
-      "risks": [
-        "Unprofitable: TTM net income -$30.40M"
-      ],
-      "analystRating": "Strong Buy (8 analysts)",
-      "priceTarget": 62.57,
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/viav/statistics/",
-        "https://stockanalysis.com/stocks/viav/revenue/",
-        "https://stockanalysis.com/stocks/viav/forecast/"
-      ],
-      "grades": {
-        "growth": "F",
-        "value": "B-",
-        "momentum": "B+",
-        "profitability": "B+"
+        "growth": "D-",
+        "value": "B+",
+        "momentum": "A+",
+        "profitability": "A"
       },
       "gradeInputs": {
         "growth": "2/2",
         "value": "2/3",
         "momentum": "3/3",
         "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 40.03,
-        "forwardPE": 20.96,
-        "peg": null,
-        "epsGrowth3yPct": 35.88,
-        "evSales": 5.63,
-        "grossMarginPct": 60.89,
-        "operatingMarginPct": 11.269,
-        "netMarginPct": -2.002,
-        "fcfMarginPct": 5.453,
-        "chg3mPct": -1.82,
-        "chg6mPct": -20.18,
-        "chg1yPct": 146.14,
-        "relStrength1yPct": 133.73,
-        "priceAsOf": "2026-10-28"
-      },
-      "rank": 17
+      }
     },
     {
-      "company": "Joby Aviation Inc.",
-      "ticker": "JOBY",
-      "sector": "Industrials – Aerospace",
-      "price": 5.08,
-      "priceDate": "2026-10-28",
-      "marketCap": "$5.02B",
-      "forwardPE": "n/a",
-      "peg": "n/a",
-      "revenueGrowth": "+118568.37% YoY (TTM ending Jun 2026; revenue $116.30M)",
-      "score": 66,
+      "company": "SiTime Corporation",
+      "ticker": "SITM",
+      "sector": "Technology – Semiconductors",
+      "price": 488.08,
+      "priceDate": "2026-10-29",
+      "marketCap": "$14.68B",
+      "forwardPE": 34.68,
+      "peg": 0.49,
+      "revenueGrowth": "+83.03% YoY (TTM ending Jun 2026; revenue $467.85M)",
+      "score": 67,
       "riskLevel": "Very High",
       "drivers": [
-        "Revenue growth +118568.4% YoY (TTM) → 40/40",
-        "Acceleration: TTM 118568.4% vs FY2025 39183.1% → 5/5",
-        "Momentum: 1-yr price -67.5% vs S&P 500 (SPY) +12.4% = relative strength -79.9% → 0/25",
-        "Upside to target +97.0% → 19/20",
-        "Consensus Hold (11) → 2/10",
-        "Gross-margin trend (not scored): latest quarter 26.8% vs 33.3% a year earlier → margin contracting",
-        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 3 cut, 2 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
+        "Revenue growth +83.0% YoY (TTM) → 22/40",
+        "Acceleration: TTM 83.0% vs FY2025 61.2% → 5/5",
+        "Momentum: 1-yr price +75.8% vs S&P 500 (SPY) +11.9% = relative strength +63.9% → 19/25",
+        "Upside to target +70.5% → 14/20",
+        "Consensus Buy (12) → 7/10",
+        "Gross-margin trend (not scored): latest quarter 63.0% vs 51.9% a year earlier → margin expanding",
+        "Analyst price-target revisions, last 90 days (not scored): 0 raised, 0 cut, 5 other (initiations, reiterations or undisclosed targets) across the latest 5 actions"
       ],
-      "trend": "Latest quarter (ended June 30, 2026) revenue +257493% YoY; consensus sees revenue +126% this fiscal year and +78% next.",
-      "fundamentals": "TTM revenue $116.30M, net income -$878.15M, gross margin 34.29%; market cap $5.02B, net cash $1.52B.",
+      "trend": "Latest quarter (ended June 30, 2026) revenue +127% YoY; consensus sees revenue +167% this fiscal year and +55% next.",
+      "fundamentals": "TTM revenue $467.85M, net income $14.09M, gross margin 58.71%; market cap $14.68B, net cash $594.53M.",
       "risks": [
-        "Unprofitable: TTM net income -$878.15M",
-        "Dilution: share count +22.1% YoY",
-        "High volatility (beta 2.66)"
+        "Dilution: share count +13.4% YoY",
+        "High volatility (beta 2.88)"
       ],
-      "analystRating": "Hold (11 analysts)",
-      "priceTarget": 10.01,
+      "analystRating": "Buy (12 analysts)",
+      "priceTarget": 832.27,
       "sourceUrl": [
-        "https://stockanalysis.com/stocks/joby/statistics/",
-        "https://stockanalysis.com/stocks/joby/revenue/",
-        "https://stockanalysis.com/stocks/joby/forecast/"
+        "https://stockanalysis.com/stocks/sitm/statistics/",
+        "https://stockanalysis.com/stocks/sitm/revenue/",
+        "https://stockanalysis.com/stocks/sitm/forecast/"
       ],
       "grades": {
-        "growth": "A+",
+        "growth": "C-",
         "value": "F",
-        "momentum": "F",
-        "profitability": "F"
+        "momentum": "B+",
+        "profitability": "B+"
       },
       "gradeInputs": {
-        "growth": "1/2",
-        "value": "1/3",
+        "growth": "2/2",
+        "value": "3/3",
         "momentum": "3/3",
         "profitability": "4/4"
       },
       "metrics": {
-        "revenueGrowthPct": 118568.37,
-        "forwardPE": null,
-        "peg": null,
-        "epsGrowth3yPct": null,
-        "evSales": 30.17,
-        "grossMarginPct": 34.289,
-        "operatingMarginPct": -759.195,
-        "netMarginPct": -755.11,
-        "fcfMarginPct": -639.18,
-        "chg3mPct": -30.12,
-        "chg6mPct": -43.11,
-        "chg1yPct": -67.46,
-        "relStrength1yPct": -79.87,
-        "priceAsOf": "2026-10-28"
+        "revenueGrowthPct": 83.03,
+        "forwardPE": 34.68,
+        "peg": 0.49,
+        "epsGrowth3yPct": 83.86,
+        "evSales": 30.1,
+        "grossMarginPct": 58.714,
+        "operatingMarginPct": -0.196,
+        "netMarginPct": 3.012,
+        "fcfMarginPct": 18.059,
+        "chg3mPct": 5.61,
+        "chg6mPct": -7.42,
+        "chg1yPct": 75.8,
+        "relStrength1yPct": 63.88,
+        "priceAsOf": "2026-10-29"
       },
       "rank": 18
     }
   ],
   "grading": {
-    "asOf": "2026-10-29",
-    "spy1yPct": 12.41,
+    "asOf": "2026-10-30",
+    "spy1yPct": 11.92,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
