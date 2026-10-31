@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-30",
-  "priceDate": "2026-10-29",
+  "lastUpdated": "2026-10-31",
+  "priceDate": "2026-10-30",
   "title": "Insider Buys",
-  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-09-30 to 2026-10-30 for US-listed issuers over $300M (6,801 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
+  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-10-01 to 2026-10-31 for US-listed issuers over $300M (6,859 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
   "rubric": [
     {
       "component": "Insiders",
@@ -21,14 +21,14 @@
       "how": "Market cap above $300M on Nasdaq's screener"
     }
   ],
-  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 127 companies had insider purchases; 11 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 0 left out because filed prices don't match the US share price (local-currency or other share class: none). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
+  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 120 companies had insider purchases; 9 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 0 left out because filed prices don't match the US share price (local-currency or other share class: none). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
   "universe": {
     "listed": 6954,
     "screened": 3414,
-    "filings": 6801,
-    "companiesWithBuys": 127,
-    "clusters": 11,
-    "qualified": 11
+    "filings": 6859,
+    "companiesWithBuys": 120,
+    "clusters": 9,
+    "qualified": 9
   },
   "excluded": {
     "minersOrCryptoTreasury": [],
@@ -52,245 +52,14 @@
   "disclaimer": "Insider buying is a signal, not a guarantee. For research only, not financial advice.",
   "picks": [
     {
-      "company": "Simon Property Group Inc.",
-      "ticker": "SPG",
-      "sector": "Real Estate – Real Estate Investment Trusts",
-      "price": 215.72,
-      "priceDate": "2026-10-29",
-      "marketCap": "$81.8B",
-      "forwardPE": 32.38,
-      "peg": "n/a",
-      "revenueGrowth": "n/a",
-      "alsoIn": [
-        "Insider Buys"
-      ],
-      "insiderCount": 11,
-      "totalBought": 460716.16,
-      "firstBuy": "2026-09-30",
-      "lastBuy": "2026-09-30",
-      "keyFigures": [
-        {
-          "label": "Insiders buying",
-          "value": "11"
-        },
-        {
-          "label": "Total bought",
-          "value": "$461K"
-        },
-        {
-          "label": "Avg price paid",
-          "value": "$202.78"
-        },
-        {
-          "label": "Buy dates",
-          "value": "2026-09-30"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "i0",
-          "label": "Leibowitz Reuben S",
-          "met": true,
-          "detail": "Director: $97K (480 sh) on 2026-09-30"
-        },
-        {
-          "key": "i1",
-          "label": "Glasscock Larry C",
-          "met": true,
-          "detail": "Director: $74K (367 sh) on 2026-09-30"
-        },
-        {
-          "key": "i2",
-          "label": "Smith Daniel C.",
-          "met": true,
-          "detail": "Director: $71K (350 sh) on 2026-09-30"
-        },
-        {
-          "key": "i3",
-          "label": "Rodkin Gary M",
-          "met": true,
-          "detail": "Director: $47K (232 sh) on 2026-09-30"
-        },
-        {
-          "key": "i4",
-          "label": "Aeppel Glyn",
-          "met": true,
-          "detail": "Director: $45K (222 sh) on 2026-09-30"
-        },
-        {
-          "key": "i5",
-          "label": "Selig Stefan M",
-          "met": true,
-          "detail": "Director: $42K (208 sh) on 2026-09-30"
-        },
-        {
-          "key": "i6",
-          "label": "Stewart Marta R",
-          "met": true,
-          "detail": "Director: $40K (199 sh) on 2026-09-30"
-        },
-        {
-          "key": "i7",
-          "label": "Roe Peggy",
-          "met": true,
-          "detail": "Director: $18K (88 sh) on 2026-09-30"
-        },
-        {
-          "key": "i8",
-          "label": "Lewis Randall J",
-          "met": true,
-          "detail": "Director: $13K (65 sh) on 2026-09-30"
-        },
-        {
-          "key": "i9",
-          "label": "Jones Nina P",
-          "met": true,
-          "detail": "Director: $9K (46 sh) on 2026-09-30"
-        },
-        {
-          "key": "i10",
-          "label": "Cicco Martin J",
-          "met": true,
-          "detail": "Director: $3K (15 sh) on 2026-09-30"
-        }
-      ],
-      "risks": [
-        "Buyers are directors or large holders only, no executive officers"
-      ],
-      "analystRating": "Buy (21 analysts)",
-      "priceTarget": 228.89,
-      "transactions": [
-        {
-          "insider": "LEWIS RANDALL J",
-          "date": "2026-09-30",
-          "shares": 65.0,
-          "price": 202.78,
-          "value": 13180.7,
-          "accession": "0001123485-26-000010"
-        },
-        {
-          "insider": "GLASSCOCK LARRY C",
-          "date": "2026-09-30",
-          "shares": 367.0,
-          "price": 202.78,
-          "value": 74420.26,
-          "accession": "0001189793-26-000014"
-        },
-        {
-          "insider": "RODKIN GARY M",
-          "date": "2026-09-30",
-          "shares": 232.0,
-          "price": 202.78,
-          "value": 47044.96,
-          "accession": "0001199045-26-000010"
-        },
-        {
-          "insider": "LEIBOWITZ REUBEN S",
-          "date": "2026-09-30",
-          "shares": 480.0,
-          "price": 202.78,
-          "value": 97334.4,
-          "accession": "0001210982-26-000010"
-        },
-        {
-          "insider": "STEWART MARTA R",
-          "date": "2026-09-30",
-          "shares": 199.0,
-          "price": 202.78,
-          "value": 40353.22,
-          "accession": "0001272064-26-000012"
-        },
-        {
-          "insider": "Aeppel Glyn",
-          "date": "2026-09-30",
-          "shares": 222.0,
-          "price": 202.78,
-          "value": 45017.16,
-          "accession": "0001340262-26-000013"
-        },
-        {
-          "insider": "Smith Daniel C.",
-          "date": "2026-09-30",
-          "shares": 350.0,
-          "price": 202.78,
-          "value": 70973.0,
-          "accession": "0001464273-26-000010"
-        },
-        {
-          "insider": "SELIG STEFAN M",
-          "date": "2026-09-30",
-          "shares": 208.0,
-          "price": 202.78,
-          "value": 42178.24,
-          "accession": "0001709407-26-000012"
-        },
-        {
-          "insider": "Roe Peggy",
-          "date": "2026-09-30",
-          "shares": 88.0,
-          "price": 202.78,
-          "value": 17844.64,
-          "accession": "0001898688-26-000011"
-        },
-        {
-          "insider": "Jones Nina P",
-          "date": "2026-09-30",
-          "shares": 46.0,
-          "price": 202.78,
-          "value": 9327.88,
-          "accession": "0002007895-26-000016"
-        },
-        {
-          "insider": "Cicco Martin J",
-          "date": "2026-09-30",
-          "shares": 15.0,
-          "price": 202.78,
-          "value": 3041.7,
-          "accession": "0002109729-26-000010"
-        }
-      ],
-      "sourceUrl": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001063761&type=4&dateb=&owner=include&count=40",
-        "https://stockanalysis.com/stocks/spg/statistics/"
-      ],
-      "grades": {
-        "growth": "F",
-        "value": "D-",
-        "momentum": "B+",
-        "profitability": "A+"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 32.38,
-        "peg": null,
-        "epsGrowth3yPct": 4.71,
-        "evSales": 15.89,
-        "grossMarginPct": 81.426,
-        "operatingMarginPct": 47.399,
-        "netMarginPct": 66.571,
-        "fcfMarginPct": 46.357,
-        "chg3mPct": -8.44,
-        "chg6mPct": 7.81,
-        "chg1yPct": 24.23,
-        "relStrength1yPct": 12.31,
-        "priceAsOf": "2026-10-29"
-      }
-    },
-    {
       "company": "Heico Corporation",
       "ticker": "HEI",
       "sector": "Industrials – Aerospace",
-      "price": 326.35,
-      "priceDate": "2026-10-29",
-      "marketCap": "$45.6B",
-      "forwardPE": 47.0,
-      "peg": 2.48,
+      "price": 321.36,
+      "priceDate": "2026-10-30",
+      "marketCap": "$44.9B",
+      "forwardPE": 46.28,
+      "peg": 2.44,
       "revenueGrowth": "n/a",
       "alsoIn": [
         "Insider Buys"
@@ -443,10 +212,10 @@
         "https://stockanalysis.com/stocks/hei/statistics/"
       ],
       "grades": {
-        "growth": "B-",
+        "growth": "C",
         "value": "F",
         "momentum": "A-",
-        "profitability": "C+"
+        "profitability": "C"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -456,27 +225,27 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 47.0,
-        "peg": 2.48,
+        "forwardPE": 46.28,
+        "peg": 2.44,
         "epsGrowth3yPct": 18.61,
-        "evSales": 9.25,
+        "evSales": 9.12,
         "grossMarginPct": 40.398,
         "operatingMarginPct": 24.271,
         "netMarginPct": 16.376,
         "fcfMarginPct": 19.902,
-        "chg3mPct": -8.13,
-        "chg6mPct": 25.04,
-        "chg1yPct": 5.06,
-        "relStrength1yPct": -6.86,
-        "priceAsOf": "2026-10-29"
+        "chg3mPct": -9.26,
+        "chg6mPct": 19.06,
+        "chg1yPct": 3.55,
+        "relStrength1yPct": -7.61,
+        "priceAsOf": "2026-10-30"
       }
     },
     {
       "company": "Rapport Therapeutics Inc.",
       "ticker": "RAPP",
       "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
-      "price": 24.21,
-      "priceDate": "2026-10-29",
+      "price": 25.05,
+      "priceDate": "2026-10-30",
       "marketCap": "$1.2B",
       "forwardPE": "n/a",
       "peg": "n/a",
@@ -484,72 +253,110 @@
       "alsoIn": [
         "Insider Buys"
       ],
-      "insiderCount": 6,
-      "totalBought": 1664824.34,
+      "insiderCount": 7,
+      "totalBought": 22023904.34,
       "firstBuy": "2026-10-21",
-      "lastBuy": "2026-10-23",
+      "lastBuy": "2026-10-28",
       "keyFigures": [
         {
           "label": "Insiders buying",
-          "value": "6"
+          "value": "7"
         },
         {
           "label": "Total bought",
-          "value": "$1.7M"
+          "value": "$22.0M"
         },
         {
           "label": "Avg price paid",
-          "value": "$26.99"
+          "value": "$21.36"
         },
         {
           "label": "Buy dates",
-          "value": "2026-10-21 → 2026-10-23"
+          "value": "2026-10-21 → 2026-10-28"
         }
       ],
       "checklist": [
         {
           "key": "i0",
+          "label": "Healy James",
+          "met": true,
+          "detail": "Director: $20.4M (969,480 sh) on 2026-10-28"
+        },
+        {
+          "key": "i1",
           "label": "Paul Steven M",
           "met": true,
           "detail": "Director: $974K (35,714 sh) on 2026-10-22"
         },
         {
-          "key": "i1",
+          "key": "i2",
           "label": "Maraganore John",
           "met": true,
           "detail": "Director: $249K (9,411 sh) on 2026-10-22"
         },
         {
-          "key": "i2",
+          "key": "i3",
           "label": "Ignelzi Troy A.",
           "met": true,
           "detail": "Chief Financial Officer: $144K (5,500 sh) on 2026-10-21"
         },
         {
-          "key": "i3",
+          "key": "i4",
           "label": "Young Wendy B.",
           "met": true,
           "detail": "Director: $100K (3,789 sh) on 2026-10-22"
         },
         {
-          "key": "i4",
+          "key": "i5",
           "label": "Silva Paul M",
           "met": true,
           "detail": "Director: $100K (3,680 sh) on 2026-10-22"
         },
         {
-          "key": "i5",
+          "key": "i6",
           "label": "Sanchez Ramiro",
           "met": true,
           "detail": "Director: $98K (3,600 sh) on 2026-10-23"
         }
       ],
       "risks": [
-        "No data-driven red flags; insiders can still be wrong"
+        "One insider (HEALY JAMES) accounts for 92% of the dollars"
       ],
       "analystRating": "Strong Buy (16 analysts)",
       "priceTarget": 68.29,
       "transactions": [
+        {
+          "insider": "HEALY JAMES",
+          "date": "2026-10-28",
+          "shares": 952380.0,
+          "price": 21.0,
+          "value": 19999980.0,
+          "accession": "0001104659-26-120789"
+        },
+        {
+          "insider": "HEALY JAMES",
+          "date": "2026-10-28",
+          "shares": 6395.0,
+          "price": 21.0,
+          "value": 134295.0,
+          "accession": "0001104659-26-120789"
+        },
+        {
+          "insider": "HEALY JAMES",
+          "date": "2026-10-28",
+          "shares": 3772.0,
+          "price": 21.0,
+          "value": 79212.0,
+          "accession": "0001104659-26-120789"
+        },
+        {
+          "insider": "HEALY JAMES",
+          "date": "2026-10-28",
+          "shares": 6933.0,
+          "price": 21.0,
+          "value": 145593.0,
+          "accession": "0001104659-26-120789"
+        },
         {
           "insider": "Sanchez Ramiro",
           "date": "2026-10-23",
@@ -614,7 +421,7 @@
       "grades": {
         "growth": "n/a",
         "value": "F",
-        "momentum": "F",
+        "momentum": "D-",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -628,27 +435,188 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 36.78,
+        "evSales": 38.79,
         "grossMarginPct": -109.39,
         "operatingMarginPct": -767.58,
         "netMarginPct": -685.8,
         "fcfMarginPct": -485.75,
-        "chg3mPct": -40.86,
-        "chg6mPct": -26.64,
-        "chg1yPct": -11.61,
-        "relStrength1yPct": -23.53,
-        "priceAsOf": "2026-10-29"
+        "chg3mPct": -41.44,
+        "chg6mPct": -24.39,
+        "chg1yPct": -6.81,
+        "relStrength1yPct": -17.97,
+        "priceAsOf": "2026-10-30"
+      }
+    },
+    {
+      "company": "Beacon Financial Corporation",
+      "ticker": "BBT",
+      "sector": "Finance – Banks",
+      "price": 30.62,
+      "priceDate": "2026-10-30",
+      "marketCap": "$2.6B",
+      "forwardPE": 9.4,
+      "peg": "n/a",
+      "revenueGrowth": "n/a",
+      "alsoIn": [
+        "Insider Buys"
+      ],
+      "insiderCount": 6,
+      "totalBought": 274326.33,
+      "firstBuy": "2026-10-26",
+      "lastBuy": "2026-10-30",
+      "keyFigures": [
+        {
+          "label": "Insiders buying",
+          "value": "6"
+        },
+        {
+          "label": "Total bought",
+          "value": "$274K"
+        },
+        {
+          "label": "Avg price paid",
+          "value": "$30.38"
+        },
+        {
+          "label": "Buy dates",
+          "value": "2026-10-26 → 2026-10-30"
+        }
+      ],
+      "checklist": [
+        {
+          "key": "i0",
+          "label": "Hollister Thomas J",
+          "met": true,
+          "detail": "Director: $105K (3,450 sh) on 2026-10-26"
+        },
+        {
+          "key": "i1",
+          "label": "Callahan Mary Anne",
+          "met": true,
+          "detail": "Director: $97K (3,200 sh) on 2026-10-28"
+        },
+        {
+          "key": "i2",
+          "label": "Polito Karyn",
+          "met": true,
+          "detail": "Director: $31K (1,000 sh) on 2026-10-26"
+        },
+        {
+          "key": "i3",
+          "label": "Rosengren Eric S",
+          "met": true,
+          "detail": "Director: $21K (700 sh) on 2026-10-28"
+        },
+        {
+          "key": "i4",
+          "label": "Charnley Nina A",
+          "met": true,
+          "detail": "Director: $11K (350 sh) on 2026-10-30"
+        },
+        {
+          "key": "i5",
+          "label": "Fitzgerald Margaret Boles",
+          "met": true,
+          "detail": "Director: $10K (329 sh) on 2026-10-27"
+        }
+      ],
+      "risks": [
+        "Buyers are directors or large holders only, no executive officers"
+      ],
+      "analystRating": "Buy (7 analysts)",
+      "priceTarget": 35.0,
+      "transactions": [
+        {
+          "insider": "Charnley Nina A",
+          "date": "2026-10-30",
+          "shares": 350.0,
+          "price": 30.57,
+          "value": 10699.5,
+          "accession": "0001628280-26-068526"
+        },
+        {
+          "insider": "Rosengren Eric S",
+          "date": "2026-10-28",
+          "shares": 700.0,
+          "price": 30.24,
+          "value": 21168.0,
+          "accession": "0001628280-26-067904"
+        },
+        {
+          "insider": "Callahan Mary Anne",
+          "date": "2026-10-28",
+          "shares": 3200.0,
+          "price": 30.21,
+          "value": 96672.0,
+          "accession": "0001628280-26-068056"
+        },
+        {
+          "insider": "Fitzgerald Margaret Boles",
+          "date": "2026-10-27",
+          "shares": 329.0,
+          "price": 30.77,
+          "value": 10123.33,
+          "accession": "0001628280-26-067740"
+        },
+        {
+          "insider": "Hollister Thomas J",
+          "date": "2026-10-26",
+          "shares": 3450.0,
+          "price": 30.43,
+          "value": 104983.5,
+          "accession": "0001628280-26-067255"
+        },
+        {
+          "insider": "Polito Karyn",
+          "date": "2026-10-26",
+          "shares": 1000.0,
+          "price": 30.68,
+          "value": 30680.0,
+          "accession": "0001628280-26-067923"
+        }
+      ],
+      "sourceUrl": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108134&type=4&dateb=&owner=include&count=40",
+        "https://stockanalysis.com/stocks/bbt/statistics/"
+      ],
+      "grades": {
+        "growth": "A+",
+        "value": "C",
+        "momentum": "A+",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": null,
+        "forwardPE": 9.4,
+        "peg": null,
+        "epsGrowth3yPct": 31.93,
+        "evSales": 3.12,
+        "grossMarginPct": 100.0,
+        "operatingMarginPct": 45.521,
+        "netMarginPct": 26.405,
+        "fcfMarginPct": 28.44,
+        "chg3mPct": -0.03,
+        "chg6mPct": 7.33,
+        "chg1yPct": 27.0,
+        "relStrength1yPct": 15.84,
+        "priceAsOf": "2026-10-30"
       }
     },
     {
       "company": "Accelevation Holdings Corp.",
       "ticker": "ACCV",
       "sector": "Energy – Industrial Machinery/Components",
-      "price": 15.19,
-      "priceDate": "2026-10-29",
-      "marketCap": "$3.4B",
-      "forwardPE": 21.98,
-      "peg": 0.28,
+      "price": 14.48,
+      "priceDate": "2026-10-30",
+      "marketCap": "$3.2B",
+      "forwardPE": 20.95,
+      "peg": 0.26,
       "revenueGrowth": "n/a",
       "alsoIn": [
         "Insider Buys"
@@ -768,7 +736,7 @@
       ],
       "grades": {
         "growth": "n/a",
-        "value": "C+",
+        "value": "B-",
         "momentum": "n/a",
         "profitability": "F"
       },
@@ -780,10 +748,10 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 21.98,
-        "peg": 0.28,
+        "forwardPE": 20.95,
+        "peg": 0.26,
         "epsGrowth3yPct": null,
-        "evSales": 5.58,
+        "evSales": 5.37,
         "grossMarginPct": 29.251,
         "operatingMarginPct": 12.399,
         "netMarginPct": 6.77,
@@ -792,17 +760,17 @@
         "chg6mPct": null,
         "chg1yPct": null,
         "relStrength1yPct": null,
-        "priceAsOf": "2026-10-29"
+        "priceAsOf": "2026-10-30"
       }
     },
     {
       "company": "Stewart Information Services Corporation",
       "ticker": "STC",
       "sector": "Finance – Specialty Insurers",
-      "price": 45.48,
-      "priceDate": "2026-10-29",
+      "price": 44.5,
+      "priceDate": "2026-10-30",
       "marketCap": "$1.4B",
-      "forwardPE": 8.13,
+      "forwardPE": 7.96,
       "peg": "n/a",
       "revenueGrowth": "n/a",
       "alsoIn": [
@@ -922,10 +890,10 @@
         "https://stockanalysis.com/stocks/stc/statistics/"
       ],
       "grades": {
-        "growth": "C",
+        "growth": "D-",
         "value": "A+",
         "momentum": "F",
-        "profitability": "D+"
+        "profitability": "D"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -935,174 +903,29 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 8.13,
+        "forwardPE": 7.96,
         "peg": null,
         "epsGrowth3yPct": 12.49,
-        "evSales": 0.6,
+        "evSales": 0.59,
         "grossMarginPct": 62.338,
         "operatingMarginPct": 6.196,
         "netMarginPct": 3.577,
         "fcfMarginPct": 4.584,
-        "chg3mPct": -35.25,
-        "chg6mPct": -35.03,
-        "chg1yPct": -35.15,
-        "relStrength1yPct": -47.07,
-        "priceAsOf": "2026-10-29"
-      }
-    },
-    {
-      "company": "Beacon Financial Corporation",
-      "ticker": "BBT",
-      "sector": "Finance – Banks",
-      "price": 30.66,
-      "priceDate": "2026-10-29",
-      "marketCap": "$2.6B",
-      "forwardPE": 9.41,
-      "peg": "n/a",
-      "revenueGrowth": "n/a",
-      "alsoIn": [],
-      "insiderCount": 5,
-      "totalBought": 263626.83,
-      "firstBuy": "2026-10-26",
-      "lastBuy": "2026-10-28",
-      "keyFigures": [
-        {
-          "label": "Insiders buying",
-          "value": "5"
-        },
-        {
-          "label": "Total bought",
-          "value": "$264K"
-        },
-        {
-          "label": "Avg price paid",
-          "value": "$30.38"
-        },
-        {
-          "label": "Buy dates",
-          "value": "2026-10-26 → 2026-10-28"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "i0",
-          "label": "Hollister Thomas J",
-          "met": true,
-          "detail": "Director: $105K (3,450 sh) on 2026-10-26"
-        },
-        {
-          "key": "i1",
-          "label": "Callahan Mary Anne",
-          "met": true,
-          "detail": "Director: $97K (3,200 sh) on 2026-10-28"
-        },
-        {
-          "key": "i2",
-          "label": "Polito Karyn",
-          "met": true,
-          "detail": "Director: $31K (1,000 sh) on 2026-10-26"
-        },
-        {
-          "key": "i3",
-          "label": "Rosengren Eric S",
-          "met": true,
-          "detail": "Director: $21K (700 sh) on 2026-10-28"
-        },
-        {
-          "key": "i4",
-          "label": "Fitzgerald Margaret Boles",
-          "met": true,
-          "detail": "Director: $10K (329 sh) on 2026-10-27"
-        }
-      ],
-      "risks": [
-        "Buyers are directors or large holders only, no executive officers"
-      ],
-      "analystRating": "Buy (7 analysts)",
-      "priceTarget": 35.0,
-      "transactions": [
-        {
-          "insider": "Rosengren Eric S",
-          "date": "2026-10-28",
-          "shares": 700.0,
-          "price": 30.24,
-          "value": 21168.0,
-          "accession": "0001628280-26-067904"
-        },
-        {
-          "insider": "Callahan Mary Anne",
-          "date": "2026-10-28",
-          "shares": 3200.0,
-          "price": 30.21,
-          "value": 96672.0,
-          "accession": "0001628280-26-068056"
-        },
-        {
-          "insider": "Fitzgerald Margaret Boles",
-          "date": "2026-10-27",
-          "shares": 329.0,
-          "price": 30.77,
-          "value": 10123.33,
-          "accession": "0001628280-26-067740"
-        },
-        {
-          "insider": "Hollister Thomas J",
-          "date": "2026-10-26",
-          "shares": 3450.0,
-          "price": 30.43,
-          "value": 104983.5,
-          "accession": "0001628280-26-067255"
-        },
-        {
-          "insider": "Polito Karyn",
-          "date": "2026-10-26",
-          "shares": 1000.0,
-          "price": 30.68,
-          "value": 30680.0,
-          "accession": "0001628280-26-067923"
-        }
-      ],
-      "sourceUrl": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108134&type=4&dateb=&owner=include&count=40",
-        "https://stockanalysis.com/stocks/bbt/statistics/"
-      ],
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 9.41,
-        "peg": null,
-        "epsGrowth3yPct": 31.69,
-        "evSales": 3.12,
-        "grossMarginPct": 100.0,
-        "operatingMarginPct": 45.521,
-        "netMarginPct": 26.405,
-        "fcfMarginPct": 28.44,
-        "chg3mPct": 2.75,
-        "chg6mPct": -2.17,
-        "chg1yPct": 32.61,
-        "relStrength1yPct": 20.69,
-        "priceAsOf": "2026-10-29"
-      },
-      "grades": {
-        "growth": "A+",
-        "value": "B",
-        "momentum": "A+",
-        "profitability": "B"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
+        "chg3mPct": -34.72,
+        "chg6mPct": -36.42,
+        "chg1yPct": -36.19,
+        "relStrength1yPct": -47.35,
+        "priceAsOf": "2026-10-30"
       }
     },
     {
       "company": "Northpointe Bancshares Inc.",
       "ticker": "NPB",
       "sector": "Finance – Major Banks",
-      "price": 16.18,
-      "priceDate": "2026-10-29",
-      "marketCap": "$560M",
-      "forwardPE": 7.09,
+      "price": 15.79,
+      "priceDate": "2026-10-30",
+      "marketCap": "$546M",
+      "forwardPE": 6.92,
       "peg": "n/a",
       "revenueGrowth": "n/a",
       "alsoIn": [
@@ -1210,8 +1033,8 @@
       "grades": {
         "growth": "F",
         "value": "A-",
-        "momentum": "B-",
-        "profitability": "A-"
+        "momentum": "B",
+        "profitability": "A+"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -1221,27 +1044,27 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 7.09,
+        "forwardPE": 6.92,
         "peg": null,
         "epsGrowth3yPct": 9.63,
-        "evSales": 6.54,
+        "evSales": 6.49,
         "grossMarginPct": 100.0,
         "operatingMarginPct": 43.47,
         "netMarginPct": 33.2,
         "fcfMarginPct": 39.589,
-        "chg3mPct": -6.47,
-        "chg6mPct": -6.96,
-        "chg1yPct": 2.08,
-        "relStrength1yPct": -9.84,
-        "priceAsOf": "2026-10-29"
+        "chg3mPct": -8.62,
+        "chg6mPct": -11.44,
+        "chg1yPct": -1.31,
+        "relStrength1yPct": -12.47,
+        "priceAsOf": "2026-10-30"
       }
     },
     {
       "company": "Nuveen Municipal Credit Opportunities Fund",
       "ticker": "NMCO",
       "sector": "Finance – Finance/Investors Services",
-      "price": 8.93,
-      "priceDate": "2026-10-29",
+      "price": 8.94,
+      "priceDate": "2026-10-30",
       "marketCap": "$489M",
       "forwardPE": "n/a",
       "peg": "n/a",
@@ -1351,7 +1174,7 @@
       "grades": {
         "growth": "n/a",
         "value": "n/a",
-        "momentum": "C-",
+        "momentum": "C+",
         "profitability": "n/a"
       },
       "gradeInputs": {
@@ -1364,143 +1187,23 @@
         "revenueGrowthPct": null,
         "forwardPE": null,
         "peg": null,
-        "chg3mPct": -14.87,
-        "chg6mPct": -16.62,
-        "chg1yPct": -17.39,
-        "relStrength1yPct": -29.31,
-        "priceAsOf": "2026-10-29",
+        "chg3mPct": -15.1,
+        "chg6mPct": -16.53,
+        "chg1yPct": -17.07,
+        "relStrength1yPct": -28.23,
+        "priceAsOf": "2026-10-30",
         "notes": [
           "StockAnalysis statistics unavailable (HTTP Error 404: Not Found)"
         ]
       }
     },
     {
-      "company": "H. B. Fuller Company",
-      "ticker": "FUL",
-      "sector": "Industrials – Home Furnishings",
-      "price": 49.69,
-      "priceDate": "2026-10-29",
-      "marketCap": "$2.7B",
-      "forwardPE": 9.5,
-      "peg": 0.57,
-      "revenueGrowth": "n/a",
-      "alsoIn": [
-        "Insider Buys"
-      ],
-      "insiderCount": 3,
-      "totalBought": 547997.65,
-      "firstBuy": "2026-09-30",
-      "lastBuy": "2026-10-16",
-      "keyFigures": [
-        {
-          "label": "Insiders buying",
-          "value": "3"
-        },
-        {
-          "label": "Total bought",
-          "value": "$548K"
-        },
-        {
-          "label": "Avg price paid",
-          "value": "$50.08"
-        },
-        {
-          "label": "Buy dates",
-          "value": "2026-09-30 → 2026-10-16"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "i0",
-          "label": "Bailly R Jeffrey",
-          "met": true,
-          "detail": "Director: $500K (10,000 sh) on 2026-10-07"
-        },
-        {
-          "key": "i1",
-          "label": "Malik Muhammad Shahbaz",
-          "met": true,
-          "detail": "Senior VP, BAS: $25K (479 sh) on 2026-10-16"
-        },
-        {
-          "key": "i2",
-          "label": "Martin Celine Christine",
-          "met": true,
-          "detail": "Director: $23K (465 sh) on 2026-09-30"
-        }
-      ],
-      "risks": [
-        "Buyers are directors or large holders only, no executive officers",
-        "One insider (BAILLY R JEFFREY) accounts for 91% of the dollars"
-      ],
-      "analystRating": "Strong Buy (7 analysts)",
-      "priceTarget": 66.29,
-      "transactions": [
-        {
-          "insider": "Malik Muhammad Shahbaz",
-          "date": "2026-10-16",
-          "shares": 478.6594,
-          "price": 52.2292,
-          "value": 24999.99753448,
-          "accession": "0001225208-26-008441"
-        },
-        {
-          "insider": "BAILLY R JEFFREY",
-          "date": "2026-10-07",
-          "shares": 10000.0,
-          "price": 50.0,
-          "value": 500000.0,
-          "accession": "0001225208-26-008325"
-        },
-        {
-          "insider": "Martin Celine Christine",
-          "date": "2026-09-30",
-          "shares": 464.599,
-          "price": 49.5,
-          "value": 22997.6505,
-          "accession": "0001225208-26-008045"
-        }
-      ],
-      "sourceUrl": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000039368&type=4&dateb=&owner=include&count=40",
-        "https://stockanalysis.com/stocks/ful/statistics/"
-      ],
-      "grades": {
-        "growth": "D",
-        "value": "C",
-        "momentum": "C",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "1/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 9.5,
-        "peg": 0.57,
-        "epsGrowth3yPct": 10.42,
-        "evSales": 1.34,
-        "grossMarginPct": 32.7,
-        "operatingMarginPct": 11.999,
-        "netMarginPct": 5.564,
-        "fcfMarginPct": 2.815,
-        "chg3mPct": -10.89,
-        "chg6mPct": -16.96,
-        "chg1yPct": -14.4,
-        "relStrength1yPct": -26.32,
-        "priceAsOf": "2026-10-29"
-      }
-    },
-    {
       "company": "AgomAb Therapeutics NV",
       "ticker": "AGMB",
       "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
-      "price": 7.95,
-      "priceDate": "2026-10-29",
-      "marketCap": "$392M",
+      "price": 7.49,
+      "priceDate": "2026-10-30",
+      "marketCap": "$369M",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "n/a",
@@ -1654,21 +1357,21 @@
         "operatingMarginPct": null,
         "netMarginPct": null,
         "fcfMarginPct": null,
-        "chg3mPct": -35.89,
-        "chg6mPct": -25.98,
+        "chg3mPct": -41.28,
+        "chg6mPct": -30.97,
         "chg1yPct": null,
         "relStrength1yPct": null,
-        "priceAsOf": "2026-10-29"
+        "priceAsOf": "2026-10-30"
       }
     },
     {
       "company": "Dynex Capital Inc.",
       "ticker": "DX",
       "sector": "Real Estate – Real Estate Investment Trusts",
-      "price": 10.89,
-      "priceDate": "2026-10-29",
+      "price": 10.65,
+      "priceDate": "2026-10-30",
       "marketCap": "$2.8B",
-      "forwardPE": 6.88,
+      "forwardPE": 6.73,
       "peg": "n/a",
       "revenueGrowth": "n/a",
       "alsoIn": [
@@ -1760,10 +1463,10 @@
         "https://stockanalysis.com/stocks/dx/statistics/"
       ],
       "grades": {
-        "growth": "A-",
-        "value": "D+",
-        "momentum": "D",
-        "profitability": "C"
+        "growth": "B",
+        "value": "D",
+        "momentum": "D+",
+        "profitability": "B-"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -1773,27 +1476,27 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 6.88,
+        "forwardPE": 6.73,
         "peg": null,
         "epsGrowth3yPct": 29.84,
-        "evSales": 1540.46,
+        "evSales": 1536.79,
         "grossMarginPct": 100.0,
         "operatingMarginPct": -293.458,
         "netMarginPct": -293.458,
-        "fcfMarginPct": 36.694,
-        "chg3mPct": -15.12,
-        "chg6mPct": -19.33,
-        "chg1yPct": -18.3,
-        "relStrength1yPct": -30.22,
-        "priceAsOf": "2026-10-29"
+        "fcfMarginPct": 1087.229,
+        "chg3mPct": -16.93,
+        "chg6mPct": -21.81,
+        "chg1yPct": -18.83,
+        "relStrength1yPct": -29.99,
+        "priceAsOf": "2026-10-30"
       }
     }
   ],
   "bench": [],
   "grading": {
-    "asOf": "2026-10-30",
-    "spy1yPct": 11.92,
-    "pool": "11 stocks (this list's picks + bench)",
+    "asOf": "2026-10-31",
+    "spy1yPct": 11.16,
+    "pool": "9 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",

@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
- "lastUpdated": "2026-10-30",
+ "lastUpdated": "2026-10-31",
  "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Insider Buys was added on Oct 14, 2026, starting at 100 on the 2026-10-13 close (no backfill).",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
@@ -1437,6 +1437,98 @@
    "HRMY": 38.59,
    "ONDS": 6.88,
    "RELY": 24.64
+  },
+  "2026-10-30": {
+   "SNDK": 1150.89,
+   "SNDX": 13.65,
+   "WHD": 65.7,
+   "INDV": 35.37,
+   "CDLR": 28.76,
+   "NTES": 113.64,
+   "PLMR": 140.32,
+   "FUL": 49.7,
+   "UCTT": 49.71,
+   "PAGS": 7.94,
+   "UBER": 65.25,
+   "NMCO": 8.94,
+   "DHT": 25.02,
+   "AGMB": 7.49,
+   "ACCV": 14.48,
+   "QQQ": 690.49,
+   "PLTR": 184.11,
+   "PDD": 78.61,
+   "SKHY": 149.21,
+   "KNSA": 92.24,
+   "TOST": 31.68,
+   "EXE": 90.55,
+   "HEI": 321.36,
+   "FSM": 8.88,
+   "ONDS": 6.32,
+   "CAAP": 23.74,
+   "SUZ": 9.24,
+   "NPB": 15.79,
+   "TLN": 343.12,
+   "BAM": 48.26,
+   "NTR": 69.42,
+   "TME": 8.41,
+   "SMCI": 32.95,
+   "DX": 10.65,
+   "APTV": 43.93,
+   "FORM": 87.53,
+   "AAP": 45.11,
+   "GLBE": 41.4,
+   "EXK": 7.21,
+   "SITM": 447.06,
+   "HLIT": 10.23,
+   "WSE": 10.67,
+   "NRIX": 26.8,
+   "BCRX": 8.47,
+   "BBT": 30.62,
+   "ALM": 8.7,
+   "ORCL": 130.67,
+   "VSNT": 31.42,
+   "TXN": 300.84,
+   "MU": 884.74,
+   "PPLI": 35.62,
+   "SNY": 44.34,
+   "PSX": 282.83,
+   "VICR": 191.09,
+   "TNK": 100.8,
+   "PAY": 32.82,
+   "APLD": 17.815,
+   "SPY": 755.72,
+   "RAPP": 25.05,
+   "HRMY": 38.76,
+   "RCAT": 4.63,
+   "SPG": 217.75,
+   "SE": 74.24,
+   "IONQ": 30.04,
+   "ENTG": 154.39,
+   "NU": 11.61,
+   "TTMI": 82.94,
+   "VCTR": 110.62,
+   "STC": 44.5,
+   "NUVB": 4.76,
+   "RDDT": 91.73,
+   "VSTM": 9.75,
+   "KLIC": 74.21,
+   "APP": 228.5,
+   "ROKU": 155.12,
+   "SIMO": 208.65,
+   "WEX": 184.61,
+   "FN": 327.29,
+   "PENG": 51.93,
+   "OCTV": 21.71,
+   "STRL": 345.91,
+   "AMTM": 21.87,
+   "AER": 158.52,
+   "URGN": 32.72,
+   "NVDA": 204.64,
+   "PTGX": 144.85,
+   "HUBS": 234.87,
+   "KEP": 10.34,
+   "RELY": 24.15,
+   "GNRC": 197.93
   }
  },
  "lists": {
@@ -1449,11 +1541,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 1045.56,
-     "lastPrice": 934.27,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -10.64,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 884.74,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -15.38,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1462,12 +1554,12 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 144.77,
-     "lastPrice": 139.56,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -3.6,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
-     "beatQQQ": true
+     "lastPrice": 130.67,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -9.74,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
+     "beatQQQ": false
     },
     {
      "ticker": "APP",
@@ -1475,11 +1567,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 278.78,
-     "lastPrice": 254.91,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -8.56,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 228.5,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -18.04,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1488,11 +1580,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 148.95,
-     "lastPrice": 129.6,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -12.99,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 91.73,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -38.42,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1501,11 +1593,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 15.66,
-     "lastPrice": 12.05,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -23.05,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 11.61,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -25.86,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1514,11 +1606,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 69.08,
-     "lastPrice": 65.74,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -4.83,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 65.25,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -5.54,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": true
     },
     {
@@ -1527,11 +1619,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 96.53,
-     "lastPrice": 76.55,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -20.7,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 74.24,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -23.09,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1540,12 +1632,12 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 373.11,
-     "lastPrice": 348.85,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -6.5,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
-     "beatQQQ": false
+     "lastPrice": 343.12,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -8.04,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
+     "beatQQQ": true
     },
     {
      "ticker": "STRL",
@@ -1553,11 +1645,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 563.69,
-     "lastPrice": 373.66,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -33.71,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 345.91,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -38.63,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1566,11 +1658,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 489.16,
-     "lastPrice": 348.68,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -28.72,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 327.29,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -33.09,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1579,11 +1671,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-08",
      "entryPrice": 230.48,
-     "lastPrice": 213.66,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -7.3,
-     "qqqPct": -4.31,
-     "spyPct": -0.59,
+     "lastPrice": 204.64,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -11.21,
+     "qqqPct": -7.64,
+     "spyPct": -2.35,
      "beatQQQ": false
     },
     {
@@ -1592,11 +1684,11 @@
      "entryDate": "2026-10-30",
      "entryPriceDate": "2026-10-29",
      "entryPrice": 1330.05,
-     "lastPrice": 1330.05,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 0.0,
-     "qqqPct": 0.0,
-     "spyPct": 0.0,
+     "lastPrice": 1150.89,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -13.47,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
      "beatQQQ": false
     }
    ],
@@ -1824,16 +1916,20 @@
     [
      "2026-10-29",
      85.586
+    ],
+    [
+     "2026-10-30",
+     79.055
     ]
    ],
-   "returnPct": -14.41,
-   "vsQQQPct": -8.58,
-   "vsSPYPct": -13.16,
+   "returnPct": -20.94,
+   "vsQQQPct": -11.83,
+   "vsSPYPct": -17.94,
    "hitRate": {
     "beat": 3,
-    "of": 13,
+    "of": 14,
     "openBeat": 2,
-    "openOf": 11
+    "openOf": 12
    },
    "startDate": "2026-10-07",
    "startPriceDate": "2026-10-06"
@@ -1847,11 +1943,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 13.04,
-     "lastPrice": 9.3,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -28.68,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 8.7,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -33.28,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1860,11 +1956,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 4.88,
-     "lastPrice": 4.77,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -2.25,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 4.76,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -2.46,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": true
     },
     {
@@ -1873,11 +1969,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 7.75,
-     "lastPrice": 9.66,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 24.65,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 9.75,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 25.81,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": true
     },
     {
@@ -1886,11 +1982,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 7.41,
-     "lastPrice": 6.88,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -7.15,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 6.32,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -14.71,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1899,11 +1995,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-06",
      "entryPrice": 8.67,
-     "lastPrice": 7.76,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -10.5,
-     "qqqPct": -5.83,
-     "spyPct": -1.25,
+     "lastPrice": 7.21,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -16.84,
+     "qqqPct": -9.11,
+     "spyPct": -3.0,
      "beatQQQ": false
     },
     {
@@ -1912,11 +2008,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-08",
      "entryPrice": 5.91,
-     "lastPrice": 5.05,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -14.55,
-     "qqqPct": -4.31,
-     "spyPct": -0.59,
+     "lastPrice": 4.63,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -21.66,
+     "qqqPct": -7.64,
+     "spyPct": -2.35,
      "beatQQQ": false
     },
     {
@@ -1925,11 +2021,11 @@
      "entryDate": "2026-10-25",
      "entryPriceDate": "2026-10-23",
      "entryPrice": 31.27,
-     "lastPrice": 31.72,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 1.44,
-     "qqqPct": 1.55,
-     "spyPct": 1.24,
+     "lastPrice": 30.04,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -3.93,
+     "qqqPct": -1.97,
+     "spyPct": -0.56,
      "beatQQQ": false
     },
     {
@@ -1938,11 +2034,11 @@
      "entryDate": "2026-10-25",
      "entryPriceDate": "2026-10-23",
      "entryPrice": 13.4,
-     "lastPrice": 14.15,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 5.6,
-     "qqqPct": 1.55,
-     "spyPct": 1.24,
+     "lastPrice": 13.65,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 1.87,
+     "qqqPct": -1.97,
+     "spyPct": -0.56,
      "beatQQQ": true
     },
     {
@@ -1951,11 +2047,11 @@
      "entryDate": "2026-10-27",
      "entryPriceDate": "2026-10-26",
      "entryPrice": 17.83,
-     "lastPrice": 19.41,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 8.86,
-     "qqqPct": 0.44,
-     "spyPct": 0.52,
+     "lastPrice": 17.815,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -0.08,
+     "qqqPct": -3.05,
+     "spyPct": -1.26,
      "beatQQQ": true
     },
     {
@@ -1964,11 +2060,11 @@
      "entryDate": "2026-10-28",
      "entryPriceDate": "2026-10-27",
      "entryPrice": 145.36,
-     "lastPrice": 162.09,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 11.51,
-     "qqqPct": -0.82,
-     "spyPct": -0.04,
+     "lastPrice": 149.21,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 2.65,
+     "qqqPct": -4.26,
+     "spyPct": -1.81,
      "beatQQQ": true
     },
     {
@@ -1977,12 +2073,12 @@
      "entryDate": "2026-10-29",
      "entryPriceDate": "2026-10-28",
      "entryPrice": 219.61,
-     "lastPrice": 227.75,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 3.71,
-     "qqqPct": -1.42,
-     "spyPct": -0.38,
-     "beatQQQ": true
+     "lastPrice": 208.65,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -4.99,
+     "qqqPct": -4.84,
+     "spyPct": -2.15,
+     "beatQQQ": false
     },
     {
      "ticker": "URGN",
@@ -1990,12 +2086,12 @@
      "entryDate": "2026-10-30",
      "entryPriceDate": "2026-10-29",
      "entryPrice": 33.48,
-     "lastPrice": 33.48,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 0.0,
-     "qqqPct": 0.0,
-     "spyPct": 0.0,
-     "beatQQQ": false
+     "lastPrice": 32.72,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -2.27,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
+     "beatQQQ": true
     }
    ],
    "closed": [
@@ -3026,16 +3122,20 @@
     [
      "2026-10-29",
      95.059
+    ],
+    [
+     "2026-10-30",
+     89.916
     ]
    ],
-   "returnPct": -4.94,
-   "vsQQQPct": 0.89,
-   "vsSPYPct": -3.69,
+   "returnPct": -10.08,
+   "vsQQQPct": -0.97,
+   "vsSPYPct": -7.08,
    "hitRate": {
     "beat": 14,
-    "of": 29,
+    "of": 30,
     "openBeat": 6,
-    "openOf": 11
+    "openOf": 12
    },
    "startDate": "2026-10-07",
    "startPriceDate": "2026-10-06"
@@ -3051,11 +3151,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-07",
      "entryPrice": 94.95,
-     "lastPrice": 79.68,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -16.08,
-     "qqqPct": -5.59,
-     "spyPct": -1.01,
+     "lastPrice": 74.21,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -21.84,
+     "qqqPct": -8.87,
+     "spyPct": -2.77,
      "beatQQQ": false
     },
     {
@@ -3064,11 +3164,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-07",
      "entryPrice": 285.78,
-     "lastPrice": 227.75,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -20.31,
-     "qqqPct": -5.59,
-     "spyPct": -1.01,
+     "lastPrice": 208.65,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -26.99,
+     "qqqPct": -8.87,
+     "spyPct": -2.77,
      "beatQQQ": false
     },
     {
@@ -3077,11 +3177,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-07",
      "entryPrice": 665.16,
-     "lastPrice": 488.08,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -26.62,
-     "qqqPct": -5.59,
-     "spyPct": -1.01,
+     "lastPrice": 447.06,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -32.79,
+     "qqqPct": -8.87,
+     "spyPct": -2.77,
      "beatQQQ": false
     },
     {
@@ -3090,11 +3190,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-07",
      "entryPrice": 40.7,
-     "lastPrice": 33.48,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -17.74,
-     "qqqPct": -5.59,
-     "spyPct": -1.01,
+     "lastPrice": 32.72,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -19.61,
+     "qqqPct": -8.87,
+     "spyPct": -2.77,
      "beatQQQ": false
     },
     {
@@ -3103,11 +3203,11 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-07",
      "entryPrice": 44.94,
-     "lastPrice": 34.43,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -23.39,
-     "qqqPct": -5.59,
-     "spyPct": -1.01,
+     "lastPrice": 32.95,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -26.68,
+     "qqqPct": -8.87,
+     "spyPct": -2.77,
      "beatQQQ": false
     },
     {
@@ -3116,12 +3216,12 @@
      "entryDate": "2026-10-07",
      "entryPriceDate": "2026-10-07",
      "entryPrice": 11.27,
-     "lastPrice": 10.8,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -4.17,
-     "qqqPct": -5.59,
-     "spyPct": -1.01,
-     "beatQQQ": true
+     "lastPrice": 10.23,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -9.23,
+     "qqqPct": -8.87,
+     "spyPct": -2.77,
+     "beatQQQ": false
     },
     {
      "ticker": "DHT",
@@ -3129,11 +3229,11 @@
      "entryDate": "2026-10-17",
      "entryPriceDate": "2026-10-16",
      "entryPrice": 23.6,
-     "lastPrice": 25.08,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 6.27,
-     "qqqPct": 0.78,
-     "spyPct": 0.8,
+     "lastPrice": 25.02,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 6.02,
+     "qqqPct": -2.72,
+     "spyPct": -0.99,
      "beatQQQ": true
     },
     {
@@ -3142,11 +3242,11 @@
      "entryDate": "2026-10-22",
      "entryPriceDate": "2026-10-21",
      "entryPrice": 102.15,
-     "lastPrice": 87.63,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -14.21,
-     "qqqPct": -1.36,
-     "spyPct": -0.48,
+     "lastPrice": 82.94,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -18.81,
+     "qqqPct": -4.79,
+     "spyPct": -2.25,
      "beatQQQ": false
     },
     {
@@ -3155,25 +3255,12 @@
      "entryDate": "2026-10-27",
      "entryPriceDate": "2026-10-26",
      "entryPrice": 54.92,
-     "lastPrice": 58.79,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 7.05,
-     "qqqPct": 0.44,
-     "spyPct": 0.52,
-     "beatQQQ": true
-    },
-    {
-     "ticker": "UCTT",
-     "company": "Ultra Clean Holdings Inc.",
-     "entryDate": "2026-10-28",
-     "entryPriceDate": "2026-10-27",
-     "entryPrice": 51.48,
-     "lastPrice": 54.7,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 6.25,
-     "qqqPct": -0.82,
-     "spyPct": -0.04,
-     "beatQQQ": true
+     "lastPrice": 51.93,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -5.44,
+     "qqqPct": -3.05,
+     "spyPct": -1.26,
+     "beatQQQ": false
     },
     {
      "ticker": "FORM",
@@ -3181,21 +3268,34 @@
      "entryDate": "2026-10-30",
      "entryPriceDate": "2026-10-29",
      "entryPrice": 97.46,
-     "lastPrice": 97.46,
-     "lastPriceDate": "2026-10-29",
+     "lastPrice": 87.53,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -10.19,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "ENTG",
+     "company": "Entegris Inc.",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 154.39,
+     "lastPrice": 154.39,
+     "lastPriceDate": "2026-10-30",
      "returnPct": 0.0,
      "qqqPct": 0.0,
      "spyPct": 0.0,
      "beatQQQ": false
     },
     {
-     "ticker": "GNRC",
-     "company": "Generac Holdlings Inc.",
-     "entryDate": "2026-10-30",
-     "entryPriceDate": "2026-10-29",
-     "entryPrice": 203.36,
-     "lastPrice": 203.36,
-     "lastPriceDate": "2026-10-29",
+     "ticker": "VICR",
+     "company": "Vicor Corporation",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 191.09,
+     "lastPrice": 191.09,
+     "lastPriceDate": "2026-10-30",
      "returnPct": 0.0,
      "qqqPct": 0.0,
      "spyPct": 0.0,
@@ -3496,6 +3596,34 @@
      "exitDate": "2026-10-30",
      "exitPriceDate": "2026-10-29",
      "exitPrice": 206.62
+    },
+    {
+     "ticker": "UCTT",
+     "company": "Ultra Clean Holdings Inc.",
+     "entryDate": "2026-10-28",
+     "entryPriceDate": "2026-10-27",
+     "entryPrice": 51.48,
+     "returnPct": -3.44,
+     "qqqPct": -4.26,
+     "spyPct": -1.81,
+     "beatQQQ": true,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 49.71
+    },
+    {
+     "ticker": "GNRC",
+     "company": "Generac Holdlings Inc.",
+     "entryDate": "2026-10-30",
+     "entryPriceDate": "2026-10-29",
+     "entryPrice": 203.36,
+     "returnPct": -2.67,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
+     "beatQQQ": true,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 197.93
     }
    ],
    "segments": [
@@ -3713,6 +3841,24 @@
       "UCTT",
       "FORM",
       "GNRC"
+     ]
+    },
+    {
+     "start": "2026-10-30",
+     "startValue": 80.955444,
+     "tickers": [
+      "KLIC",
+      "SIMO",
+      "SITM",
+      "URGN",
+      "SMCI",
+      "HLIT",
+      "DHT",
+      "TTMI",
+      "PENG",
+      "FORM",
+      "ENTG",
+      "VICR"
      ]
     }
    ],
@@ -4144,6 +4290,44 @@
      "priceDate": "2026-10-29",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "UCTT",
+     "company": "Ultra Clean Holdings Inc.",
+     "price": 49.71
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "GNRC",
+     "company": "Generac Holdlings Inc.",
+     "price": 197.93
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "ENTG",
+     "company": "Entegris Inc.",
+     "price": 154.39
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "VICR",
+     "company": "Vicor Corporation",
+     "price": 191.09
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -4214,15 +4398,19 @@
     [
      "2026-10-29",
      86.333
+    ],
+    [
+     "2026-10-30",
+     80.955
     ]
    ],
-   "returnPct": -13.67,
-   "vsQQQPct": -8.08,
-   "vsSPYPct": -12.66,
+   "returnPct": -19.05,
+   "vsQQQPct": -10.18,
+   "vsSPYPct": -16.28,
    "hitRate": {
-    "beat": 12,
-    "of": 31,
-    "openBeat": 4,
+    "beat": 11,
+    "of": 33,
+    "openBeat": 1,
     "openOf": 10
    }
   },
@@ -4237,24 +4425,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 24.13,
-     "lastPrice": 24.64,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 2.11,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
-     "beatQQQ": true
-    },
-    {
-     "ticker": "PLTR",
-     "company": "Palantir Technologies Inc.",
-     "entryDate": "2026-10-20",
-     "entryPriceDate": "2026-10-19",
-     "entryPrice": 194.15,
-     "lastPrice": 196.42,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 1.17,
-     "qqqPct": -0.42,
-     "spyPct": 0.38,
+     "lastPrice": 24.15,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.08,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -4263,25 +4438,12 @@
      "entryDate": "2026-10-20",
      "entryPriceDate": "2026-10-19",
      "entryPrice": 39.71,
-     "lastPrice": 43.04,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 8.39,
-     "qqqPct": -0.42,
-     "spyPct": 0.38,
+     "lastPrice": 41.4,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 4.26,
+     "qqqPct": -3.88,
+     "spyPct": -1.4,
      "beatQQQ": true
-    },
-    {
-     "ticker": "ROKU",
-     "company": "Roku Inc.",
-     "entryDate": "2026-10-24",
-     "entryPriceDate": "2026-10-23",
-     "entryPrice": 158.58,
-     "lastPrice": 156.33,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -1.42,
-     "qqqPct": 1.55,
-     "spyPct": 1.24,
-     "beatQQQ": false
     },
     {
      "ticker": "PTGX",
@@ -4289,37 +4451,11 @@
      "entryDate": "2026-10-27",
      "entryPriceDate": "2026-10-26",
      "entryPrice": 140.32,
-     "lastPrice": 144.34,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 2.86,
-     "qqqPct": 0.44,
-     "spyPct": 0.52,
-     "beatQQQ": true
-    },
-    {
-     "ticker": "HUBS",
-     "company": "HubSpot Inc.",
-     "entryDate": "2026-10-27",
-     "entryPriceDate": "2026-10-26",
-     "entryPrice": 263.99,
-     "lastPrice": 239.57,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -9.25,
-     "qqqPct": 0.44,
-     "spyPct": 0.52,
-     "beatQQQ": false
-    },
-    {
-     "ticker": "VCTR",
-     "company": "Victory Capital Holdings Inc.",
-     "entryDate": "2026-10-28",
-     "entryPriceDate": "2026-10-27",
-     "entryPrice": 110.63,
-     "lastPrice": 113.81,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 2.87,
-     "qqqPct": -0.82,
-     "spyPct": -0.04,
+     "lastPrice": 144.85,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 3.23,
+     "qqqPct": -3.05,
+     "spyPct": -1.26,
      "beatQQQ": true
     },
     {
@@ -4328,11 +4464,11 @@
      "entryDate": "2026-10-29",
      "entryPriceDate": "2026-10-28",
      "entryPrice": 99.29,
-     "lastPrice": 101.23,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 1.95,
-     "qqqPct": -1.42,
-     "spyPct": -0.38,
+     "lastPrice": 100.8,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 1.52,
+     "qqqPct": -4.84,
+     "spyPct": -2.15,
      "beatQQQ": true
     },
     {
@@ -4341,11 +4477,11 @@
      "entryDate": "2026-10-29",
      "entryPriceDate": "2026-10-28",
      "entryPrice": 136.44,
-     "lastPrice": 137.17,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 0.54,
-     "qqqPct": -1.42,
-     "spyPct": -0.38,
+     "lastPrice": 140.32,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 2.84,
+     "qqqPct": -4.84,
+     "spyPct": -2.15,
      "beatQQQ": true
     },
     {
@@ -4354,12 +4490,12 @@
      "entryDate": "2026-10-30",
      "entryPriceDate": "2026-10-29",
      "entryPrice": 38.59,
-     "lastPrice": 38.59,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 0.0,
-     "qqqPct": 0.0,
-     "spyPct": 0.0,
-     "beatQQQ": false
+     "lastPrice": 38.76,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.44,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
+     "beatQQQ": true
     },
     {
      "ticker": "WHD",
@@ -4367,21 +4503,73 @@
      "entryDate": "2026-10-30",
      "entryPriceDate": "2026-10-29",
      "entryPrice": 65.49,
-     "lastPrice": 65.49,
-     "lastPriceDate": "2026-10-29",
+     "lastPrice": 65.7,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.32,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
+     "beatQQQ": true
+    },
+    {
+     "ticker": "KNSA",
+     "company": "Kiniksa Pharmaceuticals International plc",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 92.24,
+     "lastPrice": 92.24,
+     "lastPriceDate": "2026-10-30",
      "returnPct": 0.0,
      "qqqPct": 0.0,
      "spyPct": 0.0,
      "beatQQQ": false
     },
     {
-     "ticker": "BAM",
-     "company": "Brookfield Asset Management Inc Class A Limited Voting Shares",
-     "entryDate": "2026-10-30",
-     "entryPriceDate": "2026-10-29",
-     "entryPrice": 48.6,
-     "lastPrice": 48.6,
-     "lastPriceDate": "2026-10-29",
+     "ticker": "TOST",
+     "company": "Toast Inc.",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 31.68,
+     "lastPrice": 31.68,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "PAY",
+     "company": "Paymentus Holdings Inc.",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 32.82,
+     "lastPrice": 32.82,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "PSX",
+     "company": "Phillips 66",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 282.83,
+     "lastPrice": 282.83,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "TXN",
+     "company": "Texas Instruments Incorporated",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 300.84,
+     "lastPrice": 300.84,
+     "lastPriceDate": "2026-10-30",
      "returnPct": 0.0,
      "qqqPct": 0.0,
      "spyPct": 0.0,
@@ -4990,6 +5178,76 @@
      "exitDate": "2026-10-30",
      "exitPriceDate": "2026-10-29",
      "exitPrice": 934.27
+    },
+    {
+     "ticker": "PLTR",
+     "company": "Palantir Technologies Inc.",
+     "entryDate": "2026-10-20",
+     "entryPriceDate": "2026-10-19",
+     "entryPrice": 194.15,
+     "returnPct": -5.17,
+     "qqqPct": -3.88,
+     "spyPct": -1.4,
+     "beatQQQ": false,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 184.11
+    },
+    {
+     "ticker": "ROKU",
+     "company": "Roku Inc.",
+     "entryDate": "2026-10-24",
+     "entryPriceDate": "2026-10-23",
+     "entryPrice": 158.58,
+     "returnPct": -2.18,
+     "qqqPct": -1.97,
+     "spyPct": -0.56,
+     "beatQQQ": false,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 155.12
+    },
+    {
+     "ticker": "HUBS",
+     "company": "HubSpot Inc.",
+     "entryDate": "2026-10-27",
+     "entryPriceDate": "2026-10-26",
+     "entryPrice": 263.99,
+     "returnPct": -11.03,
+     "qqqPct": -3.05,
+     "spyPct": -1.26,
+     "beatQQQ": false,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 234.87
+    },
+    {
+     "ticker": "VCTR",
+     "company": "Victory Capital Holdings Inc.",
+     "entryDate": "2026-10-28",
+     "entryPriceDate": "2026-10-27",
+     "entryPrice": 110.63,
+     "returnPct": -0.01,
+     "qqqPct": -4.26,
+     "spyPct": -1.81,
+     "beatQQQ": true,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 110.62
+    },
+    {
+     "ticker": "BAM",
+     "company": "Brookfield Asset Management Inc Class A Limited Voting Shares",
+     "entryDate": "2026-10-30",
+     "entryPriceDate": "2026-10-29",
+     "entryPrice": 48.6,
+     "returnPct": -0.7,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
+     "beatQQQ": true,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 48.26
     }
    ],
    "segments": [
@@ -5242,6 +5500,24 @@
       "HRMY",
       "WHD",
       "BAM"
+     ]
+    },
+    {
+     "start": "2026-10-30",
+     "startValue": 95.814723,
+     "tickers": [
+      "RELY",
+      "GLBE",
+      "PTGX",
+      "TNK",
+      "PLMR",
+      "HRMY",
+      "WHD",
+      "KNSA",
+      "TOST",
+      "PAY",
+      "PSX",
+      "TXN"
      ]
     }
    ],
@@ -6037,6 +6313,92 @@
      "priceDate": "2026-10-29",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "PLTR",
+     "company": "Palantir Technologies Inc.",
+     "price": 184.11
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "ROKU",
+     "company": "Roku Inc.",
+     "price": 155.12
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "HUBS",
+     "company": "HubSpot Inc.",
+     "price": 234.87
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "VCTR",
+     "company": "Victory Capital Holdings Inc.",
+     "price": 110.62
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "BAM",
+     "company": "Brookfield Asset Management Inc Class A Limited Voting Shares",
+     "price": 48.26
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "KNSA",
+     "company": "Kiniksa Pharmaceuticals International plc",
+     "price": 92.24
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "TOST",
+     "company": "Toast Inc.",
+     "price": 31.68
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "PAY",
+     "company": "Paymentus Holdings Inc.",
+     "price": 32.82
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "PSX",
+     "company": "Phillips 66",
+     "price": 282.83
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "TXN",
+     "company": "Texas Instruments Incorporated",
+     "price": 300.84
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -6099,16 +6461,20 @@
     [
      "2026-10-29",
      97.054
+    ],
+    [
+     "2026-10-30",
+     95.815
     ]
    ],
-   "returnPct": -2.95,
-   "vsQQQPct": 1.83,
-   "vsSPYPct": -1.77,
+   "returnPct": -4.19,
+   "vsQQQPct": 3.9,
+   "vsSPYPct": -1.26,
    "hitRate": {
-    "beat": 22,
-    "of": 52,
+    "beat": 24,
+    "of": 55,
     "openBeat": 7,
-    "openOf": 9
+    "openOf": 7
    }
   },
   "piotroski": {
@@ -6122,11 +6488,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 67.48,
-     "lastPrice": 68.48,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 1.48,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 69.42,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 2.87,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6135,12 +6501,12 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 11.03,
-     "lastPrice": 10.4,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -5.71,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
-     "beatQQQ": false
+     "lastPrice": 10.34,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -6.26,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
+     "beatQQQ": true
     },
     {
      "ticker": "PPLI",
@@ -6148,11 +6514,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 40.89,
-     "lastPrice": 35.88,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -12.25,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 35.62,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -12.89,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": false
     },
     {
@@ -6161,24 +6527,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 19.29,
-     "lastPrice": 22.07,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 14.41,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
-     "beatQQQ": true
-    },
-    {
-     "ticker": "CDLR",
-     "company": "Cadeler A/S",
-     "entryDate": "2026-10-09",
-     "entryPriceDate": "2026-10-09",
-     "entryPrice": 21.8,
-     "lastPrice": 26.69,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 22.43,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 21.87,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 13.37,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6187,11 +6540,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 43.8,
-     "lastPrice": 44.43,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 1.44,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 43.93,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.3,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6200,11 +6553,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 11.16,
-     "lastPrice": 8.07,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -27.69,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 7.94,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -28.85,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": false
     },
     {
@@ -6213,11 +6566,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 88.22,
-     "lastPrice": 90.44,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 2.52,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 90.55,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 2.64,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6226,11 +6579,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 20.52,
-     "lastPrice": 21.74,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 5.95,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 21.71,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 5.8,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6239,24 +6592,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 8.57,
-     "lastPrice": 9.23,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 7.7,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
-     "beatQQQ": true
-    },
-    {
-     "ticker": "AAP",
-     "company": "Advance Auto Parts Inc.",
-     "entryDate": "2026-10-28",
-     "entryPriceDate": "2026-10-27",
-     "entryPrice": 45.83,
-     "lastPrice": 45.73,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -0.22,
-     "qqqPct": -0.82,
-     "spyPct": -0.04,
+     "lastPrice": 9.24,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 7.82,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6265,12 +6605,38 @@
      "entryDate": "2026-10-29",
      "entryPriceDate": "2026-10-28",
      "entryPrice": 155.48,
-     "lastPrice": 159.71,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 2.72,
-     "qqqPct": -1.42,
-     "spyPct": -0.38,
+     "lastPrice": 158.52,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 1.96,
+     "qqqPct": -4.84,
+     "spyPct": -2.15,
      "beatQQQ": true
+    },
+    {
+     "ticker": "SNY",
+     "company": "Sanofi",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 44.34,
+     "lastPrice": 44.34,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "FSM",
+     "company": "Fortuna Mining Corp.",
+     "entryDate": "2026-10-31",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 8.88,
+     "lastPrice": 8.88,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
     }
    ],
    "closed": [
@@ -6371,6 +6737,34 @@
      "exitDate": "2026-10-29",
      "exitPriceDate": "2026-10-28",
      "exitPrice": 49.35
+    },
+    {
+     "ticker": "CDLR",
+     "company": "Cadeler A/S",
+     "entryDate": "2026-10-09",
+     "entryPriceDate": "2026-10-09",
+     "entryPrice": 21.8,
+     "returnPct": 31.93,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
+     "beatQQQ": true,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 28.76
+    },
+    {
+     "ticker": "AAP",
+     "company": "Advance Auto Parts Inc.",
+     "entryDate": "2026-10-28",
+     "entryPriceDate": "2026-10-27",
+     "entryPrice": 45.83,
+     "returnPct": -1.57,
+     "qqqPct": -4.26,
+     "spyPct": -1.81,
+     "beatQQQ": true,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 45.11
     }
    ],
    "segments": [
@@ -6498,6 +6892,24 @@
       "SUZ",
       "AAP",
       "AER"
+     ]
+    },
+    {
+     "start": "2026-10-30",
+     "startValue": 100.946317,
+     "tickers": [
+      "NTR",
+      "KEP",
+      "PPLI",
+      "AMTM",
+      "APTV",
+      "PAGS",
+      "EXE",
+      "OCTV",
+      "SUZ",
+      "AER",
+      "SNY",
+      "FSM"
      ]
     }
    ],
@@ -6669,6 +7081,44 @@
      "priceDate": "2026-10-28",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "CDLR",
+     "company": "Cadeler A/S",
+     "price": 28.76
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "AAP",
+     "company": "Advance Auto Parts Inc.",
+     "price": 45.11
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "SNY",
+     "company": "Sanofi",
+     "price": 44.34
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "FSM",
+     "company": "Fortuna Mining Corp.",
+     "price": 8.88
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -6731,16 +7181,20 @@
     [
      "2026-10-29",
      100.745
+    ],
+    [
+     "2026-10-30",
+     100.946
     ]
    ],
-   "returnPct": 0.75,
-   "vsQQQPct": 5.53,
-   "vsSPYPct": 1.93,
+   "returnPct": 0.95,
+   "vsQQQPct": 9.04,
+   "vsSPYPct": 3.88,
    "hitRate": {
-    "beat": 12,
+    "beat": 13,
     "of": 19,
-    "openBeat": 9,
-    "openOf": 12
+    "openBeat": 8,
+    "openOf": 10
    }
   },
   "magic": {
@@ -6754,11 +7208,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 81.35,
-     "lastPrice": 79.28,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -2.54,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 78.61,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -3.37,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6767,11 +7221,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 40.28,
-     "lastPrice": 38.59,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -4.2,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 38.76,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -3.77,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6780,11 +7234,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 11.87,
-     "lastPrice": 11.0,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -7.33,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 10.67,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -10.11,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": false
     },
     {
@@ -6793,11 +7247,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 24.54,
-     "lastPrice": 24.47,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -0.29,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 23.74,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -3.26,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6806,11 +7260,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 8.38,
-     "lastPrice": 8.37,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -0.12,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 8.41,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.36,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6819,11 +7273,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 172.43,
-     "lastPrice": 183.47,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 6.4,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 184.61,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 7.06,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6832,11 +7286,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 35.83,
-     "lastPrice": 35.25,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -1.62,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 35.37,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -1.28,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6845,11 +7299,11 @@
      "entryDate": "2026-10-09",
      "entryPriceDate": "2026-10-09",
      "entryPrice": 30.64,
-     "lastPrice": 31.005,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 1.19,
-     "qqqPct": -4.78,
-     "spyPct": -1.18,
+     "lastPrice": 31.42,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 2.55,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
      "beatQQQ": true
     },
     {
@@ -6858,11 +7312,11 @@
      "entryDate": "2026-10-13",
      "entryPriceDate": "2026-10-12",
      "entryPrice": 22.16,
-     "lastPrice": 27.12,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 22.38,
-     "qqqPct": -4.12,
-     "spyPct": -1.12,
+     "lastPrice": 26.8,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 20.94,
+     "qqqPct": -7.45,
+     "spyPct": -2.88,
      "beatQQQ": true
     },
     {
@@ -6871,11 +7325,11 @@
      "entryDate": "2026-10-21",
      "entryPriceDate": "2026-10-20",
      "entryPrice": 125.11,
-     "lastPrice": 112.1,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -10.4,
-     "qqqPct": -0.32,
-     "spyPct": 0.04,
+     "lastPrice": 113.64,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -9.17,
+     "qqqPct": -3.78,
+     "spyPct": -1.73,
      "beatQQQ": false
     },
     {
@@ -6884,11 +7338,11 @@
      "entryDate": "2026-10-27",
      "entryPriceDate": "2026-10-26",
      "entryPrice": 7.88,
-     "lastPrice": 8.52,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 8.12,
-     "qqqPct": 0.44,
-     "spyPct": 0.52,
+     "lastPrice": 8.47,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 7.49,
+     "qqqPct": -3.05,
+     "spyPct": -1.26,
      "beatQQQ": true
     },
     {
@@ -6897,11 +7351,11 @@
      "entryDate": "2026-10-30",
      "entryPriceDate": "2026-10-29",
      "entryPrice": 1330.05,
-     "lastPrice": 1330.05,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 0.0,
-     "qqqPct": 0.0,
-     "spyPct": 0.0,
+     "lastPrice": 1150.89,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -13.47,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
      "beatQQQ": false
     }
    ],
@@ -7645,16 +8099,20 @@
     [
      "2026-10-29",
      99.317
+    ],
+    [
+     "2026-10-30",
+     97.871
     ]
    ],
-   "returnPct": -0.68,
-   "vsQQQPct": 4.1,
-   "vsSPYPct": 0.5,
+   "returnPct": -2.13,
+   "vsQQQPct": 5.96,
+   "vsSPYPct": 0.8,
    "hitRate": {
     "beat": 15,
-    "of": 24,
+    "of": 25,
     "openBeat": 9,
-    "openOf": 11
+    "openOf": 12
    }
   },
   "insider": {
@@ -7663,42 +8121,16 @@
    "startPriceDate": "2026-10-13",
    "holdings": [
     {
-     "ticker": "SPG",
-     "company": "Simon Property Group Inc.",
-     "entryDate": "2026-10-14",
-     "entryPriceDate": "2026-10-13",
-     "entryPrice": 200.65,
-     "lastPrice": 215.72,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 7.51,
-     "qqqPct": -3.8,
-     "spyPct": -1.11,
-     "beatQQQ": true
-    },
-    {
      "ticker": "HEI",
      "company": "Heico Corporation",
      "entryDate": "2026-10-14",
      "entryPriceDate": "2026-10-13",
      "entryPrice": 296.73,
-     "lastPrice": 326.35,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 9.98,
-     "qqqPct": -3.8,
-     "spyPct": -1.11,
-     "beatQQQ": true
-    },
-    {
-     "ticker": "FUL",
-     "company": "H. B. Fuller Company",
-     "entryDate": "2026-10-14",
-     "entryPriceDate": "2026-10-13",
-     "entryPrice": 50.44,
-     "lastPrice": 49.69,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -1.49,
-     "qqqPct": -3.8,
-     "spyPct": -1.11,
+     "lastPrice": 321.36,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 8.3,
+     "qqqPct": -7.14,
+     "spyPct": -2.87,
      "beatQQQ": true
     },
     {
@@ -7707,11 +8139,11 @@
      "entryDate": "2026-10-14",
      "entryPriceDate": "2026-10-13",
      "entryPrice": 15.31,
-     "lastPrice": 15.19,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -0.78,
-     "qqqPct": -3.8,
-     "spyPct": -1.11,
+     "lastPrice": 14.48,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -5.42,
+     "qqqPct": -7.14,
+     "spyPct": -2.87,
      "beatQQQ": true
     },
     {
@@ -7720,11 +8152,11 @@
      "entryDate": "2026-10-16",
      "entryPriceDate": "2026-10-15",
      "entryPrice": 8.33,
-     "lastPrice": 7.95,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -4.56,
-     "qqqPct": -1.74,
-     "spyPct": -0.31,
+     "lastPrice": 7.49,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -10.08,
+     "qqqPct": -5.15,
+     "spyPct": -2.08,
      "beatQQQ": false
     },
     {
@@ -7733,12 +8165,12 @@
      "entryDate": "2026-10-22",
      "entryPriceDate": "2026-10-21",
      "entryPrice": 11.05,
-     "lastPrice": 10.89,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -1.45,
-     "qqqPct": -1.36,
-     "spyPct": -0.48,
-     "beatQQQ": false
+     "lastPrice": 10.65,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -3.62,
+     "qqqPct": -4.79,
+     "spyPct": -2.25,
+     "beatQQQ": true
     },
     {
      "ticker": "RAPP",
@@ -7746,11 +8178,11 @@
      "entryDate": "2026-10-23",
      "entryPriceDate": "2026-10-22",
      "entryPrice": 26.53,
-     "lastPrice": 24.21,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -8.74,
-     "qqqPct": 1.54,
-     "spyPct": 0.71,
+     "lastPrice": 25.05,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -5.58,
+     "qqqPct": -1.98,
+     "spyPct": -1.08,
      "beatQQQ": false
     },
     {
@@ -7759,11 +8191,11 @@
      "entryDate": "2026-10-27",
      "entryPriceDate": "2026-10-26",
      "entryPrice": 42.96,
-     "lastPrice": 45.48,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 5.87,
-     "qqqPct": 0.44,
-     "spyPct": 0.52,
+     "lastPrice": 44.5,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 3.58,
+     "qqqPct": -3.05,
+     "spyPct": -1.26,
      "beatQQQ": true
     },
     {
@@ -7772,11 +8204,11 @@
      "entryDate": "2026-10-28",
      "entryPriceDate": "2026-10-27",
      "entryPrice": 8.94,
-     "lastPrice": 8.93,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": -0.11,
-     "qqqPct": -0.82,
-     "spyPct": -0.04,
+     "lastPrice": 8.94,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.0,
+     "qqqPct": -4.26,
+     "spyPct": -1.81,
      "beatQQQ": true
     },
     {
@@ -7785,11 +8217,11 @@
      "entryDate": "2026-10-28",
      "entryPriceDate": "2026-10-27",
      "entryPrice": 15.76,
-     "lastPrice": 16.18,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 2.66,
-     "qqqPct": -0.82,
-     "spyPct": -0.04,
+     "lastPrice": 15.79,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.19,
+     "qqqPct": -4.26,
+     "spyPct": -1.81,
      "beatQQQ": true
     },
     {
@@ -7798,12 +8230,12 @@
      "entryDate": "2026-10-30",
      "entryPriceDate": "2026-10-29",
      "entryPrice": 30.66,
-     "lastPrice": 30.66,
-     "lastPriceDate": "2026-10-29",
-     "returnPct": 0.0,
-     "qqqPct": 0.0,
-     "spyPct": 0.0,
-     "beatQQQ": false
+     "lastPrice": 30.62,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": -0.13,
+     "qqqPct": -3.47,
+     "spyPct": -1.77,
+     "beatQQQ": true
     }
    ],
    "closed": [
@@ -7960,6 +8392,34 @@
      "exitDate": "2026-10-23",
      "exitPriceDate": "2026-10-22",
      "exitPrice": 14.3
+    },
+    {
+     "ticker": "SPG",
+     "company": "Simon Property Group Inc.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 200.65,
+     "returnPct": 8.52,
+     "qqqPct": -7.14,
+     "spyPct": -2.87,
+     "beatQQQ": true,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 217.75
+    },
+    {
+     "ticker": "FUL",
+     "company": "H. B. Fuller Company",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 50.44,
+     "returnPct": -1.47,
+     "qqqPct": -7.14,
+     "spyPct": -2.87,
+     "beatQQQ": true,
+     "exitDate": "2026-10-31",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 49.7
     }
    ],
    "segments": [
@@ -8077,6 +8537,21 @@
       "SPG",
       "HEI",
       "FUL",
+      "ACCV",
+      "AGMB",
+      "DX",
+      "RAPP",
+      "STC",
+      "NMCO",
+      "NPB",
+      "BBT"
+     ]
+    },
+    {
+     "start": "2026-10-30",
+     "startValue": 101.595212,
+     "tickers": [
+      "HEI",
       "ACCV",
       "AGMB",
       "DX",
@@ -8330,6 +8805,28 @@
      "priceDate": "2026-10-29",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 11 picks"
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "SPG",
+     "company": "Simon Property Group Inc.",
+     "price": 217.75
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "FUL",
+     "company": "H. B. Fuller Company",
+     "price": 49.7
+    },
+    {
+     "date": "2026-10-31",
+     "priceDate": "2026-10-30",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 9 picks"
     }
    ],
    "series": [
@@ -8384,20 +8881,24 @@
     [
      "2026-10-29",
      102.938
+    ],
+    [
+     "2026-10-30",
+     101.595
     ]
    ],
-   "returnPct": 2.94,
-   "vsQQQPct": 6.74,
-   "vsSPYPct": 4.05,
+   "returnPct": 1.59,
+   "vsQQQPct": 8.73,
+   "vsSPYPct": 4.46,
    "hitRate": {
-    "beat": 13,
-    "of": 18,
+    "beat": 15,
+    "of": 19,
     "openBeat": 7,
-    "openOf": 10
+    "openOf": 9
    }
   }
  },
- "latestDate": "2026-10-29",
+ "latestDate": "2026-10-30",
  "benchSeries": {
   "QQQ": [
    [
@@ -8471,6 +8972,10 @@
    [
     "2026-10-29",
     94.166
+   ],
+   [
+    "2026-10-30",
+    90.895
    ]
   ],
   "SPY": [
@@ -8545,6 +9050,10 @@
    [
     "2026-10-29",
     98.751
+   ],
+   [
+    "2026-10-30",
+    97.0
    ]
   ]
  }
