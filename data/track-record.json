@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
- "lastUpdated": "2026-10-31",
+ "lastUpdated": "2026-11-01",
  "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Insider Buys was added on Oct 14, 2026, starting at 100 on the 2026-10-13 close (no backfill).",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
@@ -1528,7 +1528,9 @@
    "HUBS": 234.87,
    "KEP": 10.34,
    "RELY": 24.15,
-   "GNRC": 197.93
+   "GNRC": 197.93,
+   "INSW": 111.95,
+   "BVN": 26.42
   }
  },
  "lists": {
@@ -3211,19 +3213,6 @@
      "beatQQQ": false
     },
     {
-     "ticker": "HLIT",
-     "company": "Harmonic Inc.",
-     "entryDate": "2026-10-07",
-     "entryPriceDate": "2026-10-07",
-     "entryPrice": 11.27,
-     "lastPrice": 10.23,
-     "lastPriceDate": "2026-10-30",
-     "returnPct": -9.23,
-     "qqqPct": -8.87,
-     "spyPct": -2.77,
-     "beatQQQ": false
-    },
-    {
      "ticker": "DHT",
      "company": "DHT Holdings Inc.",
      "entryDate": "2026-10-17",
@@ -3295,6 +3284,19 @@
      "entryPriceDate": "2026-10-30",
      "entryPrice": 191.09,
      "lastPrice": 191.09,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "INSW",
+     "company": "International Seaways Inc.",
+     "entryDate": "2026-11-01",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 111.95,
+     "lastPrice": 111.95,
      "lastPriceDate": "2026-10-30",
      "returnPct": 0.0,
      "qqqPct": 0.0,
@@ -3624,6 +3626,20 @@
      "exitDate": "2026-10-31",
      "exitPriceDate": "2026-10-30",
      "exitPrice": 197.93
+    },
+    {
+     "ticker": "HLIT",
+     "company": "Harmonic Inc.",
+     "entryDate": "2026-10-07",
+     "entryPriceDate": "2026-10-07",
+     "entryPrice": 11.27,
+     "returnPct": -9.23,
+     "qqqPct": -8.87,
+     "spyPct": -2.77,
+     "beatQQQ": false,
+     "exitDate": "2026-11-01",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 10.23
     }
    ],
    "segments": [
@@ -3852,13 +3868,13 @@
       "SITM",
       "URGN",
       "SMCI",
-      "HLIT",
       "DHT",
       "TTMI",
       "PENG",
       "FORM",
       "ENTG",
-      "VICR"
+      "VICR",
+      "INSW"
      ]
     }
    ],
@@ -4328,6 +4344,28 @@
      "priceDate": "2026-10-30",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-11-01",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "HLIT",
+     "company": "Harmonic Inc.",
+     "price": 10.23
+    },
+    {
+     "date": "2026-11-01",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "INSW",
+     "company": "International Seaways Inc.",
+     "price": 111.95
+    },
+    {
+     "date": "2026-11-01",
+     "priceDate": "2026-10-30",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -4411,7 +4449,7 @@
     "beat": 11,
     "of": 33,
     "openBeat": 1,
-    "openOf": 10
+    "openOf": 9
    }
   },
   "experiment": {
@@ -6587,19 +6625,6 @@
      "beatQQQ": true
     },
     {
-     "ticker": "SUZ",
-     "company": "Suzano S.A.",
-     "entryDate": "2026-10-09",
-     "entryPriceDate": "2026-10-09",
-     "entryPrice": 8.57,
-     "lastPrice": 9.24,
-     "lastPriceDate": "2026-10-30",
-     "returnPct": 7.82,
-     "qqqPct": -8.09,
-     "spyPct": -2.93,
-     "beatQQQ": true
-    },
-    {
      "ticker": "AER",
      "company": "AerCap Holdings N.V.",
      "entryDate": "2026-10-29",
@@ -6632,6 +6657,19 @@
      "entryPriceDate": "2026-10-30",
      "entryPrice": 8.88,
      "lastPrice": 8.88,
+     "lastPriceDate": "2026-10-30",
+     "returnPct": 0.0,
+     "qqqPct": 0.0,
+     "spyPct": 0.0,
+     "beatQQQ": false
+    },
+    {
+     "ticker": "BVN",
+     "company": "Buenaventura Mining Company Inc.",
+     "entryDate": "2026-11-01",
+     "entryPriceDate": "2026-10-30",
+     "entryPrice": 26.42,
+     "lastPrice": 26.42,
      "lastPriceDate": "2026-10-30",
      "returnPct": 0.0,
      "qqqPct": 0.0,
@@ -6765,6 +6803,20 @@
      "exitDate": "2026-10-31",
      "exitPriceDate": "2026-10-30",
      "exitPrice": 45.11
+    },
+    {
+     "ticker": "SUZ",
+     "company": "Suzano S.A.",
+     "entryDate": "2026-10-09",
+     "entryPriceDate": "2026-10-09",
+     "entryPrice": 8.57,
+     "returnPct": 7.82,
+     "qqqPct": -8.09,
+     "spyPct": -2.93,
+     "beatQQQ": true,
+     "exitDate": "2026-11-01",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 9.24
     }
    ],
    "segments": [
@@ -6906,10 +6958,10 @@
       "PAGS",
       "EXE",
       "OCTV",
-      "SUZ",
       "AER",
       "SNY",
-      "FSM"
+      "FSM",
+      "BVN"
      ]
     }
    ],
@@ -7119,6 +7171,28 @@
      "priceDate": "2026-10-30",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 12 picks"
+    },
+    {
+     "date": "2026-11-01",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "SUZ",
+     "company": "Suzano S.A.",
+     "price": 9.24
+    },
+    {
+     "date": "2026-11-01",
+     "priceDate": "2026-10-30",
+     "action": "add",
+     "ticker": "BVN",
+     "company": "Buenaventura Mining Company Inc.",
+     "price": 26.42
+    },
+    {
+     "date": "2026-11-01",
+     "priceDate": "2026-10-30",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 12 picks"
     }
    ],
    "series": [
@@ -7193,8 +7267,8 @@
    "hitRate": {
     "beat": 13,
     "of": 19,
-    "openBeat": 8,
-    "openOf": 10
+    "openBeat": 7,
+    "openOf": 9
    }
   },
   "magic": {
@@ -8134,19 +8208,6 @@
      "beatQQQ": true
     },
     {
-     "ticker": "ACCV",
-     "company": "Accelevation Holdings Corp.",
-     "entryDate": "2026-10-14",
-     "entryPriceDate": "2026-10-13",
-     "entryPrice": 15.31,
-     "lastPrice": 14.48,
-     "lastPriceDate": "2026-10-30",
-     "returnPct": -5.42,
-     "qqqPct": -7.14,
-     "spyPct": -2.87,
-     "beatQQQ": true
-    },
-    {
      "ticker": "AGMB",
      "company": "AgomAb Therapeutics NV",
      "entryDate": "2026-10-16",
@@ -8420,6 +8481,20 @@
      "exitDate": "2026-10-31",
      "exitPriceDate": "2026-10-30",
      "exitPrice": 49.7
+    },
+    {
+     "ticker": "ACCV",
+     "company": "Accelevation Holdings Corp.",
+     "entryDate": "2026-10-14",
+     "entryPriceDate": "2026-10-13",
+     "entryPrice": 15.31,
+     "returnPct": -5.42,
+     "qqqPct": -7.14,
+     "spyPct": -2.87,
+     "beatQQQ": true,
+     "exitDate": "2026-11-01",
+     "exitPriceDate": "2026-10-30",
+     "exitPrice": 14.48
     }
    ],
    "segments": [
@@ -8552,7 +8627,6 @@
      "startValue": 101.595212,
      "tickers": [
       "HEI",
-      "ACCV",
       "AGMB",
       "DX",
       "RAPP",
@@ -8827,6 +8901,20 @@
      "priceDate": "2026-10-30",
      "action": "rebalance",
      "note": "Rebalanced to equal weight across 9 picks"
+    },
+    {
+     "date": "2026-11-01",
+     "priceDate": "2026-10-30",
+     "action": "remove",
+     "ticker": "ACCV",
+     "company": "Accelevation Holdings Corp.",
+     "price": 14.48
+    },
+    {
+     "date": "2026-11-01",
+     "priceDate": "2026-10-30",
+     "action": "rebalance",
+     "note": "Rebalanced to equal weight across 8 picks"
     }
    ],
    "series": [
@@ -8893,8 +8981,8 @@
    "hitRate": {
     "beat": 15,
     "of": 19,
-    "openBeat": 7,
-    "openOf": 9
+    "openBeat": 6,
+    "openOf": 8
    }
   }
  },

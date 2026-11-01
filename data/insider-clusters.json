@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-31",
+  "lastUpdated": "2026-11-01",
   "priceDate": "2026-10-30",
   "title": "Insider Buys",
-  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-10-01 to 2026-10-31 for US-listed issuers over $300M (6,859 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
+  "method": "Insider cluster buys from SEC Form 4 filings. Every Form 4 filed on EDGAR from 2026-10-02 to 2026-11-01 for US-listed issuers over $300M (6,312 filings) was read, keeping open-market purchases (transaction code P). A company qualifies when 3+ different insiders bought within the last 30 days, together spending more than $250K. Ranked by number of insiders buying, then dollars; up to 12 picks, the rest are backups.",
   "rubric": [
     {
       "component": "Insiders",
@@ -21,14 +21,14 @@
       "how": "Market cap above $300M on Nasdaq's screener"
     }
   ],
-  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 120 companies had insider purchases; 9 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 0 left out because filed prices don't match the US share price (local-currency or other share class: none). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
+  "dataNotes": "Form 4 XML from SEC EDGAR (daily form indexes; only issuers in the $300M+ universe are fetched). Duplicate rows from joint filings and amendments are counted once. 116 companies had insider purchases; 8 met the insider/dollar test; 0 excluded as bitcoin miners or crypto-treasury companies; 0 left out because filed prices don't match the US share price (local-currency or other share class: none). Prices are Nasdaq closes. Form 4s are due within 2 business days of the trade.",
   "universe": {
     "listed": 6954,
     "screened": 3414,
-    "filings": 6859,
-    "companiesWithBuys": 120,
-    "clusters": 9,
-    "qualified": 9
+    "filings": 6312,
+    "companiesWithBuys": 116,
+    "clusters": 8,
+    "qualified": 8
   },
   "excluded": {
     "minersOrCryptoTreasury": [],
@@ -215,7 +215,7 @@
         "growth": "C",
         "value": "F",
         "momentum": "A-",
-        "profitability": "C"
+        "profitability": "D+"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -246,7 +246,7 @@
       "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
       "price": 25.05,
       "priceDate": "2026-10-30",
-      "marketCap": "$1.2B",
+      "marketCap": "$1.5B",
       "forwardPE": "n/a",
       "peg": "n/a",
       "revenueGrowth": "n/a",
@@ -435,7 +435,7 @@
         "forwardPE": null,
         "peg": null,
         "epsGrowth3yPct": null,
-        "evSales": 38.79,
+        "evSales": 52.81,
         "grossMarginPct": -109.39,
         "operatingMarginPct": -767.58,
         "netMarginPct": -685.8,
@@ -454,7 +454,7 @@
       "price": 30.62,
       "priceDate": "2026-10-30",
       "marketCap": "$2.6B",
-      "forwardPE": 9.4,
+      "forwardPE": 9.38,
       "peg": "n/a",
       "revenueGrowth": "n/a",
       "alsoIn": [
@@ -581,9 +581,9 @@
       ],
       "grades": {
         "growth": "A+",
-        "value": "C",
+        "value": "C+",
         "momentum": "A+",
-        "profitability": "A-"
+        "profitability": "B+"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -593,7 +593,7 @@
       },
       "metrics": {
         "revenueGrowthPct": null,
-        "forwardPE": 9.4,
+        "forwardPE": 9.38,
         "peg": null,
         "epsGrowth3yPct": 31.93,
         "evSales": 3.12,
@@ -605,161 +605,6 @@
         "chg6mPct": 7.33,
         "chg1yPct": 27.0,
         "relStrength1yPct": 15.84,
-        "priceAsOf": "2026-10-30"
-      }
-    },
-    {
-      "company": "Accelevation Holdings Corp.",
-      "ticker": "ACCV",
-      "sector": "Energy – Industrial Machinery/Components",
-      "price": 14.48,
-      "priceDate": "2026-10-30",
-      "marketCap": "$3.2B",
-      "forwardPE": 20.95,
-      "peg": 0.26,
-      "revenueGrowth": "n/a",
-      "alsoIn": [
-        "Insider Buys"
-      ],
-      "insiderCount": 5,
-      "totalBought": 4098600.0,
-      "firstBuy": "2026-10-01",
-      "lastBuy": "2026-10-01",
-      "keyFigures": [
-        {
-          "label": "Insiders buying",
-          "value": "5"
-        },
-        {
-          "label": "Total bought",
-          "value": "$4.1M"
-        },
-        {
-          "label": "Avg price paid",
-          "value": "$18.00"
-        },
-        {
-          "label": "Buy dates",
-          "value": "2026-10-01"
-        }
-      ],
-      "checklist": [
-        {
-          "key": "i0",
-          "label": "Rubiera Michael",
-          "met": true,
-          "detail": "Director, Chief Executive Officer: $3.7M (203,200 sh) on 2026-10-01"
-        },
-        {
-          "key": "i1",
-          "label": "Jones Ginger M",
-          "met": true,
-          "detail": "Director: $180K (10,000 sh) on 2026-10-01"
-        },
-        {
-          "key": "i2",
-          "label": "Donahue Paul D",
-          "met": true,
-          "detail": "Director: $126K (7,000 sh) on 2026-10-01"
-        },
-        {
-          "key": "i3",
-          "label": "Heckes Howard C",
-          "met": true,
-          "detail": "Director: $90K (5,000 sh) on 2026-10-01"
-        },
-        {
-          "key": "i4",
-          "label": "Jewell Brent C",
-          "met": true,
-          "detail": "Chief Operating Officer: $45K (2,500 sh) on 2026-10-01"
-        }
-      ],
-      "risks": [
-        "One insider (Rubiera Michael) accounts for 89% of the dollars"
-      ],
-      "analystRating": "Buy (8 analysts)",
-      "priceTarget": 19.29,
-      "transactions": [
-        {
-          "insider": "Jewell Brent C",
-          "date": "2026-10-01",
-          "shares": 2500.0,
-          "price": 18.0,
-          "value": 45000.0,
-          "accession": "0001628280-26-065154"
-        },
-        {
-          "insider": "Donahue Paul D",
-          "date": "2026-10-01",
-          "shares": 7000.0,
-          "price": 18.0,
-          "value": 126000.0,
-          "accession": "0001628280-26-065155"
-        },
-        {
-          "insider": "HECKES HOWARD C",
-          "date": "2026-10-01",
-          "shares": 5000.0,
-          "price": 18.0,
-          "value": 90000.0,
-          "accession": "0001628280-26-065156"
-        },
-        {
-          "insider": "JONES GINGER M",
-          "date": "2026-10-01",
-          "shares": 10000.0,
-          "price": 18.0,
-          "value": 180000.0,
-          "accession": "0001628280-26-065157"
-        },
-        {
-          "insider": "Rubiera Michael",
-          "date": "2026-10-01",
-          "shares": 200000.0,
-          "price": 18.0,
-          "value": 3600000.0,
-          "accession": "0001628280-26-065167"
-        },
-        {
-          "insider": "Rubiera Michael",
-          "date": "2026-10-01",
-          "shares": 3200.0,
-          "price": 18.0,
-          "value": 57600.0,
-          "accession": "0001628280-26-065167"
-        }
-      ],
-      "sourceUrl": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141406&type=4&dateb=&owner=include&count=40",
-        "https://stockanalysis.com/stocks/accv/statistics/"
-      ],
-      "grades": {
-        "growth": "n/a",
-        "value": "B-",
-        "momentum": "n/a",
-        "profitability": "F"
-      },
-      "gradeInputs": {
-        "growth": "0/2",
-        "value": "3/3",
-        "momentum": "0/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": null,
-        "forwardPE": 20.95,
-        "peg": 0.26,
-        "epsGrowth3yPct": null,
-        "evSales": 5.37,
-        "grossMarginPct": 29.251,
-        "operatingMarginPct": 12.399,
-        "netMarginPct": 6.77,
-        "fcfMarginPct": -2.95,
-        "chg3mPct": null,
-        "chg6mPct": null,
-        "chg1yPct": null,
-        "relStrength1yPct": null,
         "priceAsOf": "2026-10-30"
       }
     },
@@ -893,7 +738,7 @@
         "growth": "D-",
         "value": "A+",
         "momentum": "F",
-        "profitability": "D"
+        "profitability": "F"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -1032,7 +877,7 @@
       ],
       "grades": {
         "growth": "F",
-        "value": "A-",
+        "value": "B+",
         "momentum": "B",
         "profitability": "A+"
       },
@@ -1464,9 +1309,9 @@
       ],
       "grades": {
         "growth": "B",
-        "value": "D",
+        "value": "D+",
         "momentum": "D+",
-        "profitability": "B-"
+        "profitability": "C+"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -1494,9 +1339,9 @@
   ],
   "bench": [],
   "grading": {
-    "asOf": "2026-10-31",
+    "asOf": "2026-11-01",
     "spy1yPct": 11.16,
-    "pool": "9 stocks (this list's picks + bench)",
+    "pool": "8 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",

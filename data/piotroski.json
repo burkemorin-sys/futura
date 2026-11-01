@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-31",
+  "lastUpdated": "2026-11-01",
   "priceDate": "2026-10-30",
   "title": "Piotroski",
-  "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1918 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (383 stocks, P/B ≤ 1.50) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
+  "method": "Joseph Piotroski's F-Score on cheap stocks. Universe: every US-listed stock over $2B on Nasdaq's screener with positive book value (1918 stocks, bitcoin miners excluded). The cheapest fifth by price-to-book (383 stocks, P/B ≤ 1.49) is scored 0–9 on the nine tests below using the latest fiscal year vs the year before. Picks are the stocks scoring 8 or 9, ranked by score, then lowest P/B; up to 12 are shown, with the rest as backups.",
   "rubric": [
     {
       "component": "ROA positive",
@@ -51,26 +51,26 @@
       "how": "Revenue ÷ start-of-year total assets above last year's"
     }
   ],
-  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 4, 8: 17, 7: 39, 6: 63, 5: 116, 4: 73, 3: 52, 2: 12, 1: 4. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
+  "dataNotes": "Annual income statements, balance sheets and cash-flow statements from StockAnalysis; P/B from StockAnalysis statistics; prices are Nasdaq closes. F-Score distribution in the cheap quintile: 9: 5, 8: 17, 7: 41, 6: 63, 5: 119, 4: 74, 3: 46, 2: 12, 1: 3. A test with missing data scores 0 (shown as n/a); banks and insurers have no gross margin or current ratio.",
   "universe": {
     "listed": 6954,
     "screened": 2029,
     "positiveBook": 1918,
     "quintile": 383,
-    "pbCutoff": 1.496,
+    "pbCutoff": 1.494,
     "scored": 380,
-    "picks8plus": 21,
+    "picks8plus": 22,
     "distribution": {
       "0": 0,
-      "1": 4,
+      "1": 3,
       "2": 12,
-      "3": 52,
-      "4": 73,
-      "5": 116,
+      "3": 46,
+      "4": 74,
+      "5": 119,
       "6": 63,
-      "7": 39,
+      "7": 41,
       "8": 17,
-      "9": 4
+      "9": 5
     }
   },
   "excluded": {
@@ -188,8 +188,8 @@
         "https://stockanalysis.com/stocks/aer/statistics/"
       ],
       "grades": {
-        "growth": "C",
-        "value": "D+",
+        "growth": "C-",
+        "value": "D",
         "momentum": "A-",
         "profitability": "A-"
       },
@@ -309,14 +309,14 @@
         "No data-driven red flags; check why the market prices it below peers"
       ],
       "analystRating": "Buy (26 analysts)",
-      "priceTarget": 77.13,
+      "priceTarget": 77.04,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/ntr/financials/",
         "https://stockanalysis.com/stocks/ntr/statistics/"
       ],
       "grades": {
-        "growth": "D",
-        "value": "F",
+        "growth": "D-",
+        "value": "D-",
         "momentum": "B",
         "profitability": "D+"
       },
@@ -350,12 +350,14 @@
       "price": 44.34,
       "priceDate": "2026-10-30",
       "marketCap": "$106.7B",
-      "forwardPE": 9.09,
+      "forwardPE": 8.99,
       "peg": "n/a",
       "revenueGrowth": "+5.5% YoY (FY)",
       "score": 9,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -439,33 +441,33 @@
         "https://stockanalysis.com/stocks/sny/financials/",
         "https://stockanalysis.com/stocks/sny/statistics/"
       ],
-      "metrics": {
-        "revenueGrowthPct": 5.5,
-        "forwardPE": 9.09,
-        "peg": null,
-        "epsGrowth3yPct": 7.83,
-        "evSales": 2.18,
-        "grossMarginPct": 73.683,
-        "operatingMarginPct": 20.607,
-        "netMarginPct": 8.195,
-        "fcfMarginPct": 20.001,
-        "chg3mPct": 3.38,
-        "chg6mPct": -4.81,
-        "chg1yPct": -12.96,
-        "relStrength1yPct": -24.12,
-        "priceAsOf": "2026-10-30"
-      },
       "grades": {
         "growth": "D+",
-        "value": "D",
-        "momentum": "C",
-        "profitability": "A"
+        "value": "D-",
+        "momentum": "C+",
+        "profitability": "B+"
       },
       "gradeInputs": {
         "growth": "2/2",
         "value": "2/3",
         "momentum": "3/3",
         "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 5.5,
+        "forwardPE": 8.99,
+        "peg": null,
+        "epsGrowth3yPct": 7.83,
+        "evSales": 2.12,
+        "grossMarginPct": 73.683,
+        "operatingMarginPct": 21.674,
+        "netMarginPct": 8.195,
+        "fcfMarginPct": 19.562,
+        "chg3mPct": 3.38,
+        "chg6mPct": -4.81,
+        "chg1yPct": -12.96,
+        "relStrength1yPct": -24.12,
+        "priceAsOf": "2026-10-30"
       }
     },
     {
@@ -480,7 +482,9 @@
       "revenueGrowth": "+39.8% YoY (FY)",
       "score": 9,
       "scoreMax": 9,
-      "alsoIn": [],
+      "alsoIn": [
+        "Piotroski"
+      ],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -564,6 +568,18 @@
         "https://stockanalysis.com/stocks/fsm/financials/",
         "https://stockanalysis.com/stocks/fsm/statistics/"
       ],
+      "grades": {
+        "growth": "A",
+        "value": "B",
+        "momentum": "B-",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 39.8,
         "forwardPE": 6.0,
@@ -579,15 +595,128 @@
         "chg1yPct": 7.51,
         "relStrength1yPct": -3.65,
         "priceAsOf": "2026-10-30"
+      }
+    },
+    {
+      "company": "Buenaventura Mining Company Inc.",
+      "ticker": "BVN",
+      "sector": "Basic Materials – Metal Mining",
+      "price": 26.42,
+      "priceDate": "2026-10-30",
+      "marketCap": "$6.7B",
+      "forwardPE": 5.9,
+      "peg": "n/a",
+      "revenueGrowth": "+50.0% YoY (FY)",
+      "score": 9,
+      "scoreMax": 9,
+      "alsoIn": [],
+      "keyFigures": [
+        {
+          "label": "F-Score",
+          "value": "9/9"
+        },
+        {
+          "label": "Price / book",
+          "value": "1.47"
+        },
+        {
+          "label": "ROA",
+          "value": "13.0%"
+        },
+        {
+          "label": "Fiscal year",
+          "value": "2025-12-31"
+        }
+      ],
+      "checklist": [
+        {
+          "key": "roa",
+          "label": "ROA positive",
+          "met": true,
+          "detail": "ROA 13.0%"
+        },
+        {
+          "key": "cfo",
+          "label": "Operating cash flow positive",
+          "met": true,
+          "detail": "Operating cash flow $1.4B"
+        },
+        {
+          "key": "droa",
+          "label": "ROA improving",
+          "met": true,
+          "detail": "ROA 13.0% vs 8.0% prior year"
+        },
+        {
+          "key": "accrual",
+          "label": "Cash flow > net income",
+          "met": true,
+          "detail": "Cash flow $1.4B vs net income $782M"
+        },
+        {
+          "key": "lev",
+          "label": "Long-term debt / assets falling",
+          "met": true,
+          "detail": "LT debt / assets 9.6% vs 10.4%"
+        },
+        {
+          "key": "cr",
+          "label": "Current ratio rising",
+          "met": true,
+          "detail": "Current ratio 2.76 vs 2.01"
+        },
+        {
+          "key": "shares",
+          "label": "No new shares issued",
+          "met": true,
+          "detail": "Shares 254M vs 254M"
+        },
+        {
+          "key": "gm",
+          "label": "Gross margin rising",
+          "met": true,
+          "detail": "Gross margin 55.1% vs 48.6%"
+        },
+        {
+          "key": "at",
+          "label": "Asset turnover rising",
+          "met": true,
+          "detail": "Asset turnover 0.29 vs 0.23"
+        }
+      ],
+      "risks": [
+        "No data-driven red flags; check why the market prices it below peers"
+      ],
+      "analystRating": "Hold (6 analysts)",
+      "priceTarget": 38.53,
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/bvn/financials/",
+        "https://stockanalysis.com/stocks/bvn/statistics/"
+      ],
+      "metrics": {
+        "revenueGrowthPct": 50.0,
+        "forwardPE": 5.9,
+        "peg": null,
+        "epsGrowth3yPct": null,
+        "evSales": 2.76,
+        "grossMarginPct": 62.349,
+        "operatingMarginPct": 46.265,
+        "netMarginPct": 49.206,
+        "fcfMarginPct": 36.986,
+        "chg3mPct": -17.07,
+        "chg6mPct": -18.93,
+        "chg1yPct": 16.23,
+        "relStrength1yPct": 5.07,
+        "priceAsOf": "2026-10-30"
       },
       "grades": {
         "growth": "A",
-        "value": "B",
-        "momentum": "B-",
+        "value": "B-",
+        "momentum": "D",
         "profitability": "A+"
       },
       "gradeInputs": {
-        "growth": "2/2",
+        "growth": "1/2",
         "value": "2/3",
         "momentum": "3/3",
         "profitability": "4/4"
@@ -823,7 +952,7 @@
       "grades": {
         "growth": "F",
         "value": "F",
-        "momentum": "D",
+        "momentum": "D+",
         "profitability": "C-"
       },
       "gradeInputs": {
@@ -1110,8 +1239,8 @@
       "price": 90.55,
       "priceDate": "2026-10-30",
       "marketCap": "$20.9B",
-      "forwardPE": 12.22,
-      "peg": 0.87,
+      "forwardPE": 11.96,
+      "peg": 0.92,
       "revenueGrowth": "+173.3% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
@@ -1196,7 +1325,7 @@
         "No data-driven red flags; check why the market prices it below peers"
       ],
       "analystRating": "Buy (29 analysts)",
-      "priceTarget": 122.7,
+      "priceTarget": 123.15,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/exe/financials/",
         "https://stockanalysis.com/stocks/exe/statistics/"
@@ -1205,7 +1334,7 @@
         "growth": "A+",
         "value": "F",
         "momentum": "D+",
-        "profitability": "B+"
+        "profitability": "B"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -1215,8 +1344,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 173.3,
-        "forwardPE": 12.22,
-        "peg": 0.87,
+        "forwardPE": 11.96,
+        "peg": 0.92,
         "epsGrowth3yPct": 23.2,
         "evSales": 1.97,
         "grossMarginPct": 45.861,
@@ -1329,9 +1458,9 @@
         "https://stockanalysis.com/stocks/amtm/statistics/"
       ],
       "grades": {
-        "growth": "A-",
+        "growth": "B+",
         "value": "A",
-        "momentum": "C",
+        "momentum": "C-",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -1459,7 +1588,7 @@
         "growth": "F",
         "value": "F",
         "momentum": "A+",
-        "profitability": "B-"
+        "profitability": "C+"
       },
       "gradeInputs": {
         "growth": "1/2",
@@ -1483,7 +1612,9 @@
         "relStrength1yPct": null,
         "priceAsOf": "2026-10-30"
       }
-    },
+    }
+  ],
+  "bench": [
     {
       "company": "Suzano S.A.",
       "ticker": "SUZ",
@@ -1577,16 +1708,17 @@
         "Financials reported in BRL"
       ],
       "analystRating": "Strong Buy (6 analysts)",
-      "priceTarget": 12.38,
+      "priceTarget": 12.13,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/suz/financials/",
         "https://stockanalysis.com/stocks/suz/statistics/"
       ],
+      "rank": 1,
       "grades": {
         "growth": "F",
         "value": "C",
         "momentum": "B+",
-        "profitability": "C"
+        "profitability": "C-"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -1610,9 +1742,7 @@
         "relStrength1yPct": -9.29,
         "priceAsOf": "2026-10-30"
       }
-    }
-  ],
-  "bench": [
+    },
     {
       "company": "Advance Auto Parts Inc.",
       "ticker": "AAP",
@@ -1625,9 +1755,7 @@
       "revenueGrowth": "-5.4% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [
-        "Piotroski"
-      ],
+      "alsoIn": [],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -1711,10 +1839,10 @@
         "https://stockanalysis.com/stocks/aap/financials/",
         "https://stockanalysis.com/stocks/aap/statistics/"
       ],
-      "rank": 1,
+      "rank": 2,
       "grades": {
         "growth": "C",
-        "value": "B-",
+        "value": "B",
         "momentum": "F",
         "profitability": "F"
       },
@@ -1837,12 +1965,12 @@
         "https://stockanalysis.com/stocks/nvst/financials/",
         "https://stockanalysis.com/stocks/nvst/statistics/"
       ],
-      "rank": 2,
+      "rank": 3,
       "grades": {
-        "growth": "B+",
+        "growth": "B",
         "value": "F",
-        "momentum": "C-",
-        "profitability": "D+"
+        "momentum": "C",
+        "profitability": "D"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -1879,9 +2007,7 @@
       "revenueGrowth": "-2.7% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [
-        "Insider Buys"
-      ],
+      "alsoIn": [],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -1965,11 +2091,11 @@
         "https://stockanalysis.com/stocks/ful/financials/",
         "https://stockanalysis.com/stocks/ful/statistics/"
       ],
-      "rank": 3,
+      "rank": 4,
       "grades": {
         "growth": "D",
         "value": "B+",
-        "momentum": "D",
+        "momentum": "D-",
         "profitability": "F"
       },
       "gradeInputs": {
@@ -2002,8 +2128,8 @@
       "price": 9.87,
       "priceDate": "2026-10-30",
       "marketCap": "$5.5B",
-      "forwardPE": 9.02,
-      "peg": 0.72,
+      "forwardPE": 10.34,
+      "peg": 0.83,
       "revenueGrowth": "+33.7% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
@@ -2086,17 +2212,17 @@
         "No data-driven red flags; check why the market prices it below peers"
       ],
       "analystRating": "Buy (19 analysts)",
-      "priceTarget": 15.74,
+      "priceTarget": 15.45,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/tal/financials/",
         "https://stockanalysis.com/stocks/tal/statistics/"
       ],
-      "rank": 4,
+      "rank": 5,
       "grades": {
-        "growth": "A",
-        "value": "B",
+        "growth": "A-",
+        "value": "C+",
         "momentum": "F",
-        "profitability": "B"
+        "profitability": "B-"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -2106,8 +2232,8 @@
       },
       "metrics": {
         "revenueGrowthPct": 33.7,
-        "forwardPE": 9.02,
-        "peg": 0.72,
+        "forwardPE": 10.34,
+        "peg": 0.83,
         "epsGrowth3yPct": 12.86,
         "evSales": 0.95,
         "grossMarginPct": 56.889,
@@ -2133,9 +2259,7 @@
       "revenueGrowth": "+149.4% YoY (FY)",
       "score": 8,
       "scoreMax": 9,
-      "alsoIn": [
-        "Piotroski"
-      ],
+      "alsoIn": [],
       "keyFigures": [
         {
           "label": "F-Score",
@@ -2219,10 +2343,10 @@
         "https://stockanalysis.com/stocks/cdlr/financials/",
         "https://stockanalysis.com/stocks/cdlr/statistics/"
       ],
-      "rank": 5,
+      "rank": 6,
       "grades": {
-        "growth": "B-",
-        "value": "C-",
+        "growth": "C+",
+        "value": "D+",
         "momentum": "A",
         "profitability": "C"
       },
@@ -2256,7 +2380,7 @@
       "price": 176.05,
       "priceDate": "2026-10-30",
       "marketCap": "$10.4B",
-      "forwardPE": 7.76,
+      "forwardPE": 7.77,
       "peg": 1.83,
       "revenueGrowth": "+9.7% YoY (FY)",
       "score": 8,
@@ -2345,12 +2469,12 @@
         "https://stockanalysis.com/stocks/uhs/financials/",
         "https://stockanalysis.com/stocks/uhs/statistics/"
       ],
-      "rank": 6,
+      "rank": 7,
       "grades": {
-        "growth": "C-",
-        "value": "C",
+        "growth": "D+",
+        "value": "C-",
         "momentum": "C+",
-        "profitability": "D"
+        "profitability": "D-"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -2360,7 +2484,7 @@
       },
       "metrics": {
         "revenueGrowthPct": 9.7,
-        "forwardPE": 7.76,
+        "forwardPE": 7.77,
         "peg": 1.83,
         "epsGrowth3yPct": 5.18,
         "evSales": 0.89,
@@ -2466,17 +2590,17 @@
         "Financials reported in CAD"
       ],
       "analystRating": "Hold (17 analysts)",
-      "priceTarget": 62.71,
+      "priceTarget": 62.14,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/teck/financials/",
         "https://stockanalysis.com/stocks/teck/statistics/"
       ],
-      "rank": 7,
+      "rank": 8,
       "grades": {
         "growth": "B",
         "value": "F",
         "momentum": "B",
-        "profitability": "B"
+        "profitability": "B-"
       },
       "gradeInputs": {
         "growth": "2/2",
@@ -2592,14 +2716,14 @@
         "Financials reported in BRL"
       ],
       "analystRating": "Hold (8 analysts)",
-      "priceTarget": 14.08,
+      "priceTarget": 14.1,
       "sourceUrl": [
         "https://stockanalysis.com/stocks/viv/financials/",
         "https://stockanalysis.com/stocks/viv/statistics/"
       ],
-      "rank": 8,
+      "rank": 9,
       "grades": {
-        "growth": "B",
+        "growth": "B-",
         "value": "D+",
         "momentum": "D-",
         "profitability": "C+"
@@ -2723,7 +2847,7 @@
         "https://stockanalysis.com/stocks/centa/financials/",
         "https://stockanalysis.com/stocks/centa/statistics/"
       ],
-      "rank": 9,
+      "rank": 10,
       "grades": {
         "growth": "F",
         "value": "C+",
@@ -2755,9 +2879,9 @@
     }
   ],
   "grading": {
-    "asOf": "2026-10-31",
+    "asOf": "2026-11-01",
     "spy1yPct": 11.16,
-    "pool": "21 stocks (this list's picks + bench)",
+    "pool": "22 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
     "inputs": {
       "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",

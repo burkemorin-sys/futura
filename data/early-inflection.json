@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-31",
+  "lastUpdated": "2026-11-01",
   "priceDate": "2026-10-30",
   "title": "Early Inflection",
   "method": "Looks for stocks in an 'early LITE-2025' position: revenue that has bottomed and is accelerating, rising margins, strong forward growth and a reasonable price, before the stock has already run. Universe: every US-listed stock with a $1B–$30B market cap on Nasdaq's screener (excluding banks, insurers, REITs and other financials), then 3+ analysts with a price target, $100M+ TTM revenue and $5M+ a day of trading, with revenue growing in the latest quarter and 8%+ implied growth over the next 12 months. Each survivor is scored 0–100 on the rubric below; the top 12 are the picks and the next 18 form the ranked bench, with at most 3 per industry. Excludes bitcoin/crypto miners, other commodity producers (metal, coal and lithium miners, oil & gas producers, refiners, smelters, fertilizer makers: their revenue tracks commodity prices) and pending-merger targets. Revenue points are halved when growth looks bought (a big jump in goodwill/intangibles or share count).",
@@ -47,12 +47,12 @@
       "how": "AI-infrastructure supplier industries (semis, chip equipment, optics/communication equipment, electronic components, hardware, electrical equipment) 5; adjacent industries (instruments, industrial machinery, power producers, engineering & construction) 3."
     }
   ],
-  "dataNotes": "Prices are Nasdaq closes (2026-10-30). Quarterly revenue and margins come from StockAnalysis income statements (S&P Global Market Intelligence); forward P/E, P/S, forward P/S, EV/sales, EPS growth forecast, 50/200-day averages, consensus rating, analyst count and average target come from StockAnalysis statistics pages. Next-12-month revenue growth is implied as P/S ÷ forward P/S. Beat-and-raise history is not scored automatically. Analyst target and forward P/S are saved daily (data/early-inflection-history.json), so 30-day revisions show up from early November 2026. This run: 1430 names screened, 1182 passed the filters, 518 scored on fundamentals, top 70 checked against price history. 'n/a' means not available.",
+  "dataNotes": "Prices are Nasdaq closes (2026-10-30). Quarterly revenue and margins come from StockAnalysis income statements (S&P Global Market Intelligence); forward P/E, P/S, forward P/S, EV/sales, EPS growth forecast, 50/200-day averages, consensus rating, analyst count and average target come from StockAnalysis statistics pages. Next-12-month revenue growth is implied as P/S ÷ forward P/S. Beat-and-raise history is not scored automatically. Analyst target and forward P/S are saved daily (data/early-inflection-history.json), so 30-day revisions show up from early November 2026. This run: 1430 names screened, 1182 passed the filters, 520 scored on fundamentals, top 70 checked against price history. 'n/a' means not available.",
   "universe": {
     "listed": 6954,
     "screened": 1430,
     "passedFilters": 1182,
-    "scored": 518,
+    "scored": 520,
     "priceChecked": 70
   },
   "excluded": {
@@ -357,7 +357,7 @@
         "netcash": -231098000.0,
         "sharesYoY": 0.85,
         "shortFloat": null,
-        "beta": 1.68,
+        "beta": 1.77,
         "grossMarginTTM": 50.54,
         "mcap": 7074869773.0,
         "revUSD": 1631658157.98,
@@ -822,6 +822,214 @@
         "chg6mPct": 37.31,
         "chg1yPct": 64.84,
         "relStrength1yPct": 53.68,
+        "priceAsOf": "2026-10-30"
+      }
+    },
+    {
+      "company": "International Seaways Inc.",
+      "ticker": "INSW",
+      "sector": "Consumer Discretionary – Marine Transportation",
+      "price": 111.95,
+      "priceDate": "2026-10-30",
+      "marketCap": "$5.5B",
+      "forwardPE": 4.57,
+      "peg": 0.21,
+      "revenueGrowth": "+57.9% YoY (TTM; latest quarter +140.1%)",
+      "score": 81,
+      "scoreParts": {
+        "rev": 20.0,
+        "margin": 15.0,
+        "forward": 7.8,
+        "value": 13.7,
+        "notRun": 8.2,
+        "trend": 10,
+        "analysts": 6.1,
+        "theme": 0
+      },
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "revenue",
+          "label": "Revenue turned up and accelerating",
+          "met": true,
+          "detail": "+140% YoY latest quarter vs +79% prior, -24% a year ago"
+        },
+        {
+          "key": "theme",
+          "label": "Supplier to an AI-infrastructure bottleneck",
+          "met": false,
+          "detail": "Not an AI-infrastructure supplier industry"
+        },
+        {
+          "key": "margin",
+          "label": "Gross margin rising",
+          "met": true,
+          "detail": "+19.9 pts YoY (last 2 quarters)"
+        },
+        {
+          "key": "forward",
+          "label": "Strong forward growth (20%+ next 12 months)",
+          "met": true,
+          "detail": "Implied next-12-month revenue +21%"
+        },
+        {
+          "key": "value",
+          "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
+          "met": true,
+          "detail": "Forward P/E 4.568, EV/forward sales 3.8x"
+        },
+        {
+          "key": "notrun",
+          "label": "Not already run (1-yr ≤ +150%)",
+          "met": true,
+          "detail": "1-yr +123% vs SPY +11%"
+        },
+        {
+          "key": "pullback",
+          "label": "Pulled back 15–50% from the 52-week high",
+          "met": false,
+          "detail": "-10% vs 52-week high"
+        },
+        {
+          "key": "trend",
+          "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
+          "met": true,
+          "detail": "Above 200-day; 3-month vs SPY +15 pts"
+        },
+        {
+          "key": "analysts",
+          "label": "Analysts constructive (Buy+ and 15%+ upside)",
+          "met": true,
+          "detail": "Strong Buy (6), +17% to target"
+        },
+        {
+          "key": "revisions",
+          "label": "Targets / estimates being raised (30-day)",
+          "met": null,
+          "detail": "Revision history started Oct 8, 2026; needs about 30 days of data"
+        }
+      ],
+      "drivers": [
+        "Revenue: latest quarter +140% YoY vs +79% the quarter before and -24% a year earlier → 20/20",
+        "Margins: gross +19.9 pts, operating +34.4 pts YoY (last 2 quarters) → 15/15",
+        "Forward: next-12-month revenue +21% (implied), 3-yr EPS growth forecast +14% a year → 8/15",
+        "Valuation: forward P/E 4.568, EV/forward sales 3.8x → 14/15",
+        "Not already run: 1-yr +123%, -10% vs 52-week high → 8/10",
+        "Trend: price above 200-day, above 50-day, 3-month vs SPY +15 pts → 10/10",
+        "Analysts: Strong Buy (6), +17% to target → 6/10",
+        "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
+      ],
+      "keyFigures": [
+        {
+          "label": "Latest Q rev",
+          "value": "+140%"
+        },
+        {
+          "label": "Gross margin Δ",
+          "value": "+19.9 pts"
+        },
+        {
+          "label": "Next-12m rev",
+          "value": "+21%"
+        },
+        {
+          "label": "EV / fwd sales",
+          "value": "3.8x"
+        },
+        {
+          "label": "1-yr move",
+          "value": "+123%"
+        },
+        {
+          "label": "vs 52-wk high",
+          "value": "-10%"
+        }
+      ],
+      "trend": "1-yr +123% vs SPY +11%; -10% from the 52-week high; above its 200-day average. Implied next-12-month revenue growth +21%.",
+      "fundamentals": "Latest quarter (Jun 2026) revenue $470M, +140% YoY (prior quarter +79%, a year earlier -24%); TTM revenue +58%. Gross margin 76.2% (+19.9 pts YoY), operating margin 64.2%. Net debt $243M.",
+      "risks": [
+        "No data-driven red flags; check the latest earnings call"
+      ],
+      "analystRating": "Strong Buy (6 analysts)",
+      "priceTarget": 131.33,
+      "revisions": {
+        "since": "2026-10-25",
+        "note": "under 30 days of history"
+      },
+      "sourceUrl": [
+        "https://stockanalysis.com/stocks/insw/statistics/",
+        "https://stockanalysis.com/stocks/insw/financials/?p=quarterly",
+        "https://www.intlseas.com/newsroom/news/news-details/2026/International-Seaways-Expands-VLCC-Fleet-Through-Strategic-Combination-with-Bruton-Limited-/default.aspx"
+      ],
+      "eiMetrics": {
+        "yoy0": 140.1,
+        "yoy1": 78.51,
+        "yoy4": -24.0,
+        "ttmGrowth": 57.9,
+        "troughQAgo": 5,
+        "gm": 76.17,
+        "om": 64.22,
+        "gmChg": 19.91,
+        "omChg": 34.36,
+        "fwdRevGrowth": 21.24,
+        "eps3y": 13.64,
+        "fpe": 4.57,
+        "evSales": 4.59,
+        "evFwdSales": 3.79,
+        "peg": 0.21,
+        "ch1y": 120.72,
+        "pt": 131.33,
+        "rating": "Strong Buy",
+        "analysts": 6,
+        "psForward": 3.63,
+        "netcash": -243369000.0,
+        "sharesYoY": 0.2,
+        "shortFloat": 7.82,
+        "beta": -0.1,
+        "grossMarginTTM": 72.5,
+        "mcap": 5545030266.0,
+        "revUSD": 1261380861.24,
+        "currency": "USD",
+        "lastQ": "2026-06-30",
+        "price": 111.95,
+        "upside": 17.31,
+        "priceDate": "2026-10-30",
+        "offHigh": -10.47,
+        "ch1yNasdaq": 122.79,
+        "rs3m": 15.23,
+        "acqJump": 0.29
+      },
+      "catalyst": {
+        "text": "Preliminary Q3 2026: revenue about $480–490M and net income about $340–350M (incl. a ~$50M Suezmax sale gain), on blended spot earnings of ~$68,000/day vs $29,000 a year earlier; ~37% of Q4 spot days fixed at ~$180,000/day. Also buying Bruton (4 VLCCs, ~$370M, mostly in stock); full results Nov 5. Tanker earnings are rate-cyclical.",
+        "source": "https://www.intlseas.com/newsroom/news/news-details/2026/International-Seaways-Expands-VLCC-Fleet-Through-Strategic-Combination-with-Bruton-Limited-/default.aspx",
+        "asOf": "2026-10-16"
+      },
+      "grades": {
+        "growth": "D+",
+        "value": "B+",
+        "momentum": "A",
+        "profitability": "A+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 57.9,
+        "forwardPE": 4.57,
+        "peg": 0.21,
+        "epsGrowth3yPct": 13.64,
+        "evSales": 4.59,
+        "grossMarginPct": 72.5,
+        "operatingMarginPct": 55.388,
+        "netMarginPct": 61.767,
+        "fcfMarginPct": 21.351,
+        "chg3mPct": 17.58,
+        "chg6mPct": 34.96,
+        "chg1yPct": 122.79,
+        "relStrength1yPct": 111.63,
         "priceAsOf": "2026-10-30"
       }
     },
@@ -2042,7 +2250,7 @@
         "netcash": -205981000.0,
         "sharesYoY": 8.2,
         "shortFloat": 11.34,
-        "beta": 2.86,
+        "beta": 2.88,
         "grossMarginTTM": 27.63,
         "mcap": 3128337096.0,
         "revUSD": 1731232482.57,
@@ -2223,7 +2431,8 @@
       },
       "sourceUrl": [
         "https://stockanalysis.com/stocks/entg/statistics/",
-        "https://stockanalysis.com/stocks/entg/financials/?p=quarterly"
+        "https://stockanalysis.com/stocks/entg/financials/?p=quarterly",
+        "https://investor.entegris.com/news/news-details/2026/Entegris-Reports-Results-for-Third-Quarter-of-2026/default.aspx"
       ],
       "eiMetrics": {
         "yoy0": 24.61,
@@ -2268,6 +2477,18 @@
         "source": "https://investor.entegris.com/news/news-details/2026/Entegris-Reports-Results-for-Third-Quarter-of-2026/default.aspx",
         "asOf": "2026-10-29"
       },
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "A-",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 9.4,
         "forwardPE": 28.37,
@@ -2283,18 +2504,6 @@
         "chg1yPct": 76.45,
         "relStrength1yPct": 65.29,
         "priceAsOf": "2026-10-30"
-      },
-      "grades": {
-        "growth": "F",
-        "value": "F",
-        "momentum": "A-",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     },
     {
@@ -2383,7 +2592,7 @@
       ],
       "drivers": [
         "Revenue: latest quarter +79% YoY vs +49% the quarter before and +19% a year earlier → 20/20",
-        "Margins: gross +9.9 pts, operating +20.6 pts YoY (last 2 quarters) → 15/15",
+        "Margins: gross +9.9 pts, operating +20.8 pts YoY (last 2 quarters) → 15/15",
         "Forward: next-12-month revenue +54% (implied), 3-yr EPS growth forecast +41% a year → 15/15",
         "Valuation: forward P/E 34.977, EV/forward sales 9.6x → 3/15",
         "Not already run: 1-yr +109%, -50% vs 52-week high → 10/10",
@@ -2434,7 +2643,7 @@
       "sourceUrl": [
         "https://stockanalysis.com/stocks/vicr/statistics/",
         "https://stockanalysis.com/stocks/vicr/financials/?p=quarterly",
-        "https://www.globenewswire.com/news-release/2026/07/21/3330291/0/en/Vicor-Corporation-Reports-Results-for-the-Second-Quarter-Ended-June-30-2026.html"
+        "https://www.globenewswire.com/news-release/2026/10/20/3384210/0/en/vicor-corporation-reports-results-for-the-third-quarter-ended-september-30-2026.html"
       ],
       "eiMetrics": {
         "yoy0": 78.51,
@@ -2445,7 +2654,7 @@
         "gm": 68.33,
         "om": 36.6,
         "gmChg": 9.86,
-        "omChg": 20.64,
+        "omChg": 20.8,
         "fwdRevGrowth": 53.95,
         "eps3y": 40.66,
         "fpe": 34.98,
@@ -2458,7 +2667,7 @@
         "analysts": 4,
         "psForward": 10.22,
         "netcash": 505977000.0,
-        "sharesYoY": 3.95,
+        "sharesYoY": 3.96,
         "shortFloat": 8.78,
         "beta": 2.38,
         "grossMarginTTM": 60.56,
@@ -2500,14 +2709,16 @@
         "grossMarginPct": 60.565,
         "operatingMarginPct": 26.081,
         "netMarginPct": 32.155,
-        "fcfMarginPct": 10.816,
+        "fcfMarginPct": 9.065,
         "chg3mPct": -7.54,
         "chg6mPct": -29.03,
         "chg1yPct": 109.02,
         "relStrength1yPct": 97.86,
         "priceAsOf": "2026-10-30"
       }
-    },
+    }
+  ],
+  "bench": [
     {
       "company": "Harmonic Inc.",
       "ticker": "HLIT",
@@ -2688,6 +2899,7 @@
         "asOf": "2026-10-08",
         "source": "https://stockanalysis.com/stocks/hlit/transcripts/696648-investor-day-2026/"
       },
+      "rank": 1,
       "grades": {
         "growth": "C-",
         "value": "C+",
@@ -2714,217 +2926,6 @@
         "chg6mPct": -10.5,
         "chg1yPct": -3.94,
         "relStrength1yPct": -15.1,
-        "priceAsOf": "2026-10-30"
-      }
-    }
-  ],
-  "bench": [
-    {
-      "company": "International Seaways Inc.",
-      "ticker": "INSW",
-      "sector": "Consumer Discretionary – Marine Transportation",
-      "price": 111.95,
-      "priceDate": "2026-10-30",
-      "marketCap": "$5.5B",
-      "forwardPE": 4.57,
-      "peg": 0.21,
-      "revenueGrowth": "+57.9% YoY (TTM; latest quarter +140.1%)",
-      "score": 76,
-      "scoreParts": {
-        "rev": 20.0,
-        "margin": 15.0,
-        "forward": 3.8,
-        "value": 13.4,
-        "notRun": 8.2,
-        "trend": 10,
-        "analysts": 6.1,
-        "theme": 0
-      },
-      "alsoIn": [],
-      "checklist": [
-        {
-          "key": "revenue",
-          "label": "Revenue turned up and accelerating",
-          "met": true,
-          "detail": "+140% YoY latest quarter vs +79% prior, -24% a year ago"
-        },
-        {
-          "key": "theme",
-          "label": "Supplier to an AI-infrastructure bottleneck",
-          "met": false,
-          "detail": "Not an AI-infrastructure supplier industry"
-        },
-        {
-          "key": "margin",
-          "label": "Gross margin rising",
-          "met": true,
-          "detail": "+19.9 pts YoY (last 2 quarters)"
-        },
-        {
-          "key": "forward",
-          "label": "Strong forward growth (20%+ next 12 months)",
-          "met": false,
-          "detail": "Implied next-12-month revenue +10%"
-        },
-        {
-          "key": "value",
-          "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
-          "met": true,
-          "detail": "Forward P/E 4.568, EV/forward sales 4.2x"
-        },
-        {
-          "key": "notrun",
-          "label": "Not already run (1-yr ≤ +150%)",
-          "met": true,
-          "detail": "1-yr +123% vs SPY +11%"
-        },
-        {
-          "key": "pullback",
-          "label": "Pulled back 15–50% from the 52-week high",
-          "met": false,
-          "detail": "-10% vs 52-week high"
-        },
-        {
-          "key": "trend",
-          "label": "Trend turning up (above 200-day, beating SPY over 3 months)",
-          "met": true,
-          "detail": "Above 200-day; 3-month vs SPY +15 pts"
-        },
-        {
-          "key": "analysts",
-          "label": "Analysts constructive (Buy+ and 15%+ upside)",
-          "met": true,
-          "detail": "Strong Buy (6), +17% to target"
-        },
-        {
-          "key": "revisions",
-          "label": "Targets / estimates being raised (30-day)",
-          "met": null,
-          "detail": "Revision history started Oct 8, 2026; needs about 30 days of data"
-        }
-      ],
-      "drivers": [
-        "Revenue: latest quarter +140% YoY vs +79% the quarter before and -24% a year earlier → 20/20",
-        "Margins: gross +19.9 pts, operating +34.4 pts YoY (last 2 quarters) → 15/15",
-        "Forward: next-12-month revenue +10% (implied), 3-yr EPS growth forecast +8% a year → 4/15",
-        "Valuation: forward P/E 4.568, EV/forward sales 4.2x → 13/15",
-        "Not already run: 1-yr +123%, -10% vs 52-week high → 8/10",
-        "Trend: price above 200-day, above 50-day, 3-month vs SPY +15 pts → 10/10",
-        "Analysts: Strong Buy (6), +17% to target → 6/10",
-        "Bottleneck theme: Not an AI-infrastructure supplier industry → 0/5"
-      ],
-      "keyFigures": [
-        {
-          "label": "Latest Q rev",
-          "value": "+140%"
-        },
-        {
-          "label": "Gross margin Δ",
-          "value": "+19.9 pts"
-        },
-        {
-          "label": "Next-12m rev",
-          "value": "+10%"
-        },
-        {
-          "label": "EV / fwd sales",
-          "value": "4.2x"
-        },
-        {
-          "label": "1-yr move",
-          "value": "+123%"
-        },
-        {
-          "label": "vs 52-wk high",
-          "value": "-10%"
-        }
-      ],
-      "trend": "1-yr +123% vs SPY +11%; -10% from the 52-week high; above its 200-day average. Implied next-12-month revenue growth +10%.",
-      "fundamentals": "Latest quarter (Jun 2026) revenue $470M, +140% YoY (prior quarter +79%, a year earlier -24%); TTM revenue +58%. Gross margin 76.2% (+19.9 pts YoY), operating margin 64.2%. Net debt $243M.",
-      "risks": [
-        "No data-driven red flags; check the latest earnings call"
-      ],
-      "analystRating": "Strong Buy (6 analysts)",
-      "priceTarget": 131.33,
-      "revisions": {
-        "since": "2026-10-25",
-        "note": "under 30 days of history"
-      },
-      "sourceUrl": [
-        "https://stockanalysis.com/stocks/insw/statistics/",
-        "https://stockanalysis.com/stocks/insw/financials/?p=quarterly",
-        "https://www.intlseas.com/newsroom/news/news-details/2026/International-Seaways-Expands-VLCC-Fleet-Through-Strategic-Combination-with-Bruton-Limited-/default.aspx"
-      ],
-      "eiMetrics": {
-        "yoy0": 140.1,
-        "yoy1": 78.51,
-        "yoy4": -24.0,
-        "ttmGrowth": 57.9,
-        "troughQAgo": 5,
-        "gm": 76.17,
-        "om": 64.22,
-        "gmChg": 19.91,
-        "omChg": 34.36,
-        "fwdRevGrowth": 9.79,
-        "eps3y": 7.99,
-        "fpe": 4.57,
-        "evSales": 4.59,
-        "evFwdSales": 4.18,
-        "peg": 0.21,
-        "ch1y": 120.72,
-        "pt": 131.33,
-        "rating": "Strong Buy",
-        "analysts": 6,
-        "psForward": 4.0,
-        "netcash": -243369000.0,
-        "sharesYoY": 0.2,
-        "shortFloat": 7.82,
-        "beta": -0.1,
-        "grossMarginTTM": 72.5,
-        "mcap": 5545030266.0,
-        "revUSD": 1261380861.24,
-        "currency": "USD",
-        "lastQ": "2026-06-30",
-        "price": 111.95,
-        "upside": 17.31,
-        "priceDate": "2026-10-30",
-        "offHigh": -10.47,
-        "ch1yNasdaq": 122.79,
-        "rs3m": 15.23,
-        "acqJump": 0.29
-      },
-      "catalyst": {
-        "text": "Preliminary Q3 2026: revenue about $480–490M and net income about $340–350M (incl. a ~$50M Suezmax sale gain), on blended spot earnings of ~$68,000/day vs $29,000 a year earlier; ~37% of Q4 spot days fixed at ~$180,000/day. Also buying Bruton (4 VLCCs, ~$370M, mostly in stock); full results Nov 5. Tanker earnings are rate-cyclical.",
-        "source": "https://www.intlseas.com/newsroom/news/news-details/2026/International-Seaways-Expands-VLCC-Fleet-Through-Strategic-Combination-with-Bruton-Limited-/default.aspx",
-        "asOf": "2026-10-16"
-      },
-      "rank": 1,
-      "grades": {
-        "growth": "D+",
-        "value": "B+",
-        "momentum": "A",
-        "profitability": "A+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "3/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
-      },
-      "metrics": {
-        "revenueGrowthPct": 57.9,
-        "forwardPE": 4.57,
-        "peg": 0.21,
-        "epsGrowth3yPct": 7.99,
-        "evSales": 4.59,
-        "grossMarginPct": 72.5,
-        "operatingMarginPct": 55.388,
-        "netMarginPct": 61.767,
-        "fcfMarginPct": 21.351,
-        "chg3mPct": 17.58,
-        "chg6mPct": 34.96,
-        "chg1yPct": 122.79,
-        "relStrength1yPct": 111.63,
         "priceAsOf": "2026-10-30"
       }
     },
@@ -3715,7 +3716,7 @@
         "psForward": 6.81,
         "netcash": 31095000.0,
         "sharesYoY": 5.69,
-        "shortFloat": 7.6,
+        "shortFloat": 7.62,
         "beta": 2.11,
         "grossMarginTTM": 76.13,
         "mcap": 16591352774.0,
@@ -4757,7 +4758,7 @@
         "netcash": -313160000.0,
         "sharesYoY": 11.1,
         "shortFloat": 10.65,
-        "beta": 3.03,
+        "beta": 2.97,
         "grossMarginTTM": 49.08,
         "mcap": 1073414137.0,
         "revUSD": 600343477.07,
@@ -5373,7 +5374,7 @@
         "psForward": 3.43,
         "netcash": -1690537000.0,
         "sharesYoY": 101.31,
-        "shortFloat": 25.98,
+        "shortFloat": 26.32,
         "beta": 1.28,
         "grossMarginTTM": 49.94,
         "mcap": 5413243914.0,
@@ -5836,8 +5837,8 @@
       "price": 345.91,
       "priceDate": "2026-10-30",
       "marketCap": "$10.6B",
-      "forwardPE": 13.96,
-      "peg": 0.39,
+      "forwardPE": 13.38,
+      "peg": 0.37,
       "revenueGrowth": "+93.1% YoY (TTM; latest quarter +127.0%)",
       "score": 67,
       "scoreParts": {
@@ -5882,7 +5883,7 @@
           "key": "value",
           "label": "Still cheap vs growth (fwd P/E ≤ 25 or EV/fwd sales ≤ 4)",
           "met": true,
-          "detail": "Forward P/E 13.962, EV/forward sales 2.1x"
+          "detail": "Forward P/E 13.382, EV/forward sales 2.1x"
         },
         {
           "key": "notrun",
@@ -5906,7 +5907,7 @@
           "key": "analysts",
           "label": "Analysts constructive (Buy+ and 15%+ upside)",
           "met": true,
-          "detail": "Strong Buy (8), +142% to target"
+          "detail": "Strong Buy (8), +128% to target"
         },
         {
           "key": "revisions",
@@ -5919,10 +5920,10 @@
         "Revenue: latest quarter +127% YoY vs +90% the quarter before and +16% a year earlier → 20/20",
         "Margins: gross +0.5 pts, operating +1.6 pts YoY (last 2 quarters) → 2/15",
         "Forward: next-12-month revenue +16% (implied), 3-yr EPS growth forecast +42% a year → 10/15",
-        "Valuation: forward P/E 13.962, EV/forward sales 2.1x → 15/15",
+        "Valuation: forward P/E 13.382, EV/forward sales 2.1x → 15/15",
         "Not already run: 1-yr -9%, -65% vs 52-week high → 8/10",
         "Trend: price below 200-day, below 50-day, 3-month vs SPY -43 pts → 0/10",
-        "Analysts: Strong Buy (8), +142% to target → 10/10",
+        "Analysts: Strong Buy (8), +128% to target → 10/10",
         "Bottleneck theme: Adjacent to AI infrastructure (Engineering & Construction) → 3/5"
       ],
       "keyFigures": [
@@ -5958,7 +5959,7 @@
         "Still below its 200-day average: the turn isn't confirmed"
       ],
       "analystRating": "Strong Buy (8 analysts)",
-      "priceTarget": 836.71,
+      "priceTarget": 789.71,
       "revisions": {
         "since": "2026-10-07",
         "note": "under 30 days of history"
@@ -5979,12 +5980,12 @@
         "omChg": 1.59,
         "fwdRevGrowth": 15.81,
         "eps3y": 41.98,
-        "fpe": 13.96,
+        "fpe": 13.38,
         "evSales": 2.43,
         "evFwdSales": 2.1,
-        "peg": 0.39,
+        "peg": 0.37,
         "ch1y": -14.24,
-        "pt": 836.71,
+        "pt": 789.71,
         "rating": "Strong Buy",
         "analysts": 8,
         "psForward": 2.11,
@@ -5998,7 +5999,7 @@
         "currency": "USD",
         "lastQ": "2026-09-30",
         "price": 345.91,
-        "upside": 141.89,
+        "upside": 128.3,
         "priceDate": "2026-10-30",
         "offHigh": -65.19,
         "ch1yNasdaq": -8.74,
@@ -6006,22 +6007,6 @@
         "acqJump": 5.66
       },
       "rank": 16,
-      "metrics": {
-        "revenueGrowthPct": 93.1,
-        "forwardPE": 13.96,
-        "peg": 0.39,
-        "epsGrowth3yPct": 41.98,
-        "evSales": 2.43,
-        "grossMarginPct": 23.778,
-        "operatingMarginPct": 18.616,
-        "netMarginPct": 12.851,
-        "fcfMarginPct": 10.926,
-        "chg3mPct": -40.44,
-        "chg6mPct": -32.91,
-        "chg1yPct": -8.74,
-        "relStrength1yPct": -19.9,
-        "priceAsOf": "2026-10-30"
-      },
       "grades": {
         "growth": "B",
         "value": "C",
@@ -6033,6 +6018,22 @@
         "value": "3/3",
         "momentum": "3/3",
         "profitability": "4/4"
+      },
+      "metrics": {
+        "revenueGrowthPct": 93.1,
+        "forwardPE": 13.38,
+        "peg": 0.37,
+        "epsGrowth3yPct": 41.98,
+        "evSales": 2.43,
+        "grossMarginPct": 23.778,
+        "operatingMarginPct": 18.616,
+        "netMarginPct": 12.851,
+        "fcfMarginPct": 10.926,
+        "chg3mPct": -40.44,
+        "chg6mPct": -32.91,
+        "chg1yPct": -8.74,
+        "relStrength1yPct": -19.9,
+        "priceAsOf": "2026-10-30"
       }
     },
     {
@@ -6414,6 +6415,18 @@
         "acqJump": -1.54
       },
       "rank": 18,
+      "grades": {
+        "growth": "D+",
+        "value": "F",
+        "momentum": "B-",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      },
       "metrics": {
         "revenueGrowthPct": 31.4,
         "forwardPE": 30.06,
@@ -6429,23 +6442,11 @@
         "chg1yPct": 14.97,
         "relStrength1yPct": 3.81,
         "priceAsOf": "2026-10-30"
-      },
-      "grades": {
-        "growth": "D+",
-        "value": "F",
-        "momentum": "B-",
-        "profitability": "B+"
-      },
-      "gradeInputs": {
-        "growth": "2/2",
-        "value": "2/3",
-        "momentum": "3/3",
-        "profitability": "4/4"
       }
     }
   ],
   "grading": {
-    "asOf": "2026-10-31",
+    "asOf": "2026-11-01",
     "spy1yPct": 11.16,
     "pool": "30 stocks (this list's picks + bench)",
     "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
