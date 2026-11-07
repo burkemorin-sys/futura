@@ -73,6 +73,29 @@ def nasdaq_closes(ticker, since):
     return {}
 
 
+# Symbol changes from mergers: a holding whose old ticker stops trading keeps being priced from the successor
+# listing, plus any cash paid per old share (added back from its ex-date, so a special dividend is not counted
+# as a loss). Values come from the successor's real Nasdaq closes; nothing is estimated.
+SYMBOL_CHANGES = {
+    "INDV": {"successor": "SUPN", "effective": "2026-11-02", "cash": [("2026-11-03", 8.13)],
+             "note": "Indivior merged with Supernus Pharmaceuticals on Nov 2, 2026; the combined Supernus, Inc. trades as SUPN "
+                     "from Nov 3 and INDV holders got a special cash dividend of $8.13 a share (ex-date Nov 3)",
+             "source": ["https://ir.supernus.com/news-releases/news-release-details/supernus-and-indivior-complete-merger-creating-diversified-cns",
+                        "https://infomemo.theocc.com/infomemos?number=60119"]},
+}
+
+
+def holding_closes(ticker, since):
+    """nasdaq_closes(), following SYMBOL_CHANGES for tickers retired by a merger."""
+    out = nasdaq_closes(ticker, since)
+    sc = SYMBOL_CHANGES.get(ticker)
+    if sc:
+        for d, v in nasdaq_closes(sc["successor"], since).items():
+            if d >= sc["effective"] and d not in out:
+                out[d] = round(v + sum(c for ex, c in sc.get("cash", []) if d >= ex), 4)
+    return out
+
+
 def load_picks(key):
     if not os.path.exists(LISTS[key]["file"]):
         return []
@@ -198,7 +221,7 @@ def main():
     for k, L in data["lists"].items():
         need |= {h["ticker"] for h in L["holdings"]}
         need |= {p["ticker"] for p in current[k]}
-    fetched = {t: nasdaq_closes(t, last) for t in sorted(need)}
+    fetched = {t: holding_closes(t, last) for t in sorted(need)}
     held = set(BENCH) | {h["ticker"] for L in data["lists"].values() for h in L["holdings"]}
     new_days = sorted({d for t in BENCH for d in fetched[t] if d > last})
     for d in new_days:
