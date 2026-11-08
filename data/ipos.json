@@ -1,123 +1,493 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-11-01",
-  "weekLabel": "Week of Nov 2–6, 2026",
-  "headline": "Quiet week before Anthropic: OPay pulled its priced IPO, and Anthropic's debut is targeted for the week of Nov 16",
-  "summary": "The calendar for Nov 2–6 is light: BayCoast Bank holding company Narragansett Bancorp (NARA) starts trading Monday after a $91M offering at $10, Football Manager SPAC (FBLLU) plans a $100M listing, and IPOScoop still lists Bitari (BIAI, unconfirmed). Renaissance says dental company vVardis (VVVV) and spinal implant maker Centinel Spine (CNTL) could launch despite the AI sell-off. Anthropic filed its public S-1 on Oct 26 for a Nasdaq listing as ANT; Renaissance estimates $75B or more, with a roadshow as soon as Nov 9–10 and a debut reported for the week of Nov 16 (no price range yet). Last week OPay priced at $19 (bottom of range, $304M) but withdrew before trading on Oct 30, citing a foreign regulatory inquiry. Bambusa (BBTX, -6.3%) and Aspen Neuroscience (ASPE, -0.7%) slipped on Oct 30 debuts, while Georgia Banking Company (GBC) direct-listed and finished 27.9% above its last private round. Lycia (LYCA) has cooled from +66.7% on day one to +46.7%. Renaissance's IPO Index was up 11.1% YTD vs the S&P 500's 13.8% as of Oct 29.",
+  "lastUpdated": "2026-11-08",
+  "weekLabel": "Week of Nov 9–13, 2026",
+  "headline": "vVardis and Rezera bring ~$414M to market as Anthropic's launch hangs on a shaky AI tape",
+  "summary": "Two sizable deals are on the Nov 9–13 calendar: Boston NLRP3 biotech Rezera (RZRA, Nasdaq) plans to raise $200M at $11–$13 and is set to trade Thu, Nov 12, and Swiss cavity-treatment maker vVardis (VVVV, NYSE) plans $214M at $21–$24, pricing Nov 12 for a Fri, Nov 13 debut at about a $1.35B market cap. Anthropic amended its S-1 on Nov 2 but still hasn't set a price range; Renaissance says it could launch as early as Tue, Nov 10 for pricing the week of Nov 16, and the FT reports a $80B–$100B raise at a $1.25T–$1.75T valuation before Thanksgiving, though Reuters says some investors doubt the roadshow can start next week after the post-midterm AI selloff. Last week was quiet: Narragansett Bancorp (NARA) closed its $91M offering at $10 and is up 8.4%, while Football Manager SPAC and Bitari slipped to later weeks on IPOScoop. Of the Oct 30 debuts, Aspen Neuroscience (ASPE) is down 17.1% and Bambusa (BBTX) 1.7% as of Nov 6. New filings were small: three SPACs (including Churchill Capital XIV at $300M) and three micro-caps.",
   "highlights": [
     {
-      "text": "Anthropic (ANT, Nasdaq) filed its public S-1 Oct 26; Renaissance estimates $75B+ and a debut is reported for the week of Nov 16",
+      "text": "Rezera (RZRA) plans a $200M Nasdaq IPO at $11–$13, expected to trade Thu, Nov 12",
+      "unconfirmed": false
+    },
+    {
+      "text": "vVardis (VVVV) plans a $214M NYSE IPO at $21–$24, pricing Nov 12 and trading Fri, Nov 13",
+      "unconfirmed": false
+    },
+    {
+      "text": "Anthropic (ANT) could launch as soon as Tue, Nov 10 for pricing the week of Nov 16; FT reports an $80B–$100B raise at $1.25T–$1.75T",
       "unconfirmed": true,
-      "note": "Timing reported, no terms filed"
+      "note": "No terms filed; Reuters reports investor doubts about the timing"
     },
     {
-      "text": "OPay priced its $304M IPO at $19 then withdrew it before trading on Oct 30, citing a foreign regulatory inquiry",
+      "text": "Narragansett Bancorp (NARA) is up 8.4% from its $10 offering price after its Nov 2 debut",
       "unconfirmed": false
     },
     {
-      "text": "Narragansett Bancorp (NARA) starts trading Mon, Nov 2 after a $91M offering at $10; Football Manager SPAC (FBLLU) plans $100M",
+      "text": "Churchill Capital XIV (CXIVU) filed for a $300M SPAC IPO; DT House and GLAMOORE withdrew small IPOs",
       "unconfirmed": false
-    },
-    {
-      "text": "Oct 30 biotech debuts were soft: Bambusa (BBTX) -6.3%, Aspen Neuroscience (ASPE) -0.7%",
-      "unconfirmed": false
-    },
-    {
-      "text": "vVardis and Centinel Spine could launch this week (Renaissance); no terms filed yet",
-      "unconfirmed": true,
-      "note": "Not scheduled"
     }
   ],
   "sections": {
     "thisWeek": {
       "label": "This week",
-      "dateRange": "Nov 2–6",
+      "dateRange": "Nov 9–13",
       "ipos": [
         {
-          "id": "narragansett",
-          "company": "Narragansett Bancorp",
-          "ticker": "NARA",
-          "exchange": "Nasdaq Capital Market",
-          "tradeDate": "Mon, Nov 2",
-          "priceRange": "$10.00 (fixed; mutual-holding-company offering)",
-          "dealSize": "$91.0M (9,098,800 shares, adjusted maximum)",
-          "description": "Holding company for BayCoast Bank (Massachusetts/Rhode Island) in a two-tier mutual holding company reorganization; the subscription offering was oversubscribed.",
+          "id": "rezera",
+          "company": "Rezera",
+          "ticker": "RZRA",
+          "exchange": "Nasdaq",
+          "tradeDate": "Thu, Nov 12",
+          "priceRange": "$11–$13",
+          "dealSize": "~$200M (16,666,667 shares)",
+          "description": "Boston biotech developing oral NLRP3 inhibitors; lead drug ruvonoflast finished two Phase 2 trials in cardiometabolic disease, with a Phase 3 planned for 1H27.",
           "isSpac": false,
           "unconfirmed": false,
           "sourceUrl": [
-            "https://www.prnewswire.com/news-releases/narragansett-bancorp-inc-announces-expected-closing-date-of-initial-public-offering-302924299.html",
-            "https://www.ipox.com/ipo-calendar/narragansett-bancorp",
-            "https://www.sec.gov/Archives/edgar/data/2138186/000119312526358277/d122170d424b3.htm"
-          ],
-          "detail": {
-            "intro": "Already priced at $10.00 through a depositor subscription offering (not a traditional underwritten IPO); the offering closes and trading starts Monday.",
-            "facts": [
-              {
-                "label": "Shares outstanding after closing",
-                "value": "21,160,000"
-              },
-              {
-                "label": "Held by the mutual holding company",
-                "value": "11,638,000 shares"
-              },
-              {
-                "label": "ESOP purchase",
-                "value": "761,760 shares"
-              },
-              {
-                "label": "Charitable foundation",
-                "value": "423,200 shares"
-              },
-              {
-                "label": "Marketing agent",
-                "value": "Piper Sandler"
-              }
-            ],
-            "sourceUrl": "https://www.prnewswire.com/news-releases/narragansett-bancorp-inc-announces-expected-closing-date-of-initial-public-offering-302924299.html",
-            "sourceLabel": "Company release"
-          }
-        },
-        {
-          "id": "football-manager-spac",
-          "company": "Football Manager SPAC",
-          "ticker": "FBLLU",
-          "exchange": "Nasdaq",
-          "tradeDate": "Week of Nov 2 (tentative)",
-          "priceRange": "$10.00 units",
-          "dealSize": "$100M (10M units)",
-          "description": "Milan-based blank-check company targeting a mid-tier European professional football club; each unit is one share plus one warrant at $11.50.",
-          "isSpac": true,
-          "unconfirmed": false,
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122503/us-ipo-week-ahead-november%E2%80%99s-ipo-market-set-for-a-quiet-start",
-            "https://www.renaissancecapital.com/IPO-Center/Calendar",
-            "https://www.sec.gov/Archives/edgar/data/2133939/000110465926119778/tmb-20261028xs1a.htm"
+            "https://www.renaissancecapital.com/IPO-Center/News/122632/us-ipo-week-ahead-dental-tech-vvardis-and-biotech-rezera-on-deck-as",
+            "https://stockanalysis.com/ipos/calendar/",
+            "https://www.iposcoop.com/ipo-calendar/"
           ],
           "detail": {
             "facts": [
               {
                 "label": "Market cap at IPO",
-                "value": "~$166M (Renaissance)"
+                "value": "~$254M (Renaissance)"
+              },
+              {
+                "label": "Lead bookrunners",
+                "value": "Jefferies, TD Cowen (also Cantor, Wedbush PacGrow)"
+              },
+              {
+                "label": "Second program",
+                "value": "Trabzanoflast, a brain-penetrant NLRP3 inhibitor"
+              },
+              {
+                "label": "Phase 3 readout",
+                "value": "Expected 2028"
+              }
+            ],
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122632/us-ipo-week-ahead-dental-tech-vvardis-and-biotech-rezera-on-deck-as",
+            "sourceLabel": "Renaissance Capital"
+          }
+        },
+        {
+          "id": "vvardis",
+          "company": "vVardis Holding",
+          "ticker": "VVVV",
+          "exchange": "NYSE",
+          "tradeDate": "Fri, Nov 13 (expected; pricing Thu, Nov 12)",
+          "priceRange": "$21–$24",
+          "dealSize": "~$214M (9,523,810 shares)",
+          "description": "Swiss dental company selling Curodont, a peptide-based in-office treatment for early cavities with no drilling or needles; its US product is an OTC drug under an FDA monograph.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122632/us-ipo-week-ahead-dental-tech-vvardis-and-biotech-rezera-on-deck-as",
+            "https://www.sec.gov/Archives/edgar/data/1907709/000114036126042406/ny20076472x13_f1a.htm",
+            "https://www.ipox.com/ipo-calendar/vvardis",
+            "https://www.iposcoop.com/ipo-calendar/"
+          ],
+          "detail": {
+            "intro": "Terms set in an F-1/A filed Nov 6. Products have been sold to more than 20,000 of roughly 110,000 US general dental practices (Renaissance).",
+            "facts": [
+              {
+                "label": "Market cap at IPO",
+                "value": "~$1.35B at the midpoint (Renaissance)"
               },
               {
                 "label": "Over-allotment",
-                "value": "1.5M units"
+                "value": "1,428,571 shares"
               },
               {
-                "label": "Bookrunner",
-                "value": "D. Boral Capital"
+                "label": "Lead bookrunners",
+                "value": "Goldman Sachs, J.P. Morgan (also William Blair, UBS, Deutsche Bank)"
+              },
+              {
+                "label": "Headquarters",
+                "value": "Zug, Switzerland"
               }
             ],
-            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122503/us-ipo-week-ahead-november%E2%80%99s-ipo-market-set-for-a-quiet-start",
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122632/us-ipo-week-ahead-dental-tech-vvardis-and-biotech-rezera-on-deck-as",
             "sourceLabel": "Renaissance Capital"
           }
+        },
+        {
+          "id": "anthropic-roadshow",
+          "company": "Anthropic",
+          "ticker": "ANT",
+          "exchange": "Nasdaq Global Select",
+          "tradeDate": "Launch/roadshow could start Tue, Nov 10 (Renaissance); not a trade date",
+          "priceRange": "n/a (not set)",
+          "dealSize": "$80B–$100B (FT, via Dealroom); ~$75B+ (Renaissance estimate)",
+          "description": "Claude AI developer; S-1 filed Oct 26 and amended Nov 2 (still no price range). Renaissance says the launch could come as early as Tue, Nov 10.",
+          "isSpac": false,
+          "unconfirmed": true,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122632/us-ipo-week-ahead-dental-tech-vvardis-and-biotech-rezera-on-deck-as",
+            "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=2130357&type=S-1&dateb=&owner=include&count=40",
+            "https://dealroom.co/news/170466-anthropic-presses-ahead-with-a-pre-thanksgiving-ipo-targeting-80b--100b-/",
+            "https://www.streetinsider.com/Reuters/Exclusive-AI+backlash+could+threaten+Anthropic+IPO+timing%2C+potential+investors+say/27302044.html",
+            "https://qz.com/anthropic-ipo-valuation-expectations-fall-ai-selloff-110626",
+            "https://finance.yahoo.com/technology/ai/article/anthropic-ipo-what-we-know-143321078.html"
+          ],
+          "unconfirmedNote": "No price range, share count or trade date filed. Renaissance says the IPO could launch as early as Tue, Nov 10 for pricing the week of Nov 16; Yahoo Finance calculates Nov 13 as the earliest pricing and Nov 16 as the earliest first trade. Reuters (Nov 5) reported investors doubt the roadshow can start next week, and Bloomberg (via Quartz) said a delay is one option",
+          "detail": {
+            "intro": "Revenue was $19.7B for the 12 months to Jun 30, 2026 (Renaissance). More than 11,900 customers generated $100K+ in trailing-12-month revenue as of Sep 30.",
+            "facts": [
+              {
+                "label": "Public S-1",
+                "value": "Mon, Oct 26"
+              },
+              {
+                "label": "S-1/A",
+                "value": "Mon, Nov 2 (price range still blank)"
+              },
+              {
+                "label": "Lead bookrunners",
+                "value": "Goldman Sachs, Morgan Stanley"
+              },
+              {
+                "label": "Reported valuation",
+                "value": "$1.25T–$1.75T target (FT); buyers discussing $1.2T–$1.3T (Bloomberg); last private round $965B"
+              },
+              {
+                "label": "Exchange / ticker",
+                "value": "Nasdaq Global Select / ANT"
+              }
+            ],
+            "bullets": [
+              "The Nasdaq 100 fell 6.4% on Thu, Nov 5 after the midterms, the backdrop Renaissance calls weaker than Anthropic likely expected.",
+              "Thanksgiving is Nov 26; the SEC is closed for Veterans Day on Nov 11 (Yahoo Finance)."
+            ],
+            "sourceUrl": "https://dealroom.co/news/170466-anthropic-presses-ahead-with-a-pre-thanksgiving-ipo-targeting-80b--100b-/",
+            "sourceLabel": "Dealroom (FT report)"
+          },
+          "status": "Roadshow expected"
+        }
+      ]
+    },
+    "nextTwoWeeks": {
+      "label": "Next 2 weeks",
+      "dateRange": "Nov 16–27",
+      "weeks": [
+        {
+          "label": "Week of Nov 16–20",
+          "ipos": [
+            {
+              "id": "anthropic",
+              "company": "Anthropic",
+              "ticker": "ANT",
+              "exchange": "Nasdaq Global Select",
+              "tradeDate": "Pricing targeted week of Nov 16; before Thanksgiving (reported)",
+              "priceRange": "n/a (not set)",
+              "dealSize": "$80B–$100B (FT, via Dealroom); ~$75B+ (Renaissance estimate)",
+              "description": "Claude AI developer; S-1 filed Oct 26 and amended Nov 2 (still no price range). Renaissance says the launch could come as early as Tue, Nov 10.",
+              "isSpac": false,
+              "unconfirmed": true,
+              "sourceUrl": [
+                "https://www.renaissancecapital.com/IPO-Center/News/122632/us-ipo-week-ahead-dental-tech-vvardis-and-biotech-rezera-on-deck-as",
+                "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=2130357&type=S-1&dateb=&owner=include&count=40",
+                "https://dealroom.co/news/170466-anthropic-presses-ahead-with-a-pre-thanksgiving-ipo-targeting-80b--100b-/",
+                "https://www.streetinsider.com/Reuters/Exclusive-AI+backlash+could+threaten+Anthropic+IPO+timing%2C+potential+investors+say/27302044.html",
+                "https://qz.com/anthropic-ipo-valuation-expectations-fall-ai-selloff-110626",
+                "https://finance.yahoo.com/technology/ai/article/anthropic-ipo-what-we-know-143321078.html"
+              ],
+              "unconfirmedNote": "No price range, share count or trade date filed. Renaissance says the IPO could launch as early as Tue, Nov 10 for pricing the week of Nov 16; Yahoo Finance calculates Nov 13 as the earliest pricing and Nov 16 as the earliest first trade. Reuters (Nov 5) reported investors doubt the roadshow can start next week, and Bloomberg (via Quartz) said a delay is one option",
+              "detail": {
+                "intro": "Revenue was $19.7B for the 12 months to Jun 30, 2026 (Renaissance). More than 11,900 customers generated $100K+ in trailing-12-month revenue as of Sep 30.",
+                "facts": [
+                  {
+                    "label": "Public S-1",
+                    "value": "Mon, Oct 26"
+                  },
+                  {
+                    "label": "S-1/A",
+                    "value": "Mon, Nov 2 (price range still blank)"
+                  },
+                  {
+                    "label": "Lead bookrunners",
+                    "value": "Goldman Sachs, Morgan Stanley"
+                  },
+                  {
+                    "label": "Reported valuation",
+                    "value": "$1.25T–$1.75T target (FT); buyers discussing $1.2T–$1.3T (Bloomberg); last private round $965B"
+                  },
+                  {
+                    "label": "Exchange / ticker",
+                    "value": "Nasdaq Global Select / ANT"
+                  }
+                ],
+                "bullets": [
+                  "The Nasdaq 100 fell 6.4% on Thu, Nov 5 after the midterms, the backdrop Renaissance calls weaker than Anthropic likely expected.",
+                  "Thanksgiving is Nov 26; the SEC is closed for Veterans Day on Nov 11 (Yahoo Finance)."
+                ],
+                "sourceUrl": "https://dealroom.co/news/170466-anthropic-presses-ahead-with-a-pre-thanksgiving-ipo-targeting-80b--100b-/",
+                "sourceLabel": "Dealroom (FT report)"
+              }
+            },
+            {
+              "id": "primagrove",
+              "company": "Primagrove",
+              "ticker": "YNTE",
+              "exchange": "n/a",
+              "tradeDate": "Week of Nov 16 (IPOScoop)",
+              "priceRange": "$4–$6",
+              "dealSize": "~$30.5M (6.3M shares)",
+              "description": "Small-cap IPO led by Eddid Securities; business details not confirmed here.",
+              "isSpac": false,
+              "unconfirmed": true,
+              "sourceUrl": [
+                "https://www.iposcoop.com/ipo-calendar/"
+              ],
+              "unconfirmedNote": "Only IPOScoop lists a week; it moved from the week of Nov 9 to Nov 16"
+            }
+          ]
+        },
+        {
+          "label": "Week of Nov 23–27 (Thanksgiving Thu)",
+          "ipos": [
+            {
+              "id": "football-manager-spac",
+              "company": "Football Manager SPAC",
+              "ticker": "FBLLU",
+              "exchange": "Nasdaq",
+              "tradeDate": "Week of Nov 23 (IPOScoop; slipped from week of Nov 2)",
+              "priceRange": "$10.00 units",
+              "dealSize": "$100M (10M units)",
+              "description": "Milan-based blank-check company targeting a mid-tier European professional football club; each unit is one share plus one warrant at $11.50.",
+              "isSpac": true,
+              "unconfirmed": true,
+              "sourceUrl": [
+                "https://www.iposcoop.com/ipo-calendar/",
+                "https://www.renaissancecapital.com/IPO-Center/News/122503/us-ipo-week-ahead-november%E2%80%99s-ipo-market-set-for-a-quiet-start",
+                "https://www.renaissancecapital.com/IPO-Center/Calendar",
+                "https://www.sec.gov/Archives/edgar/data/2133939/000110465926119778/tmb-20261028xs1a.htm"
+              ],
+              "detail": {
+                "facts": [
+                  {
+                    "label": "Market cap at IPO",
+                    "value": "~$166M (Renaissance)"
+                  },
+                  {
+                    "label": "Over-allotment",
+                    "value": "1.5M units"
+                  },
+                  {
+                    "label": "Bookrunner",
+                    "value": "D. Boral Capital"
+                  }
+                ],
+                "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122503/us-ipo-week-ahead-november%E2%80%99s-ipo-market-set-for-a-quiet-start",
+                "sourceLabel": "Renaissance Capital"
+              },
+              "unconfirmedNote": "Didn't price the week of Nov 2; IPOScoop now lists the week of Nov 23"
+            }
+          ]
+        }
+      ]
+    },
+    "newFilings": {
+      "label": "New filings",
+      "ipos": [
+        {
+          "id": "churchill-xiv",
+          "company": "Churchill Capital Corp XIV",
+          "ticker": "CXIVU",
+          "exchange": "n/a",
+          "tradeDate": "Filed week of Nov 2",
+          "priceRange": "n/a",
+          "dealSize": "$300M (proposed)",
+          "description": "Blank-check company founded by dealmaker and former Citi executive Michael Klein.",
+          "isSpac": true,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Lead underwriter",
+                "value": "Citi"
+              }
+            ],
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears",
+            "sourceLabel": "Renaissance Capital"
+          }
+        },
+        {
+          "id": "kartoon-acq",
+          "company": "Kartoon Studios Acquisition",
+          "ticker": "KACQ.U",
+          "exchange": "n/a",
+          "tradeDate": "Filed week of Nov 2",
+          "priceRange": "n/a",
+          "dealSize": "$300M (proposed)",
+          "description": "Blank-check company backed by Kartoon Studios targeting children's media and entertainment.",
+          "isSpac": true,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Lead underwriter",
+                "value": "E.F. Hutton"
+              }
+            ],
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears",
+            "sourceLabel": "Renaissance Capital"
+          }
+        },
+        {
+          "id": "paradise-iii",
+          "company": "A Paradise III Acquisition",
+          "ticker": "APCDU",
+          "exchange": "n/a",
+          "tradeDate": "Filed week of Nov 2",
+          "priceRange": "n/a",
+          "dealSize": "$100M (proposed)",
+          "description": "Blank-check company targeting leisure and entertainment (10M units at $10).",
+          "isSpac": true,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Lead underwriter",
+                "value": "Maxim"
+              }
+            ],
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears",
+            "sourceLabel": "Renaissance Capital"
+          }
+        },
+        {
+          "id": "guitar-group",
+          "company": "Guitar Group",
+          "ticker": "GITR.RC",
+          "exchange": "n/a",
+          "tradeDate": "Filed week of Nov 2",
+          "priceRange": "n/a",
+          "dealSize": "~$31M (proposed)",
+          "description": "Hong Kong provider of music events, guitar-making workshops and guitar repairs.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Lead underwriter",
+                "value": "Univest Securities"
+              }
+            ],
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears",
+            "sourceLabel": "Renaissance Capital"
+          }
+        },
+        {
+          "id": "uc-automotive",
+          "company": "UC Automotive",
+          "ticker": "UCAU.RC",
+          "exchange": "n/a",
+          "tradeDate": "Filed week of Nov 2",
+          "priceRange": "n/a",
+          "dealSize": "~$29M (proposed)",
+          "description": "Used vehicle dealer in Greater Vancouver, Canada.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Lead underwriter",
+                "value": "Kingswood"
+              }
+            ],
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears",
+            "sourceLabel": "Renaissance Capital"
+          }
+        },
+        {
+          "id": "behneh",
+          "company": "BEHNEH",
+          "ticker": "BENE",
+          "exchange": "n/a",
+          "tradeDate": "Filed week of Nov 2",
+          "priceRange": "n/a",
+          "dealSize": "~$20M (proposed)",
+          "description": "Singapore-based cross-border payment services provider.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "sourceUrl": [
+            "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears"
+          ],
+          "detail": {
+            "facts": [
+              {
+                "label": "Lead underwriter",
+                "value": "Sutter Securities"
+              },
+              {
+                "label": "Market cap at IPO",
+                "value": "~$100M (Renaissance)"
+              }
+            ],
+            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears",
+            "sourceLabel": "Renaissance Capital"
+          }
+        }
+      ]
+    },
+    "pulledDeals": {
+      "label": "Pulled / postponed",
+      "ipos": [
+        {
+          "id": "dt-house",
+          "company": "DT House Limited",
+          "ticker": "DTDT",
+          "exchange": "n/a",
+          "tradeDate": "Withdrawn Wed, Nov 4",
+          "priceRange": "$5.00–$5.50",
+          "dealSize": "5,000,000 shares",
+          "description": "Small-cap IPO withdrawn (Stock Analysis withdrawn list); no reason given there.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "status": "Withdrawn",
+          "sourceUrl": [
+            "https://stockanalysis.com/ipos/withdrawn/"
+          ]
+        },
+        {
+          "id": "glamoore",
+          "company": "GLAMOORE Capital Group",
+          "ticker": "GMCG",
+          "exchange": "n/a",
+          "tradeDate": "Withdrawn Mon, Nov 2",
+          "priceRange": "$4.00",
+          "dealSize": "3,750,000 shares",
+          "description": "Small-cap IPO withdrawn (Stock Analysis withdrawn list); no reason given there.",
+          "isSpac": false,
+          "unconfirmed": false,
+          "status": "Withdrawn",
+          "sourceUrl": [
+            "https://stockanalysis.com/ipos/withdrawn/"
+          ]
         },
         {
           "id": "bitari",
           "company": "Bitari",
           "ticker": "BIAI",
           "exchange": "Nasdaq Global Market",
-          "tradeDate": "Week of Nov 2 (IPOScoop)",
+          "tradeDate": "Slipped to week of Nov 30 (IPOScoop)",
           "priceRange": "$7 (fixed)",
           "dealSize": "~$30M (4,285,715 shares)",
           "description": "Texas-based hosting and maintenance services for Bitcoin mining machines; controlled (85.9%) by AI Power X.",
@@ -128,32 +498,15 @@
             "https://www.iposcoop.com/ipo-calendar/",
             "https://www.sec.gov/Archives/edgar/data/2091680/000118518526004746/bitaris1a3101326.htm"
           ],
-          "unconfirmedNote": "Week from IPOScoop only (it has slipped from Oct 14, Oct 19 and the week of Oct 26). Not on Renaissance's calendar. $7 fixed price per the Oct 14 S-1/A"
-        },
-        {
-          "id": "vvardis",
-          "company": "vVardis Holding",
-          "ticker": "VVVV",
-          "exchange": "NYSE",
-          "tradeDate": "Could launch (no terms yet)",
-          "priceRange": "n/a",
-          "dealSize": "n/a (Renaissance earlier estimated ~$200M)",
-          "description": "Swiss dental company selling a non-invasive treatment for early cavities; filed an F-1 on Oct 9.",
-          "isSpac": false,
-          "unconfirmed": true,
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122503/us-ipo-week-ahead-november%E2%80%99s-ipo-market-set-for-a-quiet-start",
-            "https://www.renaissancecapital.com/IPO-Center/News/122157/cavity-treatment-provider-vvardis-files-for-an-estimated-200-million-us-ipo",
-            "https://www.iposcoop.com/ipo/vvardis-holding/"
-          ],
-          "unconfirmedNote": "Not scheduled. Renaissance (Oct 30) says it could decide to launch despite the AI sell-off; no share count or price range filed"
+          "unconfirmedNote": "IPOScoop moved it from the week of Nov 2 to the week of Nov 30; no other calendar lists a date",
+          "status": "Postponed"
         },
         {
           "id": "centinel-spine",
           "company": "Centinel Spine",
           "ticker": "CNTL",
           "exchange": "NYSE",
-          "tradeDate": "Could launch (no terms yet)",
+          "tradeDate": "Not scheduled",
           "priceRange": "n/a",
           "dealSize": "n/a",
           "description": "Spinal implant maker focused on total disc replacement; filed an S-1 on Oct 7.",
@@ -163,312 +516,9 @@
             "https://www.renaissancecapital.com/IPO-Center/News/122503/us-ipo-week-ahead-november%E2%80%99s-ipo-market-set-for-a-quiet-start",
             "https://www.streetinsider.com/SEC+Filings/Form+S-1+Centinel+Spine+Holdco%2C/27161632.html"
           ],
-          "unconfirmedNote": "Not scheduled. Renaissance (Oct 30) says it could decide to launch; no share count or price range filed"
-        }
-      ]
-    },
-    "nextTwoWeeks": {
-      "label": "Next 2 weeks",
-      "dateRange": "Nov 9 – Nov 20",
-      "weeks": [
-        {
-          "label": "Week of Nov 9–13",
-          "ipos": [
-            {
-              "id": "primagrove",
-              "company": "Primagrove",
-              "ticker": "YNTE",
-              "exchange": "n/a",
-              "tradeDate": "Week of Nov 9 (IPOScoop)",
-              "priceRange": "$4–$6",
-              "dealSize": "~$30.5M (6.3M shares)",
-              "description": "Small-cap IPO led by Eddid Securities; business details not confirmed here.",
-              "isSpac": false,
-              "unconfirmed": true,
-              "sourceUrl": [
-                "https://www.iposcoop.com/ipo-calendar/"
-              ],
-              "unconfirmedNote": "Listed on IPOScoop only; not on Renaissance's calendar"
-            },
-            {
-              "id": "anthropic-roadshow",
-              "company": "Anthropic",
-              "ticker": "ANT",
-              "exchange": "Nasdaq Global Select",
-              "tradeDate": "Roadshow could start Nov 9–10 (reported); not a trade date",
-              "priceRange": "n/a (not set)",
-              "dealSize": "~$75B+ (Renaissance estimate); up to $100B (IFR, unnamed source)",
-              "description": "Claude AI developer; filed its public S-1 on Oct 26. Roadshow could start Nov 9–10 with pricing the week of Nov 16.",
-              "isSpac": false,
-              "unconfirmed": true,
-              "sourceUrl": [
-                "https://www.anthropic.com/news/s1-sec",
-                "https://www.renaissancecapital.com/IPO-Center/News/122417/ai-model-developer-anthropic-pbc-files-for-an-estimated-75-billion-ipo",
-                "https://finance.yahoo.com/markets/article/anthropics-ipo-could-start-trading-as-soon-as-nov-16--heres-the-road-from-filing-to-first-trade-155405578.html",
-                "https://www.ifre.com/equities/2499407/anthropic-pushes-ahead-with-mid-november-ipo"
-              ],
-              "unconfirmedNote": "No price range, share count or trade date filed. The week of Nov 16 comes from WSJ/Reuters reports (via Yahoo Finance) and Renaissance; Yahoo calculates Mon, Nov 16 as the earliest possible first trade. IFR reported the roadshow from Nov 9",
-              "detail": {
-                "intro": "Revenue was $19.7B for the 12 months to Jun 30, 2026 (Renaissance). More than 11,900 customers generated $100K+ in trailing-12-month revenue as of Sep 30.",
-                "facts": [
-                  {
-                    "label": "Public S-1",
-                    "value": "Mon, Oct 26"
-                  },
-                  {
-                    "label": "Confidential draft",
-                    "value": "Jun 1, 2026"
-                  },
-                  {
-                    "label": "Lead bookrunners",
-                    "value": "Goldman Sachs, Morgan Stanley (22 joint bookrunners)"
-                  },
-                  {
-                    "label": "Reported valuation",
-                    "value": "Up to ~$2T (IFR); $1.5T–$2.0T reported"
-                  },
-                  {
-                    "label": "Q3 results",
-                    "value": "Not in the S-1 yet; an amendment could add them (Renaissance)"
-                  }
-                ],
-                "bullets": [
-                  "Midterm elections Nov 3 and Thanksgiving Nov 26 narrow the window (Yahoo Finance)."
-                ],
-                "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122417/ai-model-developer-anthropic-pbc-files-for-an-estimated-75-billion-ipo",
-                "sourceLabel": "Renaissance Capital"
-              },
-              "status": "Roadshow expected"
-            }
-          ]
+          "unconfirmedNote": "Renaissance said it could launch the week of Nov 2, but it didn't set terms and isn't on the Nov 9 calendar",
+          "status": "On file, not launched"
         },
-        {
-          "label": "Week of Nov 16–20",
-          "ipos": [
-            {
-              "id": "anthropic",
-              "company": "Anthropic",
-              "ticker": "ANT",
-              "exchange": "Nasdaq Global Select",
-              "tradeDate": "Debut targeted week of Nov 16 (reported)",
-              "priceRange": "n/a (not set)",
-              "dealSize": "~$75B+ (Renaissance estimate); up to $100B (IFR, unnamed source)",
-              "description": "Claude AI developer; filed its public S-1 on Oct 26. Roadshow could start Nov 9–10 with pricing the week of Nov 16.",
-              "isSpac": false,
-              "unconfirmed": true,
-              "sourceUrl": [
-                "https://www.anthropic.com/news/s1-sec",
-                "https://www.renaissancecapital.com/IPO-Center/News/122417/ai-model-developer-anthropic-pbc-files-for-an-estimated-75-billion-ipo",
-                "https://finance.yahoo.com/markets/article/anthropics-ipo-could-start-trading-as-soon-as-nov-16--heres-the-road-from-filing-to-first-trade-155405578.html",
-                "https://www.ifre.com/equities/2499407/anthropic-pushes-ahead-with-mid-november-ipo"
-              ],
-              "unconfirmedNote": "No price range, share count or trade date filed. The week of Nov 16 comes from WSJ/Reuters reports (via Yahoo Finance) and Renaissance; Yahoo calculates Mon, Nov 16 as the earliest possible first trade. IFR reported the roadshow from Nov 9",
-              "detail": {
-                "intro": "Revenue was $19.7B for the 12 months to Jun 30, 2026 (Renaissance). More than 11,900 customers generated $100K+ in trailing-12-month revenue as of Sep 30.",
-                "facts": [
-                  {
-                    "label": "Public S-1",
-                    "value": "Mon, Oct 26"
-                  },
-                  {
-                    "label": "Confidential draft",
-                    "value": "Jun 1, 2026"
-                  },
-                  {
-                    "label": "Lead bookrunners",
-                    "value": "Goldman Sachs, Morgan Stanley (22 joint bookrunners)"
-                  },
-                  {
-                    "label": "Reported valuation",
-                    "value": "Up to ~$2T (IFR); $1.5T–$2.0T reported"
-                  },
-                  {
-                    "label": "Q3 results",
-                    "value": "Not in the S-1 yet; an amendment could add them (Renaissance)"
-                  }
-                ],
-                "bullets": [
-                  "Midterm elections Nov 3 and Thanksgiving Nov 26 narrow the window (Yahoo Finance)."
-                ],
-                "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122417/ai-model-developer-anthropic-pbc-files-for-an-estimated-75-billion-ipo",
-                "sourceLabel": "Renaissance Capital"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    "newFilings": {
-      "label": "New filings",
-      "ipos": [
-        {
-          "id": "anthropic-filing",
-          "company": "Anthropic",
-          "ticker": "ANT",
-          "exchange": "Nasdaq Global Select",
-          "tradeDate": "S-1 filed Mon, Oct 26",
-          "priceRange": "n/a (not set)",
-          "dealSize": "~$75B+ (Renaissance estimate); up to $100B (IFR, unnamed source)",
-          "description": "Claude AI developer; filed its public S-1 on Oct 26. Roadshow could start Nov 9–10 with pricing the week of Nov 16.",
-          "isSpac": false,
-          "unconfirmed": true,
-          "sourceUrl": [
-            "https://www.anthropic.com/news/s1-sec",
-            "https://www.renaissancecapital.com/IPO-Center/News/122417/ai-model-developer-anthropic-pbc-files-for-an-estimated-75-billion-ipo",
-            "https://finance.yahoo.com/markets/article/anthropics-ipo-could-start-trading-as-soon-as-nov-16--heres-the-road-from-filing-to-first-trade-155405578.html",
-            "https://www.ifre.com/equities/2499407/anthropic-pushes-ahead-with-mid-november-ipo"
-          ],
-          "unconfirmedNote": "No price range, share count or trade date filed. The week of Nov 16 comes from WSJ/Reuters reports (via Yahoo Finance) and Renaissance; Yahoo calculates Mon, Nov 16 as the earliest possible first trade. IFR reported the roadshow from Nov 9",
-          "detail": {
-            "intro": "Revenue was $19.7B for the 12 months to Jun 30, 2026 (Renaissance). More than 11,900 customers generated $100K+ in trailing-12-month revenue as of Sep 30.",
-            "facts": [
-              {
-                "label": "Public S-1",
-                "value": "Mon, Oct 26"
-              },
-              {
-                "label": "Confidential draft",
-                "value": "Jun 1, 2026"
-              },
-              {
-                "label": "Lead bookrunners",
-                "value": "Goldman Sachs, Morgan Stanley (22 joint bookrunners)"
-              },
-              {
-                "label": "Reported valuation",
-                "value": "Up to ~$2T (IFR); $1.5T–$2.0T reported"
-              },
-              {
-                "label": "Q3 results",
-                "value": "Not in the S-1 yet; an amendment could add them (Renaissance)"
-              }
-            ],
-            "bullets": [
-              "Midterm elections Nov 3 and Thanksgiving Nov 26 narrow the window (Yahoo Finance)."
-            ],
-            "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122417/ai-model-developer-anthropic-pbc-files-for-an-estimated-75-billion-ipo",
-            "sourceLabel": "Renaissance Capital"
-          }
-        },
-        {
-          "id": "lis-tech",
-          "company": "LIS Technologies",
-          "ticker": "LIS",
-          "exchange": "n/a",
-          "tradeDate": "n/a",
-          "priceRange": "n/a",
-          "dealSize": "~$17M (proposed)",
-          "description": "Develops laser-based uranium enrichment technology for nuclear energy.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo"
-          ],
-          "detail": {
-            "facts": [
-              {
-                "label": "Lead underwriter",
-                "value": "Titan Partners"
-              }
-            ]
-          }
-        },
-        {
-          "id": "focus-media",
-          "company": "Focus Media Network",
-          "ticker": "FMSN",
-          "exchange": "n/a",
-          "tradeDate": "n/a",
-          "priceRange": "n/a",
-          "dealSize": "~$25M (proposed)",
-          "description": "Operates digital advertising screens in commercial buildings in Singapore.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo"
-          ],
-          "detail": {
-            "facts": [
-              {
-                "label": "Lead underwriter",
-                "value": "Kingswood"
-              }
-            ]
-          }
-        },
-        {
-          "id": "kat-construction",
-          "company": "KAT Construction Services",
-          "ticker": "KATX",
-          "exchange": "n/a",
-          "tradeDate": "n/a",
-          "priceRange": "n/a",
-          "dealSize": "~$20M (proposed)",
-          "description": "Produces and installs stone architectural features in the Dallas–Fort Worth area.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo"
-          ],
-          "detail": {
-            "facts": [
-              {
-                "label": "Lead underwriter",
-                "value": "Z2 Capital"
-              }
-            ]
-          }
-        },
-        {
-          "id": "heroic-empire",
-          "company": "Heroic Empire Acquisition",
-          "ticker": "HEACU",
-          "exchange": "n/a",
-          "tradeDate": "n/a",
-          "priceRange": "n/a",
-          "dealSize": "$100M (proposed)",
-          "description": "Blank-check company targeting AI, biotech, energy and advanced manufacturing.",
-          "isSpac": true,
-          "unconfirmed": false,
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo"
-          ]
-        },
-        {
-          "id": "redwoods-ii",
-          "company": "Redwoods Acquisition II",
-          "ticker": "RDWDU",
-          "exchange": "n/a",
-          "tradeDate": "n/a",
-          "priceRange": "n/a",
-          "dealSize": "$75M (proposed)",
-          "description": "Blank-check company targeting energy storage, telecom and consumer businesses.",
-          "isSpac": true,
-          "unconfirmed": false,
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo"
-          ]
-        },
-        {
-          "id": "ucsb-acq",
-          "company": "UCSB Acquisition",
-          "ticker": "UCSBU",
-          "exchange": "n/a",
-          "tradeDate": "n/a",
-          "priceRange": "n/a",
-          "dealSize": "$60M (proposed)",
-          "description": "Blank-check company led by Chinese executives.",
-          "isSpac": true,
-          "unconfirmed": false,
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo"
-          ]
-        }
-      ]
-    },
-    "pulledDeals": {
-      "label": "Pulled / postponed",
-      "ipos": [
         {
           "id": "opay",
           "company": "OPay",
@@ -486,90 +536,6 @@
             "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo"
           ],
           "status": "Withdrawn"
-        },
-        {
-          "id": "kepuni",
-          "company": "Kepuni Holdings",
-          "ticker": "KPN",
-          "exchange": "Nasdaq Capital Market",
-          "tradeDate": "Withdrawn Mon, Oct 19",
-          "priceRange": "$5–$7",
-          "dealSize": "~$15M (2.5M shares)",
-          "description": "China-based equipment maker withdrew its US IPO; no reason given.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "status": "Withdrawn",
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122303/chinese-equipment-maker-kepuni-holdings-withdraws-15-million-us-ipo",
-            "https://stockanalysis.com/ipos/withdrawn/"
-          ]
-        },
-        {
-          "id": "bw-industrial",
-          "company": "BW Industrial Holdings",
-          "ticker": "BWGC",
-          "exchange": "NYSE American",
-          "tradeDate": "Postponed Oct 20",
-          "priceRange": "$6–$7",
-          "dealSize": "~$17M (2.63M shares)",
-          "description": "Houston facility-construction (EPC) contractor for energy, electronics and semiconductor plants postponed its small IPO; IPOScoop still shows an expected date of Oct 27 alongside the Postponed status.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "sourceUrl": [
-            "https://www.iposcoop.com/ipo/bw-industrial-holdings-2/"
-          ],
-          "detail": {
-            "facts": [
-              {
-                "label": "Revenue (12 mo. to Sep 30, 2025)",
-                "value": "$55.6M"
-              },
-              {
-                "label": "Net income (same period)",
-                "value": "$7.6M"
-              },
-              {
-                "label": "Employees",
-                "value": "18"
-              },
-              {
-                "label": "Underwriter",
-                "value": "Eddid Securities USA"
-              }
-            ],
-            "sourceUrl": "https://www.iposcoop.com/ipo/bw-industrial-holdings-2/",
-            "sourceLabel": "IPOScoop"
-          },
-          "status": "Postponed"
-        },
-        {
-          "id": "klook",
-          "company": "Klook Technology",
-          "ticker": "KLK",
-          "exchange": "NYSE",
-          "tradeDate": "Withdrawn Fri, Oct 16",
-          "priceRange": "n/a",
-          "dealSize": "~$400M (Renaissance est.)",
-          "description": "Hong Kong-based pan-Asian travel-experiences booking platform withdrew its IPO plan; it filed in Nov 2025 and never updated the prospectus.",
-          "isSpac": false,
-          "unconfirmed": false,
-          "status": "Withdrawn",
-          "sourceUrl": [
-            "https://www.renaissancecapital.com/IPO-Center/News/122274/pan-asian-travel-booking-platform-klook-technology-withdraws-estimated-400",
-            "https://www.sec.gov/Archives/edgar/data/2071502/000095010326015729/dp254958_rw.htm"
-          ],
-          "detail": {
-            "facts": [
-              {
-                "label": "Revenue (12 mo. to Sep 30, 2025)",
-                "value": "$541M"
-              },
-              {
-                "label": "Banks (planned)",
-                "value": "Goldman Sachs (Asia), J.P. Morgan, Morgan Stanley, Citi and others"
-              }
-            ]
-          }
         },
         {
           "id": "nscale",
@@ -623,8 +589,66 @@
     },
     "pastTwoWeeks": {
       "label": "Past 2 weeks",
-      "dateRange": "Oct 19–30",
+      "dateRange": "Oct 26 – Nov 6",
       "weeks": [
+        {
+          "label": "Week of Nov 2–6",
+          "ipos": [
+            {
+              "id": "narragansett",
+              "company": "Narragansett Bancorp",
+              "ticker": "NARA",
+              "exchange": "Nasdaq Capital Market",
+              "tradeDate": "Mon, Nov 2",
+              "priceRange": "$10.00 (fixed; mutual-holding-company offering)",
+              "dealSize": "$91.0M (9,098,800 shares, adjusted maximum)",
+              "description": "Holding company for BayCoast Bank (Massachusetts/Rhode Island) in a two-tier mutual holding company reorganization; the subscription offering was oversubscribed.",
+              "isSpac": false,
+              "unconfirmed": false,
+              "sourceUrl": [
+                "https://www.renaissancecapital.com/IPO-Center/News/122629/us-ipo-weekly-recap-community-bank-debuts-amid-market-fears",
+                "https://ca.investing.com/news/stock-market-news/narragansett-bancorp-begins-trading-on-nasdaq-at-1080-432SI-4922834",
+                "https://stockanalysis.com/stocks/nara/",
+                "https://us.kabutan.jp/stocks/NARA/historical_prices/daily"
+              ],
+              "detail": {
+                "intro": "Already priced at $10.00 through a depositor subscription offering (not a traditional underwritten IPO); the offering closes and trading starts Monday.",
+                "facts": [
+                  {
+                    "label": "Shares outstanding after closing",
+                    "value": "21,160,000"
+                  },
+                  {
+                    "label": "Held by the mutual holding company",
+                    "value": "11,638,000 shares"
+                  },
+                  {
+                    "label": "ESOP purchase",
+                    "value": "761,760 shares"
+                  },
+                  {
+                    "label": "Charitable foundation",
+                    "value": "423,200 shares"
+                  },
+                  {
+                    "label": "Marketing agent",
+                    "value": "Piper Sandler"
+                  }
+                ],
+                "sourceUrl": "https://www.prnewswire.com/news-releases/narragansett-bancorp-inc-announces-expected-closing-date-of-initial-public-offering-302924299.html",
+                "sourceLabel": "Company release"
+              },
+              "returns": {
+                "firstDay": "+8.0%",
+                "firstDayNote": "Opened and closed at $10.80 (Investing.com, Kabutan)",
+                "latest": "+8.4%",
+                "latestPrice": "$10.84",
+                "latestDate": "2026-11-06",
+                "latestNote": "Renaissance: finished the week up 8%; $212M market cap at IPO. Best-efforts offering, not in Renaissance's IPO stats"
+              }
+            }
+          ]
+        },
         {
           "label": "Week of Oct 26–30",
           "ipos": [
@@ -657,10 +681,9 @@
               "returns": {
                 "firstDay": "-6.3%",
                 "firstDayNote": "Closed $14.99 (IPOScoop)",
-                "latest": "-6.3%",
-                "latestPrice": "$14.99",
-                "latestDate": "2026-10-30",
-                "latestNote": "First day of trading was Oct 30"
+                "latest": "-1.7%",
+                "latestPrice": "$15.73",
+                "latestDate": "2026-11-06"
               }
             },
             {
@@ -692,10 +715,9 @@
               "returns": {
                 "firstDay": "-0.7%",
                 "firstDayNote": "Closed $14.89 (IPOScoop)",
-                "latest": "-0.7%",
-                "latestPrice": "$14.89",
-                "latestDate": "2026-10-30",
-                "latestNote": "First day of trading was Oct 30"
+                "latest": "-17.1%",
+                "latestPrice": "$12.44",
+                "latestDate": "2026-11-06"
               }
             },
             {
@@ -710,14 +732,17 @@
               "isSpac": false,
               "unconfirmed": false,
               "sourceUrl": [
-                "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo"
+                "https://www.renaissancecapital.com/IPO-Center/News/122506/us-ipo-weekly-recap-anthropic-files-for-potentially-record-breaking-ipo",
+                "https://stockanalysis.com/ipos/",
+                "https://stockanalysis.com/stocks/gbc/"
               ],
               "returns": {
                 "firstDay": "+28%",
                 "firstDayNote": "Vs the $30 last private round (Renaissance, rounded)",
-                "latest": "+27.9%",
-                "latestPrice": "$38.38",
-                "latestDate": "2026-10-30"
+                "latest": "+10.3%",
+                "latestPrice": "$33.10",
+                "latestDate": "2026-11-06",
+                "latestNote": "Vs the $30 last private round Renaissance used; IPOScoop uses a $60 reference price, which would make it -44.8% (Stock Analysis close)"
               }
             },
             {
@@ -738,9 +763,9 @@
               "returns": {
                 "firstDay": "+0%",
                 "firstDayNote": "Renaissance, rounded",
-                "latest": "-0.2%",
-                "latestPrice": "$9.98",
-                "latestDate": "2026-10-30"
+                "latest": "-0.1%",
+                "latestPrice": "$9.99",
+                "latestDate": "2026-11-06"
               }
             },
             {
@@ -761,92 +786,9 @@
               "returns": {
                 "firstDay": "+0%",
                 "firstDayNote": "Renaissance, rounded",
-                "latest": "-0.2%",
-                "latestPrice": "$9.99",
-                "latestDate": "2026-10-30"
-              }
-            }
-          ]
-        },
-        {
-          "label": "Week of Oct 19–23",
-          "ipos": [
-            {
-              "id": "lycia",
-              "company": "Lycia Therapeutics",
-              "ticker": "LYCA",
-              "exchange": "Nasdaq Global Select",
-              "tradeDate": "Fri, Oct 23",
-              "priceRange": "$16–$18 → priced $18 (top, upsized)",
-              "dealSize": "$317.5M (17.64M shares)",
-              "description": "South San Francisco Phase 1 biotech using its LYTAC platform to degrade disease-causing extracellular proteins (food allergy, Graves' disease).",
-              "isSpac": false,
-              "unconfirmed": false,
-              "sourceUrl": [
-                "https://ir.lyciatx.com/news-releases/news-release-details/lycia-therapeutics-announces-pricing-upsized-initial-public",
-                "https://www.renaissancecapital.com/IPO-Center/News/122396/us-ipo-weekly-recap-trickle-of-biotech-activity-continues-amid-tech-sell",
-                "https://www.iposcoop.com/last-100-ipos/",
-                "https://stockanalysis.com/ipos/"
-              ],
-              "detail": {
-                "intro": "Lead candidate LCA-0061 degrades IgE for allergic diseases including food allergy (Phase 1); LCA-0321 selectively degrades the autoantibodies behind Graves' disease (Phase 1).",
-                "facts": [
-                  {
-                    "label": "Market cap at IPO",
-                    "value": "~$1,060M (Renaissance)"
-                  },
-                  {
-                    "label": "Upsize",
-                    "value": "From 14.7M to 17.64M shares"
-                  },
-                  {
-                    "label": "Over-allotment",
-                    "value": "Up to 2,646,000 more shares"
-                  },
-                  {
-                    "label": "Banks",
-                    "value": "Jefferies, TD Cowen, Evercore ISI, Guggenheim; LifeSci Capital (passive)"
-                  }
-                ],
-                "bullets": [
-                  "Priced after a two-day roadshow (Renaissance).",
-                  "Day one traded between $22.19 and $36.49."
-                ],
-                "sourceUrl": "https://www.renaissancecapital.com/IPO-Center/News/122396/us-ipo-weekly-recap-trickle-of-biotech-activity-continues-amid-tech-sell",
-                "sourceLabel": "Renaissance Capital"
-              },
-              "returns": {
-                "firstDay": "+66.7%",
-                "firstDayNote": "Opened $28.55; closed $30.00",
-                "latest": "+46.7%",
-                "latestPrice": "$26.40",
-                "latestDate": "2026-10-30",
-                "latestNote": "Down from $30.00 at the first-day close"
-              }
-            },
-            {
-              "id": "davion",
-              "company": "Davion Healthcare",
-              "ticker": "DAVI",
-              "exchange": "Nasdaq Global Market",
-              "tradeDate": "Thu, Oct 22 (direct listing)",
-              "priceRange": "$12.00 reference (IPOScoop)",
-              "dealSize": "n/a (direct listing; no new shares, no proceeds)",
-              "description": "Dublin-based maker of non-invasive home health-monitoring tests, led by BreastCheck, an FDA-registered at-home breast screening test.",
-              "isSpac": false,
-              "unconfirmed": true,
-              "unconfirmedNote": "Direct listing, not an underwritten IPO. Reference price and closing price are from IPOScoop only",
-              "sourceUrl": [
-                "https://www.prnewswire.com/news-releases/davion-healthcare-plc-confirms-expected-nasdaq-trading-date-and-announces-new-executive-leadership-and-operating-structure-302913851.html",
-                "https://www.iposcoop.com/last-100-ipos/"
-              ],
-              "returns": {
-                "firstDay": "-2.9%",
-                "firstDayNote": "Closed $11.65 vs the $12.00 reference price (IPOScoop)",
-                "latest": "n/a",
-                "latestPrice": "n/a",
-                "latestDate": "2026-10-23",
-                "latestNote": "No confirmed Oct 23 close found"
+                "latest": "0.0%",
+                "latestPrice": "$10.00",
+                "latestDate": "2026-11-06"
               }
             }
           ]
