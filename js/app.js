@@ -1172,7 +1172,7 @@
         <div>
           <div class="tags"><span class="tag ticker">${esc(d.ticker)}</span><span class="tag sector">${esc(d.exchange)}</span>${d.status === "public" ? `<span class="tag live-tag"><span class="live-dot"></span>Public</span>` : `<span class="tag spac">Private</span>`}${followToggleHTML(d.ticker, { compact: true })}</div>
         </div>
-        <div class="pick-price lq" data-lq="${esc(normalizeTicker(d.ticker))}"${etfCloseDate(snap.asOf) ? ` data-lq-date="${etfCloseDate(snap.asOf)}"` : ""}>
+        <div class="pick-price${snap.liveQuote === false ? "" : " lq"}"${snap.liveQuote === false ? "" : ` data-lq="${esc(normalizeTicker(d.ticker))}"${etfCloseDate(snap.asOf) ? ` data-lq-date="${etfCloseDate(snap.asOf)}"` : ""}`}>
           <div class="p">${esc(money(snap.price))}</div>
           <div class="chg ${tone(snap.change)}">${esc(snap.change || "")}</div>
           <div class="d">${esc(snap.asOf || "")} · snapshot</div>
@@ -1194,7 +1194,7 @@
           <div><dt>Lock-up</dt><dd>${esc(ipo.lockup)}</dd></div>
         </dl>
         <div class="srcs tbl-src">${(ipo.sources || []).map((x) => srcLink(x.url, x.label)).join("")}</div>` : ""}
-      <div class="tbl-src">${srcLink(snap.sourceUrl, "Price snapshot source")}</div>
+      <div class="tbl-src">${(Array.isArray(snap.sources) && snap.sources.length ? snap.sources.map((s) => srcLink(s.url, s.label || "Source")).join("") : srcLink(snap.sourceUrl, "Price snapshot source"))}</div>
     </section>`;
 
     /* ---- Live ---- */
