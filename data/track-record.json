@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "trackingStart": "2026-10-07",
  "baseDate": "2026-10-06",
- "lastUpdated": "2026-11-14",
+ "lastUpdated": "2026-11-16",
  "method": "Each list is treated as an equal-weight portfolio of its current picks, starting at 100 on the 2026-10-06 close (the prices the Oct 7, 2026 picks were published with). It is buy-and-hold between changes and rebalanced to equal weight at the close whenever a pick is added or removed. Price returns only (dividends excluded), no trading costs or taxes. Benchmarks QQQ and SPY are indexed to 100 on the same date. Hit rate = share of picks whose price return beat QQQ over the same holding period. Closes come from Nasdaq's public historical quotes, added by the daily refresh. Early Inflection was added on Oct 8, 2026: it starts at 100 on the 2026-10-07 close (no backfill), and its QQQ/SPY comparison and hit rate run from that start. Experiment Screener was added on Oct 10, 2026: it starts at 100 on the 2026-10-09 close (no backfill) and holds however many stocks pass all eight rules (up to 12). Piotroski was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Magic Formula was added on Oct 10, 2026, starting at 100 on the 2026-10-09 close (no backfill). Insider Buys was added on Oct 14, 2026, starting at 100 on the 2026-10-13 close (no backfill).",
  "benchmarks": {
   "QQQ": "Invesco QQQ Trust (Nasdaq-100)",
@@ -12314,5 +12314,562 @@
     96.827
    ]
   ]
+ },
+ "shadow": {
+  "lists": {
+   "eiShadowA": {
+    "label": "Shadow A: trend counts half",
+    "rule": "Same as live Early Inflection, except the Trend score counts 0\u20135 instead of 0\u201310 (live trend points are halved).",
+    "shadow": true,
+    "startDate": "2026-11-16",
+    "startPriceDate": "2026-11-13",
+    "holdings": [
+     {
+      "ticker": "SMCI",
+      "company": "Super Micro Computer Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 26.865,
+      "lastPrice": 26.865,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "AEIS",
+      "company": "Advanced Energy Industries Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 219.68,
+      "lastPrice": 219.68,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "ICHR",
+      "company": "Ichor Holdings",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 35.72,
+      "lastPrice": 35.72,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "SIMO",
+      "company": "Silicon Motion Technology Corporation",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 169.45,
+      "lastPrice": 169.45,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "KLIC",
+      "company": "Kulicke and Soffa Industries Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 69.07,
+      "lastPrice": 69.07,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "HLIT",
+      "company": "Harmonic Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 10.34,
+      "lastPrice": 10.34,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "TSEM",
+      "company": "Tower Semiconductor Ltd.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 146.89,
+      "lastPrice": 146.89,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "URGN",
+      "company": "UroGen Pharma Ltd.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 26.18,
+      "lastPrice": 26.18,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "FORM",
+      "company": "FormFactor Inc. FormFactor Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 87.53,
+      "lastPrice": 87.53,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "TTMI",
+      "company": "TTM Technologies Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 74.08,
+      "lastPrice": 74.08,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "VICR",
+      "company": "Vicor Corporation",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 159.05,
+      "lastPrice": 159.05,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "MTSI",
+      "company": "MACOM Technology Solutions Holdings Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 232.06,
+      "lastPrice": 232.06,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     }
+    ],
+    "closed": [],
+    "segments": [
+     {
+      "start": "2026-11-13",
+      "startValue": 100.0,
+      "tickers": [
+       "SMCI",
+       "AEIS",
+       "ICHR",
+       "SIMO",
+       "KLIC",
+       "HLIT",
+       "TSEM",
+       "URGN",
+       "FORM",
+       "TTMI",
+       "VICR",
+       "MTSI"
+      ]
+     }
+    ],
+    "log": [
+     {
+      "date": "2026-11-16",
+      "priceDate": "2026-11-13",
+      "action": "start",
+      "note": "Shadow test began with 12 paper picks at the 2026-11-13 close",
+      "tickers": [
+       "SMCI",
+       "AEIS",
+       "ICHR",
+       "SIMO",
+       "KLIC",
+       "HLIT",
+       "TSEM",
+       "URGN",
+       "FORM",
+       "TTMI",
+       "VICR",
+       "MTSI"
+      ]
+     }
+    ],
+    "series": [
+     [
+      "2026-11-13",
+      100.0
+     ]
+    ],
+    "returnPct": 0.0,
+    "vsQQQPct": 0.0,
+    "vsSPYPct": 0.0,
+    "hitRate": {
+     "beat": 0,
+     "of": 0,
+     "openBeat": 0,
+     "openOf": 0
+    }
+   },
+   "eiShadowB": {
+    "label": "Shadow B: run-up penalty",
+    "rule": "Same as live Early Inflection, except a stock up more than 15% over the prior 3 months loses 5 points, and one up more than 30% loses 10.",
+    "shadow": true,
+    "startDate": "2026-11-16",
+    "startPriceDate": "2026-11-13",
+    "holdings": [
+     {
+      "ticker": "SMCI",
+      "company": "Super Micro Computer Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 26.865,
+      "lastPrice": 26.865,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "SIMO",
+      "company": "Silicon Motion Technology Corporation",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 169.45,
+      "lastPrice": 169.45,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "AEIS",
+      "company": "Advanced Energy Industries Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 219.68,
+      "lastPrice": 219.68,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "ICHR",
+      "company": "Ichor Holdings",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 35.72,
+      "lastPrice": 35.72,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "KLIC",
+      "company": "Kulicke and Soffa Industries Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 69.07,
+      "lastPrice": 69.07,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "HLIT",
+      "company": "Harmonic Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 10.34,
+      "lastPrice": 10.34,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "URGN",
+      "company": "UroGen Pharma Ltd.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 26.18,
+      "lastPrice": 26.18,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "TSEM",
+      "company": "Tower Semiconductor Ltd.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 146.89,
+      "lastPrice": 146.89,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "FORM",
+      "company": "FormFactor Inc. FormFactor Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 87.53,
+      "lastPrice": 87.53,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "TTMI",
+      "company": "TTM Technologies Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 74.08,
+      "lastPrice": 74.08,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "U",
+      "company": "Unity Software Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 52.81,
+      "lastPrice": 52.81,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     },
+     {
+      "ticker": "DHT",
+      "company": "DHT Holdings Inc.",
+      "entryDate": "2026-11-16",
+      "entryPriceDate": "2026-11-13",
+      "entryPrice": 22.25,
+      "lastPrice": 22.25,
+      "lastPriceDate": "2026-11-13",
+      "returnPct": 0.0,
+      "qqqPct": 0.0,
+      "spyPct": 0.0,
+      "beatQQQ": false
+     }
+    ],
+    "closed": [],
+    "segments": [
+     {
+      "start": "2026-11-13",
+      "startValue": 100.0,
+      "tickers": [
+       "SMCI",
+       "SIMO",
+       "AEIS",
+       "ICHR",
+       "KLIC",
+       "HLIT",
+       "URGN",
+       "TSEM",
+       "FORM",
+       "TTMI",
+       "U",
+       "DHT"
+      ]
+     }
+    ],
+    "log": [
+     {
+      "date": "2026-11-16",
+      "priceDate": "2026-11-13",
+      "action": "start",
+      "note": "Shadow test began with 12 paper picks at the 2026-11-13 close",
+      "tickers": [
+       "SMCI",
+       "SIMO",
+       "AEIS",
+       "ICHR",
+       "KLIC",
+       "HLIT",
+       "URGN",
+       "TSEM",
+       "FORM",
+       "TTMI",
+       "U",
+       "DHT"
+      ]
+     }
+    ],
+    "series": [
+     [
+      "2026-11-13",
+      100.0
+     ]
+    ],
+    "returnPct": 0.0,
+    "vsQQQPct": 0.0,
+    "vsSPYPct": 0.0,
+    "hitRate": {
+     "beat": 0,
+     "of": 0,
+     "openBeat": 0,
+     "openOf": 0
+    }
+   }
+  },
+  "startPriceDate": "2026-11-13",
+  "startDate": "2026-11-16",
+  "status": "Shadow test, not a live list",
+  "latestDate": "2026-11-13",
+  "comparison": [
+   {
+    "key": "early",
+    "label": "Early Inflection (live)",
+    "live": true,
+    "returnPct": 0.0,
+    "vsQQQPct": 0.0
+   },
+   {
+    "key": "eiShadowA",
+    "label": "Shadow A: trend counts half",
+    "rule": "Same as live Early Inflection, except the Trend score counts 0\u20135 instead of 0\u201310 (live trend points are halved).",
+    "live": false,
+    "returnPct": 0.0,
+    "picks": [
+     "SMCI",
+     "AEIS",
+     "ICHR",
+     "SIMO",
+     "KLIC",
+     "HLIT",
+     "TSEM",
+     "URGN",
+     "FORM",
+     "TTMI",
+     "VICR",
+     "MTSI"
+    ],
+    "hitRate": {
+     "beat": 0,
+     "of": 0,
+     "openBeat": 0,
+     "openOf": 0
+    },
+    "vsQQQPct": 0.0
+   },
+   {
+    "key": "eiShadowB",
+    "label": "Shadow B: run-up penalty",
+    "rule": "Same as live Early Inflection, except a stock up more than 15% over the prior 3 months loses 5 points, and one up more than 30% loses 10.",
+    "live": false,
+    "returnPct": 0.0,
+    "picks": [
+     "SMCI",
+     "SIMO",
+     "AEIS",
+     "ICHR",
+     "KLIC",
+     "HLIT",
+     "URGN",
+     "TSEM",
+     "FORM",
+     "TTMI",
+     "U",
+     "DHT"
+    ],
+    "hitRate": {
+     "beat": 0,
+     "of": 0,
+     "openBeat": 0,
+     "openOf": 0
+    },
+    "vsQQQPct": 0.0
+   },
+   {
+    "key": "QQQ",
+    "label": "QQQ",
+    "benchmark": true,
+    "returnPct": 0.0
+   },
+   {
+    "key": "SPY",
+    "label": "SPY",
+    "benchmark": true,
+    "returnPct": 0.0
+   }
+  ],
+  "series": {
+   "eiShadowA": [
+    [
+     "2026-11-13",
+     100.0
+    ]
+   ],
+   "eiShadowB": [
+    [
+     "2026-11-13",
+     100.0
+    ]
+   ],
+   "early": [
+    [
+     "2026-11-13",
+     100.0
+    ]
+   ],
+   "QQQ": [
+    [
+     "2026-11-13",
+     100.0
+    ]
+   ]
+  }
  }
 }

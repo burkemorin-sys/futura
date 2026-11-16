@@ -41,6 +41,10 @@ LISTS = {
     "insider": {"file": os.path.join(ROOT, "data", "insider-clusters.json"), "label": "Insider Buys"},
 }
 BENCH = ["QQQ", "SPY"]
+# Paper-only shadow test of Early Inflection rule tweaks (user-approved Nov 16, 2026). Stored under data["shadow"],
+# separate from data["lists"], so it never mixes with the live lists, their charts or their hit rates.
+SHADOW_FILE = os.path.join(ROOT, "data", "early-inflection-shadow.json")
+SHADOW_KEYS = {"A": "eiShadowA", "B": "eiShadowB"}
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 
 
@@ -104,6 +108,20 @@ def load_picks(key):
     return [p for p in d.get("picks") or [] if p.get("ticker")]
 
 
+def load_shadow():
+    """{list_key: (label, rule, picks)} from data/early-inflection-shadow.json (empty if absent)."""
+    if not os.path.exists(SHADOW_FILE):
+        return {}, {}
+    with open(SHADOW_FILE) as f:
+        d = json.load(f)
+    out = {}
+    for v, k in SHADOW_KEYS.items():
+        V = (d.get("variants") or {}).get(v)
+        if V:
+            out[k] = {"label": V.get("label", k), "rule": V.get("rule", ""), "picks": [p for p in V.get("picks") or [] if p.get("ticker")]}
+    return out, d
+
+
 def init():
     picks = {k: load_picks(k) for k in ("growth", "riskit")}
     base = sorted({p.get("priceDate") for k in picks for p in picks[k] if p.get("priceDate")})
@@ -161,7 +179,8 @@ def recompute(data):
     latest = days[-1]
     data["latestDate"] = latest
     data["benchSeries"] = {t: [[d, round(prices[d][t] / prices[base][t] * 100, 3)] for d in days] for t in BENCH}
-    for k, L in data["lists"].items():
+    shadow_lists = (data.get("shadow") or {}).get("lists") or {}
+    for k, L in {**data["lists"], **shadow_lists}.items():
         segs = L["segments"]
         start = segs[0]["start"]
         L.setdefault("startDate", data["trackingStart"])
@@ -201,7 +220,46 @@ def recompute(data):
                     n_open += 1
                     beat_open += r > q
         L["hitRate"] = {"beat": beat, "of": n, "openBeat": beat_open, "openOf": n_open}
+    if shadow_lists:
+        recompute_shadow(data)
     data["lastUpdated"] = dt.date.today().isoformat()
+
+
+def recompute_shadow(data):
+    """Side-by-side numbers for the shadow test: each variant vs live Early Inflection vs QQQ/SPY from the shadow start."""
+    prices, sh = data["prices"], data["shadow"]
+    latest = data["latestDate"]
+    starts = sorted({L["startPriceDate"] for L in sh["lists"].values()})
+    start = starts[0]
+    sh["startPriceDate"] = start
+    sh["startDate"] = min(L["startDate"] for L in sh["lists"].values())
+    sh["status"] = "Shadow test, not a live list"
+    sh["latestDate"] = latest
+    rows = []
+    E = data["lists"].get("early")
+    if E:
+        ser = dict(E["series"])
+        if start in ser:
+            rows.append({"key": "early", "label": "Early Inflection (live)", "live": True,
+                         "returnPct": round((ser[latest] / ser[start] - 1) * 100, 2)})
+    for k, L in sh["lists"].items():
+        ser = dict(L["series"])
+        rows.append({"key": k, "label": L["label"], "rule": L.get("rule", ""), "live": False,
+                     "returnPct": round((ser[latest] / ser[L["startPriceDate"]] - 1) * 100, 2),
+                     "picks": [h["ticker"] for h in L["holdings"]], "hitRate": L["hitRate"]})
+    for b in BENCH:
+        rows.append({"key": b, "label": b, "benchmark": True, "returnPct": round((prices[latest][b] / prices[start][b] - 1) * 100, 2)})
+    q = next(r["returnPct"] for r in rows if r["key"] == "QQQ")
+    for r in rows:
+        if not r.get("benchmark"):
+            r["vsQQQPct"] = round(r["returnPct"] - q, 2)
+    sh["comparison"] = rows
+    sh["series"] = {k: [[d, v] for d, v in L["series"] if d >= start] for k, L in sh["lists"].items()}
+    if E:
+        s0 = dict(E["series"]).get(start)
+        if s0:
+            sh["series"]["early"] = [[d, round(v / s0 * 100, 3)] for d, v in E["series"] if d >= start]
+    sh["series"]["QQQ"] = [[d, round(prices[d]["QQQ"] / prices[start]["QQQ"] * 100, 3)] for d in sorted(prices) if d >= start]
 
 
 def main():
@@ -215,14 +273,22 @@ def main():
     prices = data["prices"]
     last = max(prices)
     current = {k: load_picks(k) for k in LISTS}
+    shadow_cur, shadow_meta = load_shadow()
+    data.setdefault("shadow", {"lists": {}}) if shadow_cur else None
+    shadow_lists = (data.get("shadow") or {}).get("lists") or {}
+    for k, v in shadow_cur.items():
+        current[k] = v["picks"]
 
     # 1) Append new trading days with real closes for every holding + every current pick + benchmarks.
     need = set(BENCH)
-    for k, L in data["lists"].items():
+    all_lists = {**data["lists"], **shadow_lists}
+    for k, L in all_lists.items():
         need |= {h["ticker"] for h in L["holdings"]}
+        need |= {p["ticker"] for p in current.get(k, [])}
+    for k in shadow_cur:
         need |= {p["ticker"] for p in current[k]}
     fetched = {t: holding_closes(t, last) for t in sorted(need)}
-    held = set(BENCH) | {h["ticker"] for L in data["lists"].values() for h in L["holdings"]}
+    held = set(BENCH) | {h["ticker"] for L in all_lists.values() for h in L["holdings"]}
     new_days = sorted({d for t in BENCH for d in fetched[t] if d > last})
     for d in new_days:
         missing = [t for t in held if d not in fetched[t]]
@@ -255,6 +321,40 @@ def main():
                      "tickers": [p["ticker"] for p in ps]}],
         }
         print(f"{k}: started tracking {len(ps)} picks at the {latest} close")
+    # 1c) Shadow lists start at the close their first picks were screened on (the shadow file's priceDate), if that
+    #     close is stored; otherwise at the latest stored close. Real Nasdaq closes only.
+    for k, v in shadow_cur.items():
+        if k in shadow_lists or not v["picks"]:
+            continue
+        sd = shadow_meta.get("priceDate")
+        sd = sd if sd in prices else latest
+        ps = v["picks"]
+        closes = {p["ticker"]: (prices[sd].get(p["ticker"]) or nasdaq_closes(p["ticker"], sd).get(sd)) for p in ps}
+        missing = [t for t, c in closes.items() if c is None]
+        if missing:
+            print(f"{k}: can't start yet, no {sd} close for {missing}")
+            continue
+        for t, c in closes.items():
+            prices[sd][t] = c
+        shadow_lists[k] = {
+            "label": v["label"], "rule": v["rule"], "shadow": True, "startDate": shadow_meta.get("startDate") or today_iso, "startPriceDate": sd,
+            "holdings": [{"ticker": p["ticker"], "company": p.get("company", ""), "entryDate": shadow_meta.get("startDate") or today_iso,
+                          "entryPriceDate": sd, "entryPrice": closes[p["ticker"]]} for p in ps],
+            "closed": [],
+            "segments": [{"start": sd, "startValue": 100.0, "tickers": [p["ticker"] for p in ps]}],
+            "log": [{"date": today_iso, "priceDate": sd, "action": "start",
+                     "note": f"Shadow test began with {len(ps)} paper picks at the {sd} close", "tickers": [p["ticker"] for p in ps]}],
+        }
+        # closes for later stored days (if the start is before the latest stored close)
+        for d in sorted(x for x in prices if x > sd):
+            for p in ps:
+                if p["ticker"] not in prices[d]:
+                    c = fetched.get(p["ticker"], {}).get(d) or nasdaq_closes(p["ticker"], sd).get(d)
+                    if c is not None:
+                        prices[d][p["ticker"]] = c
+        print(f"{k}: shadow started with {len(ps)} picks at the {sd} close")
+    if shadow_lists:
+        data["shadow"]["lists"] = shadow_lists
     # Make sure every current pick has a close on the latest day (it may enter today).
     for t in need:
         if t not in prices[latest] and latest in fetched.get(t, {}):
@@ -262,7 +362,9 @@ def main():
 
     # 2) Pick changes -> close / open at the latest close, then rebalance.
     today = dt.date.today().isoformat()
-    for k, L in data["lists"].items():
+    for k, L in {**data["lists"], **shadow_lists}.items():
+        if k in SHADOW_KEYS.values() and k not in shadow_cur:
+            continue  # shadow file missing: leave the shadow holdings as they are
         cur = {p["ticker"]: p for p in current[k]}
         held_now = {h["ticker"] for h in L["holdings"]}
         removed = [h for h in L["holdings"] if h["ticker"] not in cur]
@@ -314,6 +416,8 @@ def main():
         f.write("\n")
     for k, L in data["lists"].items():
         print(f"{L['label']}: {L['returnPct']:+.2f}% (vs QQQ {L['vsQQQPct']:+.2f} pts) hit {L['hitRate']}")
+    for r in (data.get("shadow") or {}).get("comparison") or []:
+        print(f"  shadow test since {data['shadow']['startPriceDate']}: {r['label']}: {r['returnPct']:+.2f}%")
     print("latest close", data["latestDate"], "QQQ", data["benchSeries"]["QQQ"][-1], "SPY", data["benchSeries"]["SPY"][-1])
 
 

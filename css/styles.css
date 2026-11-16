@@ -1109,3 +1109,10 @@ body[data-route="early"] .bullets.drivers li::marker { color: var(--dawn); }
 .etf-card { cursor: pointer; }
 .tr-sum.is-ins .tr-sum-label { color: #7fe3c4; }
 .l-ins { stroke: #7fe3c4; color: #7fe3c4; }
+
+/* Early Inflection shadow test (paper only) */
+.l-shA { stroke: #f2c94c; color: #f2c94c; stroke-dasharray: 5 3; }
+.l-shB { stroke: #ff8a65; color: #ff8a65; stroke-dasharray: 2 3; }
+.shadow-test .shadow-note { border-style: dashed; }
+.shadow-var + .shadow-var { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border, rgba(255,255,255,.12)); }
+.shadow-var p { margin: 6px 0; font-size: 13px; line-height: 1.45; }

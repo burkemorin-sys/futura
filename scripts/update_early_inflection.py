@@ -27,6 +27,11 @@ Usage:
   python3 scripts/update_early_inflection.py            # full run (about 5-8 minutes)
   python3 scripts/update_early_inflection.py --limit 200   # quick test on the first 200 names
 Then: python3 scripts/futura_grades.py (letter grades) and python3 scripts/update_track_record.py.
+
+Shadow test (user-approved Nov 16, 2026, paper only): every full run also writes data/early-inflection-shadow.json with two
+re-rankings of the same candidates (A: trend counts 0-5; B: 3-month run-up >15% loses 5 pts, >30% loses 10). The live
+picks are not affected; update_track_record.py tracks the shadow lists under "shadow" in data/track-record.json.
+  python3 scripts/update_early_inflection.py --shadow-only [--asof YYYY-MM-DD --stats-cache FILE]   # rebuild only the shadow file
 """
 import concurrent.futures as cf
 import datetime as dt
@@ -42,6 +47,7 @@ OUT = os.path.join(ROOT, "data", "early-inflection.json")
 HIST = os.path.join(ROOT, "data", "early-inflection-history.json")
 GROWTH = os.path.join(ROOT, "data", "growth-picks.json")
 RISKIT = os.path.join(ROOT, "data", "risk-it.json")
+SHADOW_OUT = os.path.join(ROOT, "data", "early-inflection-shadow.json")
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 
 MCAP_MIN, MCAP_MAX = 1e9, 30e9
@@ -289,6 +295,86 @@ def pmap(fn, items, label):
             if i % 100 == 0 or i == n:
                 print(f"  {label}: {i}/{n}", flush=True)
     return out
+
+
+# ---------------- shadow test (paper only; never changes the live picks) ----------------
+# User-approved Nov 16, 2026: a side-by-side test of two rule tweaks suggested by the Nov 16 track-record review
+# (Early Inflection picks with high Trend points or big 3-month run-ups lagged; picks bought after a drop did best).
+# The live list above is untouched. Both variants re-rank the SAME scored, price-checked candidates as the live
+# screen (same universe and exclusions, plus crypto-treasury names), with the same 3-per-industry cap and 12 picks.
+SHADOW_START = "2026-11-16"
+SHADOW_RUNUP_PCT, SHADOW_RUNUP_BIG_PCT = 15, 30
+SHADOW_VARIANTS = {
+    "A": {"label": "Shadow A: trend counts half",
+          "rule": "Same as live Early Inflection, except the Trend score counts 0–5 instead of 0–10 (live trend points are halved)."},
+    "B": {"label": "Shadow B: run-up penalty",
+          "rule": (f"Same as live Early Inflection, except a stock up more than {SHADOW_RUNUP_PCT}% over the prior 3 months loses 5 points, "
+                   f"and one up more than {SHADOW_RUNUP_BIG_PCT}% loses 10.")},
+}
+
+
+def shadow_adjust(variant, c):
+    if variant == "A":
+        return -(c["parts"].get("trend") or 0) / 2
+    r = c.get("ch3m")
+    if r is None:
+        return 0
+    return -10 if r > SHADOW_RUNUP_BIG_PCT else -5 if r > SHADOW_RUNUP_PCT else 0
+
+
+def write_shadow(final, live_chosen, today, price_date, asof_note=None):
+    live_rank = {c["ticker"]: i + 1 for i, c in enumerate(live_chosen)}
+    live_picks = [c["ticker"] for c in live_chosen[:PICKS_N]]
+    pool = [c for c in final if c["ticker"] not in CRYPTO_TREASURY and c["ticker"] not in MINERS]
+    variants = {}
+    for v, meta in SHADOW_VARIANTS.items():
+        ranked = sorted(pool, key=lambda c: (-(c["score"] + shadow_adjust(v, c)), -(c["m"]["yoy0"] or 0)))
+        per_ind, chosen = {}, []
+        for c in ranked:
+            k = c["industryKey"]
+            if per_ind.get(k, 0) >= MAX_PER_INDUSTRY:
+                continue
+            per_ind[k] = per_ind.get(k, 0) + 1
+            chosen.append(c)
+            if len(chosen) >= PICKS_N + 6:
+                break
+
+        def row(c, i):
+            m = c["m"]
+            return {"rank": i + 1, "ticker": c["ticker"], "company": clean_name(c["name"]), "sector": c.get("sectorLabel"),
+                    "price": round(m["price"], 2) if m.get("price") else None, "priceDate": m.get("priceDate"),
+                    "liveScore": c["score"], "shadowScore": round(c["score"] + shadow_adjust(v, c), 1),
+                    "trendPts": c["parts"].get("trend"), "chg3mPct": round(c["ch3m"], 1) if c.get("ch3m") is not None else None,
+                    "liveRank": live_rank.get(c["ticker"]), "inLivePicks": c["ticker"] in live_picks}
+        picks = [row(c, i) for i, c in enumerate(chosen[:PICKS_N])]
+        tick = [p["ticker"] for p in picks]
+        variants[v] = {**meta, "picks": picks, "bench": [row(c, i) for i, c in enumerate(chosen[PICKS_N:], PICKS_N)],
+                       "vsLive": {"added": [t for t in tick if t not in live_picks], "dropped": [t for t in live_picks if t not in tick]}}
+    data = {
+        "schemaVersion": 1,
+        "status": "Shadow test, not a live list",
+        "startDate": SHADOW_START,
+        "lastUpdated": today,
+        "priceDate": price_date,
+        "approved": "Approved by the user on Nov 16, 2026 as a paper-only comparison. Live Early Inflection rules and picks are unchanged.",
+        "purpose": ("Tests whether Early Inflection does better when it stops rewarding stocks that have already run up. The Nov 16 review "
+                    "found that picks with 6+ of 10 trend points at entry beat QQQ 1 time in 12, versus 6 in 12 for the rest. Run for 3–4 "
+                    "weeks at least, ideally about 8, before deciding anything."),
+        "method": ("Built by scripts/update_early_inflection.py from the same scored, price-checked candidates as the live screen (same "
+                   "universe, filters and exclusions, including bitcoin miners and crypto-treasury companies), with the same 3-per-industry "
+                   f"cap and {PICKS_N} picks. Only the scoring tweak differs. 3-month change = price change over the prior 91 days (Nasdaq closes)."),
+        "livePicks": live_picks,
+        "variants": variants,
+    }
+    if asof_note:
+        data["note"] = asof_note
+    with open(SHADOW_OUT, "w") as f:
+        json.dump(data, f, indent=1, ensure_ascii=False)
+        f.write("\n")
+    print("shadow: wrote", SHADOW_OUT)
+    print("  live", live_picks)
+    for v, d in variants.items():
+        print(f"  {v}", [p["ticker"] for p in d["picks"]], "added", d["vsLive"]["added"], "dropped", d["vsLive"]["dropped"])
 
 
 # ---------------- scoring ----------------
@@ -664,6 +750,11 @@ def main():
     if "--limit" in sys.argv:
         limit = int(sys.argv[sys.argv.index("--limit") + 1])
     today = dt.date.today().isoformat()
+    shadow_only = "--shadow-only" in sys.argv  # rebuild only data/early-inflection-shadow.json (live files untouched)
+    asof = sys.argv[sys.argv.index("--asof") + 1] if "--asof" in sys.argv else None  # with --shadow-only: cut prices at this close
+    stats_cache = sys.argv[sys.argv.index("--stats-cache") + 1] if "--stats-cache" in sys.argv else None
+    if (asof or stats_cache) and not shadow_only:
+        sys.exit("--asof/--stats-cache are only allowed with --shadow-only")
     prev = {}
     if os.path.exists(OUT):
         try:
@@ -695,7 +786,9 @@ def main():
     ind = sa_industries()
 
     print("2/6 StockAnalysis statistics…")
-    stats = pmap(sa_stats, [u["ticker"] for u in uni], "stats")
+    cached = json.load(open(stats_cache)) if stats_cache else {}
+    stats = {u["ticker"]: cached[u["ticker"]] for u in uni if isinstance(cached.get(u["ticker"]), dict)}
+    stats.update(pmap(sa_stats, [u["ticker"] for u in uni if u["ticker"] not in stats], "stats"))
     cands = []
     for u in uni:
         s = stats.get(u["ticker"])
@@ -747,9 +840,13 @@ def main():
 
     print("4/6 Nasdaq price history for the top candidates…")
     spy = nasdaq_history("SPY")
+    if asof:
+        spy = [x for x in spy if x[0].isoformat() <= asof]
     spy1y, spy3m = chg_days(spy, 365), chg_days(spy, 91)
     top = scored[:PRE_N]
     hists = pmap(nasdaq_history, [c["ticker"] for c in top], "history")
+    if asof:
+        hists = {t: ([x for x in h if x[0].isoformat() <= asof] if isinstance(h, list) else h) for t, h in hists.items()}
     acqs = pmap(sa_acq_jump, [c["ticker"] for c in top], "balance sheets")
     flagged_deals = []
     final = []
@@ -763,6 +860,7 @@ def main():
         m["offHigh"] = (h[-1][1] / max(yr) - 1) * 100
         m["ch1yNasdaq"] = chg_days(h, 365)
         c3 = chg_days(h, 91)
+        c["ch3m"] = c3  # shadow test only (kept outside m so the live output is unchanged)
         m["rs3m"] = (c3 - spy3m) if c3 is not None and spy3m is not None else None
         # pending-deal heuristic: price pinned (annualized vol < 12% over 60 sessions and < 6% move in 3 months)
         rets = [h[i][1] / h[i - 1][1] - 1 for i in range(len(h) - 60, len(h))]
@@ -777,6 +875,28 @@ def main():
         c["score"], c["parts"], c["drivers"], c["penalty"] = score(c)
         final.append(c)
     final.sort(key=lambda c: (-c["score"], -(c["m"]["yoy0"] or 0)))
+
+    def live_rank(cs):
+        per, out = {}, []
+        for c in cs:
+            if per.get(c["industryKey"], 0) >= MAX_PER_INDUSTRY:
+                continue
+            per[c["industryKey"]] = per.get(c["industryKey"], 0) + 1
+            out.append(c)
+            if len(out) >= PICKS_N + BENCH_N:
+                break
+        return out
+    if shadow_only:
+        ch = live_rank(final)
+        pdate = max((c["m"].get("priceDate") for c in ch[:PICKS_N] if c["m"].get("priceDate")), default=None)
+        note = None
+        if asof:
+            note = (f"First shadow lists rebuilt on {today} from the {asof} closes (the same prices the {prev.get('lastUpdated')} live screen used)"
+                    + (", with the saved statistics pages from that run" if stats_cache else "")
+                    + f". Rebuilt live top {PICKS_N}: {', '.join(c['ticker'] for c in ch[:PICKS_N])}; published live picks: "
+                    + ", ".join(p['ticker'] for p in prev.get('picks') or []) + ".")
+        write_shadow(final, ch, today, pdate, note)
+        return
 
     # history / revisions
     hist = {"schemaVersion": 1, "fields": ["priceTarget", "psForward", "forwardPE"], "days": {}}
@@ -861,6 +981,7 @@ def main():
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
     print("6/6 wrote", OUT)
+    write_shadow(final, chosen, today, price_date)
     for i, e in enumerate(picks + bench, 1):
         print(f"{i:2d} {'PICK ' if i <= PICKS_N else 'bench'} {e['ticker']:6s} {e['score']:3d}  {e['sector']}  {e['alsoIn']}")
 

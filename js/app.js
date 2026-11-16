@@ -1079,6 +1079,41 @@
       : g.action === "remove" ? `<b class="down">Removed</b> ${esc(g.ticker)} at ${esc(money(g.price))} (${esc(fmtShortDate(g.priceDate))} close)`
       : esc(g.note || g.action)}</span></li>`).join("");
 
+    // Paper-only shadow test of Early Inflection rule tweaks (user-approved Nov 16, 2026); never a live list.
+    const shadowHTML = (() => {
+      const sh = d.shadow;
+      if (!sh || !sh.lists || !Object.keys(sh.lists).length || !sh.comparison) return "";
+      const liveE = d.lists.early ? (d.lists.early.holdings || []).map((h) => h.ticker) : [];
+      const shDays = Math.max(0, ((sh.series && sh.series.QQQ) || []).length - 1);
+      const cmpRows = sh.comparison.map((r) => `<tr>
+          <th scope="row">${esc(r.label)}${r.live ? `<span class="row-note">live list</span>` : r.benchmark ? `<span class="row-note">benchmark</span>` : `<span class="row-note">shadow, paper only</span>`}</th>
+          <td data-label="Return" class="${retTone(r.returnPct)}">${esc(fmtRet(r.returnPct))}</td>
+          <td data-label="vs QQQ" class="${retTone(r.vsQQQPct)}">${r.benchmark ? "–" : esc(fmtRet(r.vsQQQPct).replace("%", " pts"))}</td>
+        </tr>`).join("");
+      const variants = Object.entries(sh.lists).map(([k, S]) => {
+        const tk = (S.holdings || []).map((h) => h.ticker);
+        const added = tk.filter((t) => !liveE.includes(t)), dropped = liveE.filter((t) => !tk.includes(t));
+        return `<div class="shadow-var"><h4 class="mini">${esc(S.label)}</h4>
+          <p><b>Rule difference:</b> ${esc(S.rule || "")}</p>
+          <p><b>Paper picks (${tk.length}):</b> ${tk.map((t) => `<a href="#/search?t=${esc(t)}" class="tr-tick">${esc(t)}</a>`).join(", ")}</p>
+          <p class="fineprint">${added.length || dropped.length ? `vs live Early Inflection: <b class="up">+${esc(added.join(", +") || "none")}</b> · <b class="down">−${esc(dropped.join(", −") || "none")}</b>` : "Same 12 stocks as live Early Inflection right now. It will differ only when a candidate has run up more than the threshold."}</p></div>`;
+      }).join("");
+      const lab = { early: ["Early Inflection (live)", "l-early"], eiShadowA: ["Shadow A", "l-shA"], eiShadowB: ["Shadow B", "l-shB"], QQQ: ["QQQ", "l-qqq"] };
+      const shLines = Object.entries(sh.series || {}).filter(([k]) => lab[k]).map(([k, pts]) => ({ label: lab[k][0], cls: lab[k][1], points: pts }));
+      const shDates = ((sh.series && sh.series.QQQ) || []).map((p) => p[0]);
+      return `<section class="group shadow-test" aria-labelledby="h-trshadow">
+        ${sectionHead("trshadow", "Early Inflection shadow test", `<span class="range">Shadow test, not a live list</span>`)}
+        <div class="example-banner shadow-note" role="note">${svg("warn")}<span><strong>SHADOW TEST, NOT A LIVE LIST</strong>: paper picks only, started ${esc(fmtShortDate(sh.startDate))} and measured from the ${esc(fmtShortDate(sh.startPriceDate))} close (the same prices the live list last rebalanced at). The live Early Inflection rules and picks are unchanged. ${shDays} trading day${shDays === 1 ? "" : "s"} so far: run it 3–4 weeks at least, ideally about 8, before deciding anything.</span></div>
+        <div class="panel pad"><div class="table-wrap"><table class="fin tr-table">
+          <thead><tr><th scope="col">Since ${esc(fmtShortDate(sh.startPriceDate).replace(/, \d{4}$/, ""))} close</th><th scope="col">Return</th><th scope="col">vs QQQ</th></tr></thead>
+          <tbody>${cmpRows}</tbody></table></div>
+          ${shDates.length > 1 ? `<div class="tc-legend">${shLines.map((l) => { const last = l.points.length ? l.points[l.points.length - 1][1] - 100 : null; return `<span class="tc-key ${l.cls}"><i></i>${esc(l.label)} <b class="${retTone(last)}">${esc(fmtRet(last))}</b></span>`; }).join("")}</div>${trackChartSVG(shLines, shDates)}` : ""}
+          <p class="fineprint">Why: the Nov 16 review found Early Inflection picks with high trend scores or big 3-month run-ups did worst, and picks bought after a 3-month drop did best. Both shadow lists are built each Saturday by the same screen, from the same candidates and exclusions (no bitcoin miners or crypto-treasury companies), with the same 3-per-industry cap. Equal weight, rebalanced when picks change, price returns only.</p>
+        </div>
+        <div class="panel pad" style="margin-top:12px">${variants}</div>
+      </section>`;
+    })();
+
     el.innerHTML = `
       ${hero("Track record", "Picks vs QQQ", `<span>${svg("clock")}Tracking since ${esc(fmtShortDate(d.trackingStart))}</span><span>${svg("chart")}Last close ${esc(fmtShortDate(d.latestDate))}</span>`)}
       <div class="example-banner early-note" role="note">${svg("warn")}<span><strong>EARLY DAYS</strong>: tracking started Oct 7, 2026, from the ${esc(fmtShortDate(d.baseDate))} close${d.lists.early && d.lists.early.startPriceDate ? ` (Early Inflection joined from the ${esc(fmtShortDate(d.lists.early.startPriceDate))} close, indexed to 100 on its own start)` : ""}${d.lists.experiment && d.lists.experiment.startPriceDate ? ` Experiment Screener joined from the ${esc(fmtShortDate(d.lists.experiment.startPriceDate))} close.` : ""}. With ${days} trading day${days === 1 ? "" : "s"} of data these numbers are mostly noise. Give it several months before reading anything into them.</span></div>
@@ -1089,6 +1124,7 @@
         ${trackChartSVG(lines, dates)}
         <p class="fineprint top">Daily closes only. The chart gets a new point each morning after the refresh.</p>
       </section>
+      ${shadowHTML}
       <section class="group" aria-labelledby="h-trpicks">
         ${sectionHead("trpicks", `${L.label} picks`, `<span class="range">${(L.holdings || []).length} held</span>`)}
         <div class="panel pad"><div class="table-wrap"><table class="fin tr-table">
