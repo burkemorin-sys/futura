@@ -1116,3 +1116,23 @@ body[data-route="early"] .bullets.drivers li::marker { color: var(--dawn); }
 .shadow-test .shadow-note { border-style: dashed; }
 .shadow-var + .shadow-var { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border, rgba(255,255,255,.12)); }
 .shadow-var p { margin: 6px 0; font-size: 13px; line-height: 1.45; }
+
+/* ---------- Commodities tab ---------- */
+.cmdty-grid { display: grid; gap: 12px; }
+@media (min-width: 700px) { .cmdty-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }
+.cmdty-card { padding: 12px 12px 10px; min-width: 0; }
+.cmdty-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.cmdty-head h3 { margin: 0 0 6px; font-size: 16px; font-weight: 600; line-height: 1.25; }
+.cmdty-head .src { flex: none; font-size: 11px; }
+.cmdty-card .tag:not(.warn) { text-transform: none; letter-spacing: .03em; font-weight: 600; }
+.cmdty-note { margin: 0 0 8px; font-size: 12px; color: var(--muted); line-height: 1.45; }
+.cmdty-mini { min-height: 220px; margin-bottom: 0; }
+.cmdty-expand { margin-top: 8px; }
+.cmdty-expand summary {
+  cursor: pointer; color: var(--gold-light); font-size: 12.5px;
+  text-decoration: underline; text-underline-offset: 3px; list-style: none;
+}
+.cmdty-expand summary::-webkit-details-marker { display: none; }
+.cmdty-expand[open] summary { margin-bottom: 8px; }
+.cmdty-omit { margin-top: 26px; }
+.cmdty-omit p { margin: 0; font-size: 13.5px; color: var(--muted); }

@@ -38,6 +38,7 @@
     sunrise: '<path d="M3 18.5h18"/><path d="M7 18.5a5 5 0 0 1 10 0"/><path d="M12 5v3.5M5.6 9.6l1.9 1.9M18.4 9.6l-1.9 1.9M3 14.5h2M19 14.5h2"/>',
     check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
     minus: '<path d="M7 12h10"/>',
+    ingot: '<path d="M4 9l8-3.5L20 9l-8 3.5z"/><path d="M4 9v6.5L12 19l8-3.5V9"/><path d="M12 12.5V19"/>',
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
 
@@ -409,6 +410,7 @@
     { id: "insider", label: "Insider Buys", short: "Insiders", icon: "growth", render: renderInsider, overflow: true },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex"), overflow: true },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla"), overflow: true },
+    { id: "commodities", label: "Commodities", short: "Cmds", icon: "ingot", render: renderCommodities, overflow: true },
     { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch },
     { id: "track", label: "Track Record", short: "Record", icon: "chart", render: renderTrack, overflow: true },
     { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia, overflow: true },
@@ -1436,31 +1438,37 @@
     </section>`;
   }
 
-  /* TradingView embeds: free, client-side, no key. Scripts must be created via DOM to execute. */
+  /* TradingView embeds: free, client-side, no key. Scripts must be created via DOM to execute.
+   * Each .tv[data-kind] may set data-symbol to override the default symbol (used by the Commodities grid). */
   function mountTradingView(root, symbol) {
-    if (!symbol) return;
+    const boxes = [...root.querySelectorAll(".tv[data-kind]")].filter((b) => b.dataset.symbol || symbol);
+    if (!boxes.length) return;
     const base = { colorTheme: "dark", isTransparent: true, locale: "en" };
-    const configs = {
-      "symbol-info": { ...base, symbol, width: "100%" },
-      "advanced-chart": { ...base, theme: "dark", symbol, width: "100%", height: 440, interval: "D", timezone: "America/New_York", style: "1", hide_side_toolbar: true, allow_symbol_change: false, withdateranges: true, save_image: false, backgroundColor: "rgba(10, 10, 12, 1)", gridColor: "rgba(212,175,55,0.06)", support_host: "https://www.tradingview.com" },
-      timeline: { ...base, feedMode: "symbol", symbol, displayMode: "compact", width: "100%", height: 420 },
-    };
+    const configFor = (kind, sym) => ({
+      "symbol-info": { ...base, symbol: sym, width: "100%" },
+      "advanced-chart": { ...base, theme: "dark", symbol: sym, width: "100%", height: 440, interval: "D", timezone: "America/New_York", style: "1", hide_side_toolbar: true, allow_symbol_change: false, withdateranges: true, save_image: false, backgroundColor: "rgba(10, 10, 12, 1)", gridColor: "rgba(212,175,55,0.06)", support_host: "https://www.tradingview.com" },
+      timeline: { ...base, feedMode: "symbol", symbol: sym, displayMode: "compact", width: "100%", height: 420 },
+      "mini-symbol-overview": { ...base, symbol: sym, width: "100%", height: 200, dateRange: "1D", autosize: false, largeChartUrl: "", chartOnly: false },
+    }[kind]);
+    const kindLabel = (kind) => kind === "timeline" ? "news feed" : kind === "advanced-chart" ? "chart" : kind === "mini-symbol-overview" ? "quote and chart" : "quote";
     const load = (box) => {
       if (box.dataset.loaded) return;
-      box.dataset.loaded = "1";
       const kind = box.dataset.kind;
+      const sym = box.dataset.symbol || symbol;
+      const cfg = configFor(kind, sym);
+      if (!sym || !cfg) return;
+      box.dataset.loaded = "1";
       box.className = "tv tradingview-widget-container";
-      box.innerHTML = `<div class="tradingview-widget-container__widget"></div><div class="tv-fallback">Loading TradingView ${kind === "timeline" ? "news feed" : kind === "advanced-chart" ? "chart" : "quote"}…</div>`;
+      box.innerHTML = `<div class="tradingview-widget-container__widget"></div><div class="tv-fallback">Loading TradingView ${kindLabel(kind)}…</div>`;
       const sc = document.createElement("script");
       sc.src = `https://s3.tradingview.com/external-embedding/embed-widget-${kind}.js`;
       sc.async = true;
-      sc.text = JSON.stringify(configs[kind]);
+      sc.text = JSON.stringify(cfg);
       sc.onerror = () => { box.querySelector(".tv-fallback").textContent = "TradingView widget couldn't load (offline or blocked). Showing snapshot data only."; };
       box.appendChild(sc);
       const fb = box.querySelector(".tv-fallback");
       new MutationObserver((_, obs) => { if (box.querySelector("iframe")) { fb.remove(); obs.disconnect(); } }).observe(box, { childList: true, subtree: true });
     };
-    const boxes = root.querySelectorAll(".tv[data-kind]");
     if (!navigator.onLine) {
       boxes.forEach((b) => (b.innerHTML = `<div class="tv-fallback">Offline: live widgets unavailable. Showing snapshot data.</div>`));
       return;
@@ -2134,11 +2142,93 @@
     if (input) input.focus();
   }
 
+  /* ================= Commodities ================= */
+  /* Add a market with one object: id, name, symbol, unit, group ("energy"|"metals"|"agriculture").
+   * Optional tag + note label a proxy (ETF/trust) that is not the spot price.
+   * Use symbols that render in TradingView's free embeds (TVC / OANDA / CAPITALCOM CFDs,
+   * or US-listed funds). Exchange futures such as NYMEX:CL1!, COMEX:UX1! and COMEX:LTH1!
+   * return "Permission denied" in those widgets. */
+  const COMMODITY_GROUPS = [
+    { id: "energy", label: "Energy" },
+    { id: "metals", label: "Metals" },
+    { id: "agriculture", label: "Agriculture" },
+  ];
+  const COMMODITIES = [
+    { id: "wti", name: "WTI Crude Oil", symbol: "TVC:USOIL", unit: "$/bbl", group: "energy" },
+    { id: "brent", name: "Brent Crude", symbol: "TVC:UKOIL", unit: "$/bbl", group: "energy" },
+    { id: "natgas", name: "Natural Gas (Henry Hub)", symbol: "OANDA:NATGASUSD", unit: "$/MMBtu", group: "energy", note: "OANDA CFD reference quote of Henry Hub, not the NYMEX futures contract." },
+    { id: "uranium", name: "Uranium", symbol: "OTC:SRUUF", unit: "USD/share", group: "energy", tag: "Trust proxy", note: "Sprott Physical Uranium Trust (SRUUF) — a trust that holds physical U3O8, not the spot price." },
+    { id: "gold", name: "Gold", symbol: "TVC:GOLD", unit: "$/oz", group: "metals" },
+    { id: "silver", name: "Silver", symbol: "TVC:SILVER", unit: "$/oz", group: "metals" },
+    { id: "copper", name: "Copper", symbol: "OANDA:XCUUSD", unit: "$/lb", group: "metals" },
+    { id: "platinum", name: "Platinum", symbol: "TVC:PLATINUM", unit: "$/oz", group: "metals" },
+    { id: "palladium", name: "Palladium", symbol: "TVC:PALLADIUM", unit: "$/oz", group: "metals" },
+    { id: "lithium", name: "Lithium", symbol: "AMEX:LIT", unit: "USD/share", group: "metals", tag: "ETF proxy", note: "Global X Lithium & Battery Tech ETF (LIT) — an equity proxy, not the lithium spot price." },
+    { id: "wheat", name: "Wheat", symbol: "OANDA:WHEATUSD", unit: "$/bu", group: "agriculture" },
+    { id: "corn", name: "Corn", symbol: "OANDA:CORNUSD", unit: "$/bu", group: "agriculture" },
+  ];
+
+  function cmdtyCard(c) {
+    const tvPath = String(c.symbol || "").replace(":", "-");
+    const tvUrl = `https://www.tradingview.com/symbols/${esc(tvPath)}/`;
+    return `<article class="panel cmdty-card">
+      <header class="cmdty-head">
+        <div>
+          <h3>${esc(c.name)}</h3>
+          <div class="tags">
+            <span class="tag">${esc(c.unit)}</span>
+            ${c.tag ? `<span class="tag warn">${esc(c.tag)}</span>` : ""}
+          </div>
+        </div>
+        <a class="src" href="${tvUrl}" target="_blank" rel="noopener noreferrer">${esc(c.symbol)} ${svg("ext")}</a>
+      </header>
+      ${c.note ? `<p class="cmdty-note">${esc(c.note)}</p>` : ""}
+      <div class="panel tv-panel cmdty-mini"><div class="tv" data-kind="mini-symbol-overview" data-symbol="${esc(c.symbol)}"></div></div>
+      <details class="cmdty-expand" data-cmdty-expand data-symbol="${esc(c.symbol)}">
+        <summary>Larger chart</summary>
+        <div data-cmdty-chart></div>
+      </details>
+    </article>`;
+  }
+
+  function renderCommodities(el) {
+    const sections = COMMODITY_GROUPS.map((g) => {
+      const items = COMMODITIES.filter((c) => c.group === g.id);
+      if (!items.length) return "";
+      return `<section class="group" id="g-cmdty-${esc(g.id)}" aria-labelledby="h-cmdty-${esc(g.id)}">
+        ${sectionHead("cmdty-" + g.id, g.label, `<span class="range">${items.length}</span>`)}
+        <div class="cmdty-grid">${items.map(cmdtyCard).join("")}</div>
+      </section>`;
+    }).join("");
+    el.innerHTML = `
+      ${hero("Commodities", "Live prices", `<span>${svg("pulse")}TradingView · quotes may be delayed</span><span>${svg("ingot")}${COMMODITIES.length} markets</span>`)}
+      <p class="fineprint top">Each card is a TradingView widget loaded in your browser. Quotes may be delayed per exchange rules. Energy, metal and crop prices are CFD or reference quotes (not a specific futures contract month). Units are labeled on each card. Uranium and lithium use fund proxies because the futures symbols are blocked in the free widgets — those cards are tagged and are not the spot price.</p>
+      ${sections}
+      <div class="panel pad cmdty-omit" role="note">
+        <h3 class="mini">Not shown</h3>
+        <p>Polysilicon isn't on this tab. TradingView's free widgets don't carry Guangzhou Futures Exchange (GFEX) polysilicon futures, and there isn't a reliable commodity proxy (a solar-stock or solar-ETF price would be the company, not the commodity).</p>
+      </div>
+      ${footer("For information only — not investment advice. Live widgets come from TradingView and may be delayed.")}`;
+    mountTradingView(el);
+    el.querySelectorAll("[data-cmdty-expand]").forEach((d) => {
+      d.addEventListener("toggle", () => {
+        if (!d.open || d.dataset.mounted) return;
+        d.dataset.mounted = "1";
+        const sym = d.dataset.symbol;
+        const slot = d.querySelector("[data-cmdty-chart]");
+        if (!slot || !sym) return;
+        slot.innerHTML = `<div class="panel tv-panel tv-chart"><div class="tv" data-kind="advanced-chart" data-symbol="${esc(sym)}"></div></div>`;
+        mountTradingView(slot, sym);
+      });
+    });
+  }
+
   /* ================= Home ================= */
   // Fallback one-liners for the More overflow cards (Home no longer shows section tiles).
   const HOME_TILES = [
     { id: "spacex", title: "SpaceX", icon: "orbit", fallback: "SpaceX deep dive — catalysts, holders and valuation" },
     { id: "tesla", title: "Tesla", icon: "bolt", fallback: "Tesla deep dive — catalysts, holders and valuation" },
+    { id: "commodities", title: "Commodities", icon: "ingot", fallback: "Live prices for oil, metals and crops — plus uranium and lithium proxies" },
     { id: "search", title: "Search", icon: "search", fallback: "Look up any US ticker — live quote plus deep dive when on file" },
     { id: "early", title: "Early Inflection", icon: "sunrise", fallback: "LITE-2025-style setups: revenue turning up, stock not yet run" },
     { id: "experiment", title: "Experiment Screener", icon: "flask", fallback: "Your 8-rule screen: high ROIC, cash-rich, EPS + revenue growth, Stage 2 uptrend, RSI 50–65" },

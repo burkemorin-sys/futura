@@ -221,6 +221,11 @@ Any source that fails gets `"status": "unavailable"` with an error message. Valu
 ## Live data
 The SpaceX and Tesla tabs embed free TradingView widgets (symbol quote, advanced chart, headline timeline). They load client-side, need no API key, and may be delayed per exchange rules. When the widgets are offline or blocked, the page falls back to the JSON snapshot.
 
+## Commodities (`#/commodities`)
+Under More. A live (or delayed) price tracker for energy, metals and agriculture. Each card is a TradingView mini quote-and-chart widget; tap **Larger chart** to open the advanced chart. Quotes may be delayed. The list is a config array in `js/app.js` (`COMMODITIES`): add a market with one object (`id`, `name`, `symbol`, `unit`, `group`).
+
+Symbols are ones that actually render in TradingView's free embeds (TVC / OANDA CFD reference quotes). Exchange futures such as `NYMEX:CL1!` and `COMEX:UX1!` are blocked in those widgets. Uranium uses the Sprott Physical Uranium Trust (`OTC:SRUUF`) and lithium uses the Global X Lithium & Battery Tech ETF (`AMEX:LIT`); both are labeled as fund proxies, not the spot price. Polysilicon is omitted because no free widget or reliable commodity proxy is available.
+
 ## Automated refresh (optional)
 `scripts/refresh-data.workflow.yml` is a ready-made GitHub Actions workflow that runs `refresh_sentiment.py` every few hours and commits `data/sentiment.json`. It isn't installed yet because pushing files under `.github/workflows/` requires a token with the `workflow` scope. To enable it, run `mkdir -p .github/workflows && git mv scripts/refresh-data.workflow.yml .github/workflows/refresh-data.yml`, then push with a token that has `workflow` scope (`gh auth refresh -s workflow`), or add the file in the GitHub web UI. Fundamentals and news in `spacex.json` and `tesla.json` are curated by hand and are not scraped.
 
