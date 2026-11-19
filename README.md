@@ -76,7 +76,7 @@ alone. The Search view shows these in a **Grades** section above Fundamentals. O
 
 ## Home
 
-`#/home` is the default route, so a bare URL and the installed PWA (`start_url: "./"`) both open here. It shows the Cassiopeia hero, the FUTURA wordmark and the motto "looking higher", then the Search form (same as `#/search`) and two Index ETF cards (VOO and QQQ) from `data/etfs.json`. Section tiles were removed from Home; the bottom tab bar / desktop sidebar still reach every section. On mobile the tab bar shows Home, IPOs, Growth, SpaceX, Tesla and More. Search and Cassiopeia live under More (`overflow: true`).
+`#/home` is the default route, so a bare URL and the installed PWA (`start_url: "./"`) both open here. It shows the Cassiopeia hero, the FUTURA wordmark and the motto "looking higher", then two Index ETF cards (VOO and QQQ) from `data/etfs.json`. Section tiles were removed from Home; the bottom tab bar / desktop sidebar still reach every section. On mobile the tab bar shows Home, IPOs, Screeners, Commodities, Search and More. SpaceX, Tesla, Track Record and Cassiopeia live under More (`overflow: true`).
 
 ## data/ipos.json schema
 
@@ -221,8 +221,11 @@ Any source that fails gets `"status": "unavailable"` with an error message. Valu
 ## Live data
 The SpaceX and Tesla tabs embed free TradingView widgets (symbol quote, advanced chart, headline timeline). They load client-side, need no API key, and may be delayed per exchange rules. When the widgets are offline or blocked, the page falls back to the JSON snapshot.
 
+## Screeners (`#/screeners`)
+A top-level tab with every stock screener as a sub-tab: Growth, Risk It, Early Inflection, Experiment Screener, Piotroski F-Score, Magic Formula and Insider Buys. The last selected sub-screener is remembered in `localStorage`. Legacy URLs such as `#/growth`, `#/riskit` and `#/early` redirect to `#/screeners?s=<id>`. Each screener's cards, rules and data files are unchanged.
+
 ## Commodities (`#/commodities`)
-Under More. A live (or delayed) price tracker for energy, metals and agriculture. Each card is a TradingView mini quote-and-chart widget; tap **Larger chart** to open the advanced chart. Quotes may be delayed. The list is a config array in `js/app.js` (`COMMODITIES`): add a market with one object (`id`, `name`, `symbol`, `unit`, `group`).
+On the bottom tab bar. A live (or delayed) price tracker for energy, metals and agriculture. Each card is a TradingView mini quote-and-chart widget; tap **Larger chart** to open the advanced chart. Quotes may be delayed. The list is a config array in `js/app.js` (`COMMODITIES`): add a market with one object (`id`, `name`, `symbol`, `unit`, `group`).
 
 Symbols are ones that actually render in TradingView's free embeds (TVC / OANDA CFD reference quotes). Exchange futures such as `NYMEX:CL1!` and `COMEX:UX1!` are blocked in those widgets. Uranium uses the Sprott Physical Uranium Trust (`OTC:SRUUF`) and lithium uses the Global X Lithium & Battery Tech ETF (`AMEX:LIT`); both are labeled as fund proxies, not the spot price. Polysilicon is omitted because no free widget or reliable commodity proxy is available.
 

@@ -924,7 +924,7 @@ body::before { /* solid strip behind the translucent status bar so content never
 
 /* Risk It — ember accent */
 :root { --ember: #e8743b; --ember-soft: rgba(232, 116, 59, .12); --ember-border: rgba(232, 116, 59, .45); }
-body[data-route="riskit"] .hero h1 { background: linear-gradient(90deg, #f3c969, #e8743b); -webkit-background-clip: text; background-clip: text; color: transparent; }
+body[data-route="riskit"] .hero h1, body[data-screener="riskit"] .hero h1 { background: linear-gradient(90deg, #f3c969, #e8743b); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .tag.risk-lvl { color: #f2b06b; border-color: var(--ember-border); background: var(--ember-soft); }
 .tag.risk-lvl.very { color: #ff8a6a; border-color: rgba(255, 110, 80, .55); background: rgba(255, 90, 60, .12); }
 .score-badge { margin-top: 6px; display: inline-block; font-family: var(--mono); font-weight: 700; font-size: 15px; color: #1a0d06; background: linear-gradient(135deg, #f3c969, #e8743b); border-radius: 8px; padding: 2px 8px; }
@@ -1025,12 +1025,12 @@ body[data-route="riskit"] .hero h1 { background: linear-gradient(90deg, #f3c969,
 
 /* ---------- Early Inflection (dawn accent) ---------- */
 :root { --dawn: #7fd4b6; --dawn-soft: rgba(127, 212, 182, .10); --dawn-border: rgba(127, 212, 182, .42); }
-body[data-route="early"] .hero h1 { background: linear-gradient(90deg, #f3c969, #7fd4b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+body[data-route="early"] .hero h1, body[data-screener="early"] .hero h1 { background: linear-gradient(90deg, #f3c969, #7fd4b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .early-banner { border-color: var(--dawn-border) !important; background: var(--dawn-soft) !important; color: var(--dawn) !important; }
 .early-banner svg { stroke: var(--dawn) !important; }
 .score-badge.is-early { background: linear-gradient(135deg, #f3c969, #7fd4b6); color: #06140f; }
 .tag.also { color: var(--gold-light); border-color: var(--border-gold); background: rgba(212, 175, 55, .08); }
-body[data-route="early"] .bullets.drivers li::marker { color: var(--dawn); }
+body[data-route="early"] .bullets.drivers li::marker, body[data-screener="early"] .bullets.drivers li::marker { color: var(--dawn); }
 .ei-pattern p { font-size: 13.5px; line-height: 1.55; }
 .ei-rubric { margin-top: 10px; }
 .ei-rubric summary, .ei-drivers summary { cursor: pointer; color: var(--gold-light); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; list-style: none; }
@@ -1136,3 +1136,20 @@ body[data-route="early"] .bullets.drivers li::marker { color: var(--dawn); }
 .cmdty-expand[open] summary { margin-bottom: 8px; }
 .cmdty-omit { margin-top: 26px; }
 .cmdty-omit p { margin: 0; font-size: 13.5px; color: var(--muted); }
+
+
+/* ---------- Screener sub-tabs ---------- */
+.screener-tabs {
+  position: sticky; top: 0; z-index: 11;
+  margin: 0 -16px 8px; padding: 6px 16px 12px;
+  background: linear-gradient(180deg, rgba(6, 6, 8, .96) 72%, rgba(6, 6, 8, 0));
+  display: flex; gap: 8px; align-items: center; overflow-x: auto; scrollbar-width: none;
+}
+.screener-tabs::-webkit-scrollbar { display: none; }
+.screener-tab[aria-selected="true"], .screener-tab[aria-current="page"] {
+  background: var(--gold-soft); color: var(--gold-light); border-color: rgba(212, 175, 55, .5);
+}
+body[data-route="screeners"] .toolbar { position: relative; top: auto; }
+@media (min-width: 900px) {
+  .screener-tabs { margin: 0 -44px 10px; padding: 4px 44px 12px; flex-wrap: wrap; overflow: visible; }
+}

@@ -39,6 +39,7 @@
     check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
     minus: '<path d="M7 12h10"/>',
     ingot: '<path d="M4 9l8-3.5L20 9l-8 3.5z"/><path d="M4 9v6.5L12 19l8-3.5V9"/><path d="M12 12.5V19"/>',
+    funnel: '<path d="M4 5h16l-6.5 8.5V20l-3 1.2V13.5z"/>',
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
 
@@ -401,21 +402,16 @@
   const SECTIONS = [
     { id: "home", label: "Home", short: "Home", icon: "home", render: renderHome },
     { id: "ipos", label: "IPO Tracker", short: "IPOs", icon: "rocket", render: renderIpoTracker },
-    { id: "growth", label: "Growth Picks", short: "Growth", icon: "growth", render: renderGrowth },
-    { id: "riskit", label: "Risk It", short: "Risk It", icon: "flame", render: renderRiskIt },
-    { id: "early", label: "Early Inflection", short: "Early", icon: "sunrise", render: renderEarly, overflow: true },
-    { id: "experiment", label: "Experiment Screener", short: "Exp", icon: "flask", render: renderExperiment, overflow: true },
-    { id: "piotroski", label: "Piotroski", short: "F-Score", icon: "shield9", render: renderPiotroski, overflow: true },
-    { id: "magic", label: "Magic Formula", short: "Magic", icon: "wand", render: renderMagic, overflow: true },
-    { id: "insider", label: "Insider Buys", short: "Insiders", icon: "growth", render: renderInsider, overflow: true },
+    { id: "screeners", label: "Screeners", short: "Screens", icon: "funnel", render: renderScreeners },
+    { id: "commodities", label: "Commodities", short: "Cmdty", icon: "ingot", render: renderCommodities },
+    { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch },
     { id: "spacex", label: "SpaceX", short: "SpaceX", icon: "orbit", render: (el) => renderCompany(el, "spacex"), overflow: true },
     { id: "tesla", label: "Tesla", short: "Tesla", icon: "bolt", render: (el) => renderCompany(el, "tesla"), overflow: true },
-    { id: "commodities", label: "Commodities", short: "Cmds", icon: "ingot", render: renderCommodities, overflow: true },
-    { id: "search", label: "Search", short: "Search", icon: "search", render: renderSearch },
     { id: "track", label: "Track Record", short: "Record", icon: "chart", render: renderTrack, overflow: true },
     { id: "cassiopeia", label: "Cassiopeia", short: "Cas", icon: "cas", render: renderCassiopeia, overflow: true },
     { id: "more", label: "More", short: "More", icon: "grid", render: renderMore },
   ];
+  /* Old screener URLs (#/growth, #/riskit, #/early, …) redirect to #/screeners?s=<id>. */
 
   const main = document.getElementById("main");
   const navList = document.getElementById("nav-list");
@@ -455,9 +451,33 @@
     return { id, params };
   }
 
+  function resolveScreener(raw) {
+    if (raw && GROWTH_MODES[raw]) return raw;
+    try {
+      const saved = localStorage.getItem("screenerTab");
+      if (saved && GROWTH_MODES[saved]) return saved;
+    } catch (e) { /* ignore */ }
+    return "growth";
+  }
+
   function route() {
-    const { id, params } = parseHash();
+    let { id, params } = parseHash();
+    // Legacy screener deep links (#/growth, #/riskit, #/early, …) open the Screeners tab.
+    if (id && GROWTH_MODES[id]) {
+      const next = `#/screeners?s=${id}`;
+      if ((location.hash || "") !== next) history.replaceState(null, "", next);
+      params = { ...params, s: id };
+      id = "screeners";
+    }
     const section = SECTIONS.find((s) => s.id === id) || SECTIONS[0];
+    if (section.id === "screeners") {
+      params.s = resolveScreener(params.s);
+      try { localStorage.setItem("screenerTab", params.s); } catch (e) { /* ignore */ }
+      if (!parseHash().params.s) history.replaceState(null, "", `#/screeners?s=${params.s}`);
+      document.body.dataset.screener = params.s;
+    } else {
+      delete document.body.dataset.screener;
+    }
     navList.querySelectorAll(".nav-link").forEach((a) => {
       if (a.dataset.id === section.id) a.setAttribute("aria-current", "page");
       else a.removeAttribute("aria-current");
@@ -465,11 +485,15 @@
       a.classList.toggle("is-parent", !!section.overflow && a.dataset.id === "more");
     });
     document.body.dataset.route = section.id;
-    document.title = section.id === "home" ? "Futura · looking higher" : `${section.label} · Futura`;
+    document.title = section.id === "home"
+      ? "Futura · looking higher"
+      : section.id === "screeners" && GROWTH_MODES[params.s]
+        ? `${GROWTH_MODES[params.s].title} · Screeners · Futura`
+        : `${section.label} · Futura`;
     window.scrollTo(0, 0);
     if (casState.anim) { casState.anim.destroy(); casState.anim = null; }
     clearTimeout(live.timer);
-    main.dataset.token = section.id + (params.t ? ":" + params.t : "");
+    main.dataset.token = section.id + (params.t ? ":" + params.t : "") + (params.s ? ":" + params.s : "");
     document.body.dataset.route = section.id;
     section.render(main, params);
   }
@@ -737,16 +761,38 @@
   const fmtMult = (v) => (typeof v === "number" ? `${+v.toFixed(2)}x` : isNA(v) ? "n/a" : String(v));
   const fmtPct = (v) => (typeof v === "number" ? `${pctNum(v).toFixed(0)}%` : isNA(v) ? "n/a" : String(v));
 
-  function renderRiskIt(el) { gMode = GROWTH_MODES.riskit; return loadGrowth(el); }
-  function renderEarly(el) { gMode = GROWTH_MODES.early; return loadGrowth(el); }
-  function renderPiotroski(el) { gMode = GROWTH_MODES.piotroski; return loadGrowth(el); }
-  function renderInsider(el) { gMode = GROWTH_MODES.insider; return loadGrowth(el); }
-  function renderMagic(el) { gMode = GROWTH_MODES.magic; return loadGrowth(el); }
-  function renderExperiment(el) { gMode = GROWTH_MODES.experiment; return loadGrowth(el); }
-  async function renderGrowth(el) { gMode = GROWTH_MODES.growth; return loadGrowth(el); }
+  const SCREENER_TABS = [
+    { id: "growth", short: "Growth" },
+    { id: "riskit", short: "Risk It" },
+    { id: "early", short: "Early" },
+    { id: "experiment", short: "Experiment" },
+    { id: "piotroski", short: "F-Score" },
+    { id: "magic", short: "Magic" },
+    { id: "insider", short: "Insiders" },
+  ];
+  function screenerTabsHTML(active) {
+    return `<div class="screener-tabs" role="tablist" aria-label="Stock screeners">${SCREENER_TABS.map((t) => {
+      const on = t.id === active;
+      const label = (GROWTH_MODES[t.id] && GROWTH_MODES[t.id].title) || t.short;
+      return `<a class="chip screener-tab" role="tab" href="#/screeners?s=${t.id}" data-screener-tab="${t.id}" aria-selected="${on}"${on ? ' aria-current="page"' : ""} title="${esc(label)}">${esc(t.short)}</a>`;
+    }).join("")}</div>`;
+  }
+  function renderScreeners(el, params) {
+    const id = resolveScreener(params && params.s);
+    gMode = GROWTH_MODES[id];
+    return loadGrowth(el);
+  }
+  function renderRiskIt(el) { return renderScreeners(el, { s: "riskit" }); }
+  function renderEarly(el) { return renderScreeners(el, { s: "early" }); }
+  function renderPiotroski(el) { return renderScreeners(el, { s: "piotroski" }); }
+  function renderInsider(el) { return renderScreeners(el, { s: "insider" }); }
+  function renderMagic(el) { return renderScreeners(el, { s: "magic" }); }
+  function renderExperiment(el) { return renderScreeners(el, { s: "experiment" }); }
+  async function renderGrowth(el) { return renderScreeners(el, { s: "growth" }); }
   async function loadGrowth(el) {
+    const token = el.dataset.token;
     if (!growthState.data) {
-      el.innerHTML = `<div class="loading">Loading growth picks…</div>`;
+      el.innerHTML = `${screenerTabsHTML(gMode.id)}<div class="loading">Loading ${esc(gMode.title)}…</div>`;
       try {
         let res = await fetch(gMode.file, { cache: "no-cache" });
         growthState.isExample = false;
@@ -758,10 +804,12 @@
         growthState.data = await res.json();
         if (growthState.data.example) growthState.isExample = true;
       } catch (err) {
-        el.innerHTML = `<div class="error">Couldn't load growth picks (${esc(err.message)}).</div>`;
+        if (el.dataset.token !== token) return;
+        el.innerHTML = `${screenerTabsHTML(gMode.id)}<div class="error">Couldn't load ${esc(gMode.title)} (${esc(err.message)}).</div>`;
         return;
       }
     }
+    if (el.dataset.token !== token) return;
     drawGrowth(el);
   }
 
@@ -795,6 +843,7 @@
       .map(([k, v]) => `<option value="${k}"${k === growthState.sort ? " selected" : ""}>${esc(k === "score" ? gMode.scoreLabel || v.label : v.label)}</option>`).join("")}</select>`;
 
     el.innerHTML = `
+      ${screenerTabsHTML(gMode.id)}
       ${hero(gMode.title, gMode.sub, `<span>${svg("clock")}Last updated ${esc(fmtDate(d.lastUpdated))}</span><span>${svg("list")}${picks.length} ${picks.length === 1 ? "pick" : "picks"}</span>`)}
       ${growthState.isExample ? `<div class="example-banner" role="note">${svg("warn")}<span><strong>EXAMPLE DATA</strong> — fictional placeholder for testing. Real picks will load automatically from data/growth-picks.json.</span></div>` : ""}
       ${isNA(d.disclaimer) ? "" : `<div class="example-banner riskit-note${gMode.id === "early" ? " early-banner" : ""}" role="note">${svg("warn")}<span><strong>${esc(gMode.banner || "SPECULATIVE")}</strong> — ${esc(d.disclaimer)}</span></div>`}
@@ -841,6 +890,11 @@
     bindFollowToggles(el);
     fillTrackLink(el);
     watchLive(el);
+    if (el.dataset.screenerScrolled !== gMode.id) {
+      el.dataset.screenerScrolled = gMode.id;
+      const onTab = el.querySelector(".screener-tab[aria-selected='true']");
+      if (onTab) onTab.scrollIntoView({ inline: "center", block: "nearest", behavior: "auto" });
+    }
   }
 
   function growthDismissed() { try { const a = JSON.parse(localStorage.getItem(gMode.dismissKey) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
