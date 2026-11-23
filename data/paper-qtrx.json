@@ -1,0 +1,3006 @@
+{
+  "schemaVersion": 1,
+  "paperTest": true,
+  "status": "PAPER TEST, not a live list",
+  "lastUpdated": "2026-11-23",
+  "asOf": "2026-11-23",
+  "priceDate": "2026-11-23",
+  "title": "Paper test #1: Quality + Trend (QTRX)",
+  "code": "QTRX",
+  "rankInStudy": 1,
+  "method": "High cash-quality companies in an uptrend with moderate volatility, ranked by 12-month momentum and quality. Universe: US-listed stocks over $2B with SEC us-gaap filings (870 stocks; 145 pass every rule), excluding financials, real estate, bitcoin miners and crypto-treasury companies. Percentile ranks are across that universe. Picks are the top 12 in score order with at most 3 per industry and 6 semiconductor/hardware names; the next 13 are backups. As backtested, picks are held for a quarter: weekly refreshes update the numbers, and the list is rebuilt at the quarterly rebalance (next: 2027-02-22).",
+  "rubric": [
+    {
+      "component": "Cash quality in the top 40%",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Price above its 10-month average",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "12-month volatility below the 80th percentile",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Cash-based operating profit above zero",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Not a commodity producer",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Score",
+      "points": "rank",
+      "how": "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile)."
+    }
+  ],
+  "dataNotes": "Fundamentals: SEC XBRL companyfacts, originally filed values, filings public by the 2026-11-23 close; quarters older than 230 days are ignored. Prices: Yahoo daily adjusted closes (month-end closes for the 10-month average, momentum and volatility; daily closes for the 150/200-day averages). Forward P/E, PEG, analysts and targets: StockAnalysis. Same code as the Nov 23, 2026 backtest harness.",
+  "backtest": "Backtest 2012–Nov 2026 (SEC + Yahoo, top 1,000 US stocks, 25 names, quarterly, 10 bp costs): +1.2 to +2.2%/yr vs the same-universe equal-weight basket, Sharpe about 0.8, max drawdown about −30%. 1975–2025 survivorship-free check (OSAP/CRSP proxy): +5.0%/yr vs the market; +10.7%/yr in 1975–2004. It lagged in 2020–26 and in the Jul–Nov 2026 reversal.",
+  "disclaimer": "Paper test only (user-approved Nov 23, 2026): not a live list, nothing is traded, and the live screeners are unchanged. Backtests overstate future returns. Not financial advice.",
+  "portfolio": {
+    "formedOn": "2026-11-23",
+    "formedPriceDate": "2026-11-23",
+    "nextRebalance": "2027-02-22",
+    "tickers": [
+      "HALO",
+      "EXEL",
+      "QLYS",
+      "KNSA",
+      "EAT",
+      "TXN",
+      "ILMN",
+      "BOX",
+      "CART",
+      "CROX",
+      "ZETA",
+      "HAS"
+    ],
+    "log": [
+      "Formed on 2026-11-23 from the 2026-11-23 close"
+    ]
+  },
+  "universe": {
+    "nasdaqRows": 7300,
+    "screened": 870,
+    "passers": 145
+  },
+  "excluded": {
+    "sectors": [
+      "Finance",
+      "Real Estate"
+    ],
+    "miners": [
+      "ABTC",
+      "AIRE",
+      "ARBK",
+      "BITF",
+      "BMNR",
+      "BTBT",
+      "BTCM",
+      "BTDR",
+      "BTOG",
+      "CAN",
+      "CANG",
+      "CIFR",
+      "CLSK",
+      "CORZ",
+      "DGHI",
+      "DMGI",
+      "FUFU",
+      "GPUS",
+      "GREE",
+      "GRYP",
+      "HIVE",
+      "HUT",
+      "IREN",
+      "LMFA",
+      "MARA",
+      "MIGI",
+      "NCPL",
+      "RIOT",
+      "SAI",
+      "SDIG",
+      "SLNH",
+      "SOS",
+      "USBC",
+      "WULF"
+    ],
+    "cryptoTreasury": [
+      "ASST",
+      "BMNR",
+      "BNC",
+      "BTCS",
+      "CEP",
+      "DFDV",
+      "ETHM",
+      "ETHZ",
+      "FGNX",
+      "HSDT",
+      "MSTR",
+      "NAKA",
+      "SBET",
+      "SMLR",
+      "STSS",
+      "TRON",
+      "UPXI",
+      "XXI"
+    ]
+  },
+  "picks": [
+    {
+      "company": "Halozyme Therapeutics Inc.",
+      "ticker": "HALO",
+      "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
+      "price": 94.07,
+      "priceDate": "2026-11-23",
+      "marketCap": "$10.7B",
+      "forwardPE": 8.99,
+      "peg": "n/a",
+      "revenueGrowth": "+45.0% YoY (TTM; latest quarter +39.2%)",
+      "score": 91,
+      "paperRank": 1,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 89"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+8.5% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 51% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 31.5%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: Biological Products (No Diagnostic Substances)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "89th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+83%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "51%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+8%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "31%"
+        }
+      ],
+      "drivers": [
+        "Score 91/100 → #1 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 89th percentile: cash op. profit/assets 31.5%, FCF/assets 31.1%, accruals -14.5%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 51% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (9 analysts)",
+      "priceTarget": 120.11,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001159036.json",
+        "https://stockanalysis.com/stocks/halo/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.4503,
+        "rev_gq": 0.3915,
+        "gm_chg": -0.0228,
+        "sue": 0.6178,
+        "cbop": 0.3155,
+        "oprd": 0.2765,
+        "fcf_a": 0.3111,
+        "accruals": -0.145,
+        "sh_g12": -0.0305,
+        "eps_up8": 7.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.8335,
+        "vol12": 0.5071,
+        "sma10": 0.085,
+        "pct150": 0.0238,
+        "pct200": 0.0944
+      },
+      "grades": {
+        "growth": "A",
+        "value": "B-",
+        "momentum": "F",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Exelixis Inc.",
+      "ticker": "EXEL",
+      "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
+      "price": 66.82,
+      "priceDate": "2026-11-23",
+      "marketCap": "$16.3B",
+      "forwardPE": 16.54,
+      "peg": 1.43,
+      "revenueGrowth": "+9.1% YoY (TTM; latest quarter +10.2%)",
+      "score": 90,
+      "paperRank": 2,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 93"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+24.1% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 26% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 44.0%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: Biological Products (No Diagnostic Substances)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "93th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+57%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "26%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+24%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "44%"
+        }
+      ],
+      "drivers": [
+        "Score 90/100 → #2 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 93th percentile: cash op. profit/assets 44.0%, FCF/assets 43.5%, accruals -10.8%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-10-02 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (17 analysts)",
+      "priceTarget": 61.36,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000939767.json",
+        "https://stockanalysis.com/stocks/exel/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0912,
+        "rev_gq": 0.1019,
+        "gm_chg": -0.0036,
+        "sue": 0.9383,
+        "cbop": 0.4396,
+        "oprd": 0.6888,
+        "fcf_a": 0.4351,
+        "accruals": -0.1079,
+        "sh_g12": -0.0899,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.571,
+        "vol12": 0.2561,
+        "sma10": 0.2406,
+        "pct150": 0.1875,
+        "pct200": 0.2614
+      },
+      "grades": {
+        "growth": "B-",
+        "value": "D+",
+        "momentum": "B",
+        "profitability": "A+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Qualys Inc.",
+      "ticker": "QLYS",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 197.69,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.9B",
+      "forwardPE": 22.89,
+      "peg": 2.98,
+      "revenueGrowth": "+10.4% YoY (TTM; latest quarter +10.7%)",
+      "score": 88,
+      "paperRank": 3,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 90"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+36.0% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 61% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 30.0%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Computer Software: Prepackaged Software"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "90th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+59%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "61%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+36%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "29%"
+        }
+      ],
+      "drivers": [
+        "Score 88/100 → #3 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 90th percentile: cash op. profit/assets 30.0%, FCF/assets 29.3%, accruals -10.7%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 61% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (22 analysts)",
+      "priceTarget": 196.81,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001107843.json",
+        "https://stockanalysis.com/stocks/qlys/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1043,
+        "rev_gq": 0.1069,
+        "gm_chg": 0.0081,
+        "sue": 3.6762,
+        "cbop": 0.3001,
+        "oprd": 0.3312,
+        "fcf_a": 0.2929,
+        "accruals": -0.1074,
+        "sh_g12": -0.0265,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.5912,
+        "vol12": 0.6119,
+        "sma10": 0.3597,
+        "pct150": 0.2774,
+        "pct200": 0.4184
+      },
+      "grades": {
+        "growth": "D-",
+        "value": "F",
+        "momentum": "C+",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Kiniksa Pharmaceuticals International plc",
+      "ticker": "KNSA",
+      "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
+      "price": 98.69,
+      "priceDate": "2026-11-23",
+      "marketCap": "$7.4B",
+      "forwardPE": 55.27,
+      "peg": 1.04,
+      "revenueGrowth": "+58.2% YoY (TTM; latest quarter +58.1%)",
+      "score": 86,
+      "paperRank": 4,
+      "alsoIn": [
+        "Experiment"
+      ],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 75"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+45.7% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 42% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 23.5%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: Pharmaceutical Preparations"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "75th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+117%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "42%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+46%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "23%"
+        }
+      ],
+      "drivers": [
+        "Score 86/100 → #4 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 75th percentile: cash op. profit/assets 23.5%, FCF/assets 23.3%, accruals -10.5%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Up 117% over the 12 months to last month: momentum names can reverse hard (Jul–Nov 2026 quality/momentum lists fell 15–33%)",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (7 analysts)",
+      "priceTarget": 111.57,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001730430.json",
+        "https://stockanalysis.com/stocks/knsa/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.5819,
+        "rev_gq": 0.5812,
+        "gm_chg": 0.0264,
+        "sue": 1.1441,
+        "cbop": 0.2345,
+        "oprd": 0.314,
+        "fcf_a": 0.2326,
+        "accruals": -0.1053,
+        "sh_g12": 0.061,
+        "eps_up8": 7.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 1.1693,
+        "vol12": 0.4154,
+        "sma10": 0.4572,
+        "pct150": 0.4,
+        "pct200": 0.5332
+      },
+      "grades": {
+        "growth": "A+",
+        "value": "F",
+        "momentum": "A+",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Brinker International Inc.",
+      "ticker": "EAT",
+      "sector": "Consumer Discretionary – Restaurants",
+      "price": 190.16,
+      "priceDate": "2026-11-23",
+      "marketCap": "$7.9B",
+      "forwardPE": 13.25,
+      "peg": 0.74,
+      "revenueGrowth": "+6.1% YoY (TTM; latest quarter +9.4%)",
+      "score": 84,
+      "paperRank": 5,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 91"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+6.1% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 44% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 30.5%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Restaurants"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "91th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+38%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "44%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+6%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "22%"
+        }
+      ],
+      "drivers": [
+        "Score 84/100 → #5 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 91th percentile: cash op. profit/assets 30.5%, FCF/assets 21.9%, accruals -12.3%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-23 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (23 analysts)",
+      "priceTarget": 263.36,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000703351.json",
+        "https://stockanalysis.com/stocks/eat/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0607,
+        "rev_gq": 0.0937,
+        "gm_chg": -0.0042,
+        "sue": 0.8372,
+        "cbop": 0.3052,
+        "oprd": 0.2379,
+        "fcf_a": 0.219,
+        "accruals": -0.1228,
+        "sh_g12": -0.065,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.3797,
+        "vol12": 0.4371,
+        "sma10": 0.0614,
+        "pct150": 0.0152,
+        "pct200": 0.0709
+      },
+      "grades": {
+        "growth": "C",
+        "value": "A+",
+        "momentum": "D+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Texas Instruments Incorporated",
+      "ticker": "TXN",
+      "sector": "Technology – Semiconductors",
+      "price": 291.19,
+      "priceDate": "2026-11-23",
+      "marketCap": "$266.1B",
+      "forwardPE": 25.39,
+      "peg": 0.93,
+      "revenueGrowth": "+20.3% YoY (TTM; latest quarter +27.7%)",
+      "score": 83,
+      "paperRank": 6,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 74"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+8.7% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 53% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 27.5%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Semiconductors"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "74th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+83%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "53%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+9%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "20%"
+        }
+      ],
+      "drivers": [
+        "Score 83/100 → #6 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 74th percentile: cash op. profit/assets 27.5%, FCF/assets 20.4%, accruals -7.7%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 53% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (35 analysts)",
+      "priceTarget": 339.66,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000097476.json",
+        "https://stockanalysis.com/stocks/txn/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2027,
+        "rev_gq": 0.2769,
+        "gm_chg": 0.0276,
+        "sue": 2.5578,
+        "cbop": 0.2755,
+        "oprd": 0.294,
+        "fcf_a": 0.2037,
+        "accruals": -0.0775,
+        "sh_g12": 0.0057,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.8268,
+        "vol12": 0.534,
+        "sma10": 0.0867,
+        "pct150": 0.0231,
+        "pct200": 0.1011
+      },
+      "grades": {
+        "growth": "A-",
+        "value": "F",
+        "momentum": "D",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Illumina Inc.",
+      "ticker": "ILMN",
+      "sector": "Health Care – Medical Specialities",
+      "price": 205.28,
+      "priceDate": "2026-11-23",
+      "marketCap": "$31.0B",
+      "forwardPE": 34.39,
+      "peg": 2.68,
+      "revenueGrowth": "+5.8% YoY (TTM; latest quarter +4.2%)",
+      "score": 82,
+      "paperRank": 7,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 72"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+10.5% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 50% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 18.9%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Medical Specialities"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "72th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+80%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "50%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+11%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "16%"
+        }
+      ],
+      "drivers": [
+        "Score 82/100 → #7 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 72th percentile: cash op. profit/assets 18.9%, FCF/assets 16.3%, accruals -5.2%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-27 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 50% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (21 analysts)",
+      "priceTarget": 261.45,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001110803.json",
+        "https://stockanalysis.com/stocks/ilmn/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0583,
+        "rev_gq": 0.0415,
+        "gm_chg": 0.0166,
+        "sue": 0.0876,
+        "cbop": 0.1894,
+        "oprd": 0.2979,
+        "fcf_a": 0.1628,
+        "accruals": -0.0516,
+        "sh_g12": -0.0105,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.7953,
+        "vol12": 0.5006,
+        "sma10": 0.1055,
+        "pct150": 0.0232,
+        "pct200": 0.1309
+      },
+      "grades": {
+        "growth": "D+",
+        "value": "F",
+        "momentum": "C",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Box Inc.",
+      "ticker": "BOX",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 45.55,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.2B",
+      "forwardPE": 28.44,
+      "peg": 2.33,
+      "revenueGrowth": "+9.6% YoY (TTM; latest quarter +9.2%)",
+      "score": 82,
+      "paperRank": 8,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 82"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+44.7% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 43% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 26.0%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Computer Software: Prepackaged Software"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "82th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+47%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "43%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+45%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "26%"
+        }
+      ],
+      "drivers": [
+        "Score 82/100 → #8 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 82th percentile: cash op. profit/assets 26.0%, FCF/assets 25.7%, accruals -17.4%, EPS up YoY in 4 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-07-31 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (9 analysts)",
+      "priceTarget": 47.29,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001372612.json",
+        "https://stockanalysis.com/stocks/box/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0963,
+        "rev_gq": 0.0923,
+        "gm_chg": 0.0056,
+        "sue": 0.1204,
+        "cbop": 0.2605,
+        "oprd": 0.2781,
+        "fcf_a": 0.2571,
+        "accruals": -0.1742,
+        "sh_g12": -0.053,
+        "eps_up8": 4.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4709,
+        "vol12": 0.4288,
+        "sma10": 0.4474,
+        "pct150": 0.4124,
+        "pct200": 0.5115
+      },
+      "grades": {
+        "growth": "C+",
+        "value": "F",
+        "momentum": "A",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Maplebear Inc.",
+      "ticker": "CART",
+      "sector": "Consumer Discretionary – Business Services",
+      "price": 56.94,
+      "priceDate": "2026-11-23",
+      "marketCap": "$13.5B",
+      "forwardPE": 20.93,
+      "peg": 0.83,
+      "revenueGrowth": "+14.2% YoY (TTM; latest quarter +16.6%)",
+      "score": 80,
+      "paperRank": 9,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 88"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+24.8% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 49% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 31.2%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Business Services"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "88th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+34%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "49%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+25%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "30%"
+        }
+      ],
+      "drivers": [
+        "Score 80/100 → #9 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 88th percentile: cash op. profit/assets 31.2%, FCF/assets 29.8%, accruals -19.3%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 49% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (29 analysts)",
+      "priceTarget": 62.29,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001579091.json",
+        "https://stockanalysis.com/stocks/cart/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.142,
+        "rev_gq": 0.1661,
+        "gm_chg": -0.0234,
+        "sue": 0.0282,
+        "cbop": 0.3124,
+        "oprd": 0.327,
+        "fcf_a": 0.2981,
+        "accruals": -0.1934,
+        "sh_g12": -0.0987,
+        "eps_up8": 5.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.3437,
+        "vol12": 0.4854,
+        "sma10": 0.2484,
+        "pct150": 0.2033,
+        "pct200": 0.2665
+      },
+      "grades": {
+        "growth": "B",
+        "value": "B",
+        "momentum": "C+",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Crocs Inc.",
+      "ticker": "CROX",
+      "sector": "Consumer Discretionary – Shoe Manufacturing",
+      "price": 157.78,
+      "priceDate": "2026-11-23",
+      "marketCap": "$7.2B",
+      "forwardPE": 10.09,
+      "peg": 0.91,
+      "revenueGrowth": "+0.7% YoY (TTM; latest quarter +4.6%)",
+      "score": 80,
+      "paperRank": 10,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 69"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+32.7% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 39% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 19.0%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Shoe Manufacturing"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "69th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+77%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "39%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+33%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "18%"
+        }
+      ],
+      "drivers": [
+        "Score 80/100 → #10 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 69th percentile: cash op. profit/assets 19.0%, FCF/assets 17.6%, accruals -3.5%, EPS up YoY in 4 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (15 analysts)",
+      "priceTarget": 164.67,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001334036.json",
+        "https://stockanalysis.com/stocks/crox/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.007,
+        "rev_gq": 0.0465,
+        "gm_chg": 0.0034,
+        "sue": 0.256,
+        "cbop": 0.1897,
+        "oprd": 0.2156,
+        "fcf_a": 0.1757,
+        "accruals": -0.0348,
+        "sh_g12": -0.1192,
+        "eps_up8": 4.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.7712,
+        "vol12": 0.3949,
+        "sma10": 0.327,
+        "pct150": 0.2669,
+        "pct200": 0.3629
+      },
+      "grades": {
+        "growth": "F",
+        "value": "A",
+        "momentum": "A",
+        "profitability": "C-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Zeta Global Holdings Corp.",
+      "ticker": "ZETA",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 32.43,
+      "priceDate": "2026-11-23",
+      "marketCap": "$7.5B",
+      "forwardPE": 25.41,
+      "peg": 0.55,
+      "revenueGrowth": "+41.0% YoY (TTM; latest quarter +46.1%)",
+      "score": 80,
+      "paperRank": 11,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 69"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+34.2% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 56% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 19.7%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Computer Software: Prepackaged Software"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "69th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+71%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "56%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+34%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "19%"
+        }
+      ],
+      "drivers": [
+        "Score 80/100 → #11 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 69th percentile: cash op. profit/assets 19.7%, FCF/assets 18.7%, accruals -16.9%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 56% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (15 analysts)",
+      "priceTarget": 40.14,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001851003.json",
+        "https://stockanalysis.com/stocks/zeta/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.4096,
+        "rev_gq": 0.4612,
+        "gm_chg": -0.0132,
+        "sue": 1.55,
+        "cbop": 0.1973,
+        "oprd": 0.1586,
+        "fcf_a": 0.1872,
+        "accruals": -0.1687,
+        "sh_g12": 0.1897,
+        "eps_up8": 7.0,
+        "ni_pos8": 4.0,
+        "mom12_1": 0.7079,
+        "vol12": 0.5648,
+        "sma10": 0.3423,
+        "pct150": 0.2543,
+        "pct200": 0.3746
+      },
+      "grades": {
+        "growth": "B+",
+        "value": "C",
+        "momentum": "B+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Hasbro Inc.",
+      "ticker": "HAS",
+      "sector": "Consumer Discretionary – Recreational Games/Products/Toys",
+      "price": 113.53,
+      "priceDate": "2026-11-23",
+      "marketCap": "$15.9B",
+      "forwardPE": 16.95,
+      "peg": 1.27,
+      "revenueGrowth": "+12.3% YoY (TTM; latest quarter +0.3%)",
+      "score": 80,
+      "paperRank": 12,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 77"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+19.0% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 44% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 22.0%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Recreational Games/Products/Toys"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "77th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+47%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "44%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+19%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "21%"
+        }
+      ],
+      "drivers": [
+        "Score 80/100 → #13 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 77th percentile: cash op. profit/assets 22.0%, FCF/assets 20.6%, accruals -6.0%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-27 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (14 analysts)",
+      "priceTarget": 124.46,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000046080.json",
+        "https://stockanalysis.com/stocks/has/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1226,
+        "rev_gq": 0.0033,
+        "gm_chg": 0.0008,
+        "sue": 0.2478,
+        "cbop": 0.2198,
+        "oprd": 0.2922,
+        "fcf_a": 0.2056,
+        "accruals": -0.0595,
+        "sh_g12": -0.0034,
+        "eps_up8": 7.0,
+        "ni_pos8": 6.0,
+        "mom12_1": 0.4746,
+        "vol12": 0.4392,
+        "sma10": 0.19,
+        "pct150": 0.2143,
+        "pct200": 0.2152
+      },
+      "grades": {
+        "growth": "C",
+        "value": "C+",
+        "momentum": "B-",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    }
+  ],
+  "bench": [
+    {
+      "company": "Toro Company (The)",
+      "ticker": "TTC",
+      "sector": "Consumer Discretionary – Tools/Hardware",
+      "price": 104.1,
+      "priceDate": "2026-11-23",
+      "marketCap": "$9.9B",
+      "forwardPE": 20.39,
+      "peg": 2.04,
+      "revenueGrowth": "+5.2% YoY (TTM; latest quarter +8.4%)",
+      "score": 79,
+      "paperRank": 13,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 72"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+7.6% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 28% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 22.4%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Tools/Hardware"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "72th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+58%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "28%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+8%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "20%"
+        }
+      ],
+      "drivers": [
+        "Score 79/100 → #14 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 72th percentile: cash op. profit/assets 22.4%, FCF/assets 20.2%, accruals -12.1%, EPS up YoY in 4 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-07-31 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (6 analysts)",
+      "priceTarget": 111.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000737758.json",
+        "https://stockanalysis.com/stocks/ttc/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0515,
+        "rev_gq": 0.0835,
+        "gm_chg": 0.0016,
+        "sue": 0.9696,
+        "cbop": 0.2237,
+        "oprd": 0.1388,
+        "fcf_a": 0.2017,
+        "accruals": -0.1208,
+        "sh_g12": -0.0327,
+        "eps_up8": 4.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.5755,
+        "vol12": 0.2792,
+        "sma10": 0.0756,
+        "pct150": 0.0829,
+        "pct200": 0.0844
+      },
+      "rank": 1,
+      "grades": {
+        "growth": "F",
+        "value": "C-",
+        "momentum": "D+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Etsy Inc.",
+      "ticker": "ETSY",
+      "sector": "Consumer Discretionary – Business Services",
+      "price": 79.02,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.8B",
+      "forwardPE": 12.13,
+      "peg": 1.25,
+      "revenueGrowth": "+0.7% YoY (TTM; latest quarter +2.1%)",
+      "score": 77,
+      "paperRank": 14,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 66"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+10.5% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 45% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 20.6%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Business Services"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "66th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+64%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "45%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+11%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "20%"
+        }
+      ],
+      "drivers": [
+        "Score 77/100 → #15 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 66th percentile: cash op. profit/assets 20.6%, FCF/assets 20.4%, accruals +13.4%, EPS up YoY in 4 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (31 analysts)",
+      "priceTarget": 98.48,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001370637.json",
+        "https://stockanalysis.com/stocks/etsy/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0069,
+        "rev_gq": 0.0213,
+        "gm_chg": 0.0058,
+        "sue": 2.7257,
+        "cbop": 0.2055,
+        "oprd": 0.3131,
+        "fcf_a": 0.2037,
+        "accruals": 0.1337,
+        "sh_g12": -0.1266,
+        "eps_up8": 4.0,
+        "ni_pos8": 6.0,
+        "mom12_1": 0.6407,
+        "vol12": 0.4493,
+        "sma10": 0.1053,
+        "pct150": 0.0345,
+        "pct200": 0.1199
+      },
+      "rank": 2,
+      "grades": {
+        "growth": "C-",
+        "value": "A-",
+        "momentum": "D-",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Lantheus Holdings Inc.",
+      "ticker": "LNTH",
+      "sector": "Health Care – Biotechnology: In Vitro & In Vivo Diagnostic Substances",
+      "price": 102.34,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.7B",
+      "forwardPE": 15.91,
+      "peg": 1.18,
+      "revenueGrowth": "+2.4% YoY (TTM; latest quarter +1.5%)",
+      "score": 77,
+      "paperRank": 15,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 63"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+7.9% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 28% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 17.3%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: In Vitro & In Vivo Diagnostic Substances"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "63th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+71%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "28%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+8%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "17%"
+        }
+      ],
+      "drivers": [
+        "Score 77/100 → #16 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 63th percentile: cash op. profit/assets 17.3%, FCF/assets 16.6%, accruals -5.9%, EPS up YoY in 3 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (9 analysts)",
+      "priceTarget": 105.99,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001521036.json",
+        "https://stockanalysis.com/stocks/lnth/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0238,
+        "rev_gq": 0.0154,
+        "gm_chg": -0.0097,
+        "sue": -0.0825,
+        "cbop": 0.173,
+        "oprd": 0.215,
+        "fcf_a": 0.1661,
+        "accruals": -0.059,
+        "sh_g12": -0.0137,
+        "eps_up8": 3.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.7065,
+        "vol12": 0.2761,
+        "sma10": 0.0789,
+        "pct150": 0.0234,
+        "pct200": 0.0865
+      },
+      "rank": 3,
+      "grades": {
+        "growth": "F",
+        "value": "C+",
+        "momentum": "C-",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Cheniere Energy Inc.",
+      "ticker": "LNG",
+      "sector": "Utilities – Oil/Gas Transmission",
+      "price": 295.46,
+      "priceDate": "2026-11-23",
+      "marketCap": "$60.3B",
+      "forwardPE": 12.4,
+      "peg": "n/a",
+      "revenueGrowth": "+22.5% YoY (TTM; latest quarter +39.0%)",
+      "score": 76,
+      "paperRank": 16,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 65"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+9.5% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 44% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 15.3%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Oil/Gas Transmission"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "65th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+60%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "44%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+10%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "8%"
+        }
+      ],
+      "drivers": [
+        "Score 76/100 → #17 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 65th percentile: cash op. profit/assets 15.3%, FCF/assets 8.1%, accruals -8.8%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (22 analysts)",
+      "priceTarget": 340.8,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000003570.json",
+        "https://stockanalysis.com/stocks/lng/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2247,
+        "rev_gq": 0.39,
+        "gm_chg": -0.1142,
+        "sue": 0.1135,
+        "cbop": 0.1528,
+        "oprd": 0.1388,
+        "fcf_a": 0.0806,
+        "accruals": -0.0882,
+        "sh_g12": -0.0513,
+        "eps_up8": 5.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.5959,
+        "vol12": 0.4421,
+        "sma10": 0.0952,
+        "pct150": 0.1115,
+        "pct200": 0.1254
+      },
+      "rank": 4,
+      "grades": {
+        "growth": "B+",
+        "value": "B",
+        "momentum": "F",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Match Group Inc.",
+      "ticker": "MTCH",
+      "sector": "Technology – Computer Software: Programming Data Processing",
+      "price": 40.33,
+      "priceDate": "2026-11-23",
+      "marketCap": "$9.2B",
+      "forwardPE": 13.95,
+      "peg": 0.83,
+      "revenueGrowth": "+0.5% YoY (TTM; latest quarter -2.5%)",
+      "score": 76,
+      "paperRank": 17,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 86"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+8.1% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 25% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 27.7%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Computer Software: Programming Data Processing"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "86th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+27%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "25%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+8%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "26%"
+        }
+      ],
+      "drivers": [
+        "Score 76/100 → #18 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 86th percentile: cash op. profit/assets 27.7%, FCF/assets 26.1%, accruals -11.2%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Latest quarter revenue -2.5% YoY",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (19 analysts)",
+      "priceTarget": 45.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000891103.json",
+        "https://stockanalysis.com/stocks/mtch/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0049,
+        "rev_gq": -0.0252,
+        "gm_chg": 0.0353,
+        "sue": 0.7172,
+        "cbop": 0.2768,
+        "oprd": 0.3424,
+        "fcf_a": 0.261,
+        "accruals": -0.1117,
+        "sh_g12": -0.0362,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2713,
+        "vol12": 0.2514,
+        "sma10": 0.0809,
+        "pct150": 0.0354,
+        "pct200": 0.0901
+      },
+      "rank": 5,
+      "grades": {
+        "growth": "F",
+        "value": "A-",
+        "momentum": "F",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Science Applications International Corporation",
+      "ticker": "SAIC",
+      "sector": "Technology – EDP Services",
+      "price": 142.96,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.0B",
+      "forwardPE": 13.97,
+      "peg": "n/a",
+      "revenueGrowth": "-0.8% YoY (TTM; latest quarter +6.3%)",
+      "score": 76,
+      "paperRank": 18,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 59"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+23.1% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 29% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 12.4%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "EDP Services"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "59th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+79%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "29%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+23%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "12%"
+        }
+      ],
+      "drivers": [
+        "Score 76/100 → #19 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 59th percentile: cash op. profit/assets 12.4%, FCF/assets 11.7%, accruals -5.3%, EPS up YoY in 4 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-07-31 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (10 analysts)",
+      "priceTarget": 132.56,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001571123.json",
+        "https://stockanalysis.com/stocks/saic/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": -0.0078,
+        "rev_gq": 0.0627,
+        "gm_chg": 0.0067,
+        "sue": -0.4627,
+        "cbop": 0.1242,
+        "oprd": 0.1114,
+        "fcf_a": 0.1165,
+        "accruals": -0.0527,
+        "sh_g12": -0.0896,
+        "eps_up8": 4.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.7851,
+        "vol12": 0.2866,
+        "sma10": 0.2308,
+        "pct150": 0.1826,
+        "pct200": 0.2558
+      },
+      "rank": 6,
+      "grades": {
+        "growth": "F",
+        "value": "A",
+        "momentum": "B",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "eBay Inc.",
+      "ticker": "EBAY",
+      "sector": "Consumer Discretionary – Business Services",
+      "price": 117.64,
+      "priceDate": "2026-11-23",
+      "marketCap": "$51.6B",
+      "forwardPE": 17.83,
+      "peg": 1.59,
+      "revenueGrowth": "+15.7% YoY (TTM; latest quarter +13.7%)",
+      "score": 76,
+      "paperRank": 19,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 68"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+10.3% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 23% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 16.5%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Business Services"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "68th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+48%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "23%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+10%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "13%"
+        }
+      ],
+      "drivers": [
+        "Score 76/100 → #20 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 68th percentile: cash op. profit/assets 16.5%, FCF/assets 13.5%, accruals -4.8%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (32 analysts)",
+      "priceTarget": 127.11,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001065088.json",
+        "https://stockanalysis.com/stocks/ebay/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1568,
+        "rev_gq": 0.1369,
+        "gm_chg": 0.0116,
+        "sue": -1.0206,
+        "cbop": 0.1648,
+        "oprd": 0.2453,
+        "fcf_a": 0.1348,
+        "accruals": -0.0482,
+        "sh_g12": -0.0288,
+        "eps_up8": 5.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4828,
+        "vol12": 0.2258,
+        "sma10": 0.1032,
+        "pct150": 0.0601,
+        "pct200": 0.1108
+      },
+      "rank": 7,
+      "grades": {
+        "growth": "C+",
+        "value": "D",
+        "momentum": "F",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Travere Therapeutics Inc.",
+      "ticker": "TVTX",
+      "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
+      "price": 49.39,
+      "priceDate": "2026-11-23",
+      "marketCap": "$4.7B",
+      "forwardPE": 9.99,
+      "peg": "n/a",
+      "revenueGrowth": "+49.4% YoY (TTM; latest quarter +36.2%)",
+      "score": 75,
+      "paperRank": 20,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 71"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+1.5% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 59% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 25.5%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: Pharmaceutical Preparations"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "71th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+42%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "59%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+2%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "25%"
+        }
+      ],
+      "drivers": [
+        "Score 75/100 → #21 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 71th percentile: cash op. profit/assets 25.5%, FCF/assets 25.5%, accruals -43.0%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 59% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (15 analysts)",
+      "priceTarget": 73.43,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001438533.json",
+        "https://stockanalysis.com/stocks/tvtx/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.4938,
+        "rev_gq": 0.3622,
+        "gm_chg": 0.0091,
+        "sue": -1.1902,
+        "cbop": 0.2547,
+        "oprd": 0.1616,
+        "fcf_a": 0.2547,
+        "accruals": -0.4299,
+        "sh_g12": 0.0729,
+        "eps_up8": 6.0,
+        "ni_pos8": 2.0,
+        "mom12_1": 0.423,
+        "vol12": 0.5929,
+        "sma10": 0.0153,
+        "pct150": -0.0881,
+        "pct200": 0.0242
+      },
+      "rank": 8,
+      "grades": {
+        "growth": "A+",
+        "value": "C",
+        "momentum": "F",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Zebra Technologies Corporation",
+      "ticker": "ZBRA",
+      "sector": "Industrials – Industrial Machinery/Components",
+      "price": 320.22,
+      "priceDate": "2026-11-23",
+      "marketCap": "$15.1B",
+      "forwardPE": 14.72,
+      "peg": 1.09,
+      "revenueGrowth": "+16.9% YoY (TTM; latest quarter +22.3%)",
+      "score": 74,
+      "paperRank": 21,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 69"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+11.6% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 32% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 12.6%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Industrial Machinery/Components"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "69th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+43%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "32%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+12%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "12%"
+        }
+      ],
+      "drivers": [
+        "Score 74/100 → #25 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 69th percentile: cash op. profit/assets 12.6%, FCF/assets 11.7%, accruals -5.5%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-10-03 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (17 analysts)",
+      "priceTarget": 411.49,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000877212.json",
+        "https://stockanalysis.com/stocks/zbra/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1686,
+        "rev_gq": 0.2227,
+        "gm_chg": 0.0051,
+        "sue": 0.9201,
+        "cbop": 0.1265,
+        "oprd": 0.1831,
+        "fcf_a": 0.117,
+        "accruals": -0.0552,
+        "sh_g12": -0.0705,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4293,
+        "vol12": 0.3194,
+        "sma10": 0.1164,
+        "pct150": 0.0433,
+        "pct200": 0.1178
+      },
+      "rank": 9,
+      "grades": {
+        "growth": "B",
+        "value": "B+",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "W.W. Grainger Inc.",
+      "ticker": "GWW",
+      "sector": "Industrials – Office Equipment/Supplies/Services",
+      "price": 1390.12,
+      "priceDate": "2026-11-23",
+      "marketCap": "$65.1B",
+      "forwardPE": 27.14,
+      "peg": 2.05,
+      "revenueGrowth": "+9.1% YoY (TTM; latest quarter +11.3%)",
+      "score": 74,
+      "paperRank": 22,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 69"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+10.0% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 19% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 23.6%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Office Equipment/Supplies/Services"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "69th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+44%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "19%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+10%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "18%"
+        }
+      ],
+      "drivers": [
+        "Score 74/100 → #26 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 69th percentile: cash op. profit/assets 23.6%, FCF/assets 18.1%, accruals -0.8%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (19 analysts)",
+      "priceTarget": 1452.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000277135.json",
+        "https://stockanalysis.com/stocks/gww/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0912,
+        "rev_gq": 0.1125,
+        "gm_chg": 0.0034,
+        "sue": 2.2382,
+        "cbop": 0.236,
+        "oprd": 0.3227,
+        "fcf_a": 0.181,
+        "accruals": -0.008,
+        "sh_g12": -0.0155,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4412,
+        "vol12": 0.192,
+        "sma10": 0.1,
+        "pct150": 0.0613,
+        "pct200": 0.1029
+      },
+      "rank": 10,
+      "grades": {
+        "growth": "D+",
+        "value": "D-",
+        "momentum": "D-",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Haemonetics Corporation",
+      "ticker": "HAE",
+      "sector": "Health Care – Medical/Dental Instruments",
+      "price": 121.42,
+      "priceDate": "2026-11-23",
+      "marketCap": "$5.5B",
+      "forwardPE": 20.2,
+      "peg": 1.78,
+      "revenueGrowth": "+4.1% YoY (TTM; latest quarter +9.3%)",
+      "score": 74,
+      "paperRank": 23,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 66"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+41.6% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 39% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 14.2%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Medical/Dental Instruments"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "66th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+47%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "39%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+42%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "12%"
+        }
+      ],
+      "drivers": [
+        "Score 74/100 → #27 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 66th percentile: cash op. profit/assets 14.2%, FCF/assets 12.3%, accruals -9.9%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-26 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (12 analysts)",
+      "priceTarget": 147.18,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000313143.json",
+        "https://stockanalysis.com/stocks/hae/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0411,
+        "rev_gq": 0.093,
+        "gm_chg": 0.0137,
+        "sue": 0.2807,
+        "cbop": 0.1422,
+        "oprd": 0.0984,
+        "fcf_a": 0.1229,
+        "accruals": -0.0993,
+        "sh_g12": -0.0272,
+        "eps_up8": 6.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.4708,
+        "vol12": 0.3872,
+        "sma10": 0.4159,
+        "pct150": 0.3391,
+        "pct200": 0.4636
+      },
+      "rank": 11,
+      "grades": {
+        "growth": "D",
+        "value": "D-",
+        "momentum": "A-",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Gilead Sciences Inc.",
+      "ticker": "GILD",
+      "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
+      "price": 170.59,
+      "priceDate": "2026-11-23",
+      "marketCap": "$211.6B",
+      "forwardPE": 20.48,
+      "peg": 2.74,
+      "revenueGrowth": "+6.5% YoY (TTM; latest quarter +6.8%)",
+      "score": 74,
+      "paperRank": 24,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 71"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+18.7% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 27% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 26.3%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: Biological Products (No Diagnostic Substances)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "71th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+39%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "27%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+19%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "25%"
+        }
+      ],
+      "drivers": [
+        "Score 74/100 → #28 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 71th percentile: cash op. profit/assets 26.3%, FCF/assets 25.1%, accruals -33.4%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (27 analysts)",
+      "priceTarget": 175.92,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000882095.json",
+        "https://stockanalysis.com/stocks/gild/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0654,
+        "rev_gq": 0.0683,
+        "gm_chg": 0.0122,
+        "sue": -0.1179,
+        "cbop": 0.2634,
+        "oprd": 0.0721,
+        "fcf_a": 0.2507,
+        "accruals": -0.3337,
+        "sh_g12": -0.0003,
+        "eps_up8": 6.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.3898,
+        "vol12": 0.2664,
+        "sma10": 0.1871,
+        "pct150": 0.2081,
+        "pct200": 0.207
+      },
+      "rank": 12,
+      "grades": {
+        "growth": "D-",
+        "value": "F",
+        "momentum": "C-",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Interparfums Inc.",
+      "ticker": "IPAR",
+      "sector": "Consumer Discretionary – Package Goods/Cosmetics",
+      "price": 136.39,
+      "priceDate": "2026-11-23",
+      "marketCap": "$4.4B",
+      "forwardPE": 27.2,
+      "peg": "n/a",
+      "revenueGrowth": "+2.6% YoY (TTM; latest quarter -0.0%)",
+      "score": 74,
+      "paperRank": 25,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 40%",
+          "met": true,
+          "detail": "cash-quality percentile 65"
+        },
+        {
+          "key": "r1",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+25.6% vs 10-month average (month-end closes)"
+        },
+        {
+          "key": "r2",
+          "label": "12-month volatility below the 80th percentile",
+          "met": true,
+          "detail": "annualised volatility 32% (cut-off 62%)"
+        },
+        {
+          "key": "r3",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 15.8%"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Package Goods/Cosmetics"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "65th pct"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+48%"
+        },
+        {
+          "label": "Volatility (12m)",
+          "value": "32%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+26%"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "15%"
+        }
+      ],
+      "drivers": [
+        "Score 74/100 → #29 of 145 passers (870 stocks screened)",
+        "Ranked by the average of 12-1 momentum (percentile) and cash quality (percentile).",
+        "Cash quality 65th percentile: cash op. profit/assets 15.8%, FCF/assets 15.5%, accruals -5.0%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Latest quarter revenue -0.0% YoY",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (6 analysts)",
+      "priceTarget": 131.67,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000822663.json",
+        "https://stockanalysis.com/stocks/ipar/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0258,
+        "rev_gq": -0.0002,
+        "gm_chg": 0.0043,
+        "sue": 0.4623,
+        "cbop": 0.1585,
+        "oprd": 0.1709,
+        "fcf_a": 0.155,
+        "accruals": -0.0501,
+        "sh_g12": -0.0012,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4805,
+        "vol12": 0.3193,
+        "sma10": 0.2562,
+        "pct150": 0.232,
+        "pct200": 0.2822
+      },
+      "rank": 13,
+      "grades": {
+        "growth": "F",
+        "value": "D+",
+        "momentum": "A-",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    }
+  ],
+  "grading": {
+    "asOf": "2026-11-23",
+    "spy1yPct": 5.71,
+    "pool": "25 stocks (this list's picks + bench)",
+    "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
+    "inputs": {
+      "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
+      "value": "Forward P/E, PEG and EV/Sales; lower is better, losses or negative multiples rank worst",
+      "momentum": "1-yr price change minus SPY's (relative strength), 6-month and 3-month price change (Nasdaq daily closes)",
+      "profitability": "Gross, operating, net and free-cash-flow margin (TTM, StockAnalysis)"
+    },
+    "sources": [
+      "https://stockanalysis.com/ (statistics pages)",
+      "https://www.nasdaq.com/ (historical quotes)"
+    ]
+  }
+}

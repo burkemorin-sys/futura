@@ -26,7 +26,7 @@ Search deep dives (data/companies/*.json plus data/spacex.json and data/tesla.js
 Usage:
   python3 scripts/futura_grades.py            # fetch fresh inputs, then grade the lists and the deep dives
   python3 scripts/futura_grades.py --no-fetch # re-grade from the metrics already stored in the JSON
-  python3 scripts/futura_grades.py --only=early  # just one list (growth, riskit, early, experiment, companies; comma-separated)
+  python3 scripts/futura_grades.py --only=early  # just one list (growth, riskit, early, experiment, paperQTRX, paperQGT, paperCQCD, companies; comma-separated)
 """
 import datetime as dt
 import json
@@ -43,6 +43,10 @@ FILES = {"growth": os.path.join(ROOT, "data", "growth-picks.json"), "riskit": os
          "experiment": os.path.join(ROOT, "data", "experiment-screener.json"),
          "piotroski": os.path.join(ROOT, "data", "piotroski.json"), "magic": os.path.join(ROOT, "data", "magic-formula.json"),
          "insider": os.path.join(ROOT, "data", "insider-clusters.json")}
+# Paper-test lists (user-approved Nov 23, 2026; scripts/update_paper_screeners.py). Graded like the others, but kept out
+# of FILES so the Search deep dives never cite them.
+PAPER_FILES = {"paperQTRX": os.path.join(ROOT, "data", "paper-qtrx.json"), "paperQGT": os.path.join(ROOT, "data", "paper-qgt.json"),
+               "paperCQCD": os.path.join(ROOT, "data", "paper-cqcd.json")}
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 LETTERS = [(97, "A+"), (90, "A"), (83, "A-"), (77, "B+"), (70, "B"), (63, "B-"), (57, "C+"), (50, "C"),
            (43, "C-"), (37, "D+"), (30, "D"), (23, "D-"), (0, "F")]
@@ -234,7 +238,7 @@ def main():
         spy1y, _ = change_since(nasdaq_history("SPY", "etf"), 12)
         print(f"SPY 1-yr price change: {spy1y}%")
     only = [a.split("=", 1)[1] for a in sys.argv if a.startswith("--only=")]
-    for key, path in FILES.items():
+    for key, path in {**FILES, **PAPER_FILES}.items():
         if only and key not in only[0].split(","):
             continue
         if not os.path.exists(path):

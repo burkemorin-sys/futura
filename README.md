@@ -222,7 +222,7 @@ Any source that fails gets `"status": "unavailable"` with an error message. Valu
 The SpaceX and Tesla tabs embed free TradingView widgets (symbol quote, advanced chart, headline timeline). They load client-side, need no API key, and may be delayed per exchange rules. When the widgets are offline or blocked, the page falls back to the JSON snapshot.
 
 ## Screeners (`#/screeners`)
-A top-level tab with every stock screener as a sub-tab: Growth, Risk It, Early Inflection, Experiment Screener, Piotroski F-Score, Magic Formula and Insider Buys. The last selected sub-screener is remembered in `localStorage`. Legacy URLs such as `#/growth`, `#/riskit` and `#/early` redirect to `#/screeners?s=<id>`. Each screener's cards, rules and data files are unchanged.
+A top-level tab with every stock screener as a sub-tab: Growth, Risk It, Early Inflection, Experiment Screener, Piotroski F-Score, Magic Formula and Insider Buys, plus three dashed "Paper test" sub-tabs (QTRX, QGT, CQC-D; see below). The last selected sub-screener is remembered in `localStorage`. Legacy URLs such as `#/growth`, `#/riskit` and `#/early` redirect to `#/screeners?s=<id>`. Each screener's cards, rules and data files are unchanged.
 
 ## Commodities (`#/commodities`)
 On the bottom tab bar. A live (or delayed) price tracker for energy, metals and agriculture. Each card is a TradingView mini quote-and-chart widget; tap **Larger chart** to open the advanced chart. Quotes may be delayed. The list is a config array in `js/app.js` (`COMMODITIES`): add a market with one object (`id`, `name`, `symbol`, `unit`, `group`).
@@ -257,6 +257,34 @@ Under More, and linked from the Growth, Risk It and Early Inflection tabs. Each 
 - Maintained by `python3 scripts/update_track_record.py` (stdlib, no keys). It appends real daily closes from Nasdaq's public historical endpoint, detects pick changes against `picks` in growth-picks.json / risk-it.json / early-inflection.json, starts any list that is new to the file at the latest stored close, logs adds/removes with date and price, rebalances, and recomputes `series`, per-pick returns and `hitRate`. Idempotent; never invents prices (a day is skipped until every holding has a real close). `--init` creates the file (refuses to overwrite without `--force`).
 - **Early Inflection shadow test** (user-approved Nov 16, 2026; paper only, never a live list): `scripts/update_early_inflection.py` also writes `data/early-inflection-shadow.json` on every full run, re-ranking the same candidates two ways (A: Trend counts 0–5 instead of 0–10; B: a stock up more than 15% over the prior 3 months loses 5 points, more than 30% loses 10), same exclusions, 3-per-industry cap and 12 picks. `update_track_record.py` tracks them under `shadow.lists.{eiShadowA,eiShadowB}` in track-record.json (kept out of `lists`), with `shadow.comparison` (live EI vs A vs B vs QQQ/SPY since the shadow start, the Nov 13, 2026 close) shown in its own section on `#/track`.
 - Schema: `trackingStart`, `baseDate`, `latestDate`, `method`, `prices{date:{ticker:close}}`, `benchSeries{QQQ,SPY:[[date,value]]}`, `lists.{growth,riskit,early}` with `startDate`, `startPriceDate`, `holdings[]` (entryDate, entryPriceDate, entryPrice, lastPrice, returnPct, qqqPct, spyPct, beatQQQ), `closed[]` (plus exitDate/exitPriceDate/exitPrice), `segments[]` (start, startValue, tickers), `log[]` (start/add/remove/rebalance), `series`, `returnPct`, `vsQQQPct`, `vsSPYPct`, `hitRate`.
+
+## Paper-test screeners (`#/screeners?s=paperqtrx|paperqgt|papercqcd`; user-approved Nov 23, 2026)
+**Paper only: never live lists, never traded.** These are the three screeners from the Nov 23, 2026 research (`/workspace/screener-research/new-screeners.md`, "PHASE 2 UPDATE"), shown as the last three Screeners sub-tabs (dashed, labeled "Paper test"). Each uses the same card format: Follow, letter grades, live/delayed prices, a rule checklist and a score breakdown.
+- **#1 QTRX, Quality + Trend** (`data/paper-qtrx.json`)
+  - Rules: cash quality in the top 40%; price above its 10-month average; 12-month volatility below the 80th percentile; cash-based operating profit above 0; no commodity producers.
+  - Score: 12-1 momentum + quality.
+- **#2 QGT, Quality Growth + Trend** (`data/paper-qgt.json`)
+  - Rules: quality in the top 50%; TTM revenue growth above 8%; cash operating profit above 0; share count up less than 3% a year; no commodity producers; above the 10-month average.
+  - Score: SUE, quarterly revenue growth YoY, gross-margin change, quality and 12-1 momentum.
+- **#3 CQC-D, Cash-Quality Compounders in an uptrend** (`data/paper-cqcd.json`)
+  - Rules: cash operating profit and FCF above 0; share count up less than 2%; at least 6 of 8 quarters profitable; revenue growing; above both the 150-day and 200-day averages.
+  - Score: the cash-quality composite.
+- **Rebuild:** `[ -x /workspace/futura-venv/bin/python ] || python3 -m venv --system-site-packages /workspace/futura-venv; /workspace/futura-venv/bin/python scripts/update_paper_screeners.py`
+  - It needs pandas and numpy, and the venv keeps the system pandas untouched.
+  - It takes about 5 minutes. It downloads SEC's companyfacts.zip (about 1.4 GB, at most once every 20 hours) and Yahoo daily prices into `/workspace/futura-paper-data`.
+- **Universe:** Nasdaq-screener stocks with a SEC us-gaap CIK and a market cap over $2B, priced at $5 or more.
+  - Excluded: Finance, Real Estate, `MINERS` and `CRYPTO_TREASURY`.
+  - Each stock needs 8 contiguous quarters of SEC data, using filings public by the as-of close, with no quarter older than 230 days.
+  - Percentile ranks are taken across that universe.
+- **Selection:** at most 3 picks per industry and 6 semiconductor/hardware names. The top 12 are the picks and the next 13 are the bench.
+- **Holding period:** picks are held for a quarter, as backtested (`portfolio.nextRebalance`, 91 days after formation).
+  - Weekly runs refresh every number but keep the picks; a held pick is replaced only if it leaves the universe.
+  - Use `--rebalance` to force a new list.
+- **Share-change fallback:** multi-class filers have no cover-page share count in SEC's bulk file. For them the share change falls back to diluted weighted-average shares.
+- **Grades:** `futura_grades.py` grades them via `PAPER_FILES`. They're kept out of `FILES`, so Search deep dives never cite them.
+- **Track record:** `update_track_record.py` tracks them under `paper.lists.{paperQTRX,paperQGT,paperCQCD}` in track-record.json, kept out of `lists`.
+  - Each list starts at 100 on the close its first list was screened on (the file's `priceDate`), and only once that close is stored; it never starts on an earlier one.
+  - `paper.comparison` (each vs QQQ/SPY) is shown on `#/track?paper=1`.
 
 ## Letter grades (Growth, Risk It & Early Inflection cards)
 `python3 scripts/futura_grades.py` stores raw inputs in each pick/bench entry's `metrics` and A+..F letters in `grades` (`growth`, `value`, `momentum`, `profitability`) plus `gradeInputs` ("2/3" = inputs available), and a top-level `grading` block. Grades are percentile ranks within that list's pool (picks + bench): Growth = TTM revenue growth + EPS growth forecast (3Y); Value = forward P/E, PEG, EV/Sales (lower better; negative = worst); Momentum = 1-yr price change minus SPY's, 6-mo and 3-mo change; Profitability = gross, operating, net, FCF margin. Input ranks are averaged, re-ranked, and mapped (A+ ≥97th pct … F <23rd). `n/a` when no inputs; `*` when partial. Sources: StockAnalysis statistics pages and Nasdaq historical closes. `--no-fetch` re-grades from stored metrics (run it after editing picks/bench by hand).

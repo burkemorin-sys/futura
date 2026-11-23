@@ -716,13 +716,17 @@
     experiment: { id: "experiment", file: "data/experiment-screener.json", example: null, dismissKey: "expDismissed", sortKey: "expSort", title: "Experiment Screener", sub: "Your 8 rules: ROIC, cash flow, EPS & revenue growth, Stage 2, RSI 50–65", scoreLabel: "Experiment score", banner: "EXPERIMENT", checklistTitle: "Your 8 rules", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("expSort") || "default" } },
     piotroski: { id: "piotroski", file: "data/piotroski.json", example: null, dismissKey: "pioDismissed", sortKey: "pioSort", title: "Piotroski", sub: "F-Score 8–9 among the cheapest fifth by price-to-book", scoreLabel: "F-Score", banner: "VALUE", checklistTitle: "F-Score tests", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("pioSort") || "default" } },
     insider: { id: "insider", file: "data/insider-clusters.json", example: null, dismissKey: "insiderDismissed", sortKey: "insiderSort", title: "Insider Buys", sub: "3+ insiders bought on the open market in 30 days · SEC Form 4", scoreLabel: "Insiders buying", banner: "INSIDERS", checklistTitle: "Who bought", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("insiderSort") || "default" } },
+    // Paper-test screeners (user-approved Nov 23, 2026): paper only, never live lists. Built by scripts/update_paper_screeners.py.
+    paperqtrx: { id: "paperqtrx", paper: true, trackKey: "paperQTRX", file: "data/paper-qtrx.json", example: null, dismissKey: "paperQtrxDismissed", sortKey: "paperQtrxSort", title: "Paper test #1: Quality + Trend", sub: "QTRX · quality in an uptrend · paper only", scoreLabel: "QTRX score", banner: "PAPER TEST", checklistTitle: "Paper-test rules", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("paperQtrxSort") || "default" } },
+    paperqgt: { id: "paperqgt", paper: true, trackKey: "paperQGT", file: "data/paper-qgt.json", example: null, dismissKey: "paperQgtDismissed", sortKey: "paperQgtSort", title: "Paper test #2: Quality Growth + Trend", sub: "QGT · quality growth in an uptrend · paper only", scoreLabel: "QGT score", banner: "PAPER TEST", checklistTitle: "Paper-test rules", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("paperQgtSort") || "default" } },
+    papercqcd: { id: "papercqcd", paper: true, trackKey: "paperCQCD", file: "data/paper-cqcd.json", example: null, dismissKey: "paperCqcdDismissed", sortKey: "paperCqcdSort", title: "Paper test #3: Cash-Quality Compounders", sub: "CQC-D · cash compounders in an uptrend · paper only", scoreLabel: "CQC-D score", banner: "PAPER TEST", checklistTitle: "Paper-test rules", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("paperCqcdSort") || "default" } },
     magic: { id: "magic", file: "data/magic-formula.json", example: null, dismissKey: "magicDismissed", sortKey: "magicSort", title: "Magic Formula", sub: "Greenblatt: high earnings yield + high return on capital", banner: "VALUE", state: { data: null, isExample: false, sector: "All", sort: localStorage.getItem("magicSort") || "default" } },
   };
   let gMode = GROWTH_MODES.growth;
   const growthState = new Proxy({}, { get: (_, k) => gMode.state[k], set: (_, k, v) => { gMode.state[k] = v; return true; } });
   const SORTS = {
     default: { label: "Default order" },
-    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early", "experiment", "piotroski"] },
+    score: { label: "Score", key: (p) => num(p.score), dir: -1, only: ["riskit", "early", "experiment", "piotroski", "paperqtrx", "paperqgt", "papercqcd"] },
     growth: { label: "Revenue growth", key: (p) => pctNum(p.revenueGrowth), dir: -1 },
     upside: { label: "Upside to target", key: (p) => upside(p), dir: -1 },
     peg: { label: "PEG (low → high)", key: (p) => num(p.peg), dir: 1 },
@@ -769,12 +773,15 @@
     { id: "piotroski", short: "F-Score" },
     { id: "magic", short: "Magic" },
     { id: "insider", short: "Insiders" },
+    { id: "paperqtrx", short: "Paper test 1 · QTRX", paper: true },
+    { id: "paperqgt", short: "Paper test 2 · QGT", paper: true },
+    { id: "papercqcd", short: "Paper test 3 · CQC-D", paper: true },
   ];
   function screenerTabsHTML(active) {
     return `<div class="screener-tabs" role="tablist" aria-label="Stock screeners">${SCREENER_TABS.map((t) => {
       const on = t.id === active;
       const label = (GROWTH_MODES[t.id] && GROWTH_MODES[t.id].title) || t.short;
-      return `<a class="chip screener-tab" role="tab" href="#/screeners?s=${t.id}" data-screener-tab="${t.id}" aria-selected="${on}"${on ? ' aria-current="page"' : ""} title="${esc(label)}">${esc(t.short)}</a>`;
+      return `<a class="chip screener-tab${t.paper ? " is-paper" : ""}" role="tab" href="#/screeners?s=${t.id}" data-screener-tab="${t.id}" aria-selected="${on}"${on ? ' aria-current="page"' : ""} title="${esc(label)}">${esc(t.short)}</a>`;
     }).join("")}</div>`;
   }
   function renderScreeners(el, params) {
@@ -849,9 +856,10 @@
       ${isNA(d.disclaimer) ? "" : `<div class="example-banner riskit-note${gMode.id === "early" ? " early-banner" : ""}" role="note">${svg("warn")}<span><strong>${esc(gMode.banner || "SPECULATIVE")}</strong> — ${esc(d.disclaimer)}</span></div>`}
       ${isNA(d.pattern) ? "" : `<section class="panel method ei-pattern"><h2>The LITE 2025 pattern</h2><p>${esc(d.pattern)}</p></section>`}
       ${isNA(d.method) ? "" : `<section class="panel method"><h2>Method</h2><p>${esc(d.method)}</p>${Array.isArray(d.rubric) && d.rubric.length ? rubricHTML(d.rubric) : ""}${isNA(d.dataNotes) ? "" : `<p class="notes">${esc(d.dataNotes)}</p>`}</section>`}
-      <a class="panel track-link" href="#/track?list=${gMode.id}" data-track-link="${gMode.id}">
+      ${gMode.paper ? paperPortfolioHTML(d) : ""}
+      <a class="panel track-link" href="${gMode.paper ? "#/track?paper=1" : `#/track?list=${gMode.id}`}" data-track-link="${gMode.paper ? gMode.trackKey : gMode.id}"${gMode.paper ? ' data-paper="1"' : ""}>
         <span class="home-tile-icon">${svg("chart")}</span>
-        <span class="tl-body"><span class="tl-title">Track record</span><span class="tl-line">How these picks are doing vs QQQ</span></span>
+        <span class="tl-body"><span class="tl-title">${gMode.paper ? "Paper-test track record" : "Track record"}</span><span class="tl-line">How these ${gMode.paper ? "paper " : ""}picks are doing vs QQQ${gMode.paper ? " and SPY" : ""}</span></span>
         <svg class="home-tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </a>
       ${!["growth", "riskit"].includes(gMode.id) ? "" : `<a class="panel track-link ei-link" href="#/early">
@@ -897,6 +905,13 @@
     }
   }
 
+  function paperPortfolioHTML(d) {
+    const pf = d.portfolio || {};
+    return `<section class="panel method paper-port"><h2>Paper portfolio</h2>
+      <p>${esc(d.code || "")} is one of three screeners from the Nov 23, 2026 research (ranked #${esc(d.rankInStudy || "?")} of 3), tracked on paper only. Formed ${esc(fmtShortDate(pf.formedOn))} from the ${esc(fmtShortDate(pf.formedPriceDate))} close; as backtested, the ${esc((pf.tickers || []).length)} picks are held until the next quarterly rebalance (${esc(fmtShortDate(pf.nextRebalance))}). Weekly refreshes update prices, grades and rule checks in between.</p>
+      ${isNA(d.backtest) ? "" : `<p class="notes">${esc(d.backtest)}</p>`}
+    </section>`;
+  }
   function growthDismissed() { try { const a = JSON.parse(localStorage.getItem(gMode.dismissKey) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
   function growthSetDismissed(a) { try { localStorage.setItem(gMode.dismissKey, JSON.stringify([...new Set(a)])); } catch (e) { /* ignore */ } }
 
@@ -991,6 +1006,7 @@
           <div class="tags">
             ${tick ? `<span class="tag ticker">${esc(tick)}</span>` : `<span class="tag ticker na">n/a</span>`}
             ${isNA(p.sector) ? "" : `<span class="tag sector">${esc(p.sector)}</span>`}
+            ${gMode.paper ? `<span class="tag paper">Paper test</span>` : ""}
             ${p.riskLevel ? `<span class="tag risk-lvl${/very/i.test(p.riskLevel) ? " very" : ""}">${esc(p.riskLevel)} risk</span>` : ""}
             ${(Array.isArray(p.alsoIn) ? p.alsoIn : []).map((l) => `<span class="tag also">Also in ${esc(l)}</span>`).join("")}
             ${tick ? followToggleHTML(tick, { compact: true }) : ""}
@@ -1041,6 +1057,15 @@
     if (!a) return;
     try {
       const d = await loadTrack();
+      if (a.dataset.paper) {
+        const P = d.paper && d.paper.lists && d.paper.lists[a.dataset.trackLink];
+        if (!a.isConnected) return;
+        if (!P) { a.querySelector(".tl-line").textContent = `Starts at the ${fmtShortDate((growthState.data && growthState.data.priceDate) || "")} close; first numbers after the next daily refresh`; return; }
+        const row = (d.paper.comparison || []).find((r) => r.key === a.dataset.trackLink) || {};
+        const pd = Math.max(0, (P.series || []).length - 1);
+        a.querySelector(".tl-line").innerHTML = `Since the ${esc(fmtShortDate(P.startPriceDate).replace(/, \d{4}$/, ""))} close: <span class="${retTone(row.returnPct)}">${esc(fmtRet(row.returnPct))}</span> · vs QQQ <span class="${retTone(row.vsQQQPct)}">${esc(fmtRet(row.vsQQQPct).replace("%", " pts"))}</span> · ${pd} trading day${pd === 1 ? "" : "s"}`;
+        return;
+      }
       const L = d.lists && d.lists[a.dataset.trackLink];
       const q = d.benchSeries && d.benchSeries.QQQ;
       if (!L || !q || !a.isConnected) return;
@@ -1170,6 +1195,50 @@
       </section>`;
     })();
 
+    // Paper-test screeners QTRX / QGT / CQC-D (user-approved Nov 23, 2026); never live lists.
+    const PAPER_META = { paperQTRX: ["#1 QTRX · Quality + Trend", "l-p1", "paperqtrx"], paperQGT: ["#2 QGT · Quality Growth + Trend", "l-p2", "paperqgt"], paperCQCD: ["#3 CQC-D · Cash-Quality Compounders", "l-p3", "papercqcd"] };
+    const paperHTML = (() => {
+      const P = d.paper;
+      const head = sectionHead("trpaper", "Paper-test screeners", `<span class="range">Paper test, not live lists</span>`);
+      if (!P || !P.lists || !Object.keys(P.lists).length || !P.comparison) {
+        return `<section class="group paper-test" id="paper-test" aria-labelledby="h-trpaper">${head}
+          <div class="example-banner shadow-note" role="note">${svg("warn")}<span><strong>PAPER TEST, NOT LIVE LISTS</strong>: QTRX, QGT and CQC-D start at 100 on the close their first lists were screened on (<span data-paper-start>the latest close</span>). The first numbers appear after the next daily refresh stores that close.</span></div>
+          <div class="panel pad"><p class="fineprint">${Object.entries(PAPER_META).map(([, m]) => `<a href="#/screeners?s=${m[2]}">${esc(m[0])}</a>`).join(" · ")}</p></div></section>`;
+      }
+      const pDays = Math.max(0, ((P.series && P.series.QQQ) || []).length - 1);
+      const cmpRows = P.comparison.map((r) => `<tr>
+          <th scope="row">${r.benchmark ? esc(r.label) : `<a href="#/screeners?s=${esc((PAPER_META[r.key] || [])[2] || "")}">${esc((PAPER_META[r.key] || [r.label])[0].split(" · ")[0])}</a>`}<span class="row-note">${r.benchmark ? "benchmark" : "paper only"}</span></th>
+          <td data-label="Return" class="${retTone(r.returnPct)}">${esc(fmtRet(r.returnPct))}</td>
+          <td data-label="vs QQQ" class="${retTone(r.vsQQQPct)}">${r.benchmark ? "–" : esc(fmtRet(r.vsQQQPct).replace("%", " pts"))}</td>
+          <td data-label="vs SPY" class="${retTone(r.vsSPYPct)}">${r.benchmark ? "–" : esc(fmtRet(r.vsSPYPct).replace("%", " pts"))}</td>
+        </tr>`).join("");
+      const pLines = Object.entries(P.series || {}).filter(([k]) => PAPER_META[k] || k === "QQQ" || k === "SPY")
+        .map(([k, pts]) => ({ label: PAPER_META[k] ? PAPER_META[k][0].split(" · ")[0] : k, cls: PAPER_META[k] ? PAPER_META[k][1] : k === "QQQ" ? "l-qqq" : "l-spy", points: pts }));
+      const pDates = ((P.series && P.series.QQQ) || []).map((p) => p[0]);
+      const lists = Object.entries(P.lists).map(([k, S]) => {
+        const hr = (S.holdings || []).slice().sort((a, b) => (b.returnPct ?? -1e9) - (a.returnPct ?? -1e9)).map((h) => `<tr>
+          <th scope="row"><a href="#/search?t=${esc(h.ticker)}" class="tr-tick">${esc(h.ticker)}</a><span class="row-note">${esc(h.company || "")}</span></th>
+          <td data-label="Entry">${esc(money(h.entryPrice))}</td>
+          <td data-label="Last close">${esc(money(h.lastPrice))}</td>
+          <td data-label="Return" class="${retTone(h.returnPct)}">${esc(fmtRet(h.returnPct))}</td>
+          <td data-label="Today"><span class="lq lq-mini" data-lq="${esc(h.ticker)}"><span class="chg"></span></span></td></tr>`).join("");
+        return `<details class="panel paper-list"><summary><b>${esc((PAPER_META[k] || [S.label])[0])}</b> <span class="row-note">${(S.holdings || []).length} paper picks · ${esc(fmtRet(((P.comparison.find((r) => r.key === k)) || {}).returnPct))}</span></summary>
+          <div class="table-wrap"><table class="fin tr-table"><thead><tr><th scope="col">Pick</th><th scope="col">Entry (${esc(fmtShortDate(S.startPriceDate).replace(/, \d{4}$/, ""))})</th><th scope="col">Last close</th><th scope="col">Return</th><th scope="col">Today</th></tr></thead><tbody>${hr}</tbody></table></div>
+          ${(S.closed || []).length ? `<p class="fineprint">Removed: ${S.closed.map((c) => `${esc(c.ticker)} ${esc(fmtRet(c.returnPct))}`).join(", ")}</p>` : ""}</details>`;
+      }).join("");
+      return `<section class="group paper-test" id="paper-test" aria-labelledby="h-trpaper">
+        ${head}
+        <div class="example-banner shadow-note" role="note">${svg("warn")}<span><strong>PAPER TEST, NOT LIVE LISTS</strong>: the three screeners from the Nov 23, 2026 research, started ${esc(fmtShortDate(P.startDate))} and measured from the ${esc(fmtShortDate(P.startPriceDate))} close. Nothing is traded and the live screeners are unchanged. ${pDays} trading day${pDays === 1 ? "" : "s"} so far: the backtests held each list for a quarter, so judge them over months, not weeks.</span></div>
+        <div class="panel pad"><div class="table-wrap"><table class="fin tr-table">
+          <thead><tr><th scope="col">Since ${esc(fmtShortDate(P.startPriceDate).replace(/, \d{4}$/, ""))}</th><th scope="col">Return</th><th scope="col">vs QQQ</th><th scope="col">vs SPY</th></tr></thead>
+          <tbody>${cmpRows}</tbody></table></div>
+          ${pDates.length > 1 ? `<div class="tc-legend">${pLines.map((l) => { const last = l.points.length ? l.points[l.points.length - 1][1] - 100 : null; return `<span class="tc-key ${l.cls}"><i></i>${esc(l.label)} <b class="${retTone(last)}">${esc(fmtRet(last))}</b></span>`; }).join("")}</div>${trackChartSVG(pLines, pDates)}` : `<p class="fineprint top">The chart appears after the first trading day.</p>`}
+          <p class="fineprint">Equal weight across each list's 12 paper picks, buy-and-hold, rebalanced to equal weight whenever picks change (quarterly, as backtested). Price returns only, Nasdaq daily closes, no costs. Same exclusions as the live screeners (no bitcoin miners or crypto-treasury companies).</p>
+        </div>
+        <div style="margin-top:12px">${lists}</div>
+      </section>`;
+    })();
+
     el.innerHTML = `
       ${hero("Track record", "Picks vs QQQ", `<span>${svg("clock")}Tracking since ${esc(fmtShortDate(d.trackingStart))}</span><span>${svg("chart")}Last close ${esc(fmtShortDate(d.latestDate))}</span>`)}
       <div class="example-banner early-note" role="note">${svg("warn")}<span><strong>EARLY DAYS</strong>: tracking started Oct 7, 2026, from the ${esc(fmtShortDate(d.baseDate))} close${d.lists.early && d.lists.early.startPriceDate ? ` (Early Inflection joined from the ${esc(fmtShortDate(d.lists.early.startPriceDate))} close, indexed to 100 on its own start)` : ""}${d.lists.experiment && d.lists.experiment.startPriceDate ? ` Experiment Screener joined from the ${esc(fmtShortDate(d.lists.experiment.startPriceDate))} close.` : ""}. With ${days} trading day${days === 1 ? "" : "s"} of data these numbers are mostly noise. Give it several months before reading anything into them.</span></div>
@@ -1181,6 +1250,7 @@
         <p class="fineprint top">Daily closes only. The chart gets a new point each morning after the refresh.</p>
       </section>
       ${shadowHTML}
+      ${paperHTML}
       <section class="group" aria-labelledby="h-trpicks">
         ${sectionHead("trpicks", `${L.label} picks`, `<span class="range">${(L.holdings || []).length} held</span>`)}
         <div class="panel pad"><div class="table-wrap"><table class="fin tr-table">
@@ -1200,6 +1270,9 @@
       history.replaceState(null, "", `#/track?list=${trackState.list}`);
       renderTrack(el, { list: trackState.list }).then(() => window.scrollTo(0, y));
     }));
+    const ps = el.querySelector("[data-paper-start]");
+    if (ps) getJSON("data/paper-qtrx.json").then((p) => { if (p && p.priceDate && ps.isConnected) ps.textContent = `the ${fmtShortDate(p.priceDate)} close`; }).catch(() => {});
+    if (params.paper) { const sec = el.querySelector("#paper-test"); if (sec) sec.scrollIntoView({ block: "start" }); }
     watchLive(el);
   }
 

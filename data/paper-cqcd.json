@@ -1,0 +1,3417 @@
+{
+  "schemaVersion": 1,
+  "paperTest": true,
+  "status": "PAPER TEST, not a live list",
+  "lastUpdated": "2026-11-23",
+  "asOf": "2026-11-23",
+  "priceDate": "2026-11-23",
+  "title": "Paper test #3: Cash-Quality Compounders in an uptrend (CQC-D)",
+  "code": "CQC-D",
+  "rankInStudy": 3,
+  "method": "Steady cash compounders (profitable, FCF-positive, not diluting) trading above their 150- and 200-day averages. Universe: US-listed stocks over $2B with SEC us-gaap filings (870 stocks; 258 pass every rule), excluding financials, real estate, bitcoin miners and crypto-treasury companies. Percentile ranks are across that universe. Picks are the top 12 in score order with at most 3 per industry and 6 semiconductor/hardware names; the next 13 are backups. As backtested, picks are held for a quarter: weekly refreshes update the numbers, and the list is rebuilt at the quarterly rebalance (next: 2027-02-22).",
+  "rubric": [
+    {
+      "component": "Cash-based operating profit above zero",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Free cash flow (TTM) above zero",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Share count up less than 2% in 12 months",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Profitable in at least 6 of the last 8 quarters",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Revenue growing (TTM)",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Price above its 150-day average",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Price above its 200-day average",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Score",
+      "points": "rank",
+      "how": "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals."
+    }
+  ],
+  "dataNotes": "Fundamentals: SEC XBRL companyfacts, originally filed values, filings public by the 2026-11-23 close; quarters older than 230 days are ignored. Prices: Yahoo daily adjusted closes (month-end closes for the 10-month average, momentum and volatility; daily closes for the 150/200-day averages). Forward P/E, PEG, analysts and targets: StockAnalysis. Same code as the Nov 23, 2026 backtest harness.",
+  "backtest": "Backtest 2012–Nov 2026: +0.5 to +0.7%/yr vs the same-universe equal-weight basket, Sharpe about 0.8, max drawdown about −30%; the only one of the three ahead of that basket in 2026. Least overlap with #1/#2 (27–35%). The 150/200-day gate is supported by 2012–26 data only; on 1975–2025 data plain cash quality did slightly better.",
+  "disclaimer": "Paper test only (user-approved Nov 23, 2026): not a live list, nothing is traded, and the live screeners are unchanged. Backtests overstate future returns. Not financial advice.",
+  "portfolio": {
+    "formedOn": "2026-11-23",
+    "formedPriceDate": "2026-11-23",
+    "nextRebalance": "2027-02-22",
+    "tickers": [
+      "EXEL",
+      "DOCU",
+      "EAT",
+      "QLYS",
+      "DBX",
+      "HALO",
+      "CART",
+      "PGNY",
+      "IDXX",
+      "JKHY",
+      "MTCH",
+      "MPC"
+    ],
+    "log": [
+      "Formed on 2026-11-23 from the 2026-11-23 close"
+    ]
+  },
+  "universe": {
+    "nasdaqRows": 7300,
+    "screened": 870,
+    "passers": 258
+  },
+  "excluded": {
+    "sectors": [
+      "Finance",
+      "Real Estate"
+    ],
+    "miners": [
+      "ABTC",
+      "AIRE",
+      "ARBK",
+      "BITF",
+      "BMNR",
+      "BTBT",
+      "BTCM",
+      "BTDR",
+      "BTOG",
+      "CAN",
+      "CANG",
+      "CIFR",
+      "CLSK",
+      "CORZ",
+      "DGHI",
+      "DMGI",
+      "FUFU",
+      "GPUS",
+      "GREE",
+      "GRYP",
+      "HIVE",
+      "HUT",
+      "IREN",
+      "LMFA",
+      "MARA",
+      "MIGI",
+      "NCPL",
+      "RIOT",
+      "SAI",
+      "SDIG",
+      "SLNH",
+      "SOS",
+      "USBC",
+      "WULF"
+    ],
+    "cryptoTreasury": [
+      "ASST",
+      "BMNR",
+      "BNC",
+      "BTCS",
+      "CEP",
+      "DFDV",
+      "ETHM",
+      "ETHZ",
+      "FGNX",
+      "HSDT",
+      "MSTR",
+      "NAKA",
+      "SBET",
+      "SMLR",
+      "STSS",
+      "TRON",
+      "UPXI",
+      "XXI"
+    ]
+  },
+  "picks": [
+    {
+      "company": "Exelixis Inc.",
+      "ticker": "EXEL",
+      "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
+      "price": 66.82,
+      "priceDate": "2026-11-23",
+      "marketCap": "$16.3B",
+      "forwardPE": 16.54,
+      "peg": 1.43,
+      "revenueGrowth": "+9.1% YoY (TTM; latest quarter +10.2%)",
+      "score": 93,
+      "paperRank": 1,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 44.0%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.2B (FCF / assets 43.5%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-9.0% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +9.1% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+18.8% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+26.1% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "93th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "44%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-9.0%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+19%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+26%"
+        }
+      ],
+      "drivers": [
+        "Score 93/100 → #1 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 93th percentile: cash op. profit/assets 44.0%, FCF/assets 43.5%, accruals -10.8%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-10-02 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (17 analysts)",
+      "priceTarget": 61.36,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000939767.json",
+        "https://stockanalysis.com/stocks/exel/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0912,
+        "rev_gq": 0.1019,
+        "gm_chg": -0.0036,
+        "sue": 0.9383,
+        "cbop": 0.4396,
+        "oprd": 0.6888,
+        "fcf_a": 0.4351,
+        "accruals": -0.1079,
+        "sh_g12": -0.0899,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.571,
+        "vol12": 0.2561,
+        "sma10": 0.2406,
+        "pct150": 0.1875,
+        "pct200": 0.2614
+      },
+      "grades": {
+        "growth": "B",
+        "value": "D",
+        "momentum": "A",
+        "profitability": "A+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "DocuSign Inc.",
+      "ticker": "DOCU",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 77.04,
+      "priceDate": "2026-11-23",
+      "marketCap": "$14.4B",
+      "forwardPE": 15.7,
+      "peg": 1.06,
+      "revenueGrowth": "+8.6% YoY (TTM; latest quarter +9.4%)",
+      "score": 93,
+      "paperRank": 2,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 33.5%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.2B (FCF / assets 30.3%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-7.1% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +8.6% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+28.4% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+36.2% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "93th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "30%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-7.1%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+28%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+36%"
+        }
+      ],
+      "drivers": [
+        "Score 93/100 → #2 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 93th percentile: cash op. profit/assets 33.5%, FCF/assets 30.3%, accruals -25.1%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-07-31 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 54% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (19 analysts)",
+      "priceTarget": 73.93,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001261333.json",
+        "https://stockanalysis.com/stocks/docu/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0859,
+        "rev_gq": 0.0938,
+        "gm_chg": 0.0015,
+        "sue": 0.0692,
+        "cbop": 0.3347,
+        "oprd": 0.2683,
+        "fcf_a": 0.303,
+        "accruals": -0.2513,
+        "sh_g12": -0.0706,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.1849,
+        "vol12": 0.5422,
+        "sma10": 0.3217,
+        "pct150": 0.2844,
+        "pct200": 0.3618
+      },
+      "grades": {
+        "growth": "C+",
+        "value": "C+",
+        "momentum": "B-",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Brinker International Inc.",
+      "ticker": "EAT",
+      "sector": "Consumer Discretionary – Restaurants",
+      "price": 190.16,
+      "priceDate": "2026-11-23",
+      "marketCap": "$7.9B",
+      "forwardPE": 13.25,
+      "peg": 0.74,
+      "revenueGrowth": "+6.1% YoY (TTM; latest quarter +9.4%)",
+      "score": 91,
+      "paperRank": 3,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 30.5%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $601M (FCF / assets 21.9%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-6.5% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +6.1% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+1.5% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+7.1% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "91th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "22%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-6.5%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+2%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+7%"
+        }
+      ],
+      "drivers": [
+        "Score 91/100 → #3 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 91th percentile: cash op. profit/assets 30.5%, FCF/assets 21.9%, accruals -12.3%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-23 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (23 analysts)",
+      "priceTarget": 263.36,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000703351.json",
+        "https://stockanalysis.com/stocks/eat/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0607,
+        "rev_gq": 0.0937,
+        "gm_chg": -0.0042,
+        "sue": 0.8372,
+        "cbop": 0.3052,
+        "oprd": 0.2379,
+        "fcf_a": 0.219,
+        "accruals": -0.1228,
+        "sh_g12": -0.065,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.3797,
+        "vol12": 0.4371,
+        "sma10": 0.0614,
+        "pct150": 0.0152,
+        "pct200": 0.0709
+      },
+      "grades": {
+        "growth": "C",
+        "value": "A-",
+        "momentum": "C",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Qualys Inc.",
+      "ticker": "QLYS",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 197.69,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.9B",
+      "forwardPE": 22.89,
+      "peg": 2.98,
+      "revenueGrowth": "+10.4% YoY (TTM; latest quarter +10.7%)",
+      "score": 90,
+      "paperRank": 4,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 30.0%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $324M (FCF / assets 29.3%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-2.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +10.4% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+27.7% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+41.8% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "90th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "29%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-2.6%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+28%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+42%"
+        }
+      ],
+      "drivers": [
+        "Score 90/100 → #4 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 90th percentile: cash op. profit/assets 30.0%, FCF/assets 29.3%, accruals -10.7%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 61% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (22 analysts)",
+      "priceTarget": 196.81,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001107843.json",
+        "https://stockanalysis.com/stocks/qlys/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1043,
+        "rev_gq": 0.1069,
+        "gm_chg": 0.0081,
+        "sue": 3.6762,
+        "cbop": 0.3001,
+        "oprd": 0.3312,
+        "fcf_a": 0.2929,
+        "accruals": -0.1074,
+        "sh_g12": -0.0265,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.5912,
+        "vol12": 0.6119,
+        "sma10": 0.3597,
+        "pct150": 0.2774,
+        "pct200": 0.4184
+      },
+      "grades": {
+        "growth": "D",
+        "value": "F",
+        "momentum": "B",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Dropbox Inc.",
+      "ticker": "DBX",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 35.37,
+      "priceDate": "2026-11-23",
+      "marketCap": "$7.6B",
+      "forwardPE": 10.42,
+      "peg": 1.81,
+      "revenueGrowth": "+0.2% YoY (TTM; latest quarter +0.5%)",
+      "score": 89,
+      "paperRank": 5,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 33.3%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $915M (FCF / assets 32.5%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-15.1% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +0.2% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+12.5% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+19.2% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "89th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "33%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-15.1%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+12%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+19%"
+        }
+      ],
+      "drivers": [
+        "Score 89/100 → #5 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 89th percentile: cash op. profit/assets 33.3%, FCF/assets 32.5%, accruals -17.9%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Sell (8 analysts)",
+      "priceTarget": 35.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001467623.json",
+        "https://stockanalysis.com/stocks/dbx/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0024,
+        "rev_gq": 0.0046,
+        "gm_chg": -0.0071,
+        "sue": 0.3259,
+        "cbop": 0.3331,
+        "oprd": 0.5043,
+        "fcf_a": 0.3251,
+        "accruals": -0.1785,
+        "sh_g12": -0.1509,
+        "eps_up8": 5.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2132,
+        "vol12": 0.2979,
+        "sma10": 0.1807,
+        "pct150": 0.125,
+        "pct200": 0.1915
+      },
+      "grades": {
+        "growth": "F",
+        "value": "B-",
+        "momentum": "D-",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Halozyme Therapeutics Inc.",
+      "ticker": "HALO",
+      "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
+      "price": 94.07,
+      "priceDate": "2026-11-23",
+      "marketCap": "$10.7B",
+      "forwardPE": 8.99,
+      "peg": "n/a",
+      "revenueGrowth": "+45.0% YoY (TTM; latest quarter +39.2%)",
+      "score": 89,
+      "paperRank": 6,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 31.5%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $886M (FCF / assets 31.1%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-3.1% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "7 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +45.0% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+2.4% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+9.4% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "89th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "31%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-3.1%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "7/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+2%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+9%"
+        }
+      ],
+      "drivers": [
+        "Score 89/100 → #6 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 89th percentile: cash op. profit/assets 31.5%, FCF/assets 31.1%, accruals -14.5%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 51% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (9 analysts)",
+      "priceTarget": 120.11,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001159036.json",
+        "https://stockanalysis.com/stocks/halo/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.4503,
+        "rev_gq": 0.3915,
+        "gm_chg": -0.0228,
+        "sue": 0.6178,
+        "cbop": 0.3155,
+        "oprd": 0.2765,
+        "fcf_a": 0.3111,
+        "accruals": -0.145,
+        "sh_g12": -0.0305,
+        "eps_up8": 7.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.8335,
+        "vol12": 0.5071,
+        "sma10": 0.085,
+        "pct150": 0.0238,
+        "pct200": 0.0944
+      },
+      "grades": {
+        "growth": "A+",
+        "value": "C+",
+        "momentum": "D+",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Maplebear Inc.",
+      "ticker": "CART",
+      "sector": "Consumer Discretionary – Business Services",
+      "price": 56.94,
+      "priceDate": "2026-11-23",
+      "marketCap": "$13.5B",
+      "forwardPE": 20.93,
+      "peg": 0.83,
+      "revenueGrowth": "+14.2% YoY (TTM; latest quarter +16.6%)",
+      "score": 88,
+      "paperRank": 7,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 31.2%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.2B (FCF / assets 29.8%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-9.9% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +14.2% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+20.3% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+26.7% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "88th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "30%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-9.9%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+20%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+27%"
+        }
+      ],
+      "drivers": [
+        "Score 88/100 → #7 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 88th percentile: cash op. profit/assets 31.2%, FCF/assets 29.8%, accruals -19.3%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 49% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (29 analysts)",
+      "priceTarget": 62.29,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001579091.json",
+        "https://stockanalysis.com/stocks/cart/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.142,
+        "rev_gq": 0.1661,
+        "gm_chg": -0.0234,
+        "sue": 0.0282,
+        "cbop": 0.3124,
+        "oprd": 0.327,
+        "fcf_a": 0.2981,
+        "accruals": -0.1934,
+        "sh_g12": -0.0987,
+        "eps_up8": 5.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.3437,
+        "vol12": 0.4854,
+        "sma10": 0.2484,
+        "pct150": 0.2033,
+        "pct200": 0.2665
+      },
+      "grades": {
+        "growth": "B+",
+        "value": "C",
+        "momentum": "B",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Progyny Inc.",
+      "ticker": "PGNY",
+      "sector": "Health Care – Misc Health and Biotechnology Services",
+      "price": 35.53,
+      "priceDate": "2026-11-23",
+      "marketCap": "$2.6B",
+      "forwardPE": 15.16,
+      "peg": 1.0,
+      "revenueGrowth": "+5.5% YoY (TTM; latest quarter +8.9%)",
+      "score": 87,
+      "paperRank": 8,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 28.2%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $180M (FCF / assets 24.4%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-14.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +5.5% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+29.4% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+40.9% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "87th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "24%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-14.6%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+29%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+41%"
+        }
+      ],
+      "drivers": [
+        "Score 87/100 → #9 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 87th percentile: cash op. profit/assets 28.2%, FCF/assets 24.4%, accruals -15.8%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 60% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (12 analysts)",
+      "priceTarget": 37.75,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001551306.json",
+        "https://stockanalysis.com/stocks/pgny/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0552,
+        "rev_gq": 0.0891,
+        "gm_chg": 0.0194,
+        "sue": 2.3776,
+        "cbop": 0.2817,
+        "oprd": 0.1877,
+        "fcf_a": 0.2442,
+        "accruals": -0.1579,
+        "sh_g12": -0.1457,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.1069,
+        "vol12": 0.6031,
+        "sma10": 0.3973,
+        "pct150": 0.2939,
+        "pct200": 0.4092
+      },
+      "grades": {
+        "growth": "F",
+        "value": "B",
+        "momentum": "A",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "IDEXX Laboratories Inc.",
+      "ticker": "IDXX",
+      "sector": "Health Care – Biotechnology: In Vitro & In Vivo Diagnostic Substances",
+      "price": 687.02,
+      "priceDate": "2026-11-23",
+      "marketCap": "$54.1B",
+      "forwardPE": 41.96,
+      "peg": 2.76,
+      "revenueGrowth": "+11.9% YoY (TTM; latest quarter +9.9%)",
+      "score": 87,
+      "paperRank": 9,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 40.0%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.3B (FCF / assets 36.8%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-1.3% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +11.9% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+21.6% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+19.8% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "87th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "37%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-1.3%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+22%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+20%"
+        }
+      ],
+      "drivers": [
+        "Score 87/100 → #10 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 87th percentile: cash op. profit/assets 40.0%, FCF/assets 36.8%, accruals -6.7%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (14 analysts)",
+      "priceTarget": 717.17,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000874716.json",
+        "https://stockanalysis.com/stocks/idxx/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1187,
+        "rev_gq": 0.0986,
+        "gm_chg": 0.01,
+        "sue": 2.004,
+        "cbop": 0.4,
+        "oprd": 0.4999,
+        "fcf_a": 0.3676,
+        "accruals": -0.0667,
+        "sh_g12": -0.0133,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": -0.2679,
+        "vol12": 0.3422,
+        "sma10": 0.1957,
+        "pct150": 0.2164,
+        "pct200": 0.1975
+      },
+      "grades": {
+        "growth": "B-",
+        "value": "F",
+        "momentum": "C-",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Jack Henry & Associates Inc.",
+      "ticker": "JKHY",
+      "sector": "Technology – EDP Services",
+      "price": 171.62,
+      "priceDate": "2026-11-23",
+      "marketCap": "$11.9B",
+      "forwardPE": 22.95,
+      "peg": 2.09,
+      "revenueGrowth": "+7.5% YoY (TTM; latest quarter +8.8%)",
+      "score": 86,
+      "paperRank": 10,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 25.7%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $717M (FCF / assets 23.0%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-3.8% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +7.5% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+13.5% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+12.0% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "86th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "23%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-3.8%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+14%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+12%"
+        }
+      ],
+      "drivers": [
+        "Score 86/100 → #11 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 86th percentile: cash op. profit/assets 25.7%, FCF/assets 23.0%, accruals -9.1%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (21 analysts)",
+      "priceTarget": 200.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000779152.json",
+        "https://stockanalysis.com/stocks/jkhy/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0753,
+        "rev_gq": 0.0881,
+        "gm_chg": 0.0029,
+        "sue": 1.6001,
+        "cbop": 0.2572,
+        "oprd": 0.2694,
+        "fcf_a": 0.2299,
+        "accruals": -0.0908,
+        "sh_g12": -0.0381,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": -0.0613,
+        "vol12": 0.3108,
+        "sma10": 0.1149,
+        "pct150": 0.1352,
+        "pct200": 0.1204
+      },
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "D",
+        "profitability": "C-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Match Group Inc.",
+      "ticker": "MTCH",
+      "sector": "Technology – Computer Software: Programming Data Processing",
+      "price": 40.33,
+      "priceDate": "2026-11-23",
+      "marketCap": "$9.2B",
+      "forwardPE": 13.95,
+      "peg": 0.83,
+      "revenueGrowth": "+0.5% YoY (TTM; latest quarter -2.5%)",
+      "score": 86,
+      "paperRank": 11,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 27.7%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.1B (FCF / assets 26.1%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-3.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +0.5% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+3.5% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+9.0% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "86th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "26%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-3.6%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+4%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+9%"
+        }
+      ],
+      "drivers": [
+        "Score 86/100 → #12 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 86th percentile: cash op. profit/assets 27.7%, FCF/assets 26.1%, accruals -11.2%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Latest quarter revenue -2.5% YoY",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (19 analysts)",
+      "priceTarget": 45.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000891103.json",
+        "https://stockanalysis.com/stocks/mtch/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0049,
+        "rev_gq": -0.0252,
+        "gm_chg": 0.0353,
+        "sue": 0.7172,
+        "cbop": 0.2768,
+        "oprd": 0.3424,
+        "fcf_a": 0.261,
+        "accruals": -0.1117,
+        "sh_g12": -0.0362,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2713,
+        "vol12": 0.2514,
+        "sma10": 0.0809,
+        "pct150": 0.0354,
+        "pct200": 0.0901
+      },
+      "grades": {
+        "growth": "F",
+        "value": "B",
+        "momentum": "F",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Marathon Petroleum Corporation",
+      "ticker": "MPC",
+      "sector": "Energy – Integrated oil Companies",
+      "price": 357.69,
+      "priceDate": "2026-11-23",
+      "marketCap": "$97.4B",
+      "forwardPE": 5.14,
+      "peg": 0.11,
+      "revenueGrowth": "+31.2% YoY (TTM; latest quarter +61.0%)",
+      "score": 83,
+      "paperRank": 12,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 27.2%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $20.8B (FCF / assets 22.4%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-9.4% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "7 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +31.2% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+6.8% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+17.0% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "83th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "22%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-9.4%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "7/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+7%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+17%"
+        }
+      ],
+      "drivers": [
+        "Score 83/100 → #15 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 83th percentile: cash op. profit/assets 27.2%, FCF/assets 22.4%, accruals -11.4%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Up 132% over the 12 months to last month: momentum names can reverse hard (Jul–Nov 2026 quality/momentum lists fell 15–33%)",
+        "Volatile: 47% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (18 analysts)",
+      "priceTarget": 452.18,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001510295.json",
+        "https://stockanalysis.com/stocks/mpc/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.3117,
+        "rev_gq": 0.6097,
+        "gm_chg": 0.0682,
+        "sue": 2.5247,
+        "cbop": 0.2719,
+        "oprd": 0.2355,
+        "fcf_a": 0.2244,
+        "accruals": -0.1143,
+        "sh_g12": -0.0942,
+        "eps_up8": 5.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 1.3223,
+        "vol12": 0.4725,
+        "sma10": 0.1657,
+        "pct150": 0.0685,
+        "pct200": 0.1696
+      },
+      "grades": {
+        "growth": "A",
+        "value": "A+",
+        "momentum": "A-",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    }
+  ],
+  "bench": [
+    {
+      "company": "GoDaddy Inc.",
+      "ticker": "GDDY",
+      "sector": "Technology – EDP Services",
+      "price": 101.78,
+      "priceDate": "2026-11-23",
+      "marketCap": "$12.3B",
+      "forwardPE": 11.57,
+      "peg": 0.62,
+      "revenueGrowth": "+6.4% YoY (TTM; latest quarter +6.0%)",
+      "score": 83,
+      "paperRank": 13,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 22.3%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.7B (FCF / assets 21.9%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-10.3% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +6.4% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+7.2% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+9.8% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "83th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "22%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-10.3%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+7%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+10%"
+        }
+      ],
+      "drivers": [
+        "Score 83/100 → #16 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 83th percentile: cash op. profit/assets 22.3%, FCF/assets 21.9%, accruals -10.2%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (18 analysts)",
+      "priceTarget": 118.94,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001609711.json",
+        "https://stockanalysis.com/stocks/gddy/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0638,
+        "rev_gq": 0.0605,
+        "gm_chg": 0.0015,
+        "sue": 3.2491,
+        "cbop": 0.223,
+        "oprd": 0.1677,
+        "fcf_a": 0.2195,
+        "accruals": -0.102,
+        "sh_g12": -0.1026,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": -0.0831,
+        "vol12": 0.4204,
+        "sma10": 0.1033,
+        "pct150": 0.072,
+        "pct200": 0.0984
+      },
+      "rank": 1,
+      "grades": {
+        "growth": "C-",
+        "value": "B+",
+        "momentum": "F",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "RingCentral Inc.",
+      "ticker": "RNG",
+      "sector": "Technology – EDP Services",
+      "price": 69.42,
+      "priceDate": "2026-11-23",
+      "marketCap": "$5.6B",
+      "forwardPE": 12.98,
+      "peg": 0.61,
+      "revenueGrowth": "+5.5% YoY (TTM; latest quarter +5.9%)",
+      "score": 82,
+      "paperRank": 14,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 41.1%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $667M (FCF / assets 39.2%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-4.7% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "6 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +5.5% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+18.7% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+31.2% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "82th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "39%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-4.7%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "6/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+19%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+31%"
+        }
+      ],
+      "drivers": [
+        "Score 82/100 → #17 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 82th percentile: cash op. profit/assets 41.1%, FCF/assets 39.2%, accruals -2.2%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Up 190% over the 12 months to last month: momentum names can reverse hard (Jul–Nov 2026 quality/momentum lists fell 15–33%)",
+        "Volatile: 64% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (14 analysts)",
+      "priceTarget": 97.86,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001384905.json",
+        "https://stockanalysis.com/stocks/rng/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0546,
+        "rev_gq": 0.0585,
+        "gm_chg": 0.0106,
+        "sue": 2.9823,
+        "cbop": 0.4109,
+        "oprd": 0.3095,
+        "fcf_a": 0.392,
+        "accruals": -0.0217,
+        "sh_g12": -0.0465,
+        "eps_up8": 8.0,
+        "ni_pos8": 6.0,
+        "mom12_1": 1.8986,
+        "vol12": 0.6441,
+        "sma10": 0.273,
+        "pct150": 0.1871,
+        "pct200": 0.3122
+      },
+      "rank": 2,
+      "grades": {
+        "growth": "D-",
+        "value": "A-",
+        "momentum": "A-",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Apple Inc.",
+      "ticker": "AAPL",
+      "sector": "Technology – Computer Manufacturing",
+      "price": 349.08,
+      "priceDate": "2026-11-23",
+      "marketCap": "$5.07T",
+      "forwardPE": 37.2,
+      "peg": 4.23,
+      "revenueGrowth": "+15.1% YoY (TTM; latest quarter +11.7%)",
+      "score": 82,
+      "paperRank": 15,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 38.0%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $136.1B (FCF / assets 35.6%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-1.7% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +15.1% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+9.9% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+15.2% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "82th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "36%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-1.7%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+10%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+15%"
+        }
+      ],
+      "drivers": [
+        "Score 82/100 → #23 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 82th percentile: cash op. profit/assets 38.0%, FCF/assets 35.6%, accruals -3.4%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-26 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (45 analysts)",
+      "priceTarget": 345.63,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+        "https://stockanalysis.com/stocks/aapl/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1506,
+        "rev_gq": 0.1172,
+        "gm_chg": 0.0188,
+        "sue": 1.0905,
+        "cbop": 0.3799,
+        "oprd": 0.5337,
+        "fcf_a": 0.3563,
+        "accruals": -0.0338,
+        "sh_g12": -0.0165,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2393,
+        "vol12": 0.213,
+        "sma10": 0.1487,
+        "pct150": 0.0989,
+        "pct200": 0.1515
+      },
+      "rank": 3,
+      "grades": {
+        "growth": "C-",
+        "value": "F",
+        "momentum": "C-",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "MSCI Inc.",
+      "ticker": "MSCI",
+      "sector": "Consumer Discretionary – Business Services",
+      "price": 627.64,
+      "priceDate": "2026-11-23",
+      "marketCap": "$44.9B",
+      "forwardPE": 28.98,
+      "peg": 2.14,
+      "revenueGrowth": "+12.3% YoY (TTM; latest quarter +12.4%)",
+      "score": 81,
+      "paperRank": 16,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 29.4%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.6B (FCF / assets 28.7%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-4.8% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +12.3% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+7.4% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+9.3% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "81th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "29%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-4.8%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+7%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+9%"
+        }
+      ],
+      "drivers": [
+        "Score 81/100 → #24 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 81th percentile: cash op. profit/assets 29.4%, FCF/assets 28.7%, accruals -4.2%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (18 analysts)",
+      "priceTarget": 689.94,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001408198.json",
+        "https://stockanalysis.com/stocks/msci/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1233,
+        "rev_gq": 0.1242,
+        "gm_chg": 0.0052,
+        "sue": 0.7236,
+        "cbop": 0.294,
+        "oprd": 0.3813,
+        "fcf_a": 0.2868,
+        "accruals": -0.0421,
+        "sh_g12": -0.0484,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.1182,
+        "vol12": 0.2654,
+        "sma10": 0.0837,
+        "pct150": 0.0744,
+        "pct200": 0.0935
+      },
+      "rank": 4,
+      "grades": {
+        "growth": "B",
+        "value": "F",
+        "momentum": "F",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Ralph Lauren Corporation",
+      "ticker": "RL",
+      "sector": "Industrials – Garments and Clothing",
+      "price": 385.29,
+      "priceDate": "2026-11-23",
+      "marketCap": "$21.7B",
+      "forwardPE": 19.07,
+      "peg": 1.56,
+      "revenueGrowth": "+12.8% YoY (TTM; latest quarter +9.1%)",
+      "score": 80,
+      "paperRank": 17,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 20.5%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.5B (FCF / assets 20.5%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-2.4% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +12.8% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+3.5% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+4.7% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "80th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "20%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-2.4%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+4%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+5%"
+        }
+      ],
+      "drivers": [
+        "Score 80/100 → #26 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 80th percentile: cash op. profit/assets 20.5%, FCF/assets 20.5%, accruals -6.3%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-26 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (19 analysts)",
+      "priceTarget": 447.65,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001037038.json",
+        "https://stockanalysis.com/stocks/rl/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1278,
+        "rev_gq": 0.0908,
+        "gm_chg": 0.0261,
+        "sue": 4.0928,
+        "cbop": 0.2049,
+        "oprd": 0.1814,
+        "fcf_a": 0.2049,
+        "accruals": -0.0626,
+        "sh_g12": -0.024,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.0809,
+        "vol12": 0.2086,
+        "sma10": 0.0472,
+        "pct150": 0.0351,
+        "pct200": 0.047
+      },
+      "rank": 5,
+      "grades": {
+        "growth": "C",
+        "value": "D+",
+        "momentum": "F",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Abercrombie & Fitch Company",
+      "ticker": "ANF",
+      "sector": "Consumer Discretionary – Clothing/Shoe/Accessory Stores",
+      "price": 140.45,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.0B",
+      "forwardPE": 11.53,
+      "peg": "n/a",
+      "revenueGrowth": "+4.7% YoY (TTM; latest quarter +4.8%)",
+      "score": 79,
+      "paperRank": 18,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 23.8%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $566M (FCF / assets 16.4%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-9.8% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +4.7% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+22.9% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+29.1% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "79th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "16%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-9.8%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+23%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+29%"
+        }
+      ],
+      "drivers": [
+        "Score 79/100 → #28 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 79th percentile: cash op. profit/assets 23.8%, FCF/assets 16.4%, accruals -8.2%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-08-01 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 68% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (15 analysts)",
+      "priceTarget": 170.64,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018840.json",
+        "https://stockanalysis.com/stocks/anf/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0473,
+        "rev_gq": 0.0481,
+        "gm_chg": 0.0096,
+        "sue": 2.2007,
+        "cbop": 0.2377,
+        "oprd": 0.2124,
+        "fcf_a": 0.1643,
+        "accruals": -0.0823,
+        "sh_g12": -0.0985,
+        "eps_up8": 5.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.6802,
+        "vol12": 0.6826,
+        "sma10": 0.2496,
+        "pct150": 0.229,
+        "pct200": 0.2911
+      },
+      "rank": 6,
+      "grades": {
+        "growth": "D-",
+        "value": "A",
+        "momentum": "A+",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Paymentus Holdings Inc.",
+      "ticker": "PAY",
+      "sector": "Consumer Discretionary – Business Services",
+      "price": 32.83,
+      "priceDate": "2026-11-23",
+      "marketCap": "$3.9B",
+      "forwardPE": 31.12,
+      "peg": "n/a",
+      "revenueGrowth": "+26.5% YoY (TTM; latest quarter +19.8%)",
+      "score": 79,
+      "paperRank": 19,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 23.9%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $168M (FCF / assets 23.8%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "+0.8% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +26.5% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+7.3% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+12.3% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "79th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "24%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "+0.8%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+7%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+12%"
+        }
+      ],
+      "drivers": [
+        "Score 79/100 → #30 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 79th percentile: cash op. profit/assets 23.9%, FCF/assets 23.8%, accruals -10.4%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 55% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (7 analysts)",
+      "priceTarget": 41.17,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001841156.json",
+        "https://stockanalysis.com/stocks/pay/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.265,
+        "rev_gq": 0.1977,
+        "gm_chg": 0.0044,
+        "sue": 3.4466,
+        "cbop": 0.2387,
+        "oprd": 0.2551,
+        "fcf_a": 0.238,
+        "accruals": -0.1043,
+        "sh_g12": 0.0084,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": -0.0547,
+        "vol12": 0.5465,
+        "sma10": 0.126,
+        "pct150": 0.073,
+        "pct200": 0.1226
+      },
+      "rank": 7,
+      "grades": {
+        "growth": "A-",
+        "value": "D-",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Valero Energy Corporation",
+      "ticker": "VLO",
+      "sector": "Energy – Integrated oil Companies",
+      "price": 329.4,
+      "priceDate": "2026-11-23",
+      "marketCap": "$91.9B",
+      "forwardPE": 5.55,
+      "peg": 0.12,
+      "revenueGrowth": "+24.6% YoY (TTM; latest quarter +43.3%)",
+      "score": 78,
+      "paperRank": 20,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 25.2%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $16.0B (FCF / assets 25.2%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-8.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "7 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +24.6% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+1.9% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+10.4% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "78th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "25%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-8.6%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "7/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+2%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+10%"
+        }
+      ],
+      "drivers": [
+        "Score 78/100 → #31 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 78th percentile: cash op. profit/assets 25.2%, FCF/assets 25.2%, accruals -4.8%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Up 129% over the 12 months to last month: momentum names can reverse hard (Jul–Nov 2026 quality/momentum lists fell 15–33%)",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (20 analysts)",
+      "priceTarget": 419.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001035002.json",
+        "https://stockanalysis.com/stocks/vlo/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2458,
+        "rev_gq": 0.433,
+        "gm_chg": 0.089,
+        "sue": 2.4712,
+        "cbop": 0.2522,
+        "oprd": 0.2777,
+        "fcf_a": 0.2522,
+        "accruals": -0.0476,
+        "sh_g12": -0.0857,
+        "eps_up8": 5.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 1.2945,
+        "vol12": 0.3967,
+        "sma10": 0.1016,
+        "pct150": 0.0186,
+        "pct200": 0.1036
+      },
+      "rank": 8,
+      "grades": {
+        "growth": "A-",
+        "value": "A",
+        "momentum": "C+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "DexCom Inc.",
+      "ticker": "DXCM",
+      "sector": "Health Care – Medical/Dental Instruments",
+      "price": 82.42,
+      "priceDate": "2026-11-23",
+      "marketCap": "$30.7B",
+      "forwardPE": 27.8,
+      "peg": 1.28,
+      "revenueGrowth": "+13.0% YoY (TTM; latest quarter +11.2%)",
+      "score": 78,
+      "paperRank": 21,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 20.6%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.1B (FCF / assets 16.0%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-4.4% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +13.0% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+5.5% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+9.3% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "78th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "16%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-4.4%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+6%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+9%"
+        }
+      ],
+      "drivers": [
+        "Score 78/100 → #32 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 78th percentile: cash op. profit/assets 20.6%, FCF/assets 16.0%, accruals -6.2%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (29 analysts)",
+      "priceTarget": 98.58,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001093557.json",
+        "https://stockanalysis.com/stocks/dxcm/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1303,
+        "rev_gq": 0.1118,
+        "gm_chg": 0.0441,
+        "sue": 0.0996,
+        "cbop": 0.2059,
+        "oprd": 0.2667,
+        "fcf_a": 0.1599,
+        "accruals": -0.0616,
+        "sh_g12": -0.0438,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2965,
+        "vol12": 0.4189,
+        "sma10": 0.0811,
+        "pct150": 0.0555,
+        "pct200": 0.0934
+      },
+      "rank": 9,
+      "grades": {
+        "growth": "A-",
+        "value": "D-",
+        "momentum": "D-",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Ulta Beauty Inc.",
+      "ticker": "ULTA",
+      "sector": "Consumer Discretionary – Other Specialty Stores",
+      "price": 625.02,
+      "priceDate": "2026-11-23",
+      "marketCap": "$26.7B",
+      "forwardPE": 20.36,
+      "peg": 2.02,
+      "revenueGrowth": "+11.2% YoY (TTM; latest quarter +8.9%)",
+      "score": 77,
+      "paperRank": 22,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 23.1%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.1B (FCF / assets 16.9%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-4.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +11.2% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+16.6% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+13.4% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "77th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "17%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-4.6%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+17%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+13%"
+        }
+      ],
+      "drivers": [
+        "Score 77/100 → #33 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 77th percentile: cash op. profit/assets 23.1%, FCF/assets 16.9%, accruals -5.3%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-08-01 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (28 analysts)",
+      "priceTarget": 646.96,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001403568.json",
+        "https://stockanalysis.com/stocks/ulta/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1116,
+        "rev_gq": 0.0887,
+        "gm_chg": 0.0032,
+        "sue": 1.6805,
+        "cbop": 0.2307,
+        "oprd": 0.2375,
+        "fcf_a": 0.1691,
+        "accruals": -0.0526,
+        "sh_g12": -0.0464,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.1886,
+        "vol12": 0.3955,
+        "sma10": 0.1229,
+        "pct150": 0.1658,
+        "pct200": 0.1338
+      },
+      "rank": 10,
+      "grades": {
+        "growth": "D+",
+        "value": "D+",
+        "momentum": "C",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Hasbro Inc.",
+      "ticker": "HAS",
+      "sector": "Consumer Discretionary – Recreational Games/Products/Toys",
+      "price": 113.53,
+      "priceDate": "2026-11-23",
+      "marketCap": "$15.9B",
+      "forwardPE": 16.95,
+      "peg": 1.27,
+      "revenueGrowth": "+12.3% YoY (TTM; latest quarter +0.3%)",
+      "score": 77,
+      "paperRank": 23,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 22.0%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.2B (FCF / assets 20.6%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-0.3% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "6 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +12.3% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+21.4% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+21.5% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "77th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "21%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-0.3%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "6/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+21%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+22%"
+        }
+      ],
+      "drivers": [
+        "Score 77/100 → #34 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 77th percentile: cash op. profit/assets 22.0%, FCF/assets 20.6%, accruals -6.0%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-27 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (14 analysts)",
+      "priceTarget": 124.46,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000046080.json",
+        "https://stockanalysis.com/stocks/has/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1226,
+        "rev_gq": 0.0033,
+        "gm_chg": 0.0008,
+        "sue": 0.2478,
+        "cbop": 0.2198,
+        "oprd": 0.2922,
+        "fcf_a": 0.2056,
+        "accruals": -0.0595,
+        "sh_g12": -0.0034,
+        "eps_up8": 7.0,
+        "ni_pos8": 6.0,
+        "mom12_1": 0.4746,
+        "vol12": 0.4392,
+        "sma10": 0.19,
+        "pct150": 0.2143,
+        "pct200": 0.2152
+      },
+      "rank": 11,
+      "grades": {
+        "growth": "C+",
+        "value": "C-",
+        "momentum": "B+",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "ResMed Inc.",
+      "ticker": "RMD",
+      "sector": "Health Care – Medical/Dental Instruments",
+      "price": 239.38,
+      "priceDate": "2026-11-23",
+      "marketCap": "$33.7B",
+      "forwardPE": 19.29,
+      "peg": 2.36,
+      "revenueGrowth": "+9.0% YoY (TTM; latest quarter +5.9%)",
+      "score": 77,
+      "paperRank": 24,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 21.4%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.6B (FCF / assets 19.5%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-3.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +9.0% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+10.4% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+7.9% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "77th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "19%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-3.6%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+10%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+8%"
+        }
+      ],
+      "drivers": [
+        "Score 77/100 → #35 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 77th percentile: cash op. profit/assets 21.4%, FCF/assets 19.5%, accruals -2.2%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (20 analysts)",
+      "priceTarget": 264.33,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000943819.json",
+        "https://stockanalysis.com/stocks/rmd/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0904,
+        "rev_gq": 0.0593,
+        "gm_chg": 0.01,
+        "sue": 2.0867,
+        "cbop": 0.2144,
+        "oprd": 0.2769,
+        "fcf_a": 0.1948,
+        "accruals": -0.0215,
+        "sh_g12": -0.0364,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": -0.0938,
+        "vol12": 0.2854,
+        "sma10": 0.083,
+        "pct150": 0.1044,
+        "pct200": 0.0785
+      },
+      "rank": 12,
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "F",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Masco Corporation",
+      "ticker": "MAS",
+      "sector": "Industrials – Industrial Specialties",
+      "price": 85.15,
+      "priceDate": "2026-11-23",
+      "marketCap": "$16.4B",
+      "forwardPE": 18.39,
+      "peg": 1.91,
+      "revenueGrowth": "+0.9% YoY (TTM; latest quarter +2.6%)",
+      "score": 77,
+      "paperRank": 25,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 22.7%"
+        },
+        {
+          "key": "r1",
+          "label": "Free cash flow (TTM) above zero",
+          "met": true,
+          "detail": "FCF $1.0B (FCF / assets 19.6%)"
+        },
+        {
+          "key": "r2",
+          "label": "Share count up less than 2% in 12 months",
+          "met": true,
+          "detail": "-7.2% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r3",
+          "label": "Profitable in at least 6 of the last 8 quarters",
+          "met": true,
+          "detail": "8 of 8 quarters profitable"
+        },
+        {
+          "key": "r4",
+          "label": "Revenue growing (TTM)",
+          "met": true,
+          "detail": "TTM revenue +0.9% YoY"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 150-day average",
+          "met": true,
+          "detail": "+15.7% vs 150-day average"
+        },
+        {
+          "key": "r6",
+          "label": "Price above its 200-day average",
+          "met": true,
+          "detail": "+19.1% vs 200-day average"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "77th pct"
+        },
+        {
+          "label": "FCF / assets",
+          "value": "20%"
+        },
+        {
+          "label": "Share count 12m",
+          "value": "-7.2%"
+        },
+        {
+          "label": "Profitable qtrs",
+          "value": "8/8"
+        },
+        {
+          "label": "vs 150-day",
+          "value": "+16%"
+        },
+        {
+          "label": "vs 200-day",
+          "value": "+19%"
+        }
+      ],
+      "drivers": [
+        "Score 77/100 → #38 of 258 passers (870 stocks screened)",
+        "Ranked by cash quality: the average percentile of cash-based operating profit/assets, R&D-adjusted operating profit/assets, FCF/assets, low share issuance, EPS-up quarters and low accruals.",
+        "Cash quality 77th percentile: cash op. profit/assets 22.7%, FCF/assets 19.6%, accruals -5.3%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (22 analysts)",
+      "priceTarget": 82.74,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000062996.json",
+        "https://stockanalysis.com/stocks/mas/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0095,
+        "rev_gq": 0.0256,
+        "gm_chg": 0.0191,
+        "sue": 1.8043,
+        "cbop": 0.2265,
+        "oprd": 0.2575,
+        "fcf_a": 0.1959,
+        "accruals": -0.0526,
+        "sh_g12": -0.0719,
+        "eps_up8": 5.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2599,
+        "vol12": 0.3997,
+        "sma10": 0.1713,
+        "pct150": 0.1566,
+        "pct200": 0.1911
+      },
+      "rank": 13,
+      "grades": {
+        "growth": "F",
+        "value": "C",
+        "momentum": "C+",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    }
+  ],
+  "grading": {
+    "asOf": "2026-11-23",
+    "spy1yPct": 5.71,
+    "pool": "25 stocks (this list's picks + bench)",
+    "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
+    "inputs": {
+      "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
+      "value": "Forward P/E, PEG and EV/Sales; lower is better, losses or negative multiples rank worst",
+      "momentum": "1-yr price change minus SPY's (relative strength), 6-month and 3-month price change (Nasdaq daily closes)",
+      "profitability": "Gross, operating, net and free-cash-flow margin (TTM, StockAnalysis)"
+    },
+    "sources": [
+      "https://stockanalysis.com/ (statistics pages)",
+      "https://www.nasdaq.com/ (historical quotes)"
+    ]
+  }
+}

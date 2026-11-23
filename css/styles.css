@@ -1153,3 +1153,17 @@ body[data-route="screeners"] .toolbar { position: relative; top: auto; }
 @media (min-width: 900px) {
   .screener-tabs { margin: 0 -44px 10px; padding: 4px 44px 12px; flex-wrap: wrap; overflow: visible; }
 }
+
+/* Paper-test screeners (QTRX / QGT / CQC-D; user-approved Nov 23, 2026): dashed, clearly not live lists */
+.screener-tab.is-paper { border-style: dashed; }
+.tag.paper { color: #9fd3ff; border: 1px dashed rgba(159, 211, 255, .6); background: rgba(159, 211, 255, .08); }
+.paper-port { border-style: dashed; }
+.l-p1 { stroke: #9fd3ff; color: #9fd3ff; }
+.l-p2 { stroke: #c792ea; color: #c792ea; stroke-dasharray: 6 3; }
+.l-p3 { stroke: #7ee0a1; color: #7ee0a1; stroke-dasharray: 2 3; }
+.paper-test .shadow-note { border-style: dashed; }
+.paper-list { padding: 10px 14px; }
+.paper-list + .paper-list { margin-top: 10px; }
+.paper-list summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+.paper-list summary::-webkit-details-marker { display: none; }
+.paper-list[open] summary { margin-bottom: 8px; }

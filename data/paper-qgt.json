@@ -1,0 +1,3260 @@
+{
+  "schemaVersion": 1,
+  "paperTest": true,
+  "status": "PAPER TEST, not a live list",
+  "lastUpdated": "2026-11-23",
+  "asOf": "2026-11-23",
+  "priceDate": "2026-11-23",
+  "title": "Paper test #2: Quality Growth + Trend (QGT)",
+  "code": "QGT",
+  "rankInStudy": 2,
+  "method": "Growing, cash-generative companies with earnings surprises and an uptrend, commodity producers excluded. Universe: US-listed stocks over $2B with SEC us-gaap filings (870 stocks; 110 pass every rule), excluding financials, real estate, bitcoin miners and crypto-treasury companies. Percentile ranks are across that universe. Picks are the top 12 in score order with at most 3 per industry and 6 semiconductor/hardware names; the next 13 are backups. As backtested, picks are held for a quarter: weekly refreshes update the numbers, and the list is rebuilt at the quarterly rebalance (next: 2027-02-22).",
+  "rubric": [
+    {
+      "component": "Cash quality in the top 50%",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Revenue growth (TTM) above 8%",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Cash-based operating profit above zero",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Share count up less than 3% in 12 months",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Not a commodity producer",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Price above its 10-month average",
+      "points": "rule",
+      "how": "must pass"
+    },
+    {
+      "component": "Score",
+      "points": "rank",
+      "how": "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum."
+    }
+  ],
+  "dataNotes": "Fundamentals: SEC XBRL companyfacts, originally filed values, filings public by the 2026-11-23 close; quarters older than 230 days are ignored. Prices: Yahoo daily adjusted closes (month-end closes for the 10-month average, momentum and volatility; daily closes for the 150/200-day averages). Forward P/E, PEG, analysts and targets: StockAnalysis. Same code as the Nov 23, 2026 backtest harness.",
+  "backtest": "Backtest 2012–Nov 2026: +2.5%/yr vs the same-universe equal-weight basket (top 1,000; 2012–19 −1.5, 2020–26 +7.2), max drawdown about −34%. 1975–2025 proxy check: +2.9%/yr vs the market; +6.5%/yr in 1975–2004. Fell about 33% in Jul–Nov 2026.",
+  "disclaimer": "Paper test only (user-approved Nov 23, 2026): not a live list, nothing is traded, and the live screeners are unchanged. Backtests overstate future returns. Not financial advice.",
+  "portfolio": {
+    "formedOn": "2026-11-23",
+    "formedPriceDate": "2026-11-23",
+    "nextRebalance": "2027-02-22",
+    "tickers": [
+      "TXN",
+      "IMAX",
+      "PLTR",
+      "VSXY",
+      "QLYS",
+      "TEAM",
+      "GCT",
+      "ELF",
+      "WTS",
+      "COCO",
+      "GRMN",
+      "WST"
+    ],
+    "log": [
+      "Formed on 2026-11-23 from the 2026-11-23 close"
+    ]
+  },
+  "universe": {
+    "nasdaqRows": 7300,
+    "screened": 870,
+    "passers": 110
+  },
+  "excluded": {
+    "sectors": [
+      "Finance",
+      "Real Estate"
+    ],
+    "miners": [
+      "ABTC",
+      "AIRE",
+      "ARBK",
+      "BITF",
+      "BMNR",
+      "BTBT",
+      "BTCM",
+      "BTDR",
+      "BTOG",
+      "CAN",
+      "CANG",
+      "CIFR",
+      "CLSK",
+      "CORZ",
+      "DGHI",
+      "DMGI",
+      "FUFU",
+      "GPUS",
+      "GREE",
+      "GRYP",
+      "HIVE",
+      "HUT",
+      "IREN",
+      "LMFA",
+      "MARA",
+      "MIGI",
+      "NCPL",
+      "RIOT",
+      "SAI",
+      "SDIG",
+      "SLNH",
+      "SOS",
+      "USBC",
+      "WULF"
+    ],
+    "cryptoTreasury": [
+      "ASST",
+      "BMNR",
+      "BNC",
+      "BTCS",
+      "CEP",
+      "DFDV",
+      "ETHM",
+      "ETHZ",
+      "FGNX",
+      "HSDT",
+      "MSTR",
+      "NAKA",
+      "SBET",
+      "SMLR",
+      "STSS",
+      "TRON",
+      "UPXI",
+      "XXI"
+    ]
+  },
+  "picks": [
+    {
+      "company": "Texas Instruments Incorporated",
+      "ticker": "TXN",
+      "sector": "Technology – Semiconductors",
+      "price": 291.19,
+      "priceDate": "2026-11-23",
+      "marketCap": "$266.1B",
+      "forwardPE": 25.39,
+      "peg": 0.93,
+      "revenueGrowth": "+20.3% YoY (TTM; latest quarter +27.7%)",
+      "score": 84,
+      "paperRank": 1,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 74"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +20.3% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 27.5%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+0.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Semiconductors"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+8.7% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "74th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.56"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+28%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+2.8 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+83%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+9%"
+        }
+      ],
+      "drivers": [
+        "Score 84/100 → #1 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 74th percentile: cash op. profit/assets 27.5%, FCF/assets 20.4%, accruals -7.7%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 53% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (35 analysts)",
+      "priceTarget": 339.66,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000097476.json",
+        "https://stockanalysis.com/stocks/txn/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2027,
+        "rev_gq": 0.2769,
+        "gm_chg": 0.0276,
+        "sue": 2.5578,
+        "cbop": 0.2755,
+        "oprd": 0.294,
+        "fcf_a": 0.2037,
+        "accruals": -0.0775,
+        "sh_g12": 0.0057,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.8268,
+        "vol12": 0.534,
+        "sma10": 0.0867,
+        "pct150": 0.0231,
+        "pct200": 0.1011
+      },
+      "grades": {
+        "growth": "A-",
+        "value": "C",
+        "momentum": "C+",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Imax Corporation",
+      "ticker": "IMAX",
+      "sector": "Consumer Discretionary – Industrial Machinery/Components",
+      "price": 46.66,
+      "priceDate": "2026-11-23",
+      "marketCap": "$2.6B",
+      "forwardPE": 22.98,
+      "peg": 1.16,
+      "revenueGrowth": "+28.1% YoY (TTM; latest quarter +63.7%)",
+      "score": 82,
+      "paperRank": 2,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 52"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +28.1% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 15.8%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+2.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Industrial Machinery/Components"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+3.8% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "52th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.88"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+64%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+4.6 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+36%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+4%"
+        }
+      ],
+      "drivers": [
+        "Score 82/100 → #2 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 52th percentile: cash op. profit/assets 15.8%, FCF/assets 15.2%, accruals -1.8%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (12 analysts)",
+      "priceTarget": 60.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000921582.json",
+        "https://stockanalysis.com/stocks/imax/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2815,
+        "rev_gq": 0.6366,
+        "gm_chg": 0.0457,
+        "sue": 2.8796,
+        "cbop": 0.1578,
+        "oprd": 0.1422,
+        "fcf_a": 0.1521,
+        "accruals": -0.0182,
+        "sh_g12": 0.0261,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.3642,
+        "vol12": 0.3679,
+        "sma10": 0.038,
+        "pct150": 0.019,
+        "pct200": 0.0635
+      },
+      "grades": {
+        "growth": "A",
+        "value": "B",
+        "momentum": "D+",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Palantir Technologies Inc.",
+      "ticker": "PLTR",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 159.36,
+      "priceDate": "2026-11-23",
+      "marketCap": "$345.7B",
+      "forwardPE": 69.45,
+      "peg": 1.07,
+      "revenueGrowth": "+87.1% YoY (TTM; latest quarter +95.9%)",
+      "score": 80,
+      "paperRank": 3,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 76"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +87.1% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 38.1%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+0.1% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Computer Software: Prepackaged Software"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+3.8% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "76th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.31"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+96%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+3.9 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+9%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+4%"
+        }
+      ],
+      "drivers": [
+        "Score 80/100 → #3 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 76th percentile: cash op. profit/assets 38.1%, FCF/assets 37.7%, accruals -4.0%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 67% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (34 analysts)",
+      "priceTarget": 222.9,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001321655.json",
+        "https://stockanalysis.com/stocks/pltr/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.8706,
+        "rev_gq": 0.9587,
+        "gm_chg": 0.0394,
+        "sue": 2.3117,
+        "cbop": 0.3807,
+        "oprd": 0.3756,
+        "fcf_a": 0.3766,
+        "accruals": -0.0398,
+        "sh_g12": 0.0011,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.093,
+        "vol12": 0.6688,
+        "sma10": 0.0377,
+        "pct150": 0.0121,
+        "pct200": 0.0342
+      },
+      "grades": {
+        "growth": "A+",
+        "value": "F",
+        "momentum": "F",
+        "profitability": "A+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Victorias Secret & Co.",
+      "ticker": "VSXY",
+      "sector": "Consumer Discretionary – Clothing/Shoe/Accessory Stores",
+      "price": 94.21,
+      "priceDate": "2026-11-23",
+      "marketCap": "$7.5B",
+      "forwardPE": 18.28,
+      "peg": 0.52,
+      "revenueGrowth": "+10.3% YoY (TTM; latest quarter +10.4%)",
+      "score": 78,
+      "paperRank": 4,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 62"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +10.3% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 15.3%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-0.5% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Clothing/Shoe/Accessory Stores"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+25.2% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "62th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.79"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+10%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+3.3 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+134%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+25%"
+        }
+      ],
+      "drivers": [
+        "Score 78/100 → #4 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 62th percentile: cash op. profit/assets 15.3%, FCF/assets 11.2%, accruals -7.7%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-08-01 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Up 134% over the 12 months to last month: momentum names can reverse hard (Jul–Nov 2026 quality/momentum lists fell 15–33%)",
+        "Volatile: 66% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (13 analysts)",
+      "priceTarget": 103.08,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001856437.json",
+        "https://stockanalysis.com/stocks/vsxy/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1033,
+        "rev_gq": 0.1042,
+        "gm_chg": 0.0327,
+        "sue": 2.7946,
+        "cbop": 0.153,
+        "oprd": 0.1096,
+        "fcf_a": 0.1118,
+        "accruals": -0.0767,
+        "sh_g12": -0.005,
+        "eps_up8": 6.0,
+        "ni_pos8": 5.0,
+        "mom12_1": 1.3378,
+        "vol12": 0.6604,
+        "sma10": 0.2515,
+        "pct150": 0.1752,
+        "pct200": 0.2867
+      },
+      "grades": {
+        "growth": "C-",
+        "value": "A+",
+        "momentum": "A",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Qualys Inc.",
+      "ticker": "QLYS",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 197.69,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.9B",
+      "forwardPE": 22.89,
+      "peg": 2.98,
+      "revenueGrowth": "+10.4% YoY (TTM; latest quarter +10.7%)",
+      "score": 77,
+      "paperRank": 5,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 90"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +10.4% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 30.0%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-2.6% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Computer Software: Prepackaged Software"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+36.0% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "90th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+3.68"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+11%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+0.8 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+59%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+36%"
+        }
+      ],
+      "drivers": [
+        "Score 77/100 → #5 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 90th percentile: cash op. profit/assets 30.0%, FCF/assets 29.3%, accruals -10.7%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 61% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (22 analysts)",
+      "priceTarget": 196.81,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001107843.json",
+        "https://stockanalysis.com/stocks/qlys/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1043,
+        "rev_gq": 0.1069,
+        "gm_chg": 0.0081,
+        "sue": 3.6762,
+        "cbop": 0.3001,
+        "oprd": 0.3312,
+        "fcf_a": 0.2929,
+        "accruals": -0.1074,
+        "sh_g12": -0.0265,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.5912,
+        "vol12": 0.6119,
+        "sma10": 0.3597,
+        "pct150": 0.2774,
+        "pct200": 0.4184
+      },
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "B",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Atlassian Corporation",
+      "ticker": "TEAM",
+      "sector": "Technology – Computer Software: Prepackaged Software",
+      "price": 139.58,
+      "priceDate": "2026-11-23",
+      "marketCap": "$33.9B",
+      "forwardPE": 26.37,
+      "peg": 1.67,
+      "revenueGrowth": "+26.6% YoY (TTM; latest quarter +23.7%)",
+      "score": 77,
+      "paperRank": 6,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 85"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +26.6% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 30.1%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-2.3% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Computer Software: Prepackaged Software"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+16.0% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "85th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+1.52"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+24%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+2.6 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+28%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+16%"
+        }
+      ],
+      "drivers": [
+        "Score 77/100 → #6 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 85th percentile: cash op. profit/assets 30.1%, FCF/assets 29.7%, accruals -28.6%, EPS up YoY in 5 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 133% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (34 analysts)",
+      "priceTarget": 218.48,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001650372.json",
+        "https://stockanalysis.com/stocks/team/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2659,
+        "rev_gq": 0.2371,
+        "gm_chg": 0.0265,
+        "sue": 1.5162,
+        "cbop": 0.3015,
+        "oprd": 0.6353,
+        "fcf_a": 0.2969,
+        "accruals": -0.2857,
+        "sh_g12": -0.0234,
+        "eps_up8": 5.0,
+        "ni_pos8": 2.0,
+        "mom12_1": 0.2822,
+        "vol12": 1.3281,
+        "sma10": 0.1601,
+        "pct150": 0.023,
+        "pct200": 0.1563
+      },
+      "grades": {
+        "growth": "C+",
+        "value": "D+",
+        "momentum": "F",
+        "profitability": "C-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "GigaCloud Technology Inc",
+      "ticker": "GCT",
+      "sector": "Consumer Discretionary – Catalog/Specialty Distribution",
+      "price": 66.16,
+      "priceDate": "2026-11-23",
+      "marketCap": "$2.1B",
+      "forwardPE": 11.12,
+      "peg": "n/a",
+      "revenueGrowth": "+27.4% YoY (TTM; latest quarter +27.3%)",
+      "score": 76,
+      "paperRank": 7,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 61"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +27.4% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 12.2%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-4.7% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Catalog/Specialty Distribution"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+40.7% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "61th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.20"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+27%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+1.3 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+57%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+41%"
+        }
+      ],
+      "drivers": [
+        "Score 76/100 → #7 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 61th percentile: cash op. profit/assets 12.2%, FCF/assets 11.3%, accruals +1.8%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 50% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (3 analysts)",
+      "priceTarget": 73.67,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001857816.json",
+        "https://stockanalysis.com/stocks/gct/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2735,
+        "rev_gq": 0.2733,
+        "gm_chg": 0.0126,
+        "sue": 2.198,
+        "cbop": 0.1223,
+        "oprd": 0.1653,
+        "fcf_a": 0.1132,
+        "accruals": 0.0184,
+        "sh_g12": -0.0474,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.5736,
+        "vol12": 0.4964,
+        "sma10": 0.4066,
+        "pct150": 0.4134,
+        "pct200": 0.4494
+      },
+      "grades": {
+        "growth": "B",
+        "value": "A+",
+        "momentum": "A",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "e.l.f. Beauty Inc.",
+      "ticker": "ELF",
+      "sector": "Consumer Discretionary – Package Goods/Cosmetics",
+      "price": 107.68,
+      "priceDate": "2026-11-23",
+      "marketCap": "$6.4B",
+      "forwardPE": 32.32,
+      "peg": 2.1,
+      "revenueGrowth": "+39.9% YoY (TTM; latest quarter +51.4%)",
+      "score": 75,
+      "paperRank": 8,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 52"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +39.9% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 11.8%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-0.8% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Package Goods/Cosmetics"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+25.4% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "52th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+0.75"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+51%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+4.1 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+47%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+25%"
+        }
+      ],
+      "drivers": [
+        "Score 75/100 → #8 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 52th percentile: cash op. profit/assets 11.8%, FCF/assets 11.3%, accruals -8.2%, EPS up YoY in 4 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 63% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (18 analysts)",
+      "priceTarget": 131.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001600033.json",
+        "https://stockanalysis.com/stocks/elf/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.3993,
+        "rev_gq": 0.5143,
+        "gm_chg": 0.0415,
+        "sue": 0.7489,
+        "cbop": 0.118,
+        "oprd": 0.0704,
+        "fcf_a": 0.1128,
+        "accruals": -0.0825,
+        "sh_g12": -0.0082,
+        "eps_up8": 4.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.4663,
+        "vol12": 0.6327,
+        "sma10": 0.2537,
+        "pct150": 0.2477,
+        "pct200": 0.2913
+      },
+      "grades": {
+        "growth": "B",
+        "value": "D",
+        "momentum": "A-",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Watts Water Technologies Inc.",
+      "ticker": "WTS",
+      "sector": "Industrials – Metal Fabrications",
+      "price": 360.07,
+      "priceDate": "2026-11-23",
+      "marketCap": "$11.6B",
+      "forwardPE": 25.46,
+      "peg": 3.07,
+      "revenueGrowth": "+18.7% YoY (TTM; latest quarter +19.0%)",
+      "score": 73,
+      "paperRank": 9,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 62"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +18.7% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 14.9%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+0.0% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Metal Fabrications"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+6.3% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "62th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+3.43"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+19%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+1.7 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+27%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+6%"
+        }
+      ],
+      "drivers": [
+        "Score 73/100 → #9 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 62th percentile: cash op. profit/assets 14.9%, FCF/assets 12.8%, accruals +0.5%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-27 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (10 analysts)",
+      "priceTarget": 393.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000795403.json",
+        "https://stockanalysis.com/stocks/wts/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1868,
+        "rev_gq": 0.1901,
+        "gm_chg": 0.0166,
+        "sue": 3.429,
+        "cbop": 0.1495,
+        "oprd": 0.2315,
+        "fcf_a": 0.1277,
+        "accruals": 0.0046,
+        "sh_g12": 0.0,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2691,
+        "vol12": 0.3554,
+        "sma10": 0.0633,
+        "pct150": 0.0461,
+        "pct200": 0.0755
+      },
+      "grades": {
+        "growth": "C",
+        "value": "D-",
+        "momentum": "D",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "The Vita Coco Company Inc.",
+      "ticker": "COCO",
+      "sector": "Consumer Staples – Beverages (Production/Distribution)",
+      "price": 63.31,
+      "priceDate": "2026-11-23",
+      "marketCap": "$3.6B",
+      "forwardPE": 31.66,
+      "peg": 1.67,
+      "revenueGrowth": "+26.0% YoY (TTM; latest quarter +33.7%)",
+      "score": 73,
+      "paperRank": 10,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 74"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +26.0% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 25.6%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+0.2% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Beverages (Production/Distribution)"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+2.6% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "74th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+1.20"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+34%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+5.0 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+9%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+3%"
+        }
+      ],
+      "drivers": [
+        "Score 73/100 → #10 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 74th percentile: cash op. profit/assets 25.6%, FCF/assets 24.9%, accruals -4.8%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 50% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (12 analysts)",
+      "priceTarget": 79.1,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001482981.json",
+        "https://stockanalysis.com/stocks/coco/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2597,
+        "rev_gq": 0.3374,
+        "gm_chg": 0.0496,
+        "sue": 1.2011,
+        "cbop": 0.2558,
+        "oprd": 0.2633,
+        "fcf_a": 0.2489,
+        "accruals": -0.0477,
+        "sh_g12": 0.002,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.0949,
+        "vol12": 0.4987,
+        "sma10": 0.0262,
+        "pct150": -0.0353,
+        "pct200": 0.0133
+      },
+      "grades": {
+        "growth": "B+",
+        "value": "D+",
+        "momentum": "D-",
+        "profitability": "C"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Garmin Ltd.",
+      "ticker": "GRMN",
+      "sector": "Industrials – Industrial Machinery/Components",
+      "price": 279.07,
+      "priceDate": "2026-11-23",
+      "marketCap": "$53.8B",
+      "forwardPE": 24.78,
+      "peg": 2.54,
+      "revenueGrowth": "+13.6% YoY (TTM; latest quarter +12.2%)",
+      "score": 71,
+      "paperRank": 11,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 61"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +13.6% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 16.8%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+0.2% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Industrial Machinery/Components"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+6.8% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "61th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+1.68"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+12%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+2.4 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+42%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+7%"
+        }
+      ],
+      "drivers": [
+        "Score 71/100 → #12 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 61th percentile: cash op. profit/assets 16.8%, FCF/assets 13.0%, accruals +1.2%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-26 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (9 analysts)",
+      "priceTarget": 299.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001121788.json",
+        "https://stockanalysis.com/stocks/grmn/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1359,
+        "rev_gq": 0.1215,
+        "gm_chg": 0.0239,
+        "sue": 1.6829,
+        "cbop": 0.1676,
+        "oprd": 0.3092,
+        "fcf_a": 0.1304,
+        "accruals": 0.0116,
+        "sh_g12": 0.0019,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4191,
+        "vol12": 0.3749,
+        "sma10": 0.0685,
+        "pct150": 0.0521,
+        "pct200": 0.0788
+      },
+      "grades": {
+        "growth": "D-",
+        "value": "D-",
+        "momentum": "C-",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "West Pharmaceutical Services Inc.",
+      "ticker": "WST",
+      "sector": "Health Care – Medical/Dental Instruments",
+      "price": 399.3,
+      "priceDate": "2026-11-23",
+      "marketCap": "$27.8B",
+      "forwardPE": 40.25,
+      "peg": 2.54,
+      "revenueGrowth": "+12.6% YoY (TTM; latest quarter +8.7%)",
+      "score": 71,
+      "paperRank": 12,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 62"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +12.6% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 16.0%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-3.2% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Medical/Dental Instruments"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+19.3% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "62th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.45"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+9%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+2.0 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+49%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+19%"
+        }
+      ],
+      "drivers": [
+        "Score 71/100 → #13 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 62th percentile: cash op. profit/assets 16.0%, FCF/assets 11.1%, accruals -0.4%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (16 analysts)",
+      "priceTarget": 471.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000105770.json",
+        "https://stockanalysis.com/stocks/wst/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1255,
+        "rev_gq": 0.0869,
+        "gm_chg": 0.0201,
+        "sue": 2.4476,
+        "cbop": 0.1603,
+        "oprd": 0.2096,
+        "fcf_a": 0.111,
+        "accruals": -0.0038,
+        "sh_g12": -0.0317,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4917,
+        "vol12": 0.3299,
+        "sma10": 0.1934,
+        "pct150": 0.1355,
+        "pct200": 0.2246
+      },
+      "grades": {
+        "growth": "D",
+        "value": "F",
+        "momentum": "A-",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    }
+  ],
+  "bench": [
+    {
+      "company": "AbbVie Inc.",
+      "ticker": "ABBV",
+      "sector": "Health Care – Biotechnology: Pharmaceutical Preparations",
+      "price": 288.45,
+      "priceDate": "2026-11-23",
+      "marketCap": "$509.9B",
+      "forwardPE": 18.29,
+      "peg": 1.35,
+      "revenueGrowth": "+10.7% YoY (TTM; latest quarter +10.3%)",
+      "score": 71,
+      "paperRank": 13,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 58"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +10.7% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 14.3%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+0.0% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: Pharmaceutical Preparations"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+17.3% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "58th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.07"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+10%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+4.0 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+33%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+17%"
+        }
+      ],
+      "drivers": [
+        "Score 71/100 → #14 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 58th percentile: cash op. profit/assets 14.3%, FCF/assets 13.4%, accruals -6.9%, EPS up YoY in 3 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (29 analysts)",
+      "priceTarget": 315.88,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001551152.json",
+        "https://stockanalysis.com/stocks/abbv/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1068,
+        "rev_gq": 0.1032,
+        "gm_chg": 0.0398,
+        "sue": 2.0656,
+        "cbop": 0.1427,
+        "oprd": 0.2216,
+        "fcf_a": 0.134,
+        "accruals": -0.0692,
+        "sh_g12": 0.0001,
+        "eps_up8": 3.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.3338,
+        "vol12": 0.2188,
+        "sma10": 0.1729,
+        "pct150": 0.158,
+        "pct200": 0.2003
+      },
+      "rank": 1,
+      "grades": {
+        "growth": "D+",
+        "value": "C+",
+        "momentum": "B",
+        "profitability": "A-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Ralph Lauren Corporation",
+      "ticker": "RL",
+      "sector": "Industrials – Garments and Clothing",
+      "price": 385.29,
+      "priceDate": "2026-11-23",
+      "marketCap": "$21.7B",
+      "forwardPE": 19.07,
+      "peg": 1.56,
+      "revenueGrowth": "+12.8% YoY (TTM; latest quarter +9.1%)",
+      "score": 70,
+      "paperRank": 14,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 80"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +12.8% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 20.5%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-2.4% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Garments and Clothing"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+4.7% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "80th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+4.09"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+9%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+2.6 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+8%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+5%"
+        }
+      ],
+      "drivers": [
+        "Score 70/100 → #17 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 80th percentile: cash op. profit/assets 20.5%, FCF/assets 20.5%, accruals -6.3%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-26 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (19 analysts)",
+      "priceTarget": 447.65,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001037038.json",
+        "https://stockanalysis.com/stocks/rl/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1278,
+        "rev_gq": 0.0908,
+        "gm_chg": 0.0261,
+        "sue": 4.0928,
+        "cbop": 0.2049,
+        "oprd": 0.1814,
+        "fcf_a": 0.2049,
+        "accruals": -0.0626,
+        "sh_g12": -0.024,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.0809,
+        "vol12": 0.2086,
+        "sma10": 0.0472,
+        "pct150": 0.0351,
+        "pct200": 0.047
+      },
+      "rank": 2,
+      "grades": {
+        "growth": "F",
+        "value": "B+",
+        "momentum": "F",
+        "profitability": "C+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Apple Inc.",
+      "ticker": "AAPL",
+      "sector": "Technology – Computer Manufacturing",
+      "price": 349.08,
+      "priceDate": "2026-11-23",
+      "marketCap": "$5.07T",
+      "forwardPE": 37.2,
+      "peg": 4.23,
+      "revenueGrowth": "+15.1% YoY (TTM; latest quarter +11.7%)",
+      "score": 68,
+      "paperRank": 15,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 82"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +15.1% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 38.0%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-1.7% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Computer Manufacturing"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+14.9% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "82th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+1.09"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+12%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+1.9 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+24%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+15%"
+        }
+      ],
+      "drivers": [
+        "Score 68/100 → #19 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 82th percentile: cash op. profit/assets 38.0%, FCF/assets 35.6%, accruals -3.4%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-26 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (45 analysts)",
+      "priceTarget": 345.63,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+        "https://stockanalysis.com/stocks/aapl/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1506,
+        "rev_gq": 0.1172,
+        "gm_chg": 0.0188,
+        "sue": 1.0905,
+        "cbop": 0.3799,
+        "oprd": 0.5337,
+        "fcf_a": 0.3563,
+        "accruals": -0.0338,
+        "sh_g12": -0.0165,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2393,
+        "vol12": 0.213,
+        "sma10": 0.1487,
+        "pct150": 0.0989,
+        "pct200": 0.1515
+      },
+      "rank": 3,
+      "grades": {
+        "growth": "D-",
+        "value": "F",
+        "momentum": "C",
+        "profitability": "B"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Urban Outfitters Inc.",
+      "ticker": "URBN",
+      "sector": "Consumer Discretionary – Clothing/Shoe/Accessory Stores",
+      "price": 85.29,
+      "priceDate": "2026-11-23",
+      "marketCap": "$7.3B",
+      "forwardPE": 13.25,
+      "peg": 2.29,
+      "revenueGrowth": "+11.0% YoY (TTM; latest quarter +10.4%)",
+      "score": 68,
+      "paperRank": 16,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 61"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +11.0% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 14.6%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-4.5% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Clothing/Shoe/Accessory Stores"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+13.6% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "61th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.76"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+10%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+1.8 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+22%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+14%"
+        }
+      ],
+      "drivers": [
+        "Score 68/100 → #20 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 61th percentile: cash op. profit/assets 14.6%, FCF/assets 6.0%, accruals -3.0%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-07-31 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (16 analysts)",
+      "priceTarget": 92.14,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000912615.json",
+        "https://stockanalysis.com/stocks/urbn/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1101,
+        "rev_gq": 0.1044,
+        "gm_chg": 0.0181,
+        "sue": 2.7582,
+        "cbop": 0.1456,
+        "oprd": 0.1488,
+        "fcf_a": 0.06,
+        "accruals": -0.0299,
+        "sh_g12": -0.045,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2248,
+        "vol12": 0.2816,
+        "sma10": 0.1362,
+        "pct150": 0.1087,
+        "pct200": 0.1474
+      },
+      "rank": 4,
+      "grades": {
+        "growth": "F",
+        "value": "A-",
+        "momentum": "B+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Westinghouse Air Brake Technologies Corporation",
+      "ticker": "WAB",
+      "sector": "Industrials – Railroads",
+      "price": 284.01,
+      "priceDate": "2026-11-23",
+      "marketCap": "$47.7B",
+      "forwardPE": 23.37,
+      "peg": 1.36,
+      "revenueGrowth": "+13.2% YoY (TTM; latest quarter +8.1%)",
+      "score": 68,
+      "paperRank": 17,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 52"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +13.2% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 9.3%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-1.8% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Railroads"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+3.8% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "52th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.96"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+8%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+1.9 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+35%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+4%"
+        }
+      ],
+      "drivers": [
+        "Score 68/100 → #22 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 52th percentile: cash op. profit/assets 9.3%, FCF/assets 8.0%, accruals -3.2%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (12 analysts)",
+      "priceTarget": 334.42,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000943452.json",
+        "https://stockanalysis.com/stocks/wab/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1325,
+        "rev_gq": 0.0811,
+        "gm_chg": 0.0191,
+        "sue": 2.9587,
+        "cbop": 0.0934,
+        "oprd": 0.1056,
+        "fcf_a": 0.0798,
+        "accruals": -0.0322,
+        "sh_g12": -0.0185,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.3453,
+        "vol12": 0.2036,
+        "sma10": 0.0377,
+        "pct150": 0.0203,
+        "pct200": 0.0444
+      },
+      "rank": 5,
+      "grades": {
+        "growth": "D+",
+        "value": "B-",
+        "momentum": "D-",
+        "profitability": "D"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "W.W. Grainger Inc.",
+      "ticker": "GWW",
+      "sector": "Industrials – Office Equipment/Supplies/Services",
+      "price": 1390.12,
+      "priceDate": "2026-11-23",
+      "marketCap": "$65.1B",
+      "forwardPE": 27.14,
+      "peg": 2.05,
+      "revenueGrowth": "+9.1% YoY (TTM; latest quarter +11.3%)",
+      "score": 68,
+      "paperRank": 18,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 69"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +9.1% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 23.6%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-1.5% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Office Equipment/Supplies/Services"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+10.0% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "69th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.24"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+11%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+0.3 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+44%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+10%"
+        }
+      ],
+      "drivers": [
+        "Score 68/100 → #24 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 69th percentile: cash op. profit/assets 23.6%, FCF/assets 18.1%, accruals -0.8%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (19 analysts)",
+      "priceTarget": 1452.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000277135.json",
+        "https://stockanalysis.com/stocks/gww/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0912,
+        "rev_gq": 0.1125,
+        "gm_chg": 0.0034,
+        "sue": 2.2382,
+        "cbop": 0.236,
+        "oprd": 0.3227,
+        "fcf_a": 0.181,
+        "accruals": -0.008,
+        "sh_g12": -0.0155,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4412,
+        "vol12": 0.192,
+        "sma10": 0.1,
+        "pct150": 0.0613,
+        "pct200": 0.1029
+      },
+      "rank": 6,
+      "grades": {
+        "growth": "F",
+        "value": "C+",
+        "momentum": "B-",
+        "profitability": "D-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "AtriCure Inc.",
+      "ticker": "ATRC",
+      "sector": "Health Care – Medical/Dental Instruments",
+      "price": 56.74,
+      "priceDate": "2026-11-23",
+      "marketCap": "$2.9B",
+      "forwardPE": 166.3,
+      "peg": "n/a",
+      "revenueGrowth": "+13.8% YoY (TTM; latest quarter +15.0%)",
+      "score": 68,
+      "paperRank": 19,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 56"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +13.8% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 10.1%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+2.4% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Medical/Dental Instruments"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+40.5% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "56th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+0.59"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+15%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+1.9 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+70%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+40%"
+        }
+      ],
+      "drivers": [
+        "Score 68/100 → #25 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 56th percentile: cash op. profit/assets 10.1%, FCF/assets 7.8%, accruals -7.9%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 53% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (10 analysts)",
+      "priceTarget": 64.89,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001323885.json",
+        "https://stockanalysis.com/stocks/atrc/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1379,
+        "rev_gq": 0.1503,
+        "gm_chg": 0.0187,
+        "sue": 0.5911,
+        "cbop": 0.1013,
+        "oprd": 0.1837,
+        "fcf_a": 0.0783,
+        "accruals": -0.0793,
+        "sh_g12": 0.0242,
+        "eps_up8": 7.0,
+        "ni_pos8": 4.0,
+        "mom12_1": 0.6957,
+        "vol12": 0.5307,
+        "sma10": 0.405,
+        "pct150": 0.327,
+        "pct200": 0.4313
+      },
+      "rank": 7,
+      "grades": {
+        "growth": "C",
+        "value": "F",
+        "momentum": "A+",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Toast Inc.",
+      "ticker": "TOST",
+      "sector": "Technology – EDP Services",
+      "price": 32.47,
+      "priceDate": "2026-11-23",
+      "marketCap": "$18.3B",
+      "forwardPE": 19.28,
+      "peg": 1.1,
+      "revenueGrowth": "+22.1% YoY (TTM; latest quarter +21.3%)",
+      "score": 68,
+      "paperRank": 20,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 79"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +22.1% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 21.0%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-2.8% over 12 months (SEC diluted weighted-average shares, latest quarter vs a year earlier, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "EDP Services"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+9.8% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "79th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.84"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+21%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+1.3 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "-7%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+10%"
+        }
+      ],
+      "drivers": [
+        "Score 68/100 → #26 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 79th percentile: cash op. profit/assets 21.0%, FCF/assets 19.0%, accruals -3.7%, EPS up YoY in 8 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (32 analysts)",
+      "priceTarget": 39.0,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001650164.json",
+        "https://stockanalysis.com/stocks/tost/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.2209,
+        "rev_gq": 0.2131,
+        "gm_chg": 0.0131,
+        "sue": 2.838,
+        "cbop": 0.2105,
+        "oprd": 0.2893,
+        "fcf_a": 0.1903,
+        "accruals": -0.0372,
+        "sh_g12": -0.0279,
+        "eps_up8": 8.0,
+        "ni_pos8": 8.0,
+        "mom12_1": -0.0734,
+        "vol12": 0.3481,
+        "sma10": 0.0981,
+        "pct150": 0.0755,
+        "pct200": 0.0996
+      },
+      "rank": 8,
+      "grades": {
+        "growth": "A-",
+        "value": "A-",
+        "momentum": "F",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Zebra Technologies Corporation",
+      "ticker": "ZBRA",
+      "sector": "Industrials – Industrial Machinery/Components",
+      "price": 320.22,
+      "priceDate": "2026-11-23",
+      "marketCap": "$15.1B",
+      "forwardPE": 14.72,
+      "peg": 1.09,
+      "revenueGrowth": "+16.9% YoY (TTM; latest quarter +22.3%)",
+      "score": 68,
+      "paperRank": 21,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 69"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +16.9% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 12.6%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-7.1% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Industrial Machinery/Components"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+11.6% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "69th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+0.92"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+22%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+0.5 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+43%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+12%"
+        }
+      ],
+      "drivers": [
+        "Score 68/100 → #27 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 69th percentile: cash op. profit/assets 12.6%, FCF/assets 11.7%, accruals -5.5%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-10-03 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (17 analysts)",
+      "priceTarget": 411.49,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000877212.json",
+        "https://stockanalysis.com/stocks/zbra/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1686,
+        "rev_gq": 0.2227,
+        "gm_chg": 0.0051,
+        "sue": 0.9201,
+        "cbop": 0.1265,
+        "oprd": 0.1831,
+        "fcf_a": 0.117,
+        "accruals": -0.0552,
+        "sh_g12": -0.0705,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.4293,
+        "vol12": 0.3194,
+        "sma10": 0.1164,
+        "pct150": 0.0433,
+        "pct200": 0.1178
+      },
+      "rank": 9,
+      "grades": {
+        "growth": "B-",
+        "value": "A",
+        "momentum": "F",
+        "profitability": "D+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Halozyme Therapeutics Inc.",
+      "ticker": "HALO",
+      "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
+      "price": 94.07,
+      "priceDate": "2026-11-23",
+      "marketCap": "$10.7B",
+      "forwardPE": 8.99,
+      "peg": "n/a",
+      "revenueGrowth": "+45.0% YoY (TTM; latest quarter +39.2%)",
+      "score": 67,
+      "paperRank": 22,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 89"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +45.0% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 31.5%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-3.1% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: Biological Products (No Diagnostic Substances)"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+8.5% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "89th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+0.62"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+39%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "-2.3 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+83%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+8%"
+        }
+      ],
+      "drivers": [
+        "Score 67/100 → #28 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 89th percentile: cash op. profit/assets 31.5%, FCF/assets 31.1%, accruals -14.5%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Volatile: 51% annualised",
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (9 analysts)",
+      "priceTarget": 120.11,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001159036.json",
+        "https://stockanalysis.com/stocks/halo/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.4503,
+        "rev_gq": 0.3915,
+        "gm_chg": -0.0228,
+        "sue": 0.6178,
+        "cbop": 0.3155,
+        "oprd": 0.2765,
+        "fcf_a": 0.3111,
+        "accruals": -0.145,
+        "sh_g12": -0.0305,
+        "eps_up8": 7.0,
+        "ni_pos8": 7.0,
+        "mom12_1": 0.8335,
+        "vol12": 0.5071,
+        "sma10": 0.085,
+        "pct150": 0.0238,
+        "pct200": 0.0944
+      },
+      "rank": 10,
+      "grades": {
+        "growth": "A",
+        "value": "B",
+        "momentum": "D+",
+        "profitability": "A"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "2/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "Amgen Inc.",
+      "ticker": "AMGN",
+      "sector": "Health Care – Biotechnology: Biological Products (No Diagnostic Substances)",
+      "price": 449.04,
+      "priceDate": "2026-11-23",
+      "marketCap": "$242.9B",
+      "forwardPE": 18.6,
+      "peg": 3.29,
+      "revenueGrowth": "+8.2% YoY (TTM; latest quarter +8.5%)",
+      "score": 67,
+      "paperRank": 23,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 57"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +8.2% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 12.9%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+0.5% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Biotechnology: Biological Products (No Diagnostic Substances)"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+15.3% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "57th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+1.03"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+8%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+4.7 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+38%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+15%"
+        }
+      ],
+      "drivers": [
+        "Score 67/100 → #29 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 57th percentile: cash op. profit/assets 12.9%, FCF/assets 10.3%, accruals -2.8%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Hold (35 analysts)",
+      "priceTarget": 440.78,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000318154.json",
+        "https://stockanalysis.com/stocks/amgn/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.0815,
+        "rev_gq": 0.0845,
+        "gm_chg": 0.0475,
+        "sue": 1.032,
+        "cbop": 0.1293,
+        "oprd": 0.2197,
+        "fcf_a": 0.1029,
+        "accruals": -0.0284,
+        "sh_g12": 0.0045,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.3766,
+        "vol12": 0.2626,
+        "sma10": 0.1525,
+        "pct150": 0.1598,
+        "pct200": 0.1841
+      },
+      "rank": 11,
+      "grades": {
+        "growth": "F",
+        "value": "F",
+        "momentum": "C",
+        "profitability": "B+"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "DexCom Inc.",
+      "ticker": "DXCM",
+      "sector": "Health Care – Medical/Dental Instruments",
+      "price": 82.42,
+      "priceDate": "2026-11-23",
+      "marketCap": "$30.7B",
+      "forwardPE": 27.8,
+      "peg": 1.28,
+      "revenueGrowth": "+13.0% YoY (TTM; latest quarter +11.2%)",
+      "score": 66,
+      "paperRank": 24,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 78"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +13.0% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 20.6%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "-4.4% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Medical/Dental Instruments"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+8.1% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "78th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+0.10"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+11%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+4.4 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+30%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+8%"
+        }
+      ],
+      "drivers": [
+        "Score 66/100 → #31 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 78th percentile: cash op. profit/assets 20.6%, FCF/assets 16.0%, accruals -6.2%, EPS up YoY in 6 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-09-30 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Strong Buy (29 analysts)",
+      "priceTarget": 98.58,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001093557.json",
+        "https://stockanalysis.com/stocks/dxcm/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.1303,
+        "rev_gq": 0.1118,
+        "gm_chg": 0.0441,
+        "sue": 0.0996,
+        "cbop": 0.2059,
+        "oprd": 0.2667,
+        "fcf_a": 0.1599,
+        "accruals": -0.0616,
+        "sh_g12": -0.0438,
+        "eps_up8": 6.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.2965,
+        "vol12": 0.4189,
+        "sma10": 0.0811,
+        "pct150": 0.0555,
+        "pct200": 0.0934
+      },
+      "rank": 12,
+      "grades": {
+        "growth": "C+",
+        "value": "C-",
+        "momentum": "F",
+        "profitability": "B-"
+      },
+      "gradeInputs": {
+        "growth": "2/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    },
+    {
+      "company": "PriceSmart Inc.",
+      "ticker": "PSMT",
+      "sector": "Consumer Discretionary – Department/Specialty Retail Stores",
+      "price": 174.85,
+      "priceDate": "2026-11-23",
+      "marketCap": "$5.4B",
+      "forwardPE": 28.49,
+      "peg": 2.85,
+      "revenueGrowth": "+11.5% YoY (TTM; latest quarter +13.9%)",
+      "score": 66,
+      "paperRank": 25,
+      "alsoIn": [],
+      "checklist": [
+        {
+          "key": "r0",
+          "label": "Cash quality in the top 50%",
+          "met": true,
+          "detail": "cash-quality percentile 51"
+        },
+        {
+          "key": "r1",
+          "label": "Revenue growth (TTM) above 8%",
+          "met": true,
+          "detail": "TTM revenue +11.5% YoY"
+        },
+        {
+          "key": "r2",
+          "label": "Cash-based operating profit above zero",
+          "met": true,
+          "detail": "operating cash flow / assets 12.6%"
+        },
+        {
+          "key": "r3",
+          "label": "Share count up less than 3% in 12 months",
+          "met": true,
+          "detail": "+0.1% over 12 months (SEC cover-page shares, split-adjusted)"
+        },
+        {
+          "key": "r4",
+          "label": "Not a commodity producer",
+          "met": true,
+          "detail": "Department/Specialty Retail Stores"
+        },
+        {
+          "key": "r5",
+          "label": "Price above its 10-month average",
+          "met": true,
+          "detail": "+3.0% vs 10-month average (month-end closes)"
+        }
+      ],
+      "keyFigures": [
+        {
+          "label": "Cash quality",
+          "value": "51th pct"
+        },
+        {
+          "label": "EPS surprise (SUE)",
+          "value": "+2.72"
+        },
+        {
+          "label": "Qtr revenue YoY",
+          "value": "+14%"
+        },
+        {
+          "label": "Gross margin chg",
+          "value": "+0.3 pts"
+        },
+        {
+          "label": "12-1 momentum",
+          "value": "+36%"
+        },
+        {
+          "label": "vs 10-mo avg",
+          "value": "+3%"
+        }
+      ],
+      "drivers": [
+        "Score 66/100 → #32 of 110 passers (870 stocks screened)",
+        "Ranked by the average percentile of earnings surprise (SUE), latest-quarter revenue growth YoY, gross-margin change, cash quality and 12-1 momentum.",
+        "Cash quality 51th percentile: cash op. profit/assets 12.6%, FCF/assets 4.0%, accruals -5.8%, EPS up YoY in 7 of 8 quarters",
+        "Fundamentals through the quarter ending 2026-08-31 (SEC filings public by 2026-11-23)"
+      ],
+      "risks": [
+        "Paper test: rules were chosen on 2012–26 data; a live record is needed before trusting them"
+      ],
+      "analystRating": "Buy (3 analysts)",
+      "priceTarget": 181.5,
+      "sourceUrl": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001041803.json",
+        "https://stockanalysis.com/stocks/psmt/statistics/"
+      ],
+      "paperMetrics": {
+        "rev_g": 0.115,
+        "rev_gq": 0.1392,
+        "gm_chg": 0.0032,
+        "sue": 2.7221,
+        "cbop": 0.1263,
+        "oprd": 0.1071,
+        "fcf_a": 0.0396,
+        "accruals": -0.0579,
+        "sh_g12": 0.0013,
+        "eps_up8": 7.0,
+        "ni_pos8": 8.0,
+        "mom12_1": 0.3574,
+        "vol12": 0.2768,
+        "sma10": 0.0304,
+        "pct150": 0.0096,
+        "pct200": 0.0424
+      },
+      "rank": 13,
+      "grades": {
+        "growth": "F",
+        "value": "C",
+        "momentum": "C",
+        "profitability": "F"
+      },
+      "gradeInputs": {
+        "growth": "1/2",
+        "value": "3/3",
+        "momentum": "3/3",
+        "profitability": "4/4"
+      }
+    }
+  ],
+  "grading": {
+    "asOf": "2026-11-23",
+    "spy1yPct": 5.71,
+    "pool": "25 stocks (this list's picks + bench)",
+    "scale": "Percentile rank within the pool: A+ top 3%, A 90-97, A- 83-90, B+ 77-83, B 70-77, B- 63-70, C+ 57-63, C 50-57, C- 43-50, D+ 37-43, D 30-37, D- 23-30, F bottom 23%.",
+    "inputs": {
+      "growth": "TTM revenue growth (YoY) and EPS growth forecast (3-yr CAGR, StockAnalysis)",
+      "value": "Forward P/E, PEG and EV/Sales; lower is better, losses or negative multiples rank worst",
+      "momentum": "1-yr price change minus SPY's (relative strength), 6-month and 3-month price change (Nasdaq daily closes)",
+      "profitability": "Gross, operating, net and free-cash-flow margin (TTM, StockAnalysis)"
+    },
+    "sources": [
+      "https://stockanalysis.com/ (statistics pages)",
+      "https://www.nasdaq.com/ (historical quotes)"
+    ]
+  }
+}
